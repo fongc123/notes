@@ -58,7 +58,12 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 		   "code-runner.saveFileBeforeRun" : true,
 		   "code-runner.saveAllFilesBeforeRun" : true,
 		   "code-runner.ignoreSelection" : true,
-		   "code-runner."
+		   "code-runner.clearPreviousOutput" : true,
+		   "terminal.integrated.scrollback" : 10240,
+		   "files.eol" : "\n",
+		   "code-runner.executorMap" : {
+			   "cpp" : "cd $dir && /usr/local/bin/g++-9 -std=c++11 $fileName  -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+		   }
 	   }
 		```
 
