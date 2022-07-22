@@ -15,7 +15,7 @@ driver = webdriver.Remote(command_executor = "http://localhost:4444/wd/hub")
 
 ```
 
-## Waits: Page doesn't load all at once.
+## Waits: The page doesn't load all at once.
 By default, Selenium waits until the page is loaded. But, if you try and find an element as soon as the page is loaded, the element might not be there. Use `WebDriverWait()` to wait for a given time until the element is present.
 ```Python
 from selenium.webdriver.support.wait import WebDriverWait
