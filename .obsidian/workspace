@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9a77359910bb1446",
+        "id": "053ff230cc37eafd",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Selenium.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,8 +77,9 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Selenium.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Selenium.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,16 +116,21 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Selenium.md"
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "9a77359910bb1446",
-  "lastOpenFiles": []
+  "active": "053ff230cc37eafd",
+  "lastOpenFiles": [
+    "Selenium.md",
+    "README.md"
+  ]
 }
