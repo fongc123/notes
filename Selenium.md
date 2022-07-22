@@ -30,5 +30,5 @@ element = WebDriverWait(driver, 10).until(
 Explanation:
 - `WebDriverWait()` will wait for 10 seconds
 	- if found, it will assign the `Element` to the variable `element`
-	- if not found, it will raise a `TimeoutExceptionError` (*waited too long*)
+	- if not found, it will raise a `TimeoutExceptionError` (*i.e., waited too long*)
 - the above code attempts to find an element with the matching **CSS selector** (*an element with ID equal to `main`*)
