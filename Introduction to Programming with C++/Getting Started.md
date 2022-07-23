@@ -66,8 +66,14 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 		   }
 	   }
 		```
-
+3. Run the code.
+	1. **Method 1:** RMB > Run Code.
+	2. **Method 2:** Build program.
+		1. 
 ## Installation on Windows
+We follow similar steps as the ones in macOS.
 
 [^1]: **Homebrew**: a package manager for macOS users
 [^2]: `nano`: default text editor for Linux (*see notes on Linux*)
+
+# Basics
