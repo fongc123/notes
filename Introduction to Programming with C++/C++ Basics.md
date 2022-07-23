@@ -116,13 +116,61 @@ The computer <span style = "color:lightblue">allocates memory</span> for a varia
 > [!INFO]
 > Variable declaration ≠ variable definition.
 
-The following code block shows examples on variable declaration. They can be declared one at a time
+The following code block shows two examples on variable declaration: **single** and **multiple**.
 
 ```C++
-// single declaration
 int radius = 10;
 
-// multiple declaration
 int radius = 10, sum = 0, width = 1;
-
 ```
+
+### Example
+A sample program that reads two inputs, `x` and `y`, adds them together, and prints the operation in the console.
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x, y;
+
+	cin >> x;
+	cin >> y;
+
+	cout << x << " + " << y << " = " << x + y << endl;
+
+	return 0;
+}
+```
+- sample output: `123 + 456 = 579`
+- `cin >> x >> y;` also works
+- inputs are separated by **spaces** or **enter**, while extra inputs are ignored
+
+> [!QUESTION]
+> What happens when you input non-integer values?
+
+## Operators
+Special characters (e.g., `+`, `-`) that perform <span style = "color:lightblue">arithmetic operations</span> on values.
+
+### Modulo
+Gets the remainder in an integer division. For example, the remainder of `16 / 5` is `1` or, equivalently, `mod(16, 5) = 1`.
+
+Modulo also supports <span style = "color:lightblue">negative divisors and dividends</span>. It simply follows the following equation and calculates the answer accordingly.
+$$
+\frac{a}{b}\times b + a \space \% \space b = a
+$$
+Modulo **does not** support `float` or `double` data types.
+
+### Increment & Decrement
+Modifies the operand by a fixed amount.
+- <span style = "color:lightblue">pre-increment</span>: modify the operand first, allowing the **result** to be used for further operations (e.g., `++x`)
+- <span style = "color:lightblue">post-increment</span>: **current value** is used first for further operations and is only modified later (e.g., `x++`)
+
+The above situations apply for **decrement** (`--`) as well.
+
+### Short-hand Assignment
+Simplifies expressions. For example, `n = n + 2` is equivalent to `n += 2`.
+
+### Precedence & Associativity
+Please look up tables related to **operator precedence & associativity** when needed.
+
