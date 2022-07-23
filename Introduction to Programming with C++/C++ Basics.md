@@ -45,11 +45,23 @@ These two `main()` functions serve the same purpose; however, the former is a **
 <span style = "color:lightblue">Libraries</span> are a collection of sub-programs, which are equivalent to <span style = "color:lightblue">classes</span>. The `#include` keyword must be used, typically in the beginning of the file, to reference the library.
 
 ### Standard C++ Libraries
-These are libraries that come with C++. Standard libraries **do not need a file suffix** and are denoted with `<` and `>`. The `iostream` library (*used in the above example*) is a standard C++ library that deals with input and output (I/O).
+These are libraries that come with C++. Standard libraries **do not need a file suffix** and **are denoted with `<` and `>`**. The `iostream` library (*used in the above example*) is a standard C++ library that deals with input and output (I/O).
 - `cin`: standard input stream → object to read (e.g., keyboard, file)
 - `cout`: standard output stream → object to print (e.g., screen, file)
 - `cerr`: standard error stream → object to print error message
 - `clog`: standard output stream for logging
 
 ### User-defined Libraries
-You can also define your own libraries. Self-created libraries 
+You can also define your own libraries. Self-created libraries **must have a suffix as either `.h` or `.hpp`** and **are denoted with double quotation marks (`"`)**.
+
+## Storing Data
+### Base 2
+A computer uses <span style = "color:lightblue">binary numbers</span> to represent data.
+- only two possibilities: `0` or `1`
+- a <span style = "color:lightblue">binary digit</span> is a <span style = "color:lightblue">bit</span>
+- one <span style = "color:lightblue">byte</span> is eight bits
+
+The <span style = "color:lightblue">maximum N-digit number</span> in base 2 is $2^{N} - 1$.
+
+### Characters
+One character represents one byte (*more data types below*). The <span style = "color:lightblue">American Standard Code for Information Interchange (ASCII)</span> is the encoding scheme to convert 8-bit integers to characters. In C++, characters can be 
