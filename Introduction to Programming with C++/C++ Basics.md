@@ -45,4 +45,11 @@ These two `main()` functions serve the same purpose; however, the former is a **
 <span style = "color:lightblue">Libraries</span> are a collection of sub-programs, which are equivalent to <span style = "color:lightblue">classes</span>. The `#include` keyword must be used, typically in the beginning of the file, to reference the library.
 
 ### Standard C++ Libraries
-These are libraries that come with C++. The `iostream` library (*used in the above example*) is a standard C++ library.
+These are libraries that come with C++. Standard libraries **do not need a file suffix** and are denoted with `<` and `>`. The `iostream` library (*used in the above example*) is a standard C++ library that deals with input and output (I/O).
+- `cin`: standard input stream → object to read (e.g., keyboard, file)
+- `cout`: standard output stream → object to print (e.g., screen, file)
+- `cerr`: standard error stream → object to print error message
+- `clog`: standard output stream for logging
+
+### User-defined Libraries
+
