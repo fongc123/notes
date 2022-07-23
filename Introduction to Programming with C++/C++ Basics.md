@@ -68,6 +68,11 @@ One character represents one byte (*more data types below*). The <span style = "
 
 ## Data Types
 As with other OOP programing languages, C++ has various <span style = "color:lightblue">data types</span>. The larger the size that the data types use, the more data (i.e., longer numbers) they can store.
-| **type** | **keyword** | **size (32-bit)** | **size (64-bit)** | **example** |
-|:--------:|:-----------:|:-----------------:|:-----------------:|:-----------:|
-|          |             |                   |                   |             | 
+
+| **type**  | **keyword** | **size (32-bit)** | **size (64-bit)** | **example** |
+|:---------:|:-----------:|:-----------------:|:-----------------:|:-----------:|
+|  Boolean  |   `bool`    |         1         |         1         |   `true`    |
+| Character |   `char`    |         1         |         1         | `;`            |
+|           |             |                   |                   |             |
+
+- more bytes mean more numbers represented (*higher precision*)
