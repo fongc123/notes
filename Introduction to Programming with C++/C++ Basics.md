@@ -64,4 +64,10 @@ A computer uses <span style = "color:lightblue">binary numbers</span> to represe
 The <span style = "color:lightblue">maximum N-digit number</span> in base 2 is $2^{N} - 1$.
 
 ### Characters
-One character represents one byte (*more data types below*). The <span style = "color:lightblue">American Standard Code for Information Interchange (ASCII)</span> is the encoding scheme to convert 8-bit integers to characters. In C++, characters can be 
+One character represents one byte (*more data types below*). The <span style = "color:lightblue">American Standard Code for Information Interchange (ASCII)</span> is the encoding scheme to convert 8-bit integers to characters. In C++, characters can be *operated* on, as they are represented by numbers. For example, `'a'` is represented by a `1`, while `'b'` is represented by a `2`. Thus, this expression is valid: `'a' + 'b' = 3`.
+
+## Data Types
+As with other OOP programing languages, C++ has various <span style = "color:lightblue">data types</span>. The larger the size that the data types use, the more data (i.e., longer numbers) they can store.
+| **type** | **keyword** | **size (32-bit)** | **size (64-bit)** | **example** |
+|:--------:|:-----------:|:-----------------:|:-----------------:|:-----------:|
+|          |             |                   |                   |             | 
