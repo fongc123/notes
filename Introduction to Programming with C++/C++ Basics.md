@@ -122,6 +122,7 @@ The following code block shows two examples on variable declaration: **single** 
 int radius = 10;
 
 int radius = 10, sum = 0, width = 1;
+radius = sum = width + 10;
 ```
 
 ### Example
@@ -172,5 +173,20 @@ The above situations apply for **decrement** (`--`) as well.
 Simplifies expressions. For example, `n = n + 2` is equivalent to `n += 2`.
 
 ### Precedence & Associativity
-Please look up tables related to **operator precedence & associativity** when needed.
+The following table, obtained from [this link](https://en.cppreference.com/w/cpp/language/operator_precedence), describes operator precedence and associativity in C++.
 
+![[operator-precedence.png|center|600]]
+
+<span style = "color:lightblue">Unary minus</span> negates the value, while subtraction is a simple subtraction. They are not the same.
+
+## Control Statements
+To <span style = "color:lightblue">control</span> code, C++ has the following basic control statements.
+- if-else
+- while loops
+- do-while loops
+- for loops
+- switch
+
+Control statements can be nested within each other.
+
+<span style = "color:lightblue">Switch statements</span> will go through each case until it meets a `break` statement. Typically, a `break` statement is placed inside **each case**. Additionally, switch statements will only allow **integral data types** (e.g., `int`) to be checked. Floating- 
