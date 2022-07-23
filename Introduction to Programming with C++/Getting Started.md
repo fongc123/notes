@@ -67,7 +67,7 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 	   }
 		```
 3. Run the code.
-	1. **Method 1:** RMB > Run Code.
+	1. **Method 1:** RMB → Run Code.
 	2. **Method 2:** Build program.
 		1. 
 ## Installation on Windows
