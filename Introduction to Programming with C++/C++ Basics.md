@@ -108,4 +108,21 @@ x = static_cast<int>(x); // value of x: 10
 ```
 
 ## Variables
-A variable is a <span style = "color:lightblue"
+A variable is a <span style = "color:lightblue">named memory location</span> (i.e., a container) for a value to write to, retrieve from, and manipulate. In C++, a variable <u>must</u> be declared and/or defined before it can be used.
+
+It is <span style = "color:lightblue">initialized</span> when a value is assigned to it. If no value is initialized, the initial contents of that variable *may* be garbage.
+
+The computer <span style = "color:lightblue">allocates memory</span> for a variable when it is defined.
+> [!INFO]
+> Variable declaration ≠ variable definition.
+
+The following code block shows examples on variable declaration. They can be declared one at a time
+
+```C++
+// single declaration
+int radius = 10;
+
+// multiple declaration
+int radius = 10, sum = 0, width = 1;
+
+```
