@@ -24,15 +24,15 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 1. Install Visual Studio Code for macOS.
 2. Install C/C++ extension on VSCode.
 3. Set **g++** as the default compiler.
-	1. Check version of **clang** and **g++** with `clang -v`.
-	2. Install **Homebrew**. [^1]
+	1. Check version of **clang** and **g++** with `clang -v`. [^1]
+	2. Install **Homebrew**. [^2]
 	3. Install **GCC**.
 	   ```bash
 	   brew search gcc
 	   brew install gcc@9
 	   gcc-9 -v (gcc version 9.3.0)
 		```
-	1. Change configuration parameters and environment variables. Run `nano ~/.bash_profile` and add the following to the file. [^2]
+	1. Change configuration parameters and environment variables. Run `nano ~/.bash_profile` and add the following to the file. [^3]
 	   ```bash
 	   alias gcc='gcc-9'
 	   alias cc='gcc-9'
@@ -69,11 +69,21 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 3. Run the code.
 	1. **Method 1:** RMB → Run Code.
 	2. **Method 2:** Build program.
-		1. 
+		1. Set a default build task.
+			1. In Visual Studio Code, select Terminal.
+			2. Click Choose Default Build Task.
+			3. Select `C/C++ g++-9 build active file`
+		2. Run build task.
+			1. Select Terminal.
+			2. Click Run Build Task.
+			3. Create a new terminal window.
+			4. Navigate to directory of the program.
+			5. Run program with `./<filename>`
 ## Installation on Windows
 We follow similar steps as the ones in macOS.
 
-[^1]: **Homebrew**: a package manager for macOS users
-[^2]: `nano`: default text editor for Linux (*see notes on Linux*)
+[^1]: `xcrun: error: invalid active developper path` (outdated XCode Command-line Tools → run `xcode-select --install`)
+[^2]: **Homebrew**: a package manager for macOS users
+[^3]: `nano`: default text editor for Linux (*see notes on Linux*)
 
 # Basics
