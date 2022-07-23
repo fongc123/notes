@@ -93,3 +93,19 @@ As with other OOP programing languages, C++ has various <span style = "color:lig
 When performing operations, data types must match each other.
 
 ### Automatic Conversion
+<span style = "color:lightblue">Coercion</span> is the automatic conversion of data types in an operation (e.g., an addition operation).
+- `int` + `double` → `double` + `double`
+- `char` + `char` → `int` + `int` (*ASCII representation*)
+
+Converting from a high precision type to a low precision type causes loss of data. The extra information is not approximated but instead **truncated**.
+
+### Manual Conversion
+<span style = "color:lightblue">Casting</span> manually changes the data type and, thus, the value temporarily.
+```C++
+float x = 10.595;        // value of x: 10.595
+
+x = static_cast<int>(x); // value of x: 10
+```
+
+## Variables
+A variable is a <span style = "color:lightblue"
