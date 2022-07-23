@@ -72,7 +72,24 @@ As with other OOP programing languages, C++ has various <span style = "color:lig
 | **type**  | **keyword** | **size (32-bit)** | **size (64-bit)** | **example** |
 |:---------:|:-----------:|:-----------------:|:-----------------:|:-----------:|
 |  Boolean  |   `bool`    |         1         |         1         |   `true`    |
-| Character |   `char`    |         1         |         1         | `;`            |
-|           |             |                   |                   |             |
+| Character |   `char`    |         1         |         1         |    `'a'`    |
+|  Integer  |    `int`    |         4         |         4         |    `40`     |
+|   Short   |   `short`   |         2         |         2         |      -      |
+|   Long    |   `long`    |         4         |         8         |      -      |
+|   Float   |   `float`   |         4         |         4         |    `2.2`    |
+|  Double   |  `double`   |         8         |         8         |      -      | 
 
 - more bytes mean more numbers represented (*higher precision*)
+- a <span style = "color:lightblue">32-bit machine</span> uses CPUs where the <span style = "color:lightblue">data bus width</span> and <span style = "color:lightblue">memory address width</span> are 32 bits (*likewise for 64-bit machine*)
+- <span style = "color:lightblue">signed</span> vs. <span style = "color:lightblue">unsigned</span> integer data
+	- signed: represents <u>both positive and negative</u> integers
+	- unsigned: <u>only positive</u> integers
+- other data types
+	- `string`: sequence of `char` but is not a basic data type
+	- `long long`
+	- `long double`
+
+## Type Conversion
+When performing operations, data types must match each other.
+
+### Automatic Conversion
