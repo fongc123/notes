@@ -45,7 +45,7 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 1. Create your first program.
 	1. Open a new folder.
 	2. Create a new file with a `.cpp` file extension.
-	3. Type code to output `'hello world'`.
+	3. Write code to output `'hello world'`.
 2. Add **Code Runner** extension.
 	1. Install the **Code Runner** extension.
 	2. Open **Command Palette** and search for ==Search Preferences: Open Settings (JSON)== and open the `settings.json` file.
@@ -70,20 +70,68 @@ We install the ==C/C++ extension== on Visual Studio Code, the relevant compiler,
 	1. **Method 1:** RMB → Run Code.
 	2. **Method 2:** Build program.
 		1. Set a default build task.
-			1. In Visual Studio Code, select Terminal.
-			2. Click Choose Default Build Task.
+			1. In Visual Studio Code, select **Terminal.**
+			2. Click **Choose Default Build Task**.
 			3. Select `C/C++ g++-9 build active file`
 		2. Run build task.
-			1. Select Terminal.
-			2. Click Run Build Task.
+			1. Select **Terminal**.
+			2. Click **Run Build Task**.
 			3. Create a new terminal window.
 			4. Navigate to directory of the program.
 			5. Run program with `./<filename>`
 ## Installation on Windows
 We follow similar steps as the ones in macOS.
+### Instructions
+1. Install **MinGW g++ compiler**.
+	1. Setup settings:
+	   - **Source:** `sourceforge.net MinGW g++ compiler`
+	   - **Settings:**
+		   - Version: `8.1.0`
+		   - Architecture: `x86_64`
+		   - Threads: `posix`
+		   - Exception: `seh`
+		   - Build revision: `0`
+	2. Copy installation path.
+	   ```bash
+		C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0
+	   ```
+ 1. Open the **Edit environment variables for your account** window.
+ 2. Under **User variables for *user***, click **Path** and **Edit**.
+ 3. Click **New** to add a new path and paste the installation path with `\mingw64\bin` at the end.
+    ```bash
+    C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin
+	```
+4. Install Visual Studio Code.
+5. Install Visual Studio Code extensions.
+	1. C/C++ extension.
+	2. Code Runner.
+6. Open **Command Palette** and search for `Preferences: Open Settings (JSON)` to open the `settings.json` file.
+7. Add the following to the file.
+   ```json
+   {
+	   "update.mode" : "none",
+	   "code-runner.customCommand" : "make",
+	   "code-runner.runInTerminal" : true,
+	   "code-runner.saveFileBeforeRun" : true,
+	   "code-runner.saveAllFilesBeforeRun" : true,
+	   "code-runner.ignoreSelection" : true,
+	   "code-runner.clearPreviousOutput" : true,
+	   "terminal.integrated.scrollback" : 10240,
+	   "files.eol" : "\n"
+   }
+	```
+8. Create your first program.
+	1. Create a new folder.
+	2. Create a new file with the `.cpp` file extension.
+	3. Write code to print `'hello world'`
+### Additional Notes
+- `cannot open source file "crtdbg.h" (dependency of "upstream")`
+	- Problem: Compiler extension is broken.
+	- Solution: Reoload extension and restart Visual Studio Code.
+- `intelliSenseMode "msvc-x64" is incompatible with compiler path`
+	- Problem: IntelliSense could not find the new compiler (*?*)
+	- Solution: Change `intelliSenseMode` value to `${default}` in `settings.json`
 
-[^1]: `xcrun: error: invalid active developper path` (outdated XCode Command-line Tools → run `xcode-select --install`)
+[^1]: `xcrun: error: invalid active developper path` (outdated XCode Command-line Tools → run `xcode-select --install` *or* manually install **Command Line Tools for XCode**)
 [^2]: **Homebrew**: a package manager for macOS users
 [^3]: `nano`: default text editor for Linux (*see notes on Linux*)
-
-# Basics
