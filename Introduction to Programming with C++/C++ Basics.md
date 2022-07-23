@@ -189,4 +189,91 @@ To <span style = "color:lightblue">control</span> code, C++ has the following ba
 
 Control statements can be nested within each other.
 
-<span style = "color:lightblue">Switch statements</span> will go through each case until it meets a `break` statement. Typically, a `break` statement is placed inside **each case**. Additionally, switch statements will only allow **integral data types** (e.g., `int`) to be checked. Floating- 
+<span style = "color:lightblue">Switch statements</span> will go through each case until it meets a `break` statement. Typically, a `break` statement is placed inside **each case**. Additionally, switch statements will only allow **integral data types** (e.g., `int`) to be checked. Floating-point data types will not work.
+
+### Loops: Usage Scenarios
+Each loop has its own usage scenario.
+- for loop: need to count loop iterations
+- while loop: unknown number of loop iterations
+- do while: code needs to be executed at least once
+
+### Dangling Else
+By default, C++ will connect an `else` statement to the closest `if` statement, which may not be intended. Consider the following example.
+
+```C++
+int x = 15;
+
+if (x > 20)
+if (x > 30)
+x = 8;
+else
+x = 9;
+```
+
+The above code block is **equivalent** to the below code block.
+
+```C++
+int x = 15;
+
+if (x > 20) {
+	if (x > 30)
+		x = 8;
+	else
+		x = 9;
+}
+```
+
+In both cases, the value of `x` after the program is run is `15`. The second `if` statement will only execute if the first `if` statement is evaluated to `true`.
+
+## User-defined type
+An `enum` is a user-defined type that holds a <span style = "color:lightblue">finite</span> set of <span style = "color:lightblue">symbolic (meaningful) objects</span>, making the program easier to understand.
+
+### Declaration
+```C++
+enum <DATA_TYPE> {
+	<NAME1> = <VALUE1>,
+	<NAME2> = <VALUE2>,
+	...
+}
+```
+
+`enum` connects meaningful words with integer indices, allowing words to be understood by the program. If a value is not specified, C++ will index the first object as `0` and continue from there.
+
+`enum` types are typically used with switch statements.
+
+### Example
+A sample program that defines the user-defined type `shapes`, reads an integer input, and outputs the corresponding shape to the console.
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+	// shapes (index: 0, 1, 2, 3)
+	enum shapes { TEXT, LINE, RECT, CIRCLE };
+
+	int shape;
+	cin >> shape;
+
+	// equivalent to comparing integers
+	switch (shape) {
+		case TEXT:
+			cout << "It is a text." << endl;
+			break;
+		case LINE:
+			cout << "It is a line." << endl;
+			break;
+		case RECT:
+			cout << "It is a rectangle." << endl;
+			break;
+		case CIRCLE:
+			cout << "It is a cricle." << endl;
+			break;
+		default:
+			cerr << "No shape." << endl;
+			break;
+	}
+
+	return 0;
+}
+```
