@@ -20,6 +20,8 @@ There are operators that modify the bit digits of a value.
 
 A `1` is considered as `true`, while a `0` is considered as `false`. For example, an `AND` will output `1` if and only if both inputs are `1` as well.
 
+A [binary-decimal converter](https://www.rapidtables.com/convert/number/binary-to-decimal.html) is extremely useful when working with bits and bytes.
+
 ### Example
 A sample program that modifies the bits of two variables, `x` and `y`, with `int` type.
 
@@ -59,4 +61,8 @@ int main() {
 	- `AND`: `0000 0000 0000 1000` (`8`)
 	- `OR`: `0000 0000 0000 1110` (`14`)
 	- `XOR`: `0000 0000 0000 0110` (`6`)
-	- `INVERT`: 
+	- `INVERT`: `1111 1111 1111 0101` (`-11`)
+	- `SHIFT LEFT`: `0000 0000 0001 0100` (`20`)
+	- `SHIFT RIGHT`: `0000 0000 0000 0101` (`5`)
+- `short` holds 16 bits as shown by the extra leading zeros
+- for `INVERT`, the output is `-11` as it is the "decimal from signed 2's complement"
