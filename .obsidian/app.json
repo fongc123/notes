@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "attachmentFolderPath": "Programming with C++",
+  "attachmentFolderPath": "src",
   "pdfExportSettings": {
     "pageSize": "A4",
     "landscape": false,
