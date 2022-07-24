@@ -4,24 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "be5b2446ec3ab987",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Introduction to Programming with C++/C String.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "6ed99084e3761d23",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/C++ Basics.md",
+            "file": "Introduction to Programming with C++/C String.md",
             "mode": "preview",
             "source": false
           }
@@ -140,9 +128,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "be5b2446ec3ab987",
+  "active": "6ed99084e3761d23",
   "lastOpenFiles": [
     "Introduction to Programming with C++/File IO.md",
+    "Introduction to Programming with C++/C String.md",
     "Introduction to Programming with C++/C++ Basics.md",
     "Selenium.md",
     "Introduction to Programming with C++/Arrays.md",
