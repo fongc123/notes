@@ -225,6 +225,9 @@ if (x > 20) {
 
 In both cases, the value of `x` after the program is run is `15`. The second `if` statement will only execute if the first `if` statement is evaluated to `true`.
 
+> [!INFO]
+> Curly brackets (`{` and `}`) allow multiple lines to be executed in an `if` statement. Otherwise, only the first statement will be executed, and the `if` statement will be exited.
+
 ## User-defined type
 An `enum` is a user-defined type that holds a <span style = "color:lightblue">finite</span> set of <span style = "color:lightblue">symbolic (meaningful) objects</span>, making the program easier to understand.
 
