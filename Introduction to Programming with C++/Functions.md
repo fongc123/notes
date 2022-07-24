@@ -78,7 +78,7 @@ Only the **values** of the actual parameters are copied into the formal paramete
 - new memory is allocated for the copied parameters
 
 ### Reference Variables
-An <span style = "color:lightblue">alias</span>, which is denoted by the `&` symbol before the variable name, of another variable.
+Denoted by the `&` symbol before the variable name, it is an <span style = "color:lightblue">alias</span> of another variable.
 - reference variables use the same memory space as the original variable
 - changing the reference variable changes the original variable
 
@@ -107,7 +107,7 @@ The values of the actual parameters are not copied.
 A function is unable to change <span style = "color:lightblue">constant variables</span> which are denoted by the `const` keyword. If placed in the formal parameter definition of a function, the function is unable to change the value of that variable.
 
 ## Miscellaneous
-### Function Definition & Function Declaration
+### Definition & Declaration
 A function is **declared** when its <span style = "color:lightblue">prototype</span> is written, while a function is **defined** when its <span style = "color:lightblue">function header</span> and its <span style = "color:lightblue">function body</span> is written.
 
 > [!INFO]
@@ -115,6 +115,52 @@ A function is **declared** when its <span style = "color:lightblue">prototype</s
 
 A function may be declared multiple times but can only be defined once.
 
+A <span style = "color:lightblue">function prototype</span> or <span style = "color:lightblue">function signature</span> consists of the function header only, which only includes a return type, a function name, and the data types of the formal parameters.
+- names of parameters are not required
+- order of the parameters is important
 
+> [!INFO]
+> Changing the order of the parameters changes the function.
+
+Regardless, all functions must be declared before they can be used. The below code blocks show a function definition and a function declaration respectively.
+
+```C++
+int max(int, int);
+```
+```C++
+int max(int a, int b) {
+	return (a > b) ? a : b;
+}
+```
+
+> [!INFO]
+> The `?` operator is a shorthand version of an if-else statement.
+> 
+> If the expression before the `?` is evaluated to be `true`, the value *before* the `:` will be used. Otherwise, the value *after* the `:` will be used.
+
+### Function Overloading
+<span style = "color:lightblue">Function overloading</span> is a situation when multiple functions have the **same name but different signature** and, thus, different prototype. No two C++ functions can have the same name *and* the same signature.
+
+Given a set of parameters and some functions with the same name, C++ will choose the best function to use based on the following order.
+1. Exact match.
+2. Match after some promotion.
+   - `char`, `bool`, or `short` → `int`
+   - `float` → `double`
+3. Match after some standard type conversion.
+   - integral types
+   - floating-point types
+   - integral and floating-point types
+4. Match after some user-defined type conversion.
+
+### Default Parameters
+<span style = "color:lightblue">Default parameters</span> can be specified by including a value next to a function parameter. If the function is called without the parameter, the parameter will be set to the default value.
+
+```C++
+int main(int a, int b = 0) {
+	return (a > b) ? a : b;
+}
+```
+
+In the above code block, the default value for the parameter `b` is `0`.
 
 [^1]: In `int main()`, `return 0` means the function worked, while `return 1` means the function failed.
