@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/C++ Basics.md",
+            "file": "Introduction to Programming with C++/Functions.md",
             "mode": "preview",
             "source": false
           }
@@ -144,6 +144,7 @@
   "lastOpenFiles": [
     "Introduction to Programming with C++/Functions.md",
     "Introduction to Programming with C++/C++ Basics.md",
+    "Introduction to Programming with C++/Arrays.md",
     "Introduction to Programming with C++/Random Numbers.md",
     "Introduction to Programming with C++/Bitwise Operators.md",
     "Introduction to Programming with C++/Getting Started.md",
