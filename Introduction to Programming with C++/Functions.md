@@ -18,6 +18,13 @@ In a function call, the function name and a set of parameters specified.
 <FUNCTION_NAME> (<PARAMETERS>)
 ```
 
+### Recursive Function
+A special function that calls itself. Essentially, a function call is present in the function definition. To avoid an <span style = "color:lightblue">infinite recursion</span>, the task is typically separated into two parts:
+- a base case which **ends the recursion**
+- a recursive case which **calls the next recursion**
+
+Recursion uses **more memory** and **takes more computational time**.
+
 ### Example
 A sample program that defines the function `max()` which will return the greater value between two integer inputs.
 
@@ -75,10 +82,38 @@ An <span style = "color:lightblue">alias</span>, which is denoted by the `&` sym
 - reference variables use the same memory space as the original variable
 - changing the reference variable changes the original variable
 
+In the below code block, when the value of `b` changes, the value of `a` also changes, as they are referencing the same memory space.
+
+```C++
+int main() {
+	int a = 3;
+	int &b = a;
+
+	cout << a << " " << b << endl; // 3 3
+
+	b = 5;
+
+	cout << a << " " << b << endl; // 5 5
+}
+
+```
+
 ### Pass-by-reference (PBR)
 The values of the actual parameters are not copied.
 - the formal parameters become the <span style = "color:lightblue">reference variable</span> of the actual parameters
 - the function will change the value of the actual parameter
+
+### Constants
+A function is unable to change <span style = "color:lightblue">constant variables</span> which are denoted by the `const` keyword. If placed in the formal parameter definition of a function, the function is unable to change the value of that variable.
+
+## Miscellaneous
+### Function Definition & Function Declaration
+A function is **declared** when its <span style = "color:lightblue">prototype</span> is written, while a function is **defined** when its <span style = "color:lightblue">function header</span> and its <span style = "color:lightblue">function body</span> is written.
+
+> [!INFO]
+> Function definition ≠ function declaration.
+
+A function may be declared multiple times but can only be defined once.
 
 
 
