@@ -19,7 +19,7 @@ A <span style = "color:lightblue">program</span> consists of statements. A <span
 Here is a simple program that prints `'hello world'` in the console.
 ```C++
 #include <iostream>
-using namspace std;
+using namespace std;
 
 int main() {
 	cout << "hello world" << endl;
