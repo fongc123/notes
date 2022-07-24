@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Introduction to Programming with C++/Arrays.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/Functions.md",
+            "file": "Introduction to Programming with C++/C++ Basics.md",
             "mode": "preview",
             "source": false
           }
@@ -142,12 +142,12 @@
   },
   "active": "be5b2446ec3ab987",
   "lastOpenFiles": [
-    "Introduction to Programming with C++/Functions.md",
     "Introduction to Programming with C++/C++ Basics.md",
+    "Introduction to Programming with C++/Getting Started.md",
+    "Introduction to Programming with C++/Functions.md",
     "Introduction to Programming with C++/Arrays.md",
     "Introduction to Programming with C++/Random Numbers.md",
     "Introduction to Programming with C++/Bitwise Operators.md",
-    "Introduction to Programming with C++/Getting Started.md",
     "Selenium.md",
     "README.md"
   ]

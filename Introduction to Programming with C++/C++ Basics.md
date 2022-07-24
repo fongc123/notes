@@ -61,7 +61,7 @@ A computer uses <span style = "color:lightblue">binary numbers</span> to represe
 - a <span style = "color:lightblue">binary digit</span> is a <span style = "color:lightblue">bit</span>
 - one <span style = "color:lightblue">byte</span> is eight bits
 
-The <span style = "color:lightblue">maximum N-digit number</span> in base 2 is $2^{N} - 1$.
+The maximum $N$-digit number in base 2 is $2^{N} - 1$.
 
 ### Characters
 One character represents one byte (*more data types below*). The <span style = "color:lightblue">American Standard Code for Information Interchange (ASCII)</span> is the encoding scheme to convert 8-bit integers to characters. In C++, characters can be *operated* on, as they are represented by numbers. For example, `'a'` is represented by a `1`, while `'b'` is represented by a `2`. Thus, this expression is valid: `'a' + 'b' = 3`.
