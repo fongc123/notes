@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Architecture.md",
+            "file": "Kubernetes/Cluster Architecture.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "30d4ea3f24b3cfba",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Programming with C++/Scope.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Architecture.md",
+                "file": "Kubernetes/Cluster Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Architecture.md",
+                "file": "Kubernetes/Cluster Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Architecture.md"
+                "file": "Kubernetes/Cluster Architecture.md"
               }
             }
           }
@@ -130,15 +142,15 @@
   },
   "active": "8dfaad65b76da1d5",
   "lastOpenFiles": [
+    "Programming with C++/Scope.md",
+    "Programming with C++/Separate Compilation.md",
+    "Programming with C++/Struct.md",
+    "Programming with C++/Pointer.md",
+    "Programming with C++/Classes.md",
+    "Kubernetes/Cluster Architecture.md",
     "Programming with C++/Stack & Queue.md",
     "Programming with C++/Bitwise Operators.md",
-    "Programming with C++/Classes.md",
-    "Programming with C++/Pointer.md",
-    "Programming with C++/Struct.md",
     "Programming with C++/Random Numbers.md",
-    "Programming with C++/Functions.md",
-    "Programming with C++/Arrays.md",
-    "Programming with C++/File IO.md",
-    "Programming with C++/Scope.md"
+    "Programming with C++/Functions.md"
   ]
 }
