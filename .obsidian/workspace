@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/Stack & Queue.md",
+            "file": "Programming with C++/Stack & Queue.md",
             "mode": "preview",
             "source": false
           }
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/Stack & Queue.md",
+            "file": "Programming with C++/Stack & Queue.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Programming with C++/Stack & Queue.md",
+                "file": "Programming with C++/Stack & Queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Programming with C++/Stack & Queue.md",
+                "file": "Programming with C++/Stack & Queue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Programming with C++/Stack & Queue.md"
+                "file": "Programming with C++/Stack & Queue.md"
               }
             }
           }
@@ -142,15 +142,15 @@
   },
   "active": "6ed99084e3761d23",
   "lastOpenFiles": [
-    "Introduction to Programming with C++/Bitwise Operators.md",
-    "Introduction to Programming with C++/Stack & Queue.md",
-    "Introduction to Programming with C++/Classes.md",
-    "Introduction to Programming with C++/Pointer.md",
-    "Introduction to Programming with C++/Struct.md",
-    "Introduction to Programming with C++/Random Numbers.md",
-    "Introduction to Programming with C++/Functions.md",
-    "Introduction to Programming with C++/Arrays.md",
-    "Introduction to Programming with C++/File IO.md",
-    "Introduction to Programming with C++/Scope.md"
+    "Programming with C++/Bitwise Operators.md",
+    "Programming with C++/Stack & Queue.md",
+    "Programming with C++/Classes.md",
+    "Programming with C++/Pointer.md",
+    "Programming with C++/Struct.md",
+    "Programming with C++/Random Numbers.md",
+    "Programming with C++/Functions.md",
+    "Programming with C++/Arrays.md",
+    "Programming with C++/File IO.md",
+    "Programming with C++/Scope.md"
   ]
 }
