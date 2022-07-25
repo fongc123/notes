@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Introduction to Programming with C++/Stack & Queue.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/Bitwise Operators.md",
-            "mode": "preview",
+            "file": "Introduction to Programming with C++/Stack & Queue.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -142,15 +142,15 @@
   },
   "active": "6ed99084e3761d23",
   "lastOpenFiles": [
+    "Introduction to Programming with C++/Bitwise Operators.md",
+    "Introduction to Programming with C++/Stack & Queue.md",
     "Introduction to Programming with C++/Classes.md",
     "Introduction to Programming with C++/Pointer.md",
     "Introduction to Programming with C++/Struct.md",
-    "Introduction to Programming with C++/Bitwise Operators.md",
     "Introduction to Programming with C++/Random Numbers.md",
     "Introduction to Programming with C++/Functions.md",
     "Introduction to Programming with C++/Arrays.md",
     "Introduction to Programming with C++/File IO.md",
-    "Introduction to Programming with C++/Scope.md",
-    "Introduction to Programming with C++/C String.md"
+    "Introduction to Programming with C++/Scope.md"
   ]
 }

@@ -34,11 +34,12 @@ class Example {
 
 		// destructor
 		~Example();
-}
+};
 ```
 
-> [!INFO]
-> Accessor functions have `const` in their function definition or function declaration, as these functions shouldn't be able to modify the data members.
+- <span style = "color:lightblue">constructors</span> have no return type and no `const` keyword
+- <span style = "color:lightblue">accessors</span> have a return type and a `const` keyword (*access only*)
+- <span style = "color:lightblue">mutators</span> have a return type but no `const` keyword (*modifiable*)
 
 ## Constructors & Destructors
 <span style = "color:lightblue">Constructors</span> and <span style = "color:lightblue">destructors</span> are functions that are used to **create** and **delete** the class object respectively. The constructor is *always* called when the object is instantiated and often initializes the object's contents.
