@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Cluster Architecture.md",
+            "file": "Kubernetes/ETCD Cluster.md",
             "mode": "source",
             "source": false
           }
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Programming with C++/Scope.md",
+            "file": "Kubernetes/Cluster Architecture.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Cluster Architecture.md",
+                "file": "Kubernetes/ETCD Cluster.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Cluster Architecture.md",
+                "file": "Kubernetes/ETCD Cluster.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Cluster Architecture.md"
+                "file": "Kubernetes/ETCD Cluster.md"
               }
             }
           }
@@ -142,15 +142,15 @@
   },
   "active": "8dfaad65b76da1d5",
   "lastOpenFiles": [
+    "Kubernetes/Cluster Architecture.md",
+    "Kubernetes/ETCD Cluster.md",
     "Programming with C++/Scope.md",
     "Programming with C++/Separate Compilation.md",
     "Programming with C++/Struct.md",
     "Programming with C++/Pointer.md",
     "Programming with C++/Classes.md",
-    "Kubernetes/Cluster Architecture.md",
     "Programming with C++/Stack & Queue.md",
     "Programming with C++/Bitwise Operators.md",
-    "Programming with C++/Random Numbers.md",
-    "Programming with C++/Functions.md"
+    "Programming with C++/Random Numbers.md"
   ]
 }
