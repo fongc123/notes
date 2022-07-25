@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Introduction to Programming with C++/C String.md",
+            "file": "Introduction to Programming with C++/Arrays.md",
             "mode": "preview",
             "source": false
           }
@@ -142,15 +142,15 @@
   },
   "active": "6ed99084e3761d23",
   "lastOpenFiles": [
+    "Introduction to Programming with C++/Arrays.md",
+    "Introduction to Programming with C++/C String.md",
+    "Introduction to Programming with C++/Struct.md",
     "Introduction to Programming with C++/Separate Compilation.md",
     "Introduction to Programming with C++/Scope.md",
-    "Introduction to Programming with C++/C String.md",
     "Introduction to Programming with C++/C++ Basics.md",
     "Introduction to Programming with C++/Bitwise Operators.md",
     "Introduction to Programming with C++/Random Numbers.md",
     "Introduction to Programming with C++/Functions.md",
-    "Introduction to Programming with C++/Arrays.md",
-    "Introduction to Programming with C++/File IO.md",
-    "Selenium.md"
+    "Introduction to Programming with C++/File IO.md"
   ]
 }
