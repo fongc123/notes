@@ -1,0 +1,2 @@
+# Pointer
+<span style = "color:lightblue">Pointers</span> are addresses to other variables. A variable name is a symbolic name given to some storage location in the memory. A <span style = "color:lightblue">literal constant is the value assigned to or stored in the variable.
