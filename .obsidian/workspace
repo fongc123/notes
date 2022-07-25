@@ -9,6 +9,18 @@
         "state": {
           "type": "markdown",
           "state": {
+            "file": "Introduction to Programming with C++/Struct.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "7ddf2de00252df45",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
             "file": "Introduction to Programming with C++/C String.md",
             "mode": "preview",
             "source": false
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Programming with C++/C String.md",
+                "file": "Introduction to Programming with C++/Struct.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Programming with C++/C String.md",
+                "file": "Introduction to Programming with C++/Struct.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Programming with C++/C String.md"
+                "file": "Introduction to Programming with C++/Struct.md"
               }
             }
           }
@@ -130,15 +142,15 @@
   },
   "active": "6ed99084e3761d23",
   "lastOpenFiles": [
-    "Introduction to Programming with C++/File IO.md",
+    "Introduction to Programming with C++/Separate Compilation.md",
+    "Introduction to Programming with C++/Scope.md",
     "Introduction to Programming with C++/C String.md",
     "Introduction to Programming with C++/C++ Basics.md",
-    "Selenium.md",
-    "Introduction to Programming with C++/Arrays.md",
-    "Introduction to Programming with C++/Getting Started.md",
-    "Introduction to Programming with C++/Functions.md",
-    "Introduction to Programming with C++/Random Numbers.md",
     "Introduction to Programming with C++/Bitwise Operators.md",
-    "README.md"
+    "Introduction to Programming with C++/Random Numbers.md",
+    "Introduction to Programming with C++/Functions.md",
+    "Introduction to Programming with C++/Arrays.md",
+    "Introduction to Programming with C++/File IO.md",
+    "Selenium.md"
   ]
 }
