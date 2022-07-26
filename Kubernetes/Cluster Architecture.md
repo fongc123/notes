@@ -26,3 +26,5 @@ A simple analogy of **cargo ships** is provided.
 - controller-manager → operations offices
 - kube-scheduler → loading crane
 - kublet → ship captain
+
+![[k8s-arch.png|center|650]]
