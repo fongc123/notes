@@ -76,3 +76,9 @@ The EC2 Instance Savings Plan will be billed at a fixed rate, while the On-Deman
 | 2 (100%) | 61.90 |   9.42   |   37.69   |  0.94   |
 | 2 (62%)  | 38.41 |   9.43   |   37.72   |  0.94   |
 | 2 (10%)  | 6.19  |   9.42   |   37.69   | 0.94        |
+
+# Summary
+
+![AWS Hosting Costs](midas-analytics-aws-costs-graph.png){width=75%}
+
+Consider a virtual server on AWS Lightsail *or* AWS EC2 with the Instance Savings Plan.

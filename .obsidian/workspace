@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "8dfaad65b76da1d5",
+        "id": "e09e2b7b191995ce",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Presentations/costs.md",
+            "file": "Presentations/midas-analytics-aws-costs.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Presentations/costs.md",
+                "file": "Presentations/midas-analytics-aws-costs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Presentations/costs.md",
+                "file": "Presentations/midas-analytics-aws-costs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Presentations/costs.md"
+                "file": "Presentations/midas-analytics-aws-costs.md"
               }
             }
           }
@@ -128,17 +128,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "8dfaad65b76da1d5",
+  "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
+    "Programming with C++/C++ Basics.md",
+    "Presentations/midas-analytics-aws-costs.md",
+    "src/midas-analytics-aws-costs-graph.png",
     "Kubernetes/Cluster Architecture.md",
-    "Presentations/costs.md",
     "Kubernetes/ETCD Cluster.md",
     "Programming with C++/Scope.md",
     "Programming with C++/Separate Compilation.md",
     "Programming with C++/Struct.md",
     "Programming with C++/Pointer.md",
-    "Programming with C++/Classes.md",
-    "Programming with C++/Stack & Queue.md",
-    "Programming with C++/Bitwise Operators.md"
+    "Programming with C++/Classes.md"
   ]
 }
