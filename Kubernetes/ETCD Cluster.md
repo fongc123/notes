@@ -7,9 +7,9 @@ Key-value databases are great for storing configuration settings.
 
 ## Installation
 The following steps explain how to install ETCD.
-1. Download binaries.
+1. Download binaries. The code block below downloads the `${`
    ```bash
-   curl -L https://github.com/etcd-io/etcd/releases/download/v3.3.11/etcd-v3.3.11-linux-amd64.tar.gz -o etcd-v3.3.11-linux-amd64.tar.gz
+   curl -L https://github.com/etcd-io/etcd/releases/download/${ETCD_VER}/etcd-${ETCD_VER}-linux-amd64.tar.gz -o etcd-${ETCD_VER}-linux-amd64.tar.gz
 	```
 2. Extract the zip file.
    ```bash
