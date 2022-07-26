@@ -47,10 +47,19 @@ ETCD can be set up <span style = "color:lightblue">manually</span> or using the 
 Multiple ETCD instances can be created as found in a <span style = "color:lightblue">high avalability (HA) environment</span>.
 
 ## Commands
-`etcdctl` is the command line interface (CLI) tool used to interact with ETCD.
+`etcdctl` is the command line interface (CLI) tool used to interact with ETCD. For the interface to successfully connect with the server, the **ETCDCTL API version** and **path to certificate files** must be specified.
+
+```bash
+kubectl exec etcd-master -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl get / --prefix --keys-only --limit=10 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key"
+```
+
+There are two API versions: Version 2 (*default*) and Version 3. Each API's commands are mutually exclusive and can be selected using the following.
+
+```bash
+export ETCDCTL_API=3
+```
 
 > [!INFO]
-> Run `kubectl get pods -n kube-system` to list pods.
+> Run `kubectl get pods -n kube-system` to list pods. `etcd-master` should be a running pod.
 > 
 > Run `kubectl exec etcd-master -n kube-system` and `etcdctl get / --prefix -keys-only` to get a list of keys stored in ETCD.
-
