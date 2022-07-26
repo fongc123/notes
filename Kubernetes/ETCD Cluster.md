@@ -44,7 +44,7 @@ ETCD can be set up <span style = "color:lightblue">manually</span> or using the 
 - manually: must configure ETCD to the correct IP (*correspond with kube-apiserver*)
 - `kubeadm`:  service is run as a pod
 
-Multiple ETCD instances can be created as seen in a <span style = "color:lightblue">high avalability (HA) environment</span>.
+Multiple ETCD instances can be created as found in a <span style = "color:lightblue">high avalability (HA) environment</span>.
 
 ## Commands
 `etcdctl` is the command line interface (CLI) tool used to interact with ETCD.
