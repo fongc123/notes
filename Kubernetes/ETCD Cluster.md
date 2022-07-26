@@ -28,3 +28,29 @@ When ETCD is run, it listens on port `2379` by default and can store key-value i
 - `./etcdctl set key1 value1`: store `key1` with `value1` in the database
 
 ## Kubernetes Integration
+ETCD stores the following information about the cluster.
+- Nodes
+- PODs
+- Configs
+- Secrets
+- Accounts
+- Roles
+- Bindings
+- *and other information*
+
+Modifications to the ETCD server will cause changes to the cluster. ETCD will run as a service that is part of the Kubernetes cluster.
+
+ETCD can be set up <span style = "color:lightblue">manually</span> or using the `kubeadm` command.
+- manually: must configure ETCD to the correct IP (*correspond with kube-apiserver*)
+- `kubeadm`:  service is run as a pod
+
+Multiple ETCD instances can be created as seen in a <span style = "color:lightblue">high avalability (HA) environment</span>.
+
+## Commands
+`etcdctl` is the command line interface (CLI) tool used to interact with ETCD.
+
+> [!INFO]
+> Run `kubectl get pods -n kube-system` to list pods.
+> 
+> Run `kubectl exec etcd-master -n kube-system` and `etcdctl get / --prefix -keys-only` to get a list of keys stored in ETCD.
+

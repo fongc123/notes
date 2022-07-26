@@ -16,8 +16,6 @@ Options explored:
 + AWS Lambda
 + AWS EC2
 
-The prices per article or profile are shown in $10^{-4}$ USD per month.
-
 # Calculation Assumptions
 
 The following assumptions were made to calculate costs.
@@ -27,6 +25,9 @@ The following assumptions were made to calculate costs.
 + 1 month = 2,628,000 seconds
 
 The **number of articles or profiles per month** is derived first to obtain the **price per article or profile per month**.
+
+The prices per article or profile are shown in $10^{-4}$ USD per month.
+
 
 # AWS Lightsail
 
