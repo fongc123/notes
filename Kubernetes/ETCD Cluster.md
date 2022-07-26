@@ -15,9 +15,10 @@ The following steps explain how to install ETCD.
    ```bash
    tar xzvf etcd-v3.3.11-linux-amd64.tar.gz
 	```
-1. Run the ETCD service.
+1. Verify installation.
    ```bash
-   ./etcd
+   ./etcd --version
+   ./etcdctl version
 	```
 
 ## Basic Commands
