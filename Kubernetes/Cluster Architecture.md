@@ -28,3 +28,4 @@ A simple analogy of **cargo ships** is provided.
 - kublet → ship captain
 
 ![[k8s-arch.png|center|650]]
+

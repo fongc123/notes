@@ -1,0 +1,13 @@
+# Pod
+A pod is a single instance of a Docker container (*application*) and is the smallest object that can be created in Kubernetes.
+$$
+App → Container → Pod
+$$
+As workload increases, more pods will be created to share the workload between multiple Docker-containerized applications.
+
+Additional nodes with pods can be added to the cluster to balance the workload as well.
+
+<span style = "color:lightblue">Scaling up</span> creates more pods, while <span style = "color:lightblue">scaling down</span> deletes existing pods.
+
+<span style = "color:lightblue">Multi-container pods</span> are pods that have multiple containers in them. Typically, only one container is in a pod; however, it may be beneficial for <span style = "color:lightblue">helper containers</span> to exist alongside with the main container. Since they exist in the same pod, these containers refer to each other using `localhost`.
+

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Kube-API Server.md",
+            "file": "Kubernetes/Pod.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Kube-API Server.md",
+                "file": "Kubernetes/Pod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Kube-API Server.md",
+                "file": "Kubernetes/Pod.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Kube-API Server.md"
+                "file": "Kubernetes/Pod.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
-    "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Controller Manager.md",
-    "Kubernetes/Kube-API Server.md",
     "Kubernetes/Cluster Architecture.md",
+    "Kubernetes/Pod.md",
     "Programming with C++/C++ Basics.md",
-    "Untitled.md",
-    "Presentations/midas-analytics-aws-costs.md",
-    "src/midas-analytics-aws-costs-graph.png",
-    "Programming with C++/Scope.md"
+    "Programming with C++/Bitwise Operators.md",
+    "Kubernetes/Kube Proxy.md",
+    "Kubernetes/ETCD Cluster.md",
+    "Kubernetes/Kube-API Server.md",
+    "Kubernetes/Controller Manager.md",
+    "Kubernetes/Scheduler.md",
+    "Kubernetes/Kublet.md"
   ]
 }
