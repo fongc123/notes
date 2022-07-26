@@ -9,19 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/ETCD Cluster.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "30d4ea3f24b3cfba",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Kubernetes/Cluster Architecture.md",
+            "file": "Presentations/costs.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/ETCD Cluster.md",
+                "file": "Presentations/costs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/ETCD Cluster.md",
+                "file": "Presentations/costs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/ETCD Cluster.md"
+                "file": "Presentations/costs.md"
               }
             }
           }
@@ -143,6 +131,7 @@
   "active": "8dfaad65b76da1d5",
   "lastOpenFiles": [
     "Kubernetes/Cluster Architecture.md",
+    "Presentations/costs.md",
     "Kubernetes/ETCD Cluster.md",
     "Programming with C++/Scope.md",
     "Programming with C++/Separate Compilation.md",
@@ -150,7 +139,6 @@
     "Programming with C++/Pointer.md",
     "Programming with C++/Classes.md",
     "Programming with C++/Stack & Queue.md",
-    "Programming with C++/Bitwise Operators.md",
-    "Programming with C++/Random Numbers.md"
+    "Programming with C++/Bitwise Operators.md"
   ]
 }
