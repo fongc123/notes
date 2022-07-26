@@ -1,7 +1,7 @@
 # Pod
 A pod is a single instance of a Docker container (*application*) and is the smallest object that can be created in Kubernetes.
 $$
-App → Container → Pod
+App \rightarrow Container \rightarrow Pod
 $$
 As workload increases, more pods will be created to share the workload between multiple Docker-containerized applications.
 
@@ -11,3 +11,19 @@ Additional nodes with pods can be added to the cluster to balance the workload a
 
 <span style = "color:lightblue">Multi-container pods</span> are pods that have multiple containers in them. Typically, only one container is in a pod; however, it may be beneficial for <span style = "color:lightblue">helper containers</span> to exist alongside with the main container. Since they exist in the same pod, these containers refer to each other using `localhost`.
 
+## Deployment
+To start an instance of an application, run the following command.
+
+```bash
+kubectl run <NAME> --image <IMAGE_NAME>
+```
+
+The cluster will create a pod and will pull the `IMAGE_NAME` image from <span style = "color:lightblue">Docker Hub</span>. To view running pods, run the following command.
+
+```bash
+kubectl gets pods
+```
+
+The status of each pod can be viewed.
+
+## Configuration with YAML
