@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Untitled.md",
+            "file": "Kubernetes/Controller Manager.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "Kubernetes/Controller Manager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "Kubernetes/Controller Manager.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Kubernetes/Controller Manager.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
+    "Kubernetes/Kube-API Server.md",
+    "Kubernetes/Controller Manager.md",
     "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Cluster Architecture.md",
+    "Untitled.md",
     "Presentations/midas-analytics-aws-costs.md",
     "Programming with C++/C++ Basics.md",
     "src/midas-analytics-aws-costs-graph.png",
     "Programming with C++/Scope.md",
-    "Programming with C++/Separate Compilation.md",
-    "Programming with C++/Struct.md",
-    "Programming with C++/Pointer.md",
-    "Programming with C++/Classes.md"
+    "Programming with C++/Separate Compilation.md"
   ]
 }
