@@ -9,7 +9,7 @@ The node controller monitors the health and status of various nodes.
 The replication controller monitors the status of replica sets.
 
 ## Installation
-The kube-controller-manager can be installed by the following.
+The kube-controller-manager can be installed by the following command.
 
 ```bash
 wget https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-controller-manager
