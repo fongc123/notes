@@ -53,5 +53,4 @@ spec:
 	  image: nginx
 ```
 
-The command `kubectl create -f <FILE_NAME>.yaml` is used to create a pod in the Kubernetes cluster. The command `kubectl describe pod <POD_NAME>` will show details about a pod.
-
+The command `kubectl create -f <FILENAME>.yaml` is used to create a pod in the Kubernetes cluster. The command `kubectl describe pod <POD_NAME>` will show details about a pod.
