@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Pod.md",
+            "file": "Kubernetes/Replica Sets.md",
             "mode": "preview",
             "source": false
           }

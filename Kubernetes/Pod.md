@@ -12,7 +12,7 @@ Additional nodes with pods can be added to the cluster to balance the workload a
 <span style = "color:lightblue">Multi-container pods</span> are pods that have multiple containers in them. Typically, only one container is in a pod; however, it may be beneficial for <span style = "color:lightblue">helper containers</span> to exist alongside with the main container. Since they exist in the same pod, these containers refer to each other using `localhost`.
 
 ## Deployment
-To start an instance of an application, run the following command.
+To start a pod (i.e., start an instance of a container), run the following command.
 
 ```bash
 kubectl run <NAME> --image <IMAGE_NAME>
@@ -24,10 +24,14 @@ The cluster will create a pod and will pull the `IMAGE_NAME` image from <span st
 kubectl gets pods
 ```
 
+```bash
+kubectl get pods -o wide
+```
+
 The status of each pod can be viewed.
 
 ## YAML Configuration
-A pod can be configured with a YAML file. All pod files must have four required fields.
+A pod can also be configured with a YAML file. All pod files must have four required fields.
 - `apiVersion`: Kubernetes API version (e.g., `v1` or `apps/v1`)
 - `kind`: the type of the object (e.g., `Pod`, `Service`, `ReplicaSet`, or `Deployment`)
 - `metadata`: user-defined information about the pod
@@ -53,4 +57,17 @@ spec:
 	  image: nginx
 ```
 
+Alternatively, the `run` command can be used to generate a configuration file.
+
+```bash
+kubectl run <NAME> --image <IMAGE_NAME> --dry-run=client -o yaml > <FILENAME>.yaml
+```
+
+> [!INFO]
+> The `>` symbol directs the terminal output to a location (e.g., a file).
+
 The command `kubectl create -f <FILENAME>.yaml` is used to create a pod in the Kubernetes cluster. The command `kubectl describe pod <POD_NAME>` will show details about a pod.
+
+To command `kubectl delete pod <POD_NAME>` is used to delete a pod. The `delete` command can be applied to other Kubernetes components.
+
+Given that the configuration file has been changed, a pod can be updated with the command `kubectl rollout`.
