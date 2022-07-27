@@ -42,6 +42,10 @@ spec:
 
 The command `kubectl create -f <FILENAME>.yml` is used to create the replica set. The command `kubectl get replicaset` will show details about a replica set and the number of desired replicas. Pods will be started based on the replica set specifications which can be viewed in `kubectl get pods`.
 
+The command `kubectl delete replicaset <REPLICA_SET>` is used to delete a replica set.
+
+The replica set can be updated with the command `kubectl edit replicaset <REPLICA_SET>`.
+
 For reference, the configuration file and relevant commands for a replication controller are shown below.
 
 ```yaml
