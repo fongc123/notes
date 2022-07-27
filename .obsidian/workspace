@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Pod.md",
+            "file": "Kubernetes/Replica Sets.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Replica Sets.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Replica Sets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Replica Sets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Pod.md"
+                "file": "Kubernetes/Replica Sets.md"
               }
             }
           }
@@ -140,17 +140,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e09e2b7b191995ce",
+  "active": "24ef7e053b131257",
   "lastOpenFiles": [
-    "Kubernetes/Replica Sets.md",
-    "Kubernetes/Pod.md",
-    "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Cluster Architecture.md",
-    "Programming with C++/C++ Basics.md",
-    "Programming with C++/Bitwise Operators.md",
-    "Kubernetes/Kube Proxy.md",
+    "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Kube-API Server.md",
     "Kubernetes/Controller Manager.md",
-    "Kubernetes/Scheduler.md"
+    "Kubernetes/Scheduler.md",
+    "Kubernetes/Kublet.md",
+    "Kubernetes/Kube Proxy.md",
+    "Kubernetes/Replica Sets.md",
+    "Kubernetes/Pod.md",
+    "Programming with C++/C++ Basics.md"
   ]
 }

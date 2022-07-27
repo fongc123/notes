@@ -60,14 +60,14 @@ spec:
 Alternatively, the `run` command can be used to generate a configuration file.
 
 ```bash
-kubectl run <NAME> --image <IMAGE_NAME> --dry-run=client -o yaml > <FILENAME>.yaml
+kubectl run <NAME> --image=<IMAGE_NAME> --dry-run=client -o yaml > <FILENAME>.yml
 ```
 
 > [!INFO]
 > The `>` symbol directs the terminal output to a location (e.g., a file).
 
-The command `kubectl create -f <FILENAME>.yaml` is used to create a pod in the Kubernetes cluster. The command `kubectl describe pod <POD_NAME>` will show details about a pod.
+The command `kubectl create -f <FILENAME>.yml` is used to create a pod in the Kubernetes cluster. The command `kubectl describe pod <POD_NAME>` will show details about a pod.
 
 To command `kubectl delete pod <POD_NAME>` is used to delete a pod. The `delete` command can be applied to other Kubernetes components.
 
-Given that the configuration file has been changed, a pod can be updated with the command `kubectl rollout`.
+Given that the configuration file has been changed, a pod can be updated with the command `kubectl apply -f <FILENAME>.yml`.

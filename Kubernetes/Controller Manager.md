@@ -20,7 +20,7 @@ Options can be specified in the `kube-controller-manager.service` file.
 In a kube admin setup, the controller manager will be run as a pod. Its options can be shown using the following command.
 
 ```bash
-cat /etc/kubernetes/manifests/kube-controller-manager.yaml
+cat /etc/kubernetes/manifests/kube-controller-manager.yml
 ```
 
 In a non-kube admin setup, the service's options can be shown using the following command.

@@ -20,7 +20,7 @@ wget https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux
 The server's options can be located using the following commands for a kube admin and non-kube admin setup respectively.
 
 ```bash
-cat /etc/kubernetes/manifests/kube-apiserver.yaml
+cat /etc/kubernetes/manifests/kube-apiserver.yml
 ```
 
 ```bash
