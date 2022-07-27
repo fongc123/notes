@@ -26,7 +26,7 @@ kubectl gets pods
 
 The status of each pod can be viewed.
 
-## Configuration with YAML
+## YAML Configuration
 A pod can be configured with a YAML file. All pod files must have four required fields.
 - `apiVersion`: Kubernetes API version (e.g., `v1` or `apps/v1`)
 - `kind`: the type of the object (e.g., `Pod`, `Service`, `ReplicaSet`, or `Deployment`)

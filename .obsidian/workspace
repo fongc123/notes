@@ -130,15 +130,15 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
-    "Kubernetes/Cluster Architecture.md",
+    "Kubernetes/Replica Sets.md",
     "Kubernetes/Pod.md",
+    "Kubernetes/ETCD Cluster.md",
+    "Kubernetes/Cluster Architecture.md",
     "Programming with C++/C++ Basics.md",
     "Programming with C++/Bitwise Operators.md",
     "Kubernetes/Kube Proxy.md",
-    "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Kube-API Server.md",
     "Kubernetes/Controller Manager.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Kublet.md"
+    "Kubernetes/Scheduler.md"
   ]
 }
