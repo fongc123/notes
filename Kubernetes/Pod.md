@@ -34,13 +34,13 @@ A pod can be configured with a YAML file. All pod files must have four required 
 - `spec`: pod specifications
 
 > [!INFO]
-> The `metadata` field does **not** specify the containers to be run on the pod. Pod specifications are found in the `specs` field.
+> The `metadata` field does **not** specify the containers to be run on the pod. Pod specifications are specified in the `specs` field.
 
 A sample configuration file for a single-container pod named `myapp-pod` that runs an `nginx` application is shown below.
 
 ```yaml
 # FILE: pod-definition.yaml
-apiVersion: 
+apiVersion: v1
 kind: Pod
 metadata:
 	name: myapp-pod
