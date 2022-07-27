@@ -39,7 +39,7 @@ A pod can be configured with a YAML file. All pod files must have four required 
 A sample configuration file for a single-container pod named `myapp-pod` that runs an `nginx` application is shown below.
 
 ```yaml
-# FILE: pod-definition.yaml
+# FILE: pod-definition.yml
 apiVersion: v1
 kind: Pod
 metadata:
