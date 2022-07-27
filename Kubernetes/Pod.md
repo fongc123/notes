@@ -27,3 +27,31 @@ kubectl gets pods
 The status of each pod can be viewed.
 
 ## Configuration with YAML
+A pod can be configured with a YAML file. All pod files must have four required fields.
+- `apiVersion`: Kubernetes API version (e.g., `v1` or `apps/v1`)
+- `kind`: the type of the object (e.g., `Pod`, `Service`, `ReplicaSet`, or `Deployment`)
+- `metadata`: user-defined information about the pod
+- `spec`: pod specifications
+
+> [!INFO]
+> The `metadata` field does **not** specify the containers to be run on the pod. Pod specifications are found in the `specs` field.
+
+A sample configuration file for a single-container pod named `myapp-pod` that runs an `nginx` application is shown below.
+
+```yaml
+# FILE: pod-definition.yaml
+apiVersion: 
+kind: Pod
+metadata:
+	name: myapp-pod
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	containers: # array (one or more containers)
+	- name: nginx-container
+	  image: nginx
+```
+
+The command `kubectl create -f <FILE_NAME>.yaml` is used to create a pod in the Kubernetes cluster. The command `kubectl describe pod <POD_NAME>` will show details about a pod.
+
