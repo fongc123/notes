@@ -1,4 +1,4 @@
-# Kube-API Server
+# Kube API Server
 It allows communication in between nodes and components and from outside requests.
 
 The `kubectl` command is sent to the API server which then **performs** the necessary functions and **relays** the command to required nodes and/or components. 

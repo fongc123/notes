@@ -1,6 +1,8 @@
 # Services
 A <span style = "color:lightblue">service</span> enable communication between pods and external users.
 
+At launch, Kubernetes will create a default `ClusterIP` service.
+
 ## External Access
 Components inside a Kubernetes node share the same network which cannot be accessed from outside. Although `ssh` is possible, it is not a good method.
 
