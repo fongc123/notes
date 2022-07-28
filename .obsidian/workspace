@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Services.md",
+            "file": "Kubernetes/Namespace.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Services.md",
+                "file": "Kubernetes/Namespace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Services.md",
+                "file": "Kubernetes/Namespace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Services.md"
+                "file": "Kubernetes/Namespace.md"
               }
             }
           }
@@ -143,14 +143,14 @@
   "active": "24ef7e053b131257",
   "lastOpenFiles": [
     "Kubernetes/Deployment.md",
+    "Kubernetes/Namespace.md",
+    "Kubernetes/Services.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Kube API Server.md",
-    "Kubernetes/Services.md",
-    "Kubernetes/Kube Proxy.md",
-    "Kubernetes/Pod.md"
+    "Kubernetes/Kube Proxy.md"
   ]
 }
