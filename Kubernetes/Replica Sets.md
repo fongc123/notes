@@ -12,7 +12,7 @@ Similar to pods, a replica set can be configured in a YAML file. All replica set
 - `replicas`: the number of instances to create
 - `selector`: other pods that are also considered (*specified using labels*)
 
-The `selector` field allows other pre-existing pods specified using their labels to be considered in the replication as well.
+The `selector` field allows other pre-existing pods specified using their labels to be considered in the replication as well. The correct API version can be found using `kubectl explain replicaset` (i.e., the `explain` command).
 
 ```yaml
 # FILE: replicaset-definition.yml
