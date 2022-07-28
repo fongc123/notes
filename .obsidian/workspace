@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Deployment.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -22,7 +22,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Services.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -143,10 +143,10 @@
   "active": "24ef7e053b131257",
   "lastOpenFiles": [
     "Kubernetes/Deployment.md",
-    "Kubernetes/Replica Sets.md",
-    "Kubernetes/Services.md",
     "Kubernetes/Kube Proxy.md",
     "Kubernetes/Pod.md",
+    "Kubernetes/Replica Sets.md",
+    "Kubernetes/Services.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Kublet.md",
     "Kubernetes/Scheduler.md",

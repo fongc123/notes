@@ -10,7 +10,8 @@ Other changes made to the pods in the deployment will also take effect in a mann
 ## YAML Configuration
 Other than the `kind`, the deployment configuration has the same required fields as that of a replica set.
 
-```deployment-definition.yml
+```YAML
+# FILE: deployment-definition.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
