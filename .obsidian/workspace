@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Cluster Architecture.md",
+            "file": "Kubernetes/Deployment.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Cluster Architecture.md",
+                "file": "Kubernetes/Deployment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Cluster Architecture.md",
+                "file": "Kubernetes/Deployment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Cluster Architecture.md"
+                "file": "Kubernetes/Deployment.md"
               }
             }
           }
@@ -143,6 +143,7 @@
   "active": "24ef7e053b131257",
   "lastOpenFiles": [
     "Kubernetes/Pod.md",
+    "Kubernetes/Deployment.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Kube Proxy.md",
@@ -150,7 +151,6 @@
     "Kubernetes/Scheduler.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Kube-API Server.md",
-    "Kubernetes/ETCD Cluster.md",
-    "Programming with C++/C++ Basics.md"
+    "Kubernetes/ETCD Cluster.md"
   ]
 }
