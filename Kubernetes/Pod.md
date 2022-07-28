@@ -15,7 +15,7 @@ Additional nodes with pods can be added to the cluster to balance the workload a
 To start a pod (i.e., start an instance of a container), run the following command.
 
 ```bash
-kubectl run <NAME> --image <IMAGE_NAME>
+kubectl run <NAME> --image=<IMAGE_NAME>
 ```
 
 The cluster will create a pod and will pull the `IMAGE_NAME` image from <span style = "color:lightblue">Docker Hub</span>. To view running pods, run the following command.
