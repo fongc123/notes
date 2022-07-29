@@ -9,3 +9,5 @@ On the other hand, the `apply` command with a configuration file will automatica
 > A **path** can be specified in the `apply` command to perform operations on **multiple files**.
 
 Imperative commands are useful for completing small, one-time tasks, while declarative commands should be used most of the time.
+
+The `apply` command compares the **local file** configuration, **last applied configuration**, and the **current Kubernetes state** to determine what changes are needed to be performed.

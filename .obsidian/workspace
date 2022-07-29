@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Imperative & Declarative.md",
+            "file": "Kubernetes/Scheduler.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Services.md",
+                "file": "Kubernetes/Scheduler.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Services.md",
+                "file": "Kubernetes/Scheduler.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Services.md"
+                "file": "Kubernetes/Scheduler.md"
               }
             }
           }
@@ -140,11 +140,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0d8061043bed689f",
+  "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
-    "Kubernetes/Pod.md",
-    "Kubernetes/Services.md",
     "Kubernetes/Imperative & Declarative.md",
+    "Kubernetes/Services.md",
+    "Kubernetes/Pod.md",
     "Kubernetes/Namespace.md",
     "Kubernetes/Deployment.md",
     "Presentations/midas-analytics-aws-costs.pdf",

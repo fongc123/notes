@@ -36,3 +36,5 @@ ps -aux | grep kube-scheduler
 
 
 [^1]: How much resources would the node have left after the pod is assigned?
+
+## Manual Scheduling
