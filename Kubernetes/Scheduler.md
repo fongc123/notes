@@ -216,3 +216,35 @@ A possible summarization could be: taints and tolerations specify **blacklisted 
 ## Resource Requirements
 Each pod has its own resource requirements. If there are no nodes with available resources, a pod will in a `Pending` state (*not scheduled*).
 
+By default, Kubernetes assumes that each pod has a <span style = "color:lightblue">resource requests</span> of **0.5 CPU** and **256 Mi**. Resource requirements can be changed in the pod definition file.
+
+One CPU is equivalent to one AWS vCPU, one GCP Core, one Azure Core, or one hyperthread.
+
+## Resource Limits
+By default, Kubernetes sets a limit of **1 vCPU** and **512 Mi RAM** to pods.
+
+A pod cannot exceed its CPU limits. On the other hand, a pod can exceed its memory limits; however, if it exceeds it for too long, the pod will be **terminated**.
+
+Resource requirements and limits can be modified in the pod definition file.
+
+```yaml
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: simple-webapp
+spec:
+	containers:
+	- name: simple-webapp
+	  image: simple-webapp
+	  ports:
+	  - containerPort: 8080
+	  resources:
+		  requests:
+			  memory: "1Gi"
+			  cpu: 1
+		  limits:
+			  memory: "2Gi"
+			  cpu: 2
+```
+
