@@ -18,7 +18,7 @@ To start a pod (i.e., start an instance of a container), run the following comma
 kubectl run <NAME> --image=<IMAGE_NAME>
 ```
 
-The cluster will create a pod and will pull the `IMAGE_NAME` image from <span style = "color:lightblue">Docker Hub</span>. To view running pods, run the following command.
+The cluster will create a pod and will pull the `IMAGE_NAME` image from <span style = "color:lightblue">Docker Hub</span>. The `--port` option can be added to specify the port the container will expose (i.e., which port the container will run on). **This is not the same as services.** To view running pods, run the following command.
 
 ```bash
 kubectl gets pods

@@ -74,18 +74,24 @@ The service types are `NodePort`, `ClusterIP`, and `LoadBalancer`. The `ClusterI
 The `create` and `get` command can be used to create the service and get details about services respectively.
 
 ```bash
-kubectl create service clusterip <APP> --tcp=<PORT>:<PORT>
+kubectl create -f service-definition.yml
 ```
 
-The `expose` command can also be used to create the service.
+Without a configuration file, the `create` and `expose` command can create the service.
 
 ```bash
-kubectl expode pod <APP> --type=<SERVICE_TYPE> --port=<PORT> --name=<SERVICE_NAME>
+kubectl create service clusterip <SERVICE_NAME> --tcp=<PORT>:<PORT>
 ```
+
+```bash
+kubectl expose <OBJECT_TYPE> <APP> --type=<SERVICE_TYPE> --port=<PORT> --name=<SERVICE_NAME>
+```
+
+However, there are limitations to each command. For example, there is no way to specify the application in `create`. For further modification, a configuration file would have to be created.
 
 The `--dry-run=client -o yaml` option will test if the command works and output the configuration in the terminal in a YAML format.
 
 > [!INFO]
 > A service uses a **random** load-balancing algorithm with `SessionAffinity`.
 
-When creating a pod, the `--expose` and `--port` options will specify a service to be created with the same name as the pod. It can shorten the number of commands needed to be inputted.
+When creating a pod, the `--expose` and `--port` options will specify a ClusterIP service to be created to be associated with the pod (*same name as pod*). It can shorten the number of commands needed to be inputted.

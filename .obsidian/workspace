@@ -142,10 +142,10 @@
   },
   "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Namespace.md",
-    "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Services.md",
+    "Kubernetes/Imperative & Declarative.md",
+    "Kubernetes/Namespace.md",
     "Kubernetes/Deployment.md",
     "Presentations/midas-analytics-aws-costs.pdf",
     "Kubernetes/Replica Sets.md",
