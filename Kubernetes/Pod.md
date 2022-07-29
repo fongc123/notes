@@ -78,3 +78,4 @@ Below are some other useful options.
 - `--selector`: specify labels in a key-value format (e.g., `--selector="env=dev"`)
 - `wc`: word count (*add `-l` option*)
 - `--no-headers`: no headers
+

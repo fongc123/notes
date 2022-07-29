@@ -213,19 +213,47 @@ These types will determine scheduling behaviour when a suitable node was not fou
 
 A possible summarization could be: taints and tolerations specify **blacklisted nodes**, while node selectors and node affinities specify **whitelisted nodes**. Generally, a combination of taints, tolerations, and node affinities are used together to accomplish a desired scheduling configuration.
 
-## Resource Requirements
-Each pod has its own resource requirements. If there are no nodes with available resources, a pod will in a `Pending` state (*not scheduled*).
-
-By default, Kubernetes assumes that each pod has a <span style = "color:lightblue">resource requests</span> of **0.5 CPU** and **256 Mi**. Resource requirements can be changed in the pod definition file.
-
-One CPU is equivalent to one AWS vCPU, one GCP Core, one Azure Core, or one hyperthread.
-
-## Resource Limits
-By default, Kubernetes sets a limit of **1 vCPU** and **512 Mi RAM** to pods.
+## Resource Requirements & Limits
+Each pod has its own <span style = "color:lightblue">resource requirements</span>. If there are no nodes with available resources, a pod will in a `Pending` state (*not scheduled*).
 
 A pod cannot exceed its CPU limits. On the other hand, a pod can exceed its memory limits; however, if it exceeds it for too long, the pod will be **terminated**.
 
-Resource requirements and limits can be modified in the pod definition file.
+By default, Kubernetes will assume that each pod has a <span style = "color:lightblue">resource request</span> based on the denoted values in a `LimitRange` object definition in the namespace. Sample definition files for memory and CPU limits are shown below.
+
+```yaml
+# FILE: memory-limit-range-definition.yml
+apiVersion: v1
+kind: LimitRange
+metadata:
+	name: memory-limit-range
+spec:
+	limits:
+	- default:
+		  memory: "512Mi"
+	  defaultRequest:
+		  memory: "256Mi"
+	  type: Container
+```
+
+```yaml
+# FILE: cpu-limit-range-definition.yaml
+apiVersion: v1
+kind: LimitRange
+metadata:
+	name: cpu-limit-range
+spec:
+	limits:
+	- default:
+		  cpu: 1
+	  defaultRequest:
+		  cpu: 0.5
+	  type: Container
+```
+
+> [!INFO]
+> One Kubernetes CPU is equivalent to one AWS vCPU, one GCP Core, one Azure Core, or one hyperthread.
+
+Non-default resource requirements and limits can be changed in the pod definition file.
 
 ```yaml
 # FILE: pod-definition.yml

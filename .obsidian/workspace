@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Scheduler.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Kubernetes/Pod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Kubernetes/Pod.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Scheduler.md"
+                "file": "Kubernetes/Pod.md"
               }
             }
           }
@@ -140,10 +140,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e09e2b7b191995ce",
+  "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Pod.md",
     "Kubernetes/Scheduler.md",
+    "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Services.md",
     "Kubernetes/Deployment.md",
