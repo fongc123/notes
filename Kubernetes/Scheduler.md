@@ -88,4 +88,59 @@ The command `kubetcl get nodes` will display the nodes in the Kubernetes cluster
 ## Taints & Tolerations
 A set of rules that restrict which pods can be scheduled to which nodes.
 
-A <span style = "color:lightblue">taint</span> specifies 
+A <span style = "color:lightblue">taint</span> specifies which nodes have restricted scheduling.
+
+A <span style = "color:lightblue">toleration</span> specifies which pods can *tolerate* a taint, allowing those pods to be scheduled on restricted nodes.
+
+Taints are applied to nodes using the `taint` command.
+
+```bash
+kubectl taint nodes <NODE_NAME> <KEY>=<VALUE>:<TAINT_EFFECT>
+```
+- `NODE_NAME`: name of the node
+- `KEY` and `VALUE`: key-value pair of a taint
+- `TAINT_EFFECT`: effect of the taint if pod is not tolerant
+	- `NoSchedule`: will not schedule
+	- `PreferNoSchedule`: only *prefer* to not schedule
+	- `NoExecute`: stop pre-existing pods running on the node as well
+
+To untain a node, run the `taint` command with `-` at the end.
+
+```bash
+kubectl tain nodes <NODE_NAME> <KEY>=<VALUE>:<TAINT_EFFECT>-
+```
+
+Tolerations are applied to pods under the `tolerations` field in the definition file.
+
+```yaml
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: myapp-pod
+spec:
+	containers:
+	- name: nginx-container
+	  image: nginx
+	tolerations:
+	- key: "app"
+	  operator: "Equal"
+	  value: "blue"
+	  effect: "NoSchedule"
+```
+
+Values in the `tolerations` field are specified with **double quotation marks**.
+
+> [!INFO]
+> Taints and tolerations will not directly assign a particular pod to a particular node. Instead, it will only specify which pods **cannot** be assigned to a node. This is controlled by **Node Affinity**.
+
+A taint is set up on the master node to not accept **any nodes**. The `describe` command can be used to view the details of a node (*and its taints*).
+
+```bash
+kubectl describe node <NODE_NAME>
+```
+
+```bash
+kubectl describe node <NODE_NAME> | grep Taints
+```
+
