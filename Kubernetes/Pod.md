@@ -34,7 +34,7 @@ The status of each pod can be viewed.
 A pod can also be configured with a YAML file. All pod files must have four required fields.
 - `apiVersion`: Kubernetes API version (e.g., `v1` or `apps/v1`)
 - `kind`: the type of the object (e.g., `Pod`, `Service`, `ReplicaSet`, or `Deployment`)
-- `metadata`: user-defined information about the pod
+- `metadata`: user-defined information about the pod (`name` and `labels` help identify the pod)
 - `spec`: pod specifications
 
 > [!INFO]
@@ -75,3 +75,6 @@ The pod can be updated with the command `kubectl edit pod <POD_NAME>`. Alternati
 Below are some other useful options.
 - `--force`: force the operation
 - `--watch`: watch for any changes
+- `--selector`: specify labels in a key-value format (e.g., `--selector="env=dev"`)
+- `wc`: word count (*add `-l` option*)
+- `--no-headers`: no headers

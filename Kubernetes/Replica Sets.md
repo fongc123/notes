@@ -29,7 +29,7 @@ spec:
 			name: myapp-pod
 			labels:
 				app: myapp
-				type: front-end
+				type: front-end # match with `matchLabels`
 		spec:
 			containers:
 			- name: nginx-container
@@ -37,7 +37,7 @@ spec:
 	replicas: 3
 	selector:
 		matchLabels:
-			type: front-end
+			type: front-end # match with `type`
 ```
 
 The command `kubectl create -f <FILENAME>.yml` is used to create the replica set. The command `kubectl get replicaset` will show details about a replica set and the number of desired replicas. Pods will be started based on the replica set specifications which can be viewed in `kubectl get pods`.

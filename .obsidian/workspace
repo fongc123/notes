@@ -143,13 +143,13 @@
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Pod.md",
-    "Kubernetes/Namespace.md",
     "Kubernetes/Scheduler.md",
-    "Kubernetes/Services.md",
-    "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Deployment.md",
-    "Presentations/midas-analytics-aws-costs.pdf",
     "Kubernetes/Replica Sets.md",
+    "Kubernetes/Services.md",
+    "Kubernetes/Deployment.md",
+    "Kubernetes/Namespace.md",
+    "Kubernetes/Imperative & Declarative.md",
+    "Presentations/midas-analytics-aws-costs.pdf",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/ETCD Cluster.md"
   ]

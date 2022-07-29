@@ -85,3 +85,7 @@ curl --header "Content-Type:application/json" --request POST --data '{ "apiVersi
 
 The command `kubetcl get nodes` will display the nodes in the Kubernetes cluster.
 
+## Taints & Tolerations
+A set of rules that restrict which pods can be scheduled to which nodes.
+
+A <span style = "color:lightblue">taint</span> specifies 
