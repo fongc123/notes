@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Pod.md",
+            "file": "Kubernetes/Services.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Imperative & Declarative.md",
+                "file": "Kubernetes/Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Imperative & Declarative.md",
+                "file": "Kubernetes/Services.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Imperative & Declarative.md"
+                "file": "Kubernetes/Services.md"
               }
             }
           }
@@ -140,15 +140,15 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e09e2b7b191995ce",
+  "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Pod.md",
-    "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Services.md",
     "Kubernetes/Namespace.md",
+    "Kubernetes/Imperative & Declarative.md",
+    "Kubernetes/Pod.md",
+    "Kubernetes/Services.md",
+    "Kubernetes/Deployment.md",
     "Presentations/midas-analytics-aws-costs.pdf",
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Deployment.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Kube API Server.md"
