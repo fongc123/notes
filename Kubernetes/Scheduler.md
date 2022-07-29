@@ -144,20 +144,17 @@ kubectl describe node <NODE_NAME>
 kubectl describe node <NODE_NAME> | grep Taints
 ```
 
-## Node Selectors
-A <span style = "color:lightblue">node selector</span> is a specifies which nodes a particular pod can be run on.
-
-A possible summarization could be: taints and tolerations **restrict** nodes, while node selectors **allow** nodes.
-
-### Label Nodes
-The command below labels a node in a key-value format.
+## Labeling Nodes
+Labels, which are used in <span style = "color:lightblue">node selectors</span> and <span style = "color:lightblue">node affinities</span>, can be added to nodes to classify them (e.g., based on hardware resources). To label a node, a key-value pair must be provided.
 
 ```bash
 kubectl label nodes <NODE_NAME> <KEY>=<VALUE>
 ```
 
-## Pod Definition
-The `nodeSelector` field in the pod definition specifies the node based on a label.
+## Node Selectors
+A <span style = "color:lightblue">node selector</span> is a specifies which nodes a particular pod can be run on.
+
+A possible summarization could be: taints and tolerations **restrict** nodes, while node selectors **allow** nodes. The `nodeSelector` field in the pod definition specifies the node based on a label.
 
 ```yaml
 # FILE: pod-definition.yml
@@ -173,7 +170,7 @@ spec:
 		size: Large
 ```
 
-In the above code block, the pod only runs on nodes with the `Large` label.
+In the above code block, the pod only runs on nodes with the label with the `size` key equal to `Large`.
 
 ## Node Affinity
 A <span style = "color:lightblue">node affinity</span> allows more control over pod-node scheduling. Advanced expressions, such as `OR` or `NOT`, are not supported in node selectors.
@@ -206,3 +203,9 @@ The pod with the above specifications will be placed in nodes with labels `Large
 - `NotIn`: label is **not in** values
 - `Exists`: label exists
 
+There are three (two available, one planned) types of node affinity.
+- `requiredDuringSchedulingIgnoredDuringExecution`: affinity rules required when *first* scheduled but ignored while running
+- `preferredDuringSchedulingIgnoredDuringExecution`: affinity rules preferred when *first* scheduled but ignored while running
+- `requiredDuringSchedulingRequiredDuringExecution`: affinity rules required when *first* scheduled *and* while running
+
+These types will determine scheduling behaviour when a suitable node was not found.
