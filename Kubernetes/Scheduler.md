@@ -207,8 +207,12 @@ There are three (two available, one planned) types of node affinity.
 - `requiredDuringSchedulingRequiredDuringExecution`: affinity rules required when *first* scheduled *and* while running
 
 > [!INFO]
-> Node selectors and node affinities only control where certain **pods** can be scheduled on. **Other nodes can still be assigned to labeled pods which may be taking up resources allocated for the pods with node affinity.**
+> Node selectors and node affinities only control where certain **pods** can be scheduled on. **Other nodes can still be assigned to labeled pods which may be taking up resources intended for the pods with node affinity.**
 
 These types will determine scheduling behaviour when a suitable node was not found.
 
 A possible summarization could be: taints and tolerations specify **blacklisted nodes**, while node selectors and node affinities specify **whitelisted nodes**. Generally, a combination of taints, tolerations, and node affinities are used together to accomplish a desired scheduling configuration.
+
+## Resource Requirements
+Each pod has its own resource requirements. If there are no nodes with available resources, a pod will in a `Pending` state (*not scheduled*).
+
