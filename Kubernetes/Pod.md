@@ -70,4 +70,4 @@ The command `kubectl create -f <FILENAME>.yml` is used to create a pod in the Ku
 
 The command `kubectl delete pod <POD_NAME>` is used to delete a pod. The `delete` command can be applied to other Kubernetes components.
 
-The pod can be updated with the command `kubectl edit pod <POD_NAME>`. Alternatively, given that the configuration file has been changed, a pod can be updated with the command `kubectl apply -f <FILENAME>.yml`.
+The pod can be updated with the command `kubectl edit pod <POD_NAME>`. Alternatively, given that the configuration file has been changed, a pod can be updated with the command `kubectl replace -f <FILENAME>.yml` or `kubectl apply -f <FILENAME>.yml`.

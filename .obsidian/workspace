@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Namespace.md",
+            "file": "Kubernetes/Imperative & Declarative.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Namespace.md",
+                "file": "Kubernetes/Imperative & Declarative.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Namespace.md",
+                "file": "Kubernetes/Imperative & Declarative.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Namespace.md"
+                "file": "Kubernetes/Imperative & Declarative.md"
               }
             }
           }
@@ -143,6 +143,7 @@
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Pod.md",
+    "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Services.md",
     "Kubernetes/Namespace.md",
     "Presentations/midas-analytics-aws-costs.pdf",
@@ -150,7 +151,6 @@
     "Kubernetes/Deployment.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Kube API Server.md",
-    "Kubernetes/Controller Manager.md"
+    "Kubernetes/Kube API Server.md"
   ]
 }

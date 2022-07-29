@@ -9,7 +9,7 @@ Objects within the same namespace refer to each other by their names. Objects *o
 
 ## Specifying Namespaces
 
-The `--namespace` option is used to specify the namespace. For example, the command below lists pods in the `kube-system` namespace.
+The `--namespace` option (or `-n`) is used to specify the namespace. For example, the command below lists pods in the `kube-system` namespace.
 
 ```bash
 kubectl get pods --namespace=kube-system 
