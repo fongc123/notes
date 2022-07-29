@@ -1,7 +1,7 @@
 # Namespace
 A <span style = "color:lightblue">namespace</span> enables isolation of resources and objects in the Kubernetes cluster.
 
-The <span style = "color:lightblue">default</span> namespace is automatically created when the cluster is first set up. The `kube-system` and `kube-public` namespaces are also created for internal operations.
+The <span style = "color:lightblue">default</span> namespace is automatically created when the cluster is first set up. The `kube-system` and `kube-public` namespaces are also created for internal operations (e.g., for running Kubernetes components).
 
 Custom namespaces can be created to organize resources and components (e.g., develop and production namespaces).
 

@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Services.md",
+            "file": "Kubernetes/Pod.md",
             "mode": "source",
             "source": false
           }
@@ -142,15 +142,15 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
-    "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Services.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Namespace.md",
+    "Kubernetes/Scheduler.md",
+    "Kubernetes/Services.md",
+    "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Deployment.md",
     "Presentations/midas-analytics-aws-costs.pdf",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Cluster Architecture.md",
-    "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Kube API Server.md"
+    "Kubernetes/ETCD Cluster.md"
   ]
 }
