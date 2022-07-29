@@ -152,9 +152,7 @@ kubectl label nodes <NODE_NAME> <KEY>=<VALUE>
 ```
 
 ## Node Selectors
-A <span style = "color:lightblue">node selector</span> is a specifies which nodes a particular pod can be run on.
-
-A possible summarization could be: taints and tolerations **restrict** nodes, while node selectors **allow** nodes. The `nodeSelector` field in the pod definition specifies the node based on a label.
+A <span style = "color:lightblue">node selector</span> is a specifies which nodes a particular pod can be run on. The `nodeSelector` field in the pod definition specifies the node based on a label.
 
 ```yaml
 # FILE: pod-definition.yml
@@ -208,4 +206,9 @@ There are three (two available, one planned) types of node affinity.
 - `preferredDuringSchedulingIgnoredDuringExecution`: affinity rules preferred when *first* scheduled but ignored while running
 - `requiredDuringSchedulingRequiredDuringExecution`: affinity rules required when *first* scheduled *and* while running
 
+> [!INFO]
+> Node selectors and node affinities only control where certain **pods** can be scheduled on. **Other nodes can still be assigned to labeled pods which may be taking up resources allocated for the pods with node affinity.**
+
 These types will determine scheduling behaviour when a suitable node was not found.
+
+A possible summarization could be: taints and tolerations specify **blacklisted nodes**, while node selectors and node affinities specify **whitelisted nodes**. Generally, a combination of taints, tolerations, and node affinities are used together to accomplish a desired scheduling configuration.
