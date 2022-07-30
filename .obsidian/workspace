@@ -143,14 +143,14 @@
   "active": "0d8061043bed689f",
   "lastOpenFiles": [
     "Kubernetes/Scheduler.md",
+    "Kubernetes/Controller Manager.md",
+    "Kubernetes/Kube API Server.md",
+    "Kubernetes/ETCD Cluster.md",
+    "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Services.md",
     "Kubernetes/Deployment.md",
-    "Kubernetes/Namespace.md",
-    "Kubernetes/Imperative & Declarative.md",
-    "Presentations/midas-analytics-aws-costs.pdf",
-    "Kubernetes/Cluster Architecture.md",
-    "Kubernetes/ETCD Cluster.md"
+    "Kubernetes/Namespace.md"
   ]
 }
