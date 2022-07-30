@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Static Pods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Static Pods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Pod.md"
+                "file": "Kubernetes/Static Pods.md"
               }
             }
           }
@@ -140,13 +140,13 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0d8061043bed689f",
+  "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
+    "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Static Pods.md",
     "Kubernetes/Daemon Set.md",
     "Kubernetes/Namespace.md",
-    "Kubernetes/Pod.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Kube API Server.md",
