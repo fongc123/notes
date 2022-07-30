@@ -143,6 +143,7 @@
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Replica Sets.md",
+    "Kubernetes/Namespace.md",
     "Kubernetes/Daemon Set.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Scheduler.md",
@@ -150,7 +151,6 @@
     "Kubernetes/Kube API Server.md",
     "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Cluster Architecture.md",
-    "Kubernetes/Services.md",
-    "Kubernetes/Deployment.md"
+    "Kubernetes/Services.md"
   ]
 }

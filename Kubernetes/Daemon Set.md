@@ -28,4 +28,4 @@ spec:
 
 The `create` and `get` commands can be used to create and view daemon sets respectively.
 
-A quick way to create a daemon set is to generate the YAML file from a `deployment` configuration and change the `Kind` field to `DaemonSet`.
+A quick way to create a daemon set is to generate the YAML file from a `deployment` configuration with the `--dry-run=client` option and change the `Kind` field to `DaemonSet`. It is noted that unnecessary fields found in `Deployment` should also be removed in `DaemonSet`.
