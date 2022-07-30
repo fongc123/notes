@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Daemon Set.md",
+            "file": "Kubernetes/Static Pods.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Daemon Set.md",
+                "file": "Kubernetes/Static Pods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Daemon Set.md",
+                "file": "Kubernetes/Static Pods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Daemon Set.md"
+                "file": "Kubernetes/Static Pods.md"
               }
             }
           }
@@ -143,14 +143,14 @@
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Namespace.md",
+    "Kubernetes/Static Pods.md",
     "Kubernetes/Daemon Set.md",
+    "Kubernetes/Namespace.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Kube API Server.md",
     "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Cluster Architecture.md",
-    "Kubernetes/Services.md"
+    "Kubernetes/Cluster Architecture.md"
   ]
 }
