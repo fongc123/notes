@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Scheduler.md",
-            "mode": "preview",
+            "file": "Kubernetes/Daemon Set.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Pod.md",
+            "file": "Kubernetes/Replica Sets.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Daemon Set.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Daemon Set.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Pod.md"
+                "file": "Kubernetes/Daemon Set.md"
               }
             }
           }
@@ -140,17 +140,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0d8061043bed689f",
+  "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
+    "Kubernetes/Replica Sets.md",
+    "Kubernetes/Daemon Set.md",
+    "Kubernetes/Pod.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Kube API Server.md",
     "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Cluster Architecture.md",
-    "Kubernetes/Pod.md",
-    "Kubernetes/Replica Sets.md",
     "Kubernetes/Services.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Namespace.md"
+    "Kubernetes/Deployment.md"
   ]
 }
