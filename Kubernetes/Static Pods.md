@@ -24,7 +24,13 @@ Replica sets or deployments cannot be created with this method. Run the followin
 ps -aux | grep kubelet
 ```
 
-Static pods can also be identified by the `ownerReferences` field in the pod definition file YAML output. The `kind` of the owner should be a `Node` instead of a `ReplicaSet` or `Deployment`.
+The static pod path can also be found under `staticPodPath` with the following command.
+
+```bash
+cat /var/lib/kubelet/config.yaml
+```
+
+Static pods can be identified by the `ownerReferences` field in the pod definition file YAML output. The `kind` of the owner should be a `Node` instead of a `ReplicaSet` or `Deployment`.
 
 ```bash
 kubectl get pod <POD_NAME> -n <NAMESPACE> -o yaml
