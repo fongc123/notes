@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Static Pods.md",
+            "file": "Kubernetes/Scheduler.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Static Pods.md",
+                "file": "Kubernetes/Scheduler.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Static Pods.md",
+                "file": "Kubernetes/Scheduler.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Static Pods.md"
+                "file": "Kubernetes/Scheduler.md"
               }
             }
           }
@@ -142,9 +142,9 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
+    "Kubernetes/Static Pods.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Static Pods.md",
     "Kubernetes/Daemon Set.md",
     "Kubernetes/Namespace.md",
     "Kubernetes/Scheduler.md",
