@@ -24,8 +24,14 @@ Replica sets or deployments cannot be created with this method. Run the followin
 ps -aux | grep kubelet
 ```
 
+Static pods can also be identified by the `ownerReferences` field in the pod definition file YAML output. The `kind` of the owner should be a `Node` instead of a `ReplicaSet` or `Deployment`.
+
+```bash
+kubectl get pod <POD_NAME> -n <NAMESPACE> -o yaml
+```
+
 When there is no Kubernetes cluster, the `kubectl` command will not work. Instead, the `docker ps` command is used to view running static pods.
 
 In a Kubernetes cluster, static pods are shown on the Kubernetes API as a **read-only** mirror image. Modification of static pods is not possible. For example, when **deleting a static pod**, Kubernetes would automatically create it again.
 
-Control plane components are deployed as static pods on the master node (*shown as `-<NODE_NAME>` in their names*). Their pod definition files are found in the static pod path.
+Control plane components are deployed as static pods on the master node (*shown as `-<NODE_NAME>` in their names*). Their pod definition files are found in the static pod path. 
