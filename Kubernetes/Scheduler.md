@@ -277,3 +277,52 @@ spec:
 ```
 
 ## Multiple Schedulers
+A Kubernetes cluster can have multiple schedulers at the same time. A custom scheduler can schedule specified pods.
+
+To create a new scheduler, the `scheduler-name` option can be changed when running the scheduler as a service (*for manual installation*) and when running the scheduler as a pod (*kube admin installation*). The default scheduler has a name of `default-scheduler`.
+
+```yaml
+# FILE: custom-scheduler.yml
+
+apiVersion: v1
+kind: Pod
+metadata:
+	name: custom-scheduler
+	namespace: kube-system
+spec:
+	containers:
+	- command:
+	  - kube-scheduler
+	  - --address=127.0.0.1
+	  - --leader-elect=true
+	  ...
+	  - --scheduler-name=custom-scheduler
+	  image: k8s.gcr.io/kube-scheduler-amd64:v1.11.3
+	  name: kube-scheduler
+```
+
+The `--leader-elect` option specifies that there can be only one scheduler active at a given time. The `--lock-object-name` option will differentiate a new custom scheduler from the default scheduler.
+
+In a new pod definition, an additional field called `schedulerName` is added to specify the scheduler that will manage the pod.
+
+```yaml
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: nginx
+spec:
+	containers:
+	- image: nginx
+	  name: nginx
+	schedulerName: custom-scheduler
+```
+
+The command `kubectl get events` will get all events in the current namespace. Scheduling activites can be monitored with this method.
+
+Alternatively, the scheduler logs can also be viewed.
+
+```bash
+kubectl logs <SCHEDULER_NAME> --namespace <NAME_SPACE>
+```
+
