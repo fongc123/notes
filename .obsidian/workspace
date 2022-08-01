@@ -142,15 +142,15 @@
   },
   "active": "0d8061043bed689f",
   "lastOpenFiles": [
+    "Kubernetes/Imperative & Declarative.md",
+    "Kubernetes/Pod.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Static Pods.md",
-    "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Daemon Set.md",
     "Kubernetes/Namespace.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Kube API Server.md",
-    "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Cluster Architecture.md"
+    "Kubernetes/ETCD Cluster.md"
   ]
 }
