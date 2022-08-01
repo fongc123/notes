@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Kubernetes/Pod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Kubernetes/Pod.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Scheduler.md"
+                "file": "Kubernetes/Pod.md"
               }
             }
           }
@@ -140,14 +140,14 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e09e2b7b191995ce",
+  "active": "0d8061043bed689f",
   "lastOpenFiles": [
+    "Kubernetes/Scheduler.md",
     "Kubernetes/Static Pods.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Daemon Set.md",
     "Kubernetes/Namespace.md",
-    "Kubernetes/Scheduler.md",
     "Kubernetes/Controller Manager.md",
     "Kubernetes/Kube API Server.md",
     "Kubernetes/ETCD Cluster.md",
