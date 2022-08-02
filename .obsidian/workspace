@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Logging & Monitoring.md",
+            "file": "Kubernetes/Application Life Cycle Management.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Logging & Monitoring.md",
+                "file": "Kubernetes/Application Life Cycle Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Logging & Monitoring.md",
+                "file": "Kubernetes/Application Life Cycle Management.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Logging & Monitoring.md"
+                "file": "Kubernetes/Application Life Cycle Management.md"
               }
             }
           }
@@ -143,6 +143,7 @@
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Pod.md",
+    "Kubernetes/Application Life Cycle Management.md",
     "Kubernetes/Logging & Monitoring.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Imperative & Declarative.md",
@@ -150,7 +151,6 @@
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Daemon Set.md",
     "Kubernetes/Namespace.md",
-    "Kubernetes/Controller Manager.md",
-    "Kubernetes/Kube API Server.md"
+    "Kubernetes/Controller Manager.md"
   ]
 }
