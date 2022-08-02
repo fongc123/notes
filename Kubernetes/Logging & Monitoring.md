@@ -38,7 +38,7 @@ kubectl top node
 ```
 
 ```bash
-kubectl tod pod
+kubectl top pod
 ```
 
 ## Applications
