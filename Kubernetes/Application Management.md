@@ -173,7 +173,7 @@ kubectl create -f config-map.yml
 Key-value pairs are stored under the `data` field. The `get` and `describe` commands will list all config maps and get details of a specific config map respectively.
 
 #### Pod Injection
-To apply config maps to a pod, they must be injected into a pod definition file. The `envFrom.configMapRef` will reference a config map object to read configuration values from.
+To apply config maps to a pod, they must be injected into a pod definition file. The `envFrom.configMapRef` field will reference a config map object to read configuration values from.
 
 ```yaml
 # FILE: pod-definition.yml
