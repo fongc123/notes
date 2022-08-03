@@ -137,10 +137,10 @@ spec:
 
 Alternatively, environment variables can be specified using <span style = "color:lightblue">config maps</span> or <span style = "color:lightblue">secrets</span>. The source of the value (config map or secret) is specified instead of the value itself.
 
-## Config Maps
+### Config Maps
 <span style = "color:lightblue">Config maps</span> are central storage locations for configuration values, making configuration management easier.
 
-### Creation
+#### Creation
 To create a config map, an imperative command can be run. The `--from-literal` option can be specified as many times as needed and will read in key-value pairs.
 
 ```bash
@@ -172,7 +172,7 @@ kubectl create -f config-map.yml
 
 Key-value pairs are stored under the `data` field. The `get` and `describe` commands will list all config maps and get details of a specific config map respectively.
 
-### Pod Injection
+#### Pod Injection
 To apply config maps to a pod, they must be injected into a pod definition file. The `envFrom.configMapRef` will reference a config map object to read configuration values from.
 
 ```yaml
@@ -190,9 +190,7 @@ spec:
 		    name: app-config
 ```
 
-In the above pod definition with the previous config map definition, the pod's environment variables should be the following.
-- `APP_COLOR`: `blue`
-- 
+In the above pod definition with the previous config map definition, the pod's environment should have variable `APP_COLOR` equal to `blue` and variable `APP_MODE` equal to `prod`.
 
 > [!INFO]
 > Multiple config maps can be specified under `envFrom`.
