@@ -57,3 +57,23 @@ The `RollingUpdateStrategy` field will show how many pods can be down at any giv
 The `edit` command can be used to change the deployment update strategy. It is noted that the old strategy properties (e.g., `strategy.rollingUpdate`) must also be removed.
 
 ## Commands
+In a pod definition file, arguments can be passed under the `containers.args` field to specify additional settings when running the container. The `containers.command` field changes the command that is used when the container is run.
+
+```yaml
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: myapp-pod
+spec:
+	containers:
+	- name: mycontainer
+	  image: myimage
+	  command: [ "command" ]
+	  args: [ "10" ]
+```
+
+The Docker `ENTRYPOINT` keyword corresponds to the Kubernetes `command` field, while the Docker `CMD` keyword corresponds to the Kubernetes `args` field.
+
+> [!INFO]
+> 
