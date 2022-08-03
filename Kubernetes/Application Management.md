@@ -69,11 +69,17 @@ spec:
 	containers:
 	- name: mycontainer
 	  image: myimage
-	  command: [ "command" ]
-	  args: [ "10" ]
+	  command:
+	  - "command"
+	  args:
+	  - "10"
 ```
 
 The Docker `ENTRYPOINT` keyword corresponds to the Kubernetes `command` field, while the Docker `CMD` keyword corresponds to the Kubernetes `args` field.
+
+The container will always be run from `ENTRYPOINT`; however, if the Kubernetes `command` field is specified, **the original command and any arguments in `CMD` will be overwritten**.
+
+The `args` field will only overwrite arguments specified from `CMD`. It will not overwrite the `ENTRYPOINT` command.
 
 > [!INFO]
 > The Docker `CMD` keyword will append arguments to the command denoted in the Docker `ENTRYPOINT` keyword.
@@ -86,3 +92,22 @@ The Docker `ENTRYPOINT` keyword corresponds to the Kubernetes `command` field, w
 > ```
 > A container with the above configuration will run the command `command 10` when started.
 
+### Syntax Variations
+The following syntaxes are valid.
+
+```yaml
+command: [ "command" ]
+args: [ "10" ]
+```
+
+```yaml
+command:
+- "command"
+- "10"
+```
+
+```yaml
+command: [ "command", "10" ]
+```
+
+It is noted that commands and arguments are *never* placed within the same quotation marks.

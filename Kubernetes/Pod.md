@@ -81,7 +81,7 @@ When a pod is running, the `edit` command cannot modify specifications except th
 The current configuration file must be generated with `kubectl get pod <POD_NAME> -o yaml > <FILENAME>.yml`, where the previous pod will be replaced.
 
 Below are some other useful options.
-- `--force`: force the operation
+- `--force`: force the operation (*often used with `replace`*)
 - `--watch`: watch for any changes
 - `--selector`: specify labels in a key-value format (e.g., `--selector="env=dev"`)
 - `wc`: word count (*add `-l` option*)
