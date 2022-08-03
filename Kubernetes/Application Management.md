@@ -1,4 +1,4 @@
-# Application Life Cycle Management
+# Application Management
 Kubernetes has several functions to manage <span style = "color:lightblue">application life cycles</span>.
 
 ## Rolling Updates & Rollbacks
@@ -19,7 +19,7 @@ kubectl apply -f <FILENAME>.yml
 ```
 
 ```bash
-kubectl set image <DEPLOYMENT_NAME> <FIELD>:<NEW_VALUE>
+kubectl set image <DEPLOYMENT> <CONTAINER>:<IMAGE>
 ```
 
 ```bash
@@ -48,10 +48,12 @@ In the <span style = "color:lightblue">rolling update</span> deployment strategy
 
 **This will ensure minimal downtime.**
 
-## Additional Notes
+### Additional Notes
 
 When a new deployment is triggered, pods are created in a new replica set to accomdate the changes, while the pods in the old replica set are simultaneously deleted.
 
 The `RollingUpdateStrategy` field will show how many pods can be down at any given time. For example, if there are **four pods** and **25% unavailable**, there can be only one pod down at any given time.
 
 The `edit` command can be used to change the deployment update strategy. It is noted that the old strategy properties (e.g., `strategy.rollingUpdate`) must also be removed.
+
+## Commands
