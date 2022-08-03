@@ -76,4 +76,13 @@ spec:
 The Docker `ENTRYPOINT` keyword corresponds to the Kubernetes `command` field, while the Docker `CMD` keyword corresponds to the Kubernetes `args` field.
 
 > [!INFO]
+> The Docker `CMD` keyword will append arguments to the command denoted in the Docker `ENTRYPOINT` keyword.
 > 
+> The following Dockerfile configuration is considered.
+> ```Docker
+> # FILE: Dockerfile
+> ENTRYPOINT [ "command" ]
+> CMD [ "10" ]
+> ```
+> A container with the above configuration will run the command `command 10` when started.
+
