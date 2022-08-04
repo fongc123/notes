@@ -76,8 +76,6 @@ spec:
 	  - "10"
 ```
 
-
-
 The Docker `ENTRYPOINT` keyword corresponds to the Kubernetes `command` field, while the Docker `CMD` keyword corresponds to the Kubernetes `args` field.
 
 The container will always be run from `ENTRYPOINT`; however, if the Kubernetes `command` field is specified, **the original command and any arguments in `CMD` will be overwritten**.
@@ -195,3 +193,29 @@ In the above pod definition with the previous config map definition, the pod's e
 > [!INFO]
 > Multiple config maps can be specified under `envFrom`.
 
+The `env.valueFrom.configMapKeyRef` field will get a specific key-value pair from the config map.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: simple-webapp
+spec:
+	containers:
+	- name: simple-webapp
+	  image: simple-webapp
+	  env:
+	  - name: MY_ENV_VARIABLE
+	    valueFrom:
+		    configMapKeyRef:
+			    name: APP_COLOR
+			    key: blue
+```
+
+The above pod definition will read only the key `APP_COLOR` with value equal to `blue` from the config map.
+
+### Secrets
+<span style = "color:lightblue">Secrets</span> are central storage locations for sensitive information, such as passwords or keys. Information is stored in a **encoded** or **hashed** format.
+
+#### Creation
+Similar to config maps, both imperative commands and declarative def
