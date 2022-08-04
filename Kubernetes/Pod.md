@@ -78,7 +78,19 @@ When a pod is running, the `edit` command cannot modify specifications except th
 - `spec.activeDeadlineSeconds`
 - `spec.tolerations`
 
-The current configuration file can be generated with `kubectl get pod <POD_NAME> -o yaml > <FILENAME>.yml`. If changes are made to the file and the `replace` command is used, the previous pod will be deleted.
+The current configuration file can be generated with the following command.
+
+```bash
+kubectl get pod <POD_NAME> -o yaml > <FILENAME>.yml
+```
+
+If changes are made to the file and the `replace` command is used, the previous pod will be deleted.
+
+The `exec` command can execute a specified command inside the container of a pod.
+
+```bash
+kubectl exec -it <POD_NAME> -- <COMMAND>
+```
 
 Below are some other useful options.
 - `--force`: force the operation (*often used with `replace`*)
@@ -87,3 +99,33 @@ Below are some other useful options.
 - `wc`: word count (*add `-l` option*)
 - `--no-headers`: no headers
 
+## Multi-container Pods
+For multi-container pods, additional containers with image names can be specified under the `containers` field.
+
+```yaml
+# FILE: multi-container-pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: myapp-pod
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	containers:
+	- name: nginx-container
+	  image: nginx
+	- name: log-agent
+	  image: log-agent
+```
+
+Typical multi-container pods include **sidecar**, **adapter**, or **ambassador**.
+
+## initContainer Pods
+An <span style = "color:lightblue">initContainer pod</span> is a container that first runs **to completion** on pod creation and startup before the main container in the pod starts.
+
+If there are multiple initContainers, each initContainer is run sequentially. The main container will only start once **all initContainers are complete**.
+
+```yaml
+# FILE: init-container-pod-definition.yml
+```

@@ -7,8 +7,12 @@
         "id": "e09e2b7b191995ce",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Kubernetes/Static Pods.md",
+            "mode": "source",
+            "source": false
+          }
         }
       },
       {
@@ -138,15 +142,15 @@
   },
   "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Multi-container Pods.md",
+    "Kubernetes/Static Pods.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Application Management.md",
+    "Kubernetes/Namespace.md",
+    "Kubernetes/Multi-container Pods.md",
     "Kubernetes/Logging & Monitoring.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Static Pods.md",
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Daemon Set.md",
-    "Kubernetes/Namespace.md"
+    "Kubernetes/Daemon Set.md"
   ]
 }
