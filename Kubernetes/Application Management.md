@@ -225,10 +225,13 @@ spec:
 	containers:
 	- name: simple-webapp
 	  image: simple-webapp
+	  volumeMounts:
+	  - name: config-volume
+	    mountPath: "/etc/config"
 	volumes:
 	- name: config-volume
 	  configMap:
-		  name: 
+		  name: app-config
 ```
 
 ### Secrets
@@ -306,19 +309,40 @@ spec:
 Secrets will be loaded as environment variables for the application to use. The two code blocks below show loading a single key-value pair and loading the secret as a volume respectively.
 
 ```yaml
-env:
-- name: MY_ENV_VARIABLE
-  valueFrom:
-	  secretKeyRef:
-		  name: app-secret
-		  key: DB_PASS
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: simple-webapp
+spec:
+	containers:
+	- name: simple-webapp
+	  image: simple-webapp
+	  env:
+	  - name: MY_ENV_VARIABLE
+	    valueFrom:
+			secretKeyRef:
+				name: app-secret
+				key: DB_PASS
 ```
 
 ```yaml
-volumes:
-- name: app-secret-volume
-  secret:
-	  secretName: app-secret
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: simple-webapp
+spec:
+	containers:
+	- name: simple-webapp
+	  image: simple-webapp
+	  volumeMounts:
+	  - name: app-secret-volume
+	    mountPath: "/etc/secrets"
+	volumes:
+	- name: app-secret-volume
+	  secret:
+		  secretName: app-secret
 ```
 
 When loaded as a volume, each key-value pair will be stored as a file, where the filename is the key and the value is stored inside the file.
