@@ -7,12 +7,8 @@
         "id": "e09e2b7b191995ce",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Kubernetes/Static Pods.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       },
       {
@@ -22,7 +18,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Pod.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -140,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0d8061043bed689f",
+  "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Static Pods.md",
     "Kubernetes/Pod.md",
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Namespace.md",
-    "Kubernetes/Multi-container Pods.md",
-    "Kubernetes/Logging & Monitoring.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Daemon Set.md"
+    "Kubernetes/Logging & Monitoring.md",
+    "Kubernetes/Application Management.md",
+    "Kubernetes/Kube Proxy.md",
+    "Kubernetes/Kublet.md",
+    "Kubernetes/Scheduler.md",
+    "Kubernetes/Controller Manager.md",
+    "Kubernetes/Kube API Server.md"
   ]
 }

@@ -1,5 +1,5 @@
 # Replica Sets
-A <span style = "color:lightblue">replica set</span> achieves <span style = "color:lightblue">high avalability (HA)</span> by **creating new instances of a pod** to ensure that the specified number of pods are running. It is also used for load balancing and scaling.
+A <span style = "color:lightblue">replica set</span> achieves <span style = "color:lightblue">high avalability (HA)</span> by **creating new instances of a pod** to ensure that the specified number of pods are running (<span style = "color:lightblue">self-healing application</span>). It is also used for load balancing and scaling.
 
 > [!INFO]
 > The **replication controller** is old technology which is currently replaced by the **replica set**. Both work towards achieving the same objectives mentioned above. This document will use replica sets.
@@ -97,6 +97,4 @@ The filename *or* the kind (i.e., `replicaset`) and name can be specified.
 
 > [!INFO]
 > When using the `scale` command, the configuration file itself won't be updated to the new number of replicas.
-
-## Auto-scaling
 

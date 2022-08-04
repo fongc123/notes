@@ -12,6 +12,7 @@ Additional nodes with pods can be added to the cluster to balance the workload a
 <span style = "color:lightblue">Multi-container pods</span> are pods that have multiple containers in them. Typically, only one container is in a pod; however, it may be beneficial for <span style = "color:lightblue">helper containers</span> to exist alongside with the main container. Since they exist in the same pod, these containers refer to each other using `localhost`.
 
 ## Creation
+### Command
 To start a pod (i.e., start an instance of a container), run the following command.
 
 ```bash
@@ -30,7 +31,7 @@ kubectl get pods -o wide
 
 The status of each pod can be viewed.
 
-## YAML Configuration
+### YAML Configuration
 A pod can also be configured with a YAML file. All pod files must have four required fields.
 - `apiVersion`: Kubernetes API version (e.g., `v1` or `apps/v1`)
 - `kind`: the type of the object (e.g., `Pod`, `Service`, `ReplicaSet`, or `Deployment`)
@@ -99,6 +100,54 @@ Below are some other useful options.
 - `wc`: word count (*add `-l` option*)
 - `--no-headers`: no headers
 
+## Static Pods
+A <span style = "color:lightblue">static pod</span> is a pod that is run **manually** on a node. Typically, in a cluster, the kubelet will listen for requests from the API server for new pod assignments.
+
+However, the kubelet will also check the following path in a node for pod definitions even without a master node or scheduling components.
+
+```bash
+/etc/Kubernetes/manifests
+```
+
+Definition files placed in this path will be automatically created and managed by the kubelet.
+
+The `--pod-manifest-path` changes the default path.
+
+```bash
+--pod-manifest-path="/path/to/files"
+```
+
+The `--config` option with a YAML file containing a `staticPodPath` key and a path value also changes the default path.
+
+```bash
+--config=kubeconfig.yml
+```
+
+```yaml
+# FILE: kubeconfig.yml
+staticPodPath: "/path/to/files"
+```
+
+Replica sets or deployments cannot be created with this method. Run the following command and look for the config path specified in the `--config` option to view the config file and the static pod path.
+
+```bash
+ps -aux | grep kubelet
+```
+
+The static pod path can also be found under `staticPodPath` with the following command.
+
+```bash
+cat /var/lib/kubelet/config.yml
+```
+
+Static pods can be identified by the `ownerReferences` field in the YAML configuration output. The `kind` of the owner should be a `Node` instead of a `ReplicaSet` or a `Deployment`.
+
+When there is no Kubernetes cluster, the `kubectl` command will not work. Instead, the `docker ps` command is used to view the running static pods.
+
+In a Kubernetes cluster, static pods are shown on the Kubernetes API as **read-only** mirror images. Modification of static pods is not possible. For example, when deleting a static pod, Kubernetes would automatically create it again. The original YAML definition file would have to be deleted on the specific node.
+
+Control plane components are deployed as static pods on the master node (*shown as `--<NODE_NAME>` in their names*). Their pod definition files are found in the static pod path.
+
 ## Multi-container Pods
 For multi-container pods, additional containers with image names can be specified under the `containers` field.
 
@@ -126,6 +175,27 @@ An <span style = "color:lightblue">initContainer pod</span> is a container that 
 
 If there are multiple initContainers, each initContainer is run sequentially. The main container will only start once **all initContainers are complete**.
 
+initContainers are specified under the `initContainers` field.
+
 ```yaml
 # FILE: init-container-pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: myapp-pod
+	labels:
+	app: myapp
+spec:
+	containers:
+	- name: myapp-container
+	  image: busybox:1.28
+	  command: [ 'sh', '-c', 'echo Hello && sleep 3600']
+	initContainers:
+	- name: init-myservice
+	  image: busybox
+	  command: [ 'sh', '-c', 'git clone <link>; done;']
 ```
+
+When the `describe` command is used on a pod, initContainers can be identified under the `Init Containers` section.
+
+**If any of the initContainers fail, Kubernetes restarts the pod repeatedly until the initContainer succeeds.**

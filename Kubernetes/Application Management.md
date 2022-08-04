@@ -108,6 +108,12 @@ command:
 ```
 
 ```yaml
+command:
+- command
+- "10" # integers placed in " "
+```
+
+```yaml
 command: [ "command", "10" ]
 ```
 
