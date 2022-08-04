@@ -234,8 +234,10 @@ spec:
 		  name: app-config
 ```
 
+When loaded as a volume, each key-value pair will be stored as a file in the specified path in `mountPath`, where the filename is the key and the value is stored inside the file.
+
 ### Secrets
-<span style = "color:lightblue">Secrets</span> are central storage locations for sensitive information, such as passwords or keys. Information is stored in a **encoded** or **hashed** format.
+<span style = "color:lightblue">Secrets</span> are central storage locations for sensitive information, such as passwords or keys. Information is stored in a `base64` **encoded** or **hashed** format.
 
 #### Creation
 With syntax similar to config maps, both imperative commands and declarative definition files can be used to create secrets.
@@ -345,4 +347,17 @@ spec:
 		  secretName: app-secret
 ```
 
-When loaded as a volume, each key-value pair will be stored as a file, where the filename is the key and the value is stored inside the file.
+Similar to config maps, key-value pairs are stored as files in the specified path in the `mountPath` field.
+
+#### Safety
+Since any `base64` decoder can decode secrets, they are considered to be not very safe; however, there are practices and automated handling by Kubernetes to make secrets safe.
+1. A secret is only sent to a node if a pod on that node requires it.
+2. A secret is stored by the kubelet on the node in a `tmpfs` instead of disk storage.
+3. The local copy of a secret is deleted once the dependent pod is deleted.
+
+Other tools that are safer than secrets include **Helm Secrets** and **HashiCorp Vault**.
+
+The following are additional resources about secrets and their safety, protections, and risks.
+- [Kubernetes Secrets: Documentation](https://kubernetes.io/docs/concepts/configuration/secret/)
+- [Kubernetes Secrets: Safety](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+

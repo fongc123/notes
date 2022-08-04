@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Application Management.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Application Management.md",
+            "file": "Kubernetes/Pod.md",
             "mode": "preview",
             "source": false
           }
