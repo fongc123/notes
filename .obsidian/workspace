@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Application Management.md",
+            "file": "Kubernetes/Multi-container Pods.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Application Management.md",
+                "file": "Kubernetes/Multi-container Pods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Application Management.md",
+                "file": "Kubernetes/Multi-container Pods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Application Management.md"
+                "file": "Kubernetes/Multi-container Pods.md"
               }
             }
           }
@@ -142,15 +142,15 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
-    "Kubernetes/Pod.md",
     "Kubernetes/Application Management.md",
+    "Kubernetes/Pod.md",
+    "Kubernetes/Multi-container Pods.md",
     "Kubernetes/Logging & Monitoring.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Static Pods.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Daemon Set.md",
-    "Kubernetes/Namespace.md",
-    "Kubernetes/Controller Manager.md"
+    "Kubernetes/Namespace.md"
   ]
 }
