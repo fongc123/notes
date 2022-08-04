@@ -11,7 +11,7 @@ Additional nodes with pods can be added to the cluster to balance the workload a
 
 <span style = "color:lightblue">Multi-container pods</span> are pods that have multiple containers in them. Typically, only one container is in a pod; however, it may be beneficial for <span style = "color:lightblue">helper containers</span> to exist alongside with the main container. Since they exist in the same pod, these containers refer to each other using `localhost`.
 
-## Deployment
+## Creation
 To start a pod (i.e., start an instance of a container), run the following command.
 
 ```bash
@@ -78,7 +78,7 @@ When a pod is running, the `edit` command cannot modify specifications except th
 - `spec.activeDeadlineSeconds`
 - `spec.tolerations`
 
-The current configuration file must be generated with `kubectl get pod <POD_NAME> -o yaml > <FILENAME>.yml`, where the previous pod will be replaced.
+The current configuration file can be generated with `kubectl get pod <POD_NAME> -o yaml > <FILENAME>.yml`. If changes are made to the file and the `replace` command is used, the previous pod will be deleted.
 
 Below are some other useful options.
 - `--force`: force the operation (*often used with `replace`*)
