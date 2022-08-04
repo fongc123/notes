@@ -193,7 +193,7 @@ In the above pod definition with the previous config map definition, the pod's e
 > [!INFO]
 > Multiple config maps can be specified under `envFrom`.
 
-The `env.valueFrom.configMapKeyRef` field will get a specific key-value pair from the config map.
+The `env.valueFrom.configMapKeyRef` field will get a single key-value pair from the config map.
 
 ```yaml
 apiVersion: v1
@@ -214,8 +214,111 @@ spec:
 
 The above pod definition will read only the key `APP_COLOR` with value equal to `blue` from the config map.
 
+Config maps can be loaded in as a volume as well.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: simple-webapp
+spec:
+	containers:
+	- name: simple-webapp
+	  image: simple-webapp
+	volumes:
+	- name: config-volume
+	  configMap:
+		  name: 
+```
+
 ### Secrets
 <span style = "color:lightblue">Secrets</span> are central storage locations for sensitive information, such as passwords or keys. Information is stored in a **encoded** or **hashed** format.
 
 #### Creation
-Similar to config maps, both imperative commands and declarative def
+With syntax similar to config maps, both imperative commands and declarative definition files can be used to create secrets.
+
+```bash
+kubectl create secret generic <NAME> --from-literal=<KEY>=<VALUE>
+```
+
+```bash
+kubectl create secret generic <NAME> --from-file=<PATH>
+```
+
+```yaml
+# FILE: secret.yml
+apiVersion: v1
+kind: Secret
+metadata:
+	name: app-secret
+data:
+	DB_HOST: mysql
+	DB_USER: root
+	DB_PASS: password
+```
+
+The sensitive information here is written in plain text. On a Linux machine, the following command can be used to generate an encoded string of the text.
+
+```bash
+echo -n <VALUE> | base64
+```
+
+To decode the string, the `--decode` option is added.
+
+```bash
+echo -n <HASH> | base64 --decode
+```
+
+The hashed values are put into the definition file instead.
+
+```yaml
+# FILE: secret.yml
+apiVersion: v1
+kind: Secret
+metadata:
+	name: app-secret
+data:
+	DB_HOST: bXlzcWw=
+	DB_USER: cm9vdA==
+	DB_PASS: cGFzc3dvcmQ=
+```
+
+Again, the `get` and `describe` commands will list all secrets and get details of a specific secret respectively.
+
+#### Pod Injection
+The `envFrom.secretRef` field will reference a secret object to read environment variables from.
+
+```yaml
+# FILE: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: simple-webapp
+spec:
+	containers:
+	- name: simple-webapp
+	  image: simple-webapp
+	  envFrom:
+	  - secretRef:
+		    name: app-secret
+```
+
+Secrets will be loaded as environment variables for the application to use. The two code blocks below show loading a single key-value pair and loading the secret as a volume respectively.
+
+```yaml
+env:
+- name: MY_ENV_VARIABLE
+  valueFrom:
+	  secretKeyRef:
+		  name: app-secret
+		  key: DB_PASS
+```
+
+```yaml
+volumes:
+- name: app-secret-volume
+  secret:
+	  secretName: app-secret
+```
+
+When loaded as a volume, each key-value pair will be stored as a file, where the filename is the key and the value is stored inside the file.

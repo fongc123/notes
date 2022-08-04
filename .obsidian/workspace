@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Pod.md",
-            "mode": "source",
+            "file": "Kubernetes/Application Management.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -140,7 +140,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e09e2b7b191995ce",
+  "active": "0d8061043bed689f",
   "lastOpenFiles": [
     "Kubernetes/Pod.md",
     "Kubernetes/Application Management.md",
