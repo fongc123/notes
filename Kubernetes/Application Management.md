@@ -250,6 +250,8 @@ kubectl create secret generic <NAME> --from-literal=<KEY>=<VALUE>
 kubectl create secret generic <NAME> --from-file=<PATH>
 ```
 
+The argument `generic` is the secret type which can be changed.
+
 ```yaml
 # FILE: secret.yml
 apiVersion: v1
