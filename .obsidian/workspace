@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "e09e2b7b191995ce",
+        "id": "0d8061043bed689f",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -16,7 +16,7 @@
         }
       },
       {
-        "id": "0d8061043bed689f",
+        "id": "f0c36bbc2c3e7f91",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -140,17 +140,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "e09e2b7b191995ce",
+  "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Scheduler.md",
+    "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Cluster Maintenance.md",
+    "katacoda.com/courses/kubernetes/playground.md",
+    "Kubernetes/Scheduler.md",
     "Kubernetes/Kublet.md",
     "Kubernetes/Kube Proxy.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Deployment.md",
-    "Kubernetes/Services.md",
-    "Kubernetes/Namespace.md",
-    "Kubernetes/Imperative & Declarative.md"
+    "Kubernetes/Services.md"
   ]
 }

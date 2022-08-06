@@ -2,11 +2,13 @@
 Cluster maintenance covers the upgrade, backup, and restore process of the components in a Kubernetes cluster (*not the applications*).
 
 ## OS Upgrades
+^OSUPGRADES
+
 When operating system upgrades are required on a node, it may be rebooted, causing it to be offline on the Kubernetes cluster.
 
 The <span style = "color:lightblue">pod eviction timeout</span> is the amount of time until a pod is considered offline. It can be set by the controller manager and is set to **5 minutes by default**.
 
-Pods that were originally assigned to an offline node but were part of a replica set will be assigned to other available nodes. However, pods that were not part of a replica set will be lost.
+Pods that were originally assigned to an offline node but were part of a replica set **will be assigned to other available nodes**. However, pods that were not part of a replica set will be lost.
 
 When the node is online again, it will be in a "blank state" (i.e., no scheduled nodes) and will be unschedulable. The original pods on the node prior to rebooting will not be rescheduled.
 
@@ -38,15 +40,61 @@ A Kubernetes release consists of major, minor, and patch versions.
 $$
 \underbrace{1}_{major}. \underbrace{22}_{minor}. \underbrace{3}_{patch}
 $$
-Kubernetes releases can be found on the [releases page](https://github.com/kubernetes/kubernetes/releases) on the Kubernetes GitHub repository. The download file will contain executables for each cluster component.
+Kubernetes releases can be found in the [releases page](https://github.com/kubernetes/kubernetes/releases) on the Kubernetes GitHub repository. The download file will contain executables for each cluster component.
 
-A cluster's components **must never exceed** the version of the API server. The controller manager and the scheduler can be **a** version lower than the API server, while the kubelet and the kube proxy can be **two** versions lower than the API server. The `kubectl` command-line tool can be within one version of the API server.
+A cluster's components **must never exceed** the version of the API server. The controller manager and the scheduler can be **one** version lower than the API server, while the kubelet and the kube proxy can be **two** versions lower than the API server. The `kubectl` command-line tool can be **within one** version of the API server.
 
-Kubernetes supports only up to the recent **three minor versions**. It is recommended to upgrade the cluster by **one minor version at a time**, instead of upgrading immediately to the latest version.
+Kubernetes supports only up to the **three recent minor versions**. It is recommended to upgrade the cluster by **one minor version at a time**, instead of upgrading immediately to the latest version.
 
-In a hosted cloud service, cluster upgrades are supported and can be easily done by the service. In a `kubeadm`-installed cluster, `kubeadm` has commands for upgrading. In a manually installed cluster, all upgrades are done manually.
+In a hosted cloud service, cluster upgrades are supported and can be easily done by the service. In a cluster installed by `kubeadm`, there are convenient commands for upgrading. In a manually installed cluster, all upgrades are done manually.
 
 ### Upgrades
 The master node is upgraded first. During the upgrade process, all cluster management functions done by the API server (e.g., scheduling, rescheduling) will not be performed.
 
-The worker nodes are upgraded next. To ensure that <span style = "color:lightblue">end
+The worker nodes are upgraded next. To ensure that <span style = "color:lightblue">end users</span> do not experience application downtime, nodes are upgraded sequentially with the process described in [[#^OSUPGRADES]].
+
+Alternatively, new nodes can be "created" (*applicable to cloud servers*) with the desired version. Then, applications are transferred to the new nodes, while the old nodes are deleted.
+
+The Kubernetes documentation is especially useful during the upgrade procedure (e.g., latest stable release, commands to execute).
+
+#### Master Components
+The process for upgrading with `kubeadm` is detailed below.
+
+```bash
+apt-get upgrade -y kubeadm=<VERSION>
+```
+
+The above command will upgrade `kubeadm` to retrieve a new version.
+
+```bash
+kubeadm upgrade plan
+```
+
+The above command will plan the upgrade for the cluster and display the results. It will also show the upgrade command to execute.
+
+```bash
+kubeadm upgrade apply <VERSION>
+```
+
+Lastly, the above command will pull the necessary images and upgrade the cluster's components.
+
+#### Worker Kubelet
+Kubelet versions are not upgraded by `kubeadm`. It is done manually.
+
+```bash
+apt-get upgrade -y kubelet=<VERSION>
+```
+
+```bash
+systemctl restart kubelet
+```
+
+The configuration may be required to be also updated.
+
+```bash
+kubeadm upgrade node config --kubelet-version <VERSION>
+```
+
+> [!INFO]
+> The version shown for each node in the `kubectl get nodes` command displays **the version of the kubelet**.
+
