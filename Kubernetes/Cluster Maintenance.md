@@ -16,7 +16,11 @@ When the node is online again, it will be in a "blank state" (i.e., no scheduled
 kubectl drain <NODE_NAME>
 ```
 
-The `drain` command will terminate all pods running on a node, so that they can be scheduled on other nodes.
+The `drain` command will terminate all pods running on a node, so that they can be scheduled on other nodes. It will also restrict scheduling on the node.
+
+```bash
+kubectl drain <NODE_NAME> --ignore-daemonsets
+```
 
 The `--ignore-daemonsets` will ignore daemonsets, as they cannot be evicted from a node. The `--force` can be used to forcefully evict pods **that are not part of a replica set** from the node (*the pod will be deleted permanently*).
 
@@ -55,7 +59,7 @@ The worker nodes are upgraded next. To ensure that <span style = "color:lightblu
 
 Alternatively, new nodes can be "created" (*applicable to cloud servers*) with the desired version. Then, applications are transferred to the new nodes, while the old nodes are deleted.
 
-The Kubernetes documentation is especially useful during the upgrade procedure (e.g., latest stable release, commands to execute).
+The [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/) is especially useful during the upgrade procedure (e.g., latest stable release, commands to execute).
 
 #### Master Components
 The process for upgrading with `kubeadm` is detailed below.
@@ -79,22 +83,34 @@ kubeadm upgrade apply <VERSION>
 Lastly, the above command will pull the necessary images and upgrade the cluster's components.
 
 #### Worker Kubelet
-Kubelet versions are not upgraded by `kubeadm`. It is done manually.
+Kubelet versions of all nodes, including the master node and the worker nodes, are not upgraded by `kubeadm`. It is done manually.
 
 ```bash
 apt-get upgrade -y kubelet=<VERSION>
 ```
 
-```bash
-systemctl restart kubelet
-```
+The `kubectl` configuration may also be needed to be upgraded.
 
-The configuration may be required to be also updated.
+```bash
+kubeadm upgrade node
+```
 
 ```bash
 kubeadm upgrade node config --kubelet-version <VERSION>
 ```
 
+The kubelet and relevant services are restarted.
+
+```bash
+systemctl daemon-reload
+systemctl restart kubelet
+```
+
 > [!INFO]
 > The version shown for each node in the `kubectl get nodes` command displays **the version of the kubelet**.
+
+As detailed in [[#^OSUPGRADES]], pods will need to be moved to ensure no application downtime.
+
+> [!INFO]
+> All `kubectl` commands (i.e., commands for cluster management) are run on the master (controlplane) node.
 
