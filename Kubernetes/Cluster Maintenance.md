@@ -151,7 +151,7 @@ etcdctl snapshot save <FILENAME>.db
 etcdctl snapshot status <FILENAME>.db
 ```
 
-In a TLS-enabled ETCD database, it is mandatory to specify the following options when using the `save` command.
+In a TLS-enabled ETCD database, it is mandatory to specify the following options when communicating the ETCD API to use the `save` command.
 - `--endpoints`: endpoint (default: `127.0.0.1:2379`)
 - `--cacert`: CA bundle to verify certificates of TLS-enabled secure servers (default: `ca.crt`)
 - `--cert`: TLS certificate file (default: `server.crt`)

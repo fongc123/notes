@@ -245,6 +245,9 @@ When loaded as a volume, each key-value pair will be stored as a file in the spe
 >[!INFO]
 >The volume and path **inside a container** are specified under `volumeMounts` for **each container**. They are mapped to volumes **on the local machine** specified under `volumes`.
 
+> [!INFO]
+> A path for each volume under `volumes` is not provided as it is not needed. The config map from the cluster is mapped to the volume inside the container.
+
 ### Secrets
 <span style = "color:lightblue">Secrets</span> are central storage locations for sensitive information, such as passwords or keys. Information is stored in a `base64` **encoded** or **hashed** format.
 
