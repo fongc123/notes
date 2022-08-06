@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Application Management.md",
+            "file": "Kubernetes/Cluster Maintenance.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Pod.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Application Management.md",
+                "file": "Kubernetes/Cluster Maintenance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Application Management.md",
+                "file": "Kubernetes/Cluster Maintenance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Application Management.md"
+                "file": "Kubernetes/Cluster Maintenance.md"
               }
             }
           }
@@ -143,14 +143,14 @@
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
     "Kubernetes/Pod.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Application Management.md",
     "Kubernetes/Static Pods.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Logging & Monitoring.md",
-    "Kubernetes/Application Management.md",
     "Kubernetes/Kube Proxy.md",
     "Kubernetes/Kublet.md",
     "Kubernetes/Scheduler.md",
-    "Kubernetes/Controller Manager.md",
-    "Kubernetes/Kube API Server.md"
+    "Kubernetes/Controller Manager.md"
   ]
 }
