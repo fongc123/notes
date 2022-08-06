@@ -7,8 +7,12 @@
         "id": "e09e2b7b191995ce",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Kubernetes/Application Management.md",
+            "mode": "source",
+            "source": false
+          }
         }
       },
       {
@@ -85,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Application Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Pod.md",
+                "file": "Kubernetes/Application Management.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Pod.md"
+                "file": "Kubernetes/Application Management.md"
               }
             }
           }
@@ -138,8 +142,8 @@
   },
   "active": "e09e2b7b191995ce",
   "lastOpenFiles": [
-    "Kubernetes/Static Pods.md",
     "Kubernetes/Pod.md",
+    "Kubernetes/Static Pods.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Logging & Monitoring.md",
     "Kubernetes/Application Management.md",
