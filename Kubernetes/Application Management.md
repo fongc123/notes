@@ -243,7 +243,7 @@ spec:
 When loaded as a volume, each key-value pair will be stored as a file in the specified path in `mountPath`, where the filename is the key and the value is stored inside the file.
 
 >[!INFO]
->The volume that a container uses is specified under `volumeMounts` for **each container**. The volumes are specified under `volumes`.
+>The volume and path **inside a container** are specified under `volumeMounts` for **each container**. They are mapped to volumes **on the local machine** specified under `volumes`.
 
 ### Secrets
 <span style = "color:lightblue">Secrets</span> are central storage locations for sensitive information, such as passwords or keys. Information is stored in a `base64` **encoded** or **hashed** format.

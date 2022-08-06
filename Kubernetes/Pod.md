@@ -106,7 +106,7 @@ A <span style = "color:lightblue">static pod</span> is a pod that is run **manua
 However, the kubelet will also check the following path in a node for pod definitions even without a master node or scheduling components.
 
 ```bash
-/etc/Kubernetes/manifests
+/etc/kubernetes/manifests
 ```
 
 Definition files placed in this path will be automatically created and managed by the kubelet.

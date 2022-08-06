@@ -158,13 +158,21 @@ In a TLS-enabled ETCD database, it is mandatory to specify the following options
 - `--key`: TLS key file (default: `server.key`)
 
 ```bash
+# EXAMPLE
+
 etcdctl snapshot save backup.db \
 --endpoints=127.0.0.1:2379 \
 --cacert=/etc/kubernetes/pki/etcd/ca.crt \
---cert=/etc/kubernetes/pki
+--cert=/etc/kubernetes/pki/etcd/server.crt \
+--key=/etc/kubernetes/pki/etcd/server.key
 ```
 
-Details can be found under `etcd-certs` with the `describe` command.
+Details of a running ETCD pod can be found with the `describe` command.
+- version: container image version
+- certification file: `--cert-file` under `commands`
+- CA certification: `--trusted-ca-file` under `commands`
+- key: `--key-file` under `commands`
+- endpoint URL: `--listen-client-urls` under `commands`
 
 To restore the cluster, the API server service must first be stopped before restoring the file.
 
@@ -176,7 +184,13 @@ service kube-apiserver stop
 etcdctl snapshot restore <FILENAME>.db --data-dir /var/lib/etcd-from-backup
 ```
 
-A new data directory is provided to avoid confusion. When starting the ETCD cluster service again, the data directory is modified to the new path with the `--data-dir` option. Lastly, the relevant services are restarted.
+A new data directory is provided to avoid confusion.
+
+When starting the ETCD cluster service again, the data directory is modified to the new path with the `--data-dir` option.
+
+If the ETCD cluster is run as a pod, as the control plane components are static pods, the path is changed by editing the YAML file in the static pod directory (*see [[Pod]]*).
+
+Lastly, the relevant services are restarted.
 
 ```bash
 systemctl daemon-reload

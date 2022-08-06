@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Scheduler.md",
+            "file": "Kubernetes/Application Management.md",
             "mode": "source",
             "source": false
           }
@@ -142,15 +142,15 @@
   },
   "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Scheduler.md",
+    "Kubernetes/Application Management.md",
+    "Kubernetes/Pod.md",
     "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Scheduler.md",
     "Kubernetes/Imperative & Declarative.md",
     "katacoda.com/courses/kubernetes/playground.md",
     "Kubernetes/Kublet.md",
     "Kubernetes/Kube Proxy.md",
-    "Kubernetes/Pod.md",
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Services.md"
+    "Kubernetes/Deployment.md"
   ]
 }
