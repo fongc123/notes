@@ -115,3 +115,52 @@ As detailed in [[#^OSUPGRADES]], pods will need to be moved to ensure no applica
 > All `kubectl` commands (i.e., commands for cluster management) are run on the master (controlplane) node.
 
 ### Backup & Restore
+A cluster can be backed up from <span style = "color:lightblue">resource configurations</span>, the <span style = "color:lightblue">ETCD cluster</span>, or a <span style = "color:lightblue">persistent volume</span>.
+
+### Resource Configurations
+
+It is recommended to store resource configuration files in a source code repository such as GitHub.
+
+In the case that some resources were run using a command (*thus, no configuration file*), the following command will get the configurations of all running resources in the cluster.
+
+```bash
+kubectl get all -all-namespaces -o yaml > <FILENAME>.yml
+```
+
+### ETCD Cluster
+By default, the <span style = "color:lightblue">data directory</span> of the ETCD cluster is `/var/lib/etcd`. This path can be used to obtain stored information of the ETCD.
+
+The `save` and `status` commands will save and view a backup file respectively.
+
+```bash
+etcdctl snapshot save <FILENAME>.db
+```
+
+```bash
+etcdctl snapshot status <FILENAME>.db
+```
+
+To restore the cluster, the API server service must first be stopped before restoring the file.
+
+```bash
+service kube-apiserver stop
+```
+
+```bash
+etcdctl snapshot restore <FILENAME>.db --data-dir /var/lib/etcd-from-backup
+```
+
+A new data directory is provided to avoid confusion. When starting the ETCD cluster service again, the data directory is modified to the new path with the `--data-dir` option. Lastly, relevant services are restarted.
+
+```bash
+systemctl daemon-reload
+```
+
+```bash
+service etcd restart
+```
+
+```bash
+service kube-apiserver start
+```
+

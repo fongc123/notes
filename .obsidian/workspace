@@ -142,10 +142,10 @@
   },
   "active": "0d8061043bed689f",
   "lastOpenFiles": [
-    "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Cluster Maintenance.md",
-    "katacoda.com/courses/kubernetes/playground.md",
     "Kubernetes/Scheduler.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Imperative & Declarative.md",
+    "katacoda.com/courses/kubernetes/playground.md",
     "Kubernetes/Kublet.md",
     "Kubernetes/Kube Proxy.md",
     "Kubernetes/Pod.md",
