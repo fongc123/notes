@@ -115,20 +115,31 @@ As detailed in [[#^OSUPGRADES]], pods will need to be moved to ensure no applica
 > All `kubectl` commands (i.e., commands for cluster management) are run on the master (controlplane) node.
 
 ### Backup & Restore
-A cluster can be backed up from <span style = "color:lightblue">resource configurations</span>, the <span style = "color:lightblue">ETCD cluster</span>, or a <span style = "color:lightblue">persistent volume</span>.
+A cluster can be backed up from <span style = "color:lightblue">resource configurations</span>, the <span style = "color:lightblue">ETCD cluster</span>, or a simple <span style = "color:lightblue">persistent volume</span> with sufficient storage.
 
-### Resource Configurations
-
+#### Resource Configurations
 It is recommended to store resource configuration files in a source code repository such as GitHub.
 
 In the case that some resources were run using a command (*thus, no configuration file*), the following command will get the configurations of all running resources in the cluster.
 
 ```bash
-kubectl get all -all-namespaces -o yaml > <FILENAME>.yml
+kubectl get all --all-namespaces -o yaml > <FILENAME>.yml
 ```
 
-### ETCD Cluster
-By default, the <span style = "color:lightblue">data directory</span> of the ETCD cluster is `/var/lib/etcd`. This path can be used to obtain stored information of the ETCD.
+#### ETCD Cluster
+By default, the <span style = "color:lightblue">ETCD data directory</span> of the ETCD cluster is `/var/lib/etcd`. This path can be used to obtain stored information of the ETCD.
+
+> [!INFO]
+> The command-line tool for ETCD is `etcdctl`.
+> 
+> It is important to set the ETCD API version before use.
+> ```bash
+> export ETCDCTL_API=3
+> etcdctl version
+> ```
+> **If the API version is not set, some commands (e.g., `snapshot`) will not be available.**
+> 
+> To view additional options for commands and sub-commands, the `-h` or `--help` flag can be added.
 
 The `save` and `status` commands will save and view a backup file respectively.
 
@@ -140,6 +151,21 @@ etcdctl snapshot save <FILENAME>.db
 etcdctl snapshot status <FILENAME>.db
 ```
 
+In a TLS-enabled ETCD database, it is mandatory to specify the following options when using the `save` command.
+- `--endpoints`: endpoint (default: `127.0.0.1:2379`)
+- `--cacert`: CA bundle to verify certificates of TLS-enabled secure servers (default: `ca.crt`)
+- `--cert`: TLS certificate file (default: `server.crt`)
+- `--key`: TLS key file (default: `server.key`)
+
+```bash
+etcdctl snapshot save backup.db \
+--endpoints=127.0.0.1:2379 \
+--cacert=/etc/kubernetes/pki/etcd/ca.crt \
+--cert=/etc/kubernetes/pki
+```
+
+Details can be found under `etcd-certs` with the `describe` command.
+
 To restore the cluster, the API server service must first be stopped before restoring the file.
 
 ```bash
@@ -150,7 +176,7 @@ service kube-apiserver stop
 etcdctl snapshot restore <FILENAME>.db --data-dir /var/lib/etcd-from-backup
 ```
 
-A new data directory is provided to avoid confusion. When starting the ETCD cluster service again, the data directory is modified to the new path with the `--data-dir` option. Lastly, relevant services are restarted.
+A new data directory is provided to avoid confusion. When starting the ETCD cluster service again, the data directory is modified to the new path with the `--data-dir` option. Lastly, the relevant services are restarted.
 
 ```bash
 systemctl daemon-reload
