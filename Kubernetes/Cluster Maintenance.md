@@ -31,4 +31,22 @@ The `cordon` and `uncordon` commands will restrict and allow scheduling of pods 
 > [!INFO]
 > The `uncordon` command will not terminate running pods.
 
-## Kubernetes Software Versions
+## Kubernetes Releases
+Similar to other software platforms, the Kubernetes development follows a standard version release process. A Kubernetes cluster will have its respective version.
+
+A Kubernetes release consists of major, minor, and patch versions.
+$$
+\underbrace{1}_{major}. \underbrace{22}_{minor}. \underbrace{3}_{patch}
+$$
+Kubernetes releases can be found on the [releases page](https://github.com/kubernetes/kubernetes/releases) on the Kubernetes GitHub repository. The download file will contain executables for each cluster component.
+
+A cluster's components **must never exceed** the version of the API server. The controller manager and the scheduler can be **a** version lower than the API server, while the kubelet and the kube proxy can be **two** versions lower than the API server. The `kubectl` command-line tool can be within one version of the API server.
+
+Kubernetes supports only up to the recent **three minor versions**. It is recommended to upgrade the cluster by **one minor version at a time**, instead of upgrading immediately to the latest version.
+
+In a hosted cloud service, cluster upgrades are supported and can be easily done by the service. In a `kubeadm`-installed cluster, `kubeadm` has commands for upgrading. In a manually installed cluster, all upgrades are done manually.
+
+### Upgrades
+The master node is upgraded first. During the upgrade process, all cluster management functions done by the API server (e.g., scheduling, rescheduling) will not be performed.
+
+The worker nodes are upgraded next. To ensure that <span style = "color:lightblue">end
