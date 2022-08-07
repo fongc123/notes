@@ -12,15 +12,22 @@ By default, communication between applications in a pod is not restricted; howev
 ## Authentication
 ^8c9d4f
 
-There are several options for authenticating a connection.
+There are several mechanisms for authenticating a connection.
 - files
 	- usernames and passwords
 	- usenames and tokens
 - certificates
-- external authentication providers (LDAP)
-- service accounts (*for machines*)
+- external authentication providers (e.g., LDAP)
+- service accounts (*for bot integration*)
 
+All cluster administrative access is handled by the API server. 
 
+### Files
+Credentials can be provided in a `.csv` file, where each entry contains a password, username, and user ID.
+
+```text
+
+```
 
 ### TLS Encryption
 
