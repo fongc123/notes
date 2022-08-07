@@ -20,6 +20,8 @@ There are several options for authenticating a connection.
 - external authentication providers (LDAP)
 - service accounts (*for machines*)
 
+
+
 ### TLS Encryption
 
 
