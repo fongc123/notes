@@ -113,13 +113,13 @@ On the other hand, private keys are commonly a `.key` file or a `.pem` file with
 #### Kubernetes
 Kubernetes requires server certificates for servers. In a Kubernetes architecture, the servers are the main API server, the ETCD cluster, and the kubelets.
 
-Kubernetes also requires client certificates for clients who are the scheduler, the controller manager, the kube proxy, and external administrators (*us!*).
+Kubernetes also requires client certificates for clients who are the scheduler, the controller manager, the proxy, and external administrators (*us!*).
 
-Since the API server both acts as a server (i.e., listens for requests from clients) and a client
+All entities generate a certified public key and a private key. For example, the API server could generate the following key pair files: `apiserver.crt` and `apiserver.key`.
 
-Kubernetes requires both server certificates for servers and client certificates for clients.
+Although the API server both acts as a server (i.e., listens for requests from the scheduler, the controller manager, the proxy, and administrators) and a client (i.e., sends requests to the ETCD cluster and the kubelets), it can use the **same key pair for receiving and sending**. Alternatively, a new key pair can be generated for sending requests.
 
-The API server generates a key pair: `apiserver.crt` and `apiserver.key`. The ETCD cluster also generates its key pair: `etcdserver.crt` and `etcdserver.key`. Lastly, the kubelets generate their own key pairs: `kubelet.crt` and `kubelet.key`.  
+Lastly, Kubernetes requires a certification authority to sign certificates. There can be multiple certification authorities.
 
 ## Authorization
 ^e8e0d8
