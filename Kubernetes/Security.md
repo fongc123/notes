@@ -121,7 +121,7 @@ Although the API server both acts as a server (i.e., listens for requests from t
 
 Lastly, Kubernetes requires a certification authority to sign certificates. There can be multiple certification authorities.
 
-#### Certificate Create
+#### Certificate Creation
 
 
 ## Authorization
