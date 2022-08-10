@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Cluster Maintenance.md",
+            "file": "Programming with C++/Bitwise Operators.md",
             "mode": "source",
             "source": false
           }
@@ -150,15 +150,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Docker.md",
+    "Programming with C++/Bitwise Operators.md",
+    "Programming with C++/Random Numbers.md",
     "Kubernetes/Cluster Maintenance.md",
+    "Programming with C++/Pointer.md",
     "Kubernetes/Security.md",
     "Kubernetes/Application Management.md",
     "Kubernetes/Logging & Monitoring.md",
     "Kubernetes/Pod.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Imperative & Declarative.md",
-    "katacoda.com/courses/kubernetes/playground.md",
-    "Kubernetes/Kublet.md",
-    "Kubernetes/Kube Proxy.md"
+    "Kubernetes/Scheduler.md"
   ]
 }
