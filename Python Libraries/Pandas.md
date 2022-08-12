@@ -81,7 +81,11 @@ df.head()
 df.shape
 ```
 
-If no argument is passed into `head`, only the **first five** rows are shown by default.
+If no argument is passed into `head`, only the **first five** rows are shown by default. Alternatively, the `tail` method is used to get the *last* rows of all columns.
+
+```python
+df.tail()
+```
 
 ### Description
 The `mean` method will calculate the mean of a column. Alternatively, the `describe` method wil show a summary containing the **mean**, **standard deviation**, **minimum value**, **maximum value**, **first quartile (25%)**, **second quartile (50%)**, and **third quartile (75%)** of each column.
@@ -120,4 +124,57 @@ desc_count = pd.Series([ num_tropical, num_fruity ], index = [ "Tropical", "Frui
 
 Some knowledge of the `lambda` function would be useful here. It is noted that the `desc` variable is a temporary variable that checks if each description contains the specified word. The `sum` method will only count expressions that evaluate to true.
 
-In the second example, 
+In the second example, the number of stars a wine product should receive is determined based on the `country` field and the `points` field. A custom function is created to specify the conditions and is applied to the data frame.
+
+```python
+def get_stars(row):
+	if row.country == "Canada":
+		return 3
+	elif row.points >= 95:
+		return 3
+	elif row.points >= 85:
+		return 2
+	else:
+		return 1
+
+stars = df.apply(get_stars, axis = "columns")
+```
+
+The `stars` variable contains a series that has the same length as the `df` data frame. Each value corresponds to the wine product at the same index.
+
+### Selection
+The code blocks below demonstrate several syntaxes of retrieving columns. 
+
+```python
+df.columns # get column labels
+```
+
+```python
+df["COLUMN1"] # one column
+```
+
+```python
+df["COLUMN1", "COLUMN2", "COLUMN3"] # multiple columns
+```
+
+```python
+df["COLUMN1"][i] # ith-row of column
+```
+
+The `iloc` method is used to extract specific rows and columns using indices. The first element in the list denotes the row(s), while the second element denotes the column(s).
+
+```python
+df.iloc[:, 0] # all rows, first column
+```
+
+```python
+df.iloc[1:3, 1] # range of rows, second column
+```
+
+Additionally, column names (i.e., labels) can be handled as well.
+
+```python
+df.loc[:, [ "LABEL1", "LABEL2", "LABEL3" ]]
+```
+
+### Conditions
