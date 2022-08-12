@@ -108,6 +108,18 @@ df.<COLUMN_NAME>.unique()
 df.<COLUMN_NAME>.value_counts()
 ```
 
+The `max` function works to find the maximum value in a column.
+
+```python
+max(df.label)
+```
+
+Additionally, the `idmax` method finds the index with the maximum value.
+
+```python
+df.label.idmax()
+```
+
 ### Mapping
 The two examples below demonstrate the use of <span style = "color:lightblue">mapping</span> to extract information from a data set. The data set contains a list of wines and their reviews. In the first example, the number of times that the words <u>fruity</u> and <u>tropical</u> appear in the `description` field (i.e., column name) are individually summed.
 
@@ -178,3 +190,34 @@ df.loc[:, [ "LABEL1", "LABEL2", "LABEL3" ]]
 ```
 
 ### Conditions
+Boolean operators can be used to check if rows in a specified column fulfill an expression.
+
+```python
+df.label == "VALUE"
+```
+
+```python
+df.loc[((df.label1 == "VALUE1") & (df.label2 >= 100))]
+```
+
+The outputs of the above code blocks are a series containing Boolean values based on the evaluated expression. The `isin` method can also be used to select columns that are in a list of values.
+
+```python
+df.loc[df.label.isin([ "VALUE1", "VALUE2" ])]
+```
+
+The `notna` method and the `isna` method are used to select values that are not `na` and `na` respectively.
+
+```python
+df.loc[df.label.notna()]
+```
+
+```python
+df.loc[df.label.isna()]
+```
+
+```python
+# these work too
+df.label.notna()
+df.label.isna()
+```

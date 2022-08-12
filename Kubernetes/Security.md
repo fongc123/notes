@@ -140,7 +140,7 @@ openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 
 The last two code blocks send a certificate signing request (*no certificate*) and self-sign the certificate respectively.
 
-#### kkk
+#### 
 
 
 ## Authorization
