@@ -124,7 +124,7 @@ Lastly, Kubernetes requires a certification authority to sign certificates. Ther
 #### Certificate Creation
 There are several methods, such as <span style = "color:lightblue">Easy RSA</span>, <span style = "color:lightblue">OpenSSL</span>, and <span style = "color:lightblue">CFSSL</span>, to generate certificates for the Kubernetes cluster. This document will describe the process of certificate creation using OpenSSL.
 
-The private key and certificate of the Kubernetes certification authority is generated.
+The private key and certificate of the Kubernetes certification authority are generated.
 
 ```bash
 openssl genrsa -out ca.key 2048
@@ -138,7 +138,9 @@ openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr
 openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 ```
 
-The last two code blocks send certificate signing request command and the self-signed certificate generation command respectively. 
+The last two code blocks send a certificate signing request (*no certificate*) and self-sign the certificate respectively.
+
+#### kkk
 
 
 ## Authorization
