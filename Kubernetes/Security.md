@@ -124,6 +124,15 @@ Lastly, Kubernetes requires a certification authority to sign certificates. Ther
 #### Certificate Creation
 There are several methods, such as <span style = "color:lightblue">Easy RSA</span>, <span style = "color:lightblue">OpenSSL</span>, and <span style = "color:lightblue">CFSSL</span>, to generate certificates for the Kubernetes cluster. This document will describe the process of certificate creation using OpenSSL.
 
+Once the necessary files have been generated, they can be inputted in a REST API call to the cluster as arguments.
+
+```bash
+curl https://kube-apiserver:6443/api/v1/pods \
+--key admin.key --cert admin.crt --cacert ca.crt
+```
+
+A `kube-config.yml` file can be created to store these key and certificate files instead. 
+
 ##### Certification Authority
 As shown below, a private key for the certification authority is generated.
 
