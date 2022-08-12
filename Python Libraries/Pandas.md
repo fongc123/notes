@@ -66,3 +66,22 @@ The code block below demonstrates how to export a data frame to a CSV file.
 df.to_csv("<FILENAME>.csv")
 ```
 
+## Exploration
+`pandas` has functionality to easily view the data, especially when it is large.
+
+### Viewing
+
+In Jupyter Notebook, executing a cell that contains the data frame variable (e.g., `df`) will print the dataframe in its entirety. The `head` method is used to get the first *n* rows of a data frame, and the `shape` method is used to get the dimensions (number of columns and number of rows) of a data frame.
+
+```python
+df.head()
+```
+
+```python
+df.shape
+```
+
+If no argument is passed into `head`, only the **first five** rows are shown by default.
+
+### Description
+The `mean` method will calculate the mean of a column. Alternatively, the `describe` method 
