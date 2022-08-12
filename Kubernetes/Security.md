@@ -124,11 +124,14 @@ Lastly, Kubernetes requires a certification authority to sign certificates. Ther
 #### Certificate Creation
 There are several methods, such as <span style = "color:lightblue">Easy RSA</span>, <span style = "color:lightblue">OpenSSL</span>, and <span style = "color:lightblue">CFSSL</span>, to generate certificates for the Kubernetes cluster. This document will describe the process of certificate creation using OpenSSL.
 
-The private key and certificate of the Kubernetes certification authority are generated.
+##### Certification Authority
+As shown below, a private key for the certification authority is generated.
 
 ```bash
 openssl genrsa -out ca.key 2048
 ```
+
+The two code blocks below send a certificate signing request (*no certificate*) and self-sign the certificate respectively.
 
 ```bash
 openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr
@@ -138,7 +141,34 @@ openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr
 openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 ```
 
-The last two code blocks send a certificate signing request (*no certificate*) and self-sign the certificate respectively.
+##### Client
+Similar to the certification authority, a key and a certificate are generated.
+
+```bash
+openssl genrsa -out admin.key 2048
+```
+
+```bash
+openssl req -new -key admin.key -subj "/CN=kube-admin" -out admin.csr
+```
+
+It is noted that the value of the  `-subj` argument does not have to be `kube-admin`, but it is the **name that the Kubernetes cluster authenticates with**.
+
+```bash
+openssl req -new -key admin.key -subj "/CN=kube-admin/O=system:masters" -out admin.csr
+```
+
+Additional permissions can be specified with group assignment. The above code block adds the group `system:masters` to the certificate, which allows administrative privilleges.
+
+Components (i.e., non-user clients) have `system:` appended to the beginning of the certificate name.
+
+```bash
+openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
+```
+
+The authority's key and certificate are also provided when signing to generate a <u>valid</u> certificate.
+
+
 
 #### 
 
