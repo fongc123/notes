@@ -84,4 +84,40 @@ df.shape
 If no argument is passed into `head`, only the **first five** rows are shown by default.
 
 ### Description
-The `mean` method will calculate the mean of a column. Alternatively, the `describe` method 
+The `mean` method will calculate the mean of a column. Alternatively, the `describe` method wil show a summary containing the **mean**, **standard deviation**, **minimum value**, **maximum value**, **first quartile (25%)**, **second quartile (50%)**, and **third quartile (75%)** of each column.
+
+```python
+df.<COLUMN_NAME>.mean()
+```
+
+```python
+df.describe()
+```
+
+The `unique` method returns a list of unique values of a column, while the `value_counts` method returns a list of unique values and the frequency of their occurrences.
+
+```
+df.<COLUMN_NAME>.unique()
+```
+
+```python
+df.<COLUMN_NAME>.value_counts()
+```
+
+### Mapping
+The two examples below demonstrate the use of <span style = "color:lightblue">mapping</span> to extract information from a data set. The data set contains a list of wines and their reviews. In the first example, the number of times that the words <u>fruity</u> and <u>tropical</u> appear in the `description` field (i.e., column name) are individually summed.
+
+```python
+num_tropical = df.description.map(lambda desc: "tropical" in desc).sum()
+num_fruity = df.description.map(lambda desc: "fruity" in desc).sum()
+```
+
+The occurrences of each word are stored in a series.
+
+```python
+desc_count = pd.Series([ num_tropical, num_fruity ], index = [ "Tropical", "Fruity" ])
+```
+
+Some knowledge of the `lambda` function would be useful here. It is noted that the `desc` variable is a temporary variable that checks if each description contains the specified word. The `sum` method will only count expressions that evaluate to true.
+
+In the second example, 
