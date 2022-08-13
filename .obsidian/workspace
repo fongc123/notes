@@ -138,15 +138,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Python Libraries/Pandas.md",
+    "Programming with C++/C++ Basics.md",
+    "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Security.md",
+    "src/Pasted image 20220728155031.png",
+    "src/operator-precedence.png",
+    "src/midas-analytics-aws-costs-graph.png",
+    "src/k8s-arch.png",
+    "Python Libraries/Pandas.md",
     "Kubernetes/Services.md",
-    "Python Libraries/Selenium.md",
-    "Docker.md",
-    "Kubernetes/Kube Proxy.md",
-    "README.md",
-    "Programming with C++/Bitwise Operators.md",
-    "Programming with C++/Random Numbers.md",
-    "Kubernetes/Cluster Maintenance.md"
+    "Python Libraries/Selenium.md"
   ]
 }

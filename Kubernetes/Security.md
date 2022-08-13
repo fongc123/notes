@@ -250,7 +250,7 @@ docker ps -a
 docker logs <CONTAINER_ID>
 ```
 
-A sample checklist for certificate health status can be found 
+A sample checklist for certificate health status is found in the source folder.
 
 #### Kube Config
 
