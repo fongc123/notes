@@ -157,6 +157,9 @@ openssl req -new -key admin.key -subj "/CN=kube-admin" -out admin.csr
 
 It is noted that the value of the  `-subj` argument does not have to be `kube-admin`, but it is the **name that the Kubernetes cluster authenticates with**.
 
+> [!INFO]
+> The `CN` keyword refers to the **certificate name**.
+
 ```bash
 openssl req -new -key admin.key -subj "/CN=kube-admin/O=system:masters" -out admin.csr
 ```
@@ -213,8 +216,8 @@ Additionally, client keys and certificates must also be created for the API serv
 
 Likewise, both client files and server files are required for **kubelets**. For client-side certificates, the `system:node:` keyword must be appended to the beginning of the certificate name to specify that the entity is a system component and is a node. Additionally, kubelet certificates must also be part of the `system:nodes` group.
 
-#### Certificate Details
-Existing certificate configurations can be viewed either by viewing the service configuration (*component run as a service*) or by viewing the static pod definition file (*component run as a pod*).
+#### Health Check
+Existing certificate configurations can be viewed in the arguments either in the service configuration (*component run as a service*) or in the static pod definition file (*component run as a pod*).
 
 ```bash
 cat /etc/systemd/system/kube-apiserver.service
@@ -224,7 +227,30 @@ cat /etc/systemd/system/kube-apiserver.service
 cat /etc/kubernetes/manifests/kube-apiserver.yml
 ```
 
+A certificate can be decoded and viewed in plain text.
 
+```bash
+openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout
+```
+
+Logs can also be viewed for troubleshooting. Log viewing for both services and pods are shown below.
+
+```bash
+journalctl -u etcd.service -l
+```
+
+```bash
+kubectl logs <POD_NAME>
+```
+
+In the case that core components, such as the API server, are not functioning, the logs in the Docker container are inspected instead.
+
+```bash
+docker ps -a
+docker logs <CONTAINER_ID>
+```
+
+A sample checklist for certificate health status can be found 
 
 #### Kube Config
 
