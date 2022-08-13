@@ -359,11 +359,9 @@ kubectl config use-context <CONTEXT_NAME>
 The file can be specified in the command line with the `--kubeconfig` option. Alternatively, the `kubectl` command will automatically look for a kube config file in `$HOME/.kube/config`, thus removing the need to explicitly specify the configuration file.
 
 ## API Groups
-Each category contains API endpoints to different functions. The `/api` category contains endpoints to core functionality, such as pods, namespaces, nodes, and more.
+Each group contains API endpoints to different functions. The `/api` group contains endpoints to core functionality, such as pods, namespaces, nodes, and more. On the other hand, the `/apis` category refers to <u>named</u> functionality.
 
-On the other hand, the `/apis` category refers to <u>named</u> functionality. Under each API group, there are <span style = "color:lightblue">resources</span> that can be interacted with. The possible interactions, such as **GET**, **POST**, **DELETE**, etc., are referred to as <span style = "color:lightblue">verbs</span>.
-
-The two code blocks below will list the available API groups and the named (i.e., `apis`) resource groups respectively.
+Under each API group, there are <span style = "color:lightblue">resources</span> that can be interacted with. The possible interactions, such as **GET**, **POST**, **DELETE**, etc., with each resource are referred to as <span style = "color:lightblue">verbs</span>. The two code blocks below will list the available API groups and the named (i.e., `apis`) resource groups respectively.
 
 ```bash
 curl http://localhost:6443 -k
@@ -382,8 +380,43 @@ Authorization controls access to specific groups and resources.
 ^e8e0d8
 
 There are several options for authorizing a connection.
-- RBAC authorization
-- ABAC authorization
-- node authorization
-- webhook mode
+- <span style = "color:lightblue">role-based access controls (RBAC)</span>: assigning permissions to a general role which can be applied to users or a group of users
+- <span style = "color:lightblue">attribute-based access controls (ABAC)</span>: assigning permissions directly to an attribute (e.g., a user or a group of users) through <span style = "color:lightblue">policy files</span>
+- <span style = "color:lightblue">node authorization</span>: special authorization for nodes
+	- authentication is done through keys and certificates as shown in [[#^8c9d4f]]
+	- all certificate whose names begin with `system:node:` and with the `system:nodes` group are given node authorization
+- <span style = "color:lightblue">webhook</span>: enables external third-party software (e.g., Open Policy Agent) to handle authorization
+- always allow: allows all requests
+- always deny: denies all requests
+
+> [!INFO]
+> In ABAC, whenever there are changes to the permission rules, the API server must be restarted before the changes take effect. Thus, ABAC controls are difficult to manage.
+
+The authorization mode is set in the `--authorization-mode` option when the API server is run. By default, the mode is set to **always allow requests**. Multiple modes can be specified, where the request will be checked by each module until the authorization is successful.
+
+### Role-based Access Controls (RBAC)
+A <span style = "color:lightblue">role</span> can be created with a YAML definition file.
+
+```yaml
+# FILENAME: dev-role.yml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: dev
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["list", "get", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["ConfigMap"]
+  verbs: ["create"]
+```
+
+```bash
+kubectl create -f dev-role.yml
+```
+
+In the above example, the `dev` user will be able to list, get, create, update, and delete pods and to create config maps.
+
+Rules are added as elements under the `rules` field. For **core groups**, the `apiGroups` field is left as an empty string.
 
