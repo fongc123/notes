@@ -124,6 +124,8 @@ Lastly, Kubernetes requires a certification authority to sign certificates. Ther
 #### Certificate Creation
 There are several methods, such as <span style = "color:lightblue">Easy RSA</span>, <span style = "color:lightblue">OpenSSL</span>, and <span style = "color:lightblue">CFSSL</span>, to generate certificates for the Kubernetes cluster. This document will describe the process of certificate creation using OpenSSL.
 
+It is noted that the <span style = "color:lightblue">master node</span> acts as the Kubernetes certification authority and self-signs certificates.
+
 ##### Certification Authority
 
 ^618f22
@@ -251,6 +253,13 @@ docker logs <CONTAINER_ID>
 ```
 
 A sample checklist for certificate health status is found in the source folder.
+
+#### Certificate API
+Kubernetes has an API to handle certificates automatically. First, a key and a certificate signing request (CSR) are generated as denoted above. A `CertificateSigningRequest` object is created using a YAML file to handle the CSR.
+
+```yaml
+apiVersion: 
+```
 
 #### Kube Config
 
