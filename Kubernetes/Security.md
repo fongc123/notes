@@ -163,7 +163,7 @@ openssl req -new -key admin.key -subj "/CN=kube-admin/O=system:masters" -out adm
 
 Additional permissions can be specified with group assignment. The above code block adds the group `system:masters` to the certificate, which allows administrative privilleges.
 
-Kubernetes components (i.e., non-user clients) have `system:` appended to the beginning of the certificate name.
+Kubernetes components (i.e., non-user clients) have the `system:` keyword appended to the beginning of the certificate name.
 
 ```bash
 openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
@@ -176,10 +176,53 @@ curl https://kube-apiserver:6443/api/v1/pods \
 --key admin.key --cert admin.crt --cacert ca.crt
 ```
 
-Alternatively, a <span style = "color:lightblue">kube config</span> can store key and certificate authorization details in a YAML file.
+**Alternatively, a <span style = "color:lightblue">kube config</span> can store key and certificate authorization details in a YAML file.**
 
 ##### Server
-A key and a certificate are also generated for each Kubernetes server component. They would need to rely on the Kubernetes certification authority generated in [[#^618f22]] as well.
+A key and a certificate are also generated for each Kubernetes server component. They would need to be verified by the Kubernetes certification authority generated in [[#^618f22]] as well. The generation process is identical to that of for clients.
+
+However, if there are multiple servers running (e.g., **ETCD servers**), additional <span style = "color:lightblue">peer certificates</span> must also be created.
+
+In the case of the **API server**, there can be additional aliases, which must be indicated in the certificate, to refer to it. An additional certificate configuration file is inputted during the creation process.
+
+```bash
+openssl req -new -key apiserver.key -subj "/CN=kube-apiserver" \
+-out apiserver.csr -config openssl.cnf
+```
+
+A sample `.cnf` file configuration is shown below. It is noted that the alternative aliases (DNS and IP) are specified under `alt_names`.
+
+```CNF
+[req]
+req_extensions = v3_req
+distinguished_name = req_distinguished_name
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = kubernetes
+DNS.2 = kubernetes.default
+DNS.3 = kubernetes.default.svc
+DNS.4 = kubernetes.default.svc.cluster.local
+IP.1 = 10.96.0.1
+IP.2 = 172.17.0.87
+```
+
+Additionally, client keys and certificates must also be created for the API server, so that it can connect to the other Kubernetes components (e.g., kubelets and ETCD servers).
+
+Likewise, both client files and server files are required for **kubelets**. For client-side certificates, the `system:node:` keyword must be appended to the beginning of the certificate name to specify that the entity is a system component and is a node. Additionally, kubelet certificates must also be part of the `system:nodes` group.
+
+#### Certificate Details
+Existing certificate configurations can be viewed either by viewing the service configuration (*component run as a service*) or by viewing the static pod definition file (*component run as a pod*).
+
+```bash
+cat /etc/systemd/system/kube-apiserver.service
+```
+
+```bash
+cat /etc/kubernetes/manifests/kube-apiserver.yml
+```
 
 
 
