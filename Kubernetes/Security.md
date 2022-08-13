@@ -177,8 +177,6 @@ openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
 
 The authority's key and certificate are also provided when signing to generate a <u>valid</u> certificate.
 
-
-
 #### 
 
 
