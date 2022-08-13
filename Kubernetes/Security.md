@@ -255,11 +255,57 @@ docker logs <CONTAINER_ID>
 A sample checklist for certificate health status is found in the source folder.
 
 #### Certificate API
-Kubernetes has an API to handle certificates automatically. First, a key and a certificate signing request (CSR) are generated as denoted above. A `CertificateSigningRequest` object is created using a YAML file to handle the CSR.
+Kubernetes has an API to handle certificates automatically. First, a key and a certificate signing request (CSR) are generated as denoted in the above sections. A `CertificateSigningRequest` object is created using a YAML file to handle the individual CSR.
 
 ```yaml
-apiVersion: 
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+	name: <NAME>
+spec:
+	groups:
+	- system:authenticated
+	usages: 
+	- digital signature
+	- key encipherment
+	- server auth
+	signerName: kubernetes.io/kube-apiserver
+	request: LS0tLS1CRUdJTiBDRVJU...
 ```
+
+The `signerName` must also be provided. The request in the `request` field does not contain the actual CSR. Instead, it is encoded in `base64`.
+
+```bash
+cat <FILENAME>.csr | base64 | tr -d "\n"
+```
+
+CSRs can be viewed, approved, and rejected using the following code blocks respectively.
+
+```bash
+kubectl get csr
+```
+
+```bash
+kubectl certificate approve <CSR_NAME>
+```
+
+```bash
+kubectl certificate deny <CSR_NAME>
+```
+
+Approved CSRs can be viewed under the `status.certificate` field in the YAML output.
+
+```bash
+kubectl get csr <CSR_NAME> -o yaml
+```
+
+```bash
+echo "<ENCODED_CERT>" | base64 --decode
+```
+
+The certificate must be decoded to view the plain text which can then be shared to users.
+
+The certificate API is handled by the controller manager component, specifically the <span style = "color:lightblue">csr-approving</span> and <span style = "color:lightblue">csr-signing</span> sub-components, in the Kubernetes cluster. The certification authority key and certificate files are specified with the `--cluster-signing-key-file` and `--cluster-signing-cert-file` options respectively.
 
 #### Kube Config
 
