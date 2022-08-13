@@ -174,14 +174,7 @@ Kubernetes components (i.e., non-user clients) have the `system:` keyword append
 openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
 ```
 
-The authority's key and certificate are also provided when signing to generate a <u>valid</u> certificate. Client keys and certificates can be inputted as arguments in a simple REST API call to the server.
-
-```bash
-curl https://kube-apiserver:6443/api/v1/pods \
---key admin.key --cert admin.crt --cacert ca.crt
-```
-
-**Alternatively, a <span style = "color:lightblue">kube config</span> can store key and certificate authorization details in a YAML file.**
+The authority's key and certificate are also provided when signing to generate a <u>valid</u> certificate.
 
 ##### Server
 A key and a certificate are also generated for each Kubernetes server component. They would need to be verified by the Kubernetes certification authority generated in [[#^618f22]] as well. The generation process is identical to that of for clients.
@@ -270,7 +263,7 @@ spec:
 	- key encipherment
 	- server auth
 	signerName: kubernetes.io/kube-apiserver
-	request: LS0tLS1CRUdJTiBDRVJU...
+	request: LS0tLS1CRUdJTiBDRVJU (values hidden...)
 ```
 
 The `signerName` must also be provided. The request in the `request` field does not contain the actual CSR. Instead, it is encoded in `base64`.
@@ -308,7 +301,62 @@ The certificate must be decoded to view the plain text which can then be shared 
 The certificate API is handled by the controller manager component, specifically the <span style = "color:lightblue">csr-approving</span> and <span style = "color:lightblue">csr-signing</span> sub-components, in the Kubernetes cluster. The certification authority key and certificate files are specified with the `--cluster-signing-key-file` and `--cluster-signing-cert-file` options respectively.
 
 #### Kube Config
+Client keys and certificates can be inputted as arguments in a simple REST API call or with the `kubectl` command to the server.
 
+```bash
+curl https://kube-apiserver:6443/api/v1/pods \
+--key admin.key --cert admin.crt --cacert ca.crt
+```
+
+```bash
+kubectl get pods --server kube-apiserver:6443 --client-key admin.key
+\ --client-certificate admin.crt --certificate-authority ca.crt
+```
+
+**Alternatively, a <span style = "color:lightblue">kube config</span> can store key and certificate authorization details in a YAML file.** A kube config consists of **clusters** (*various clusters*), **contexts** (*user-cluster pairing*), and **users** (*pre-existing users*).
+
+```yaml
+apiVersion: v1
+kind: Config
+
+current-context: my-kube-admin@my-kube-server
+
+clusters:
+- name: my-kube-server
+  cluster:
+    certificate-authority: /etc/kubernetes/pki/ca.crt
+    server: https://kube-apiserver:6443
+
+contexts:
+- name: my-kube-admin@my-kube-server
+  context:
+    cluster: my-kube-server
+    user: my-kube-admin
+    namespace: finance
+
+users:
+- name: my-kube-admin
+  user:
+    client-certificate: /etc/kubernetes/pki/users/admin.crt
+    client-key: /etc/kubernetes/pki/users/admin.key
+```
+
+> [!INFO]
+> It is recommended to specify the full path to the key and certificate files. Optionally, there are fields (`certificate-authority-data`, `client-certificate-data`, `client-key-data`) that specify a `base64` encoded string of text of the certificate instead of the file path.
+
+For example, the above file contains one context that creates access to the `finance` namespace in the `my-kube-server` cluster with the `my-kube-admin` user. Multiple clusters, contexts, and users can be created as required. A Kubernetes object does not need to be created, as the `kubectl` command reads directly from the file.
+
+```bash
+kubectl config view
+```
+
+The `current-context` field will specify the default context to use. The `use-context` subcommand will change the current context to a pre-defined context. Any changes made with the `kubectl` command will be reflected in the YAML file.
+
+```bash
+kubectl config use-context <CONTEXT_NAME>
+```
+
+The file can be specified in the command line with the `--kubeconfig` option. Alternatively, the `kubectl` command will automatically look for a kube config file in `$HOME/.kube/config`, thus removing the need to explicitly specify the configuration file.
 
 ## Authorization
 ^e8e0d8
