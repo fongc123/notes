@@ -416,7 +416,90 @@ rules:
 kubectl create -f dev-role.yml
 ```
 
-In the above example, the `dev` user will be able to list, get, create, update, and delete pods and to create config maps.
+In the above example, the `dev` user will be able to list, get, create, update, and delete pods and to create config maps. Rules are added as elements under the `rules` field. For **core groups**, the `apiGroups` field is left as an empty string.
 
-Rules are added as elements under the `rules` field. For **core groups**, the `apiGroups` field is left as an empty string.
+Additionally, the `resourceNames` field can also be provided to restrict  a role to specific names of a resource. For example, the role with the following configuration willl only allow users to get, create, and update pods that are named `blue` and `orange`.
 
+```yaml
+# FILENAME: dev-role-resourcenames.yml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: dev
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "create", "update"]
+  resourceNames: ["blue", "orange"]
+```
+
+Next, the role is assigned to user(s) with a `RoleBinding` object.
+
+```yaml
+# FILENAME: devuser-dev-binding.yml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: devuser-dev-binding
+subjects:
+- kind: User
+  name: dev-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: dev
+  apiGroup: rbac.authorization.k8s.io
+```
+
+```bash
+kubectl create -f devuser-dev-binding.yml
+```
+
+Multiple users can be assigned to a role. The `subjects.kind` field can be changed to `Group` to specify a group instead of a single user.
+
+> [!INFO]
+> The **roles** and **role bindings** are within the scope of namespaces. If the `metadata.namespace` field is specified, the roles and role bindings will take effect in the non-default namespace.
+
+The `get` and `describe` command can be used to get and describe respectively roles and role bindings.
+
+```bash
+kubectl get roles
+```
+
+```
+kubectl get rolebindings
+```
+
+```bash
+kubectl describe role <ROLE_NAME>
+```
+
+```bash
+kubectl describe rolebinding <BINDING_NAME>
+```
+
+Role access can also be checked and verified with the `can-i` command. The following code blocks check if the current user can create deployments and delete nodes respectively.
+
+```bash
+kubectl auth can-i create deployments
+```
+
+```bash
+kubectl auth can-i delete nodes
+```
+
+Additionally, administrative users can *impersonate* other roles with the `--as` option to verify that the permissions are indeed allowed or restricted as indicated.
+
+```bash
+kubectl auth can-i create deployments --as dev
+```
+
+```bash
+kubectl auth can-i create pods --as dev
+```
+
+The `--namespace` option will also specify the namespace.
+
+```bash
+kubectl auth can-i create pods --as dev --namespace test
+```

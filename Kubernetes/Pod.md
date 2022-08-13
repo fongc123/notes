@@ -97,8 +97,12 @@ Below are some other useful options.
 - `--force`: force the operation (*often used with `replace`*)
 - `--watch`: watch for any changes
 - `--selector`: specify labels in a key-value format (e.g., `--selector="env=dev"`)
-- `wc`: word count (*add `-l` option*)
+- `wc`: word count (*add `-l` option for **lines***)
 - `--no-headers`: no headers
+
+```bash
+kubectl get pods -A | wc -l
+```
 
 ## Static Pods
 A <span style = "color:lightblue">static pod</span> is a pod that is run **manually** on a node. Typically, in a cluster, the kubelet will listen for requests from the API server for new pod assignments.
