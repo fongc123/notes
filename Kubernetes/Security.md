@@ -358,6 +358,26 @@ kubectl config use-context <CONTEXT_NAME>
 
 The file can be specified in the command line with the `--kubeconfig` option. Alternatively, the `kubectl` command will automatically look for a kube config file in `$HOME/.kube/config`, thus removing the need to explicitly specify the configuration file.
 
+## API Groups
+Each category contains API endpoints to different functions. The `/api` category contains endpoints to core functionality, such as pods, namespaces, nodes, and more.
+
+On the other hand, the `/apis` category refers to <u>named</u> functionality. Under each API group, there are <span style = "color:lightblue">resources</span> that can be interacted with. The possible interactions, such as **GET**, **POST**, **DELETE**, etc., are referred to as <span style = "color:lightblue">verbs</span>.
+
+The two code blocks below will list the available API groups and the named (i.e., `apis`) resource groups respectively.
+
+```bash
+curl http://localhost:6443 -k
+```
+
+```bash
+curl http://localhost:6443/apis -k | grep "name"
+```
+
+> [!INFO]
+> When using the above commands, authentication **must** also be provided.
+
+Authorization controls access to specific groups and resources.
+
 ## Authorization
 ^e8e0d8
 
