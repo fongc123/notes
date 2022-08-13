@@ -418,7 +418,7 @@ kubectl create -f dev-role.yml
 
 In the above example, the `dev` user will be able to list, get, create, update, and delete pods and to create config maps. Rules are added as elements under the `rules` field. For **core groups**, the `apiGroups` field is left as an empty string.
 
-Additionally, the `resourceNames` field can also be provided to restrict  a role to specific names of a resource. For example, the role with the following configuration willl only allow users to get, create, and update pods that are named `blue` and `orange`.
+Additionally, the `resourceNames` field can also be provided to restrict  a role to specific names of a resource. For example, the role with the following configuration willl only allow users to get and create deployments that are named `blue` and `orange`.
 
 ```yaml
 # FILENAME: dev-role-resourcenames.yml
@@ -427,11 +427,25 @@ kind: Role
 metadata:
   name: dev
 rules:
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "create", "update"]
-  resourceNames: ["blue", "orange"]
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - create
+  resourceNames:
+  - blue
+  - orange
 ```
+
+The above code block also demonstrates a different syntax. Alternatively, the role can be created through a command.
+
+```bash
+kubectl create role <NAME> --verb=<VERB> --resource=<RESOURCE>
+```
+
+The `--resource` option specfies the type of resource that the role controls, while the `--verb` option specifies the actions that can be performed on the resrouce by the role. Multiple verbs can be specified.
 
 Next, the role is assigned to user(s) with a `RoleBinding` object.
 
@@ -455,7 +469,11 @@ roleRef:
 kubectl create -f devuser-dev-binding.yml
 ```
 
-Multiple users can be assigned to a role. The `subjects.kind` field can be changed to `Group` to specify a group instead of a single user.
+Multiple users can be assigned to a role. The `subjects.kind` field can be changed to `Group` to specify a group instead of a single user. Alternatively, the role binding can also be created through a command.
+
+```bash
+kubectl create rolebinding <NAME> --clusterrole=<ROLE_NAME> --user=<USER>
+```
 
 > [!INFO]
 > The **roles** and **role bindings** are within the scope of namespaces. If the `metadata.namespace` field is specified, the roles and role bindings will take effect in the non-default namespace.
@@ -503,3 +521,4 @@ The `--namespace` option will also specify the namespace.
 ```bash
 kubectl auth can-i create pods --as dev --namespace test
 ```
+
