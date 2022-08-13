@@ -124,15 +124,6 @@ Lastly, Kubernetes requires a certification authority to sign certificates. Ther
 #### Certificate Creation
 There are several methods, such as <span style = "color:lightblue">Easy RSA</span>, <span style = "color:lightblue">OpenSSL</span>, and <span style = "color:lightblue">CFSSL</span>, to generate certificates for the Kubernetes cluster. This document will describe the process of certificate creation using OpenSSL.
 
-Once the necessary files have been generated, they can be inputted in a REST API call to the cluster as arguments.
-
-```bash
-curl https://kube-apiserver:6443/api/v1/pods \
---key admin.key --cert admin.crt --cacert ca.crt
-```
-
-A `kube-config.yml` file can be created to store these key and certificate files instead. 
-
 ##### Certification Authority
 As shown below, a private key for the certification authority is generated.
 
@@ -151,7 +142,7 @@ openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 ```
 
 ##### Client
-Similar to the certification authority, a key and a certificate are generated.
+Similar to the certification authority, a key and a certificate are generated. These files are created to authorize with the API server (i.e., a client role).
 
 ```bash
 openssl genrsa -out admin.key 2048
@@ -169,15 +160,25 @@ openssl req -new -key admin.key -subj "/CN=kube-admin/O=system:masters" -out adm
 
 Additional permissions can be specified with group assignment. The above code block adds the group `system:masters` to the certificate, which allows administrative privilleges.
 
-Components (i.e., non-user clients) have `system:` appended to the beginning of the certificate name.
+Kubernetes components (i.e., non-user clients) have `system:` appended to the beginning of the certificate name.
 
 ```bash
 openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
 ```
 
-The authority's key and certificate are also provided when signing to generate a <u>valid</u> certificate.
+The authority's key and certificate are also provided when signing to generate a <u>valid</u> certificate. Client keys and certificates can be inputted as arguments in a simple REST API call to the server.
 
-#### 
+```bash
+curl https://kube-apiserver:6443/api/v1/pods \
+--key admin.key --cert admin.crt --cacert ca.crt
+```
+
+A <span style 
+
+##### Server
+
+
+#### Kube Config
 
 
 ## Authorization
