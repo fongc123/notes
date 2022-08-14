@@ -606,3 +606,39 @@ spec:
 
 To successfully pull the `private-registry.io/apps/internal-app` image, the secret name `regcred` is specified under the `imagePullSecrets` field.
 
+## Network Policy
+In networking basics, <span style = "color:lightblue">ingress traffic</span> refers to traffic that is entering the module, while <span style = "color:lightblue">egress traffic</span> refers to traffic that is relayed to another module. Ingress and egress traffic are not related to the actual response of the request and only pertain to the incoming request.
+
+By default, all pods can communicate with each other through services in a Kubernetes cluster. A <span style = "color:lightblue">network policy</span> is a Kubernetes object that restricts communication between pods. The object is applied to a pod using labels.
+
+```yaml
+# FILENAME: db-networking-policy.yml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: db-policy
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          name: api-pod
+    ports:
+    - protocol: TCP
+      port: 3306
+```
+
+```bash
+kubectl create -f db-networking-policy.yml
+```
+
+In the above network configuration, the network policy will be **applied to pods with `role` equal to `db`** and will **allow ingress TCP traffic on port 3306 from pods with `name` equal to `api-pod`**.
+
+> [!INFO]
+> Some networking solutions **do not** support network policies. In these solutions, network policies would simply not work.
+
