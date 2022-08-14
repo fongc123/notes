@@ -439,7 +439,7 @@ rules:
   - orange
 ```
 
-The above code block also demonstrates a different syntax. Alternatively, the role can be created through a command.
+The above code block also demonstrates a different syntax. Alternatively, a role can also be created through a command.
 
 ```bash
 kubectl create role <NAME> --verb=<VERB> --resource=<RESOURCE>
@@ -469,7 +469,7 @@ roleRef:
 kubectl create -f devuser-dev-binding.yml
 ```
 
-Multiple users can be assigned to a role. The `subjects.kind` field can be changed to `Group` to specify a group instead of a single user. Alternatively, the role binding can also be created through a command.
+Multiple users can be assigned to a role. The `subjects.kind` field can be changed to `Group` to specify a group instead of a single user. Alternatively, a role binding can also be created through a command.
 
 ```bash
 kubectl create rolebinding <NAME> --clusterrole=<ROLE_NAME> --user=<USER>
@@ -477,6 +477,9 @@ kubectl create rolebinding <NAME> --clusterrole=<ROLE_NAME> --user=<USER>
 
 > [!INFO]
 > The **roles** and **role bindings** are within the scope of namespaces. If the `metadata.namespace` field is specified, the roles and role bindings will take effect in the non-default namespace.
+
+> [!INFO]
+> To create **cluster roles** and **cluster role bindings**, the `ClusterRole` and `ClusterRoleBinding` keywords are used respectively n the `Kind` field instead. These objects allow management of cluster-scoped (*contrary to namespace scoped*) resources (e.g., nodes, CSRs, etc.). This also includes resources across all namespaces (e.g., pods in all namespaces).
 
 The `get` and `describe` command can be used to get and describe respectively roles and role bindings.
 
