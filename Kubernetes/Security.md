@@ -416,7 +416,11 @@ rules:
 kubectl create -f dev-role.yml
 ```
 
-In the above example, the `dev` user will be able to list, get, create, update, and delete pods and to create config maps. Rules are added as elements under the `rules` field. For **core groups**, the `apiGroups` field is left as an empty string.
+In the above example, the `dev` user will be able to list, get, create, update, and delete pods and to create config maps. Rules are added as elements under the `rules` field. For **core groups**, the `apiGroups` field is left as an empty string. To view the API of other groups, use the following command.
+
+```bash
+kubectl api-resources
+```
 
 Additionally, the `resourceNames` field can also be provided to restrict  a role to specific names of a resource. For example, the role with the following configuration willl only allow users to get and create deployments that are named `blue` and `orange`.
 
@@ -479,7 +483,7 @@ kubectl create rolebinding <NAME> --clusterrole=<ROLE_NAME> --user=<USER>
 > The **roles** and **role bindings** are within the scope of namespaces. If the `metadata.namespace` field is specified, the roles and role bindings will take effect in the non-default namespace.
 
 > [!INFO]
-> To create **cluster roles** and **cluster role bindings**, the `ClusterRole` and `ClusterRoleBinding` keywords are used respectively n the `Kind` field instead. These objects allow management of cluster-scoped (*contrary to namespace scoped*) resources (e.g., nodes, CSRs, etc.). This also includes resources across all namespaces (e.g., pods in all namespaces).
+> To create **cluster roles** and **cluster role bindings**, the `ClusterRole` and `ClusterRoleBinding` keywords are used respectively in the `Kind` field instead. These objects allow management of cluster-scoped (*contrary to namespace scoped*) resources (e.g., nodes, CSRs, etc.). This also includes resources across all namespaces (e.g., pods in all namespaces).
 
 The `get` and `describe` command can be used to get and describe respectively roles and role bindings.
 
@@ -525,3 +529,34 @@ The `--namespace` option will also specify the namespace.
 kubectl auth can-i create pods --as dev --namespace test
 ```
 
+### Service Accounts
+A <span style = "color:lightblue">service account</span> allows third-party automation software, such as Prometheus for monitoring or Jenkins for automated deployment, to access the Kubernetes API to perform tasks.
+
+```bash
+kubectl create serviceaccount <NAME>
+```
+
+When a service account is created, a secret storing the <span style = "color:lightblue">authentication bearer token</span> is also created. The name of the secret can be viewed with the following command, where the name of the secret is specified in the service account object.
+
+```bash
+kubectl describe secret <NAME>
+```
+
+The token can be used in a simple REST API call or can be integrated within an application. In the case that the third-party integrations are run as a pod in the Kubernetes cluster, the secret can be mounted as a volume inside the pod.
+
+In a pod definition file, the `serviceAccountName` field can be added to specify the service account to use.
+
+```yaml
+# FILENAME: pod-definition.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k-dashboard
+spec:
+  containers:
+  - name: k-dashboard
+    image: k-dashboard
+  serviceAccountName: dashboard-sa
+```
+
+The `default` service account is created automatically by Kubernetes and will be applied to all pods, so that they can access the Kubernetes API. The `automountServiceAccountToken` field will specify whether or not to automatically perform this action.
