@@ -559,4 +559,10 @@ spec:
   serviceAccountName: dashboard-sa
 ```
 
+The service account that a running pod is using can be identified by displaying the YAML configuration with the `-o yaml` option.
+
 The `default` service account is created automatically by Kubernetes and will be applied to all pods, so that they can access the Kubernetes API. The `automountServiceAccountToken` field will specify whether or not to automatically perform this action.
+
+> [!INFO]
+> The `default` service account has extremely limited access to the Kubernetes cluster. For proper third-party integration, it may be required to create a new service account instead of using the default one.
+
