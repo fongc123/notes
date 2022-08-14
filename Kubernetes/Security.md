@@ -612,7 +612,7 @@ In networking basics, <span style = "color:lightblue">ingress traffic</span> ref
 > [!INFO]
 > Responses and egress traffic are different. Egress traffic would imply that the pod is directly calling another pod instead of simply returning a response.
 
-By default, all pods can communicate with each other through services in a Kubernetes cluster. A <span style = "color:lightblue">network policy</span> is a Kubernetes object that restricts communication between pods. The object is applied to a pod using labels.
+By default, all pods can communicate with each other through **services** in a Kubernetes cluster. A <span style = "color:lightblue">network policy</span> is a Kubernetes object that restricts communication between pods. The object is applied to a pod using labels. **Pods that were able to communicate with each other through service objects are now restricted by the network policy.**
 
 ```yaml
 # FILENAME: db-networking-policy.yml
@@ -648,7 +648,7 @@ In the above policy configuration, the network policy will be **applied to pods 
 Pods within specific namespaces can be specified as well with the `from.namespaceSelector` field.
 
 ```yaml
-# FILENAME: db-networking-policy.yml
+# FILENAME: db-networking-policy-namespace.yml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -674,7 +674,7 @@ spec:
 
 The above policy configuration will allow ingress traffic from matching pods in the `production` namespace only. It is noted that the namespace must also have the correct matching labels.
 
-It is also noted that a pod must match both the pod label ***and*** the namespace label requirements. as the `podSelector` field and the `namespaceSelector` field are under the same element. If the fields were in separate elements, a pod would need to match the pod label ***or*** the namespace label.
+It is also noted that a pod must match both the pod label ***and*** the namespace label, as the `podSelector` field and the `namespaceSelector` field are under the same element. If the fields were in separate elements, a pod would only need to match the pod label ***or*** the namespace label.
 
 > [!INFO]
 > If the `from.podSelector` field is not given but the `from.namespaceSelector` field is given, all pods within the specified namespace will be able to connect to the pod.
@@ -682,7 +682,7 @@ It is also noted that a pod must match both the pod label ***and*** the namespac
 In the case that the entity is not a pod, a range of IPs can also be restricted or allowed with the `from.ipBlock` field.
 
 ```yaml
-# FILENAME: db-networking-policy.yml
+# FILENAME: db-networking-policy-ipblock.yml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -695,11 +695,44 @@ spec:
   - Ingress
   ingress:
   - from:
+    - ipBlock:
+        cidr: 192.168.5.10/32
+    ports:
+    - protocol: TCP
+      port: 3306
+```
+
+An example of egress traffic configuration is shown below.
+
+```yaml
+# FILENAME: db-networking-policy-egress.yml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: db-policy
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
     - podSelector:
         matchLabels:
           name: api-pod
     ports:
     - protocol: TCP
       port: 3306
+  egress:
+  - to:
+    - ipBlock:
+        cidr: 192.168.5.10/32
+    ports:
+    - protocol: TCP
+      port: 80
 ```
+
+
 
