@@ -49,10 +49,12 @@ docker volume create <NAME>
 When an image is run, the `-v` option can be specified to indicate the host volume or host directory and container directory to mount.
 
 ```bash
-docker run -v <VOLUME_NAME>:<DIR_INSIDE_CONTAINER> <IMAGE_NAME>
+docker run -v <VOLUME_NAME>:<PATH_INSIDE_CONTAINER> <IMAGE_NAME>
 ```
 
-``
+```bash
+docker run -v <HOST_PATH>:<PATH_INSIDE_CONTAINER> <IMAGE_NAME>
+```
 
 For example, the code block below will create the volume named `data` and run the `mysql` image such that the `/var/lib/mysql` directory inside the container is **mounted** to the `data` volume on the host.
 
@@ -64,3 +66,13 @@ docker run -v data:/var/lib/mysql mysql
 > [!INFO]
 > A volume does not need to be created before the `run` command is used. If the volume does not exist, it is created automatically by Docker.
 
+> [!INFO]
+> In newer Docker versions, the `--mount` option is recommended over the `-v` option.
+> ```bash
+> docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
+> ```
+> An example of the bind mount of a MySQL Docker image is shown.
+
+A <span style = "color:lightblue">storage driver</span> is a Docker component that handles storage creation and management of containers. Some drivers include AUFS, ZFS, BTRFS, Device Mapper, Overlay, and Overlay2.
+
+On the other hand, a <span style = "color:lightblue">volume driver plugin</span> handles volumes. The `--volume-driver` option can specify the volume driver to use when a container is run.
