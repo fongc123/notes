@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "major",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -138,15 +138,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Kubernetes/Services.md",
-    "Kubernetes/Pod.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Security.md",
-    "Kubernetes/Namespace.md",
-    "Kubernetes/Replica Sets.md",
-    "Programming with C++/C++ Basics.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Application Management.md",
     "Kubernetes/Cluster Architecture.md",
-    "src/Pasted image 20220728155031.png",
-    "src/operator-precedence.png"
+    "Kubernetes/Controller Manager.md",
+    "Kubernetes/Daemon Set.md",
+    "Kubernetes/Deployment.md",
+    "Kubernetes/ETCD Cluster.md",
+    "Kubernetes/Imperative & Declarative.md",
+    "Kubernetes/Kube API Server.md",
+    "Kubernetes/Kube Proxy.md"
   ]
 }

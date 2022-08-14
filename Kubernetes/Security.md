@@ -566,3 +566,43 @@ The `default` service account is created automatically by Kubernetes and will be
 > [!INFO]
 > The `default` service account has extremely limited access to the Kubernetes cluster. For proper third-party integration, it may be required to create a new service account instead of using the default one.
 
+## Image Security
+When an image is specified, it follows a specific naming convention to indicate where to pull the image from and what image to pull.
+
+```yaml
+image: <REGISTRY>/<USER_OR_ACCOUNT>/<NAME_OR_REPOSITORY>
+```
+
+If only the image name is provided, as in the case of `nginx`, the registry and library are set to `docker.io` and `library` by default respectively.
+
+To access <span style = "color:lightblue">private repositories</span>, Docker credentials must be provided before the image can be pulled and run.
+
+```bash
+docker login <REGISTRY>
+```
+
+In Kubernetes, a secret with the `docker-registry` type, which contains the Docker credentials, is created and is passed into a pod definition file.
+
+```bash
+kubectl create secret docker-registry regcred \
+--docker-server=private-registry.io \
+--docker-username=user \
+--docker-password=pass \
+--docker-email=user@org.com
+```
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: private-registry.io/apps/internal-app
+  imagePullSecrets:
+  - name: regcred
+```
+
+To access the `private-registry.io/apps/internal-app` image, Docker credentials are given as a secret named `regcred` which are specified under the `imagePullSecrets` field.
+
