@@ -604,5 +604,5 @@ spec:
   - name: regcred
 ```
 
-To access the `private-registry.io/apps/internal-app` image, the secret name `regcred` is specified under the `imagePullSecrets` field.
+To successfully pull the `private-registry.io/apps/internal-app` image, the secret name `regcred` is specified under the `imagePullSecrets` field.
 
