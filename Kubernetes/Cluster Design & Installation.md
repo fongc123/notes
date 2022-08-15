@@ -39,3 +39,5 @@ Minikube is primarily used for education or testing purposes, where it automatic
 
 In <span style = "color:lightblue">hosted solutions</span>, the maintenaces of the virtual machines and the Kubernetes installation are done by the cloud provider beforehand.
 
+In a high availability environment, multiple master nodes are run to prevent a single point failure. A <span style = "color:lightblue">load balancer</span>, such as Nginx or HA Proxy, distributes workloads across all the API server of the master nodes. For schedulers and controller managers, only one can be active at the same time. The `--leader-elect` option specifies which instance is set to active, while the other instances are on standby.
+
