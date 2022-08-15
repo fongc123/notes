@@ -76,3 +76,4 @@ docker run -v data:/var/lib/mysql mysql
 A <span style = "color:lightblue">storage driver</span> is a Docker component that handles storage creation and management of containers. Some drivers include AUFS, ZFS, BTRFS, Device Mapper, Overlay, and Overlay2.
 
 On the other hand, a <span style = "color:lightblue">volume driver plugin</span> handles volumes. The `--volume-driver` option can specify the volume driver to use when a container is run.
+
