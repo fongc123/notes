@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Storage.md",
+            "file": "Kubernetes/Cluster Design & Installation.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Storage.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Storage.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Storage.md"
+                "file": "Kubernetes/Cluster Design & Installation.md"
               }
             }
           },
@@ -138,15 +138,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "README.md",
+    "Kubernetes/Cluster Design & Installation.md",
     "Kubernetes/Storage.md",
+    "README.md",
     "src/k8s-arch.png",
     "Kubernetes/Security.md",
     "Kubernetes/Cluster Maintenance.md",
     "Kubernetes/Application Management.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Controller Manager.md",
-    "Kubernetes/Daemon Set.md",
-    "Kubernetes/Deployment.md"
+    "Kubernetes/Daemon Set.md"
   ]
 }

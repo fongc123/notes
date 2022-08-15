@@ -77,3 +77,5 @@ A <span style = "color:lightblue">storage driver</span> is a Docker component th
 
 On the other hand, a <span style = "color:lightblue">volume driver plugin</span> handles volumes. The `--volume-driver` option can specify the volume driver to use when a container is run.
 
+Kubernetes interacts with the <span style = "color:lightblue">container storage interface (CSI)</span> for storage (container runtime interface (CRI) for container runtime and container networking interface (CNI) for networking) functionality, as there are multiple software options that can be integrated with Kubernetes.
+
