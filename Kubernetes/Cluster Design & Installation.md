@@ -40,5 +40,27 @@ In a high availability environment, multiple master nodes are run to prevent a s
 
 In a <span style = "color:lightblue">stacked topology</span>, the ETCD clusters are run in the same node with the controlplane components. It is easy to set up but has risks when the node fails. In a <span style = "color:lightblue">external ETCD topology</span>, the ETCD clusters are run on different nodes. It is less risky but is harder to set up and requires more servers. The API server must point to the correct address that the ETCD cluster is hosted at.
 
-The ETCD cluster can be <span style = "color:lightblue">distributed</span> across multiple instances and should have the same state. Among all the ETCD servers, one instance is elected a leader by the <span style = "color:lightblue">RAFT protocol</span>, where write operations are processed and distributed to other instances. Read operations from any of the instance will return the same information.
+The ETCD cluster can be <span style = "color:lightblue">distributed</span> across multiple instances and should have the same state. Among all the ETCD servers, one instance is elected a leader by the <span style = "color:lightblue">RAFT protocol</span>. Write operations are processed and distributed to other instances by the leader ETCD server instance. Read operations from any of the instance will return the same information.
+
+> [!INFO]
+> A write operation is considered to be successful when the majority of ETCD server instances received the operation. The majority is determined by the <span style = "color:lightblue">quorum</span>, where the quorum is $0.5 \cdot N + 1$ and $N$ is the number of nodes.
+> 
+> Quorum is the reason why the recommend number of nodes in the cluster is **three**.
+
+# Installation
+> [!INFO]
+> Installation of Kubernetes "the hard way" is found in the following GitHub [repository](https://github.com/mmumshad/kubernetes-the-hard-way).
+
+The `kubeadmin` tool facilitates the setup process of a multi-node Kubernetes cluster with best practices. The installation procedure at a high level is detailed below.
+1. Prepare nodes (physical systems or virtual machines) to be part of the cluster.
+2. Install the container runtime software (e.g., Docker).
+3. Install the `kubeadm` tool.
+4. Initialize the master node.
+5. Set up the **pod network** which is a special network connectivity among the master and worker nodes.
+6. Join the worker nodes to the master node.
+
+Documentation about the installation process of the `kubeadm` tool can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/). Additional resources (e.g., Vagrant) are found [here](https://github.com/kodekloudhub/certified-kubernetes-administrator-course).
+
+> [!INFO]
+> Vagrant is a tool for building and maintaining virtual software development environments, such as Hyper-V or VirtualBox.
 
