@@ -73,7 +73,7 @@ Once the `kubeadm` tool is installed, documentation about the cluster creation p
 > Vagrant is a tool for building and maintaining virtual software development environments, such as Hyper-V or VirtualBox.
 
 > [!INFO]
-> Nodes are configured in the `192.168.0.0` range, while pods are configured in the `10.244.0.0` range.
+> Nodes are configured in the `192.168.0.0` range, while pods are configured in the `10.244.0.0/16` range.
 
 A common issue when setting up the Kubernetes cluster for the first time with the `init` command is that the **container runtime is not running**. The below commands are a possible fix.
 
@@ -81,6 +81,8 @@ A common issue when setting up the Kubernetes cluster for the first time with th
 rm /etc/containerd/config.toml
 systemctl restart containerd
 ```
+
+The `reset` command will clear any pre-existing Kubernetes installation
 
 All Kubernetes clusters need a <span style = "color:lightblue">network add-on</span> for the pod network. The code block shows the command to install the add-on for Weave Net.
 
