@@ -59,10 +59,50 @@ The `kubeadmin` tool facilitates the setup process of a multi-node Kubernetes cl
 5. Set up the **pod network** which is a special network connectivity among the master and worker nodes.
 6. Join the worker nodes to the master node for each worker node.
 
+The IP tables must be configured correctly.
+
+```bash
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+br_netfilter
+EOF
+```
+
+```bash
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+```
+
+```bash
+sudo sysctl --system
+```
+
 It is noted that Swap **must be disabled** for the installation to succeed.
 
 ```bash
 sudo swapoff -a
+```
+
+Installation of the `kubeadm` tool, the `kubelet`, and the `kubectl` tool are done separately.
+
+```bash
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+```
+
+```bash
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+```
+
+```bash
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+```
+
+```bash
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
 Documentation about the installation process of the `kubeadm` tool can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/). Additional resources (e.g., Vagrant) are found [here](https://github.com/kodekloudhub/certified-kubernetes-administrator-course).
