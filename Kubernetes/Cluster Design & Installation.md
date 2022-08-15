@@ -82,3 +82,8 @@ rm /etc/containerd/config.toml
 systemctl restart containerd
 ```
 
+All Kubernetes clusters need a <span style = "color:lightblue">network add-on</span> for the pod network. The code block shows the command to install the add-on for Weave Net.
+
+```bash
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+```
