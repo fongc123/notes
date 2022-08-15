@@ -1,8 +1,8 @@
 # Design
 Listed below are some design ideas to consider when designing a Kubernetes cluster.
 - purpose
-	- education (**Minikube** or )
-	- development or testing
+	- education (**Minikube** or single-node cluster with `kubeadm` or with cloud-hosting)
+	- development or testing (multi-node cluster with `kubeadm` or with cloud-hosting)
 	- production
 - cloud or on-premise
 - workloads
