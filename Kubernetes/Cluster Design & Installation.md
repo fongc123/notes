@@ -4,7 +4,7 @@ Listed below are some design ideas to consider when designing a Kubernetes clust
 	- education (**Minikube** or single-node cluster with `kubeadm` or with cloud hosting)
 	- development or testing (multi-node cluster with `kubeadm` or with cloud hosting)
 	- production
-		- high availability
+		- high availability (redundancy on all Kubernetes components)
 		- multi-node cluster with `kubeadm` or cloud hosting
 		- multiple master nodes
 		- 5,000 nodes, 150,000 pods, 100 pods per node, and 300,000 total containers
@@ -31,4 +31,11 @@ Listed below are some design ideas to consider when designing a Kubernetes clust
 
 > [!INFO]
 > Kubernetes cannot be installed on Windows. A Linux virtual machine would need to be installed.
+
+## Infrastructure
+Minikube is primarily used for education or testing purposes, where it automatically deploys virtual machines for the user but can only create a single-node cluster. The `kubeadm` tool is used for development, testing, and production environments, where multi-node clusters are generally recommended, but requires virtual machines to be managed and set up before hand.
+
+<span style = "color:lightblue">Turnkey solutions</span> require the administrator to provision, configure, and maintain the virtual machines as well as to manage Kubernetes. Some on-premise turnkey solution softwares include OpenShift, Cloud Foundry Container Runtime, VMware Cloud PKS, and Vagrant.
+
+In <span style = "color:lightblue">hosted solutions</span>, the maintenaces of the virtual machines and the Kubernetes installation are done by the cloud provider beforehand.
 
