@@ -53,11 +53,17 @@ The ETCD cluster can be <span style = "color:lightblue">distributed</span> acros
 
 The `kubeadmin` tool facilitates the setup process of a multi-node Kubernetes cluster with best practices. The installation procedure at a high level is detailed below.
 1. Prepare nodes (physical systems or virtual machines) to be part of the cluster.
-2. Install the container runtime software (e.g., Docker).
-3. Install the `kubeadm` tool.
+2. Install the container runtime software (e.g., Docker) on all nodes.
+3. Install the `kubeadm` tool on all nodes.
 4. Initialize the master node.
 5. Set up the **pod network** which is a special network connectivity among the master and worker nodes.
-6. Join the worker nodes to the master node.
+6. Join the worker nodes to the master node for each worker node.
+
+It is noted that Swap **must be disabled** for the installation to succeed.
+
+```bash
+sudo swapoff -a
+```
 
 Documentation about the installation process of the `kubeadm` tool can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/). Additional resources (e.g., Vagrant) are found [here](https://github.com/kodekloudhub/certified-kubernetes-administrator-course).
 
@@ -65,4 +71,14 @@ Once the `kubeadm` tool is installed, documentation about the cluster creation p
 
 > [!INFO]
 > Vagrant is a tool for building and maintaining virtual software development environments, such as Hyper-V or VirtualBox.
+
+> [!INFO]
+> Nodes are configured in the `192.168.0.0` range, while pods are configured in the `10.244.0.0` range.
+
+A common issue when setting up the Kubernetes cluster for the first time with the `init` command is that the **container runtime is not running**. The below commands are a possible fix.
+
+```bash
+rm /etc/containerd/config.toml
+systemctl restart containerd
+```
 
