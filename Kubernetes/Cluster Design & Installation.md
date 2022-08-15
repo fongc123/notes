@@ -61,6 +61,8 @@ The `kubeadmin` tool facilitates the setup process of a multi-node Kubernetes cl
 
 Documentation about the installation process of the `kubeadm` tool can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/). Additional resources (e.g., Vagrant) are found [here](https://github.com/kodekloudhub/certified-kubernetes-administrator-course).
 
+Once the `kubeadm` tool is installed, documentation about the cluster creation process can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/).
+
 > [!INFO]
 > Vagrant is a tool for building and maintaining virtual software development environments, such as Hyper-V or VirtualBox.
 
