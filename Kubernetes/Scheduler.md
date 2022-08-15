@@ -107,7 +107,7 @@ kubectl taint nodes <NODE_NAME> <KEY>=<VALUE>:<TAINT_EFFECT>
 To untain a node, run the `taint` command with `-` at the end.
 
 ```bash
-kubectl tain nodes <NODE_NAME> <KEY>=<VALUE>:<TAINT_EFFECT>-
+kubectl taint nodes <NODE_NAME> <KEY>=<VALUE>:<TAINT_EFFECT>-
 ```
 
 The `-all` can be specified to untaint **all** taints. Tolerations are applied to pods under the `tolerations` field in the definition file.

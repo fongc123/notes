@@ -591,6 +591,8 @@ kubectl create secret docker-registry regcred \
 --docker-email=user@org.com
 ```
 
+For Docker Hub, the value of the `--docker-server` option is `https://index.docker.io/v1/`.
+
 ```yaml
 apiVersion: v1
 kind: Pod
