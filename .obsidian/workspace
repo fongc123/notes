@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Cluster Design & Installation.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -138,15 +138,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Cluster Design & Installation.md",
-    "Kubernetes/Security.md",
-    "Kubernetes/Services.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Pod.md",
+    "Kubernetes/Kublet.md",
+    "Kubernetes/Kube Proxy.md",
     "Kubernetes/Imperative & Declarative.md",
     "Kubernetes/Kube API Server.md",
-    "Kubernetes/Kube Proxy.md"
+    "Kubernetes/ETCD Cluster.md",
+    "Kubernetes/Deployment.md",
+    "Kubernetes/Daemon Set.md",
+    "Kubernetes/Controller Manager.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Cluster Architecture.md"
   ]
 }
