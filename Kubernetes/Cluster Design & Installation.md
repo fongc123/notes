@@ -105,15 +105,24 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-Documentation about the installation process of the `kubeadm` tool can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/). Additional resources (e.g., Vagrant) are found [here](https://github.com/kodekloudhub/certified-kubernetes-administrator-course).
+Additional documentation about the installation process of the `kubeadm` tool can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/). Additional resources (e.g., Vagrant) are found [here](https://github.com/kodekloudhub/certified-kubernetes-administrator-course).
 
-Once the `kubeadm` tool is installed, documentation about the cluster creation process can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/).
+The cluster is initialized. The two required options are `--apiserver-advertise-address`, which will specify the address that the API server can be accessed on, and `--pod-network-cidr`, which will specify the IP range of the pod network.
 
-> [!INFO]
-> Vagrant is a tool for building and maintaining virtual software development environments, such as Hyper-V or VirtualBox.
+```bash
+kubeadm init --apiserver-advertise-address <PUBLIC_IP> \
+--pod-network-cidr <POD_NETWORK_IP>
+```
 
 > [!INFO]
 > Nodes are configured in the `192.168.0.0` range, while pods are configured in the `10.244.0.0/16` range.
+
+Instructions are given by the `kubeadm` tool about how to set up the default `kubeconfig` file in the home directory.
+
+Additional documentation about the cluster creation process (*after the `kubeadm` tool is installed*) can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/).
+
+> [!INFO]
+> Vagrant is a tool for building and maintaining virtual software development environments, such as Hyper-V or VirtualBox.
 
 A common issue when setting up the Kubernetes cluster for the first time with the `init` command is that the **container runtime is not running**. The below commands are a possible fix.
 
