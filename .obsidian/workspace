@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Application Management.md",
+            "file": "Kubernetes/Services.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "environment",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Application Management.md",
+                "file": "Kubernetes/Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Application Management.md",
+                "file": "Kubernetes/Services.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Application Management.md"
+                "file": "Kubernetes/Services.md"
               }
             }
           },
@@ -137,11 +136,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7c1c819113d00dde",
+  "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Application Management.md",
     "Kubernetes/Cluster Design & Installation.md",
     "Kubernetes/Deployment.md",
-    "Kubernetes/Application Management.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Namespace.md",
