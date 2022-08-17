@@ -119,6 +119,18 @@ kubeadm init --apiserver-advertise-address <PUBLIC_IP> \
 
 Instructions are given by the `kubeadm` tool about how to set up the default `kubeconfig` file in the home directory.
 
+```bash
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+The `join` command will also be displayed by `kubeadm` to specify how worker nodes can be added to the cluster. On the other hand, a token can also be created by `kubeadm`.
+
+```bash
+kubeadm token create --print-join-command
+```
+
 Additional documentation about the cluster creation process (*after the `kubeadm` tool is installed*) can be found [here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/).
 
 > [!INFO]
@@ -133,8 +145,16 @@ systemctl restart containerd
 
 The `reset` command will clear any pre-existing Kubernetes installation
 
-All Kubernetes clusters need a <span style = "color:lightblue">network add-on</span> for the pod network. The code block shows the command to install the add-on for Weave Net.
+All Kubernetes clusters need a <span style = "color:lightblue">network add-on</span> for the pod network. The code block shows the command to install the Weave Net add-on.
 
 ```bash
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 ```
+
+The code block below shows the command to install the Flannel add-on.
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+```
+
+Other networking and network policy add-ons are found [here](https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy) in the Kubernetes documentation.

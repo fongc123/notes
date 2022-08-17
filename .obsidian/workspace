@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Deployment.md",
-            "mode": "preview",
+            "file": "Kubernetes/Cluster Design & Installation.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Deployment.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Deployment.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Deployment.md"
+                "file": "Kubernetes/Cluster Design & Installation.md"
               }
             }
           },
@@ -138,8 +138,8 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Kubernetes/Application Management.md",
     "Kubernetes/Deployment.md",
+    "Kubernetes/Application Management.md",
     "Kubernetes/Replica Sets.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Namespace.md",
