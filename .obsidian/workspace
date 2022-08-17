@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "expose",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -138,15 +139,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Pod.md",
+    "Kubernetes/Imperative & Declarative.md",
+    "Kubernetes/Services.md",
+    "Kubernetes/Kube Proxy.md",
     "Kubernetes/Application Management.md",
     "Kubernetes/Cluster Design & Installation.md",
     "Kubernetes/Deployment.md",
     "Kubernetes/Replica Sets.md",
-    "Kubernetes/Pod.md",
     "Kubernetes/Namespace.md",
-    "Kubernetes/Kublet.md",
-    "Kubernetes/Kube Proxy.md",
-    "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Kube API Server.md"
+    "Kubernetes/Kublet.md"
   ]
 }
