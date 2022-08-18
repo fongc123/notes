@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Security.md",
-            "mode": "source",
+            "file": "Kubernetes/Cluster Design & Installation.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Security.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Security.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Security.md"
+                "file": "Kubernetes/Cluster Design & Installation.md"
               }
             }
           },
@@ -138,6 +138,8 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Presentations/midas-analytics-aws-costs.md",
+    "Kubernetes/Security.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Services.md",
     "Kubernetes/Pod.md",
@@ -145,8 +147,6 @@
     "Kubernetes/Kube Proxy.md",
     "Kubernetes/Application Management.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Replica Sets.md",
-    "Kubernetes/Namespace.md"
+    "Kubernetes/Deployment.md"
   ]
 }
