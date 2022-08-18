@@ -538,6 +538,17 @@ kubectl create serviceaccount <NAME>
 
 When a service account is created, a secret storing the <span style = "color:lightblue">authentication bearer token</span> is also created. The name of the secret can be viewed with the following command, where the name of the secret is specified in the service account object.
 
+> [!INFO]
+> As of version `1.24`, the authentication bearer token secret is not automatically created. Instead, it must be manually created.
+> ```yaml
+> apiVersion: v1
+> kind: Secret
+> metadata:
+>   name: service-account-secret
+> type: kubernetes.io/service-account-token
+> ```
+> The YAML configuration file of the secret is shown above. The secret is then specified in the service account under the `secrets` field with the name of the secret.
+
 ```bash
 kubectl describe secret <NAME>
 ```

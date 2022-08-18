@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Kubernetes/Security.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -138,15 +138,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Application Management.md",
+    "Kubernetes/Security.md",
     "Kubernetes/Services.md",
     "Kubernetes/Storage.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Kubernetes/Security.md",
     "Presentations/midas-analytics-aws-costs.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Pod.md",
     "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Kube Proxy.md",
-    "Kubernetes/Application Management.md"
+    "Kubernetes/Kube Proxy.md"
   ]
 }
