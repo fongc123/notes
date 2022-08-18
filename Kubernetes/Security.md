@@ -376,6 +376,8 @@ curl http://localhost:6443/apis -k | grep "name"
 
 Authorization controls access to specific groups and resources.
 
+A full list of supported API groups can be found [here](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#-strong-api-groups-strong-).
+
 ## Authorization
 ^e8e0d8
 

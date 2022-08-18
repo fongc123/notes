@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7c1c819113d00dde",
+  "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Security.md",
     "Kubernetes/Services.md",
+    "Kubernetes/Deployment.md",
+    "Kubernetes/Security.md",
+    "Kubernetes/Application Management.md",
     "Kubernetes/Storage.md",
     "Kubernetes/Cluster Design & Installation.md",
     "Presentations/midas-analytics-aws-costs.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Pod.md",
-    "Kubernetes/Imperative & Declarative.md",
-    "Kubernetes/Kube Proxy.md"
+    "Kubernetes/Imperative & Declarative.md"
   ]
 }
