@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Security.md",
-            "mode": "preview",
+            "file": "Kubernetes/Storage.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Security.md",
+                "file": "Kubernetes/Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Security.md",
+                "file": "Kubernetes/Storage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Security.md"
+                "file": "Kubernetes/Storage.md"
               }
             }
           },
@@ -150,15 +150,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Docker.md",
+    "Kubernetes/Storage.md",
+    "Kubernetes/Security.md",
     "Kubernetes/Application Management.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Kubernetes/Security.md",
-    "Docker.md",
     "Programming with C++/Bitwise Operators.md",
     "Programming with C++/Random Numbers.md",
     "Kubernetes/Cluster Maintenance.md",
     "Programming with C++/Pointer.md",
-    "Kubernetes/Logging & Monitoring.md",
-    "Kubernetes/Pod.md"
+    "Kubernetes/Logging & Monitoring.md"
   ]
 }
