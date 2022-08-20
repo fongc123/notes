@@ -14,6 +14,18 @@
             "source": false
           }
         }
+      },
+      {
+        "id": "5c1f926842b519e3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Docker.md",
+            "mode": "source",
+            "source": false
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -40,8 +52,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "certificate",
-                "matchingCase": true,
+                "query": "",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -138,15 +150,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Kubernetes/Services.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Security.md",
     "Kubernetes/Application Management.md",
-    "Kubernetes/Storage.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Presentations/midas-analytics-aws-costs.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Pod.md",
-    "Kubernetes/Imperative & Declarative.md"
+    "Kubernetes/Security.md",
+    "Docker.md",
+    "Programming with C++/Bitwise Operators.md",
+    "Programming with C++/Random Numbers.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Programming with C++/Pointer.md",
+    "Kubernetes/Logging & Monitoring.md",
+    "Kubernetes/Pod.md"
   ]
 }

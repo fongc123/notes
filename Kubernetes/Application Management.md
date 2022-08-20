@@ -164,10 +164,10 @@ The file must have a file type of `.properties`. Alternatively, a declarative de
 apiVersion: v1
 kind: ConfigMap
 metadata:
-	name: app-config
+  name: app-config
 data:
-	APP_COLOR: blue
-	APP_MODE: prod
+  APP_COLOR: blue
+  APP_MODE: prod
 ```
 
 ```bash
@@ -184,14 +184,14 @@ To apply config maps to a pod, they must be injected into a pod definition file.
 apiVersion: v1
 kind: Pod
 metadata:
-	name: simple-webapp
+  name: simple-webapp
 spec:
-	containers:
-	- name: simple-webapp
-	  image: simple-webapp
-	  envFrom:
-	  - configMapRef:
-		    name: app-config
+  containers:
+  - name: simple-webapp
+    image: simple-webapp
+    envFrom:
+    - configMapRef:
+        name: app-config
 ```
 
 In the above pod definition with the previous config map definition, the pod's environment should have variable `APP_COLOR` equal to `blue` and variable `APP_MODE` equal to `prod`.
