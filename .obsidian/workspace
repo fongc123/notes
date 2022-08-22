@@ -150,15 +150,15 @@
   },
   "active": "5c1f926842b519e3",
   "lastOpenFiles": [
-    "Docker.md",
     "Kubernetes/Cluster Design & Installation.md",
+    "Kubernetes/Add-ons.md",
+    "Docker.md",
     "Kubernetes/Storage.md",
     "Kubernetes/Security.md",
     "Kubernetes/Application Management.md",
     "Programming with C++/Bitwise Operators.md",
     "Programming with C++/Random Numbers.md",
     "Kubernetes/Cluster Maintenance.md",
-    "Programming with C++/Pointer.md",
-    "Kubernetes/Logging & Monitoring.md"
+    "Programming with C++/Pointer.md"
   ]
 }
