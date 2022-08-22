@@ -158,3 +158,5 @@ kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Doc
 ```
 
 Other networking and network policy add-ons are found [here](https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy) in the Kubernetes documentation.
+
+Another possible issue that could happen is that the `coredns` pods are not running or not ready. The firewall needs to be properly checked to allow the ports that Kubernetes uses through the firewall. Alternatively, 
