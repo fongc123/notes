@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Security.md",
-            "mode": "source",
+            "file": "Kubernetes/Cluster Design & Installation.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Security.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Security.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Security.md"
+                "file": "Kubernetes/Cluster Design & Installation.md"
               }
             }
           },
@@ -150,11 +150,11 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Security.md",
     "Kubernetes/Cluster Design & Installation.md",
     "Kubernetes/Add-ons.md",
     "Docker.md",
     "Kubernetes/Storage.md",
-    "Kubernetes/Security.md",
     "Kubernetes/Application Management.md",
     "Programming with C++/Bitwise Operators.md",
     "Programming with C++/Random Numbers.md",
