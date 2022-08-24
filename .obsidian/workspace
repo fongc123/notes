@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Storage.md",
-            "mode": "source",
+            "file": "Kubernetes/Cluster Design & Installation.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Storage.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Storage.md",
+                "file": "Kubernetes/Cluster Design & Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Storage.md"
+                "file": "Kubernetes/Cluster Design & Installation.md"
               }
             }
           },
@@ -150,8 +150,8 @@
   },
   "active": "5c1f926842b519e3",
   "lastOpenFiles": [
-    "Kubernetes/Security.md",
     "Kubernetes/Storage.md",
+    "Kubernetes/Security.md",
     "Kubernetes/Add-ons.md",
     "Kubernetes/Cluster Design & Installation.md",
     "Docker.md",
