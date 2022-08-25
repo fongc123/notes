@@ -223,3 +223,4 @@ df.label.isna()
 ```
 
 ### Modification
+There exists several methods to modify the data frame to suit specific needs.
