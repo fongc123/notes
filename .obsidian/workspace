@@ -9,8 +9,20 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Scheduler.md",
-            "mode": "source",
+            "file": "Kubernetes/Security.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "5c1f926842b519e3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Kubernetes/Application Management.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,8 +52,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "limit",
-                "matchingCase": true,
+                "query": "",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -57,8 +69,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Kubernetes/Application Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Kubernetes/Application Management.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Scheduler.md"
+                "file": "Kubernetes/Application Management.md"
               }
             }
           },
@@ -137,17 +148,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f0c36bbc2c3e7f91",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
-    "Kubernetes/Namespace.md",
-    "Python Libraries/Pandas.md",
-    "Kubernetes/Security.md",
-    "Kubernetes/Services.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Storage.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Presentations/midas-analytics-aws-costs.md",
-    "Kubernetes/Scheduler.md"
+    "Kubernetes/Storage.md",
+    "Kubernetes/Security.md",
+    "Kubernetes/Add-ons.md",
+    "Docker.md",
+    "Kubernetes/Application Management.md",
+    "Programming with C++/Bitwise Operators.md",
+    "Programming with C++/Random Numbers.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Programming with C++/Pointer.md"
   ]
 }
