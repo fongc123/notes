@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Python Libraries/Pandas.md",
+            "file": "Kubernetes/Scheduler.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "certificate",
+                "query": "limit",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python Libraries/Pandas.md",
+                "file": "Kubernetes/Scheduler.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python Libraries/Pandas.md",
+                "file": "Kubernetes/Scheduler.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python Libraries/Pandas.md"
+                "file": "Kubernetes/Scheduler.md"
               }
             }
           },
@@ -138,6 +139,8 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Namespace.md",
+    "Python Libraries/Pandas.md",
     "Kubernetes/Security.md",
     "Kubernetes/Services.md",
     "Kubernetes/Deployment.md",
@@ -145,8 +148,6 @@
     "Kubernetes/Storage.md",
     "Kubernetes/Cluster Design & Installation.md",
     "Presentations/midas-analytics-aws-costs.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Pod.md",
-    "Kubernetes/Imperative & Declarative.md"
+    "Kubernetes/Scheduler.md"
   ]
 }
