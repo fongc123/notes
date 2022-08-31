@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Kube API Server.md",
+            "file": "Kubernetes/Security.md",
             "mode": "preview",
             "source": false
           }
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "TLS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Kube API Server.md",
+                "file": "Kubernetes/Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Kube API Server.md",
+                "file": "Kubernetes/Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Kube API Server.md"
+                "file": "Kubernetes/Security.md"
               }
             }
           },
@@ -150,6 +151,8 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Kube API Server.md",
     "Kubernetes/ETCD Cluster.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Security.md",
@@ -157,8 +160,6 @@
     "Kubernetes/Cluster Design & Installation.md",
     "Kubernetes/Storage.md",
     "Kubernetes/Add-ons.md",
-    "Docker.md",
-    "Programming with C++/Bitwise Operators.md",
-    "Programming with C++/Random Numbers.md"
+    "Docker.md"
   ]
 }
