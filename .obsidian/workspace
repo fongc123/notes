@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "TLS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,8 +69,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -149,7 +148,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f0c36bbc2c3e7f91",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
     "Kubernetes/Cluster Maintenance.md",
     "Kubernetes/Kube API Server.md",
