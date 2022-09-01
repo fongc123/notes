@@ -19,8 +19,12 @@
         "id": "dd38a2f7a1bb395a",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Kubernetes/Cluster Design & Installation.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -146,15 +150,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Kubernetes/Cluster Design & Installation.md",
+    "Python Libraries/Selenium.md",
     "Image Processing/Untitled.md",
+    "conflict-files-obsidian-git.md",
     "Kubernetes/Scheduler.md",
     "Kubernetes/Namespace.md",
     "Python Libraries/Pandas.md",
     "Kubernetes/Security.md",
     "Kubernetes/Services.md",
-    "Kubernetes/Deployment.md",
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Storage.md"
+    "Kubernetes/Deployment.md"
   ]
 }
