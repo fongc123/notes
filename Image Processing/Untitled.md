@@ -1,2 +1,2 @@
 # Image Processing
-These notes use the MATLAB programming language for image processing.
+These notes pertain to the Image Processing course (COMP4421). The MATLAB programming language is used here.
