@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Scheduler.md",
+            "file": "Image Processing/Untitled.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "limit",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Image Processing/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Scheduler.md",
+                "file": "Image Processing/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Scheduler.md"
+                "file": "Image Processing/Untitled.md"
               }
             }
           },
@@ -139,6 +138,7 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Scheduler.md",
     "Kubernetes/Namespace.md",
     "Python Libraries/Pandas.md",
     "Kubernetes/Security.md",
@@ -147,7 +147,6 @@
     "Kubernetes/Application Management.md",
     "Kubernetes/Storage.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Presentations/midas-analytics-aws-costs.md",
-    "Kubernetes/Scheduler.md"
+    "Presentations/midas-analytics-aws-costs.md"
   ]
 }
