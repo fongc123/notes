@@ -1,4 +1,5 @@
-# Image Processing
+# Introduction
+
 Image processing pertains to the manipulation, such as geometric transformation, enhancement, restoration, image segmentation, feature extraction and object recognition, of images which consist of **multiple finite elements** (i.e., a <span style = "color:lightblue">pixel</span>).
 
 ## Image Basics
