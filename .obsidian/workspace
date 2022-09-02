@@ -4,25 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "f0c36bbc2c3e7f91",
+        "id": "8c367641f126438f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Mining/Introduction.md",
-            "mode": "preview",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "5c1f926842b519e3",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Kubernetes/Application Management.md",
-            "mode": "preview",
+            "file": "Image Processing/Introduction.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Introduction.md",
+                "file": "Image Processing/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Introduction.md",
+                "file": "Image Processing/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Mining/Introduction.md"
+                "file": "Image Processing/Introduction.md"
               }
             }
           },
@@ -148,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f0c36bbc2c3e7f91",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
+    "src/image-processing-system.png",
+    "image-processing-system.png.md",
     "Kubernetes/Application Management.md",
-    "conflict-files-obsidian-git.md",
-    "Data Mining/Introduction.md",
-    "Data Visualization/Introduction.md",
     "Image Processing/Introduction.md",
+    "Data Visualization/Introduction.md",
+    "Data Mining/Introduction.md",
+    "conflict-files-obsidian-git.md",
     "Kubernetes/Security.md",
     "Kubernetes/Cluster Maintenance.md",
-    "Kubernetes/Kube API Server.md",
-    "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Cluster Architecture.md"
+    "Kubernetes/Kube API Server.md"
   ]
 }

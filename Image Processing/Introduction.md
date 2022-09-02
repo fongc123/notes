@@ -14,5 +14,5 @@ In low-level digital image processing, both the input and output of the process 
 
 In a high-level digital image processing, the <span style = "color:lightblue">semantics</span> of the image is further analyzed. The input is an image, but the output is different (e.g., the number of cats detected in the image). Some examples include segmentation (asserting object boundaries), object recognition, and scene understanding.
 
-
 ![An image processing system.|550](image-processing-system.png)
+
