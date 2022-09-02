@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Mining/Introduction.md",
+            "file": "Image Processing/Introduction.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Introduction.md",
+                "file": "Image Processing/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Introduction.md",
+                "file": "Image Processing/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Mining/Introduction.md"
+                "file": "Image Processing/Introduction.md"
               }
             }
           },
@@ -139,9 +139,9 @@
   },
   "active": "630564c6354fb198",
   "lastOpenFiles": [
+    "Data Mining/Introduction.md",
     "Image Processing/Introduction.md",
     "Data Visualization/Introduction.md",
-    "Data Mining/Introduction.md",
     "src/data-mining-system.png",
     "src/Pasted image 20220815151811.png",
     "Kubernetes/Cluster Architecture.md",
