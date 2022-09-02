@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Introduction.md",
+            "file": "Data Mining/Introduction.md",
             "mode": "preview",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Introduction.md",
+                "file": "Data Mining/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Introduction.md",
+                "file": "Data Mining/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Introduction.md"
+                "file": "Data Mining/Introduction.md"
               }
             }
           },
@@ -150,15 +150,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
+    "Kubernetes/Application Management.md",
+    "conflict-files-obsidian-git.md",
+    "Data Mining/Introduction.md",
+    "Data Visualization/Introduction.md",
+    "Image Processing/Introduction.md",
     "Kubernetes/Security.md",
     "Kubernetes/Cluster Maintenance.md",
     "Kubernetes/Kube API Server.md",
     "Kubernetes/ETCD Cluster.md",
-    "Kubernetes/Cluster Architecture.md",
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Cluster Design & Installation.md",
-    "Kubernetes/Storage.md",
-    "Kubernetes/Add-ons.md",
-    "Docker.md"
+    "Kubernetes/Cluster Architecture.md"
   ]
 }
