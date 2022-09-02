@@ -1,3 +1,3 @@
 # Introduction
 
-Data visualization is the computer-generated and interactive representation of data.—
+Data visualization is the computer-generated and interactive representation of data.
