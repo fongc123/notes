@@ -10,7 +10,19 @@
           "type": "markdown",
           "state": {
             "file": "Image Processing/Introduction.md",
-            "mode": "source",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "5c1f926842b519e3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Kubernetes/Application Management.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -41,7 +53,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -138,15 +150,15 @@
   },
   "active": "f0c36bbc2c3e7f91",
   "lastOpenFiles": [
-    "Kubernetes/Cluster Architecture.md",
-    "Image Processing/Introduction.md",
-    "Kubernetes/Cluster Design & Installation.md",
-    "Python Libraries/Selenium.md",
-    "conflict-files-obsidian-git.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Namespace.md",
-    "Python Libraries/Pandas.md",
     "Kubernetes/Security.md",
-    "Kubernetes/Services.md"
+    "Kubernetes/Cluster Maintenance.md",
+    "Kubernetes/Kube API Server.md",
+    "Kubernetes/ETCD Cluster.md",
+    "Kubernetes/Cluster Architecture.md",
+    "Kubernetes/Application Management.md",
+    "Kubernetes/Cluster Design & Installation.md",
+    "Kubernetes/Storage.md",
+    "Kubernetes/Add-ons.md",
+    "Docker.md"
   ]
 }
