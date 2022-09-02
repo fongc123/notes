@@ -16,7 +16,7 @@ The **major sources of abundant data** are mainly **social** (e.g., news and soc
 
 ![[data-mining-system.png|500]]
 
-Additionally, there are several data repositories.
+Additionally, there are several **data repositories**.
 - relational data: a set of data where each entry contains the same attributes
 - transctional data: a special type of relational data where each entry is a <span style = "color:lightblue">transaction</span> and involves a set of items
 - graph data: data that consists of <span style = "color:lightblue">nodes</span> and <span style = "color:lightblue">edges</span> to capture relationships between objects (e.g., social networking or fraud data)
