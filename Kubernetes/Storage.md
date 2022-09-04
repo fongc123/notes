@@ -193,4 +193,72 @@ Kubernetes will bind a claim to a volume that best fits the claim's requirements
 > [!INFO]
 > A specific persistent volume can be bound by using selectors (e.g., `selector.matchLabels` and `labels`).
 
-If there are no better alternative persistent volume options, a smaller claim may be bound to a larg
+If there are no better alternative persistent volume options, a smaller claim may be bound to a larger volume. Other claims will not be bound to the unused storage in the persistent volume. When there are no unclaimed persistent volumes, a persistent volume claim will be in a pending state.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: myclaim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
+```
+
+The persistent volume claim can be created an retrieved with the `create` and `get` commands respectively. If the persistent volume in [[#Volume Creation]] was created previously, the claim configured above will be bound to it regardless of request and capacity differences as there are no other volume options.
+
+A persistent volume claim can be deleted with the `delete` command. The `persistentVolumeReclaimPolicy` in the persistent volume configuration file will determine the life cycle of the volume when its claim is deleted.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: myvolume
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  awsElasticBlockStore:
+    volumeID: <volume-id>
+    fsType: ext4
+```
+
+By default, the reclaim policy is set to `Retain`.
+- `Retain`: volume will not be available by any other claim
+- `Delete`: volume will be deleted, freeing up storage space
+- `Recycle`: volume will be recycled and available for use by other claims
+
+Only the `Retain` option will keep any existing data in the volume untouched.
+
+Once a persistent volume claim is created, it can be used in a pod by specifying the `persistentVolumeClaim` field in the pod definition file.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: nginx
+    volumeMounts:
+    - mountPath: "/var/www/html"
+      name: myapp
+  volumes:
+  - name: myapp
+    persistentVolumeClaim:
+      claimName: myclaim
+```
+
+The above code block will bind the `/var/www/html` inside the container to the persistent volume claim named `myclaim`.
+
+> [!INFO]
+> The `volumeMounts` field is still required, as Kubernetes needs to know the directory inside the container that should be mounted. The `name` field specifies the volume that corresponds to the persistent volume claim.
+
+
+
