@@ -186,3 +186,11 @@ Alternatively, a third-party storage provider can be used.
 
 #### Claim Declaration
 
+A persistent volume claim (PVC) is an object that serves as the connection between pods (i.e., user-controlled objects) and persistent volumes (i.e., admin-controlled objects). There is a **one-to-one** binding between a persistent volume claim and a persistent volume.
+
+Kubernetes will bind a claim to a volume that best fits the claim's requirements such as **capacity**, **access modes**, **volume modes**, **storage class**, and **selectors**.
+
+> [!INFO]
+> A specific persistent volume can be bound by using selectors (e.g., `selector.matchLabels` and `labels`).
+
+If there are no better alternative persistent volume options, a smaller claim may be bound to a larg
