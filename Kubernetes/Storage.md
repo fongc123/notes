@@ -142,4 +142,46 @@ In the above code block, the pod mounts to an AWS Elastic Block Store (EBS).
 
 ### Kubernetes Persistent Volumes
 
-In Kubernetes, a <span style = "color:lightblue">persistent volume</span> is a centralized storage object in the cluster that has been provisioned by an administrator (or dynamically using <span style = "color:lightblue">storage classes</span>). Unlike standard volumes, persistent volumes are created outside a pod, Unliked standard volumes, a large storage space is allocated to a persistent volume, where pods can use partitions of the persistent volume through <span style = "color:lightblue">persistent volume claims</span>. 
+In Kubernetes, a <span style = "color:lightblue">persistent volume (PV)</span> is a centralized storage object in the cluster that has been provisioned by an administrator (or dynamically using <span style = "color:lightblue">storage classes</span>). Unliked standard volumes, a large storage space is first allocated to a persistent volume, where pods can then use partitions of the persistent volume through <span style = "color:lightblue">persistent volume claims (PVC)</span>. With this, storage is managed centrally across all pods.
+
+#### Volume Creation
+
+A sample configuration file for a persistent volume with one gigabyte of storage is shown below.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: myvolume
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /tmp/data
+```
+
+> [!INFO]
+> Supported access modes in the `spec.accessModes` include `ReadOnlyMany`, `ReadWriteOnce`, and `ReadWriteMany`, which **determines how a volume should be mounted on the host**.
+
+The persistent volume can be created with the `create` command, and information about existing persistent volumes can be retrieved with the `get` command.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: myvolume
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  awsElasticBlockStore:
+    volumeID: <volume-id>
+    fsType: ext4
+```
+
+Alternatively, a third-party storage provider can be used.
+
+#### Claim Designation
