@@ -184,4 +184,5 @@ spec:
 
 Alternatively, a third-party storage provider can be used.
 
-#### Claim Designation
+#### Claim Declaration
+
