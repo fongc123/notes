@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8c367641f126438f",
+        "id": "b869dfb47f241b1b",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Data Mining/Introduction.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Data Mining/Introduction.md"
-              }
+              "state": {}
             }
           },
           {
@@ -136,17 +128,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "8c367641f126438f",
+  "active": "b869dfb47f241b1b",
   "lastOpenFiles": [
+    "Presentations/midas-analytics-aws-costs.pdf",
+    "Presentations/midas-analytics-aws-costs.md",
+    "Data Mining/Introduction.md",
     "Data Visualization/Introduction.md",
     "Image Processing/Introduction.md",
     "Programming with C++/Getting Started.md",
     "src/image-processing-system.png",
     "image-processing-system.png.md",
     "Kubernetes/Application Management.md",
-    "Data Mining/Introduction.md",
-    "conflict-files-obsidian-git.md",
-    "Kubernetes/Security.md",
-    "Kubernetes/Cluster Maintenance.md"
+    "conflict-files-obsidian-git.md"
   ]
 }
