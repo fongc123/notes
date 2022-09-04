@@ -4,7 +4,6 @@ Similar to Docker, container orchestration tools, such as Kubernetes, have sever
 ## Docker
 Docker stores its files in the `/var/lib/docker` path. There are subdirectories that store containers, images, volumes, etc.
 
-
 ### Layered Architecture
 Docker uses a <span style = "color:lightblue">layered architecture</span> to build its images, where each line in a Dockerfile corresponds to a new layer. Thus, images with the same layers could be built more quickly and efficiently, as Docker will use the pre-built layers from cache.
 
@@ -39,7 +38,7 @@ When an image is run and a container is created with the `run` command, Docker c
 > [!INFO]
 > If a file belonging to the read-only layers is modified, it will be copied to the container layer. Future modifications will be performed on the copy of the file instead of the original file itself.
 
-### Persistent Volumes
+### Docker Persistent Volumes
 To retain any files stored *inside* the container, a directory inside the container can be <span style = "color:lightblue">mounted</span> (i.e., mapped). In <span style = "color:lightblue">volume mounting</span>, the container directory is mounted to a volume which is a directory under `/var/lib/docker/volumes`. In <span style = "color:lightblue">bind mounting</span>, the container directory is mounted to another directory on the host system.
 
 ```bash
@@ -77,5 +76,70 @@ A <span style = "color:lightblue">storage driver</span> is a Docker component th
 
 On the other hand, a <span style = "color:lightblue">volume driver plugin</span> handles volumes. The `--volume-driver` option can specify the volume driver to use when a container is run.
 
-Kubernetes interacts with the <span style = "color:lightblue">container storage interface (CSI)</span> for storage (container runtime interface (CRI) for container runtime and container networking interface (CNI) for networking) functionality, as there are multiple software options that can be integrated with Kubernetes.
+## Kubernetes
+Kubernetes interacts with the <span style = "color:lightblue">container storage interface (CSI)</span> for storage (container runtime interface or CRI for container runtime and container networking interface or CNI for networking) functionality, as there are multiple software options that can be integrated with Kubernetes. Like in Docker, volumes are **transient** in nature (i.e., they are deleted when the container exits).
 
+### Pod-created Volumes
+
+A sample configuration file for a pod that saves a random number to a file is shown below.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: random-number
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    command: [ "/bin/sh", "-c" ]
+    args: [ "shuf -i 0-100 -n 1 >> /opt/number.out;" ]
+    volumeMounts:
+    - mountPath: /opt
+      name: data-volume
+  volumes:
+  - name: data-volume
+    hostPath:
+      path: /data
+      type: Directory
+```
+
+The following actions are performed.
+- a random number is saved to the file `number.out` in the `/opt` directory **in the container**
+- the `/opt` container directory is linked to the `data-volume` volume
+- the `data-volume` volume is mounted to the `/data` directory on the host
+
+> [!INFO]
+> The volume and volume mount is created as part of the pod definition.
+
+In a multi-node cluster, mounting a volume to a directory on the host machine is not recommended, as each node will have its own `/data` directory. There are other storage solutions to create a <u>centralized</u> file storage system.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: random-number
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    command: [ "/bin/sh", "-c" ]
+    args: [ "shuf -i 0-100 -n 1 >> /opt/number.out;" ]
+    volumeMounts:
+    - mountPath: /opt
+      name: data-volume
+  volumes:
+  - name: data-volume
+    awsElasticBlockStore:
+      volumeID: <volume-id>
+      fsType: ext4
+```
+
+In the above code block, the pod mounts to an AWS Elastic Block Store (EBS).
+
+> [!INFO]
+> The field `fsType` corresponds to the file system type.
+
+### Kubernetes Persistent Volumes
+
+In Kubernetes, a <span style = "color:lightblue">persistent volume</span> is a centralized storage object in the cluster that has been provisioned by an administrator (or dynamically using <span style = "color:lightblue">storage classes</span>). Unlike standard volumes, persistent volumes are created outside a pod, Unliked standard volumes, a large storage space is allocated to a persistent volume, where pods can use partitions of the persistent volume through <span style = "color:lightblue">persistent volume claims</span>. 
