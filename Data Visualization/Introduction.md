@@ -6,4 +6,4 @@ Data visualization is the computer-supported and interactive representation of d
 
 ![[Pasted image 20220906165047.png|500]]
 
-All datasets have the same arithmetic mean, standard deviation, and $r$ coefficient.
+All datasets have the same arithmetic mean, standard deviation, $r$ coefficient, and linear regression.
