@@ -4,25 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "b869dfb47f241b1b",
+        "id": "630564c6354fb198",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Storage.md",
+            "file": "Image Processing/Image Acquisition & Representation.md",
             "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "81075bb403bd9ed4",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Kubernetes/Pod.md",
-            "mode": "preview",
             "source": false
           }
         }
@@ -53,7 +41,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Storage.md",
+                "file": "Image Processing/Image Acquisition & Representation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Storage.md",
+                "file": "Image Processing/Image Acquisition & Representation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Storage.md"
+                "file": "Image Processing/Image Acquisition & Representation.md"
               }
             }
           },
@@ -148,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b869dfb47f241b1b",
+  "active": "630564c6354fb198",
   "lastOpenFiles": [
-    "Kubernetes/Pod.md",
-    "Kubernetes/Storage.md",
-    "Kubernetes/Application Management.md",
-    "Kubernetes/Cluster Maintenance.md",
-    "Kubernetes/Security.md",
+    "Image Processing/Introduction.md",
+    "Image Processing/Image Acquisition & Representation.md",
+    "Data Mining/Introduction.md",
+    "Data Visualization/Introduction.md",
+    "src/data-mining-system.png",
+    "src/Pasted image 20220815151811.png",
+    "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Cluster Design & Installation.md",
-    "Kubernetes/Daemon Set.md",
-    "Kubernetes/Logging & Monitoring.md",
-    "Presentations/midas-analytics-aws-costs.pdf",
-    "Presentations/midas-analytics-aws-costs.md"
+    "Python Libraries/Selenium.md",
+    "conflict-files-obsidian-git.md"
   ]
 }
