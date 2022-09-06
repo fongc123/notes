@@ -4,7 +4,7 @@
 A <span style = "color:lightblue">human visual system</span> consists of the eyes which are responsible for creating sensory signals and the central nervous system which is responsible for processing the sensory signals.
 
 ### The Eye
-The human eye consists of several structures for the eye to perform its functions.
+To perform its functions, the human eye consists of several important structures.
 - <span style = "color:lightblue">cornea and sclera</span>: protects the eye with tough and transparent tissue
 - <span style = "color:lightblue">choroid</span>: provide nutrients through blood vessels and control the size of the pupil
 - <span style = "color:lightblue">retina</span>: contains light receptors
@@ -14,8 +14,10 @@ There are two types of <span style = "color:lightblue">light receptors</span>: c
 
 By varying the **shape of the lens**, the <span style = "color:lightblue">focus length</span> is adjusted, and, accordingly, focusing at different distances is achieved. The light receptors convert the focused light into electrical energy which is decoded by the brain.
 
-### Brightness Discrimination & Optical Illusions
+### Inconsistencies
+The human eye is susceptible to **brightness discrimination** and **optical illusions**. As such, the perceived brightness by the human eye is not a simple function of intensity. For example, as shown below, the <span style = "color:lightblue">Mach band effect</span> describes the phenomenon where the perceived brightness at the edges are darker or lighter than their actual intensity.
 
+![[image-processing-mach-band.png | center | 450]]
 
 ## Acquisition
 
