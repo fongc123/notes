@@ -37,8 +37,8 @@ $$
 f(x,y)=i(x,y)r(x,y)
 $$
 - $f$ represents the energy received by the imaging system
-- $i$ represents the illumination of the energy source and ranges from 0 to $\infty$
-- $r$ represents the reflectance (**or transmittance**) of the object and ranges from 0 to 1
+- $i$ represents the illumination of the energy source and ranges from $0$ to $\infty$
+- $r$ represents the reflectance (**or transmittance**) of the object and ranges from $0$ to $1$
 
 <span style = "color:lightblue">Reflectance</span> is the property of an object to *reflect* light. Light that is reflected by an object is received by an imaging sensor. On the other hand, <span style = "color:lightblue">transmittance</span> is the propery of an object to *absorb* light. Light can still be transmitted <u>through</u> an object to an image sensor.
 
@@ -49,20 +49,31 @@ $$
 
 The images below show the typical illumination and reflectance values respectively.
 
-![[image-processing-illumination-val.png]]
+![[image-processing-illumination-val.png|650x300]]
 
-
+![[image-processing-reflectance-val.png|650x300]]
 
 ### Digitization
-<span style = "color:lightblue">Sampling</span> is the conversion of a pixel's coordinate position into a discrete value, while <span style = "color:lightblue">quantization</span> is the conversion of a pixel's light amplitude into a discrete value. Since computers can only process discrete values, a digital image is an **approximation** of a real, continuous scene.
+
+<span style = "color:lightblue">Sampling</span> and <span style = "color:lightblue">quantization</span> convert a pixel's coordinate position and light amplitude to a discrete value respectively.
+
+Since computers can only process discrete values, a digital image is only an **approximation** of a real, continuous scene. Each digital image consists of a finite number of pixel elements, where each element has a particular **location and value**.
 
 ## Representation
 
-An image is represented by a grid of pixels with size $M \times N$. 
+In the spatial domain, an image is represented by a grid of pixels with size $M \times N$, where each pixel $f(x,y)$ corresponds to a finite brightness.
+
+<span style = "color:lightblue">Amplitude digitization</span> (i.e., quantization of brightness) requires the number of intensity levels $L$. Due to digital storage and hardware considerations, the number of intensity levels is $2^{k}$ (power of two), where $k$ is an arbitrary number, and the intensity levels range from $0$ to $2^{k} - 1$. Typically, there are 256 levels, where $k$ is equal to $8$. Thus, an $M \times N$ image with 256 intensity levels needs $M \times N \times k$ bits of storage (much less when considering compression).
 
 Reducing the intensity levels will cause <span style = "color:lightblue">false contouring</span>, causing loss of detail in the image (e.g., grey pixels are directly mapped to black).
 
+![[image-processing-false-contouring.png|600x350]]
 
-Multi-coordinate images are also possible (e.g., medical images).
+> [!INFO]
+> The image with intensity level $L$ equal to $2$ has the lowest **intensity resolution**.
 
-The <span style = "color:lightblue">pixel count</span> is commonly the resolution of an image. However, additional pixels can be artificially added through <span style = "color:lightblue">interpolation</span> and will not improve the resolution of the image.
+There are also multi-value image formats, such as <span style = "color:lightblue">color image</span> or <span style = "color:lightblue">RGBA image</span>, where each pixel corresponds to additional values to represent the color of each pixel. Multi-coordinate images are also possible (e.g., medical images).
+
+The <span style = "color:lightblue">pixel count</span> is commonly the resolution of an image. However, additional pixels can be artificially added through <span style = "color:lightblue">interpolation</span> and will not improve the resolution of the image. Pixels have *no physical size* and is applicable to any image of any scale.
+
+The <span style = "color:lightblue">spatial resolution</span> is the smallest discernible detail, while the <span style = "color:lightblue">intensity resolution</span> is the smallest discernible change in intensity level in the image. Typically, spatial resolution is evaluated by <span style = "color:lightblue">dots per inch (dpi)</span>.
