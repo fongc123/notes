@@ -21,6 +21,12 @@ The human eye is susceptible to **brightness discrimination** and **optical illu
 
 ## Acquisition
 
+Light originating from an **energy source** is reflected by the **imaging object** and is then received by the **imaging sensor**.
+$$
+source \space \rightarrow \space object \space \rightarrow \space sensor
+$$
+
+
 The image formation model is represented below.
 $$
 f(x,y)=i(x,y)r(x,y)
@@ -29,7 +35,7 @@ $$
 - $i$ represents the illumination
 - $r$ represents the reflectance (**or transmittance**)
 
-Reflectance is the property of an object to reflect light. Light that is reflected by an object is received by an imaging sensor.
+<span style = "color:lightblue">Reflectance</span> is the property of an object to *reflect* light. Light that is reflected by an object is received by an imaging sensor. On the other hand, <span style = "color:lightblue">transmittance</span> is the propery of an object to *absorb* light. Light can still be transmitted <u>through</u> an object to an image sensor.
 
 ### Digitization
 <span style = "color:lightblue">Sampling</span> is the conversion of a pixel's coordinate position into a discrete value, while <span style = "color:lightblue">quantization</span> is the conversion of a pixel's light amplitude into a discrete value. Since computers can only process discrete values, a digital image is an **approximation** of a real, continuous scene.
