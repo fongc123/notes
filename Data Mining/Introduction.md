@@ -26,8 +26,11 @@ Additionally, there are several **data repositories**.
 - text & multimedia data: databases that contain text and multimedia data (e.g., images and videos) respectively
 
 ## Functionalities
-The <span style = "color:lightblue">training set</span> is the dataset that was used to create and the model. A <span style = "color:lightblue">classification</span> problem categorizes records into categorical attributes. On the other hand, a <span style = "color:lightblue">regression</span> problem predicts numerical attributes. For example, a model that predicts the age given facial features is related to regression.
+The <span style = "color:lightblue">training set</span> is the dataset that was used to create and the model.
+
 $$
 train \rightarrow \space model \rightarrow \space predict 
 $$
-A <span style = "color:lightblue">clustering</span> problem puts common objects into <span style = "color:lightblue">clusters</span> based on a <span style = "color:lightblue">similarity measure</span>– -
+A <span style = "color:lightblue">classification</span> problem categorizes records into categorical attributes. On the other hand, a <span style = "color:lightblue">regression</span> problem predicts numerical attributes. For example, a model that predicts the age given facial features is related to regression.
+
+A <span style = "color:lightblue">clustering</span> problem puts common objects into <span style = "color:lightblue">clusters</span> based on a <span style = "color:lightblue">similarity measure</span>. Objects in the same cluster are more similar, while objects in separate clusters are more dissimilar. An image segmentation problem is a clustering problem, as the pixels that belong to the same objects are determined. Outliers can also be found using clustering methods.
