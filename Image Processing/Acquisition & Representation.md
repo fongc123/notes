@@ -21,21 +21,33 @@ The human eye is susceptible to **brightness discrimination** and **optical illu
 
 ## Acquisition
 
-Light originating from an **energy source** is reflected by the **imaging object** and is then received by the **imaging sensor**.
+Light originating from an **energy source** is reflected by the **imaging object** and is then received by the **imaging sensor**. Some energy sources include sun, radar, infrared, and X-Ray and ultraviolet.
 $$
 source \space \rightarrow \space object \space \rightarrow \space sensor
 $$
+#### Sensor
+A <span style = "color:lightblue">sensor</span> consists of a sensing material (i.e., <span style = "color:lightblue">photodiode</span>) and outputs a current when light intensity is detected. The sensor's voltage output is proportional to the ligh intensity.
 
+A <span style = "color:lightblue">charged-coupled device (CCD)</span> is an integrated circuit containing an array of capacitors, where the response of each sensor is proportional to the integral of the light energy projected onto the surface of the sensor. CCD technology is built upon the <span style = "color:lightblue">metal-oxide-semiconductor (MOS)</span> structure.
 
-The image formation model is represented below.
+### Image Formation
+
+The image formation model is shown below.
 $$
 f(x,y)=i(x,y)r(x,y)
 $$
 - $f$ represents the energy received by the imaging system
-- $i$ represents the illumination
-- $r$ represents the reflectance (**or transmittance**)
+- $i$ represents the illumination of the energy source and ranges from 0 to $\infty$
+- $r$ represents the reflectance (**or transmittance**) of the object and ranges from 0 to 1
 
 <span style = "color:lightblue">Reflectance</span> is the property of an object to *reflect* light. Light that is reflected by an object is received by an imaging sensor. On the other hand, <span style = "color:lightblue">transmittance</span> is the propery of an object to *absorb* light. Light can still be transmitted <u>through</u> an object to an image sensor.
+
+> [!INFO]
+> An object appears to be a specific color because only the color's wavelengths are reflected.
+> 
+> For example, green objects reflect wavelengths between 500 to 570 nanometers.
+
+
 
 ### Digitization
 <span style = "color:lightblue">Sampling</span> is the conversion of a pixel's coordinate position into a discrete value, while <span style = "color:lightblue">quantization</span> is the conversion of a pixel's light amplitude into a discrete value. Since computers can only process discrete values, a digital image is an **approximation** of a real, continuous scene.
