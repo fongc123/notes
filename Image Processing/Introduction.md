@@ -12,7 +12,7 @@ Some images include natural image, satelite image, MRI image, microscopy image, 
 
 In low-level digital image processing, both the input and output of the process are images. For example, the output of an image compression process is still an image despite the size reduction. Some examples include acquisition, formation, enhancement, restoration, color, and compression.
 
-In a high-level digital image processing, the <span style = "color:lightblue">semantics</span> of the image is further analyzed. The input is an image, but the output is different (e.g., the number of cats detected in the image). Some examples include segmentation (asserting object boundaries), object recognition, and scene understanding.
+In high-level digital image processing, the <span style = "color:lightblue">semantics</span> of the image is further analyzed. The input is an image, but the output is different (e.g., the number of cats detected in the image). Some examples include segmentation (asserting object boundaries), object recognition, and scene understanding.
 
 ![An image processing system.|550](image-processing-system.png)
 
