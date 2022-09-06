@@ -47,6 +47,10 @@ $$
 > 
 > For example, green objects reflect wavelengths between 500 to 570 nanometers.
 
+The images below show the typical illumination and reflectance values respectively.
+
+![[image-processing-illumination-val.png]]
+
 
 
 ### Digitization
