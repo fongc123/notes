@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "version",
+                "query": "outlier",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -136,7 +137,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "630564c6354fb198",
+  "active": "7c1c819113d00dde",
   "lastOpenFiles": [
     "Data Mining/Introduction.md",
     "Data Mining/Data Preprocessing.md",

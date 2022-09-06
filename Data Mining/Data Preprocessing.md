@@ -17,3 +17,24 @@ An object is characterized by a set of <span style = "color:lightblue">attribute
 
 A mapping between an attribute and an attribute value creates a key-value pair.
 
+## Statistical Descriptions
+Statistical descriptions give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., boxplots, histogram, scatter plots) of the descriptions.
+
+> [!INFO]
+> The standard arithmetic mean is susceptible to outliers. The **trimmed mean** will ignore the smallest and largest data points when calculating the mean to try to solve this issue.
+
+> [!INFO]
+> The **midrange** is the average of the smallest and largest values in the data.
+
+A review on dispersion statistics is shown below.
+- range: difference between smallest and largest value
+- *k*th percentile: value $x_i$ with the property that $k$ percent of the data is smaller than $x_i$
+- quartiles: $25^{th}$ percentile ($Q_1$), $50^{th}$ percentile, $75^{th}$ percentile ($Q_3$)
+- interquartile range (IQR): $IQR=Q_3 - Q_1$
+- five-number summary: minimum, $Q_1$, median, $Q_3$, and maximum
+- variance: measure of dispersion 
+- standard deviation: another measure of dispersion
+
+> [!INFO]
+> Outliers are usually values greater or lower than $1.5 \times IQR$.
+
