@@ -36,5 +36,5 @@ A review on dispersion statistics is shown below.
 - standard deviation: another measure of dispersion
 
 > [!INFO]
-> Outliers are usually values greater or lower than $1.5 \times IQR$.
+> Outliers are usually defined as values greater than or lower than $1.5 \times IQR$.
 

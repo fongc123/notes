@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Mining/Data Preprocessing.md",
+            "file": "Data Visualization/Introduction.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "outlier",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Data Visualization/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Data Visualization/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md"
+                "file": "Data Visualization/Introduction.md"
               }
             }
           },
@@ -137,10 +136,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7c1c819113d00dde",
+  "active": "630564c6354fb198",
   "lastOpenFiles": [
-    "Data Mining/Introduction.md",
     "Data Mining/Data Preprocessing.md",
+    "Data Mining/Introduction.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Introduction.md",
     "Kubernetes/Cluster Maintenance.md",
