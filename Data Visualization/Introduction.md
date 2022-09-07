@@ -14,5 +14,11 @@ The type of visualization is also important, as incorrect chart choices will cre
 
 A violin plot will show deeper distribution of data points in addition to the standard statistical descriptions, such as the interquartile range and the median.
 
-Commonly used chart types include **distribution**, **correlation**, **ranking**, **part of a whole**, **evolution**, **map**, and **flow**.
+Some commonly used chart types are described below.
+- <span style = "color:lightblue">deviation</span>: emphasize variations from a fixed reference point (e.g., trade sur)
+- <span style = "color:lightblue">correlation</span>: show the relationship between two or more variables
+
+Some commonly used chart types include **deviation**, **distribution**, **correlation**, **ranking**, **part of a whole**, **evolution**, **map**, and **flow**.
+
+![[data-vis-ft-vocab.png]]
 
