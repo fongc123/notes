@@ -22,7 +22,9 @@ Visualization must also be efficient and effective. For example, a bar chart for
 ## User-centric Visualization
 A <span style = "color:lightblue">user-centric visualization</span> that involves HCI is suitable when there is a need to **augment human capabilities** rather than replace people with computational decision-making methods.
 
+![[data-vis-user.png|650]]
 
+The creation of a data visualization platform begins with the user's needs.
 
 ## Common Charts
 
