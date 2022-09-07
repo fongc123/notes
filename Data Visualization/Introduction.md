@@ -19,6 +19,11 @@ A violin plot will show deeper distribution of data points in addition to the st
 
 Visualization must also be efficient and effective. For example, a bar chart for a dataset with one million data points would be too cluttered to display anything useful.
 
+## User-centric Visualization
+A <span style = "color:lightblue">user-centric visualization</span> that involves HCI is suitable when there is a need to **augment human capabilities** rather than replace people with computational decision-making methods.
+
+
+
 ## Common Charts
 
 Some commonly used chart types are described below.
@@ -42,6 +47,7 @@ Some commonly used chart types are described below.
 
 ## Data Types
 The <span style = "color:lightblue">data type</span> is useful in determining the chart type that best fits the dataset.
+
 |   Type   |                     Description                     |           Example           |
 |:--------:|:---------------------------------------------------:|:---------------------------:|
 | Nominal  |                  Categorized only                   |           Gender            |
@@ -55,3 +61,4 @@ The <span style = "color:lightblue">data type</span> is useful in determining th
 > Unlike the Celsius or Fahrenheit temperature scale, the Kelvin scale is a ratio data type, as a temperature reading of 0 corresponds to an absolute absence of thermal energy.
 
 ![[data-vis-xai.png|650]]
+
