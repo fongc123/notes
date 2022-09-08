@@ -2,24 +2,39 @@
 
 Specific parts of the image can be enhanced or diminished based on the use case (e.g., for clarity). Primarily, the focus of image transformations is on <u>grayscale images</u>.
 
-<span style = "color:lightblue">Intensity transformations (gray-level mapping)</span> changes the intensity level of an image based on an intensity transformation or mapping function.
+<span style = "color:lightblue">Intensity transformations (gray-level mapping)</span> changes the intensity level of an image based on an intensity transformation or mapping function. An equation is shown below, where $r$ is the input intensity, $s$ is the output intensity, and $T$ is the mapping function.
 
 $$
 s = T(r)
 $$
-It is usually implemented in a <span style = "color:lightblue">look-up table (LUT)</span> for maximum efficiency.
 
-## Threshold
-A threshold function, before or after a certain point the original intenxity level will be retained or lossed.
+It is usually implemented in a <span style = "color:lightblue">look-up table (LUT)</span> (a query table) for maximum efficiency.
 
-## Negative
+## Basic Transformations
+
+Some basic transformations are listed below.
+
+### Threshold
+A <span style = "color:lightblue">threshold</span> function, where the original intenxity level will be retained or lossed before or after a certain point.
+
+$$
+s=
+\begin{cases}
+	0 & r < T
+	\newline
+	L-1 & r > T
+\end{cases}
+$$
+
+
+### Negative
 The intensity levels are inverted (i.e., black becomes white).
 
-## Log Transformation
+### Log Transformation
 A *log* transformation maps a narrow range of low intensity values in the input to a wider range of output levels. The low intensity values are stretched, while the high intensity values are compressed.
 
 $$c \log(1 + r)$$
-## Power-law ($\gamma$) Transformations
+## Power-law Transformations
 $$s = cr^{\gamma}$$
 Similar to log transformations. For transformations with $\gamma < 1$, the transformation will stretch low intensity levels and compress high intensity values. It **preserves details with low intensity values**. At low $\gamma$ values, the image becomes increasingly light.
 
@@ -43,3 +58,5 @@ Applications:
 
 ## Histogram Equalization
 When performing <span style = "color:lightblue">histogram equalization</span>, the inverse is not considered. A single value can be mapped to multiple values and vice versa.
+
+However, it may increase the contrast of background noise, while decreasing useful signal or it can remove small details.
