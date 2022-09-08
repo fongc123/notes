@@ -16,7 +16,6 @@ Some basic transformations are listed below.
 
 ### Threshold
 A <span style = "color:lightblue">threshold</span> function, where the original intenxity level will be retained or lossed before or after a certain point.
-
 $$
 s=
 \begin{cases}
@@ -25,15 +24,20 @@ s=
 	L-1 & r > T
 \end{cases}
 $$
-
+The output is <span style = "color:lightblue">binary</span> and is used in <span style = "color:lightblue">pattern recognition</span> or <span style = "color:lightblue">object detection</span>.
 
 ### Negative
-The intensity levels are inverted (i.e., black becomes white).
+A <span style = "color:lightblue">negative</span> transformation inverts the intensity levels (i.e., black becomes white).
+
+$$s = L - 1 - r$$
+White or grey details embedded in black regions create more contrast after a negative transformation has been applied.
 
 ### Log Transformation
-A *log* transformation maps a narrow range of low intensity values in the input to a wider range of output levels. The low intensity values are stretched, while the high intensity values are compressed.
+An <span style = "color:lightblue">logarithmic</span> transformation maps a **narrow range of low intensity values** in the input to a wider range of output levels. <u>The low intensity values are stretched, while the high intensity values are compressed</u>.
 
-$$c \log(1 + r)$$
+$$s = c \log(1 + r)$$
+
+
 ## Power-law Transformations
 $$s = cr^{\gamma}$$
 Similar to log transformations. For transformations with $\gamma < 1$, the transformation will stretch low intensity levels and compress high intensity values. It **preserves details with low intensity values**. At low $\gamma$ values, the image becomes increasingly light.
