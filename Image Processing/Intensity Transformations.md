@@ -32,3 +32,14 @@ With the power-law transformation, the <span style = "color:lightblue">power law
 - Contrast stretching: specifically expand the range of intensity values
 - Intensity-level slicing: highlight a specific range of intensities
 
+## Bit-plane Transformation
+<span style = "color:lightblue">Bit-plane slicing</span> is the representation of each pixel in binary, where a binary image is constructed for each bit. For example, an image with 256 intensity levels is represented as an 8 bit-plane image.
+
+<span style = "color:lightblue">High-order bit-planes</span> contain the most visually-significant data, while <span style = "color:lightblue">lower-order bit-planes</span> contribute to the subtle intensity details.
+
+Applications:
+- image compression $\rightarrow$ with only bit-planes 8 and 7, both modified and original images are similar
+- digital watermarking $\rightarrow$ hide information digitally in low bit-planes
+
+## Histogram Equalization
+When performing <span style = "color:lightblue">histogram equalization</span>, the inverse is not considered. A single value can be mapped to multiple values and vice versa.
