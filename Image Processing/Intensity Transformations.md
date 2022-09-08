@@ -26,26 +26,42 @@ s=
 $$
 The output is <span style = "color:lightblue">binary</span> and is used in <span style = "color:lightblue">pattern recognition</span> or <span style = "color:lightblue">object detection</span>.
 
+![[image-processing-transform-threshold.png|400x200]]
+
 ### Negative
 A <span style = "color:lightblue">negative</span> transformation inverts the intensity levels (i.e., black becomes white).
 
 $$s = L - 1 - r$$
 White or grey details embedded in black regions create more contrast after a negative transformation has been applied.
 
+![[image-processing-transform-negative.png|400x200]]
+
 ### Log Transformation
 An <span style = "color:lightblue">logarithmic</span> transformation maps a **narrow range of low intensity values** in the input to a wider range of output levels. <u>The low intensity values are stretched, while the high intensity values are compressed</u>.
-
 $$s = c \log(1 + r)$$
+![[image-processing-transform-log.png|400x200]]
 
+The details in low intensity values are more expressed.
 
-## Power-law Transformations
+### Power-law Transformations
+
+<span style = "color:lightblue">Power-law transformations</span> are similar to logarithmic transformations; however, the effect of the transformation changes based on the $\gamma$ parameter.
+
 $$s = cr^{\gamma}$$
-Similar to log transformations. For transformations with $\gamma < 1$, the transformation will stretch low intensity levels and compress high intensity values. It **preserves details with low intensity values**. At low $\gamma$ values, the image becomes increasingly light.
+For transformations with $\gamma < 1$, the transformation will stretch low intensity levels and compress high intensity values. It **preserves details with low intensity values**. At low $\gamma$ values, the image becomes increasingly light (i.e., <span style = "color:lightblue">wash-out effect</span>).
+
+![[Pasted image 20220908135403.png|600x200]]
 
 For transformations with $\gamma > 1$, the transformation will stretch high intensity values and compress low intensity values. It **shows more details and greater contrast**.
 
-### $\gamma$ Correction
+![[Pasted image 20220908135509.png|600x200]]
+
+#### Gamma Correction
 With the power-law transformation, the <span style = "color:lightblue">power law effect</span> can be corrected using <span style = "color:lightblue">gamma correction</span> or <span style = "color:lightblue">gamma encoding</span>. Both low and high intensity values can be stretched or compressed based on the image.
+
+For example, an image that is **corrected** to a gamma value of $\frac{1}{\gamma_0}$ will look **normal** on a monitor that naturally displays images with a gamma value of $\gamma_0$.
+
+
 
 ## Piece-wise Linear Transformations
 - Contrast stretching: specifically expand the range of intensity values
