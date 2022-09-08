@@ -134,11 +134,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "b869dfb47f241b1b",
   "lastOpenFiles": [
+    "src/image-processing-histogram-process.png",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Introduction.md",
     "Data Visualization/Introduction.md",
@@ -146,8 +147,6 @@
     "Data Mining/Introduction.md",
     "src/image-processing-system.png",
     "src/data-vis-anscombe-quartet.png",
-    "src/image-processing-reflectance-val.png",
-    "src/image-processing-mach-band.png",
-    "src/image-processing-illumination-val.png"
+    "src/image-processing-reflectance-val.png"
   ]
 }
