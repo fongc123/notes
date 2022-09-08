@@ -2,7 +2,7 @@
 
 Specific parts of the image can be enhanced or diminished based on the use case (e.g., for clarity). Primarily, the focus of image transformations is on <u>grayscale images</u>.
 
-<span style = "color:lightblue">Intensity transformations (gray-level mapping)</span> changes the intensity level of an image based on an intensity transformation or mapping function. An equation is shown below, where $r$ is the input intensity, $s$ is the output intensity, and $T$ is the mapping function.
+<span style = "color:lightblue">Intensity transformations (gray-level mapping)</span> changes the intensity level of an image based on a mapping function. An equation is shown below, where $r$ is the input intensity, $s$ is the output intensity, and $T$ is the mapping function.
 
 $$
 s = T(r)
@@ -100,8 +100,8 @@ The histogram of a high-contrast image has a wide and uniform range of intensity
 
 ### Histogram Equalization
 
-<span style = "color:lightblue">Histogram equalization</span> is a contrast adjustment using the image's original histogram, where the modified image will have an equally many pixels at each grey level.
-
+<span style = "color:lightblue">Histogram equalization</span> is a contrast adjustment using the image's original histogram, where the modified image will have an equal number of pixels at each grey level. The transformation function $s$ should satisfy the following criteria.
+- 
 
 When performing <span style = "color:lightblue">histogram equalization</span>, the inverse is not considered. A single value can be mapped to multiple values and vice versa.
 
