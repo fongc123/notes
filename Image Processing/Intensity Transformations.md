@@ -120,6 +120,7 @@ $$
 $$
 - $p_s(s)$: <span style = "color:lightblue">probability density function (PDF)</span> of output intensity value $s$
 - $p_r(r)$: PDF of input intensity value $r$
+- the differentiation attempts to maps low and high intensity values equally
 
 > [!INFO]
 > A random variable can be an arbitrary set of numbers.
