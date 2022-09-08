@@ -87,10 +87,20 @@ Some applications of bit-plane transformations are described below.
 - <span style = "color:lightblue">image compression</span>: other bit-planes that do not significantly contribute to the image can be removed
 - <span style = "color:lightblue">digital watermarking</span>: information can be digitally hidden in low bit-plane levels
 
-## Histogram Equalization
+## Histogram Processing
 
-A <span style = "color:lightblue">histogram</span> displays the **intensity distribution** of an image based on all pixel intensity values.
+A <span style = "color:lightblue">histogram</span> displays the **pixel intensity distribution** of all pixels in an image . Intensity values with values ranging from $0$ to $L-1$ must first be normalized.
 
+$$p(r_k)=\frac{h(r_k)}{MN}$$
+In the above equation, $p$ is the normalized intensity values, $h$ is the unnormalized intensity values, $M$ is the number of rows, and $N$ is the number of columns.
+
+![[image-processing-transform-histogram.png|600x300]]
+
+The histogram of a high-contrast image has a wide and uniform range of intensity values.
+
+### Histogram Equalization
+
+<span style = "color:lightblue">Histogram equalization</span> is a contrast adjustment using the image's original histogram, where the modified image will have an equally many pixels at each grey level.
 
 
 When performing <span style = "color:lightblue">histogram equalization</span>, the inverse is not considered. A single value can be mapped to multiple values and vice versa.
