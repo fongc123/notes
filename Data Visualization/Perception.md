@@ -13,3 +13,5 @@ The human visual system has a high bandwidth to the brain as it is responsible f
 
 ## Static Patterns
 In German, <span style = "color:lightblue">Gestalt</span> translates to **law**. It represents the design laws and logic 
+
+### Proximity
