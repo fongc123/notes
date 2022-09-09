@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "b869dfb47f241b1b",
+        "id": "1816eaf8423a943b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Image Processing/Intensity Transformations.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -41,7 +41,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b869dfb47f241b1b",
+  "active": "1816eaf8423a943b",
   "lastOpenFiles": [
-    "src/image-processing-histogram-process.png",
+    "src/Pasted image 20220908141330.png",
+    "src/image-processing-transform-bitplane.png",
+    "src/image-processing-transform-piece.png",
     "Image Processing/Intensity Transformations.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Introduction.md",
-    "Data Visualization/Introduction.md",
-    "Data Mining/Data Preprocessing.md",
-    "Data Mining/Introduction.md",
-    "src/image-processing-system.png",
-    "src/data-vis-anscombe-quartet.png",
-    "src/image-processing-reflectance-val.png"
+    "src/image-processing-transform-gamma-2.png",
+    "src/Pasted image 20220908135335.png",
+    "src/image-processing-transform-gamma-3.png",
+    "src/image-processing-transform-gamma-1.png",
+    "src/image-processing-transform-threshold.png",
+    "Image Processing/Introduction.md"
   ]
 }
