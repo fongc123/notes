@@ -131,3 +131,4 @@ Some encoding tips are listed below.
 - quantitative variables are shown with position or length
 - color or other attributes (e.g., shape and size) are preferred
 - symbols should not be overloaded
+
