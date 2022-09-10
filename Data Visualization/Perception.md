@@ -11,11 +11,16 @@ A graphical method is successful only if the decoding is effective. It should be
 ## Human Visual System
 The human visual system has a high bandwidth to the brain as it is responsible for 70% of all receptors in the brain, 40% of the cortex, and four billion neurons. It retrieves much more visual stimuli than the brain can process.
 
-## Static Patterns
+## Gestalt Psychology
 <span style = "color:lightblue">Gestalt psychology</span> is a school of psychology that "emphasizes that organisms perceive entire patterns or configurations and not merely individual components".
 
 > [!INFO]
 > In German, *Gestalt* is interpreted as "pattern" or "configuration".
+
+According to Gestalt psychology, the following statements are observed.
+- visual entities are *seen* (perceived) by the brain
+- external stimului is understood as **a whole** rather than the sum of its parts
+- visual entities are experienced on a regularly, orderly, symmetric and simple basis
 
 ### Proximity
 The relationship of objects is emphasized by the proximity and the spatial concentration of the objects.
@@ -70,5 +75,29 @@ Visual entities that are grouped by closure are part of the same whole. Gaps and
 The principle of figure-ground refers to the perception of multiple objects by alternating between the foreground and the background.
 
 ![[data-vis-gestalt-figure-ground.png]]
+
+## Additional Principles
+In addition to Gestalt psychology, there are additional principles that dictate the perception of visual entities.
+- smaller components are typically seen as figures against a larger background
+- **horizontal and vertical orientations** are preferred
+
+### Weber's Law of Just Noticeable Difference
+The <span style = "color:lightblue">just noticeable difference (JND)</span> is the threshold that a stimulus difference can be perceived. 
+
+$$\frac{\Delta I}{I}=k$$
+
+The <span style = "color:lightblue">Weber's law of JND</span> states that the **proportion between the stimulus difference threshold $\Delta I$ and the initial stimulus intensity $I$** is equal to a constant $k$. A larger initial stimulus intensity necessitates a larger threshold in order to be perceived.
+
+### Past Experience & Context
+In general, the perception of a visual entity is influenced by previous experiences and expectations. An initial piece of information (i.e., the **anchor**) or an exposure to one stimulus (i.e., the **primer**) is used to make a judgement or decision.
+
+
+## Illusions
+An <span style = "color:lightblue">illusion</span> is a perception that arguably differs from reality and is categorized into 
+- physical: 
+
+![[data-vis-illusion.png|600x275]]
+
+
 
 <span style = "color:lightblue">
