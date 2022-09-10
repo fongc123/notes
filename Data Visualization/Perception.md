@@ -93,11 +93,41 @@ In general, the perception of a visual entity is influenced by previous experien
 
 
 ## Illusions
-An <span style = "color:lightblue">illusion</span> is a perception that arguably differs from reality and is categorized into 
-- physical: 
+An <span style = "color:lightblue">illusion</span> is a perception that arguably differs from reality and is categorized into three main classes.
+- physical: caused by physical environment (e.g., water distortion)
+- physiological: caused by visual pathway (e.g., an afterimage)
+- cognitive: assumptions that cause *unconscious interferences*
+
+Additionally, each class is categorized into four types.
+- distortion: contortions in size, length, position, or curvature
+- ambiguity: a switch between alternative interpretations
+- paradox: visual entities that are physically impossible
+- fiction: a figure is perceived even though it is not in the stimulus
+
 
 ![[data-vis-illusion.png|600x275]]
 
+In data visualization, the **surrounding context influences the judgement of shapes and objects**.
 
+![[data-vis-illusion-types.png]]
 
-<span style = "color:lightblue">
+Some examples of illusions are shown above, where the perceptions of object magnitudes are significantly altered based on the surrounding arrangement.
+- <span style = "color:lightblue">Muller-Lyer</span>: the horizontal line segments have identical length
+- <span style = "color:lightblue">Ebbinghaus</span>: the circles in the center have identical radius
+- <span style = "color:lightblue">Ponzo</span>: the horizontal line segments have identical length
+
+## Pre-attention
+Information should be organized into patterns to quickly emphasize similarities and differences.
+
+![[data-vis-pre-attention-types.png]]
+
+By changing object properties, individual objects can be emphasized (i.e., popout effect); however, too many features, especially those that are increasingly similar, will not pop out and will be hard to identify.
+
+> [!INFO]
+> Objects of interest should be rapidly identified (~ 10 msec per item).
+
+Some encoding tips are listed below.
+- encodings that are easily decodable are preferred
+- quantitative variables are shown with position or length
+- color or other attributes (e.g., shape and size) are preferred
+- symbols should not be overloaded
