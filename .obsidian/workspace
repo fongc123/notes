@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Docker.md",
+            "file": "Kubernetes/Pod.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker.md",
+                "file": "Kubernetes/Pod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker.md",
+                "file": "Kubernetes/Pod.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker.md"
+                "file": "Kubernetes/Pod.md"
               }
             }
           },
@@ -138,6 +138,7 @@
   },
   "active": "c4803c9b7535dfcb",
   "lastOpenFiles": [
+    "Docker.md",
     "Data Visualization/Perception.md",
     "Image Processing/Intensity Transformations.md",
     "img/data-vis-gestalt-common-fate.png",
@@ -146,7 +147,6 @@
     "Image Processing/Introduction.md",
     "Data Visualization/Introduction.md",
     "Data Mining/Data Preprocessing.md",
-    "Data Mining/Introduction.md",
-    "img/image-processing-system.png"
+    "Data Mining/Introduction.md"
   ]
 }
