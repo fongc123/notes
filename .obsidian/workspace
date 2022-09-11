@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "c4803c9b7535dfcb",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
     "Image Processing/Intensity Transformations.md",
     "Data Visualization/Perception.md",
-    "src/data-vis-gestalt-common-fate.png",
-    "src/image-processing-histogram-process.png",
+    "img/data-vis-gestalt-common-fate.png",
+    "img/image-processing-histogram-process.png",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Introduction.md",
     "Data Visualization/Introduction.md",
     "Data Mining/Data Preprocessing.md",
     "Data Mining/Introduction.md",
-    "src/image-processing-system.png"
+    "img/image-processing-system.png"
   ]
 }

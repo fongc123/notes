@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "attachmentFolderPath": "src",
+  "attachmentFolderPath": "img",
   "pdfExportSettings": {
     "pageSize": "A4",
     "landscape": false,
