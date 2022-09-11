@@ -4,7 +4,7 @@
 - <span style = "color:lightblue">classification</span>: the curve separates data points into **classes**
 - <span style = "color:lightblue">regression</span>: the curve estimates the trend of data points as close as possible
 
-The simplest curve-fitting is linear, where there are only two variables and a line is drawn based on their data. Additional <span style = "color:lightblue">features</span> (i.e., additional variables) can be added or a nonlinear model can 
+The simplest curve-fitting is linear, where there are only two variables and a line is drawn based on their data. For a more advanced model, additional <span style = "color:lightblue">features</span> (i.e., variables) can be included or the possibility of nonlinearity can be considered.
 
 While each <span style = "color:lightblue">machine learning model</span> is trained on different data, the task is still the same and can be applied to other datasets (i.e., *all data is the same*).
 
