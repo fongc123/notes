@@ -48,3 +48,6 @@ $$
 
 When there are multiple features, this method finds the feature(s) that has the most effect on the loss function and adjusts accordingly.
 
+### Code Template
+Several lines of code related to creating a linear regression model are shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems as well.
+
