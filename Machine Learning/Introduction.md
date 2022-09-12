@@ -44,5 +44,7 @@ $$
 > The method of finding derivatives and equating them to zero *only* works for a linear regression problem (*see [[#Gradient Descent]]*).
 
 ### Gradient Descent
-<span style = "color:lightblue">Gradient descent</span> is an iterative first-order optimization **algorithm** that is used to find the local minimum or maximum or a function. When there are multiple features, this method finds the feature that has the most effect on the loss function and adjusts accordingly.
+<span style = "color:lightblue">Gradient descent</span> is an **iterative** first-order optimization **algorithm** that is used to find the local minimum or maximum or a function. Each iteration of the descent is referred to as an <span style = "color:lightblue">epoch</span>.
+
+When there are multiple features, this method finds the feature(s) that has the most effect on the loss function and adjusts accordingly.
 
