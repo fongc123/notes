@@ -171,7 +171,5 @@ $$v'=\frac{v-\bar{A}}{\sigma_A}$$
 <span style = "color:lightblue">Data reduction</span> obtains a reduced representation of the dataset, while allowing similar, if not the same, analytical results to be produced.
 
 > [!INFO]
-> To capture a fraction $r$ of a dataset with $d$ dimensions, the range of each output that must be covered is $r^{\frac{1}{d}$.
-
-
+> To capture a fraction $r$ of a dataset with $d$ dimensions, the range of each output that must be covered is $r^{\frac{1}{d}}$. As dimensionality increases, data becomes increasingly sparse, and the number of required points increases **exponentially** to maintain the same sampling density.
 
