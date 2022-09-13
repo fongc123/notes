@@ -77,6 +77,10 @@ $$
 	P(X|Y)=P(X) \space or \space P(Y|X)=P(Y)
 \end{align}
 $$
+Equivalently, the probability of $X$ and $Y$ is shown below.
+
+$$P(X,Y)=P(X)P(Y)$$
+
 Knowledge about $X$ contains <u>no information</u> about $Y$.
 
 
@@ -93,11 +97,23 @@ $$
 = \sum_{i=1}^{c}\sum_{j=1}^r\frac{(o_{ij}-e_{ij})^2}{e_{ij}}
 $$
 
-After the $\chi^2$ value is calculated, a look-up value is obtained from a table at a desired <span style = "color:lightblue">significance level</span> (e.g., 0.05) with a <span style = "color:lightblue">degree of freedom</span>.
+ There are $N$ occurrences of the event where attribute $A$ has value $a_i$ and attribute $B$ has value $b_j$. Assuming that the attributes are independent, the expression for the <span style = "color:lightblue">expected value</span> $e_{ij}$ is shown below.
+
+$$
+\begin{align}
+	e_{ij} & = N\times P(A=a_i \wedge B=b_j)\newline
+	& = \frac{1}{N}[count(A=a_i)\times count(B=b_j)]
+\end{align}	
+$$
+
+After the $\chi^2$ value is calculated, a look-up value is obtained from a table at a desired <span style = "color:lightblue">significance level</span> (e.g., 0.05) with a calculated <span style = "color:lightblue">degree of freedom</span>.
 
 $$df=(r-1)\times(c-1)$$
 
 The <span style = "color:lightblue">null hypothesis</span> is rejected if the calculated value exceeds the look-up value.
+
+#### Example
+A two-by-two contigency table is shown for attribute $A$ and $B$. The distinct values for $A$ are male ($a_1$) and female ($a_2$), while that of for $B$ are fiction ($b_1$) and non-fiction ($b2$). The 
 
 ## Transformation
 kk
