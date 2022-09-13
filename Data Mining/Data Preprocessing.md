@@ -115,12 +115,36 @@ The <span style = "color:lightblue">null hypothesis</span> is rejected if the ca
 #### Example
 We would like to determine if attribute $A$ and $B$ are independent of each other or not. The distinct values for $A$ are male ($a_1$) and female ($a_2$), while that of for $B$ are fiction ($b_1$) and non-fiction ($b2$). A two-by-two contingency table containing the <span style = "color:lightblue">observed frequencies</span> of each attribute is shown below.
 
-|             | male | female |  <span style = "color:lightblue">total</span> |
-|:-----------:|:----:|:------:|:---------:|
-|   fiction   | 250  |  200   |    450    |
-| non-fiction |  50  |  1000  |   1050    |
-|  **total**  |  <span style = "color:lightblue">300</span>  |  1200  |   1500    |
+|                                              |                    male                    |                   female                    | <span style = "color:lightblue">total</span> |
+|:--------------------------------------------:|:------------------------------------------:|:-------------------------------------------:|:--------------------------------------------:|
+|                   fiction                    |                    250                     |                     200                     |                      <span style = "color:lightblue">450</span>                      |
+|                 non-fiction                  |                     50                     |                    1000                     |                      <span style = "color:lightblue">1050</span>                     |
+| <span style = "color:lightblue">total</span> | <span style = "color:lightblue">300</span> | <span style = "color:lightblue">1200</span> |                      <span style = "color:lightblue">1500</span>                     |
 
+The expected frequencies are found.
+
+|             | male | female | total |
+|:-----------:|:----:|:------:|:-----:|
+|   fiction   |  90  |  360   |  450  |
+| non-fiction | 210  |  840   | 1050  |
+|    total    | 300  |  1200  | 1500      |
+
+A sample calculation for the cell that represents males and fiction is shown below.
+
+$$
+\begin{align}
+	e_{11} & =N\times P(A=a_1 \wedge B=b_1) \newline
+	& = N\times P(A=a_1)\times P(B=b_1) \newline
+	& = 1500 \times \frac{300}{1500} \times\frac{450}{1500} \newline
+	e_{11} & = 90
+\end{align}
+$$
+We calculate the probability that the events fiction and male occur out of all occurrences. If they are independent, the probability of an event occuring should not affect the probability of the other event occurring.
+
+The $\chi^2$ value of this contingency table is $507.93$ with a degree of freedom of $1$. Referring to a table, the corresponding value at a significance level of $0.001$ with degree of freedom of $1$ is $10.83$.
+
+$$\chi^2=507.93>10.83$$
+Thus, since the calculated value exceeds the table value, the null hypothesis is rejected, and the attributes $A$ and $B$ are considered to be **not independent**.
 
 
 ## Transformation
