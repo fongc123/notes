@@ -154,33 +154,24 @@ Thus, since the calculated value exceeds the table value, the null hypothesis is
 - <span style = "color:lightblue">discretization</span>: divide continuous attribute into intervals to reduce data size (e.g., histogram, cluster analysis, decision-tree analysis)
 
 ### Normalization
-In min-max normalization, original values within a mapped to a new range.
+In min-max normalization, original values a mapped to a new range within a new minimum ($nmin$) and maximum ($nmax$). The expression of a new value $v'$ is shown below.
 
+$$v'=\frac{v-min_A}{max_A-min_A}(nmax_A-nmin_A)+nmin_A$$
 
-## Reduction
-kk
+For example, an income range of \$12,000 to \$98,000 can be normalized to a range of 0 to 1. Typically, ranges of $[0.0, 1.0]$ or $[-1.0, 1.0]$ are used. However, this normalization method requires estimation of the absolute minimum and maximum values of the original dataset which may not be known. 
 
+In ***z*-score normalization**, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
 
-Normalization maps a value of $v$ of $A$ to a new range.
-
-$$
-v'=\frac{v-min_A}{max_A-min_A}(new\_max_A-new\_min_A)+new\_min_A
-$$
-
-
-For example, an income range of \$12,000 to \$98,000 can be normalized to a range of 0 to 1. Typically, ranges of $[0.0, 1.0]$ or $[-1.0, 1.0]$ are used.
-
-The above normalization method requires prior knowledge of the absolute minimum and maximum values of the original dataset which may not be known. Alternatively, ***z*-score normalization** can be done instead.
-
+$$v'=\frac{v-\bar{A}}{\sigma_A}$$
 > [!QUESTION]
 > How many standard deviations from the average does the data point lie?
 
-The new value $v'$ is calculated as follows, where $\bar{A}$ corresponds to the average of the dataset.
+## Reduction
 
-$$v'=\frac{v-\bar{A}}{\sigma_A}$$
-Discretization divides the range of a continuous attribute (e.g., age) into <u>intervals</u>. It also reduces the data size. Some methods include the following.
-- histogram
-- cluster analysis (*when original data is clearly separated into clusters*)
-- decision-tree analysis
+<span style = "color:lightblue">Data reduction</span> obtains a reduced representation of the dataset, while allowing similar, if not the same, analytical results to be produced.
 
-Data reduction obtains a reduced representation of the dataset, while allowing (*at least as close as possible*) the same analytical results to be pro
+> [!INFO]
+> To capture a fraction $r$ of a dataset with $d$ dimensions, the range of each output that must be covered is $r^{\frac{1}{d}$.
+
+
+
