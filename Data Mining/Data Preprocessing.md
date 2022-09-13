@@ -36,6 +36,9 @@ A review of several dispersion statistics is shown below.
 - variance: measure of dispersion 
 - standard deviation: another measure of dispersion
 
+> [!INFO]
+> Outliers are usually defined as values greater than or lower than $1.5 \times IQR$.
+
 ## Cleaning
 <span style = "color:lightblue">Data cleaning</span> attempts to fill in missing values, smooth out noise, and correct inconsistencies in the data.
 
@@ -60,15 +63,41 @@ The expression for the correlation coefficient between attributes $A$ and $B$ is
 
 $$r_{A,B}=\frac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\sigma_B}=\frac{\sum_{i=1}^{N}a_ib_i-N\bar{A}\bar{B}}{N\sigma_A\sigma_B}$$
 
-### Chi-squared Test
-The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
-
+## Probability & Independence
 Given events $A$ and $B$, the probability expression of a disjunction (either $A$ or $B$) is shown below.
 
 $$P(A\vee B)=P(A)+P(B)-P(A\wedge B)$$
+Conditional probability is the probability of an event $A$ *given* that another event $B$ has occurred.
+
+$$P(B|A)=\frac{P(A\cap B)}{P(A)}$$
+It is the probability that both events occur given that the first event has already occurred. Two random variables are **independent** if the following statements are true.
+
+$$
+\begin{align}
+	P(X|Y)=P(X) \space or \space P(Y|X)=P(Y)
+\end{align}
+$$
+Knowledge about $X$ contains <u>no information</u> about $Y$.
 
 
+> [!INFO]
+> Independence implies no correlation, but no correlation does not always imply independence.
 
+### Chi-squared Test
+The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
+
+The expression for the $\chi^2$ test is shown below, where $r$ and $c$ represent the number of rows and columns respectively.
+
+$$
+\chi^2=\sum \frac{(observed-expected)^2}{expected}
+= \sum_{i=1}^{c}\sum_{j=1}^r\frac{(o_{ij}-e_{ij})^2}{e_{ij}}
+$$
+
+After the $\chi^2$ value is calculated, a look-up value is obtained from a table at a desired <span style = "color:lightblue">significance level</span> (e.g., 0.05) with a <span style = "color:lightblue">degree of freedom</span>.
+
+$$df=(r-1)\times(c-1)$$
+
+The <span style = "color:lightblue">null hypothesis</span> is rejected if the calculated value exceeds the look-up value.
 
 ## Transformation
 kk
@@ -76,14 +105,6 @@ kk
 ## Reduction
 kk
 
-> [!INFO]
-> Outliers are usually defined as values greater than or lower than $1.5 \times IQR$.
-
-$$
-\chi^2=\sum \frac{(observed-expected)^2}{expected}
-= \sum_{i=1}^{c}\sum_{j=1}^r\frac{(o_{ij}-e_{ij})^2}{e_{ij}}
-$$
-In the above equation for calculating the Chi-squared value $\chi^2$, $r$ and $c$ correspond to the number of rows and number of columns respectively.
 
 Normalization maps a value of $v$ of $A$ to a new range.
 
