@@ -148,7 +148,8 @@ Thus, since the calculated value exceeds the table value, the null hypothesis is
 
 
 ## Transformation
-<span style = "color:lightblue">Data transformation</span> modifies the data to improve the results gained from data mining (i.e., improve mining performance).
+<span style = "color:lightblue">Data transformation</span> modifies the data to improve the results gained from data mining (i.e., improve mining performance.
+- attribute or feature construction: create new attributes or features 
 
 ## Reduction
 kk
