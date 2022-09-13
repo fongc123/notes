@@ -63,9 +63,12 @@ $$r_{A,B}=\frac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\si
 ### Chi-squared Test
 The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
 
-Given events $A$ and $B$, the probability expression of a disjunction is shown below.
+Given events $A$ and $B$, the probability expression of a disjunction (either $A$ or $B$) is shown below.
 
-$$P(A\vee B)=P(A)+P(B)-P(A$$
+$$P(A\vee B)=P(A)+P(B)-P(A\wedge B)$$
+
+
+
 
 ## Transformation
 kk
