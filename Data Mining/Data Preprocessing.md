@@ -149,7 +149,13 @@ Thus, since the calculated value exceeds the table value, the null hypothesis is
 
 ## Transformation
 <span style = "color:lightblue">Data transformation</span> modifies the data to improve the results gained from data mining (i.e., improve mining performance.
-- attribute or feature construction: create new attributes or features 
+- <span style = "color:lightblue">attribute or feature construction</span>: create new attributes that capture important information more effectively than the original ones (e.g., Fourier transform)
+- <span style = "color:lightblue">normalization</span>: scale attribute values to smaller, specified range
+- <span style = "color:lightblue">discretization</span>: divide continuous attribute into intervals to reduce data size (e.g., histogram, cluster analysis, decision-tree analysis)
+
+### Normalization
+In min-max normalization, original values within a mapped to a new range.
+
 
 ## Reduction
 kk
