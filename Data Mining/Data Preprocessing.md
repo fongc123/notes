@@ -113,7 +113,15 @@ $$df=(r-1)\times(c-1)$$
 The <span style = "color:lightblue">null hypothesis</span> is rejected if the calculated value exceeds the look-up value.
 
 #### Example
-A two-by-two contigency table is shown for attribute $A$ and $B$. The distinct values for $A$ are male ($a_1$) and female ($a_2$), while that of for $B$ are fiction ($b_1$) and non-fiction ($b2$). The 
+We would like to determine if attribute $A$ and $B$ are independent of each other or not. The distinct values for $A$ are male ($a_1$) and female ($a_2$), while that of for $B$ are fiction ($b_1$) and non-fiction ($b2$). A two-by-two contingency table containing the <span style = "color:lightblue">observed frequencies</span> of each attribute is shown below.
+
+|             | male | female |  <span style = "color:lightblue">total</span> |
+|:-----------:|:----:|:------:|:---------:|
+|   fiction   | 250  |  200   |    450    |
+| non-fiction |  50  |  1000  |   1050    |
+|  **total**  |  <span style = "color:lightblue">300</span>  |  1200  |   1500    |
+
+
 
 ## Transformation
 kk
