@@ -148,7 +148,7 @@ Thus, since the calculated value exceeds the table value, the null hypothesis is
 
 
 ## Transformation
-kk
+<span style = "color:lightblue">Data transformation</span> modifies the data to improve data mining performance.
 
 ## Reduction
 kk
