@@ -4,9 +4,7 @@ Real world data is dirty, often containing **incomplete** (*missing fields or in
 
 <span style = "color:lightblue">Data preprocessing</span> is the preparation stage before the data is processed, where (1) dirty data is removed and (2) the size and complexity of the data is reduced. It involves **data cleaning**, **data integration**, **data transformation**, and **data reduction**.
 
-
-## Basics
-### Data Objects
+## Data Objects
 A <span style = "color:lightblue">dataset</span> is a collection of <span style = "color:lightblue">objects</span>, where each object corresponds to each *item* in the data. Alternative names for **object** include *record*, *tuple*, *point*, *case*, *sample*, etc.
 
 An object is characterized by a set of <span style = "color:lightblue">attributes</span> (e.g., `name`, `eye_color`, `temperature`). Alternative names for **attribute** include *variable*, *field*, *characteristic*, and *feature*.
@@ -20,7 +18,7 @@ Additionally, each attribute has a corresponding <span style = "color:lightblue"
 ```
 
 
-### Statistical Descriptions
+## Statistical Descriptions
 Statistical descriptions give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., boxplots, histogram, scatter plots) of the descriptions.
 
 > [!INFO]
@@ -43,10 +41,31 @@ A review of several dispersion statistics is shown below.
 
 **Missing values** can be solved by either ignoring them or replacing them with placeholder values (e.g., global constant, attribute mean, or the most probable value). They can also be replaced manually, but this may be infeasible.
 
-**Noise** can be solved by removing outliers, binning, regression, or clustering. 
+**Noise** can be solved by removing outliers, binning, regression, or clustering. <span style = "color:lightblue">Binning</span> sorts values into equally-sized bins, and each value is replaced by the bin average.
+
+Lastly, **inconsistencies** can be solved by referring to the metadata or consulting an external source of information to verify values. For example, a person's height should not be a negative value.
 
 ## Integration
-kk
+<span style = "color:lightblue">Data integration</span> combines data from multiple data sources into a coherent data store. Problems that should be considered during integration are listed below.
+- entity identification: multiple fields refer to the same entity
+- data value conflicts: for the same entity, values from different sources are conflicting
+- data redundancy: identical fields or values for an entity
+
+Statistical evaluations can be performed to determine if it is necessary to keep *all* the attributes.
+
+### Correlation Coefficient
+The <span style = "color:lightblue">correlation coefficient</span> $r$ can be used to determine if **numerical attributes** are correlated with each other.
+
+The expression for the correlation coefficient between attributes $A$ and $B$ is shown below, where $a_i$ and $b_i$ are the respective values, $\bar{A}$ and $\bar{B}$ are the respective means, and $\sigma_A$ and $\sigma_B$ are the respective standard deviations.
+
+$$r_{A,B}=\frac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\sigma_B}=\frac{\sum_{i=1}^{N}a_ib_i-N\bar{A}\bar{B}}{N\sigma_A\sigma_B}$$
+
+### Chi-squared Test
+The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
+
+Given events $A$ and $B$, the probability expression of a disjunction is shown below.
+
+$$P(A\vee B)=P(A)+P(B)-P(A$$
 
 ## Transformation
 kk
