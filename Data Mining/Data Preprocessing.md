@@ -38,3 +38,32 @@ A review on dispersion statistics is shown below.
 > [!INFO]
 > Outliers are usually defined as values greater than or lower than $1.5 \times IQR$.
 
+$$
+\chi^2=\sum \frac{(observed-expected)^2}{expected}
+= \sum_{i=1}^{c}\sum_{j=1}^r\frac{(o_{ij}-e_{ij})^2}{e_{ij}}
+$$
+In the above equation for calculating the Chi-squared value $\chi^2$, $r$ and $c$ correspond to the number of rows and number of columns respectively.
+
+Normalization maps a value of $v$ of $A$ to a new range.
+
+$$
+v'=\frac{v-min_A}{max_A-min_A}(new\_max_A-new\_min_A)+new\_min_A
+$$
+
+
+For example, an income range of \$12,000 to \$98,000 can be normalized to a range of 0 to 1. Typically, ranges of $[0.0, 1.0]$ or $[-1.0, 1.0]$ are used.
+
+The above normalization method requires prior knowledge of the absolute minimum and maximum values of the original dataset which may not be known. Alternatively, ***z*-score normalization** can be done instead.
+
+> [!QUESTION]
+> How many standard deviations from the average does the data point lie?
+
+The new value $v'$ is calculated as follows, where $\bar{A}$ corresponds to the average of the dataset.
+
+$$v'=\frac{v-\bar{A}}{\sigma_A}$$
+Discretization divides the range of a continuous attribute (e.g., age) into <u>intervals</u>. It also reduces the data size. Some methods include the following.
+- histogram
+- cluster analysis (*when original data is clearly separated into clusters*)
+- decision-tree analysis
+
+Data reduction obtains a reduced representation of the dataset, while allowing (*at least as close as possible*) the same analytical results to be pro
