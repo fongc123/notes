@@ -9,7 +9,7 @@ In the human vision system, cones and rods are responsible for receiving color i
 
 ## Color Space
 
-To communicate colors precisely, <span style = "color:lightblue">color theories</s and color spaces were created to capture color information.
+To communicate colors precisely, <span style = "color:lightblue">color theories</span> and <span style = "color:lightblue">color spaces</span> were created to capture color information.
 
 When color is displayed on a monitor, the RGB (additive) system is used. On the other hand, when color is printed with a printer, the CMYK (subtractive) system is used.
 
