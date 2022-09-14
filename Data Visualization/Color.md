@@ -27,18 +27,18 @@ In data visualization, color is used to **label, quantify, and highlight** graph
 
 ### Color Selection Rules
 
-**Rule One: In qualitative data, the maximum number of colors used is normally between 6 and 12, where there must be a wide range of hues.**
+**Qualitative: The maximum number of colors used is normally between 6 and 12, where there must be a wide range of hues.**
 
 Color palettes should be colorful, robust, and perceptually uniform. This [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) aids in color palette selection in visualization.
 
 > [!TIP]
 > Encoding certain attributes to certain colors based on their semantic meaning improves pre-attentive understanding (e.g., <span style = "color:lightgreen">correct</span>, <span style = "color:indianred">wrong</span>).
 
-**Rule Two: Sequential data should use a sequence that varies monotonically of at least one of the color channels**. Variation in saturation or lightness is also effective.
+**Sequential: Data should use a sequence that varies monotonically of at least one of the color channels**. Variation in saturation or lightness is also effective.
 
 ![[data-vis-selection-sequential.png|400x300]]
 
-**Rule Three: For data with sequential extremes, paired sequential color schemes based on two different hues are preferred.** The colors diverge toward dark colors of different hues from one common light color.
+**Diverging: For data with sequential extremes, paired sequential color schemes based on two different hues are preferred.** The colors diverge toward dark colors of different hues from one common light color.
 
 ![[data-vis-selection-diverging.png|300x25]]
 
