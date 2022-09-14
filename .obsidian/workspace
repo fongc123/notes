@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "81ede1d1ae8e2c6f",
+        "id": "c4803c9b7535dfcb",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -41,7 +41,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -137,17 +137,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "81ede1d1ae8e2c6f",
+  "active": "c4803c9b7535dfcb",
   "lastOpenFiles": [
     "Image Processing/Acquisition & Representation.md",
     "Data Visualization/Color.md",
-    "Data Visualization/Perception.md",
     "Data Mining/Data Preprocessing.md",
-    "conflict-files-obsidian-git.md",
-    "Programming with C++/C++ Basics.md",
-    "Image Processing/Intensity Transformations.md",
-    "Data Visualization/Introduction.md",
-    "src/Pasted image 20220908141330.png",
-    "src/image-processing-transform-bitplane.png"
+    "Machine Learning/Introduction.md",
+    "Data Mining/Introduction.md",
+    "Kubernetes/Application Management.md",
+    "Kubernetes/Pod.md",
+    "Docker.md",
+    "Data Visualization/Perception.md",
+    "Image Processing/Intensity Transformations.md"
   ]
 }
