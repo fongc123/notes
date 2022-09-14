@@ -5,9 +5,11 @@ Color exists to **highight**, **identify**, and **group** elements. All colors a
 > [!REVIEW]
 > A longer wavelength corresponds to lower energy, while a shorter wavelength corresponds to higher energy.
 
-In the human visual system, cones and rods are responsible for perceiving colors. Three cone types (S, M, L) correspond to blue, green, and red colors. Rods are more active in darker environments.
+In the human vision system, cones and rods are responsible for receiving color input. *See [[Acquisition & Representation#The Eye]]* for more details.
 
-Several color theories (color spaces) have been created to capture color information.
+## Color Space
+
+To communicate colors precisely, <span style = "color:lightblue">color theories</s and color spaces were created to capture color information.
 
 When color is displayed on a monitor, the RGB (additive) system is used. On the other hand, when color is printed with a printer, the CMYK (subtractive) system is used.
 
