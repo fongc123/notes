@@ -10,7 +10,7 @@ To perform its functions, the human eye consists of several important structures
 - <span style = "color:lightblue">retina</span>: contains light receptors
 - <span style = "color:lightblue">lens</span>: focuses light on to the retina
 
-There are two types of <span style = "color:lightblue">light receptors</span>: cones and rods. <span style = "color:lightblue">Cones</span> are responsible for photopic vision (i.e., higher light levels). They provide color and spatial details and are denser in the center of the retina. <span style = "color:lightblue">Rods</span> are responsible for scotopic vision (i.e., lower light levels). Rods are more abundant than cones by approximately twentyfold.
+There are two types of <span style = "color:lightblue">light receptors</span>: cones and rods. <span style = "color:lightblue">Cones</span> are responsible for photopic vision (i.e., higher light levels). They provide color and spatial details and are denser in the center of the retina. <span style = "color:lightblue">Rods</span> are responsible for scotopic vision (i.e., lower light levels). Rods are more abundant than cones by approximately twentyfold. *See [[Color#Color]] for more details.*
 
 By varying the **shape of the lens**, the <span style = "color:lightblue">focus length</span> is adjusted, and, accordingly, focusing at different distances is achieved. The light receptors convert the focused light into electrical energy which is decoded by the brain.
 

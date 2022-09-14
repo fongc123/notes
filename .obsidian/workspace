@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c4803c9b7535dfcb",
+        "id": "81ede1d1ae8e2c6f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Mining/Data Preprocessing.md",
+            "file": "Data Visualization/Color.md",
             "mode": "source",
             "source": false
           }
@@ -41,7 +41,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Data Visualization/Color.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Data Visualization/Color.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md"
+                "file": "Data Visualization/Color.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "c4803c9b7535dfcb",
+  "active": "81ede1d1ae8e2c6f",
   "lastOpenFiles": [
-    "Machine Learning/Introduction.md",
-    "Data Mining/Introduction.md",
-    "Kubernetes/Application Management.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Kubernetes/Pod.md",
-    "Docker.md",
     "Data Visualization/Perception.md",
+    "Data Visualization/Color.md",
+    "Image Processing/Acquisition & Representation.md",
+    "Data Mining/Data Preprocessing.md",
+    "conflict-files-obsidian-git.md",
+    "Programming with C++/C++ Basics.md",
     "Image Processing/Intensity Transformations.md",
-    "img/data-vis-gestalt-common-fate.png",
-    "img/image-processing-histogram-process.png"
+    "Data Visualization/Introduction.md",
+    "src/Pasted image 20220908141330.png",
+    "src/image-processing-transform-bitplane.png"
   ]
 }
