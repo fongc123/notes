@@ -23,23 +23,35 @@ When color is displayed on a monitor, the <span style = "color:lightblue">RGB (r
 
 ## Color in Visualization
 
-In data visualization, color is used to **label, quantify, and highlight** graphical elements. Some color selection tips are listed below.
-- Red and blue should not be together.
-- Blue is not sensitive to human eyes.
-- Red-green is a good color combination.
+In data visualization, color is used to **label, quantify, and highlight** graphical elements.
 
-**Rule One: The maximum number of colors used is normally between 6 and 12, where there is a wide range of hues.**
+### Color Selection Rules
+
+**Rule One: In qualitative data, the maximum number of colors used is normally between 6 and 12, where there must be a wide range of hues.**
+
+Color palettes should be colorful, robust, and perceptually uniform. This [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) aids in color palette selection in visualization.
 
 > [!TIP]
 > Encoding certain attributes to certain colors based on their semantic meaning improves pre-attentive understanding (e.g., <span style = "color:lightgreen">correct</span>, <span style = "color:indianred">wrong</span>).
 
-Color palettes should be colorful, robust, and perceptually uniform. This [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) aids in color palette selection in visualization.
+**Rule Two: Sequential data should use a sequence that varies monotonically of at least one of the color channels**. Variation in saturation or lightness is also effective.
 
-**Rule Two: Sequential data should use a sequence that varies monotonically of at least one of the color channels.** Saturation or lightness can also be used.
+![[data-vis-selection-sequential.png|400x300]]
 
-**Rule Three: For data that has sequential extremes, paired sequential color schemes based on two different hues is preferred.** The colors diverge toward dark colors of different hues from one common light color.
+**Rule Three: For data with sequential extremes, paired sequential color schemes based on two different hues are preferred.** The colors diverge toward dark colors of different hues from one common light color.
 
-Other color considerations include temperature, emotion and semantics, and color transparency ($\alpha$ value).
+![[data-vis-selection-diverging.png|300x25]]
+
+### Additional Considerations
+
+Specific color combinations and their viability are listed below.
+- Red and blue should be avoided.
+- Blue is not sensitive to human eyes.
+- Red-green is a good color combination.
+- Color appearance is affected by adjacent colors.
+- Contrast affects legibility (e.g., dark text on dark background).
+
+Other color considerations include temperature, emotion and semantics (e.g., <span style = "color:indianred">red</span> for danger, and color transparency ($\alpha$ value).
 
 > [!INFO]
 > Transparency can display the density and intensity of the data points.
@@ -47,10 +59,21 @@ Other color considerations include temperature, emotion and semantics, and color
 ## Harmony & Aesthetic
 
 > [!QUESTION]
-> What color combinations are visually pleasing to humans?
+> **Q:** What color combinations are visually pleasing to humans?
+> 
+> **A:**
+> 
+> ![[data-vis-selection-harmony.png|400]]
 
-<span style = "color:lightblue">Monochromatic</span>: useful for single subjects
-<span style = "color:lightblue">Analogous</span>: adjacent colors; peaceful and comfortable mood; seen in nature
-<span style = "color:lightblue">Complementary</span>: opposing colors on the color wheel
+### Color Blindness
 
-Viewers with color blindness should also be considered.
+Color blindness is present in $6-8\%$ of the population and is typically caused by genetic errors, causing a deficiency in one of the cones.
+- <span style = "color:lightblue">protanopia</span>: loss of red cone
+- <span style = "color:lightblue">deuteranopia</span>: loss of green cone
+- <span style = "color:lightblue">tritanopia</span>: loss of blue cone
+
+A visualization that cannot be comprehended by viewers with color blindness is not a good visualization.
+
+> [!TIP]
+> **Solution:** If elements are still distinguishable in grayscale, the visualization should be still be effective.
+

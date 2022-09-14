@@ -134,10 +134,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "c4803c9b7535dfcb",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
     "Image Processing/Acquisition & Representation.md",
     "Data Visualization/Color.md",
