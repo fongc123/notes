@@ -225,7 +225,7 @@ The proportion of variance increases logarithmically as the number of eigenvecto
 ![[data-mining-eigenvectors-variance.png|500x400]]
 
 > [!WARNING]
-> Some problems, such as classification, and datasets will cause problems when performing dimensionality reduction. The dimensions are needed in these problems. Additionally, PCA does not consider nonlinear cases (*only unidirectional*).
+> Some machine learning problems, such as classification, and datasets will cause problems when performing dimensionality reduction, as the dimensions are needed in these problems. Additionally, PCA does not consider nonlinear cases (*only unidirectional*).
 
 ### Attribute or Feature Subset Selection
 
