@@ -185,6 +185,9 @@ A review of calculating variation is shown below.
 - three-dimensional: covariance with $3$ attributes ($x$, $y$, $z$)
 - $n$-dimensional: covariance with $n$ attributes
 
+> [!INFO]
+> 
+
 The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ are found.
 
 $$Cv=\lambda v$$
