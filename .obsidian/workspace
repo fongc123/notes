@@ -9,18 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Perception.md",
-            "mode": "preview",
+            "file": "Data Mining/Data Preprocessing.md",
+            "mode": "source",
             "source": false
           }
-        }
-      },
-      {
-        "id": "2e76614042917e1a",
-        "type": "leaf",
-        "state": {
-          "type": "empty",
-          "state": {}
         }
       }
     ],
@@ -69,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5a2bb12b3a44b000",
@@ -85,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Perception.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Perception.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Perception.md"
+                "file": "Data Mining/Data Preprocessing.md"
               }
             }
           },
@@ -142,12 +135,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "c4803c9b7535dfcb",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Data Visualization/Perception.md",
+    "conflict-files-obsidian-git.md",
     "Data Visualization/Color.md",
     "Image Processing/Acquisition & Representation.md",
     "Data Mining/Data Preprocessing.md",

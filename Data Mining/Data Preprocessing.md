@@ -192,11 +192,13 @@ $$Cv=\lambda v$$
 > **Q:** What is a <span style = "color:lightblue">covariance matrix</span>?
 > **A:** ...
 
-In the context of PCA, the eigenvector(s) $v$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension. The principal components corresponding to the smallest eigenvalues are discarded to perform dimensionality reduction.
+In the context of PCA, the eigenvector(s) $v$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension.
+
+Principal components with the smallest eigenvalues are discarded to perform dimensionality reduction.
 
 #### Choosing PCs
 
-The expression of the <span style = "color:lightblue">proportion of variance</span> is shown below, where $k$ corresponds to the number of dimensions kept, and $d$ corresponds to the number of dimensions before PCA was performed.
+The expression of the <span style = "color:lightblue">proportion of variance</span> is shown below, where $k$ corresponds to the number of dimensions kept and $d$ corresponds to the number of dimensions before PCA was performed.
 
 $$proportion=\frac{\lambda_1+\lambda_2+\cdots+\lambda_k}{\lambda_1+\lambda_2+\cdots+\lambda_d}$$
 
