@@ -14,6 +14,14 @@
             "source": false
           }
         }
+      },
+      {
+        "id": "2e76614042917e1a",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -138,6 +146,8 @@
   },
   "active": "c4803c9b7535dfcb",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Data Visualization/Perception.md",
     "Data Visualization/Color.md",
     "Image Processing/Acquisition & Representation.md",
     "Data Mining/Data Preprocessing.md",
@@ -145,8 +155,6 @@
     "Data Mining/Introduction.md",
     "Kubernetes/Application Management.md",
     "Kubernetes/Pod.md",
-    "Docker.md",
-    "Data Visualization/Perception.md",
-    "Image Processing/Intensity Transformations.md"
+    "Docker.md"
   ]
 }
