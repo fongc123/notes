@@ -175,11 +175,30 @@ $$v'=\frac{v-\bar{A}}{\sigma_A}$$
 
 ### Principal Component Analysis (PCA)
 
-<span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction. The projection with the largest amount of variation in the data is chosen.
+<span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction. The dimension projection with the largest amount of variation in the data is chosen (i.e., find projection $w$ such that $var(w^tx)$ is maximized).
 
 A review of calculating variation is shown below.
 - one-dimensional: variance
 - two-dimensional: variance and <span style = "color:lightblue">covariance</span>
 - three-dimensional: covariance with $3$ attributes ($x$, $y$, $z$)
 - $n$-dimensional: covariance with $n$ attributes
+
+The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ are found.
+
+$$Cv=\lambda v$$
+> [!QUESTION]
+> **Q:** What is a <span style = "color:lightblue">covariance matrix</span>?
+> **A:** ...
+
+In the context of PCA, the eigenvector(s) $v$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension. The principal components corresponding to the smallest eigenvalues are discarded to perform dimensionality reduction.
+
+### Choosing PCs
+
+The expression of the <span style = "color:lightblue">proportion of variance</span> is shown below, where $k$ corresponds to the number of dimensions kept, and $d$ corresponds to the number of dimensions before PCA was performed.
+
+$$proportion=\frac{\lambda_1+\lambda_2+\cdots+\lambda_k}{\lambda_1+\lambda_2+\cdots+\lambda_d}$$
+
+The proportion of variance increases logarithmically as the number of eigenvectors increases. At a high number of eigenvectors, additional eigenvectors will not significantly increase the variance.
+
+![[Pasted image 20220915143416.png|500x400]]
 
