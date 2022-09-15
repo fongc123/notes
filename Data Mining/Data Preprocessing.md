@@ -186,7 +186,10 @@ A review of calculating variation is shown below.
 - $n$-dimensional: covariance with $n$ attributes
 
 > [!INFO]
-> 
+> <span style = "color:lightblue">Variance</span> describes the spread between a data set from its mean value.
+> $$S^2=\frac{\sum(x_i-\bar{x})^2}{n-1}$$
+> <span style = "color:lightblue">Covariance</span> describes how two random variables will change when compared with each other.
+> $$cov_{x,y}=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{N-1}$$
 
 The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ are found.
 
