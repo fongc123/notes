@@ -173,3 +173,13 @@ $$v'=\frac{v-\bar{A}}{\sigma_A}$$
 > [!INFO]
 > To capture a fraction $r$ of a dataset with $d$ dimensions, the range of each output that must be covered is $r^{\frac{1}{d}}$. As dimensionality increases, data becomes increasingly sparse, and the number of required points increases **exponentially** to maintain the same sampling density.
 
+### Principal Component Analysis (PCA)
+
+<span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction. The projection with the largest amount of variation in the data is chosen.
+
+A review of calculating variation is shown below.
+- one-dimensional: variance
+- two-dimensional: variance and <span style = "color:lightblue">covariance</span>
+- three-dimensional: covariance with $3$ attributes ($x$, $y$, $z$)
+- $n$-dimensional: covariance with $n$ attributes
+
