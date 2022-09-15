@@ -175,7 +175,9 @@ $$v'=\frac{v-\bar{A}}{\sigma_A}$$
 
 ### Principal Component Analysis (PCA)
 
-<span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction. The dimension projection with the largest amount of variation in the data is chosen (i.e., find projection $w$ such that $var(w^tx)$ is maximized).
+<span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction. The dimension projection with the **largest amount of variation in the data is chosen** (i.e., find projection $w$ such that $var(w^tx)$ is maximized).
+
+#### Variation
 
 A review of calculating variation is shown below.
 - one-dimensional: variance
@@ -192,7 +194,7 @@ $$Cv=\lambda v$$
 
 In the context of PCA, the eigenvector(s) $v$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension. The principal components corresponding to the smallest eigenvalues are discarded to perform dimensionality reduction.
 
-### Choosing PCs
+#### Choosing PCs
 
 The expression of the <span style = "color:lightblue">proportion of variance</span> is shown below, where $k$ corresponds to the number of dimensions kept, and $d$ corresponds to the number of dimensions before PCA was performed.
 
@@ -200,5 +202,12 @@ $$proportion=\frac{\lambda_1+\lambda_2+\cdots+\lambda_k}{\lambda_1+\lambda_2+\cd
 
 The proportion of variance increases logarithmically as the number of eigenvectors increases. At a high number of eigenvectors, additional eigenvectors will not significantly increase the variance.
 
-![[Pasted image 20220915143416.png|500x400]]
+![[data-mining-eigenvectors-variance.png|500x400]]
+
+> [!WARNING]
+> Some problems, such as classification, and datasets will cause problems when performing dimensionality reduction. The dimensions are needed in these problems. Additionally, PCA does not consider nonlinear cases (*only unidirectional*).
+
+### Attribute or Feature Subset Selection
+
+In <span style = "color:lightblue">attribute or feature subset selection</span>, the <u>minimum</u> possible **subset** of attributes is chosen such that the quality of the data mining task is not compromised.
 
