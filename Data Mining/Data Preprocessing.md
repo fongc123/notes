@@ -192,9 +192,9 @@ A review of calculating variation is shown below.
 > $$Cov(x,y)=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{N-1}$$
 > The variance of a single random variable $x$ can also be expressed as the covariance of itself $cov_{x,x}$.
 > 
-> The <span style = "color:lightblue">covariance matrix</span> is a square matrix with the below form and with size $d$ which represents the number of dimensions.
+> The <span style = "color:lightblue">covariance matrix</span> is a square matrix with the below form and with size $d$ which represents the number of dimensions. It represents the variances and covariances of the dimensions.
 > $$
-> C=
+> \sum=
 > \begin{bmatrix}
 > 	Var(X_1) & \cdots & Cov(X_d,X_1) \newline
 > 	\vdots & \ddots & \vdots \newline
@@ -203,14 +203,13 @@ A review of calculating variation is shown below.
 > $$
 > It should be noted that $Cov(X_1, X_d)$ and $Cov(X_d, X_1)$ are identical.
 
+
+
 The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ are found.
 
-$$Cv=\lambda v$$
-> [!QUESTION]
-> **Q:** What is a <span style = "color:lightblue">covariance matrix</span>?
-> **A:** ...
+$$C\textbf{v}=\lambda \textbf{v}$$
 
-In the context of PCA, the eigenvector(s) $v$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension.
+In the context of PCA, the eigenvector(s) $\textbf{v}$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension.
 
 Principal components with the smallest eigenvalues are discarded to perform dimensionality reduction.
 
