@@ -198,7 +198,7 @@ Principal components with the smallest eigenvalues are discarded to perform dime
 
 #### Choosing PCs
 
-The expression of the <span style = "color:lightblue">proportion of variance</span> is shown below, where $k$ corresponds to the number of dimensions kept and $d$ corresponds to the number of dimensions before PCA was performed.
+The <span style = "color:lightblue">proportion of variance</span> shows the proportion of principal components kept. Its expression is shown below, where $k$ corresponds to the number of dimensions kept and $d$ corresponds to the number of dimensions before PCA was performed.
 
 $$proportion=\frac{\lambda_1+\lambda_2+\cdots+\lambda_k}{\lambda_1+\lambda_2+\cdots+\lambda_d}$$
 
