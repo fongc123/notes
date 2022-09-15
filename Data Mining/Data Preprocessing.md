@@ -187,9 +187,21 @@ A review of calculating variation is shown below.
 
 > [!INFO]
 > <span style = "color:lightblue">Variance</span> describes the spread between a data set from its mean value.
-> $$S^2=\frac{\sum(x_i-\bar{x})^2}{n-1}$$
+> $$Var(x)=\frac{\sum(x_i-\bar{x})^2}{n-1}$$
 > <span style = "color:lightblue">Covariance</span> describes how two random variables will change when compared with each other.
-> $$cov_{x,y}=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{N-1}$$
+> $$Cov(x,y)=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{N-1}$$
+> The variance of a single random variable $x$ can also be expressed as the covariance of itself $cov_{x,x}$.
+> 
+> The <span style = "color:lightblue">covariance matrix</span> is a square matrix with the below form and with size $d$ which represents the number of dimensions.
+> $$
+> C=
+> \begin{bmatrix}
+> 	Var(X_1) & \cdots & Cov(X_d,X_1) \newline
+> 	\vdots & \ddots & \vdots \newline
+> 	Cov(X_1, X_d) & \cdots & Var(X_d)
+> \end{bmatrix}
+> $$
+> It should be noted that $Cov(X_1, X_d)$ and $Cov(X_d, X_1)$ are identical.
 
 The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ are found.
 
