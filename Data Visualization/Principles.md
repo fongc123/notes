@@ -2,7 +2,9 @@
 
 <span style = "color:lightblue">Graphical excellence</span> is the well-designed presentation of interesting data$\textemdash$a matter of substance, of statistics and of design.
 
-## Tufte's Principles
+Tufte's principles.
+
+## Graphical Integrity
 
 <span style = "color:lightblue">Tufte's principles</span> aim to create graphical excellence.
 - greatest meaning from shortest time and least ink (maximization of data-ink ratio with good reasons)
@@ -47,7 +49,7 @@ The entire context of the data should be shown. Additionally, the direction of i
 
 For example, in the chart shown, the rank of Cornell University is shown. The chart is interpreted negatively, as a downward trend conveys negative conotations; however, the smaller the rank, the better the university.
 
-## Data-Ink Ratio
+## Least Ink
 The <span style = "color:lightblue">data-ink ratio</span> is the ratio of non-white data pixels to the total ink used in the graphic.
 
 ### Chart Junk
@@ -56,9 +58,12 @@ The <span style = "color:lightblue">data-ink ratio</span> is the ratio of non-wh
 Excessive chart junk can cause **vibration**, **illusions**, or **visual distortion**.
 
 > [!INFO]
-> Chart junk may be useful to convey further messages to the viewer, but analytics relies on efficiency and simplificty. Presentation graphs have a low data-ink ratio, while analytical graphs have a high data-ink ratio.
+> Chart junk *may* be useful to convey further messages to the viewer, but analytics relies on efficiency and simplificty. Presentation graphs have a low data-ink ratio, while analytical graphs have a high data-ink ratio.
 
+Occassionally, redundancy is useful to demonstrate continuity, especially in a timeline.
 
+Axes and markers should also be properly considered, especially axis ratios, dual axes, axis normalization, etc.
 
-
-
+## Additional Suggestions
+ <span style = "color:lightblue">Grice's maxims of polite conversation</span> also provides additional graphical design choices.
+ 
