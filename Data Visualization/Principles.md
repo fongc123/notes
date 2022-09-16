@@ -35,7 +35,7 @@ The perception of area versus magnitude varies per person. **For example, the pe
 
 $$perceived\space area = (actual\space area)^{0.8 \pm 0.3}$$
 
-Thus, volume or area encoding should be avoided. To provide an accurate display, **only** the use of height is necessary.
+Thus, volume or area encoding should be avoided. To provide an accurate display, **only** the use of height is needed.
 
 ### II: Consistent Scale
 A chart must use a consistent scale for all of its data. Typically, a linear scale is sufficient, but a logarithmic scale should be used for logarithmic data.
