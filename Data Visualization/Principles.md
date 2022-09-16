@@ -1,19 +1,15 @@
 # Principles
 
-<span style = "color:lightblue">Graphical excellence</span> is the well-designed presentation of interesting data$\textemdash$a matter of substance, of statistics and of design.
-
-Tufte's principles.
+<span style = "color:lightblue">Tufte's principles</span> serve as a guide on how to accurately portray data using visual elements. These principles define rules and standards in achieving <span style = "color:lightblue">graphical excellence</span> which is the well-designed presentation of interesting data$\textemdash$a matter of substance, of statistics and of design.
+- **graphical integrity**: the accurate and truthful display of data
+- **least ink**: create the greatest meaning with the shortest time and the least ink (i.e., maximization of data-ink ratio with good reasons)
 
 ## Graphical Integrity
 
-<span style = "color:lightblue">Tufte's principles</span> aim to create graphical excellence.
-- greatest meaning from shortest time and least ink (maximization of data-ink ratio with good reasons)
-- telling the truth
-
-Given specific representations, the data can be interpreted differently, creating completely different meaning.
+Based on how the data is represented visually, it can be interpreted differently, conveying misleading messages to the audience. The principles present three guidelines to represent data accurately and truthfully.
 
 ### I: Lie Factor
-The <span style = "color:lightblue">lie factor</span> is a numerical indication of the data-graphic integrity. Visual attribute values should be directly proportional to the actual data attribute value.
+The <span style = "color:lightblue">lie factor</span> is a numerical indication of the integrity between data and visualization. **The representation of numbers, as physically measured on the surface of the graph itself, should be directly proportional to the numerical quantities represented.**
 
 $$
 \begin{align}
@@ -22,11 +18,17 @@ $$
 \end{align}
 $$
 
-Visualizations with lie factors closer to $1.0$ give a more accurate representation of the data. A lie factor greater than $1.0$ indicates an overstatement.
+Visualizations with lie factors close to (away from) a value of $1.0$ indicate an accurate (exaggerated) representation of the data. The lie factor should range between $0.95$ and $1.05$. In the chart below, the line representing 18 miles per gallon in 1978 is 0.6 inches long, while the that of representing 27.5 miles per gallon in 1985 is 5.3 inches long.
 
-The advertisement below gives the impression that the company is generating significant revenue; however, the zero line is positioned differently for each bar chart.
+![[data-vis-lie-factor.png|600]]
+
+The lie factor for this graph is $14.8$. Visualizations with lie factors closer to $1.0$ give a more accurate representation of the data. A lie factor greater than $1.0$ indicates an overstatement. 
+
+**Clear labeling should be used to defeat graphical distortion and ambiguity.** The advertisement below gives the impression that the company is generating significant revenue; however, the zero line is positioned differently for each bar chart.
 
 ![[data-vis-hidden-0-point.png|600]]
+
+**Data variation should be shown instead of design variation.** Lastly, **the number of dimensions that carry information should not exceed the number of dimensions in the data.** Only design choices that complement the data should be used.
 
 #### Perception of Area
 The perception of area versus magnitude varies per person.
@@ -34,11 +36,11 @@ The perception of area versus magnitude varies per person.
 Volume or area encoding should be avoided. Alternatively, height only is a more accurate display.
 
 ### II: Consistent Scale
-A chart must use be consistent with its scale. Typically, a linear scale is sufficient, but a logarithmic scale should be used for logarithmic data.
+A chart must use a consistent scale for all of its data. Typically, a linear scale is sufficient, but a logarithmic scale should be used for logarithmic data.
 
 The chart below makes the income trend appear linear by using an inconsistent scale. The real correlation is exponential.
 
-> insert image for scale
+![[Pasted image 20220916190733.png|500]]
 
 
 ### III: Data in Context
