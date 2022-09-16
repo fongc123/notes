@@ -33,15 +33,14 @@ The lie factor for this graph is $14.8$. Visualizations with lie factors closer 
 #### Perception of Area
 The perception of area versus magnitude varies per person.
 
-Volume or area encoding should be avoided. Alternatively, height only is a more accurate display.
+Thus, volume or area encoding should be avoided. To provide an accurate display, **only** the use of height is necessary.
 
 ### II: Consistent Scale
 A chart must use a consistent scale for all of its data. Typically, a linear scale is sufficient, but a logarithmic scale should be used for logarithmic data.
 
 The chart below makes the income trend appear linear by using an inconsistent scale. The real correlation is exponential.
 
-![[Pasted image 20220916190733.png|500]]
-
+![[data-vis-consistent-scale.png|500]]
 
 ### III: Data in Context
 
@@ -49,10 +48,13 @@ The entire context of the data should be shown. Additionally, the direction of i
 
 ![[data-vis-data-context.png|300]]
 
-For example, in the chart shown, the rank of Cornell University is shown. The chart is interpreted negatively, as a downward trend conveys negative conotations; however, the smaller the rank, the better the university.
+For example, in the chart above, the rank of Cornell University is shown. The chart is interpreted negatively, as a downward trend conveys negative conotations; however, a smaller digit (e.g., $1$) corresponds to a better ranking.
 
 ## Least Ink
 The <span style = "color:lightblue">data-ink ratio</span> is the ratio of non-white data pixels to the total ink used in the graphic.
+
+$$data\textendash ink \space ratio=\frac{non\textendash redundant\space ink}{total\space ink}$$
+Ink usage should prioritize the showcase of data above everything else.
 
 ### Chart Junk
 <span style = "color:lightblue">Chart junk</span> is the excessive and unnecessary use of graphical elements in visualization for demonstrating the graphic ability of the design *rather* than the display of data.
@@ -60,12 +62,20 @@ The <span style = "color:lightblue">data-ink ratio</span> is the ratio of non-wh
 Excessive chart junk can cause **vibration**, **illusions**, or **visual distortion**.
 
 > [!INFO]
-> Chart junk *may* be useful to convey further messages to the viewer, but analytics relies on efficiency and simplificty. Presentation graphs have a low data-ink ratio, while analytical graphs have a high data-ink ratio.
+> Chart junk *may* be useful to convey further messages to the viewer, but analytics relies on efficiency and simplicity. Presentation graphs have a low data-ink ratio, while analytical graphs have a high data-ink ratio.
 
 Occassionally, redundancy is useful to demonstrate continuity, especially in a timeline.
 
-Axes and markers should also be properly considered, especially axis ratios, dual axes, axis normalization, etc.
+Axes and markers should also be properly revised, especially axis aspect ratios, the necessity of dual axes, and axis normalization.
 
-## Additional Suggestions
- <span style = "color:lightblue">Grice's maxims of polite conversation</span> also provides additional graphical design choices.
- 
+## Tips & Suggestions
+
+Several tips for aesthetics and techniques are listed below.
+1. The format and design of the chart should be properly chosen (e.g., a bivariate chart for bivariate data).
+2. Words, numbers, and drawings should be used together; words help *explain* the ambiguous parts of the drawing.
+3. A balanced, proportionate, and relevant scale should be established.
+4. An **accessible** (i.e., not overwhelming) complexity of data should be displayed.
+5. A narrative quality is an advantage.
+6. The chart is drawn professionally.
+
+<span style = "color:lightblue">Grice's maxims of polite conversation</span> also provides additional graphical design choices. The maxims emphasize the **quantity**, **quality**, **relevance**, and **manner** of the visualizations.
