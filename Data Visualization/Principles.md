@@ -80,4 +80,4 @@ Several tips for aesthetics and techniques are listed below.
 5. A narrative quality is an advantage.
 6. The chart is drawn professionally.
 
-<span style = "color:lightblue">Grice's maxims of polite conversation</span> also provides additional graphical design choices. The maxims emphasize the **quantity**, **quality**, **relevance**, and **manner** of the visualizations.
+<span style = "color:lightblue">Grice's maxims of polite conversation</span> also provides additional graphical design choices. The maxims emphasize the **quantity**, **quality**, **relevance**, and **manner** of visualizations.
