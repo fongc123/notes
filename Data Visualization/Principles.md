@@ -30,8 +30,10 @@ The lie factor for this graph is $14.8$. Visualizations with lie factors closer 
 
 **Data variation should be shown instead of design variation.** Lastly, **the number of dimensions that carry information should not exceed the number of dimensions in the data.** Only design choices that complement the data should be used.
 
-#### Perception of Area
-The perception of area versus magnitude varies per person.
+#### Misperception of Area
+The perception of area versus magnitude varies per person. **For example, the perceived area of a circle grows more slowly than the actual area.**
+
+$$perceived\space area = (actual\space area)^{0.8 \pm 0.3}$$
 
 Thus, volume or area encoding should be avoided. To provide an accurate display, **only** the use of height is necessary.
 
