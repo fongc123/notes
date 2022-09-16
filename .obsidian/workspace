@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Kubernetes/Cluster Maintenance.md",
+            "file": "Data Visualization/Principles.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Cluster Maintenance.md",
+                "file": "Data Visualization/Principles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Cluster Maintenance.md",
+                "file": "Data Visualization/Principles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Cluster Maintenance.md"
+                "file": "Data Visualization/Principles.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "81ede1d1ae8e2c6f",
   "lastOpenFiles": [
-    "Data Mining/Data Preprocessing.md",
     "Data Visualization/Color.md",
+    "Data Visualization/Principles.md",
+    "Kubernetes/Cluster Maintenance.md",
+    "Data Mining/Data Preprocessing.md",
     "Image Processing/Acquisition & Representation.md",
     "Data Visualization/Perception.md",
     "conflict-files-obsidian-git.md",
     "Programming with C++/C++ Basics.md",
     "Image Processing/Intensity Transformations.md",
-    "Data Visualization/Introduction.md",
-    "src/Pasted image 20220908141330.png",
-    "src/image-processing-transform-bitplane.png"
+    "Data Visualization/Introduction.md"
   ]
 }
