@@ -176,7 +176,15 @@ kk
 A sample histogram matching problem and its corresponding solution is shown below.
 
 ##### Problem
-An image with intensities in the range $0$ to $L-1$ has the probability distribution function $p_r(r)$ as shown in Figure A. It is desired to transform the intensity levels of this image so that they will have the specified probability distribution function $p_z(z)$ as shown in Figure B. Assume continuous quantities and find the transformation $z=f(r)$ that will accomplis
+
+
+
+##### Solution
+
+
+> [!TIP]
+> If the function is simple (e.g., linear), the expression of the probability distribution function can be obtained from the graph.
+
 
 #### Result
 
