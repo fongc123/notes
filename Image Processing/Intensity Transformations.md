@@ -173,13 +173,38 @@ kk
 
 #### Example
 
-A sample histogram matching problem and its corresponding solution is shown below.
+The probability distribution function of the original image $p_r(r)$ and the target probability distribution function $p_z(z)$ are shown below.
 
-##### Problem
+$$
+\begin{align}
+	p_r(r) & =
+	\begin{cases}
+		\frac{2r}{(L-1)^2} & \text{for}\space 0\leq r\leq L-1\newline
+		0 & otherwise
+	\end{cases}
+	\newline
+	p_z(z) & =
+	\begin{cases}
+		\frac{3z^2}{(L-1)^3} & \text{for} \space 0 \leq z \leq L-1 \newline
+		0 & otherwise
+	\end{cases}
+\end{align}
+\newline
+$$
 
+The transformation $z=f(r)$ to match the original image to the specified probability distribution is found. First, the histogram equalization of the input image $s$ is found.
 
+$$
+\begin{align}
+	s & = T(r) \newline
+	& = (L-1)\int_0^r{p_r(r)dw} \newline
+	& = (L-1)\int_0^r{\frac{2w}{(L-1)^2}dw} \newline
+	s & = \frac{r^2}{L-1}
+\end{align}
+$$
 
-##### Solution
+Next, the histogram equalization of the target histogram $G(z)$ is found.
+
 
 
 > [!TIP]
