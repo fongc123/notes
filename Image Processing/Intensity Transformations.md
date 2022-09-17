@@ -171,6 +171,13 @@ In the case when a direct matching is impossible, the **closest** $z_q$ value wi
 #### Derivation
 kk
 
+#### Example
+
+A sample histogram matching problem and its corresponding solution is shown below.
+
+##### Problem
+An image with intensities in the range $0$ to $L-1$ has the probability distribution function $p_r(r)$ as shown in Figure A. It is desired to transform the intensity levels of this image so that they will have the specified probability distribution function $p_z(z)$ as shown in Figure B. Assume continuous quantities and find the transformation $z=f(r)$ that will accomplis
+
 #### Result
 
 The resulting image should roughly have the same histogram distribution as the target image.
@@ -185,4 +192,5 @@ In <span style = "color:lightblue">local histogram equalization</span>, the inte
 
 ![[image-processing-local-histogram-eq.png|600x200]]
 
-The effect is similar to gamma correction
+The effect of this method is similar to that of gamma correction.
+
