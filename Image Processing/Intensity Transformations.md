@@ -160,7 +160,29 @@ The output is a uniform histogram. In a discrete image, equalization does not cr
 
 ### Histogram Matching
 
-<span style = "color:lightblue">Histogram matching</span> is the transformation of an image such that the its histogram matches a specified histogram.
+<span style = "color:lightblue">Histogram matching</span> is the transformation of an image such that the its histogram matches a specified histogram. It may help in showing more picture details.
 
 ![[image-processing-histogram-matching.png|600x175]]
 
+The histogram equalizations of both the **input image** and the **target image** are found and are equated together.
+
+In the case when a direct matching is impossible, the **closest** $z_q$ value will be mapped instead.
+
+#### Derivation
+kk
+
+#### Result
+
+The resulting image should roughly have the same histogram distribution as the target image.
+
+The figure below demonstrates the differences between histogram equalization and histogram matching. The image produced by histogram matching is more favorable; thus, histogram equalization may not always be the best processing method to use.
+
+## Local Histogram Equalization
+
+The histogram equalization performed in [[#Histogram Equalization]] is global which is suitable for **overall enhancement**. However, it cannot enhance **local details**, as small areas have negligible influence on global transformations.
+
+In <span style = "color:lightblue">local histogram equalization</span>, the intensity distribution is defined in a local neighborhood around a center pixel instead of the entire image. The center pixel's values are modified to match its local neighborhood.
+
+![[image-processing-local-histogram-eq.png|600x200]]
+
+The effect is similar to gamma correction
