@@ -100,7 +100,7 @@ The histogram of a high-contrast image has a wide and uniform range of intensity
 
 ### Histogram Equalization
 
-<span style = "color:lightblue">Histogram equalization</span> is a contrast adjustment using the image's original histogram, where the modified image will have an equal number of pixels at each grey level. The transformation function $s$ should satisfy the following criteria.
+<span style = "color:lightblue">Histogram equalization</span> is a contrast adjustment using the image's original histogram, where the modified image will have an equal number of pixels at each gray level. The transformation function $s$ should satisfy the following criteria.
 - $T(r)$ is monotonically increasing
 - $0 \leq T(r) \leq L - 1$ between $0$ and $L-1$ inclusive
 
@@ -150,8 +150,17 @@ s_k=T(r_k)=(L-1)\sum_{j=0}^{k}{\frac{n_j}{MN}},\space k=0,1,...,L-1
 $$
 
 #### Result
-The output is a relatively uniform histogram. Equalization may not create a perfectly uniform histogram, but it helps span the histogram to a **wider range of intensity scales**.
+The output is a uniform histogram. In a discrete image, equalization does not create a perfectly uniform histogram. Overall, the equalization distributes the values over **a wider range of intensities**.
 
 ![[image-processing-histogram-eq-2.png|600x200]]
 
-However, it may increase the contrast of background noise, while decreasing useful signal or it can remove small details.
+
+> [!WARNING]
+> Histogram equalization may increase the contrast of background noise, while decreasing useful signals or removing small details.
+
+### Histogram Matching
+
+<span style = "color:lightblue">Histogram matching</span> is the transformation of an image such that the its histogram matches a specified histogram.
+
+![[image-processing-histogram-matching.png|600x175]]
+

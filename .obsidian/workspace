@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Principles.md",
-            "mode": "preview",
+            "file": "Image Processing/Intensity Transformations.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Principles.md"
+                "file": "Image Processing/Intensity Transformations.md"
               }
             }
           },
@@ -138,15 +138,15 @@
   },
   "active": "c4803c9b7535dfcb",
   "lastOpenFiles": [
+    "Data Visualization/Color.md",
+    "Data Visualization/Principles.md",
     "Data Mining/Data Preprocessing.md",
     "Data Visualization/Perception.md",
     "conflict-files-obsidian-git.md",
-    "Data Visualization/Color.md",
     "Image Processing/Acquisition & Representation.md",
     "Machine Learning/Introduction.md",
     "Data Mining/Introduction.md",
     "Kubernetes/Application Management.md",
-    "Kubernetes/Pod.md",
-    "Docker.md"
+    "Kubernetes/Pod.md"
   ]
 }
