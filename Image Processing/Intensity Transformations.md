@@ -195,7 +195,9 @@ The output image with $z$ values is mapped to the values of the specified histog
 
 $$
 \begin{align}
-	s_k & = T(r_k)=(L-1)\sum_{j=0}^{k}{p_r(r_j)}=\frac{L-1}{MN}\sum_{j=0}
+	s_k & = T(r_k)=(L-1)\sum_{j=0}^{k}{p_r(r_j)}=\frac{L-1}{MN}\sum_{j=0}^{k}{n_j} \newline
+	G(z_q) & = (L-1)\sum_{i=0}^{q}{p_z(z_i)}=s_k \newline
+	z_q&=G^{-1}(s_k)
 \end{align}
 $$
 
@@ -255,12 +257,13 @@ $$
 > [!TIP]
 > If the function is simple (e.g., linear), the expression of the probability distribution function can be obtained from the graph.
 
-
 #### Result
 
 The resulting image should roughly have the same histogram distribution as the target image.
 
 The figure below demonstrates the differences between histogram equalization and histogram matching. The image produced by histogram matching is more favorable; thus, histogram equalization may not always be the best processing method to use.
+
+![[image-processing-histogram-matching-2.png|600x360]]
 
 ## Local Histogram Equalization
 

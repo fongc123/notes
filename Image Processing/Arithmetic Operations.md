@@ -44,11 +44,26 @@ These operations can be applied to images as well.
 
 ## Image Addition
 
-<span style = "color:lightblue">Image addition</span> or averaging combines two images together and can be used for noise reduction.
+<span style = "color:lightblue">Image addition</span> or averaging combines two images together.
 
 $$s(x,y)=f(x,y)+g(x,y)$$
 
-$K$ number of images are averaged together to remove noise.
+To perform noise reduction, a number of $K$ images can be summed together, where the image's details will be amplified. The noise-free clean image, noise, and noisy image are represented as $f$, $n_i$, and $f_i$ respectively.
+
+$$
+\begin{align}
+	f_i(x,y) & = f(x,y)+n_i(x,y) \newline
+	\bar{f}(x,y)&=\frac{1}{K}\sum_{i=1}^{K}{f_i(x,y)} \newline
+	& = f(x,y) + \frac{1}{K}\sum_{i=1}^{K}n_i{x,y}
+\end{align}
+$$
+Here, it is assumed that the additive noise is uncorrelated with zero mean.
+
+$$E\{n(x,y)\}=0$$
+
+This method is especially useful in astronomy as shown below.
+
+![[image-processing-addition.png|600x450]]
 
 ## Image Subtraction
 
