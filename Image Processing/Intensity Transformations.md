@@ -169,7 +169,35 @@ The histogram equalizations of both the **input image** and the **target image**
 In the case when a direct matching is impossible, the **closest** $z_q$ value will be mapped instead.
 
 #### Derivation
-kk
+The continuous probability function of the image intensity values $r$ is represented as $p_r(r)$.
+
+$$
+s = (L-1)\int_0^r{p_r(r)dw}
+$$
+
+The specified probability function of the target histogram intensity values $z$ is represented as $p_z(z)$. The transformation function is represented as $G(z)$.
+
+$$
+G(z)=(L-1)\int_0^z{p_z(z)dt}
+$$
+
+To perform matching and mapping, the expressions of $s$ and $G(z)$ are equated together.
+
+$$
+\begin{align}
+	G(z) & = s \newline
+	\therefore z & =G^{-1}(s) \newline
+	& = G^{-1}[T(r)]
+\end{align}
+$$
+
+The output image with $z$ values is mapped to the values of the specified histogram. In the discrete case, the integrals are replaced with summations.
+
+$$
+\begin{align}
+	s_k & = T(r_k)=(L-1)\sum_{j=0}^{k}{p_r(r_j)}=\frac{L-1}{MN}\sum_{j=0}
+\end{align}
+$$
 
 #### Example
 
@@ -205,7 +233,24 @@ $$
 
 Next, the histogram equalization of the target histogram $G(z)$ is found.
 
+$$
+\begin{align}
+	G(z) & = (L-1)\int_0^z{p_z(t)dt} \newline
+	& = (L-1)\int_0^z{\frac{3t^2}{(L-1)^3}dt} \newline
+	G(z) & = \frac{z^3}{(L-1)^2}
+\end{align}
+$$
 
+Both histogram equalizations are equated with each other, and an expression for $z$ is found.
+
+$$
+\begin{align}
+	s & = G(z) \newline
+	\frac{r^2}{L-1} & = \frac{z^3}{(L-1)^2} \newline
+	z^3 & = (L-1)r^2 \newline
+	z & = (L-1)^{\frac{1}{3}}r^{\frac{2}{3}} \newline
+\end{align}
+$$
 
 > [!TIP]
 > If the function is simple (e.g., linear), the expression of the probability distribution function can be obtained from the graph.
