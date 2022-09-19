@@ -67,5 +67,9 @@ This method is especially useful in astronomy as shown below.
 
 ## Image Subtraction
 
-<span style = "color:lightblue">Image subtraction</span> can be used to enhance difference for comparison.
+<span style = "color:lightblue">Image subtraction</span> can be used to enhance difference for comparison between two images. A common application of this method is <span style = "color:lightblue">mask mode radiography</span> as shown below.
+
+![[image-processing-subtraction.png|700]]
+
+## Image Multiplication & Division
 
