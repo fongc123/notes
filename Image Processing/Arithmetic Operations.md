@@ -67,9 +67,20 @@ This method is especially useful in astronomy as shown below.
 
 ## Image Subtraction
 
-<span style = "color:lightblue">Image subtraction</span> can be used to enhance difference for comparison between two images. A common application of this method is <span style = "color:lightblue">mask mode radiography</span> as shown below.
+<span style = "color:lightblue">Image subtraction</span> can be used to enhance difference for comparison between two images.
+
+$$d(x,y)=f(x,y)-g(x,y)$$
+
+A common application of this method is <span style = "color:lightblue">mask mode radiography</span> as shown below.
 
 ![[image-processing-subtraction.png|700]]
 
 ## Image Multiplication & Division
 
+<span style = "color:lightblue">Image multiplication & division</span> can be used for shading correction or masking.
+
+$$g(x,y)=f(x,y)h(x,y)$$
+
+Here, the corresponding pixel values for images $f$ and $h$ undergo **elementwise operations**. A masking on a dental X-ray image is shown below, where only the teeth with filings are displayed.
+
+![[image-processing-multiplication.png|650]]
