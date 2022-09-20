@@ -9,19 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Mining/Data Preprocessing.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "8538e6e794393bfd",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Machine Learning/Introduction.md",
+            "file": "Image Processing/Image Interpolation.md",
             "mode": "source",
             "source": false
           }
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Introduction.md",
+                "file": "Image Processing/Image Interpolation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Introduction.md",
+                "file": "Image Processing/Image Interpolation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Introduction.md"
+                "file": "Image Processing/Image Interpolation.md"
               }
             }
           },
@@ -149,15 +137,15 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8538e6e794393bfd",
+  "active": "accc0149d8a2e7c6",
   "lastOpenFiles": [
+    "Image Processing/Arithmetic Operations.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Introduction.md",
     "Image Processing/Spatial Filtering.md",
     "Image Processing/Geometric Transformation.md",
     "conflict-files-obsidian-git.md",
     "Image Processing/Image Interpolation.md",
-    "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
     "img/image-processing-histogram-matching.png",
     "img/image-processing-histogram-matching-2.png"
