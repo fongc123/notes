@@ -11,7 +11,7 @@ While each <span style = "color:lightblue">machine learning model</span> is trai
 $$build\rightarrow train \rightarrow predict$$
 
 ## Regression
-A linear regression model is based on a simple linear equation.
+A linear regression model (a <span style = "color:lightblue">regressor</span>) is based on a simple linear equation.
 
 $$\hat{y}=mx+b$$
 > [!INFO]
@@ -50,4 +50,19 @@ When there are multiple features, this method finds the feature(s) that has the 
 
 ### Code Template
 Several lines of code related to creating a linear regression model are shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems as well.
+
+## Classification
+
+A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Several classification algorithms include **decision tree**, **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
+
+A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
+
+Alternatively, other accuracy measures include sensitivity and specificity. <span style = "color:lightblue">Precision</span> is the fraction of correctly predicted classes (true positives; retrieved and relevant documents) out of all data points (true positives and false positives; all documents).
+
+$$precision=\frac{TP}{TP+FP}$$
+
+<span style = "color:lightblue">Recall</span> is the fraction of correctly predicted classes (true positives) out of all <u>class</u> data points (true positives and false negatives; all relevant documents).
+
+$$recall=\frac{TP}{TP+FN}$$
+
 

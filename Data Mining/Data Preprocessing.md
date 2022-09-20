@@ -17,6 +17,10 @@ Additionally, each attribute has a corresponding <span style = "color:lightblue"
 }
 ```
 
+All machine learning algorithms have a <span style = "color:lightblue">training set</span>, a <span style = "color:lightblue">validation set</span>, and a <span style = "color:lightblue">test set</span>. 
+
+> [!WARNING]
+> The test set and the training set must be disjoint.
 
 ## Statistical Descriptions
 Statistical descriptions give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., boxplots, histogram, scatter plots) of the descriptions.
