@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Spatial Filtering.md",
+            "file": "Image Processing/Introduction.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Image Processing/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Image Processing/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md"
+                "file": "Image Processing/Introduction.md"
               }
             }
           },
@@ -138,8 +138,8 @@
   },
   "active": "accc0149d8a2e7c6",
   "lastOpenFiles": [
-    "Image Processing/Intensity Transformations.md",
     "Image Processing/Spatial Filtering.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Acquisition & Representation.md",
