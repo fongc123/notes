@@ -62,18 +62,39 @@ $$
 		1 & 0 & 0 \newline
 		0 & 1 & 0 \newline
 		0 & 0 & 1
-	\end{bmatrix} \newline \newline
+	\end{bmatrix} \quad\text{\small(original)} \newline \newline
 	\text{scaling/reflection:} \quad \textbf{A} & =
 	\begin{bmatrix}
 		c_x & 0 & 0 \newline
 		0 & c_y & 0 \newline
 		0 & 0 & 1
-	\end{bmatrix} \newline \newline
+	\end{bmatrix} \quad\text{\small (by respective factors $c$)} \newline \newline
 	\text{rotation (about the origin):} \quad \textbf{A} & =
 	\begin{bmatrix}
 		\cos{\theta} & -\sin{\theta} & 0 \newline
 		\sin{\theta} & \cos{\theta} & 0 \newline
 		0 & 0 & 1
-	\end{bmatrix}
+	\end{bmatrix} \newline \newline
+	\text{translation:} \quad \textbf{A} & =
+	\begin{bmatrix}
+		1 & 0 & t_x \newline
+		0 & 1 & t_y \newline
+		0 & 0 & 1
+	\end{bmatrix} \quad\text{\small(by respective factors $t$)} \newline \newline
+	\text{shear (vertical):} \quad \textbf{A} & =
+	\begin{bmatrix}
+		1 & s_v & 0 \newline
+		0 & 1 & 0 \newline
+		0 & 0 & 1 \newline
+	\end{bmatrix} \quad\text{\small(by factor $s_v$)} \newline \newline
+	\text{shear (horizontal):} \quad \textbf{A} & =
+	\begin{bmatrix}
+		1 & 0 & 0 \newline
+		s_h & 1 & 0 \newline
+		0 & 0 & 1
+	\end{bmatrix} \quad\text{\small(by factor $s_h$)} \newline
 \end{align}
 $$
+In rotation, image interpolation is needed to fill in missing pixel values. Three resampling methods and their effects on a rotated image are shown below.
+
+![[image-processing-resampling-rotation.png|600]]
