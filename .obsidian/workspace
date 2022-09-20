@@ -139,6 +139,7 @@
   "active": "accc0149d8a2e7c6",
   "lastOpenFiles": [
     "Image Processing/Spatial Filtering.md",
+    "Data Mining/Data Preprocessing.md",
     "Image Processing/Geometric Transformation.md",
     "conflict-files-obsidian-git.md",
     "Image Processing/Image Interpolation.md",
@@ -146,7 +147,6 @@
     "Image Processing/Intensity Transformations.md",
     "img/image-processing-histogram-matching.png",
     "img/image-processing-histogram-matching-2.png",
-    "Data Visualization/Color.md",
-    "Data Visualization/Principles.md"
+    "Data Visualization/Color.md"
   ]
 }
