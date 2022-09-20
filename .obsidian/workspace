@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Spatial Filtering.md",
+            "file": "Data Mining/Data Preprocessing.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md"
+                "file": "Data Mining/Data Preprocessing.md"
               }
             }
           },
@@ -138,8 +138,8 @@
   },
   "active": "c23d31b5087734e1",
   "lastOpenFiles": [
-    "Image Processing/Intensity Transformations.md",
     "Image Processing/Spatial Filtering.md",
+    "Image Processing/Intensity Transformations.md",
     "Data Visualization/Principles.md",
     "img/Pasted image 20220916141945.png",
     "Data Visualization/Color.md",
