@@ -59,10 +59,14 @@ A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze h
 
 Alternatively, other accuracy measures include sensitivity and specificity. <span style = "color:lightblue">Precision</span> is the fraction of correctly predicted classes (true positives; retrieved and relevant documents) out of all data points (true positives and false positives; all documents).
 
-$$precision=\frac{TP}{TP+FP}$$
+$$\text{precision}=\frac{\text{TP}}{\text{TP}+\text{FP}}$$
 
-<span style = "color:lightblue">Recall</span> is the fraction of correctly predicted classes (true positives) out of all <u>class</u> data points (true positives and false negatives; all relevant documents).
+<span style = "color:lightblue">Recall</span> is the fraction of correctly predicted classes (true positives) out of all <u>class</u> data points (true positives and false negatives; all <u>relevant</u> documents).
 
-$$recall=\frac{TP}{TP+FN}$$
+$$\text{recall}=\frac{TP}{\text{TP}+\text{FN}}$$
 
+An ideal system maximizes both precision and recall values; however, there is a trade-off between precision and recall. To increase precision, a small number of data points is predicted to increase the chance of a correct classification. To increase recall, a large number of data points is predicted to increase the number of class-specific data points evaluated.
 
+The <span style = "color:lightblue">F-measure</span> is the harmonic mean which can be calculated with precision and recall values.
+
+$$\text{F-measure}=\frac{2\times \text{recall}\times\text{precision}}{\text{recall}+\text{precision}}$$

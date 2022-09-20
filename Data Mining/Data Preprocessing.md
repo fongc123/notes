@@ -17,7 +17,7 @@ Additionally, each attribute has a corresponding <span style = "color:lightblue"
 }
 ```
 
-All machine learning algorithms have a <span style = "color:lightblue">training set</span>, a <span style = "color:lightblue">validation set</span>, and a <span style = "color:lightblue">test set</span>. 
+All machine learning algorithms have a <span style = "color:lightblue">training set</span> and a <span style = "color:lightblue">test set</span> (and occasionally a <span style = "color:lightblue">validation set</span>). A model is fit based on the training set, where each object of the consists of a <span style = "color:lightblue">class attribute</span> (i.e., the correct answer) and a set of labels (i.e., data).
 
 > [!WARNING]
 > The test set and the training set must be disjoint.
@@ -248,7 +248,7 @@ The data volume is reduced by choosing smaller forms of data representation. Sto
 
 <span style = "color:lightblue">Parametric methods</span> assume the data is fit to a model, where only the **estimated model parameters** are stored instead of the actual data. For example, if a dataset follows a linear regression, only the parameters $a$ and $b$ are needed.
 
-$$y=\underbrace{a}_{slope}x+\underbrace{b}_{y-intercept}$$
+$$y=\underbracket{a}_{slope}x+\underbracket{b}_{y-intercept}$$
 <span style = "color:lightblue">Nonparametric methods</span> do not assume that the data is fitted to a model. Instead, they are stored in smaller forms, such as histograms, clustering, sampling, or <span style = "color:lightblue">data cube aggregation</span>.
 
 > [!INFO]
