@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "c23d31b5087734e1",
+        "id": "b97f5d66b9cf86b1",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "version",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -136,15 +136,15 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "c23d31b5087734e1",
+  "active": "b97f5d66b9cf86b1",
   "lastOpenFiles": [
+    "Kubernetes/Cluster Maintenance.md",
+    "Data Mining/Data Preprocessing.md",
     "Image Processing/Spatial Filtering.md",
     "Image Processing/Intensity Transformations.md",
     "Data Visualization/Principles.md",
     "img/Pasted image 20220916141945.png",
     "Data Visualization/Color.md",
-    "Kubernetes/Cluster Maintenance.md",
-    "Data Mining/Data Preprocessing.md",
     "Image Processing/Acquisition & Representation.md",
     "Data Visualization/Perception.md",
     "conflict-files-obsidian-git.md"

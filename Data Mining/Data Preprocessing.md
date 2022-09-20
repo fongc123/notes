@@ -227,7 +227,26 @@ The proportion of variance increases logarithmically as the number of eigenvecto
 > [!WARNING]
 > Some machine learning problems, such as classification, and datasets will cause problems when performing dimensionality reduction, as the dimensions are needed in these problems. Additionally, PCA does not consider nonlinear cases (*only unidirectional*).
 
-### Attribute or Feature Subset Selection
+### Attribute Subset Selection
 
 In <span style = "color:lightblue">attribute or feature subset selection</span>, the <u>minimum</u> possible **subset** of attributes is chosen such that the quality of the data mining task is not compromised.
+
+It is difficult to test *all* possible combinations of attributes, as there are $2^d$ possible combinations of $d$.
+
+<span style = "color:lightblue">Greedy forward selection</span> selects the best $n$ single attributes. On the other hand, <span style = "color:lightblue">greedy backward elimination</span> removes the worst $n$ attributes. The final reduced attribute set is obtained.
+
+> [!INFO]
+> **Greedy**, in computer science, means...
+
+### Numerosity Reduction
+
+The data volume is reduced by choosing smaller forms of data representation. Storing each point of the dataset may use unnecessary storage space.
+
+<span style = "color:lightblue">Parametric methods</span> assume the data is fit to a model, where only the **estimated model parameters** are stored instead of the actual data. For example, if a dataset follows a linear regression, only the parameters $a$ and $b$ are needed.
+
+$$y=\underbrace{a}_{slope}x+\underbrace{b}_{y-intercept}$$
+<span style = "color:lightblue">Nonparametric methods</span> do not assume that the data is fitted to a model. Instead, they are stored in smaller forms, such as histograms, clustering, sampling, or <span style = "color:lightblue">data cube aggregation</span>.
+
+> [!INFO]
+> In <span style = "color:lightblue">random sampling</span>, there is an equal probability of selecting any particular item. On the other hand, in <span style = "color:lightblue">stratified sampling</span>, the dataset is partitioned (e.g., by age group), and samples are drawn from each partition. Random sampling is applicable to normally distributed data, while stratified sampling is applicable to skewed data.
 
