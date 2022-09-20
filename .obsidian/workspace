@@ -140,13 +140,13 @@
   "lastOpenFiles": [
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Geometric Transformation.md",
     "Image Processing/Intensity Transformations.md",
+    "Image Processing/Acquisition & Representation.md",
+    "Image Processing/Geometric Transformation.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Introduction.md",
     "Image Processing/Spatial Filtering.md",
     "conflict-files-obsidian-git.md",
-    "img/image-processing-histogram-matching.png",
-    "img/image-processing-histogram-matching-2.png"
+    "img/image-processing-histogram-matching.png"
   ]
 }
