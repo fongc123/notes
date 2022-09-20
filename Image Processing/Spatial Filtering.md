@@ -1,6 +1,8 @@
 # Spatial Filtering
 
-spatial filters
+<span style = "color:lightblue">Spatial filtering</span> modifies an image by replacing each pixel value with the output from a function that relies on the value of the pixel and the values of the neighboring pixels.
+
+
 
 ## Highpass Filters
 
