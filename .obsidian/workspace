@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "accc0149d8a2e7c6",
+        "id": "c23d31b5087734e1",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Arithmetic Operations.md",
+            "file": "Image Processing/Spatial Filtering.md",
             "mode": "source",
             "source": false
           }
@@ -41,7 +41,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Arithmetic Operations.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Arithmetic Operations.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Arithmetic Operations.md"
+                "file": "Image Processing/Spatial Filtering.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "accc0149d8a2e7c6",
+  "active": "c23d31b5087734e1",
   "lastOpenFiles": [
     "Image Processing/Intensity Transformations.md",
-    "img/image-processing-histogram-matching.png",
-    "img/image-processing-histogram-matching-2.png",
-    "Image Processing/Arithmetic Operations.md",
-    "Image Processing/Image Interpolation.md",
-    "Image Processing/Geometric Transformation.md",
-    "Data Visualization/Color.md",
+    "Image Processing/Spatial Filtering.md",
     "Data Visualization/Principles.md",
+    "img/Pasted image 20220916141945.png",
+    "Data Visualization/Color.md",
+    "Kubernetes/Cluster Maintenance.md",
     "Data Mining/Data Preprocessing.md",
-    "Data Visualization/Perception.md"
+    "Image Processing/Acquisition & Representation.md",
+    "Data Visualization/Perception.md",
+    "conflict-files-obsidian-git.md"
   ]
 }
