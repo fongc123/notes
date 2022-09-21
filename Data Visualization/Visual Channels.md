@@ -36,3 +36,5 @@ The <span style = "color:lightblue">Cleveland & McGill experiments</span> showed
 > [!WARNING]
 > Some encodings (e.g., width and height or red and green) when combined with each other cannot be decoded separately.
 
+<span style = "color:lightblue">Scalability</span> should also be considered in extremely large datasets. Gestalt's principles can aid in the grouping of visual encoding (*see [[Principles]]*).
+
