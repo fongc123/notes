@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Introduction.md",
+            "file": "Data Visualization/Visual Channels.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Introduction.md",
+                "file": "Data Visualization/Visual Channels.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Introduction.md",
+                "file": "Data Visualization/Visual Channels.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Introduction.md"
+                "file": "Data Visualization/Visual Channels.md"
               }
             }
           },
@@ -134,19 +134,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "accc0149d8a2e7c6",
   "lastOpenFiles": [
-    "Image Processing/Spatial Filtering.md",
-    "Image Processing/Intensity Transformations.md",
-    "Image Processing/Interpolation & Transformation.md",
+    "img/data-mining-system.png",
+    "Data Visualization/Visual Channels.md",
+    "img/data-vis-visual-channels.png",
+    "Data Visualization/Principles.md",
+    "Image Processing/Image Interpolation.md",
     "Image Processing/Arithmetic Operations.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Geometric Transformation.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Introduction.md",
-    "conflict-files-obsidian-git.md",
-    "img/image-processing-histogram-matching.png"
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Geometric Transformation.md"
   ]
 }
