@@ -41,7 +41,7 @@ A composition of visual encoding consists of <span style = "color:lightblue">mar
 > [!WARNING]
 > Some encodings (e.g., width and height or red and green) when combined with each other cannot be decoded separately.
 
-## Perception Experimentation
+## Experimentation
 
 <span style = "color:lightblue">Steven's power law</span> showed the following correlation for many domains.
 
