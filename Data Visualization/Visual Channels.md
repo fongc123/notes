@@ -23,3 +23,16 @@ A composition of visual encoding consists of <span style = "color:lightblue">mar
 > 
 > ![[data-vis-visual-channels-bad.png|500]]
 
+The <span style = "color:lightblue">Cleveland & McGill experiments</span> showed that visualizations with an aligned axis are more likely to be estimated correctly compared to other forms.
+
+<span style = "color:lightblue">Simkin & Hastie</span> proposed that tasks using various graph types can be understood in terms of **elementary mental processes**.
+- <span style = "color:lightblue">anchoring</span>: segment a component to create a comparison standard
+- <span style = "color:lightblue">scanning</span>: k
+- <span style = "color:lightblue">superimposition</span>:
+- <span style = "color:lightblue">projection</span>:
+
+<span style = "color:lightblue">Expressiveness</span> is the sole encoding of information in data, where each data characteristic is matched with a visual channel. <span style = "color:lightblue">Effectiveness</span> is the encoding of only the most important attributes, where accuracy, discriminability, and separability are concerned.
+
+> [!WARNING]
+> Some encodings (e.g., width and height or red and green) when combined with each other cannot be decoded separately.
+
