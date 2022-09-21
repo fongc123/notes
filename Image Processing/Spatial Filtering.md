@@ -8,7 +8,20 @@ The expression of a general process of linear spatial filtering (spatial correla
 $$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
 The expression of spatial convolution (rotated 180$^{\circ}$) is shown below.
 $$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
+## Correlation & Convolution
 
+In a 1D signal, the original length and the correlation result have a length of $M$, but the full correlation result has a length of $M+2a$ due to **zero-padding**. The padding is needed to fill in missing values during kernel iteration. In a two-dimensional signal, an image with size $(M,N)$ creates a full correlation result of size $(M+2a,N+2b)$.
+
+The <span style = "color:lightblue">impulse response</span> of this process is a rotation of the filter by 180$^{\circ}$.
+
+In spatial convolution, since the filter is rotated beforehand, the impulse response is a copy of the filter.
+
+
+## Separable Filter Kernels
+
+A two-dimensional <span style = "color:lightblue">separable filter kernel</span> can be written as a product of two one-dimensional kernels.
+
+$$w(x,y)=w(x)w(y)$$
 
 ## Highpass Filters
 
