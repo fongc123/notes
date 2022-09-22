@@ -1,6 +1,6 @@
 # Spatial Filtering
 
-<span style = "color:lightblue">Spatial filtering</span> modifies an image by replacing each pixel value with the output from a function that relies on the value of the pixel and the values of the neighboring pixels.
+<span style = "color:lightblue">Spatial filtering</span> modifies an image by replacing each pixel value with the output from a function that relies on the value of the pixel and the values of the neighboring pixels. A <span style = "color:lightblue">spatial filter</span> consists of a neighborhood (*the kernel*) and a predefined operation $T$.
 
 <span style = "color:lightblue">Linear spatial filtering</span> $\rightarrow$ linear spatial filter $\rightarrow$ operation $T$ of the filter is linear.
 
@@ -9,6 +9,11 @@ $$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
 The expression of spatial convolution (rotated 180$^{\circ}$) is shown below.
 $$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
 ## Correlation & Convolution
+
+A <span style = "color:lightblue">linear spatial filter</span> performs a sum-of-products operation between an image $f$ and a filter kernel $w$.
+
+$$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
+
 
 In a 1D signal, the original length and the correlation result have a length of $M$, but the full correlation result has a length of $M+2a$ due to **zero-padding**. The padding is needed to fill in missing values during kernel iteration. In a two-dimensional signal, an image with size $(M,N)$ creates a full correlation result of size $(M+2a,N+2b)$.
 
