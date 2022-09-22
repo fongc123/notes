@@ -2,31 +2,63 @@
 
 <span style = "color:lightblue">Spatial filtering</span> modifies an image by replacing each pixel value with the output from a function that relies on the value of the pixel and the values of the neighboring pixels. A <span style = "color:lightblue">spatial filter</span> consists of a neighborhood (*the kernel*) and a predefined operation $T$.
 
-<span style = "color:lightblue">Linear spatial filtering</span> $\rightarrow$ linear spatial filter $\rightarrow$ operation $T$ of the filter is linear.
+## Linear Spatial Filtering
 
-The expression of a general process of linear spatial filtering (spatial correlation) is shown below for a particular set of coordinates $x$ and $y$.
-$$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
-The expression of spatial convolution (rotated 180$^{\circ}$) is shown below.
-$$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
-## Correlation & Convolution
+A <span style = "color:lightblue">linear spatial filter</span> performs a sum-of-products operation between an image $f$ and a filter kernel $w$. A filter is linear if the operation $T$ it performs is also linear. The expression for the <span style = "color:lightblue">correlation</span> of a filter $w$ with an image $f$ is shown below.
 
-A <span style = "color:lightblue">linear spatial filter</span> performs a sum-of-products operation between an image $f$ and a filter kernel $w$.
+$$w(x,y)\bigstar f(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
 
-$$g(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
+The expression for the <span style = "color:lightblue">convolution</span> of a filter $w$ with an image $f$ is shown below. The filter $w$ is rotated by 180$^\circ$.
 
+$$w(x,y)\star f(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
 
-In a 1D signal, the original length and the correlation result have a length of $M$, but the full correlation result has a length of $M+2a$ due to **zero-padding**. The padding is needed to fill in missing values during kernel iteration. In a two-dimensional signal, an image with size $(M,N)$ creates a full correlation result of size $(M+2a,N+2b)$.
+The <span style = "color:lightblue">impulse response</span> of correlation is a rotation of the filter by 180$^{\circ}$. In spatial convolution, since the filter is rotated beforehand, the impulse response is identical to the filter.
 
-The <span style = "color:lightblue">impulse response</span> of this process is a rotation of the filter by 180$^{\circ}$.
+### Zero-padding
 
-In spatial convolution, since the filter is rotated beforehand, the impulse response is a copy of the filter.
+To perform a sum-of-products operation on pixels close to or at the image margins, additional zeros are padded. For example, in a one-dimensional signal, an image with original length of $M$ would create a correation result of length $M$ but a **full correlation result** of length $M + 2a$.
 
+![[image-processing-1d-padding.png|275]]
 
-## Separable Filter Kernels
+In a two-dimensional signal, an image with size $(M,N)$ would create a **full correlation result** with size $(M+2a,N+2b)$.
+
+![[image-processing-2d-padding.png|350]]
+
+### Properties
+
+The properties for convolution and correlation are shown in the table below.
+
+![[image-processing-conv-corr-prop.png|600]]
+
+### Separable Filter Kernels
 
 A two-dimensional <span style = "color:lightblue">separable filter kernel</span> can be written as a product of two one-dimensional kernels.
 
-$$w(x,y)=w(x)w(y)$$
+$$w(x,y) = w(x)w(y)$$
+An example of a separable filter is shown below.
+
+$$
+\begin{align}
+	w & =
+	\begin{bmatrix}
+		1 & 1 & 1 \newline
+		1 & 1 & 1
+	\end{bmatrix}
+	\rightarrow
+	w_1=
+	\begin{bmatrix}
+		1 \newline 1
+	\end{bmatrix}
+	\quad\text{and}\quad
+	w_2=
+	\begin{bmatrix}
+		1 & 1 & 1
+	\end{bmatrix}
+\end{align}
+$$
+The original kernel can be reconstructed from the constituent kernels with the matrix equation below.
+
+$$w=w_1w_2^T=w_1\star w_2$$
 
 ## Highpass Filters
 
