@@ -18,11 +18,11 @@ The <span style = "color:lightblue">impulse response</span> of correlation is a 
 
 To perform a sum-of-products operation on pixels close to or at the image margins, additional zeros are padded. For example, in a one-dimensional signal, an image with original length of $M$ would create a correation result of length $M$ but a **full correlation result** of length $M + 2a$.
 
-![[image-processing-1d-padding.png|275]]
+![[image-processing-1d-padding.png|250]]
 
 In a two-dimensional signal, an image with size $(M,N)$ would create a **full correlation result** with size $(M+2a,N+2b)$.
 
-![[image-processing-2d-padding.png|350]]
+![[image-processing-2d-padding.png|300]]
 
 ### Properties
 
@@ -59,10 +59,58 @@ $$
 The original kernel can be reconstructed from the constituent kernels with the matrix equation below.
 
 $$w=w_1w_2^T=w_1\star w_2$$
+**Separable filter kernels are desired due to their computational advantage.** The ratio between the computational cost of an inseparable and a separable kernel with size $m\times n$ is shown below.
+
+$$\text{computational advantage}=\frac{mn}{m+n}$$
+
+## Lowpass Filters
+
+<span style = "color:lightblue">Lowpass filters</span> can be used for **image smoothing** by reducing irrelevant high-frequency details that are found in noise. The filter **allows low frequencies and restricts high frequencies**, creating a blurred image.
+
+> [!INFO]
+> Noise is generally represented by high-frequency fluctuations.
+
+A general equation is shown below, where $w$ represents the kernel and $f$ represents the image.
+$$
+g(x,y)=\frac{
+	\sum_{s=-a}^{a}\sum_{t=-b}^{b}{w(s,t)f(x+s,y+t)}
+}
+{
+	\sum_{s=-a}^{a}\sum_{t=-b}^{b}{w(s,t)}
+}
+$$
+
+> [!INFO]
+> The denominator is the <span style = "color:lightblue">normalization factor</span>. It is needed as the associations between pixels should not be disturbed.
+
+### Box Filter
+
+A <span style = "color:lightblue">box filter</span> accomplishes image smoothing spatial filtering by averaging.
+
+$$R=\frac{1}{9}\sum_{i=1}^{9}{z_i}$$
+
+![[image-processing-box-filter.png|600]]
+
+The complete equation of the box filter is shown below, where pixel values are averaged over a larger region.
+
+$$h[m,n]=\sum_{k,l}{g[k,l]f[m+k,n+l]}$$
+
+### Gaussian Filter
+
+Named after Carl Friedrich Gauss, the kernel values of the <span style = "color:lightblue">Gaussian filter</span> are sampled from the two-dimensional Gaussian function.
+
+$$w(s,t)=\frac{1}{2\pi\sigma^2}\exp$$
+
+This filter is **separable**, where the weights fall off with distance from the center pixel.
+
+> [!INFO]
+> The Gaussian kernel values are theoretically infinite, but they are truncated typically at two to three standard deviations ($\sigma$).
+
+
 
 ## Highpass Filters
 
-<span style = "color:lightblue">Highpass filters</span> create sharpening in an image, where intensity transitions and details are highlighted. This filter **allows high frequencies and restricts low frequencies.** 
+<span style = "color:lightblue">Highpass filters</span> can be used for **image sharpening**, where intensity transitions and details are highlighted. The filter **allows high frequencies and restricts low frequencies.**
 
 A highpass filter is achieved using <span style = "color:lightblue">differentiation</span>.
 
