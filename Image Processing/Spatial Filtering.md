@@ -144,11 +144,49 @@ There are several gradient operators to use, such as the <span style = "color:li
 
 A first-derivative filter can be used for edge enhancement, as **only the regions with <u><b>change</b></u> will be reflected in the output**. 
 
-### Second Derivative
+![[image-processing-gradient-ex.png|600]]
+
+### Laplacian Operator
 
 The <span style = "color:lightblue">Laplacian operator</span> is the simplest second-order isotropic derivative operator.
 
-$$\nabla^2f=\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}$$
+$$
+\begin{gather}
+	\nabla^2f =\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2} \newline
+	\frac{\partial^2f}{\partial x^2} = f(x+1,y)+f(x-1,y)-2f(x,y) \newline
+	\frac{\partial^2f}{\partial y^2} = f(x,y+1)+f(x,y-1)-2f(x,y)
+\end{gather}
+$$
+![[image-processing-laplacian.png|600]]
 
-Some Laplacian kernels are shown below.
+
+### Sharpening Images
+
+Images can be sharpened by **adding edges to the images** to enhance details.
+
+$$\underbracket{g(x,y)}_{\text{sharpened}}=\underbracket{f(x,y)}_{\text{original}}+c\cdot \underbracket{e(x,y)}_{\text{edge map}}$$
+The amount of sharpening can be controlled by the sharpening factor $c$. A sharpening of an image of the moon with a Laplacian operator is shown below.
+
+![[image-processing-laplacian-ex.png|600]]
+
+### Unsharp Masking
+
+Images can also be sharpened by adding **an unsharp mask** to the original image. The mask is obtained by **subtracting the blurred image from the original image**.
+
+$$
+\begin{gather}
+	g_{mask}(x,y)=f(x,y)-\bar{f}(x,y) \newline \newline
+	g(x,y) = f(x,y) + kg_{mask}(x,y)
+\end{gather}
+$$
+The value of $k$ determines the contribution of the unsharp mask. For example, highboost filtering is performed when $k > 1$.
+
+![[image-processing-unsharp-mask.png|250]]
+
+An example of unsharp masking with a $31\times 31$ Gaussian filter is shown below, where unsharp masking ($k=1$) and highboost filtering ($k=4.5$) are compared.
+
+![[image-processing-unsharp-mask-ex.png|700]]
+
+> [!WARNING]
+> Image sharpening should not be overdone, as the output would contain an unnecessary amount of noise.
 

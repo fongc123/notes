@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Image Processing/Spatial Filtering.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -138,11 +138,11 @@
   },
   "active": "accc0149d8a2e7c6",
   "lastOpenFiles": [
-    "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Spatial Filtering.md",
-    "Data Visualization/Visual Channels.md",
     "Data Mining/Data Preprocessing.md",
+    "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Data Visualization/Introduction.md",
     "Image Processing/Introduction.md",
