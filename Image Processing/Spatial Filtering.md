@@ -99,24 +99,50 @@ $$h[m,n]=\sum_{k,l}{g[k,l]f[m+k,n+l]}$$
 
 Named after Carl Friedrich Gauss, the kernel values of the <span style = "color:lightblue">Gaussian filter</span> are sampled from the two-dimensional Gaussian function.
 
-$$w(s,t)=\frac{1}{2\pi\sigma^2}\exp$$
+$$w(s,t)=\frac{1}{2\pi\sigma^2}\exp\left(-\frac{s^2+t^2}{2\sigma^2}\right)=K\exp\left(-\frac{s^2+t^2}{2\sigma^2}\right)$$
 
 This filter is **separable**, where the weights fall off with distance from the center pixel.
 
 > [!INFO]
 > The Gaussian kernel values are theoretically infinite, but they are truncated typically at two to three standard deviations ($\sigma$).
 
+![[image-processing-gaussian-filter.png|700]]
 
+Lowpass filtering can be applied to thresholding for region extraction (e.g., astronomy) or for shading correction.
+
+## Non-linear Spatial Filtering
+
+<span style = "color:lightblue">Non-linear spatial filters</span> typically replace the center pixel value with a value determined by an ordering or ranking alogirthm of the neighborhood. Some examples of ordering filters include **median filter**, **max filter**, and **minimum filter**.
+
+### Medium Filter
+
+In a <span style = "color:lightblue">medium filter</span>, the center pixel value is replaced by the median of the sorted values in the pixel window. Three median filters of varying radii are shown below.
+
+![[image-processing-median-filter.png]]
+
+This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
 
 ## Highpass Filters
 
-<span style = "color:lightblue">Highpass filters</span> can be used for **image sharpening**, where intensity transitions and details are highlighted. The filter **allows high frequencies and restricts low frequencies.**
+<span style = "color:lightblue">Highpass filters</span> can be used for **image sharpening**, where intensity transitions and fine details are highlighted. The filter **allows high frequencies and restricts low frequencies.**
 
 A highpass filter is achieved using <span style = "color:lightblue">differentiation</span>.
 
-### First Derivative
+> [!WARNING]
+> Differentiation is very sensitive to noise. It is important to blur the image first before performing differentiation.
 
-A first-derivative filter can be used for edge enhancement.
+First derivatives create thick edges, while second derivatives produce better edges.
+
+### Image Gradient
+
+<span style = "color:lightblue">Image gradients</span> can be achieved with the first derivative.
+
+$$M(x,y)=\text{mag}(\nabla f)=\sqrt{g_x^2+g_y^2}\approx|g_x|+|g_y|$$
+There are several gradient operators to use, such as the <span style = "color:lightblue">Roberts cross-gradient operator</span> or the <span style = "color:lightblue">Sobel operator</span>.
+
+![[image-processing-roberts-sobel.png]]
+
+A first-derivative filter can be used for edge enhancement, as **only the regions with <u><b>change</b></u> will be reflected in the output**. 
 
 ### Second Derivative
 
