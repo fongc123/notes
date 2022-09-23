@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Spatial Filtering.md",
+            "file": "Data Visualization/Visual Channels.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Data Visualization/Visual Channels.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Data Visualization/Visual Channels.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md"
+                "file": "Data Visualization/Visual Channels.md"
               }
             }
           },
@@ -134,19 +134,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "accc0149d8a2e7c6",
   "lastOpenFiles": [
+    "Python Libraries/Pandas.md",
+    "Python Libraries/Selenium.md",
     "Data Mining/Data Preprocessing.md",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Principles.md",
-    "Image Processing/Spatial Filtering.md",
-    "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Arithmetic Operations.md",
-    "Data Visualization/Introduction.md",
+    "Data Mining/Introduction.md",
     "Image Processing/Introduction.md",
-    "Image Processing/Intensity Transformations.md",
-    "Image Processing/Acquisition & Representation.md"
+    "Machine Learning/Introduction.md",
+    "Data Visualization/Perception.md",
+    "Image Processing/Acquisition & Representation.md",
+    "Data Visualization/Visual Channels.md",
+    "img/data-mining-system.png"
   ]
 }
