@@ -74,4 +74,3 @@ $$\text{F-measure}=\frac{2\times \text{recall}\times\text{precision}}{\text{reca
 For a general accuracy indicator, the <span style = "color:lightblue">accuracy</span> can be calculated as shown below.
 
 $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$$
-
