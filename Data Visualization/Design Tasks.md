@@ -40,3 +40,14 @@ Additionally, new data can be derived to show insights within the same view.
 Automatic? manual?
 
 Manual $\rightarrow$ change encoding, parameters, arrangement or ordering, 
+
+Manipulation can also be used for selection. Components in the foreground can be highlighted by changing the color or other channels. Selection: hover (light), click (heavy).
+
+Lastly, manipulation can be used for navigation to change the viewpoint $\rightarrow$ item reduction.
+
+### Facet
+
+Juxtapose shows views side-by-side, while partition has no strict dividing line. Superimpose consists of one or more dataset layers overlapping each other. Each layer should be visually distinguishable.
+
+Superimpose is useful for reducing space; however, when there are too many layers, juxtapose may be better for clarity.
+
