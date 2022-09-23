@@ -26,5 +26,17 @@ Directly find the value of a particular point, a group of points, or all the poi
 A target refers to the subject of a visualization <u>task</u>. All data possess trends, outliers, and features, where one attribute (variable) or multiple attributes can be analyzed. Specific to network and spatial data are topologies and shapes respectively.
 
 
+## Interaction Design
 
+<span style = "color:lightblue">Interactions</span> can be implemented to handle the increasing complexity of a dataset.
+- <span style = "color:lightblue">manipulate</span>: change view
+- <span style = "color:lightblue">facet</span>: facet across multiple views
+- <span style = "color:lightblue">reduce</span>: reduce items or attributes in a single view
 
+Additionally, new data can be derived to show insights within the same view.
+
+### Manipulate
+
+Automatic? manual?
+
+Manual $\rightarrow$ change encoding, parameters, arrangement or ordering, 
