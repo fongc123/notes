@@ -68,7 +68,7 @@ Lastly, <span style = "color:lightblue">navigation</span> changes the viewpoint 
 - <span style = "color:lightblue">cut</span>: show only items in a cut region
 - <span style = "color:lightblue">project</span>: change mathematics of image creation (e.g., orthographic, perspective)
 
-Chart views can be <span style = "color:lightblue">manipulated</span> manually or automatically.
+Interaction within a **single chart view** can be <span style = "color:lightblue">manipulated</span> manually or automatically.
 
 ### Facet
 
@@ -78,10 +78,45 @@ A visualization can be <span style = "color:lightblue">faceted</span> into multi
 
 ![[data-vis-facet-juxtapose.png|600]]
 
+<span style = "color:lightblue">Partitioned</span> views are shown in the same chart, where there is no strict dividing line. Data can be split by **attributes**, **spatial proximity**, or **patterns**.
 
-Juxtapose shows views side-by-side, while partition has no strict dividing line. Superimpose consists of one or more dataset layers overlapping each other. Each layer should be visually distinguishable.
+<span style = "color:lightblue">Superimposed</span> views consists of one or more dataset **layers** overlapping on the same chart. Each layer should be visually distinguishable.
 
-Superimpose is useful for reducing space; however, when there are too many layers, juxtapose may be better for clarity.
+> [!WARNING]
+> Superimposed views are useful for space reduction; however, when there are too many layers, juxtaposed views may be better for clarity.
 
 ### Reduce
 
+The items and attributes displayed can be reduced to highlight only the necessary components.
+
+<span style = "color:lightblue">Filters</span> can specifically remove or include items or attributes. It is straightforward and intuitive; however, removed items may be forgotten.
+
+<span style = "color:lightblue">Aggregation</span> can be performed to group or summarize items, but it is often difficult to avoid loss of data. In the two-dimensional density plot below, the raw data is aggregated into circles or squares.
+
+![[data-vis-reduce-aggregate.png|600]]
+
+>[!INFO]
+>Aggregation should be logical, and important information (e.g., averages, standard deviations, uncertainties) should still be included.
+
+<span style = "color:lightblue">Embedding</span> incorporates additional user interactions to combine information in a single view. Focus and context information are included in a single view, but length comparisons and object tracking may be impaired.
+
+![[data-vis-reduce-embed.png|450]]
+
+Distortion is used in the above chart.
+
+### Benefits & Limitations
+
+Some benefits of using interactions are listed below.
+- flexible, powerful, and intuitive
+- ease of exploration of data
+- fluid task switching
+- good support of animated transitions
+
+However, there are some limitations of interactions.
+- time cost
+- cognitive load on previous state
+- interaction controls require space
+- interaction not as intended by designer
+
+> [!WARNING]
+> When switching views or data displays, it is difficult for users to compare the current visible item with an item from memory.
