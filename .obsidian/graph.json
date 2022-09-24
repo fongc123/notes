@@ -6,8 +6,37 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Data Mining\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Image Processing\"",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:Kubernetes",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:\"Data Visualization\"",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    }
+  ],
+  "collapse-display": true,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -17,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7683174228123727,
-  "close": true
+  "scale": 0.7683174228123776,
+  "close": false
 }

@@ -1,15 +1,29 @@
 # Design Tasks
 
-Task design pertain to the purpose of the visualization (i.e., overall message) $\rightarrow$ how it is conveyed. <span style = "color:lightblue">Bertin's three stages for reading a graphic</span> describes how people read a graph.
-- external, internal, relationships
+Task design pertains to the purpose of the visualization (i.e., overall message). <span style = "color:lightblue">Bertin's three stages for reading a graphic</span> outline how a visualization is comprehended.
+- <span style = "color:lightblue">external</span>: overall context (e.g., graph title, axis labels)
+- <span style = "color:lightblue">internal</span>: visual variables used to represent components, such as **marks** and **visual channels** (*see [[Visual Channels#Visual Encoding]]*)
+- <span style = "color:lightblue">relationships</span>: connections between components to create meaning and knowledge
 
-<span style = "color:lightblue">Reading level</span>: elementary, intermediate, overall
+These stages are also similar with <span style = "color:lightblue">reading level</span>: **elementary** (*values and variables*), **intermediate** (*comparisons*), **overall** (*meaning*).
+
+> [!QUESTION]
+> Why is the user looking at the visualization?
 
 ## Task Abstraction
 
-Tasks are domain-dependent; however, these tasks can be abstracted. Similar task abstractions have similar solutions.
+Each visualization task is domain-dependent, as the data is different. However, the tasks can be abstracted. Similar <span style = "color:lightblue">task abstractions</span> have similar solutions.
 
 $$\text{task}\rightarrow\text{verb (action)}+\text{noun (target)}$$
+
+A task consists of an **action** and a **target** to perform the action on.
+
+### Actions
+
+
+
+The <span style = "color:lightblue">analyze</span> category aims to create insights at a high level. The <span style = "color:lightblue">consume</span> subcategory simply redistributes information (e.g., )
+
 ### Verb: Analyze
 Consume: discover, present, enjoy (for fun). The `consume` category simply redistributes information.
 Produce: annotate, record, derive. The `produce` category performs additional modification to the display to show more insights.
