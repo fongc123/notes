@@ -20,48 +20,68 @@ A task consists of an **action** and a **target** to perform the action on.
 
 ### Actions
 
+The <span style = "color:lightblue">analyze</span> category aims to create insights at a high level.
 
+| **Sub-category** |          **Examples**           |
+|:----------------:|:-------------------------------:|
+|     Consume      | Discover, present, <u>enjoy</u> |
+|     Produce      |    Annotate, record, derive     |
 
-The <span style = "color:lightblue">analyze</span> category aims to create insights at a high level. The <span style = "color:lightblue">consume</span> subcategory simply redistributes information (e.g., )
+The <span style = "color:lightblue">consume</span> sub-category simply redistributes information, while the <span style = "color:lightblue">produce</span> sub-category displays additional operations and analysis (e.g., aggregation, simplification, dimensionality reduction).
 
-### Verb: Analyze
-Consume: discover, present, enjoy (for fun). The `consume` category simply redistributes information.
-Produce: annotate, record, derive. The `produce` category performs additional modification to the display to show more insights.
+The <span style = "color:lightblue">search</span> category aims to look into a group of points.
 
-### Verb: Search
+![[data-vis-actions-search.png|600]]
 
-Finding for one or a group of points (locate, browse, locate, explore)
-
-### Verb: Query
-
-Directly find the value of a particular point, a group of points, or all the points (identify, compare, summarize).
+The <span style = "color:lightblue">query</span> category directly finds the value of a particular point or a group of points.
+- <span style = "color:lightblue">identify</span>: query a specific point
+- <span style = "color:lightblue">compare</span>: compare a trend with another
+- <span style = "color:lightblue">summarize</span>: give an overview of all points
 
 ### Target
-A target refers to the subject of a visualization <u>task</u>. All data possess trends, outliers, and features, where one attribute (variable) or multiple attributes can be analyzed. Specific to network and spatial data are topologies and shapes respectively.
+
+A <span style = "color:lightblue">target</span> refers to the subject of a task abstraction. **Trends**, **outliers**, and **features** can be found in all data.
+
+In single-attribute data, the distribution or extreme values can be outlined. In data with multiple attributes, the similarity or correlation between datasets can be identified.
+
+Specific to network and spatial data are topologies and shapes respectively.
 
 
 ## Interaction Design
 
 <span style = "color:lightblue">Interactions</span> can be implemented to handle the increasing complexity of a dataset.
-- <span style = "color:lightblue">manipulate</span>: change view
+- <span style = "color:lightblue">manipulate</span>: change view over time
 - <span style = "color:lightblue">facet</span>: facet across multiple views
 - <span style = "color:lightblue">reduce</span>: reduce items or attributes in a single view
 
-Additionally, new data can be derived to show insights within the same view.
-
 ### Manipulate
 
-Automatic? manual?
+A <span style = "color:lightblue">change over time</span> can be implemented by changing the **encoding**, the **parameters**, or the **arrangement** of a visualization. Here, the data and the attributes are identical, but the form has changed.
 
-Manual $\rightarrow$ change encoding, parameters, arrangement or ordering, 
+<span style = "color:lightblue">Selection</span> can also be implemented to highlight specific components of interest. It is a basic interaction for most visualizations. Selection channels include **color** and **motion**, where components can be selected by interval (1D brush or 2D brush), by hovering (lightweight), or by clicking (heavyweight).
 
-Manipulation can also be used for selection. Components in the foreground can be highlighted by changing the color or other channels. Selection: hover (light), click (heavy).
+> [!INFO]
+> Multiple selection is typically done by shift-clicking or by automatically selecting similar components.
 
-Lastly, manipulation can be used for navigation to change the viewpoint $\rightarrow$ item reduction.
+Lastly, <span style = "color:lightblue">navigation</span> changes the viewpoint and controls item visibility. Common navigation actions include **zooming**, **panning**, and **rotating**.
+- <span style = "color:lightblue">slice</span>: show only items matching a specific value or are within a specific range of values
+- <span style = "color:lightblue">cut</span>: show only items in a cut region
+- <span style = "color:lightblue">project</span>: change mathematics of image creation (e.g., orthographic, perspective)
+
+Chart views can be <span style = "color:lightblue">manipulated</span> manually or automatically.
 
 ### Facet
+
+A visualization can be <span style = "color:lightblue">faceted</span> into multiple views.
+
+<span style = "color:lightblue">Juxtaposed</span> views are shown side-by-side, where each view could convey different representations of the same dataset.
+
+![[data-vis-facet-juxtapose.png|600]]
+
 
 Juxtapose shows views side-by-side, while partition has no strict dividing line. Superimpose consists of one or more dataset layers overlapping each other. Each layer should be visually distinguishable.
 
 Superimpose is useful for reducing space; however, when there are too many layers, juxtapose may be better for clarity.
+
+### Reduce
 
