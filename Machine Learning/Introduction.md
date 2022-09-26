@@ -49,7 +49,49 @@ $$
 When there are multiple features, this method finds the feature(s) that has the most effect on the loss function and adjusts accordingly.
 
 ### Code Template
-Several lines of code related to creating a linear regression model are shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems as well.
+A code template for creating a linear regression model is shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems as well.
+
+```python
+import torch
+import torch.nn as nn
+import numpy as np
+
+# create the linear regression model
+model = nn.Linear(1, 1) # arguments: no. of input, no. of output
+
+# define a loss and an optimizer
+criterion = nn.MSELoss()
+optimizer = torch.optim.SGD(model.parameters(), lr = 0.1)
+
+# convert data to tensor
+X = X.reshape(N, 1)
+Y = Y.reshape(N, 1)
+
+inputs = torch.from_numpy(X.astype(np.float32))
+targets = torch.from_numpy(Y.astype(np.float32))
+
+# iterate through epochs to train the model
+losses = []
+num_epochs = 30
+for it in range(num_epochs):
+	# zero the parameter gradients
+	optimizer.zero_grad()
+
+	# forward pass
+	outputs = model(inputs)
+	loss = criterion(outputs, targets)
+
+	# keep losses so that it can be plotted later
+	losses.append(loss.item())
+
+	# backward and optimize
+	loss.backward()  # calculate gradient
+	optimizer.step() # gradient descent step
+```
+
+An <span style = "color:lightblue">epoch</span> (i.e., an iteration) is one complete pass of the training dataset through the algorithm.
+
+Internally, PyTorch accumulates gradients in each epoch. Thus, the parameter gradients must be set to zero before starting the next epoch with `optimizer.zero_grad()`.
 
 ## Classification
 
