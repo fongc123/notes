@@ -93,9 +93,13 @@ An <span style = "color:lightblue">epoch</span> (i.e., an iteration) is one comp
 
 Internally, PyTorch accumulates gradients in each epoch. Thus, the parameter gradients must be set to zero before starting the next epoch with `optimizer.zero_grad()`.
 
+The <span style = "color:lightblue">learning rate</span> is the step size at each iteration while moving towards a minimum in a loss function. A small learning rate requires many iterations before reaching the minimum point, while a large learning rate swiftly reaches it. Too large of a learning rate causes drastic updates which lead to divergent behaviour.
+
 ## Classification
 
 A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Several classification algorithms include **decision tree**, **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
+
+### Accuracy
 
 A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
 
@@ -116,3 +120,5 @@ $$\text{F-measure}=\frac{2\times \text{recall}\times\text{precision}}{\text{reca
 For a general accuracy indicator, the <span style = "color:lightblue">accuracy</span> can be calculated as shown below.
 
 $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$$
+### k
+

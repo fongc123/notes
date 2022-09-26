@@ -166,7 +166,7 @@ For example, an income range of \$12,000 to \$98,000 can be normalized to a rang
 
 In ***z*-score normalization**, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
 
-$$v'=\frac{v-\bar{A}}{\sigma_A}$$
+$$v'=\frac{v-\bar{A}}{\sigma_A}\quad \text{or}\quad Z=\frac{x-\mu}{\sigma}$$
 > [!QUESTION]
 > How many standard deviations from the average does the data point lie?
 
