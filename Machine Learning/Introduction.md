@@ -110,16 +110,18 @@ $$
 A value of $a$ greater than $0$ corresponds to one class, while that of less than $0$ corresponds to the other. It can be visualized as a <span style = "color:lightblue">step function</span> $u(a)$ or <span style = "color:lightblue">sigmoid function</span> $\sigma(a)$, which is designed to output either $0$ or $1$. Normally, it is expressed as a probability of whether the object belongs to the class (i.e., true or false).
 
 $$
-\begin{align}
-	p(y=1|)
-\end{align}
+p(y=1|x) = \sigma(w^Tx+b)=\sigma(\sum_{d-1}^{D}w_dx_d+b)
 $$
+
+> [!INFO]
+> This model is referred to as <span style = "color:lightblue">logistic regression</span>, as a sigmoid function is also referred to as a logistic function.
+
 
 ### Cross-entropy Loss
 
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
 
-### Accuracy
+### Model Performance
 
 A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
 
