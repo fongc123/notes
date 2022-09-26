@@ -19,7 +19,7 @@ $$\hat{y}=mx+b$$
 
 Predictions are made by inputting a value in $x$ and obtaining and output in $y$.
 
-### Loss Function
+### Mean Squared Error
 Given a dataset consisting of $x$ and $y$ values, a <span style = "color:lightblue">loss function</span> determines how well certain $m$ and $b$ values fit an equation to the dataset.
 
 The <span style = "color:lightblue">mean squared error (MSE)</span> is the average of the squared difference between individual data points and the fitted line.
@@ -98,6 +98,26 @@ The <span style = "color:lightblue">learning rate</span> is the step size at eac
 ## Classification
 
 A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Several classification algorithms include **decision tree**, **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
+
+### Binary
+
+In <span style = "color:lightblue">binary classification</span>, it can be expressed as a linear combination of inputs $x$ and weights $w$ with a bias $b$.
+
+$$
+a = w_1x_1+w_2x_2+b
+$$
+
+A value of $a$ greater than $0$ corresponds to one class, while that of less than $0$ corresponds to the other. It can be visualized as a <span style = "color:lightblue">step function</span> $u(a)$ or <span style = "color:lightblue">sigmoid function</span> $\sigma(a)$, which is designed to output either $0$ or $1$. Normally, it is expressed as a probability of whether the object belongs to the class (i.e., true or false).
+
+$$
+\begin{align}
+	p(y=1|)
+\end{align}
+$$
+
+### Cross-entropy Loss
+
+In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
 
 ### Accuracy
 
