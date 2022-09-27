@@ -162,6 +162,8 @@ Information gain is **biased** toward tests with many outcomes. These attributes
 
 A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
 
+![[ml-confusion-matrix.png|600]]
+
 Alternatively, other accuracy measures include sensitivity and specificity. <span style = "color:lightblue">Precision</span> is the fraction of correctly predicted classes (true positives; retrieved and relevant documents) out of all data points (true positives and false positives; all documents).
 
 $$\text{precision}=\frac{\text{TP}}{\text{TP}+\text{FP}}$$
@@ -179,7 +181,20 @@ $$\text{F-measure}=\frac{2\times \text{recall}\times\text{precision}}{\text{reca
 For a general accuracy indicator, the <span style = "color:lightblue">accuracy</span> can be calculated as shown below.
 
 $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$$
-#### $k$-fold Cross-validation
+#### $k$-Fold Cross-validation
+In the <span style = "color:lightblue">holdout method</span>, a dataset $D$ is partitioned into two disjoint datasets $D_1$ and $D_2$. The larger dataset is used for the training set, and the smaller for the test set.
+
+> [!INFO]
+> Typically, the size of $D_1$ is two thirds of the original, while the size of $D_2$ is one third of the original.
+
+A <span style = "color:lightblue">k-fold cross-validation</span> partitions the original dataset into $k$ disjoint datasets and repeats the holdout method $k$ times. A new classifier is created for each iteration, and **the average of the classifier accuracies is the overall accuracy estimate**.
+
+![[ml-cross-validation.png|400]]
+
+> [!INFO]
+> In each iteration $i$, the dataset $D_i$ size of $\frac{1}{k}|D|$ is selected as the test set, while the remaining datasets with size of$(1-\frac{1}{k})|D|$ is selected as the training set.
+
+For 
 
 For each iteration, a dataset partition $D_i$ is selected as the test set, while the rest serve as the training set. 
 
