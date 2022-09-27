@@ -156,8 +156,7 @@ $$A_c<c$$
 The set of candidate thresholds are the midway segregation point between attribute values. The value of $c$ is determined by the information gain.
 
 #### Gain Ratio
-
-Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy Accordingly, attributes with many values and that create no entropy (e.g., student ID) should be penalized. 
+Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy and should be penalized.
 
 ### Model Performance
 
