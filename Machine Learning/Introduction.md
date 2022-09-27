@@ -143,7 +143,17 @@ The <span style = "color:lightblue">units</span> that entropy is measured in is 
 - <span style = "color:lightblue">nats</span>: $b\rightarrow e$
 - <span style = "color:lightblue">bits</span>: $b\rightarrow 2$ (*this is used in classification*)
 
+The <span style = "color:lightblue">information gain</span> of $D$ relative to attribute $A$ is the expected **reduction** in entropy caused by knowing the value of $A$. The set of examples in $D$ where attribute $A$ has value $v$ is represented by $D_v$.
 
+$$Gain(D,A)=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}}Entropy(D_v)$$
+
+**The attribute that generates the maximum information gain is desired.**
+
+For <span style = "color:lightblue">continuous-valued attributes</span> (e.g., temperature), they are discretized, and a Boolean attribute is created, where it evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
+
+$$A_c<c$$
+
+The set of candidate thresholds are the midway segregation point between attribute values. The value of $c$ is determined by the information gain.
 
 ### Model Performance
 
