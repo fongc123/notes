@@ -116,10 +116,14 @@ $$
 > [!INFO]
 > This model is referred to as <span style = "color:lightblue">logistic regression</span>, as a sigmoid function is also referred to as a logistic function.
 
-
 ### Cross-entropy Loss
 
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
+
+### Decision Tree
+A <span style = "color:lightblue">decision tree</span> represents the classification of an object, where each <span style = "color:lightblue">internal node</span> represents an attribute, each <span style = "color:lightblue">branch</span> represents an outcome, and each <span style = "color:lightblue">leaf node</span> holds a class label.
+
+
 
 ### Model Performance
 
@@ -142,5 +146,8 @@ $$\text{F-measure}=\frac{2\times \text{recall}\times\text{precision}}{\text{reca
 For a general accuracy indicator, the <span style = "color:lightblue">accuracy</span> can be calculated as shown below.
 
 $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$$
-### k
+#### $k$-fold Cross-validation
 
+For each iteration, a dataset partition $D_i$ is selected as the test set, while the rest serve as the training set. 
+
+Stratified $k$-fold cross-validation?
