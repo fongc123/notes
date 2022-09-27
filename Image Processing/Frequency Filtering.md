@@ -63,6 +63,40 @@ $$
 \end{gather}	
 $$
 
+> [!INFO]
+> The **average intensity of the image** is obtained when $u=0$ and $v=0$ in the frequency domain.
+> $$F(0,0)=\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}{f(x,y)}=MN\bar{f}$$
+
+One-dimensional Fourier transform properties (e.g., time shift, frequency shift, rotation) apply to two-dimensional Fourier transform as well.
+
+$$
+\begin{align}
+	\text{translation:}\quad & f(x,y)\exp\left[j2\pi\left(\frac{u_0 x}{M}+\frac{v_0 y}{N}\right)\right] \longleftrightarrow F(u-u_0,v-v_0) \newline \newline
+	& f(x-x_0,y-y_0)\longleftrightarrow F(u,v)\exp\left[-j2\pi \left(\frac{ux_0}{M}+\frac{vy_0}{N}\right)\right] \newline\newline
+	\text{rotation:}\quad & f(r,\theta+\theta_0)\longleftrightarrow F(\omega,\phi+\theta_0) \quad\small\text{(using polar coordinates)}
+\end{align}
+$$
+
+### Spectrum & Phase Angle
+Additional components related to the Fourier transform are listed below.
+
+$$
+\begin{align}
+	\text{real \& imaginary:}\quad & F(u,v)=R(u,v)+jI(u,v) \newline\newline
+	\text{2D polar form:}\quad & F(u,v)=|F(u,v)|\exp\left[j\phi(u,v)\right] \newline\newline
+	\text{Fourier spectrum:}\quad & |F(u,v)|=\sqrt{R^2(u,v)+I^2(u,v)} \newline\newline
+	\text{Power spectrum:}\quad & P(u,v)=|F(u,v)|^2 \newline\newline
+	\text{Phase angle:}\quad & \phi(u,v)=\arctan\left[\frac{I(u,v)}{R(u,v)}\right]
+\end{align}
+$$
+
+In image processing, the <span style = "color:lightblue">Fourier spectrum</span> determines the intensities in the image, while the <span style = "color:lightblue">phase angle</span> carries information about the location of discernible objects in the image. **The Fourier spectrum and the phase angle are both needed to faithfully reconstruct an image.**
+
+> [!INFO]
+> Amplitudes and phase angles of an image can be swapped with those from other images. This can be applied to deep learning to create additional training set images from one source image. The semantics of the source image are still retained.
+> 
+> ![[image-processing-amp-phase-swap.png|600]]
+
 ### Properties
 The properties of the Fourier transform are listed below.
 
