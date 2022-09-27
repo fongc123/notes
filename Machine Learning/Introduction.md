@@ -99,9 +99,9 @@ The <span style = "color:lightblue">learning rate</span> is the step size at eac
 
 A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Several classification algorithms include **decision tree**, **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
 
-### Binary
+### Binary Classification
 
-In <span style = "color:lightblue">binary classification</span>, it can be expressed as a linear combination of inputs $x$ and weights $w$ with a bias $b$.
+<span style = "color:lightblue">Binary classification</span> can be expressed as a linear combination of inputs $x$ and weights $w$ with a bias $b$.
 
 $$
 a = w_1x_1+w_2x_2+b
@@ -122,6 +122,26 @@ In **binary** classification, a <span style = "color:lightblue">binary cross-ent
 
 ### Decision Tree
 A <span style = "color:lightblue">decision tree</span> represents the classification of an object, where each <span style = "color:lightblue">internal node</span> represents an attribute, each <span style = "color:lightblue">branch</span> represents an outcome, and each <span style = "color:lightblue">leaf node</span> holds a class label.
+
+#### Purity & Entropy
+Attributes that split examples into sets that are relatively **pure** in one label are desired. <span style = "color:lightblue">Purity</span> refers to the composition (or uncertainty) of labels. For example, in a dataset $D$ with two discrete classes $A$ and $B$, <span style = "color:lightblue">optimal purity</span> is achieved when the proportion of each class is either $0$ or $1$. A sample where both classes have equal proportions at $0.5$ is <span style = "color:lightblue">least pure</span>.
+- $D$: a sample of training samples
+- $p_A=0\quad\text{and}\quad p_B=1$ (optimal)
+- $p_A=1\quad\text{and}\quad p_B=0$ (optimal)
+- $p_A=0.5\quad\text{and}\quad p_B=0.5$ (least pure)
+
+This can be summarized with an <span style = "color:lightblue">entropy curve</span>, where its values range between $0$ (*no entropy*) and $\log_2{m}$ (*maximum entropy*).
+
+$$
+\begin{gather}
+Entropy(D)=-p_A\log_b{p_A}-p_B\log_b{p_B}\quad\Tiny\text{(two values)} \newline \newline
+Entropy(D)=\sum_{i=1}^{m}{-p_i\log_2{p_i}\quad\Tiny\text{(general)}}
+\end{gather}
+$$
+
+The <span style = "color:lightblue">units</span> that entropy is measured in is controlled by the value of $b$.
+- <span style = "color:lightblue">nats</span>: $b\rightarrow e$
+- <span style = "color:lightblue">bits</span>: $b\rightarrow 2$ (*this is used in classification*)
 
 
 
@@ -151,3 +171,4 @@ $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text
 For each iteration, a dataset partition $D_i$ is selected as the test set, while the rest serve as the training set. 
 
 Stratified $k$-fold cross-validation?
+
