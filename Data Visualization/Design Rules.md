@@ -1,5 +1,13 @@
 # Design Rules
 
+Some basic design principles and suggestions are listed below and should be considered.
+- <span style = "color:lightblue">proximity</span>: group related items together (*unrelated items should be distinguishable*)
+- <span style = "color:lightblue">alignment</span>: adhere to a static alignment (*especially useful for comparisons*)
+- <span style = "color:lightblue">repetition</span>: unify style and consistencies across the entire data visualization
+- <span style = "color:lightblue">contrast</span>: drastically differentiate non-identical objects
+
+
+
 The use of <span style = "color:lightblue">chained sequences</span> is useful for expressing dependencies, where the output of the current is the input of the next.
 
 - no unjustified 3D
