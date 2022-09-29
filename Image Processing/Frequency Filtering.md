@@ -93,7 +93,7 @@ $$
 In image processing, the <span style = "color:lightblue">Fourier spectrum</span> determines the intensities in the image, while the <span style = "color:lightblue">phase angle</span> carries information about the location of discernible objects in the image. **The Fourier spectrum and the phase angle are both needed to faithfully reconstruct an image.**
 
 > [!INFO]
-> Amplitudes and phase angles of an image can be swapped with those from other images. This can be applied to deep learning to create additional training set images from one source image. The semantics of the source image are still retained.
+> Amplitudes and phase angles of an image can be swapped with those from other images. This can be applied to deep learning to create additional training set images from one source image. The semantics of the source image are still retained. *See [A Fourier-based Framework for Domain Generalization](https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_A_Fourier-Based_Framework_for_Domain_Generalization_CVPR_2021_paper.pdf).*
 > 
 > ![[image-processing-amp-phase-swap.png|600]]
 
