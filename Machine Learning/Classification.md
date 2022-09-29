@@ -89,7 +89,7 @@ For a general accuracy indicator, the <span style = "color:lightblue">accuracy</
 
 $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$$
 ### $k$-Fold Cross-validation
-In the <span style = "color:lightblue">holdout method</span>, a dataset $D$ is partitioned into two disjoint datasets $D_1$ and $D_2$. The larger dataset is used for the training set, and the smaller for the test set.
+In the <span style = "color:lightblue">holdout method</span>, a dataset $D$ is partitioned into two disjoint datasets $D_1$ and $D_2$. The larger dataset is used for the training set, and the smaller for the validation set.
 
 > [!INFO]
 > Typically, the size of $D_1$ is two thirds of the original, while the size of $D_2$ is one third of the original.
@@ -103,7 +103,7 @@ A <span style = "color:lightblue">k-fold cross-validation</span> partitions the 
 
 The <span style = "color:lightblue">leave-one-out cross-validation</span> is useful for small datasets, where $k$ is equal to the size of the original dataset. Here, training is done on $|D|-1$ examples, and validation is done on $1$ example.
 
-To ensure that each class is represented with approximately equal proportions in both the training and validation sets, <span style = "color:lightblue">k-fold stratified cross-validation</span> is done instead. Here, the original dataset is partitioned into $k$ folds such that **each class is uniformly distributed among all the folds**.
+To ensure that each class has approximately equal proportions in both the training and validation sets, <span style = "color:lightblue">k-fold stratified cross-validation</span> is done instead. Here, the original dataset is partitioned into $k$ folds such that **each class is uniformly distributed among all the folds**.
 
 > [!INFO]
 > In $k$-fold stratified cross-validation, the class distribution in each fold should be similar to that in the original dataset.
