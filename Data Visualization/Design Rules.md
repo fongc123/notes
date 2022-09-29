@@ -1,14 +1,26 @@
 # Design Rules
-
-Some basic design principles and suggestions are listed below and should be considered.
-- <span style = "color:lightblue">proximity</span>: group related items together (*unrelated items should be distinguishable*)
-- <span style = "color:lightblue">alignment</span>: adhere to a static alignment (*especially useful for comparisons*)
-- <span style = "color:lightblue">repetition</span>: unify style and consistencies across the entire data visualization
+The basic design principles and suggestions are listed below and should be followed.
+- <span style = "color:lightblue">proximity</span>: group related items together
+- <span style = "color:lightblue">alignment</span>: adhere to a static alignment (e.g., comparisons)
+- <span style = "color:lightblue">repetition</span>: unify style and consistencies across the entire chart
 - <span style = "color:lightblue">contrast</span>: drastically differentiate non-identical objects
 
+> [!INFO]
+> In addition to grouping related items together, *unrelated* items should be clearly distinguishable.
 
+The use of <span style = "color:lightblue">chained sequences</span> may be useful for expression dependencies, where the output of the current is the input of the next.
 
-The use of <span style = "color:lightblue">chained sequences</span> is useful for expressing dependencies, where the output of the current is the input of the next.
+## 3D
+**Unnecessary use of three-dimensional displays should be avoided.** 
+
+As demonstrated by Steven's power law (*see [[Vis*)
+
+## 2D
+
+## Eyes & Memory
+
+## Resolution & Immersion
+
 
 - no unjustified 3D
 	- planar spatial position is more effective than depth
