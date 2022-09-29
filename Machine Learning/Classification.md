@@ -61,6 +61,10 @@ The set of candidate thresholds are the midway segregation point between attribu
 ### Gain Ratio
 Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy and should be penalized.
 
+$$SplitInfo_A(D)=-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\log_2{\frac{|D_j|}{|D|}}}$$
+### Gini Index
+The <span style = "color:lightblue">Gini index</span> is another attribute selection method.
+
 ## Model Performance
 
 A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
@@ -104,4 +108,7 @@ To ensure that each class is represented with approximately equal proportions in
 > [!INFO]
 > In $k$-fold stratified cross-validation, the class distribution in each fold should be similar to that in the original dataset.
 
+## Over-fitting
+An <span style = "color:lightblue">over-fitted</span> model is **more complex** than an original model, where the over-fitted model will fit noisy data better than an original model.
 
+Special anomalies may have been incorporated into the model, and the accuracy of the model on the test set may be affected.

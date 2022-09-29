@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Design Rules.md",
+            "file": "Machine Learning/Classification.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Design Rules.md",
+                "file": "Machine Learning/Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Design Rules.md",
+                "file": "Machine Learning/Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Design Rules.md"
+                "file": "Machine Learning/Classification.md"
               }
             }
           },
@@ -138,9 +138,9 @@
   },
   "active": "007cf837a7be5056",
   "lastOpenFiles": [
-    "Data Visualization/Design Tasks.md",
-    "Data Visualization/Design Rules.md",
     "Machine Learning/Introduction.md",
+    "Data Visualization/Design Rules.md",
+    "Data Visualization/Design Tasks.md",
     "Untitled.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Color.md",
