@@ -111,4 +111,13 @@ To ensure that each class is represented with approximately equal proportions in
 ## Over-fitting
 An <span style = "color:lightblue">over-fitted</span> model is **more complex** than an original model, where the over-fitted model will fit noisy data better than an original model.
 
-Special anomalies may have been incorporated into the model, and the accuracy of the model on the test set may be affected.
+Special anomalies may have been incorporated into the model. This affects the accuracy of the model on the test set.
+
+### Early-Stopping
+<span style = "color:lightblue">Extra terminating conditions</span> can be added to the decision tree algorithm, where the induction process is stopped if the number of tuples is fewer than a user-specified threshold.
+
+> [!INFO]
+> Selection of an appropriate threshold may be challenging.
+
+### Pruning
+The subtree rooted at a node is removed.
