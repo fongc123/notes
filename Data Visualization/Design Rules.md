@@ -10,6 +10,8 @@ The basic design principles and suggestions are listed below and should be follo
 
 The use of <span style = "color:lightblue">chained sequences</span> may be useful for expression dependencies, where the output of the current is the input of the next.
 
+Additionally, as a general rule, everything that is plotted should have a legend (e.g., labels, titles, axes, panels, and windows).
+
 ## 3D
 **Unnecessary use of three-dimensional displays should be avoided.** In most cases, it adds complexity to a simple problem.
 - planar spatial positioning is more effective than depth (*see [[Visual Channels#Experimentation|Steven's power law]]*)
@@ -68,8 +70,6 @@ The mantra is useful for presentation and storytelling and is helpful in explain
 |  Immediate response   |     $1$      |      Mouse click       |
 |      Brief task       |     $10$     | Heavyweight operation                       |
 
-<span style = "color:lightblue">Fitts' law of limits on motor control</span> states that the amount of time required for a person to move a pointer (e.g., a mouse cursor) to a target area is a function of the distance to the target divided by the size of the target.
+<span style = "color:lightblue">Fitts' law of limits on motor control</span> states that the amount of time required for a person to move a pointer (e.g., a mouse cursor) to a target area $MT$ is a function of the distance to the target $D$ divided by the size (width) of the target $W$, where $a$ and $b$ are the intercept and slope respectively.
 
-$$MT=a+b\log_2{2\frac{D}{W}}$$
-
-
+$$MT=a+b\log_2{\left(2\frac{D}{W}\right)}$$

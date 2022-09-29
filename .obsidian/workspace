@@ -4,25 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "007cf837a7be5056",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Data Visualization/Visual Channels.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "de8f828b7a1eaf2e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Data Visualization/Design Rules.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
