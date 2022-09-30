@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "de8f828b7a1eaf2e",
+        "id": "007cf837a7be5056",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Machine Learning/Classification.md",
-            "mode": "preview",
+            "file": "Data Visualization/Design Rules.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Data Visualization/Design Rules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Data Visualization/Design Rules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Classification.md"
+                "file": "Data Visualization/Design Rules.md"
               }
             }
           },
@@ -136,16 +136,16 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "de8f828b7a1eaf2e",
+  "active": "007cf837a7be5056",
   "lastOpenFiles": [
-    "Image Processing/Frequency Filtering.md",
-    "Data Visualization/Design Rules.md",
-    "Data Visualization/Visual Channels.md",
+    "Data Visualization/Perception.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Introduction.md",
     "Data Mining/Data Preprocessing.md",
     "Data Mining/Introduction.md",
     "Machine Learning/Regression.md",
+    "Image Processing/Frequency Filtering.md",
+    "Data Visualization/Design Rules.md",
     "Data Visualization/Design Tasks.md",
     "Untitled.md"
   ]
