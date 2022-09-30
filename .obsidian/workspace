@@ -7,8 +7,12 @@
         "id": "627838b14eb41571",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Data Visualization/Time Series Data.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Data Visualization/Time Series Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Data Visualization/Time Series Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Data Visualization/Time Series Data.md"
+              }
             }
           },
           {
@@ -131,15 +139,15 @@
   },
   "active": "627838b14eb41571",
   "lastOpenFiles": [
-    "Machine Learning/Classification.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/ML Basics.md",
-    "Untitled.md",
+    "Data Visualization/Design Tasks.md",
     "Data Visualization/Design Rules.md",
-    "Data Visualization/Perception.md",
+    "Data Visualization/Time Series Data.md",
     "Data Mining/Data Preprocessing.md",
-    "Data Mining/Introduction.md",
-    "Machine Learning/Regression.md",
-    "Image Processing/Frequency Filtering.md"
+    "Data Visualization/Visual Channels.md",
+    "Data Visualization/Principles.md",
+    "Data Visualization/Color.md",
+    "Data Visualization/Perception.md",
+    "Data Visualization/Introduction.md",
+    "Machine Learning/Classification.md"
   ]
 }
