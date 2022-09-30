@@ -9,6 +9,8 @@ Analysis.
 - correlation
 - dependency
 
+
+
 ## Line Graph
 A <span style = "color:lightblue">line graph</span> or <span style = "color:lightblue">dot plot</span> directly displays the numeric values of two quantitative attributes.
 
@@ -30,7 +32,11 @@ A <span style = "color:lightblue">bar graph</span> can display the change of a q
 
 
 ## Metaphorical Idioms
-In these special charts, the use of metaphors and symbolism incorporates the context of the data into the design, such as **radial timeline**, **calendar**, or **river**. For example, the use of a calendar view as the base design of a chart is applicable to data about daily and monthly car accidents.
+In these special charts, the use of metaphors and symbolism in the chart's design, such as **radial timelines**, **calendars**, or **rivers**, complements the context of the data. For example, the use of a calendar view as the base design of a chart is applicable to data about daily and monthly car accidents.
 
 River or road metaphors also create a sense of flowing time.
 
+Other metaphors:
+- tree trunk: old data at the center, new data at the edge
+- pearl or seashell: flow of time through spiral
+- 

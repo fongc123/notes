@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Time Series Data.md",
+            "file": "Data Visualization/Time Series.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Time Series Data.md",
+                "file": "Data Visualization/Time Series.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Time Series Data.md",
+                "file": "Data Visualization/Time Series.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Time Series Data.md"
+                "file": "Data Visualization/Time Series.md"
               }
             }
           },
@@ -137,11 +137,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "627838b14eb41571",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
     "Data Visualization/Design Tasks.md",
     "Data Visualization/Design Rules.md",
-    "Data Visualization/Time Series Data.md",
+    "Data Visualization/Time Series.md",
     "Data Mining/Data Preprocessing.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
