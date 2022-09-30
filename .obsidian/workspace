@@ -16,7 +16,7 @@
         }
       },
       {
-        "id": "6865c31e0878e3cd",
+        "id": "a36ad5259d42f780",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -152,14 +152,14 @@
   "active": "007cf837a7be5056",
   "lastOpenFiles": [
     "Machine Learning/Classification.md",
+    "Machine Learning/ML Basics.md",
     "Machine Learning/Decision Tree.md",
+    "Untitled.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Perception.md",
-    "Machine Learning/Introduction.md",
     "Data Mining/Data Preprocessing.md",
     "Data Mining/Introduction.md",
     "Machine Learning/Regression.md",
-    "Image Processing/Frequency Filtering.md",
-    "Data Visualization/Design Tasks.md"
+    "Image Processing/Frequency Filtering.md"
   ]
 }

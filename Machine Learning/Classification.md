@@ -105,17 +105,3 @@ To ensure that each class has approximately equal proportions in both the traini
 
 > [!INFO]
 > In $k$-fold stratified cross-validation, the class distribution in each fold should be similar to that in the original dataset.
-
-## Over-fitting
-An <span style = "color:lightblue">over-fitted</span> model is **more complex** than an original model, where the over-fitted model will fit noisy data better than an original model.
-
-Special anomalies may have been incorporated into the model. This affects the accuracy of the model on the test set.
-
-### Early-Stopping
-<span style = "color:lightblue">Extra terminating conditions</span> can be added to the decision tree algorithm, where the induction process is stopped if the number of tuples is fewer than a user-specified threshold.
-
-> [!INFO]
-> Selection of an appropriate threshold may be challenging.
-
-### Pruning
-The subtree rooted at a node is removed.
