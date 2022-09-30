@@ -1,6 +1,6 @@
 # Classification
 
-A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. lassification algorithms include **decision tree**, **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
+A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Classification algorithms include [[Decision Tree|decision trees]], **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
 
 ## Binary Classification
 
@@ -10,7 +10,7 @@ $$
 a = w_1x_1+w_2x_2+b
 $$
 
-A value of $a$ greater than $0$ corresponds to one class, while that of less than $0$ corresponds to the other. It can be visualized as a <span style = "color:lightblue">step function</span> $u(a)$ or <span style = "color:lightblue">sigmoid function</span> $\sigma(a)$, which is designed to output either $0$ or $1$. Normally, it is expressed as a probability of whether the object belongs to the class (i.e., true or false).
+A value of $a$ greater than $0$ corresponds to one class, while that of less than $0$ corresponds to the other. It can be visualized as a <span style = "color:lightblue">step function</span> $u(a)$ or <span style = "color:lightblue">sigmoid function</span> $\sigma(a)$ which outputs either $0$ or $1$. Normally, it is expressed as a probability of whether the object belongs to the class (i.e., true or false).
 
 $$
 p(y=1|x) = \sigma(w^Tx+b)=\sigma(\sum_{d-1}^{D}w_dx_d+b)
@@ -23,8 +23,6 @@ $$
 
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
 
-## Decision Tree
-A <span style = "color:lightblue">decision tree</span> represents the classification of an object, where each <span style = "color:lightblue">internal node</span> represents an attribute, each <span style = "color:lightblue">branch</span> represents an outcome, and each <span style = "color:lightblue">leaf node</span> holds a class label.
 
 ### Purity & Entropy
 Attributes that split examples into sets that are relatively **pure** in one label are desired. <span style = "color:lightblue">Purity</span> refers to the composition (or uncertainty) of labels. For example, in a dataset $D$ with two discrete classes $A$ and $B$, <span style = "color:lightblue">optimal purity</span> is achieved when the proportion of each class is either $0$ or $1$. A sample where both classes have equal proportions at $0.5$ is <span style = "color:lightblue">least pure</span>.
