@@ -63,9 +63,9 @@ $$w=w_1w_2^T=w_1\star w_2$$
 
 $$\text{computational advantage}=\frac{mn}{m+n}$$
 
-## Lowpass Filters
+## Low-pass Filters
 
-<span style = "color:lightblue">Lowpass filters</span> can be used for **image smoothing** by reducing irrelevant high-frequency details that are found in noise. The filter **allows low frequencies and restricts high frequencies**, creating a blurred image.
+<span style = "color:lightblue">Low-pass filters</span> can be used for **image smoothing** by reducing irrelevant high-frequency details that are found in noise. The filter **allows low frequencies and restricts high frequencies**, creating a blurred image.
 
 > [!INFO]
 > Noise is generally represented by high-frequency fluctuations.
@@ -108,11 +108,11 @@ This filter is **separable**, where the weights fall off with distance from the 
 
 ![[image-processing-gaussian-filter.png|700]]
 
-Lowpass filtering can be applied to thresholding for region extraction (e.g., astronomy) or for shading correction.
+Low-pass filtering can be applied to threshold for region extraction (e.g., astronomy) or for shading correction.
 
 ## Non-linear Spatial Filtering
 
-<span style = "color:lightblue">Non-linear spatial filters</span> typically replace the center pixel value with a value determined by an ordering or ranking alogirthm of the neighborhood. Some examples of ordering filters include **median filter**, **max filter**, and **minimum filter**.
+<span style = "color:lightblue">Non-linear spatial filters</span> typically replace the center pixel value with a value determined by an ordering or ranking algorithm of the neighborhood. Some examples of ordering filters include **median filter**, **max filter**, and **minimum filter**.
 
 ### Medium Filter
 
@@ -122,11 +122,11 @@ In a <span style = "color:lightblue">medium filter</span>, the center pixel valu
 
 This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
 
-## Highpass Filters
+## High-pass Filters
 
-<span style = "color:lightblue">Highpass filters</span> can be used for **image sharpening**, where intensity transitions and fine details are highlighted. The filter **allows high frequencies and restricts low frequencies.**
+<span style = "color:lightblue">High-pass filters</span> can be used for **image sharpening**, where intensity transitions and fine details are highlighted. The filter **allows high frequencies and restricts low frequencies.**
 
-A highpass filter is achieved using <span style = "color:lightblue">differentiation</span>.
+A high-pass filter is achieved using <span style = "color:lightblue">differentiation</span>.
 
 > [!WARNING]
 > Differentiation is very sensitive to noise. It is important to blur the image first before performing differentiation.

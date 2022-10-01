@@ -138,6 +138,8 @@
   },
   "active": "de8f828b7a1eaf2e",
   "lastOpenFiles": [
+    "Data Visualization/Visualization Basics.md",
+    "Image Processing/Spatial Filtering.md",
     "Image Processing/Frequency Filtering.md",
     "README.md",
     "Image Processing/Image Processing Basics.md",
@@ -145,8 +147,6 @@
     "Machine Learning/Classification.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Visual Channels.md",
-    "Machine Learning/Introduction.md",
-    "Data Mining/Data Preprocessing.md",
-    "Data Mining/Data Mining Basics.md"
+    "Machine Learning/Introduction.md"
   ]
 }

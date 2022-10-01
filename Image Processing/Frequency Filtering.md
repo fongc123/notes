@@ -121,5 +121,27 @@ $$g(x,y)=\mathcal{F}^{-1}\{H(u,v)F(u,v)\} \newline \newline$$
 
 After some pre-processing of the original image, the Fourier transform of the image is obtained. Then, the inverse Fourier transform of the product between the filter function $H$ and the Fourier transform $F$ is performed. Lastly, some post-processing steps are performed on the output to obtain the final image.
 
+### Low-pass Filters
 
+Like [[Spatial Filtering#Low-pass Filters|spatial low-pass filters]], low-pass filtering in the frequency domain can be used for image smoothing by removing high frequency components in the image.
+
+#### Ideal
+
+The ideal low-pass filter evaluates to $1$ between the origin and a cutoff frequency, and to $0$ after the cutoff frequency.
+
+Despite being an "ideal" outcome, it causes ringing artifacts in the spatial image due to its sharp discontinuity.
+
+For an image, 86.9% of the image data can be found within a circle with radius of 10 pixels in the frequency spectrum. High frequency features are found beyond the 10-pixel circle.
+
+#### Gaussian
+
+The Gaussian low-pass filter uses the Gaussian function to approximate the ideal low-pass filter.
+
+#### Butterworth
+
+Like the Gaussian low-pass filter, the Butterworth low-pass filter approximates the ideal low-pass filter. With greater values of $n$, it can easily approximate the ideal low-pass filter better than the Gaussian low-pass filter.
+
+## High-pass Filters
+
+Again, like [[Spatial Filtering#High-pass Filters|spatial high-pass filters]], high-pass filtering in the frequency domain can be used for image sharpening by removing low frequency components in the image.
 
