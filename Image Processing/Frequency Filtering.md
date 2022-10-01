@@ -129,6 +129,9 @@ The relationship between a low-pass filter $H_{lp}$ and a high-pass filter $H_{h
 
 $$H_{hp}(u,v)=1-H_{lp}(u,v)$$
 
+> [!INFO]
+> Edges and other abrupt changes are associated with high frequency components.
+
 ### Ideal
 
 Depending on the filter type, the <span style = "color:lightblue">ideal filter</span> creates a sharp jump from $0$ to $1$ before or after a cutoff frequency.
@@ -147,7 +150,7 @@ $$
 	\end{cases} \newline\newline
 \end{align}
 $$
-$D_0$ is the cutoff frequency and $D(u,v)$ is the distance between a point $(u,v)$ in the frequency domain and the center of the $P\times Q$ frequency rectangle.
+$D_0$ is the <span style = "color:lightblue">cutoff frequency</span> and $D(u,v)$ is the distance between a point $(u,v)$ in the frequency domain and the center of the $P\times Q$ frequency rectangle.
 
 $$D(u,v)=\left[\left(u-\frac{P}{2}\right)^2+\left(v-\frac{Q}{2}\right)^2\right]^\frac{1}{2}$$
 ![[image-processing-freq-lowpass-ringing.png|500]]
@@ -161,8 +164,26 @@ The sharp discontinuity results in ripples appearing in the spatial image. [[#Fi
 
 The <span style = "color:lightblue">Gaussian low-pass filter</span> uses the Gaussian function to approximate the ideal low-pass filter.
 
-$$H(u,v)=\exp\left(-\frac{D^2(u,v)}{2\sigma^2}\right)=\exp\left(-\frac{D^2(u,v)}{2D_0^{2}}\right)$$
+$$
+\begin{align}
+	\text{low-pass:}\quad & H(u,v)=\exp\left(-\frac{D^2(u,v)}{2\sigma^2}\right)=\exp\left(-\frac{D^2(u,v)}{2D_0^{2}}\right) \newline\newline
+	\text{high-pass:}\quad & H(u,v)=1-\exp\left(-\frac{D^2(u,v)}{2D_0^{2}}\right)
+\end{align}
+$$
+
+![[image-processing-freq-gaussian.png|600]]
 
 ### Butterworth
 
-Like the Gaussian low-pass filter, the <span style = "color:lightblue">Butterworth low-pass filter</span> approximates the ideal low-pass filter. With greater values of $n$, it can easily approximate the ideal low-pass filter better than the Gaussian low-pass filter.
+Like the Gaussian low-pass filter, the <span style = "color:lightblue">Butterworth low-pass filter</span> approximates the ideal low-pass filter. 
+
+$$
+\begin{align}
+	\text{low-pass:}\quad & H(u,v)=\frac{1}{1+\left[\frac{D(u,v)}{D_0}\right]^{2n}} \newline\newline
+	\text{high-pass:}\quad & H(u,v)=\frac{1}{1+\left[\frac{D_0}{D(u,v)}\right]^{2n}}
+\end{align}
+$$
+
+With greater values of $n$, it can easily approximate the ideal low-pass filter better than the Gaussian low-pass filter. However, increasing values of $n$ cause dips into negative values.
+
+![[image-processing-freq-butterworth.png|600]]
