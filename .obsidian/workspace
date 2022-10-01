@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Time Series.md",
+            "file": "Image Processing/Frequency Filtering.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Time Series.md",
+                "file": "Image Processing/Frequency Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Time Series.md",
+                "file": "Image Processing/Frequency Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Time Series.md"
+                "file": "Image Processing/Frequency Filtering.md"
               }
             }
           },
@@ -138,6 +138,7 @@
   },
   "active": "de8f828b7a1eaf2e",
   "lastOpenFiles": [
+    "Data Visualization/Time Series.md",
     "Machine Learning/Classification.md",
     "Image Processing/Frequency Filtering.md",
     "Data Visualization/Design Rules.md",
@@ -146,7 +147,6 @@
     "Data Mining/Data Preprocessing.md",
     "Data Mining/Introduction.md",
     "Machine Learning/Regression.md",
-    "Data Visualization/Design Tasks.md",
-    "Untitled.md"
+    "Data Visualization/Design Tasks.md"
   ]
 }
