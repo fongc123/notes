@@ -31,15 +31,42 @@ The example below shows the **change** in amount of sleep in hours in Americans 
 
 ![[data-vis-slope-graph.png|400]]
 
-In line graphs, the <span style = "color:lightblue">aspect ratio</span> can drastically alter the perception of change. Additionally, <span style = "color:lightblue">dual axis</span> graphs can create misleading inform
+In line graphs, the <span style = "color:lightblue">aspect ratio</span> can drastically alter the perception of change. Additionally, <span style = "color:lightblue">dual axis</span> graphs can create misleading conclusions.
+- <span style = "color:lightblue">indexed line graph</span>: plots normalized data instead of original value (*useful for vastly different data*)
+- <span style = "color:lightblue">connected scatterplot</span>: scatter plot with line connection marks to show relationship
+
+> [!WARNING]
+> As the indexed line graph shows the normalized values instead of the original values, it shows a **change over time** rather than absolute values.
 
 ## Area Graph
-Similar to a line graph, the x-axis represents time, while y-axis represents attribute values.
+Similar to a line graph, an <span style = "color:lightblue">area graph</span> or a <span style = "color:lightblue">stacked graph</span> emphasizes horizontal continuity over vertical items. 
+
+|                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
+|:-------------------------------------------------:|:---------------:|:-----------------------------------------------:|:----------------------:|:---------------:|
+| Categorical, ordered, quantitative (derived data) | Layers or areas | Vertical position (values), color (categorical) | Find trends & extremes, emphasize change | Multiple time and category keys                |
+
+A <span style = "color:lightblue">stacked graph</span> is a classic method for visualizing change in a set of items, where the sum of the values is as important as the individual items.
+
+However, as it uses areas to convey numbers, they **do not work for negative values** (*better for a line graph*). Additionally, **comparisons between trends are difficult** in a stacked graph.
+
+
+> [!INFO]
+> The lowest layer is aligned at the bottom, and the first category should be carefully considered.
 
 To improve space efficiency, juxtaposition techniques are used to combine and shrink charts. Example charts include the <span style = "color:lightblue">horizon chart</span> and the <span style = "color:lightblue">ridgeline plot</span>.
 
+![[data-vis-ridgeline.png|600]]
+
 ## Bar Graph
-A <span style = "color:lightblue">bar graph</span> can display the change of a quantitative variable over time. For multiple variables, a multi-bar chart or multiple single-bar charts can be used.
+A <span style = "color:lightblue">bar graph</span> can display the change of a quantitative variable over time. For multiple variables, a multi-bar chart in a single view can be used or multiple single-bar charts in multiple views can be used.
+
+|                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
+|:-------------------------------------------------:|:---------------:|:-----------------------------------------------:|:----------------------:|:---------------:|
+| Quantitative, categorical | Bars (line) | Horizontal (time), vertical (values), color (categorical) | Compare individual (separate bars) or total (stacked bar) values | Multiple bars              |
+
+![[data-vis-multiple-bars.png|600]]
+
+Alternatively, to summarize duration, compare events, and identify intersections or dependencies, a <span style = "color:lightblue">Gantt chart</span> can be used. This chart is commonly used in the tracking of the timeline of tasks, where length represents task duration and color represents the status of the task.
 
 ## Heatmap
 
