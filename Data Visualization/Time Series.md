@@ -1,24 +1,37 @@
 # Time Series Data
-A <span style = "color:lightblue">time series</span> is a series of data points indexed, listed, or graphed in chronological order. It is a sequence of discrete time data.
-- timestamp
-- granularity
-- temporal pattern (e.g., cyclic)
+A <span style = "color:lightblue">time series</span> is a series of data points indexed, listed, or graphed in chronological order. It is a sequence of discrete time data. 
+- <span style = "color:lightblue">timestamp</span>: quantitative values or categorical points in time
+- <span style = "color:lightblue">granularity</span>: time interval (e.g., day or hour)
+- <span style = "color:lightblue">temporal pattern</span>: repetitive nature (e.g., cyclic or seasonal)
 
-Analysis.
-- trend & outlier
-- correlation
-- dependency
-
+Time series data mainly analyzes the following tasks.
+- <span style = "color:lightblue">trend or outlier</span>: general pattern or detect anomalies
+- <span style = "color:lightblue">correlation</span>: co-occurrence between two variables
+- <span style = "color:lightblue">sequential order</span>: dependency
 
 
 ## Line Graph
-A <span style = "color:lightblue">line graph</span> or <span style = "color:lightblue">dot plot</span> directly displays the numeric values of two quantitative attributes.
+A <span style = "color:lightblue">line graph</span> or <span style = "color:lightblue">dot plot</span> directly displays the values of a quantitative variable with respect to time.
 
 |          **Data**           |    **Mark**    |          **Channels**          |       **Task**        | **Scalability** |
 |:---------------------------:|:--------------:|:------------------------------:|:---------------------:|:---------------:|
-| Two quantitative attributes | Points & lines | Horizontal & vertical position | Find trend & extremes | Multiple lines  |
+| Two quantitative attributes (one for timestamp) | Points & lines | Horizontal (time) & vertical (value) position | Find trend & extremes | Multiple lines  |
 
-On the other hand, a <span style = "color:lightblue">slope graph</span> displays the change magnitude of quantitative attributes.
+To display additional quantitative variables, multiple lines can be superimposed on a shared chart, where each line is encoded by a different color.
+
+![[data-vis-line-graph-multiple.png|300]]
+
+On the other hand, a <span style = "color:lightblue">slope graph</span> displays the magnitude of change of quantitative attributes.
+
+|                   **Data**                   |       **Mark**        | **Channels** |     **Task**      | **Scalability** |
+|:--------------------------------------------:|:---------------------:|:------------:|:-----------------:|:---------------:|
+| Two quantitative attributes (one for derived change) | Line connecting marks |   Position   | Emphasize changes | Multiple value levels                |
+
+The example below shows the **change** in amount of sleep in hours in Americans between 2003 and 2017.
+
+![[data-vis-slope-graph.png|400]]
+
+In line graphs, the <span style = "color:lightblue">aspect ratio</span> can drastically alter the perception of change. Additionally, <span style = "color:lightblue">dual axis</span> graphs can create misleading inform
 
 ## Area Graph
 Similar to a line graph, the x-axis represents time, while y-axis represents attribute values.
