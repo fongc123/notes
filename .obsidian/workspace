@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Frequency Filtering.md",
+            "file": "Kubernetes/Cluster Architecture.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md",
+                "file": "Kubernetes/Cluster Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md",
+                "file": "Kubernetes/Cluster Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md"
+                "file": "Kubernetes/Cluster Architecture.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "f2a9e3f38b00ac72",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Spatial Filtering.md",
-    "Data Visualization/Visualization Basics.md",
+    "Kubernetes/Cluster Architecture.md",
+    "Kubernetes/Kublet.md",
+    "Kubernetes/Kube Proxy.md",
+    "Kubernetes/Scheduler.md",
+    "Kubernetes/Controller Manager.md",
+    "Kubernetes/Kube API Server.md",
+    "Kubernetes/ETCD Cluster.md",
     "README.md",
-    "Image Processing/Image Processing Basics.md",
-    "Data Visualization/Time Series.md",
-    "Machine Learning/Classification.md",
-    "Data Visualization/Design Rules.md",
-    "Data Visualization/Visual Channels.md"
+    "Docker.md",
+    "Machine Learning/Decision Tree.md"
   ]
 }
