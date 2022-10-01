@@ -58,7 +58,7 @@ To improve space efficiency, juxtaposition techniques are used to combine and sh
 ![[data-vis-ridgeline.png|600]]
 
 ## Bar Graph
-A <span style = "color:lightblue">bar graph</span> can display the change of a quantitative variable over time. For multiple variables, a multi-bar chart in a single view can be used or multiple single-bar charts in multiple views can be used.
+A <span style = "color:lightblue">bar graph</span> can display the values of a quantitative variable over time. For multiple variables, a multi-bar chart in a single view can be used or multiple single-bar charts in multiple views can be used.
 
 |                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
 |:-------------------------------------------------:|:---------------:|:-----------------------------------------------:|:----------------------:|:---------------:|
@@ -69,14 +69,22 @@ A <span style = "color:lightblue">bar graph</span> can display the change of a q
 Alternatively, to summarize duration, compare events, and identify intersections or dependencies, a <span style = "color:lightblue">Gantt chart</span> can be used. This chart is commonly used in the tracking of the timeline of tasks, where length represents task duration and color represents the status of the task.
 
 ## Heatmap
+A <span style = "color:lightblue">heatmap</span> can display an estimated value of a quantitative variable over time, where the value counts are represented by their color (opacity).
 
+|                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
+|:-------------------------------------------------:|:---------------:|:-----------------------------------------------:|:----------------------:|:---------------:|
+| Categorical, quantitative (values), ordered (time) | Area (grid layout) | Horizontal (time), vertical (category), color (value) | Find trends & extremes | -             |
+
+The example below shows the PM2.5 density pattern at five different stations in Hong Kong between March 23 to March 31 in 2020.
+
+![[data-vis-heatmap.png|600]]
 
 ## Metaphorical Idioms
-In these special charts, the use of metaphors and symbolism in the chart's design, such as **radial timelines**, **calendars**, or **rivers**, complements the context of the data. For example, the use of a calendar view as the base design of a chart is applicable to data about daily and monthly car accidents.
+In these unconventional charts, the use of metaphors and symbolism in the chart's design, such as **radial timelines**, **calendars**, or **rivers**, complements the context of the data.
 
-River or road metaphors also create a sense of flowing time.
+For example, the use of a calendar view as the base design of a chart is applicable to data about daily and monthly car accidents. River or road metaphors also create a sense of flowing time.
 
-Other metaphors:
-- tree trunk: old data at the center, new data at the edge
-- pearl or seashell: flow of time through spiral
-- 
+Other unconventional visualization forms are listed below.
+- <span style = "color:lightblue">tree trunk</span>: old data at the center, new data at the edge
+- <span style = "color:lightblue">pearl</span> or <span style = "color:lightblue">seashell</span>: flow of time through spiral
+
