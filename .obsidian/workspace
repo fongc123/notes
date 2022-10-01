@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "de8f828b7a1eaf2e",
+        "id": "f2a9e3f38b00ac72",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "de8f828b7a1eaf2e",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
-    "Data Visualization/Visualization Basics.md",
-    "Image Processing/Spatial Filtering.md",
+    "Untitled.md",
     "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md",
+    "Data Visualization/Visualization Basics.md",
     "README.md",
     "Image Processing/Image Processing Basics.md",
     "Data Visualization/Time Series.md",
     "Machine Learning/Classification.md",
     "Data Visualization/Design Rules.md",
-    "Data Visualization/Visual Channels.md",
-    "Machine Learning/Introduction.md"
+    "Data Visualization/Visual Channels.md"
   ]
 }

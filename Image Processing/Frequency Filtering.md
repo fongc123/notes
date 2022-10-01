@@ -119,29 +119,50 @@ As stated in [[#Fourier Transform#Properties|the previous section]], the convolu
 
 $$g(x,y)=\mathcal{F}^{-1}\{H(u,v)F(u,v)\} \newline \newline$$
 
-After some pre-processing of the original image, the Fourier transform of the image is obtained. Then, the inverse Fourier transform of the product between the filter function $H$ and the Fourier transform $F$ is performed. Lastly, some post-processing steps are performed on the output to obtain the final image.
+First, pre-processing is done on the original image, and the Fourier transform $F$ is obtained. Then, the inverse Fourier transform of the product between the filter function $H$ and $F$ is performed. Lastly, some post-processing is done to obtain the output image.
 
-### Low-pass Filters
+Like [[Spatial Filtering|spatial filters]], low-pass filters can be used for image smoothing, while high-pass filters can be used for image sharpening. In the frequency domain, low-pass and high-pass filtering remove image components with high and low frequencies respectively.
 
-Like [[Spatial Filtering#Low-pass Filters|spatial low-pass filters]], low-pass filtering in the frequency domain can be used for image smoothing by removing high frequency components in the image.
+![[image-processing-freq-filter-highpass.png|500]]
 
-#### Ideal
+The relationship between a low-pass filter $H_{lp}$ and a high-pass filter $H_{hp}$ is shown below.
 
-The ideal low-pass filter evaluates to $1$ between the origin and a cutoff frequency, and to $0$ after the cutoff frequency.
+$$H_{hp}(u,v)=1-H_{lp}(u,v)$$
 
-Despite being an "ideal" outcome, it causes ringing artifacts in the spatial image due to its sharp discontinuity.
+### Ideal
 
-For an image, 86.9% of the image data can be found within a circle with radius of 10 pixels in the frequency spectrum. High frequency features are found beyond the 10-pixel circle.
+Depending on the filter type, the <span style = "color:lightblue">ideal filter</span> creates a sharp jump from $0$ to $1$ before or after a cutoff frequency.
 
-#### Gaussian
+$$
+\begin{align}
+	\text{low-pass: }\quad & H(u,v) =
+	\begin{cases}
+		1 & \text{if } D(u,v)\leq D_0 \newline
+		0 & \text{if } D(u,v)> D_0
+	\end{cases} \newline\newline
+	\text{high-pass: }\quad & H(u,v) =
+	\begin{cases}
+		0 & \text{if } D(u,v)\leq D_0 \newline
+		1 & \text{if } D(u,v)> D_0
+	\end{cases} \newline\newline
+\end{align}
+$$
+$D_0$ is the cutoff frequency and $D(u,v)$ is the distance between a point $(u,v)$ in the frequency domain and the center of the $P\times Q$ frequency rectangle.
 
-The Gaussian low-pass filter uses the Gaussian function to approximate the ideal low-pass filter.
+$$D(u,v)=\left[\left(u-\frac{P}{2}\right)^2+\left(v-\frac{Q}{2}\right)^2\right]^\frac{1}{2}$$
+![[image-processing-freq-lowpass-ringing.png|500]]
 
-#### Butterworth
+The sharp discontinuity results in ripples appearing in the spatial image. [[#Filtering#Gaussian|Gaussian]] or [[#Filtering#Butterworth|Butterworth]] filters have a smoother transition.
 
-Like the Gaussian low-pass filter, the Butterworth low-pass filter approximates the ideal low-pass filter. With greater values of $n$, it can easily approximate the ideal low-pass filter better than the Gaussian low-pass filter.
+> [!INFO]
+> Based on the [[#Fourier Transform#Spectrum Phase Angle|power spectrum]], most of the low frequency features are found within 10 pixels of a Fourier spectrum (86.9% of the image). The rest are high frequency features.
 
-## High-pass Filters
+### Gaussian
 
-Again, like [[Spatial Filtering#High-pass Filters|spatial high-pass filters]], high-pass filtering in the frequency domain can be used for image sharpening by removing low frequency components in the image.
+The <span style = "color:lightblue">Gaussian low-pass filter</span> uses the Gaussian function to approximate the ideal low-pass filter.
 
+$$H(u,v)=\exp\left(-\frac{D^2(u,v)}{2\sigma^2}\right)=\exp\left(-\frac{D^2(u,v)}{2D_0^{2}}\right)$$
+
+### Butterworth
+
+Like the Gaussian low-pass filter, the <span style = "color:lightblue">Butterworth low-pass filter</span> approximates the ideal low-pass filter. With greater values of $n$, it can easily approximate the ideal low-pass filter better than the Gaussian low-pass filter.
