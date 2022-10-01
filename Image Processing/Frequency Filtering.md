@@ -102,6 +102,8 @@ The properties of the Fourier transform are listed below.
 
 ![[image-processing-ft-properties.png|600]]
 
+The linearity property is also important; otherwise, the Fourier spectrum would be difficult to obtain.
+
 > [!TIP]
 > Convolution in the spatial domain corresponds to multiplication in the frequency domain. Thus, it is computationally easier to perform a convolutional operation in the frequency domain than in the spatial domain.
 > $$
@@ -110,4 +112,14 @@ The properties of the Fourier transform are listed below.
 > 	f(t)h(t) \longleftrightarrow H(u) \star F(u)
 > \end{gather}
 > $$
+
+## Filtering
+
+As stated in [[#Fourier Transform#Properties|the previous section]], the convolution operation, which is often used in applying a filter, is computationally easier to perform in the frequency domain (i.e., after Fourier transform).
+
+$$g(x,y)=\mathcal{F}^{-1}\{H(u,v)F(u,v)\} \newline \newline$$
+
+After some pre-processing of the original image, the Fourier transform of the image is obtained. Then, the inverse Fourier transform of the product between the filter function $H$ and the Fourier transform $F$ is performed. Lastly, some post-processing steps are performed on the output to obtain the final image.
+
+
 
