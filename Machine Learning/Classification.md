@@ -15,53 +15,12 @@ A value of $a$ greater than $0$ corresponds to one class, while that of less tha
 $$
 p(y=1|x) = \sigma(w^Tx+b)=\sigma(\sum_{d-1}^{D}w_dx_d+b)
 $$
-
 > [!INFO]
 > This model is referred to as <span style = "color:lightblue">logistic regression</span>, as a sigmoid function is also referred to as a logistic function.
 
 ## Cross-entropy Loss
 
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
-
-
-### Purity & Entropy
-Attributes that split examples into sets that are relatively **pure** in one label are desired. <span style = "color:lightblue">Purity</span> refers to the composition (or uncertainty) of labels. For example, in a dataset $D$ with two discrete classes $A$ and $B$, <span style = "color:lightblue">optimal purity</span> is achieved when the proportion of each class is either $0$ or $1$. A sample where both classes have equal proportions at $0.5$ is <span style = "color:lightblue">least pure</span>.
-- $D$: a sample of training samples
-- $p_A=0\quad\text{and}\quad p_B=1$ (optimal)
-- $p_A=1\quad\text{and}\quad p_B=0$ (optimal)
-- $p_A=0.5\quad\text{and}\quad p_B=0.5$ (least pure)
-
-This can be summarized with an <span style = "color:lightblue">entropy curve</span>, where its values range between $0$ (*no entropy*) and $\log_2{m}$ (*maximum entropy*).
-
-$$
-\begin{gather}
-Entropy(D)=-p_A\log_b{p_A}-p_B\log_b{p_B}\quad\Tiny\text{(two values)} \newline \newline
-Entropy(D)=\sum_{i=1}^{m}{-p_i\log_2{p_i}\quad\Tiny\text{(general)}}
-\end{gather}
-$$
-
-The <span style = "color:lightblue">units</span> that entropy is measured in is controlled by the value of $b$.
-- <span style = "color:lightblue">nats</span>: $b\rightarrow e$
-- <span style = "color:lightblue">bits</span>: $b\rightarrow 2$ (*this is used in classification*)
-
-The <span style = "color:lightblue">information gain</span> of $D$ relative to attribute $A$ is the expected **reduction** in entropy caused by knowing the value of $A$. The set of examples in $D$ where attribute $A$ has value $v$ is represented by $D_v$.
-
-$$Gain(D,A)=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}}Entropy(D_v)$$
-
-**The attribute that generates the maximum information gain is desired.**
-
-For <span style = "color:lightblue">continuous-valued attributes</span> (e.g., temperature), they are discretized, and a Boolean attribute is created, where it evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
-
-$$A_c<c$$
-
-The set of candidate thresholds are the midway segregation point between attribute values. The value of $c$ is determined by the information gain.
-
-### Gain Ratio
-Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy and should be penalized.
-
-$$SplitInfo_A(D)=-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\log_2{\frac{|D_j|}{|D|}}}$$
-### Gini Index
-The <span style = "color:lightblue">Gini index</span> is another attribute selection method.
 
 ## Model Performance
 

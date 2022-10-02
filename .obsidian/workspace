@@ -9,7 +9,19 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Intensity Transformations.md",
+            "file": "Machine Learning/Classification.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "13bd0a7f1c3bc586",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Machine Learning/Decision Tree.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md"
+                "file": "Machine Learning/Decision Tree.md"
               }
             }
           },
@@ -136,17 +148,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f2a9e3f38b00ac72",
+  "active": "13bd0a7f1c3bc586",
   "lastOpenFiles": [
+    "Machine Learning/ML Basics.md",
+    "Machine Learning/Decision Tree.md",
+    "Machine Learning/Classification.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Frequency Filtering.md",
     "Kubernetes/Cluster Architecture.md",
     "Kubernetes/Kublet.md",
-    "Kubernetes/Kube Proxy.md",
-    "Kubernetes/Scheduler.md",
-    "Kubernetes/Controller Manager.md",
-    "Kubernetes/Kube API Server.md",
-    "Kubernetes/ETCD Cluster.md"
+    "Kubernetes/Kube Proxy.md"
   ]
 }
