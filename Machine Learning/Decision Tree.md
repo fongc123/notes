@@ -31,7 +31,7 @@ The [[#Creation|creation process]] is terminated if any of the statements below 
 In the first condition, the node becomes a leaf and is labeled with the associated class. However, the node in the second and third condition is labeled with the **majority class of the partition** and the **majority class of the parent partition** respectively.
 
 ## Attribute Selection
-Ideally, an attribute selection criterion that creates partitions that consist only of tuples with a <u>single</u> class is desired (i.e., **pure** datasets).
+Ideally, an attribute selection criterion that creates partitions that consist only of data entries with only a <u>single</u> class is desired (i.e., **pure** datasets).
 
 However, it is not always possible. A **ranking algorithm** for each attribute is done instead, where the attribute with the **best score** is selected.
 
@@ -39,12 +39,12 @@ However, it is not always possible. A **ranking algorithm** for each attribute i
 <span style = "color:lightblue">Purity</span> refers to the composition (or uncertainty) of attributes.
 
 >[!INFO]
->For example, in a dataset of training samples $D$ with two discrete classes $A$ and $B$, <span style = "color:lightblue">optimal purity</span> is achieved when the proportion of each class is either $0$ or $1$. A sample where both classes have equal proportions at $0.5$ is <span style = "color:lightblue">least pure</span>.
+>For example, in a dataset of training samples $D$ with two discrete class labels $A$ and $B$, <span style = "color:lightblue">optimal purity</span> is achieved when the proportion of each class is either $0$ or $1$. A sample where both classes have equal proportions at $0.5$ is <span style = "color:lightblue">least pure</span>.
 > - $p_A=0\quad\text{and}\quad p_B=1$ (optimal)
 > - $p_A=1\quad\text{and}\quad p_B=0$ (optimal)
 > - $p_A=0.5\quad\text{and}\quad p_B=0.5$ (least pure)
 
-This can be represented by an <span style = "color:lightblue">entropy curve</span>, where its values range between $0$ (*no entropy*) and $\log_2{m}$ (*maximum entropy*) for $m$ different values (examples).
+This can be represented by an <span style = "color:lightblue">entropy curve</span>, where its values range between $0$ (*no entropy*) and $\log_2{m}$ (*maximum entropy*) for $m$ different class labels.
 
 $$
 \begin{gather}
@@ -65,25 +65,82 @@ $$Gain(D,A)=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}}Entropy(D_v)$$
 **The attribute that generates the maximum information gain is selected.**
 
 #### Continuous-valued Attributes
-<span style = "color:lightblue">Continuous-valued attributes</span> (e.g., temperature) are discretized, and a Boolean attribute is created. It evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
+<span style = "color:lightblue">Continuous-valued attributes</span> (e.g., temperature) are discretized, and a Boolean criterion is created. It evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
 
 $$A_c<c$$
 
-The set of candidate thresholds are the **midway segregation point** (attributes) between attribute values, where there are a total of $m-1$ thresholds. The value of $c$ is determined by the information gain.
+The set of candidate thresholds are the **midway segregation point** (criterion) between attribute values, where there are a total of $m-1$ thresholds. The value of $c$ is determined by the information gain.
 
 #### Example Calculation
-An example calculation for determining the attribute with the highest information gain is demonstrated. The training dataset table is shown below.
+An example calculation for determining the attribute with the highest information gain is demonstrated. The training dataset table is shown below. Here, there exists only two class labels: `yes` and `no`.
 
 | **RID** |   **Age**   | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
-|:-------:|:-----------:|:----------:|:-----------:|:-----------------:| :--------------------------------------------------------------------: |
-|    1    |    youth    |    high    |     no      |       fair        | no                                                                   |
-|    2    |    youth    |    high    |     no      |     excellent     | no                                                                   |
-|    3    | middle_aged |    high    |     no      |       fair        | yes                                                                  |
-|    4    |   senior    |   medium   |     no      |       fair        | yes                                                                  |
-|    5    |   senior    |    low     |     yes     |       fair        | yes                                                                  |
-|    6    |   senior    |    low     |     yes     |     excellent     | yes                                                                  |
-|    7    | middle_aged |    low     |     yes     |     excellent     | yes                                                                     |
+|:-------:|:-----------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
+|    1    |    youth    |    high    |     no      |       fair        |                                  no                                  |
+|    2    |    youth    |    high    |     no      |     excellent     |                                  no                                  |
+|    3    | middle_aged |    high    |     no      |       fair        |                                 yes                                  |
+|    4    |   senior    |   medium   |     no      |       fair        |                                 yes                                  |
+|    5    |   senior    |    low     |     yes     |       fair        |                                 yes                                  |
+|    6    |   senior    |    low     |     yes     |     excellent     |                                 no                                  |
+|    7    | middle_aged |    low     |     yes     |     excellent     |                                 yes                                  |
+|    8    |    youth    |   medium   |     no      |       fair        |                                  no                                  |
+|    9    |    youth    |    low     |     yes     |       fair        |                                 yes                                  |
+|   10    |   senior    |   medium   |     yes     |       fair        |                                 yes                                  |
+|   11    |    youth    |   medium   |     yes     |     excellent     |                                 yes                                  |
+|   12    | middle_aged |   medium   |     no      |     excellent     |                                 yes                                  |
+|   13    | middle_aged |    high    |     yes     |       fair        |                                 yes                                  |
+|   14    |   senior    |   medium   |     no      |     excellent     | no                                                                     |
 
+The entropy of the entire dataset $D$ is given as $0.940$ (?). The information gain for the `age` attribute $Gain(D, A=\text{age})$ is first calculated.
+
+$$Gain(D,A=\text{age})=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}Entropy(D_v)}$$
+
+The `age` attribute can take **three** different values: `youth`, `middle_aged`, and `senior`. 
+First, the entropy of the subset where age is equal to `youth` is calculated.
+
+| **RID** | **Age** | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
+|:-------:|:-------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
+|    1    |  youth  |    high    |     no      |       fair        |                                  no                                  |
+|    2    |  youth  |    high    |     no      |     excellent     |                                  no                                  |
+|    8    |  youth  |   medium   |     no      |       fair        |                                  no                                  |
+|    9    |  youth  |    low     |     yes     |       fair        |                                 yes                                  |
+|   11    |  youth  |   medium   |     yes     |     excellent     |                                 yes                                  |
+
+In the `youth` subset, there are three data entries with the `no` class label and two entries with the `yes` class label. Thus, $p_{\text{no}}=0.6$ and $p_{\text{yes}}=0.4$.
+
+$$
+\begin{align}
+	Entropy(D_{\text{youth}}) & =-\frac{2}{5}\log_2\left(\frac{2}{5}\right)-\frac{3}{5}\log_2\left(\frac{3}{5}\right) \newline
+	Entropy(D_{\text{youth}}) & =0.971
+\end{align}
+$$
+
+As expected, this subset has high entropy (i.e., high uncertainty). Next, the entropy of the subset where age is equal to `middle_aged` is calculated.
+
+| **RID** |   **Age**   | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
+|:-------:|:-----------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
+|    3    | middle_aged |    high    |     no      |       fair        |                                 yes                                  |
+|    7    | middle_aged |    low     |     yes     |     excellent     |                                  yes                                  |
+|   12    | middle_aged |   medium   |     no      |     excellent     |                                 yes                                  |
+|   13    | middle_aged |    high    |     yes     |       fair        | yes                                                                     |
+
+In the `middle_aged` subset, all four data entries have the `yes` class label. Thus, $p_{\text{no}}=0$ and $p_{\text{yes}}=1$.
+
+$$
+\begin{align}
+	Entropy(D_{\text{middle\_aged}})&=-\frac{4}{4}\log_2\left(\frac{4}{4}\right) \newline
+	Entropy(D_{\text{middle\_aged}})&=0
+\end{align}
+$$
+
+This subset has low entropy (i.e., low uncertainty). Lastly, the entropy of the subset where age is equal to `senior` is calculated.
+
+| **RID** | **Age** | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
+|:-------:|:-------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
+|    4    | senior  |   medium   |     no      |       fair        |                                 yes                                  |
+|    5    | senior  |    low     |     yes     |       fair        |                                 yes                                  |
+|    6    | senior  |    low     |     yes     |     excellent     |                                  no                                  |
+|         |         |            |             |                   |                                                                      |
 
 
 ### Gain Ratio

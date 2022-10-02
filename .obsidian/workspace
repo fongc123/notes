@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Machine Learning/Classification.md",
-            "mode": "source",
+            "file": "Machine Learning/Decision Tree.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -142,17 +142,17 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "221609ffaad4b2e1",
+  "active": "f2a9e3f38b00ac72",
   "lastOpenFiles": [
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Decision Tree.md",
     "Machine Learning/Classification.md",
+    "Machine Learning/Decision Tree.md",
+    "Machine Learning/ML Basics.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
