@@ -44,12 +44,12 @@ However, it is not always possible. A **ranking algorithm** for each attribute i
 > - $p_A=1\quad\text{and}\quad p_B=0$ (optimal)
 > - $p_A=0.5\quad\text{and}\quad p_B=0.5$ (least pure)
 
-This can be summarized with an <span style = "color:lightblue">entropy curve</span>, where its values range between $0$ (*no entropy*) and $\log_2{m}$ (*maximum entropy*).
+This can be represented by an <span style = "color:lightblue">entropy curve</span>, where its values range between $0$ (*no entropy*) and $\log_2{m}$ (*maximum entropy*) for $m$ different values (examples).
 
 $$
 \begin{gather}
-Entropy(D)=-p_A\log_b{p_A}-p_B\log_b{p_B}\quad\Tiny\text{(two values)} \newline \newline
-Entropy(D)=\sum_{i=1}^{m}{-p_i\log_2{p_i}\quad\Tiny\text{(general)}}
+Entropy(D)=-p_A\log_b{p_A}-p_B\log_b{p_B}\quad\small\text{(two values)} \newline \newline
+Entropy(D)=\sum_{i=1}^{m}{-p_i\log_b{p_i}\quad\small\text{(general)}}
 \end{gather}
 $$
 
@@ -57,18 +57,18 @@ The <span style = "color:lightblue">units</span> that entropy is measured in is 
 - <span style = "color:lightblue">nats</span>: $b\rightarrow e$
 - <span style = "color:lightblue">bits</span>: $b\rightarrow 2$ (*this is used in machine learning*)
 
-<span style = "color:lightblue">Continuous-valued attributes</span> (e.g., temperature) are discretized, and a Boolean attribute is created, where it evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
+<span style = "color:lightblue">Continuous-valued attributes</span> (e.g., temperature) are discretized, and a Boolean attribute is created. It evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
 
 $$A_c<c$$
 
 The set of candidate thresholds are the midway segregation point between attribute values. The value of $c$ is determined by the information gain.
 
 ### Information Gain
-The <span style = "color:lightblue">information gain</span> of $D$ relative to attribute $A$ is the expected **reduction** in entropy caused by knowing the value of $A$. The set of examples in $D$ where attribute $A$ has value $v$ is represented by $D_v$. It is a selection measure used in the ID3 decision tree induction algorithm.
+The <span style = "color:lightblue">information gain</span> of a subset $D$ relative to attribute $A$ is the expected **reduction** in entropy caused by knowing the value of $A$. The set of examples in $D$ where attribute $A$ has value $v$ is represented by $D_v$. It is a selection measure used in the ID3 decision tree induction algorithm.
 
 $$Gain(D,A)=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}}Entropy(D_v)$$
 
-**The attribute that generates the maximum information gain is desired.**
+**The attribute that generates the maximum information gain is selected.**
 
 ### Gain Ratio
 Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy and should be penalized.
