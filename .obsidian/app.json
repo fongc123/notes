@@ -8,5 +8,8 @@
     "downscalePercent": 100
   },
   "fileSortOrder": "byCreatedTimeReverse",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "spellcheckDictionary": [
+    "unpruned"
+  ]
 }

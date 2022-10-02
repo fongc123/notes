@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Machine Learning/Decision Tree.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -138,9 +138,9 @@
   },
   "active": "13bd0a7f1c3bc586",
   "lastOpenFiles": [
-    "Machine Learning/Classification.md",
-    "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",
+    "Machine Learning/Decision Tree.md",
+    "Machine Learning/Classification.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",

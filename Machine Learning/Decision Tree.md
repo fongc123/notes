@@ -260,4 +260,12 @@ Extra <span style = "color:lightblue">terminating conditions</span> can be added
 However, selection of an appropriate threshold may be challenging.
 
 ### Pruning
-The subtree rooted at a node is removed.
+The subtree rooted at a node is removed, turning the node into a leaf node.
+
+In each iteration, the node that improves the validation set accuracy **the most** is removed (*see [[ML Basics|greedy algorithms]]*).
+
+The pruning process continues until the pruned tree performs worse than the unpruned tree **on the validation set**.
+
+> [!INFO]
+> A pruned decision tree misclassifies more training examples than an unpruned tree.
+
