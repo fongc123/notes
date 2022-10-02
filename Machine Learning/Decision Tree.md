@@ -140,13 +140,51 @@ This subset has low entropy (i.e., low uncertainty). Lastly, the entropy of the 
 |    4    | senior  |   medium   |     no      |       fair        |                                 yes                                  |
 |    5    | senior  |    low     |     yes     |       fair        |                                 yes                                  |
 |    6    | senior  |    low     |     yes     |     excellent     |                                  no                                  |
-|         |         |            |             |                   |                                                                      |
+|   10    | senior  |   medium   |     yes     |       fair        |                                 yes                                  |
+|   14    | senior  |   medium   |     no      |     excellent     | no                                                                     |
 
+In the `senior` subset, there are two entries with the `no` class label and three entries with the `yes` class label. Thus,  $p_{\text{no}}=0.4$ and $p_{\text{yes}}=0.6$.
+
+$$
+\begin{align}
+	Entropy(D_{\text{senior}}) & =-\frac{3}{5}\log_2\left(\frac{3}{5}\right)-\frac{2}{5}\log_2\left(\frac{2}{5}\right) \newline
+	Entropy(D_{\text{senior}}) & =0.971
+\end{align}
+$$
+A **weighted average** of the entropy values of each subset ($D_{\text{youth}}$, $D_{\text{middle\_aged}}$, and $D_{\text{senior}}$) and their subset sizes is calculated.
+
+$$
+\begin{align}
+	Gain(D,A=\text{age})&=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}Entropy(D_v)} \newline
+	&=0.94-\left[\frac{5}{14}(0.971)+\frac{4}{14}(0)+\frac{5}{14}(0.971)\right] \newline
+	Gain(D,A=\text{age})&=0.694
+\end{align}
+$$
+
+The process is repeated for the other attributes, namely `income`, `student`, and `credit_rating`.
+
+$$
+\begin{gather}
+	Gain(D,A=\text{income})=0.029 \newline
+	Gain(D,A=\text{student})=0.151 \newline
+	Gain(D,A=\text{credit\_rating})=0.048
+\end{gather}
+$$
+
+Since the information gain for the `age` attribute has the highest value of $0.694$ among all the attributes, **the `age` attribute is selected**.
+
+> [!WARNING]
+> The information gain is **biased** towards tests with many outcomes. For example, if the data was partitioned based on a unique identifier (e.g., `product_id`), there would be many partitions, where each partition would have <u>one</u> entry. **The entropy after splitting would evaluate to $0$**. *See [[#Gain Ratio|gain ratio]] for countermeasures*.
 
 ### Gain Ratio
-Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy and should be penalized.
+The <span style = "color:lightblue">gain ratio</span> is an extension of information gain, where an attribute that creates many partitions is penalized. The penalty should be (1) large when data is evenly spread and (2) small when all data belong to one branch.
 
-$$SplitInfo_A(D)=-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\log_2{\frac{|D_j|}{|D|}}}$$
+$$
+\begin{gather}
+	SplitInfo_A(D)=-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\times\log_2{\frac{|D_j|}{|D|}}} \newline
+	GainRatio(A)=\frac{Gain(A)}{}
+\end{gather}
+$$
 
 ### Gini Index
 The <span style = "color:lightblue">Gini index</span> is another attribute selection method.
