@@ -72,7 +72,7 @@ $$A_c<c$$
 The set of candidate thresholds are the **midway segregation point** (criterion) between attribute values, where there are a total of $m-1$ thresholds. The value of $c$ is determined by the information gain.
 
 #### Example Calculation
-An example calculation for determining the attribute with the highest information gain is demonstrated. The training dataset table is shown below. Here, there exists only two class labels: `yes` and `no`.
+A sample calculation for determining the attribute with the highest information gain is demonstrated. The training dataset table is shown below. Here, there exists only two class labels: `yes` and `no`.
 
 | **RID** |   **Age**   | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
 |:-------:|:-----------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
@@ -179,15 +179,77 @@ Since the information gain for the `age` attribute has the highest value of $0.6
 ### Gain Ratio
 The <span style = "color:lightblue">gain ratio</span> is an extension of information gain, where an attribute that creates many partitions is penalized. The penalty should be (1) large when data is evenly spread and (2) small when all data belong to one branch.
 
+The expression for the split info is shown below, where $v$ represents distinct values of an attribute $A$.
 $$
 \begin{gather}
-	SplitInfo_A(D)=-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\times\log_2{\frac{|D_j|}{|D|}}} \newline
-	GainRatio(A)=\frac{Gain(A)}{}
+	SplitInfo_A(D) =-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\times\log_2{\frac{|D_j|}{|D|}}} \newline
+	GainRatio(A)=\frac{Gain(A)}{SplitInfo_A(D)} 
 \end{gather}
 $$
 
+**The attribute that generates the maximum gain ratio is selected.**
+
+#### Example Calculation
+A sample calculation for the gain ratio of the `credit_rating` attribute is demonstrated. Again, the training dataset table is shown below.
+
+| **RID** |   **Age**   | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
+|:-------:|:-----------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
+|    1    |    youth    |    high    |     no      |       fair        |                                  no                                  |
+|    2    |    youth    |    high    |     no      |     excellent     |                                  no                                  |
+|    3    | middle_aged |    high    |     no      |       fair        |                                 yes                                  |
+|    4    |   senior    |   medium   |     no      |       fair        |                                 yes                                  |
+|    5    |   senior    |    low     |     yes     |       fair        |                                 yes                                  |
+|    6    |   senior    |    low     |     yes     |     excellent     |                                 no                                  |
+|    7    | middle_aged |    low     |     yes     |     excellent     |                                 yes                                  |
+|    8    |    youth    |   medium   |     no      |       fair        |                                  no                                  |
+|    9    |    youth    |    low     |     yes     |       fair        |                                 yes                                  |
+|   10    |   senior    |   medium   |     yes     |       fair        |                                 yes                                  |
+|   11    |    youth    |   medium   |     yes     |     excellent     |                                 yes                                  |
+|   12    | middle_aged |   medium   |     no      |     excellent     |                                 yes                                  |
+|   13    | middle_aged |    high    |     yes     |       fair        |                                 yes                                  |
+|   14    |   senior    |   medium   |     no      |     excellent     | no                                                                     |
+
+The `credit_rating` attribute can take **two** different values: `fair` and `excellent`, where the size of $D_{\text{fair}}$ is $8$ and the size of $D_{\text{excellent}}$ is $6$. Thus, the split info is calculated.
+
+$$
+\begin{align}
+	SplitInfo_A(D)&=-\sum_{j=1}^{v}{\frac{|D_j|}{|D|}\times\log_2{\frac{|D_j|}{|D|}}} \newline
+	&=-\frac{8}{14}\log_2\left(\frac{8}{14}\right)-\frac{6}{14}\log_2\left(\frac{6}{14}\right) \newline
+	SplitInfo_A(D)&=0.985
+\end{align}
+$$
+The information gain of the `credit_rating` attribute is $0.048$ (*see [[#Information Gain#Example Calculation|how to calculate information gain]]*). Thus, the gain ratio is calculated.
+
+$$
+\begin{align}
+GainRatio(A)&=\frac{0.048}{0.985}\newline
+GainRatio(A)&=0.048
+\end{align}
+$$
+Since the attribute only creates two partitions, the gain ratio is similar to the information gain.
+
 ### Gini Index
-The <span style = "color:lightblue">Gini index</span> is another attribute selection method.
+The <span style = "color:lightblue">Gini index</span> is another attribute selection method. Its expression is shown below, where $p_i$ is the probability that an entry of a dataset $D$ belongs to a class label $C_i$. 
+
+$$
+\begin{gather}
+	Gini(D)=1-\sum_{i=1}^{m}p_i^2\newline\newline
+	\text{where }p_i=\frac{|C_i|}{|D|}
+\end{gather}	
+$$
+
+> [!INFO]
+> The Gini index $Gini(D)$ is small if most of the entries belong to a few classes.
+
+The Gini index of the splitting of the dataset by an attribute $A$ into $n$ subsets is defined as the following.
+
+$$Gini_A(D)=\sum_{i=1}^{n}{\frac{|D_i|}{|D|}Gini(D_i)}$$
+
+The reduction in impurity is the difference between the Gini index of the parent dataset and that of the attribute dataset.
+
+$$\Delta Gini(A)=Gini(D)-Gini_A(D)$$
+
+**The attribute that generates the greatest difference is selected.**
 
 ## Over-fitting
 Some methods to prevent over-fitting in decision trees are listed below.
