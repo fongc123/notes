@@ -57,18 +57,34 @@ The <span style = "color:lightblue">units</span> that entropy is measured in is 
 - <span style = "color:lightblue">nats</span>: $b\rightarrow e$
 - <span style = "color:lightblue">bits</span>: $b\rightarrow 2$ (*this is used in machine learning*)
 
-<span style = "color:lightblue">Continuous-valued attributes</span> (e.g., temperature) are discretized, and a Boolean attribute is created. It evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
-
-$$A_c<c$$
-
-The set of candidate thresholds are the midway segregation point between attribute values. The value of $c$ is determined by the information gain.
-
 ### Information Gain
 The <span style = "color:lightblue">information gain</span> of a subset $D$ relative to attribute $A$ is the expected **reduction** in entropy caused by knowing the value of $A$. The set of examples in $D$ where attribute $A$ has value $v$ is represented by $D_v$. It is a selection measure used in the ID3 decision tree induction algorithm.
 
 $$Gain(D,A)=Entropy(D)-\sum_{v}{\frac{|D_v|}{|D|}}Entropy(D_v)$$
 
 **The attribute that generates the maximum information gain is selected.**
+
+#### Continuous-valued Attributes
+<span style = "color:lightblue">Continuous-valued attributes</span> (e.g., temperature) are discretized, and a Boolean attribute is created. It evaluates to true if the attribute value is greater than a threshold $c$ and false otherwise.
+
+$$A_c<c$$
+
+The set of candidate thresholds are the **midway segregation point** (attributes) between attribute values, where there are a total of $m-1$ thresholds. The value of $c$ is determined by the information gain.
+
+#### Example Calculation
+An example calculation for determining the attribute with the highest information gain is demonstrated. The training dataset table is shown below.
+
+| **RID** |   **Age**   | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
+|:-------:|:-----------:|:----------:|:-----------:|:-----------------:| :--------------------------------------------------------------------: |
+|    1    |    youth    |    high    |     no      |       fair        | no                                                                   |
+|    2    |    youth    |    high    |     no      |     excellent     | no                                                                   |
+|    3    | middle_aged |    high    |     no      |       fair        | yes                                                                  |
+|    4    |   senior    |   medium   |     no      |       fair        | yes                                                                  |
+|    5    |   senior    |    low     |     yes     |       fair        | yes                                                                  |
+|    6    |   senior    |    low     |     yes     |     excellent     | yes                                                                  |
+|    7    | middle_aged |    low     |     yes     |     excellent     | yes                                                                     |
+
+
 
 ### Gain Ratio
 Information gain is **biased** toward tests with many outcomes. These attributes (e.g., student ID) create perfect entropy and should be penalized.
