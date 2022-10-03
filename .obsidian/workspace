@@ -4,10 +4,10 @@
     "type": "split",
     "children": [
       {
-        "id": "13bd0a7f1c3bc586",
+        "id": "3ea368021ec74b39",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -128,7 +128,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "13bd0a7f1c3bc586",
+  "active": "3ea368021ec74b39",
   "lastOpenFiles": [
     "Data Mining/Data Preprocessing.md",
     "Data Mining/Data Mining Basics.md",
