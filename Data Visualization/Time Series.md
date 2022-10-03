@@ -9,7 +9,6 @@ Time series data mainly analyzes the following tasks.
 - <span style = "color:lightblue">correlation</span>: co-occurrence between two variables
 - <span style = "color:lightblue">sequential order</span>: dependency
 
-
 ## Line Graph
 A <span style = "color:lightblue">line graph</span> or <span style = "color:lightblue">dot plot</span> directly displays the values of a quantitative variable with respect to time.
 
