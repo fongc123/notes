@@ -1,5 +1,5 @@
 # Visualizations
-There are sources that showcase exemplary visualizations.
+There are sources that showcase ex emplary visualizations.
 - [Visual Complexity](http://www.visualcomplexity.com/vc/)
 - [Mike Bostock's Blocks](https://bl.ocks.org/mbostock)
 - [Observable Visualization](https://beta.observablehq.com/collection/@observablehq/visualization)
