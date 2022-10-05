@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Principles.md",
+            "file": "Data Mining/Data Preprocessing.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "freedom",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Principles.md"
+                "file": "Data Mining/Data Preprocessing.md"
               }
             }
           },
@@ -136,8 +137,9 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "3ea368021ec74b39",
   "lastOpenFiles": [
+    "Data Visualization/Principles.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Time Series.md",
     "Data Visualization/References.md",
@@ -146,7 +148,6 @@
     "Data Visualization/Visualization Basics.md",
     "Data Mining/Data Preprocessing.md",
     "Data Mining/Data Mining Basics.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Regression.md"
+    "Machine Learning/Classification.md"
   ]
 }
