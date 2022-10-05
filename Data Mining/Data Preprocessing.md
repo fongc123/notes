@@ -214,7 +214,7 @@ The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix
 
 $$C\textbf{v}=\lambda \textbf{v}$$
 
-In the context of PCA, the eigenvector(s) $\textbf{v}$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where decreasing eigenvalue corresponds to decreasing significance or strength of a particular dimension.
+In the context of PCA, the eigenvector(s) $\textbf{v}$ are the <span style = "color:lightblue">principal components (PC)</span>. The eigenvalue $\lambda$ measures the variance magnitude in the direction of the eigenvector, where smaller eigenvalues correspond to smaller significance or strength of a particular dimension.
 
 Principal components with the smallest eigenvalues are discarded to perform dimensionality reduction.
 
@@ -237,10 +237,7 @@ In <span style = "color:lightblue">attribute or feature subset selection</span>,
 
 It is difficult to test *all* possible combinations of attributes, as there are $2^d$ possible combinations of $d$.
 
-<span style = "color:lightblue">Greedy forward selection</span> selects the best $n$ single attributes. On the other hand, <span style = "color:lightblue">greedy backward elimination</span> removes the worst $n$ attributes. The final reduced attribute set is obtained.
-
-> [!INFO]
-> **Greedy**, in computer science, means...
+<span style = "color:lightblue">Greedy forward selection</span> selects the best $n$ single attributes. On the other hand, <span style = "color:lightblue">greedy backward elimination</span> removes the worst $n$ attributes. The final reduced attribute set is obtained (*see [[ML Basics|greedy algorithms]]*).
 
 ### Numerosity Reduction
 

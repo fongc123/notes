@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "freedom",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -139,6 +138,8 @@
   },
   "active": "3ea368021ec74b39",
   "lastOpenFiles": [
+    "Data Mining/Data Preprocessing.md",
+    "Machine Learning/ML Basics.md",
     "Data Visualization/Principles.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Time Series.md",
@@ -146,8 +147,6 @@
     "Image Processing/Image Processing Basics.md",
     "README.md",
     "Data Visualization/Visualization Basics.md",
-    "Data Mining/Data Preprocessing.md",
-    "Data Mining/Data Mining Basics.md",
-    "Machine Learning/Classification.md"
+    "Data Mining/Data Mining Basics.md"
   ]
 }
