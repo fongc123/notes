@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md"
+                "file": "Image Processing/Spatial Filtering.md"
               }
             }
           },
@@ -148,7 +148,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "3ea368021ec74b39",
+  "active": "c015af41891762f8",
   "lastOpenFiles": [
     "Image Processing/Spatial Filtering.md",
     "Image Processing/Frequency Filtering.md",
