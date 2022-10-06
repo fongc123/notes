@@ -36,6 +36,7 @@ The Bayes rule can be applied to classification and hypothesis testing, where:
 
 $$P(h|D)=\frac{P(D|h)P(h)}{P(D)}=\frac{P(D|h)P(h)}{\sum_h{P(D|h)P(h)}}$$
 
+In classification, the data $D$ is the tuple of attributes of an unknown object, and the hypothesis $h$ is the class label that will classify the object.
 
 #### Example
 The probabilities of the events of developing COVID-19 ($A$) and experiencing cough symptoms ($B$) are shown below.
@@ -54,7 +55,6 @@ $$
 $$
 
 ### Prediction
-
 To predict the class of a particular tuple $x$, the following is done.
 - Compute probability $P(C_i|x)$ for <u>every</u> possible class $C_i$.
 - Assign the tuple to the class $C_i$ that has the <span style = "color:lightblue">maximum posterior probability (MAP)</span>.
