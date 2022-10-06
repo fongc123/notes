@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Image Processing/Frequency Filtering.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -150,15 +150,15 @@
   },
   "active": "c015af41891762f8",
   "lastOpenFiles": [
-    "Image Processing/Spatial Filtering.md",
     "Image Processing/Frequency Filtering.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Spatial Filtering.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Classification.md",
     "Machine Learning/ML Basics.md",
     "Machine Learning/Bayesian.md",
     "Machine Learning/Regression.md",
     "Machine Learning/Decision Tree.md",
-    "Data Visualization/Visualization Basics.md",
-    "Data Visualization/References.md"
+    "Data Visualization/Visualization Basics.md"
   ]
 }
