@@ -130,7 +130,6 @@ It adds a flat value between $a$ and $b$.
 ## Impulse Random Noise
 The <span style = "color:lightblue">impulse random noise</span> is also referred to as the <span style = "color:lightblue">salt-and-pepper</span> noise.
 
-
 $$
 p(z)=
 \begin{cases}
@@ -145,4 +144,4 @@ If neither $P_s$ nor $P_z$ are zero (*especially if they're equal*), noise value
 
 ![[image-noise-salt-pepper.png|600]]
 
-<span style = "color:lightblue">
+# Estimation of Noise Parameters
