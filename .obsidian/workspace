@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Machine Learning/Classification.md",
+            "file": "Image Processing/Frequency Filtering.md",
             "mode": "preview",
             "source": false
           }
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Mining/Data Preprocessing.md",
+            "file": "Image Processing/Spatial Filtering.md",
             "mode": "preview",
             "source": false
           }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Image Processing/Frequency Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Image Processing/Frequency Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Classification.md"
+                "file": "Image Processing/Frequency Filtering.md"
               }
             }
           },
@@ -150,6 +150,8 @@
   },
   "active": "3ea368021ec74b39",
   "lastOpenFiles": [
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Frequency Filtering.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Classification.md",
     "Machine Learning/ML Basics.md",
@@ -157,8 +159,6 @@
     "Machine Learning/Regression.md",
     "Machine Learning/Decision Tree.md",
     "Data Visualization/Visualization Basics.md",
-    "Data Visualization/References.md",
-    "Image Processing/Image Processing Basics.md",
-    "README.md"
+    "Data Visualization/References.md"
   ]
 }

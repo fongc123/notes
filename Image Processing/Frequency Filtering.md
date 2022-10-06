@@ -158,7 +158,7 @@ $$D(u,v)=\left[\left(u-\frac{P}{2}\right)^2+\left(v-\frac{Q}{2}\right)^2\right]^
 The sharp discontinuity results in ripples appearing in the spatial image. [[#Filtering#Gaussian|Gaussian]] or [[#Filtering#Butterworth|Butterworth]] filters have a smoother transition.
 
 > [!INFO]
-> Based on the [[#Fourier Transform#Spectrum Phase Angle|power spectrum]], most of the low frequency features are found within 10 pixels of a Fourier spectrum (86.9% of the image). The rest are high frequency features.
+> Based on the [[#Fourier Transform#Spectrum Phase Angle|power spectrum]], most of the low frequency features and the image power are found within 10 pixels of a Fourier spectrum (86.9% of the image). The rest are high frequency features.
 
 ### Gaussian
 
@@ -187,3 +187,13 @@ $$
 With greater values of $n$, it can easily approximate the ideal low-pass filter better than the Gaussian low-pass filter. However, increasing values of $n$ cause dips into negative values.
 
 ![[image-processing-freq-butterworth.png|600]]
+
+### High-frequency Emphasis
+Similar to [[Spatial Filtering#Unsharp Masking|Unsharp masking]] in the spatial domain, <span style = "color:lightblue">high-frequency emphasis</span> can be performed in the frequency domain. The filter is applied in the frequency domain.
+
+$$g(x,y)=\mathcal{F}^{-1}\{\left[k_1+k_2H_{HP}(u,v)\right]F(u,v)\}$$
+
+This general expression defines **unsharp masking** when $k_2=1$ and **high-boost filtering** when $k_2>1$.
+- $k_1$: offset for the <span style = "color:lightblue">transfer function</span> to prevent zeroing of the average intensity
+- $k_2$: multiplier to control contribution of high frequencies
+
