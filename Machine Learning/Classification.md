@@ -22,11 +22,38 @@ $$
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
 
 ## Bayesian Classification
-Based on the **Bayes rule**, <span style = "color:lightblue">Bayesian classification</span> classifies an object based on probability.
+Based on the **Bayes rule**, <span style = "color:lightblue">Bayesian classification</span> classifies an object based on the [[Data Preprocessing#Probability Independence|probability]] of observing events (i.e., attribute values) in the dataset.
+
+### Bayes Rule
+The <span style = "color:lightblue">Bayes rule</span> is shown below.
 
 $$P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}$$
+The Bayes rule can be applied to classification and hypothesis testing, where:
+- $P(h)$: <span style = "color:lightblue">prior probability</span> of hypothesis $h$ (i.e., initial probability of $h$ before observing the training data)
+- $P(h|D)$: <span style = "color:lightblue">posterior probability</span> of $h$ after observing the data $D$ (i.e., probability of $h$ given $D$)
+- $P(D|h)$: <span style = "color:lightblue">likelihood</span> of observing the data $D$ given the hypothesis $h$
+- $P(D)$: probability that the data $D$ will be observed
 
-The Bayes rule is shown above.
+$$P(h|D)=\frac{P(D|h)P(h)}{P(D)}=\frac{P(D|h)P(h)}{\sum_h{P(D|h)P(h)}}$$
+
+
+#### Example
+The probabilities of the events of developing COVID-19 ($A$) and experiencing cough symptoms ($B$) are shown below.
+- $P(B|A)=0.8$ (i.e., probability of coughing after developing COVID-19)
+- $P(A)=0.005$ (i.e., probability of COVID-19)
+- $P(B)=0.05$ (i.e., probability of coughing)
+
+With the Bayes rule, the probability of developing COVID-19 after cough symptoms is obtained.
+
+$$
+\begin{align}
+	P(A|B)&=\frac{P(B|A)P(A)}{P(B)} \newline
+	&=\frac{0.8\times 0.005}{0.05} \newline
+	&=0.08
+\end{align}
+$$
+
+### Prediction
 
 To predict the class of a particular tuple $x$, the following is done.
 - Compute probability $P(C_i|x)$ for <u>every</u> possible class $C_i$.

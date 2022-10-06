@@ -71,7 +71,7 @@ $$r_{A,B}=\frac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\si
 Given events $A$ and $B$, the probability expression of a disjunction (either $A$ or $B$) is shown below.
 
 $$P(A\vee B)=P(A)+P(B)-P(A\wedge B)$$
-Conditional probability is the probability of an event $A$ *given* that another event $B$ has occurred.
+<span style = "color:lightblue">Conditional probability</span> is the probability of an event $A$ *given* that another event $B$ has occurred.
 
 $$P(B|A)=\frac{P(A\cap B)}{P(A)}$$
 It is the probability that both events occur given that the first event has already occurred. Two random variables are <span style = "color:lightblue">independent</span> if the following statements are true.
@@ -90,6 +90,8 @@ Knowledge about $X$ contains <u>no information</u> about $Y$.
 
 > [!INFO]
 > Independence implies no correlation, but no correlation does not always imply independence.
+
+<span style = "color:lightblue">Mutually exclusive</span> events are events that cannot occur at the same time.
 
 ### Chi-squared Test
 The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
