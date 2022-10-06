@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Spatial Filtering.md",
-            "mode": "preview",
+            "file": "Image Processing/Image Restoration.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Image Processing/Image Restoration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Image Processing/Image Restoration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md"
+                "file": "Image Processing/Image Restoration.md"
               }
             }
           },
