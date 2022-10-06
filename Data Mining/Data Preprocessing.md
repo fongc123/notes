@@ -74,7 +74,7 @@ $$P(A\vee B)=P(A)+P(B)-P(A\wedge B)$$
 Conditional probability is the probability of an event $A$ *given* that another event $B$ has occurred.
 
 $$P(B|A)=\frac{P(A\cap B)}{P(A)}$$
-It is the probability that both events occur given that the first event has already occurred. Two random variables are **independent** if the following statements are true.
+It is the probability that both events occur given that the first event has already occurred. Two random variables are <span style = "color:lightblue">independent</span> if the following statements are true.
 
 $$
 \begin{align}

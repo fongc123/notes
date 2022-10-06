@@ -28,14 +28,14 @@ $$P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{P(B|A)P(A)}{P(B)}$$
 
 The Bayes rule is shown above.
 
-To predict the class of an object $x$, the following is done.
+To predict the class of a particular tuple $x$, the following is done.
 - Compute probability $P(C_i|x)$ for <u>every</u> possible class $C_i$.
-- Assign the object to the class $C_i$ that has the <span style = "color:lightblue">maximum posterior probability (MAP)</span>.
+- Assign the tuple to the class $C_i$ that has the <span style = "color:lightblue">maximum posterior probability (MAP)</span>.
 
 In other words, the class $C_i$ that maximizes the probability $P(x|C_i)P(C_i)$ is selected.
 
 ### Naive Bayes Classifier
-The <span style = "color:lightblue">naive Bayes classifier</span> assumes <span style = "color:lightblue">conditional independence</span>.
+The <span style = "color:lightblue">naive Bayes classifier</span> assumes <span style = "color:lightblue">conditional independence</span>. Without the assumption, the calculated probabilities will be very small which is undesired. In probability, bigger counts are desired.
 
 ## Model Performance
 
