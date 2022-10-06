@@ -30,7 +30,119 @@ When modeling additive noise, the following assumptions are made.
 1. The noise is uncorrelated with the image.
 2. The noise is independent of spatial location (*unless it's periodic noise*).
 
+> [!INFO]
+> **Periodic noise** is spatially dependent and can be filtered out by frequency domain filtering.
+
+Several models of noise and their effect on an image and its histogram are demonstrated in the following sections.
+
+![[image-noise-original.png|600]]
+
+![[Pasted image 20221006234256.png|600]]
+
 ## Gaussian
-The PDF of Gaussian noise is shown below, where $z$ represen
+The probability distribution function of the <span style = "color:lightblue">Gaussian noise</span> is shown below, where $z$ represents the intensity.
 
 $$p(z)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left[-\frac{(z-\bar{z})^2}{2\sigma^2}\right]$$
+Gaussian noise can occur due to **poor illumination** or **high temperature**.
+
+![[image-noise-gaussian.png|600]]
+
+## Rayleigh
+The probability distribution function of the <span style = "color:lightblue">Rayleigh noise</span> is shown below.
+
+$$
+\begin{gather}
+	p(z)=
+	\begin{cases}
+		\frac{2}{b}(z-a)\exp\left[-\frac{(z-a)^2}{b}\right] & z\geq a \newline
+		0 & z < a
+	\end{cases}
+	\newline
+	\bar{z}=a+\sqrt{\frac{\pi b}{4}} \newline
+	\sigma^2=\frac{b(4-\pi)}{4}
+\end{gather}
+$$
+Compared to [[#Gaussian|Gaussian noise]] the density is skewed to the right, where $a$ creates an offset.
+
+![[image-noise-rayleigh.png|600]]
+
+It can be caused by **range imaging** or **background modeling for MRIs**.
+
+## Erlang
+The probability distribution function of the <span style = "color:lightblue">Erlang noise</span> is shown below, where $a>b$.
+
+$$
+\begin{gather}
+	p(z)=
+	\begin{cases}
+		\frac{a^bz^{b-1}}{(b-1)!}\exp(-az) & z\geq0 \newline
+		0 & z < 0
+	\end{cases}
+	\newline
+	\bar{z}=\frac{b}{a} \newline
+	\sigma^2=\frac{b}{a^2}
+\end{gather}
+$$
+Compared to [[#Rayleigh|Rayleigh noise]], the density is also skewed to the right but with no offset.
+
+![[image-noise-erlang.png|600]]
+
+It can be caused by **laser imaging**.
+
+## Exponential
+The probability distribution function of the <span style = "color:lightblue">exponential noise</span> is shown below, where $a>0$.
+
+$$
+\begin{gather}
+	p(z)=
+	\begin{cases}
+		a\exp(-az) & z\geq0 \newline
+		0 & z < 0
+	\end{cases}
+	\newline
+	\bar{z}=\frac{1}{a} \newline
+	\sigma^2=\frac{1}{a^2}
+\end{gather}
+$$
+The exponential noise is a modification of the [[#Erlang|Erlang noise]] by setting $b$ to $1$.
+
+![[image-noise-exponential.png|600]]
+
+## Uniform
+The probability distribution function of the <span style = "color:lightblue">uniform noise</span> is shown below. 
+
+$$
+\begin{gather}
+	p(z)=
+	\begin{cases}
+		\frac{1}{b-a} & a\leq z\leq b\newline
+		0 & \text{otherwise}
+	\end{cases}
+	\newline
+	\bar{z}=\frac{a+b}{2} \newline
+	\sigma^2=\frac{(b-a)^2}{12}
+\end{gather}
+$$
+It adds a flat value between $a$ and $b$.
+
+![[image-noise-uniform.png|600]]
+
+## Impulse Random Noise
+The <span style = "color:lightblue">impulse random noise</span> is also referred to as the <span style = "color:lightblue">salt-and-pepper</span> noise.
+
+
+$$
+p(z)=
+\begin{cases}
+	P_s & \text{for } z = 2^k - 1\newline
+	P_p & \text{for } z = 0 \newline
+	1-(P_s+P_p) & \text{for } z= V
+\end{cases}
+$$
+If $P_s$ or $P_z$ is zero, the impulse noise is <span style = "color:lightblue">unipolar</span>.
+
+If neither $P_s$ nor $P_z$ are zero (*especially if they're equal*), noise values will either be white (value of $2^k-1$) or black (value of $0$). **The noise will resemble salt and pepper granules distributed randomly over the image.**
+
+![[image-noise-salt-pepper.png|600]]
+
+<span style = "color:lightblue">
