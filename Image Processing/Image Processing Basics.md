@@ -4,9 +4,9 @@ Image processing pertains to the manipulation, such as geometric transformation,
 
 ## Image Basics
 
-An <span style = "color:lightblue">image</span> is defined as a **two-dimensional** function $f(x,y)$, where $x$ and $y$ are spatial coordinates and $f$ is the intensity or gray level of the image at that point.
+An <span style = "color:lightblue">image</span> is defined as a **two-dimensional** function $f(x,y)$, where $x$ and $y$ are spatial coordinates and $f$ is the intensity or gray level of the image at that point (*see [[Acquisition & Representation#Representation|image representation]]*).
 
-Some images include natural image, satelite image, MRI image, microscopy image, CT scans, ultrasound scans, and infrared images. Images are inputted into computers as **an array of numbers**.
+Examples include natural images, satellite images, MRI images, microscopy images, CT scans, ultrasound scans, and infrared images. Images are inputted into computers as **an array of numbers**.
 
 <span style = "color:lightblue">Digital image processing</span> refers to the process of performing image processing using a digital computer.
 

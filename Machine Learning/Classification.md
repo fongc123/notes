@@ -36,7 +36,6 @@ The Bayes rule can be applied to classification and hypothesis testing, where:
 
 $$P(h|D)=\frac{P(D|h)P(h)}{P(D)}=\frac{P(D|h)P(h)}{\sum_h{P(D|h)P(h)}}$$
 
-In classification, the data $D$ is the tuple of attributes of an unknown object, and the hypothesis $h$ is the class label that will classify the object.
 
 #### Example
 The probabilities of the events of developing COVID-19 ($A$) and experiencing cough symptoms ($B$) are shown below.
@@ -54,6 +53,18 @@ $$
 \end{align}
 $$
 
+### Naive Bayes Classifier
+The <span style = "color:lightblue">naive Bayes classifier</span> assumes [[#Conditional Independence|conditional independence]]. Without the assumption, the calculated probabilities will be very small which is undesired.
+
+#### Conditional Independence
+Absolute independence is a strong requirement and is **seldom met**. Random variables $X$ and $Y$ are **conditionally independent** given $Z$ when the following statement is true.
+
+$$P(X|Y,Z)=P(X|Z)$$
+
+Given $Z$, knowledge about $X$ contains <u>no information</u> about $Y$.
+
+In classification, the **attributes are assumed to be conditionally independent given the class label**.
+
 ### Prediction
 To predict the class of a particular tuple $x$, the following is done.
 - Compute probability $P(C_i|x)$ for <u>every</u> possible class $C_i$.
@@ -61,8 +72,12 @@ To predict the class of a particular tuple $x$, the following is done.
 
 In other words, the class $C_i$ that maximizes the probability $P(x|C_i)P(C_i)$ is selected.
 
-### Naive Bayes Classifier
-The <span style = "color:lightblue">naive Bayes classifier</span> assumes <span style = "color:lightblue">conditional independence</span>. Without the assumption, the calculated probabilities will be very small which is undesired. In probability, bigger counts are desired.
+With the conditional independence assumption, the probability $P(x|C_i)$ is calculated easily, reducing the computational cost.
+
+$$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
+
+> [!INFO]
+> If the attribute is **continuous-valued**, the attribute values can be discretized or the probability can be estimated based on some distribution (e.g., Gaussian distribution).
 
 ## Model Performance
 
