@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c015af41891762f8",
+        "id": "3ea368021ec74b39",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Image Restoration.md",
+            "file": "Image Processing/Intensity Transformations.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Restoration.md"
+                "file": "Image Processing/Intensity Transformations.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "c015af41891762f8",
+  "active": "3ea368021ec74b39",
   "lastOpenFiles": [
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Arithmetic Operations.md",
-    "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Spatial Filtering.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Restoration.md",
-    "Data Mining/Data Preprocessing.md",
     "Machine Learning/Classification.md",
-    "Machine Learning/ML Basics.md"
+    "Machine Learning/Regression.md",
+    "Data Mining/Data Preprocessing.md",
+    "Machine Learning/Decision Tree.md",
+    "Machine Learning/Bayesian.md",
+    "Data Visualization/Visualization Basics.md",
+    "Data Visualization/References.md",
+    "Image Processing/Image Processing Basics.md",
+    "README.md"
   ]
 }

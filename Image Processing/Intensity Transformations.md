@@ -89,7 +89,7 @@ Some applications of bit-plane transformations are described below.
 
 ## Histogram Processing
 
-A <span style = "color:lightblue">histogram</span> displays the **pixel intensity distribution** of all pixels in an image . Intensity values with values ranging from $0$ to $L-1$ must first be normalized.
+A <span style = "color:lightblue">histogram</span> displays the **pixel intensity distribution** of all pixels in an image. Intensity values with values ranging from $0$ to $L-1$ must first be normalized.
 
 $$p(r_k)=\frac{h(r_k)}{MN}$$
 In the above equation, $p$ is the normalized intensity values, $h$ is the unnormalized intensity values, $M$ is the number of rows, and $N$ is the number of columns.
