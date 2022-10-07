@@ -145,3 +145,32 @@ If neither $P_s$ nor $P_z$ are zero (*especially if they're equal*), noise value
 ![[image-noise-salt-pepper.png|600]]
 
 # Estimation of Noise Parameters
+In the spatial domain, the noise parameters are estimated from patches of **reasonably constant background intensity** in the image. On the other hand, periodic noise parameters are estimated from the [[Frequency Filtering#Spectrum Phase Angle|Fourier spectrum]].
+
+$$\text{observe}\rightarrow\text{filter}\rightarrow\text{adjust}$$
+
+If the imaging system is available, the parameters *may* be estimated from the system (e.g., capturing "flat" images). However, it is normally necessary to estimate them from image arrangements.
+
+## Region of Interest
+The <span style = "color:lightblue">image region of interest (ROI)</span> is a small strip obtained from the background of an image, where the mean $\bar{z}$ and variance $\sigma^2$ of the gray levels in the strip are calculated.
+
+$$
+\begin{gather}
+	\bar{z} = \sum_{i=0}^{L-1}z_ip_s(z_i) \newline
+	\sigma^2 = \sum_{i=0}^{L-1}(z_i-\bar{z})^2p_s(z_i)
+\end{gather}
+$$
+Here, the pixel intensities $z_i$ which range from $0$ to $L-1$ are summarized, where:
+- $S$: the strip of sub-image
+- $p_s(z_i)$: the probability estimates (i.e., normalized histogram values) of the pixel intensities
+- $L$: the maximum intensity value in the entire image (e.g., $256$ for an 8-bit image)
+
+![[Pasted image 20221007180158.png|200]]
+
+In the example above, by performing statistics on a strip of the background of the original image, the intensities follow a Gaussian distribution.
+
+# Mean Filters
+Since generated noise creates fluctuations in the pixel intensities, the objective of <span style = "color:lightblue">mean filters</span> is to average out the intensity values.
+
+## Arithmetic
+The <span style = "color:lightblue">arithmetic mean filter</span> is a linear filter that assigns 
