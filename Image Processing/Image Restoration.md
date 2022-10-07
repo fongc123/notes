@@ -212,7 +212,7 @@ An image corrupted with pepper noise with a probability of $0.1$ (a) and an imag
 
 ![[image-restore-contraharmonic-1.png|600]]
 
-Alternatively, the image below shows the result if the $Q$ values for each filter were negated (i.e., not their intended use).
+Alternatively, the image below shows the result if the $Q$ values were swapped with each other (i.e., not their intended use).
 
 ![[image-restore-contraharmonic-2.png|600]]
 
