@@ -134,20 +134,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "c015af41891762f8",
   "lastOpenFiles": [
+    "img/image-restore-roi.png",
+    "img/image-noise-summary.png",
+    "img/image-restore-contraharmonic-1.png",
+    "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Spatial Filtering.md",
-    "Image Processing/Image Restoration.md",
     "Data Mining/Data Preprocessing.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Arithmetic Operations.md",
-    "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Intensity Transformations.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/ML Basics.md"
+    "Image Processing/Interpolation & Transformation.md"
   ]
 }

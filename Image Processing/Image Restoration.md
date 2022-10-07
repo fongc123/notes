@@ -37,7 +37,7 @@ Several models of noise and their effect on an image and its histogram are demon
 
 ![[image-noise-original.png|600]]
 
-![[Pasted image 20221006234256.png|600]]
+![[image-noise-summary.png|600]]
 
 ## Gaussian
 The probability distribution function of the <span style = "color:lightblue">Gaussian noise</span> is shown below, where $z$ represents the intensity.
@@ -138,9 +138,12 @@ p(z)=
 	1-(P_s+P_p) & \text{for } z= V
 \end{cases}
 $$
-If $P_s$ or $P_z$ is zero, the impulse noise is <span style = "color:lightblue">unipolar</span>.
+> [!INFO]
+> Pepper noise is represented by $P_p$, while salt noise is represented by $P_s$.
 
-If neither $P_s$ nor $P_z$ are zero (*especially if they're equal*), noise values will either be white (value of $2^k-1$) or black (value of $0$). **The noise will resemble salt and pepper granules distributed randomly over the image.**
+If $P_s$ or $P_p$ is zero, the impulse noise is <span style = "color:lightblue">unipolar</span>.
+
+If neither $P_s$ nor $P_p$ are zero (*especially if they're equal*), noise values will either be white (value of $2^k-1$) or black (value of $0$). **The noise will resemble salt and pepper granules distributed randomly over the image.**
 
 ![[image-noise-salt-pepper.png|600]]
 
@@ -165,12 +168,52 @@ Here, the pixel intensities $z_i$ which range from $0$ to $L-1$ are summarized, 
 - $p_s(z_i)$: the probability estimates (i.e., normalized histogram values) of the pixel intensities
 - $L$: the maximum intensity value in the entire image (e.g., $256$ for an 8-bit image)
 
-![[Pasted image 20221007180158.png|200]]
+![[image-restore-roi.png|200]]
 
 In the example above, by performing statistics on a strip of the background of the original image, the intensities follow a Gaussian distribution.
 
 # Mean Filters
 Since generated noise creates fluctuations in the pixel intensities, the objective of <span style = "color:lightblue">mean filters</span> is to average out the intensity values.
 
+All mean filters perform averaging within an area (i.e., a kernel) defined by $S_{xy}$ with dimensions $m\times n$. New values in the restored image $\hat{f}$ are calculated from old values in the corrupted image $g$.
+
 ## Arithmetic
-The <span style = "color:lightblue">arithmetic mean filter</span> is a linear filter that assigns 
+The <span style = "color:lightblue">arithmetic mean filter</span> is a linear filter that assigns new values based on the arithmetic mean.
+
+$$\hat{f}(x,y)=\frac{1}{mn}\sum_{(r,c)\in S_{xy}}{g(r,c)}$$
+A spatial kernel with size $m\times n$ will have coefficients of $\frac{1}{mn}$. It can remove continuous noise like [[#Gaussian|Gaussian noise]].
+
+## Geometric
+The <span style = "color:lightblue">geometric mean filter</span> is a non-linear filter that assigns new values based on the geometric mean.
+
+$$\hat{f}(x,y)=\left[\prod_{(r,c)\in S_{xy)}}{g(r,c)}\right]^{\frac{1}{mn}}$$
+
+This filter achieves **smoothing** comparable to an [[#Arithmetic|arithmetic mean filter]] but tends to **preserve more image detail**.
+
+It can remove [[#Impulse Random Noise|salt noise]] (*values with maximum intensity*) but not [[#Impulse Random Noise|pepper noise]] (*values with no intensity*). This is because values of $0$ will cause the product to equate to $0$ as well.
+
+## Harmonic
+Like the [[#Geometric|geometric mean filter]], the <span style = "color:lightblue">harmonic mean filter</span> is a non-linear filter that works well for [[#Impulse Random Noise|salt noise]] but fails for [[#Impulse Random Noise|pepper noise]]. It also works well with [[#Gaussian|Gaussian noise]].
+
+$$\hat{f}(x,y)=\frac{mn}{\sum_{(r,c)\in S_{xy}}{\frac{1}{g(r,c)}}}$$
+## Contraharmonic
+The <span style = "color:lightblue">contraharmonic mean filter</span> is a non-linear filter that combines the filters in the previous sections into a single equation.
+
+$$\hat{f}(x,y)=\frac{\sum_{(r,c)\in S_{xy}}g(r,c)^{Q+1}}{\sum_{(r,c)\in S_{xy}}g(r,c)^{Q}}$$
+
+The behavior of the filter is controlled by adjusting the order of the filter $Q$.
+- $Q>0$: removes pepper noise
+- $Q<0$: removes salt noise
+- $Q=0$: arithmetic mean filter
+- $Q=-1$: harmonic mean filter
+
+### Example
+An image corrupted with pepper noise with a probability of $0.1$ (a) and an image corrupted with salt noise with the same probability (b) are shown below. The resultant filtering with a $3\times 3$ contraharmonic filter with $Q=1.5$ (*good for pepper noise*) (c) and the resultant filtering with the same filter with $Q=-1.5$ (*good for salt noise*) (d) are also shown.
+
+![[image-restore-contraharmonic-1.png|600]]
+
+Alternatively, the image below shows the result if the $Q$ values for each filter were negated (i.e., not their intended use).
+
+![[image-restore-contraharmonic-2.png|600]]
+
+The pepper and salt noises worsen in their respective images.
