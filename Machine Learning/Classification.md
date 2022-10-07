@@ -79,6 +79,9 @@ $$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
 > [!INFO]
 > If the attribute is **continuous-valued**, the attribute values can be discretized or the probability can be estimated based on some distribution (e.g., Gaussian distribution).
 
+#### Example
+
+
 ## Model Performance
 
 A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
