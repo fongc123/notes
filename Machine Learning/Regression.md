@@ -56,6 +56,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr = 0.1)
 X = X.reshape(N, 1)
 Y = Y.reshape(N, 1)
 
+# convert type so that PyTorch can read
 inputs = torch.from_numpy(X.astype(np.float32))
 targets = torch.from_numpy(Y.astype(np.float32))
 
@@ -82,4 +83,4 @@ An <span style = "color:lightblue">epoch</span> (i.e., an iteration) is one comp
 
 Internally, PyTorch accumulates gradients in each epoch. Thus, the parameter gradients must be set to zero before starting the next epoch with `optimizer.zero_grad()`.
 
-The <span style = "color:lightblue">learning rate</span> is the step size at each iteration while moving towards a minimum in a loss function. A small learning rate requires many iterations before reaching the minimum point, while a large learning rate swiftly reaches it. Too large of a learning rate causes drastic updates which lead to divergent behaviour.
+The <span style = "color:lightblue">learning rate</span> is the step size at each iteration while moving towards a minimum in a loss function. A small learning rate requires many iterations before reaching the minimum point, while a large learning rate swiftly reaches it. Too large of a learning rate causes drastic updates, which lead to divergent behavior.
