@@ -17,13 +17,20 @@ Additionally, each attribute has a corresponding <span style = "color:lightblue"
 }
 ```
 
-All machine learning algorithms have a <span style = "color:lightblue">training set</span> and a <span style = "color:lightblue">test set</span> (and occasionally a <span style = "color:lightblue">validation set</span>). A model is fit based on the training set, where each object of the consists of a <span style = "color:lightblue">class attribute</span> (i.e., the correct answer) and a set of labels (i.e., data).
+## Data Sets
+All machine learning algorithms have a <span style = "color:lightblue">training set</span> and a <span style = "color:lightblue">test set</span> (and occasionally a <span style = "color:lightblue">validation set</span>).
+
+A model is fitted based on the **training set**, where each object of the consists of a <span style = "color:lightblue">class attribute</span> (i.e., the correct answer) and a set of labels (i.e., data). Semantically, the **test set** and the **validation set** verify if the model performs adequately on unseen data. The performance of the model on the validation set can be used to improve the model (e.g., neural network model architectures).
 
 > [!WARNING]
 > The test set and the training set must be disjoint.
 
+In the case where the test set *does not* have a class attribute (e.g., competitions), the created model will *truly predict* the test set's class attribute.
+
+The partitioning of the original data into different datasets helps prevent [[ML Basics#Over-fitting|over-fitting]].
+
 ## Statistical Descriptions
-Statistical descriptions give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., box plots, histogram, scatter plots) of the descriptions.
+Statistical summaries give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., box plots, histogram, scatter plots) of the descriptions.
 
 > [!INFO]
 > The standard arithmetic mean is susceptible to outliers. The **trimmed mean** will ignore the smallest and largest data points when calculating the mean to try to solve this issue.
@@ -181,7 +188,7 @@ new_data = scaler.fit_transform(old_data)
 > [!INFO]
 > The `fit()` method simply fits the data, while the `transform()` method transforms the data based on the scaler object. The `fit_transform()` method both fits and tranforms the data.
 
-### Z-Score
+#### Z-Score
 In <span style = "color:lightblue">z-score normalization</span>, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
 
 $$v'=\frac{v-\bar{A}}{\sigma_A}\quad \text{or}\quad Z=\frac{x-\mu}{\sigma}$$
@@ -258,6 +265,20 @@ The proportion of variance increases logarithmically as the number of eigenvecto
 
 > [!WARNING]
 > Some machine learning problems, such as classification, and datasets will cause problems when performing dimensionality reduction, as the dimensions are needed in these problems. Additionally, PCA does not consider nonlinear cases (*only unidirectional*).
+
+#### Code
+The Python library `scikit-learn` provides the `PCA` object for PCA-related functions. The class is initialized with the desired number of dimensions to reduce the dataset to.
+
+```python
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components = 3)
+```
+
+> [!INFO]
+> If the argument `n_components` is not passed in, all components will be kept.
+
+
 
 ### Attribute Subset Selection
 
