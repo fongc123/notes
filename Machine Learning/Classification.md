@@ -19,7 +19,7 @@ $$
 > This model is referred to as <span style = "color:lightblue">logistic regression</span>, as a sigmoid function is also referred to as a logistic function.
 
 ## Cross-entropy Loss
-In **binary** classification, a <span style = "color:lightblue">binary cross-entropy loss</span> is used instead.
+In **binary** classification, a <span style = "color:lightblue">binary cross-entropy (BCE) loss</span> is used instead.
 
 ## Bayesian Classification
 Based on the **Bayes rule**, <span style = "color:lightblue">Bayesian classification</span> classifies an object based on the [[Data Preprocessing#Probability Independence|probability]] of observing events (i.e., attribute values) in the dataset.
@@ -80,7 +80,7 @@ $$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
 > If the attribute is **continuous-valued**, the attribute values can be discretized or the probability can be estimated based on some distribution (e.g., Gaussian distribution).
 
 #### Example
-
+kk
 
 ## Model Performance
 

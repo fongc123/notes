@@ -160,13 +160,13 @@ Thus, since the calculated value exceeds the table value, the null hypothesis is
 - <span style = "color:lightblue">discretization</span>: divide continuous attribute into intervals to reduce data size (e.g., histogram, cluster analysis, decision-tree analysis)
 
 ### Normalization
-In min-max normalization, original values a mapped to a new range within a new minimum ($nmin$) and maximum ($nmax$). The expression of a new value $v'$ is shown below.
+In <span style = "color:lightblue">min-max normalization</span>, original values a mapped to a new range within a new minimum ($nmin$) and maximum ($nmax$). The expression of a new value $v'$ is shown below.
 
 $$v'=\frac{v-min_A}{max_A-min_A}(nmax_A-nmin_A)+nmin_A$$
 
 For example, an income range of \$12,000 to \$98,000 can be normalized to a range of 0 to 1. Typically, ranges of $[0.0, 1.0]$ or $[-1.0, 1.0]$ are used. However, this normalization method requires estimation of the absolute minimum and maximum values of the original dataset which may not be known. 
 
-In ***z*-score normalization**, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
+In <span style = "color:lightblue">z-score normalization</span>, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
 
 $$v'=\frac{v-\bar{A}}{\sigma_A}\quad \text{or}\quad Z=\frac{x-\mu}{\sigma}$$
 > [!QUESTION]
