@@ -23,7 +23,7 @@ All machine learning algorithms have a <span style = "color:lightblue">training 
 > The test set and the training set must be disjoint.
 
 ## Statistical Descriptions
-Statistical descriptions give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., boxplots, histogram, scatter plots) of the descriptions.
+Statistical descriptions give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., box plots, histogram, scatter plots) of the descriptions.
 
 > [!INFO]
 > The standard arithmetic mean is susceptible to outliers. The **trimmed mean** will ignore the smallest and largest data points when calculating the mean to try to solve this issue.
@@ -160,17 +160,42 @@ Thus, since the calculated value exceeds the table value, the null hypothesis is
 - <span style = "color:lightblue">discretization</span>: divide continuous attribute into intervals to reduce data size (e.g., histogram, cluster analysis, decision-tree analysis)
 
 ### Normalization
+Data normalization ensures uniformity in data. Attributes with different ranges should be compared equally with each other.
+
+#### Min-Max
 In <span style = "color:lightblue">min-max normalization</span>, original values a mapped to a new range within a new minimum ($nmin$) and maximum ($nmax$). The expression of a new value $v'$ is shown below.
 
 $$v'=\frac{v-min_A}{max_A-min_A}(nmax_A-nmin_A)+nmin_A$$
 
-For example, an income range of \$12,000 to \$98,000 can be normalized to a range of 0 to 1. Typically, ranges of $[0.0, 1.0]$ or $[-1.0, 1.0]$ are used. However, this normalization method requires estimation of the absolute minimum and maximum values of the original dataset which may not be known. 
+For example, an income range of \$12,000 to \$98,000 can be normalized to a range of 0 to 1. Typically, ranges of $[0.0, 1.0]$ or $[-1.0, 1.0]$ are used. However, this normalization method requires estimation of the absolute minimum and maximum values of the original dataset, which may not be known. 
 
+The Python library `scikit-learn` provides the `MinMaxScaler` object for min-max normalization.
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+new_data = scaler.fit_transform(old_data)
+```
+
+> [!INFO]
+> The `fit()` method simply fits the data, while the `transform()` method transforms the data based on the scaler object. The `fit_transform()` method both fits and tranforms the data.
+
+### Z-Score
 In <span style = "color:lightblue">z-score normalization</span>, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
 
 $$v'=\frac{v-\bar{A}}{\sigma_A}\quad \text{or}\quad Z=\frac{x-\mu}{\sigma}$$
 > [!QUESTION]
 > How many standard deviations from the average does the data point lie?
+
+The `scikit-learn` library provides the `StandardScaler` object for z-score normalization.
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+new_data = scaler.fit_transform(old_data)
+```
 
 ## Reduction
 

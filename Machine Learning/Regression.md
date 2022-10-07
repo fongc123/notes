@@ -34,6 +34,13 @@ $$
 
 ## Gradient Descent
 <span style = "color:lightblue">Gradient descent</span> is an **iterative** first-order optimization **algorithm** that is used to find the local minimum or maximum or a function. Each iteration of the descent is referred to as an <span style = "color:lightblue">epoch</span>.
+1. Initial parameters start at a randomly initialized point.
+2. Find the gradient of the loss with respect to current parameters.
+3. Step in gradient direction to obtain new parameters (i.e., the `optimizer.step()` method).
+4. Iterate until minimum is reached.
+
+> [!INFO]
+> Most of the time, it is impossible to solve for the gradient of the loss function analytically.
 
 When there are multiple features, this method finds the feature(s) that has the most effect on the loss function and adjusts accordingly.
 
@@ -84,3 +91,6 @@ An <span style = "color:lightblue">epoch</span> (i.e., an iteration) is one comp
 Internally, PyTorch accumulates gradients in each epoch. Thus, the parameter gradients must be set to zero before starting the next epoch with `optimizer.zero_grad()`.
 
 The <span style = "color:lightblue">learning rate</span> is the step size at each iteration while moving towards a minimum in a loss function. A small learning rate requires many iterations before reaching the minimum point, while a large learning rate swiftly reaches it. Too large of a learning rate causes drastic updates, which lead to divergent behavior.
+
+> [!INFO]
+> The learning rate is modified by powers of $10$ (e.g., $0.1$, $0.01$, $0.001$, etc.).
