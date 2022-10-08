@@ -163,6 +163,48 @@ The $\chi^2$ value of this contingency table is $507.93$ with a degree of freedo
 $$\chi^2=507.93>10.83$$
 Thus, since the calculated value exceeds the table value, the null hypothesis is rejected, and the attributes $A$ and $B$ are considered to be **not independent**.
 
+#### Code
+The Python library `scipy` provides the `chi2_contingency()` function for performing Chi-squared analysis and for evaluating independence.
+
+> [!INFO]
+> For continuous-valued attributes, the datasets are partitioned by the attribute mean (i.e., values less than the mean and values greater than or equal to the mean).
+> 
+> ```python
+> df[attr1_ge_mean] = df[attr1] >= df[attr1].mean()
+> df[attr2_ge_mean] = df[attr2] >= df[attr2].mean()
+> ```
+
+First, a `crosstab` containing the attributes of interest is created.
+
+```python
+import pandas as pd
+
+crosstab = pd.crosstab(df['attr1'], df['attr2'])
+```
+
+The values related to Chi-squared analysis are obtained from the built-in function.
+
+```python
+from scipy import stats
+
+chi2, p, dof, expected = stats.chi2_contingency(crosstab)
+```
+- `chi2`: calculated Chi-squared value of the <span style = "color:lightblue">contingency table</span>
+- `p`: p-value
+- `dof`: [[#Chi-squared Test|degree of freedom]]
+- `expected`: expected values assuming no dependency
+
+Next, the critical value is calculated to determine the dependency between attributes.
+
+```python
+significance_level = 0.01
+critical_value = stats.chi2.ppf(q = 1 - 0.01, df = dof)
+
+if chi2 >= critical_value:
+	print("Null hypothesis rejected.")
+else:
+	print("Null hypothesis not rejected.")
+```
 
 ## Transformation
 <span style = "color:lightblue">Data transformation</span> modifies the data to improve the results gained from data mining (i.e., improve mining performance.
