@@ -11,7 +11,7 @@ Each neural network layer is a feature transformation, where increasingly comple
 ![[ml-nn.png|400]]
 
 # Mathematical Representation
-Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron can be represented by a <span style = "color:lightblue">sigmoid function</span> of inputs $x$, weights $w$, and biases $b$.
+Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron can be represented by a <span style = "color:lightblue">sigmoid function</span> (*alternative functions can be used*) of inputs $x$, weights $w$, and biases $b$.
 
 $$\text{neuron: }\quad\sigma(w^Tx+b)$$
 
@@ -22,7 +22,7 @@ $$p(y=1|x)=\sigma(W^{(L)T}z^{(L-1)}+b^{(L)})$$
 In the above equation, the subscript denotes the layer number, where $L$ represents the number of layers. In multi-class classification, however, the final layer will have multiple neurons to predict multiple classes.
 
 > [!INFO]
-> Linear regression and logistic regression (classification) are very similar. The only difference is that the final layer of regression won't be a sigmoid function (i.e., a range of values will be predicted).
+> Linear regression and logistic regression (classification) are very similar. The only difference is that the final layer of regression won't be a sigmoid function (i.e., direct values will be predicted).
 
 
 <span style = "color:lightblue">
