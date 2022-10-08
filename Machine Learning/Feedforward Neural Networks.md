@@ -15,7 +15,7 @@ Similar to [[Classification#Binary Classification|what was mentioned in classifi
 
 $$\text{neuron: }\quad\sigma(w^Tx+b)$$
 > [!INFO]
-> The nonlinear property of the activation function allows the model to make nonlinear predictions. Normally, <span style = "color:lightblue">feature engineering</span> (i.e., combining features such as $X_1X_2$ or $\sin(X_1)$) is done, but it is not needed in deep learning.
+> The nonlinear property of the activation function allows the model to make nonlinear predictions. Normally, <span style = "color:lightblue">feature engineering</span> (i.e., adding or combining features such as $X_1^2$, $\sin(X_1)$ or $X_1X_2$) is done, but it is not needed in deep learning.
 
 The output of a neuron is the input of the next neuron or layer. In the final layer of **binary classification**, the neuron will predict between two classes.
 
