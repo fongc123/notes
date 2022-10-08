@@ -9,7 +9,7 @@ $$
 a = w_1x_1+w_2x_2+b
 $$
 
-A value of $a$ greater than $0$ corresponds to one class, while that of less than $0$ corresponds to the other. It can be visualized as a <span style = "color:lightblue">sigmoid function</span> $\sigma(a)$ which outputs values between $0$ and $1$. Normally, it is expressed as a probability of whether the object belongs to the class (i.e., true or false).
+A value of $a$ greater than $0$ corresponds to one class, while that of less than $0$ corresponds to the other. It can be visualized as a <span style = "color:lightblue">sigmoid function</span> $\sigma(a)$ (*see [[Feedforward Neural Networks#Activation Functions|activation functions]]*) which outputs values between $0$ and $1$. Normally, it is expressed as a probability of whether the object belongs to the class (i.e., true or false).
 
 $$
 p(y=1|x) = \sigma(w^Tx+b)=\sigma(\sum_{d-1}^{D}w_dx_d+b)

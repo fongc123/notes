@@ -11,9 +11,11 @@ Each neural network layer is a feature transformation, where increasingly comple
 ![[ml-nn.png|400]]
 
 # Mathematical Representation
-Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron can be represented by a <span style = "color:lightblue">sigmoid function</span> (*alternative functions can be used*) of inputs $x$, weights $w$, and biases $b$.
+Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron is represented by an [[#Activation Functions|activation function]] (e.g., the <span style = "color:lightblue">sigmoid function</span>) of inputs $x$, weights $w$, and biases $b$.
 
 $$\text{neuron: }\quad\sigma(w^Tx+b)$$
+> [!INFO]
+> The nonlinear property of the activation function allows the model to make nonlinear predictions. Normally, <span style = "color:lightblue">feature engineering</span> (i.e., combining features such as $X_1X_2$ or $\sin(X_1)$) is done, but it is not needed in deep learning.
 
 The output of a neuron is the input of the next neuron or layer. In the final layer of **binary classification**, the neuron will predict between two classes.
 
@@ -24,5 +26,4 @@ In the above equation, the subscript denotes the layer number, where $L$ represe
 > [!INFO]
 > Linear regression and logistic regression (classification) are very similar. The only difference is that the final layer of regression won't be a sigmoid function (i.e., direct values will be predicted).
 
-
-<span style = "color:lightblue">
+# Activation Functions
