@@ -50,6 +50,8 @@ A review of several dispersion statistics is shown below.
 > [!INFO]
 > Outliers are usually defined as values greater than or lower than $1.5 \times IQR$.
 
+The Python library `pandas` contains the `describe()` method, which gives a statistical summary of the data in a data frame.
+
 ## Cleaning
 <span style = "color:lightblue">Data cleaning</span> attempts to fill in missing values, smooth out noise, and correct inconsistencies in the data.
 
@@ -73,6 +75,8 @@ The <span style = "color:lightblue">correlation coefficient</span> $r$ can be us
 The expression for the correlation coefficient between attributes $A$ and $B$ is shown below, where $a_i$ and $b_i$ are the respective values, $\bar{A}$ and $\bar{B}$ are the respective means, and $\sigma_A$ and $\sigma_B$ are the respective standard deviations.
 
 $$r_{A,B}=\frac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\sigma_B}=\frac{\sum_{i=1}^{N}a_ib_i-N\bar{A}\bar{B}}{N\sigma_A\sigma_B}$$
+
+The Python library `pandas` comes with the `corr()` or `corrwith()` (*for multiple column labels*) methods to calculate the correlation coefficient between columns.
 
 ## Probability & Independence
 Given events $A$ and $B$, the probability expression of a disjunction (either $A$ or $B$) is shown below.
@@ -278,7 +282,26 @@ pca = PCA(n_components = 3)
 > [!INFO]
 > If the argument `n_components` is not passed in, all components will be kept.
 
+The `fit_transform()` method accepts data as input (e.g., a `pandas` data frame), fits the model, and applies dimensionality reduction on the data.
 
+```python
+principal_components = pca.fit_transform(df)
+```
+
+Useful attributes of the `PCA` model are listed below.
+- `components_`: principal axes in feature space, representing the directions of maximum variance in the data
+- `explained_variance_`: the amount of variance explained by each component
+- `explained_variance_ratio_`: the percentage of variance explained by each component
+
+```python
+eigenvalues = pca.explained_variance_
+variance_ratio = pca.explained_variance_ratio_
+cumsum_ratio = pca.explained_variance_ratio.cumsum().round(2) # cumulative sum
+```
+
+With `explained_variance_ratio_.cumsum()`, the proportion of variance kept can be plotted against the number of principal components, as shown in [[#Choosing PCs|this section]]. An example is shown below.
+
+![[data-mining-cumsum-ratio-pc.png|600]]
 
 ### Attribute Subset Selection
 
