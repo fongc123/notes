@@ -194,7 +194,7 @@ chi2, p, dof, expected = stats.chi2_contingency(crosstab)
 - `dof`: [[#Chi-squared Test|degree of freedom]]
 - `expected`: expected values assuming no dependency
 
-Next, the critical value is calculated to determine the dependency between attributes.
+Finally, the critical value is calculated to determine the dependency between attributes.
 
 ```python
 significance_level = 0.01
