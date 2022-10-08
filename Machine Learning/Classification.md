@@ -17,7 +17,7 @@ $$
 > [!INFO]
 > This model is referred to as <span style = "color:lightblue">logistic regression</span>, as a sigmoid function is also referred to as a logistic function.
 
-## Cross-entropy Loss
+### Cross-entropy Loss
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy (BCE) loss</span> is used instead.
 
 ## Bayesian Classification
