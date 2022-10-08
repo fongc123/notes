@@ -1,5 +1,4 @@
 # Machine Learning Basics
-
 <span style = "color:lightblue">Machine learning</span> is a geometry problem. Given a dataset, a curve is fitted to best describe the data; however, the meaning of the curve changes according to the problem and data.
 - <span style = "color:lightblue">classification</span>: the curve separates data points into **classes**
 - <span style = "color:lightblue">regression</span>: the curve estimates the trend of data points as close as possible
