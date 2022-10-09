@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Machine Learning/Feedforward Neural Networks.md",
+            "file": "Image Processing/Frequency Filtering.md",
             "mode": "preview",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ripp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Frequency Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Frequency Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md"
+                "file": "Image Processing/Frequency Filtering.md"
               }
             }
           },
@@ -138,15 +139,15 @@
   },
   "active": "c015af41891762f8",
   "lastOpenFiles": [
-    "Machine Learning/Classification.md",
     "Image Processing/Intensity Transformations.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md",
     "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Image Processing Basics.md",
+    "Image Processing/Acquisition & Representation.md",
     "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/Regression.md",
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Recurrent Neural Networks.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Data Mining/Data Preprocessing.md"
+    "Machine Learning/Classification.md"
   ]
 }
