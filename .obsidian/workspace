@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Frequency Filtering.md",
+            "file": "Image Processing/Intensity Transformations.md",
             "mode": "preview",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ripp",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Frequency Filtering.md"
+                "file": "Image Processing/Intensity Transformations.md"
               }
             }
           },
@@ -139,9 +138,9 @@
   },
   "active": "c015af41891762f8",
   "lastOpenFiles": [
+    "Image Processing/Frequency Filtering.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Restoration.md",
-    "Image Processing/Frequency Filtering.md",
     "Image Processing/Spatial Filtering.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
