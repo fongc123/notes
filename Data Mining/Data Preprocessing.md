@@ -365,3 +365,33 @@ $$y=\underbracket{a}_{slope}x+\underbracket{b}_{y-intercept}$$
 > [!INFO]
 > In <span style = "color:lightblue">random sampling</span>, there is an equal probability of selecting any particular item. On the other hand, in <span style = "color:lightblue">stratified sampling</span>, the dataset is partitioned (e.g., by age group), and samples are drawn from each partition. Random sampling is applicable to normally distributed data, while stratified sampling is applicable to skewed data.
 
+### *t*-distributed Stochastic Neighbor Encoding
+<span style = "color:lightblue">t-distributed stochastic neighbor encoding (t-SNE)</span> is a nonlinear dimensionality reduction technique that is well suited for embedding high dimensions to low dimensions for data visualization. It converts similarities between data points to joint probabilities and tries to minimize the <span style = "color:lightblue">Kullback-Leibler divergence</span> between the joint probabilities of the low dimensional embedding and the high dimensional data.
+
+> [!INFO]
+> It is recommended to use [[#Principal Component Analysis|PCA]] for dense data or <span style = "color:lightblue">TruncatedSVD</span> for sparse data instead, especially if the number of features is high.
+
+The Python library `sklearn` provides the `TSNE` object for this reduction method.
+
+```python
+from sklearn.manifold import TSNE
+
+tsne = TSNE(n_components = 2, random_state = 801)
+transformed_data = tsne.fit_transform(old_data)
+```
+
+As t-SNE is a randomized algorithm, the `random_state` controls the seed and, in this case, is set to `801` for reproducible plotting.
+
+### Multidimensional Scaling
+<span style = "color:lightblue">Multidimensional scaling (MDS)</span> creates a low dimensional representation such that the original distances in the high dimensional space are preserved. There are two types of MDS algorithms: metric and non-metric.
+
+The Python library `sklearn` provides the `MDS` object for both metric and non-metric MDS algorithms.
+
+```python
+from sklearn.manifold import MDS
+
+mds = MDS(n_components = 2, random_state = 801)
+transformed_data = mds.fit_transform(old_data)
+```
+
+Similar to [[#t -distributed Stochastic Neighbor Encoding|t-SNE]], the `random_state` controls the seed of the algorithm.
