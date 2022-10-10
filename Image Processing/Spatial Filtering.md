@@ -4,11 +4,11 @@
 
 ## Linear Spatial Filtering
 
-A <span style = "color:lightblue">linear spatial filter</span> performs a sum-of-products operation between an image $f$ and a filter kernel $w$. A filter is linear if the operation $T$ it performs is also linear. The expression for the <span style = "color:lightblue">correlation</span> of a filter $w$ with an image $f$ is shown below.
+A <span style = "color:lightblue">linear spatial filter</span> performs a sum-of-products operation between an image $f$ and a filter kernel $w$. A filter is linear if the operation $T$ it performs is also linear. The expression for the <span style = "color:lightblue">correlation</span> of a filter $w$ with an image $f$ is shown below. **The filter $w$ is directly compared with the image**.
 
 $$w(x,y)\bigstar f(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x+s,y+t)}$$
 
-The expression for the <span style = "color:lightblue">convolution</span> of a filter $w$ with an image $f$ is shown below. The filter $w$ is rotated by 180$^\circ$.
+The expression for the <span style = "color:lightblue">convolution</span> of a filter $w$ with an image $f$ is shown below. **The filter $w$ is rotated by 180$^\circ$ (i.e., flipped in horizontal and vertical axes) when compared with the image.**
 
 $$w(x,y)\star f(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
 
