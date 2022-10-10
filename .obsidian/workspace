@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Image Processing/Spatial Filtering.md",
+            "file": "Data Mining/Data Preprocessing.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md"
+                "file": "Data Mining/Data Preprocessing.md"
               }
             }
           },
@@ -138,6 +138,7 @@
   },
   "active": "c015af41891762f8",
   "lastOpenFiles": [
+    "Image Processing/Spatial Filtering.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
@@ -146,7 +147,6 @@
     "Programming with C++/Scope.md",
     "Programming with C++/Separate Compilation.md",
     "Programming with C++/Struct.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Image Restoration.md"
+    "Image Processing/Frequency Filtering.md"
   ]
 }
