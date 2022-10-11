@@ -92,6 +92,17 @@ $$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
 #### Example
 kk
 
+## Nearest Neighbor Classification
+A <span style = "color:lightblue">nearest neighbor classifier</span> assigns class labels to an object based on its **similarity** to objects in the training data.
+
+Similarity measures include the **Manhattan distance** ($\mathcal{l}_1$-distance) and **Euclidean distance** ($\mathcal{l}_2$-distance). The expression for the Euclidean distance is shown below for an $n$-dimensional space (i.e., $n$ attributes).
+
+$$dist(x_1,x_2)=\sqrt{\sum_{i=1}^{n}(x_{1i}-x_{2i})^2}$$
+
+### $k$-Nearest Neighbor (KNN)
+Given a new entry, the <span style = "color:lightblue">k-nearest neighbors</span> algorithm searches for the $k$ nearest training data entries based on a pre-defined distance metric and assigns the new entry the **majority class label in the nearest neighbor set**.
+
+
 ## Model Performance
 
 A <span style = "color:lightblue">confusion matrix</span> is a tool to analyze how well a classifier can recognize tuples of different classes.
