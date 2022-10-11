@@ -226,6 +226,10 @@ Similar to [[#Mean Filters|mean filters]], <span style = "color:lightblue">order
 This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
 
 # Adaptive Filters
+<span style = "color:lightblue">Adaptive filters</span> change the filter behavior based on statistical characteristics, specifically the mean $\bar{Z}_{S}$, variance of the pixel intensities $\sigma^2_{S}$, and variance of the noise $\sigma^2_\eta$, of the filter region.
+
+## Local Noise Reduction
+The <span style = "color:lightblue">adaptive local noise reduction filter</span> 
 
 # Periodic Noise Reduction
 Image noise is removed by modifying the Fourier spectrum of an image.
