@@ -229,7 +229,17 @@ This filter removes impulse noise, avoids excessive smoothing, and preserves the
 <span style = "color:lightblue">Adaptive filters</span> change the filter behavior based on statistical characteristics, specifically the mean $\bar{Z}_{S}$, variance of the pixel intensities $\sigma^2_{S}$, and variance of the noise $\sigma^2_\eta$, of the filter region.
 
 ## Local Noise Reduction
-The <span style = "color:lightblue">adaptive local noise reduction filter</span> 
+The <span style = "color:lightblue">adaptive local noise reduction filter</span> returns different values based on conditions.
+
+$$\hat{f}(x,y)=g(x,y)-\frac{\sigma^2_\eta}{\sigma^2_S}\left[g(x,y)-\bar{Z}_S\right]$$
+
+The filter attempts to both **reduces local noise** and **preserves edges or boundaries**, based on the following conditions.
+- $\sigma^2_\eta=0\rightarrow$ return the value of $g(x,y)$
+- $\sigma^2_S=\sigma^2_\eta\rightarrow$ return the [[#Arithmetic|local arithmetic mean]] of the filter region to reduce noise
+- $\sigma^2_S>\sigma^2_\eta\rightarrow$ return a value close to $g(x,y)$ to preserve edges
+- $\sigma^2_S<\sigma^2_\eta\rightarrow$ set the ratio between the intensity variance and noise variance to $1$
+
+
 
 # Periodic Noise Reduction
 Image noise is removed by modifying the Fourier spectrum of an image.
