@@ -23,6 +23,8 @@ In **binary** classification, a <span style = "color:lightblue">binary cross-ent
 ## Bayesian Classification
 Based on the **Bayes rule**, <span style = "color:lightblue">Bayesian classification</span> classifies an object based on the [[Data Preprocessing#Probability Independence|probability]] of observing events (i.e., attribute values) in the dataset.
 
+This classification is **easy to implement** and **obtains good results for most cases**. However, it relies on the [[#Conditional Independence|conditional independence assumption]] which may cause a loss of accuracy.
+
 ### Bayes Rule
 The <span style = "color:lightblue">Bayes rule</span> is shown below.
 
@@ -53,7 +55,7 @@ $$
 $$
 
 ### Naive Bayes Classifier
-The <span style = "color:lightblue">naive Bayes classifier</span> assumes [[#Conditional Independence|conditional independence]]. Without the assumption, the calculated probabilities will be very small which is undesired.
+The <span style = "color:lightblue">naive Bayes classifier</span> assumes [[#Conditional Independence|conditional independence]]. Without the assumption, the calculated probabilities will be very small, which is undesired.
 
 #### Conditional Independence
 Absolute independence is a strong requirement and is **seldom met**. Random variables $X$ and $Y$ are **conditionally independent** given $Z$ when the following statement is true.
@@ -71,12 +73,21 @@ To predict the class of a particular tuple $x$, the following is done.
 
 In other words, the class $C_i$ that maximizes the probability $P(x|C_i)P(C_i)$ is selected.
 
+$$\text{prediction}=\arg \max_{C_i}{P(C_i)}\prod_{k}{P(x_k|C_i)}$$
+
 With the conditional independence assumption, the probability $P(x|C_i)$ is calculated easily, reducing the computational cost.
 
 $$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
 
 > [!INFO]
 > If the attribute is **continuous-valued**, the attribute values can be discretized or the probability can be estimated based on some distribution (e.g., Gaussian distribution).
+
+> [!INFO]
+> The <span style = "color:lightblue">Laplace correction</span> fixes the case where there are no tuples of $C_i$ having $A_k=x_k$. If any of the probabilities is zero, the entire probability will be zero as well.
+> $$
+> P(x_k|C_i)=\frac{N_{k,C_i}+1}{N_{C_i}+c}
+> $$
+> The expression for the Laplace correction is shown above, where $c$ is the number of distinct values for attribute $A_k$.
 
 #### Example
 kk
