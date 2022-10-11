@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "area",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -136,17 +137,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "3ea368021ec74b39",
   "lastOpenFiles": [
+    "Data Visualization/Perception.md",
+    "Data Visualization/Design Rules.md",
+    "Data Visualization/Principles.md",
     "Data Visualization/Design Tasks.md",
     "Machine Learning/Classification.md",
     "conflict-files-obsidian-git.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Restoration.md",
     "Machine Learning/Regression.md",
-    "Data Mining/Data Preprocessing.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/Bayesian.md",
-    "Data Visualization/Visualization Basics.md"
+    "Data Mining/Data Preprocessing.md"
   ]
 }
