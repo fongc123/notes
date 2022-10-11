@@ -224,4 +224,10 @@ Similar to [[#Mean Filters|mean filters]], <span style = "color:lightblue">order
 ## Median
 
 This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
+
 # Adaptive Filters
+
+# Periodic Noise Reduction
+Image noise is removed by modifying the Fourier spectrum of an image.
+
+## Notch
