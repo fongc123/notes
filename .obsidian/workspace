@@ -9,8 +9,20 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Principles.md",
-            "mode": "preview",
+            "file": "Image Processing/Spatial Filtering.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "8add5185b811ccf7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Image Processing/Image Restoration.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -77,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Principles.md"
+                "file": "Image Processing/Spatial Filtering.md"
               }
             }
           },
@@ -136,17 +148,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "3ea368021ec74b39",
   "lastOpenFiles": [
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Spatial Filtering.md",
+    "Machine Learning/Classification.md",
+    "Data Visualization/Principles.md",
     "Data Visualization/Perception.md",
     "Data Visualization/Design Rules.md",
-    "Data Visualization/Principles.md",
     "Data Visualization/Design Tasks.md",
-    "Machine Learning/Classification.md",
     "conflict-files-obsidian-git.md",
     "Image Processing/Intensity Transformations.md",
-    "Image Processing/Image Restoration.md",
-    "Machine Learning/Regression.md",
-    "Data Mining/Data Preprocessing.md"
+    "Machine Learning/Regression.md"
   ]
 }

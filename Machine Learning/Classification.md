@@ -89,9 +89,6 @@ $$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
 > $$
 > The expression for the Laplace correction is shown above, where $c$ is the number of distinct values for attribute $A_k$.
 
-#### Example
-kk
-
 ## Nearest Neighbor Classification
 A <span style = "color:lightblue">nearest neighbor classifier</span> assigns class labels to an object based on its **similarity** to objects in the training data.
 

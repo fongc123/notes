@@ -217,3 +217,11 @@ Alternatively, the image below shows the result if the $Q$ values were swapped w
 ![[image-restore-contraharmonic-2.png|600]]
 
 The pepper and salt noises worsen in their respective images.
+
+# Order-statistic Filters
+Similar to [[#Mean Filters|mean filters]], <span style = "color:lightblue">order-statistic filters</span> are non-linear filters that attempt to remove the image noise by first sorting and then performing statistic operations on the pixel values.
+
+## Median
+
+This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
+# Adaptive Filters

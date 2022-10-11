@@ -85,7 +85,7 @@ $$
 
 ### Box Filter
 
-A <span style = "color:lightblue">box filter</span> accomplishes image smoothing spatial filtering by averaging.
+A <span style = "color:lightblue">box filter</span> accomplishes image smoothing spatial filtering by averaging (*see [[Image Restoration#Arithmetic|arithmetic mean filters]]*).
 
 $$R=\frac{1}{9}\sum_{i=1}^{9}{z_i}$$
 
@@ -116,11 +116,9 @@ Low-pass filtering can be applied to threshold for region extraction (e.g., astr
 
 ### Medium Filter
 
-In a <span style = "color:lightblue">medium filter</span>, the center pixel value is replaced by the median of the sorted values in the pixel window. Three median filters of varying radii are shown below.
+In a <span style = "color:lightblue">medium filter</span>, the center pixel value is replaced by the median of the sorted values in the pixel window (*see [[Image Restoration#Median|median filters]]*). Three median filters of varying radii are shown below.
 
 ![[image-processing-median-filter.png]]
-
-This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
 
 ## High-pass Filters
 
