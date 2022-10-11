@@ -4,27 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3ea368021ec74b39",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Image Processing/Spatial Filtering.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "8add5185b811ccf7",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Image Processing/Image Restoration.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -89,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Image Processing/Image Restoration.md"
-              }
+              "state": {}
             }
           },
           {
@@ -150,8 +130,8 @@
   },
   "active": "8add5185b811ccf7",
   "lastOpenFiles": [
-    "Image Processing/Spatial Filtering.md",
     "Image Processing/Image Restoration.md",
+    "Image Processing/Spatial Filtering.md",
     "Machine Learning/Classification.md",
     "Data Visualization/Principles.md",
     "Data Visualization/Perception.md",
