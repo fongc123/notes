@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Machine Learning/Classification.md",
-            "mode": "source",
+            "file": "Data Visualization/Principles.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Data Visualization/Principles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Data Visualization/Principles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Classification.md"
+                "file": "Data Visualization/Principles.md"
               }
             }
           },
@@ -136,17 +136,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "3ea368021ec74b39",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Data Visualization/Design Tasks.md",
     "Machine Learning/Classification.md",
+    "conflict-files-obsidian-git.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Restoration.md",
     "Machine Learning/Regression.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/Bayesian.md",
-    "Data Visualization/Visualization Basics.md",
-    "Data Visualization/References.md"
+    "Data Visualization/Visualization Basics.md"
   ]
 }
