@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,7 +136,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "3ea368021ec74b39",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
     "Data Visualization/Perception.md",
     "Data Visualization/Design Rules.md",
