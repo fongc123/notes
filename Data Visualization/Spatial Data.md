@@ -1,9 +1,15 @@
 # Spatial Data
-<span style = "color:lightblue">Cartography</span> refers to the process of creating a map from geometry data.
+<span style = "color:lightblue">Spatial data</span> is derived from geometry data that conveys shape from the position of its elements. All attributes have individual positions at adjustable levels of granularity (e.g., district, city, country).
 
-There are several ways to project spatial information on a two-dimensional graph.
+<span style = "color:lightblue">Cartography</span> refers to the process of creating a map from geometry data. Due to the spherical property of the Earth, there are several ways to project geographic information on a two-dimensional chart.
+- <span style = "color:lightblue">azimuthal</span>: preserve direction and distance from center
+- <span style = "color:lightblue">equal-area</span>: preserve area
+- <span style = "color:lightblue">conformal</span>: preserve local angles (i.e., shape)
 
-The scale of the map should also be considered.
+> [!INFO]
+> <span style = "color:lightblue">Tissot's indicatrix</span> is a tool to characterize **distortions due to projecting a spherical representation of the Earth onto a flat surface**. Each ellipse is an **indicatrix** and represents the distortion at the point where it is centered.
+
+Additionally, the scale of the chart should also be adjusted according to the scope of the data.
 
 ## Choropleth
 A <span style = "color:lightblue">choropleth map</span> categorically encodes different regions on a map by color.
