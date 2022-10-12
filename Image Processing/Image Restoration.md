@@ -262,7 +262,13 @@ This filter is useful for reducing randomly distributed noise (e.g., [[#Gaussian
 The resultant images of applying the midpoint filter to different noise types are shown above.
 
 ## Alpha-trimmed Mean
+The <span style = "color:lightblue">alpha-trimmed mean filter</span> deletes the $n$ lowest and highest intensity values and averages the remaining pixels in the filter region, where $n$ is equal to $d/2$.
 
+$$\hat{f}(x,y)=\frac{1}{mn-d}\sum_{(r,c)\in S_{xy}}g(r,c)$$
+
+Here, $g$ represents the remaining $mn-d$ pixels. This filter becomes the [[#Arithmetic|arithmetic mean filter]] if $d=0$ and becomes the median filter if $d=mn-1$ (*the lowest and highest pixel values are removed*).
+
+This filter is useful in images involving **multiple noise types**, such as a combination of [[#Impulse Random Noise|impulse noise]] and [[#Gaussian|Gaussian noise]].
 
 # Adaptive Filters
 <span style = "color:lightblue">Adaptive filters</span> change the filter behavior based on statistical characteristics, specifically the mean $\bar{Z}_{S}$, variance of the pixel intensities $\sigma^2_{S}$, and variance of the noise $\sigma^2_\eta$, of the filter region.
@@ -273,12 +279,38 @@ The <span style = "color:lightblue">adaptive local noise reduction filter</span>
 $$\hat{f}(x,y)=g(x,y)-\frac{\sigma^2_\eta}{\sigma^2_S}\left[g(x,y)-\bar{Z}_S\right]$$
 
 The filter attempts to both **reduces local noise** and **preserves edges or boundaries**, based on the following conditions.
-- $\sigma^2_\eta=0\rightarrow$ return the value of $g(x,y)$
+- $\sigma^2_\eta=0\rightarrow$ return the value of $g(x,y)$ (*no noise!*)
 - $\sigma^2_S=\sigma^2_\eta\rightarrow$ return the [[#Arithmetic|local arithmetic mean]] of the filter region to reduce noise
 - $\sigma^2_S>\sigma^2_\eta\rightarrow$ return a value close to $g(x,y)$ to preserve edges
 - $\sigma^2_S<\sigma^2_\eta\rightarrow$ set the ratio between the intensity variance and noise variance to $1$
 
+The figure below shows an image corrupted by additive [[#Gaussian|Gaussian noise]] of zero mean and variance of $1000$ (a), the result of [[#Arithmetic|arithmetic mean filtering]] (b), the result of [[#Geometric|geometric mean filtering]] (c), and the result of adaptive local noise reduction filtering (d). All filters have a size of $7\times 7$.
 
+![[image-processing-local-noise-reduce.png|600]]
+
+## Adaptive Median
+The <span style = "color:lightblue">adaptive median filter</span> computes the median at two processing levels $A$ and $B$ based on the following algorithm.
+
+$$
+\begin{align}
+	\text{Level A:} & \newline
+	& if(Z_{min}<Z_{med}<Z_{max}): \newline
+	& \quad\quad\text{go to $B$} \newline
+	& else: \newline
+	& \quad\quad\text{increase size of $S_{xy}$} \newline
+	& if(S_{xy}\leq S_{max}):\newline
+	& \quad\quad\text{repeat $A$} \newline
+	& else: \newline
+	& \quad\quad \text{return $Z_{med}$}\newline
+	\text{Level B:} & \newline
+	& if(Z_{min}<Z_{xy}<Z_{max}): \newline
+	& \quad\quad \text{return $Z_{xy}$} \newline
+	& else: \newline
+	& \quad\quad \text{return $Z_{med}$}
+\end{align}
+$$
+
+Here, level $A$ determines if the **median** is an impulse, and level $B$ determines if the current **image intensity value** $Z_{xy}$ is an impulse.
 
 # Periodic Noise Reduction
 Image noise is removed by modifying the Fourier spectrum of an image.
