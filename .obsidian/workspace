@@ -4,18 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "baae11e2e612cfd4",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Image Processing/Spatial Filtering.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "0db737c72ab9ad51",
         "type": "leaf",
         "state": {

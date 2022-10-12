@@ -342,7 +342,7 @@ Theoretically, if the image degradation and the noise functions are known, the o
 
 The image degradation function can be estimated by **observation**, **experimentation**, or **mathematical modeling**.
 
-## Inverse Filtering
+## Inverse
 Given that the degradation function $H$ is known, the original image $\hat{F}$ can be obtained from the degraded image $G$ by inverting the operation.
 
 $$
@@ -359,5 +359,24 @@ $$
 \end{gather}
 $$
 
-If the value of $H$ becomes very small, however, the ratio will become exponentially large and will dominate the calculation. **This deteriorates the estimation of $F$**.
+### Zero Denominator Problem
+If the value of $H$ becomes very small, however, the ratio will become exponentially large and will dominate the calculation.
 
+To solve this problem, a cutoff threshold is implemented, where analysis is limited to frequencies near the origin. This reduces the probability of finding small values of $H$.
+
+![[image-processing-inverse-filter.png|600]]
+
+In the above figure, inverse filtering is done at different cutoff radii.
+
+## Wiener
+The <span style = "color:lightblue">Wiener filter</span> (<span style = "color:lightblue">minimum mean square error (MSE) filtering</span>) incorporates the degradation function and statistical characteristics of the noise (e.g., <span style = "color:lightblue">signal-to-noise ratio</span>) into the restoration process. It minimizes the mean square error and does not have the [[#Zero Denominator Problem|zero denominator problem]] of inverse filtering.
+
+$$\hat{F}(u,v)=\left[\frac{1}{H(u,v)}\cdot\frac{|H(u,v)|^2}{|H(u,v)|^2+K}\right]G(u,v)\quad\text{where }K=\frac{|N(u,v)|^2}{|F(u,v)|^2}$$
+
+The power spectrum of the noise is represented as $|N(u,v)|^2$, and that of the original image is represented as $|F(u,v)|^2$.
+
+The figure below shows (1) full inverse filtering, (2) radially limited inverse filtering, and (3) Wiener filtering.
+
+![[image-processing-wiener-filter.png|600]]
+
+This filter is more robust to noise and preserves high-frequency details.
