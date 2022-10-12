@@ -20,4 +20,7 @@ A <span style = "color:lightblue">cartogram</span> is an alternative to [[#Choro
 ## Flow
 In a <span style = "color:lightblue">flow map</span>, lines are used to show movement between spatial regions rather than symbols or color.
 
-This [example](hint.fm/wind) shows 
+This example (https://hint.fm/wind/) is a wind map of the United States.
+
+## Others
+Additional chart types include **transit maps**, which are used for transportation maps, and **prism maps**, which create a [[Design Rules#3D|justified three-dimensional]] view of a map.

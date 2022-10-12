@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Data Visualization/Spatial Data.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -138,15 +138,15 @@
   },
   "active": "baae11e2e612cfd4",
   "lastOpenFiles": [
-    "hint.fm/wind.md",
+    "Data Visualization/Design Rules.md",
     "Data Visualization/Spatial Data.md",
+    "hint.fm/wind.md",
     "Data Visualization/Time Series.md",
     "Machine Learning/Classification.md",
     "conflict-files-obsidian-git.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Restoration.md",
     "Machine Learning/Regression.md",
-    "Data Mining/Data Preprocessing.md",
-    "Machine Learning/Decision Tree.md"
+    "Data Mining/Data Preprocessing.md"
   ]
 }
