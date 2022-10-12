@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Data Visualization/Spatial Data.md",
+            "file": "Data Visualization/References.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/References.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/References.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Spatial Data.md"
+                "file": "Data Visualization/References.md"
               }
             }
           },
@@ -138,8 +138,8 @@
   },
   "active": "baae11e2e612cfd4",
   "lastOpenFiles": [
-    "Data Visualization/Design Rules.md",
     "Data Visualization/Spatial Data.md",
+    "Data Visualization/Design Rules.md",
     "hint.fm/wind.md",
     "Data Visualization/Time Series.md",
     "Machine Learning/Classification.md",
