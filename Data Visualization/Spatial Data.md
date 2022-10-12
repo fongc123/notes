@@ -9,7 +9,15 @@ The scale of the map should also be considered.
 A <span style = "color:lightblue">choropleth map</span> categorically encodes different regions on a map by color.
 
 ## Symbol
-A <span style = "color:lightblue">symbol map</span> encodes the quality or quantity of spatial regions with marks and symbols. Examples include **dot map**, **bubble map**, and **spatial heatmap**.
+A <span style = "color:lightblue">symbol map</span> encodes the quality or quantity of spatial regions with marks and symbols. Examples include **dot map**, **bubble map**, **spatial heatmap**, and **isoline map** (*an alternative heatmap*).
+
 
 In dense data, visual occlusion may occur, which may affect the representation of the data.
 
+## Cartogram
+A <span style = "color:lightblue">cartogram</span> is an alternative to [[#Choropleth|choropleth maps]] and distorts geographical regions to directly use area to encode attributes.
+
+## Flow
+In a <span style = "color:lightblue">flow map</span>, lines are used to show movement between spatial regions rather than symbols or color.
+
+This [example](hint.fm/wind) shows 
