@@ -219,11 +219,50 @@ Alternatively, the image below shows the result if the $Q$ values were swapped w
 The pepper and salt noises worsen in their respective images.
 
 # Order-statistic Filters
-Similar to [[#Mean Filters|mean filters]], <span style = "color:lightblue">order-statistic filters</span> are non-linear filters that attempt to remove the image noise by first sorting and then performing statistic operations on the pixel values.
+Similar to [[#Mean Filters|mean filters]], <span style = "color:lightblue">order-statistic filters</span> attempt to reduce image noise. However, they are non-linear, where they first sort and then perform statistic operations on the pixel values.
 
 ## Median
+The <span style = "color:lightblue">median filter</span> assigns the pixel value based on the median of the sorted pixel values in the filter region. Median filters of varying radii are shown below.
 
-This filter removes impulse noise, avoids excessive smoothing, and preserves the image edges.
+![[image-processing-median-filter.png]]
+
+Compared to linear filters, this filter removes impulse noise (e.g., [[#Impulse Random Noise|bipolar and unipolar noise]]), avoids excessive smoothing (i.e., less blurring), and preserves the image edges.
+
+The figure below shows an image corrupted by [[#Impulse Random Noise|salt and pepper noise]] (a) which undergoes median filtering with a filter size of $3\times 3$ (b) and is repeated twice (c) (d).
+
+
+![[image-processing-median-filter-2.png|600]]
+
+> [!INFO]
+> Repeated median filtering will remove most of the noise while increasing image blurring.
+
+## Maximum
+The <span style = "color:lightblue">maximum filter</span> finds the extreme points in the filter region.
+
+$$\hat{f}(x,y)=\max_{(r,c)\in S_{xy}}\{g(r,c)\}$$
+
+This filter is useful in finding the **brightest points** in an image or for **eroding dark regions adjacent to bright areas**.
+
+## Minimum
+Similar to the [[#Maximum|maximum filter]], the <span style = "color:lightblue">minimum filter</span> also finds the extreme points in the filter region.
+
+$$\hat{f}(x,y)=\min_{(r,c)\in S_{xy}}\{g(r,c)\}$$
+
+This filter is useful in finding the **darkest points** in an image or for **eroding light regions adjacent to dark areas**.
+
+## Midpoint
+Combining [[#Mean Filters|averaging]] and [[#Order-statistic Filters|order-statistics]], the <span style = "color:lightblue">midpoint filter</span> computes the midpoint between the brightest and darkest intensity values in the filter region.
+
+$$\hat{f}(x,y)=\frac{1}{2}\left[\max_{(r,c)\in S_{xy}}\{g(r,c)\}+\min_{(r,c)\in S_{xy}}\{g(r,c)\}\right]$$
+
+This filter is useful for reducing randomly distributed noise (e.g., [[#Gaussian|Gaussian noise]]) but performs poorly with impulse noise (*extreme values*).
+
+![[image-processing-midpoint-ex.png|600]]
+
+The resultant images of applying the midpoint filter to different noise types are shown above.
+
+## Alpha-trimmed Mean
+
 
 # Adaptive Filters
 <span style = "color:lightblue">Adaptive filters</span> change the filter behavior based on statistical characteristics, specifically the mean $\bar{Z}_{S}$, variance of the pixel intensities $\sigma^2_{S}$, and variance of the noise $\sigma^2_\eta$, of the filter region.

@@ -115,10 +115,7 @@ Low-pass filtering can be applied to threshold for region extraction (e.g., astr
 <span style = "color:lightblue">Non-linear spatial filters</span> typically replace the center pixel value with a value determined by an ordering or ranking algorithm of the neighborhood. Some examples of ordering filters include **median filter**, **max filter**, and **minimum filter**.
 
 ### Medium Filter
-
-In a <span style = "color:lightblue">medium filter</span>, the center pixel value is replaced by the median of the sorted values in the pixel window (*see [[Image Restoration#Median|median filters]]*). Three median filters of varying radii are shown below.
-
-![[image-processing-median-filter.png]]
+In a <span style = "color:lightblue">medium filter</span>, the center pixel value is replaced by the median of the sorted values in the pixel window (*see [[Image Restoration#Median|median filters]]*).
 
 ## High-pass Filters
 
