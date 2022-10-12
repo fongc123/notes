@@ -310,9 +310,54 @@ $$
 \end{align}
 $$
 
-Here, level $A$ determines if the **median** is an impulse, and level $B$ determines if the current **image intensity value** $Z_{xy}$ is an impulse.
+Here, level $A$ determines if the **median** is an impulse (*otherwise, increase the filter region size*), and level $B$ determines if the current **image intensity value** $Z_{xy}$ is an impulse.
 
 # Periodic Noise Reduction
-Image noise is removed by modifying the Fourier spectrum of an image.
+Periodic image noise is removed by modifying the Fourier spectrum of an image.
 
 ## Notch
+The <span style = "color:lightblue">notch reject</span> $H_{NR}$ and <span style = "color:lightblue">notch pass</span> $H_{NP}$ filters prohibit and allow the specified region in the Fourier spectrum respectively.
+
+$$
+\begin{gather}
+	H_{NR}(u,v)=\prod_{k=1}^{Q}H_k(u,v)H_{-k}(u,v) \newline
+	H_{NP}=1-H_{NR}
+\end{gather}
+$$
+
+In the above equation, $H_k$ and $H_{-k}$ are high-pass filter transfer functions centered at $(u_k, v_k)$ and $(u_{-k}, v_{-k})$ respectively.
+
+For example, the [[Frequency Filtering#Butterworth|Butterworth]] notch reject filter transfer functions of order $n$ with **three** notch pairs are shown below.
+
+$$H_{NR}(u,v)=\prod_{k=1}^{3}\left[\frac{1}{1+\left[D_{0k}/D_k(u,v)\right]^n}\right]\left[\frac{1}{1+\left[D_{0k}/D_{-k}(u,v)\right]^n}\right]$$
+
+The figure below shows an image corrupted by sinusoidal interference (a), the spectrum causing the interference (b), the Notch reject filter used to eliminate the interference (c), and the resultant image after filtering (d).
+
+![[image-processing-notch-reject.png|600]]
+
+Alternatively, if a notch pass filter was used instead, only the spatial interference would be shown.
+
+# Restoration
+Theoretically, if the image degradation and the noise functions are known, the original image can be recovered.
+
+The image degradation function can be estimated by **observation**, **experimentation**, or **mathematical modeling**.
+
+## Inverse Filtering
+Given that the degradation function $H$ is known, the original image $\hat{F}$ can be obtained from the degraded image $G$ by inverting the operation.
+
+$$
+\hat{F}(u,v)=\frac{G(u,v)}{H(u,v)}
+$$
+
+> [!INFO]
+> In areas with strong signals, the effect of the noise is negligible. In strong noise areas, however, the image cannot be restored properly if noise is not known.
+
+$$
+\begin{gather}
+	G(u,v)=\underbrace{F(u,v)}_{\text{original}}\underbrace{H(u,v)}_{\text{degrade}}+\underbrace{N(u,v)}_{\text{noise}} \newline \newline
+	\hat{F}(u,v)=F(u,v)+\frac{N(u,v)}{H(u,v)}
+\end{gather}
+$$
+
+If the value of $H$ becomes very small, however, the ratio will become exponentially large and will dominate the calculation. **This deteriorates the estimation of $F$**.
+
