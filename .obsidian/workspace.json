@@ -4,33 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c3b17e8f6813b198",
+        "id": "42121b45426caa6e",
         "type": "tabs",
         "children": [
           {
-            "id": "0db737c72ab9ad51",
+            "id": "cd9bd6a04c0edba8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "97252e5ee07f9feb",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.0.0"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,9 +102,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Restoration.md"
+                "file": "Data Visualization/Spatial Data.md"
               }
             }
           },
@@ -158,17 +147,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "97252e5ee07f9feb",
+  "active": "cd9bd6a04c0edba8",
   "lastOpenFiles": [
     "Data Visualization/Spatial Data.md",
-    "Data Visualization/Time Series.md",
-    "Data Visualization/Color.md",
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Spatial Filtering.md",
-    "Data Visualization/References.md",
+    "Machine Learning/Decision Tree.md",
+    "Machine Learning/ML Basics.md",
+    "Data Mining/Data Preprocessing.md",
     "Data Visualization/Design Rules.md",
-    "hint.fm/wind.md",
-    "Machine Learning/Classification.md",
-    "conflict-files-obsidian-git.md"
+    "Data Visualization/Time Series.md",
+    "Image Processing/Image Restoration.md",
+    "Data Visualization/Color.md",
+    "Image Processing/Spatial Filtering.md",
+    "Data Visualization/References.md"
   ]
 }
