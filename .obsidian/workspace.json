@@ -4,16 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "0db737c72ab9ad51",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Image Processing/Image Restoration.md",
-            "mode": "source",
-            "source": false
+        "id": "c3b17e8f6813b198",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0db737c72ab9ad51",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Processing/Image Restoration.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "97252e5ee07f9feb",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.0"
+              }
+            }
           }
-        }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -31,7 +48,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "byCreatedTimeReverse"
+              }
             }
           },
           {
@@ -136,7 +155,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0db737c72ab9ad51",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "97252e5ee07f9feb",
   "lastOpenFiles": [
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Time Series.md",
