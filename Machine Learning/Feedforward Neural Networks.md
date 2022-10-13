@@ -1,6 +1,6 @@
 <span style = "color:lightblue">Deep learning</span> is a subset of [[ML Basics|machine learning]] that uses <span style = "color:lightblue">artificial neural networks (ANN)</span> to make predictions by mimicking the process (*neuron interactions*) of the human brain. 
 
-Node types: input, output, hidden
+Node types: input, output, hidden.
 
 In <span style = "color:lightblue">feedforward neural networks</span>, connections between nodes (i.e., neurons) do not form a cycle (i.e., <span style = "color:lightblue">forward propagation</span> $\rightarrow$ later neurons do not connect back to earlier neurons).
 
@@ -11,6 +11,8 @@ Different nodes look for different **features** in the input data.
 Each neural network layer is a feature transformation, where increasingly complex features are learned in deeper layers.
 
 ![[ml-nn.png|400]]
+
+<span style = "color:lightblue">Neural architecture search (NAS)</span> is a technique for automating the design of ANNs.
 
 # Mathematical Representation
 Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron is represented by an [[#Activation Functions|activation function]] (e.g., the <span style = "color:lightblue">sigmoid function</span>) of inputs $x$, weights $w$, and biases $b$.
