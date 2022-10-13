@@ -115,6 +115,10 @@ The number of neighbors $k$ is a user-defined parameter which affects the accura
 > $$
 > Here, the weighting decreases as the distance increases.
 
+KNN is a <span style = "color:lightblue">lazy learning</span> algorithm. It simply stores all training examples and only compares the similarity between a new object and the dataset during testing.
+
+> [!INFO]
+> For lazy learning algorithms, computation on training is a lot, while that of on testing is little. Thus, for applications that require real-time computational speed, KNN is not suitable.
 
 ### Dimensionality
 As stated in [[Data Preprocessing#Reduction|dimensionality reduction]], when dimensionality increases (i.e., more attributes are added), data becomes increasingly **sparse**. Thus, density and distance between points becomes less meaningful.
