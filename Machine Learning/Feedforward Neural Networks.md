@@ -14,7 +14,7 @@ Each neural network layer is a feature transformation, where increasingly comple
 
 <span style = "color:lightblue">Neural architecture search (NAS)</span> is a technique for automating the design of ANNs.
 
-Fully connected network.
+Fully connected networks
 
 # Mathematical Representation
 Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron is represented by an [[#Activation Functions|activation function]] (e.g., the <span style = "color:lightblue">sigmoid function</span>) of inputs $x$, weights $w$, and biases $b$.
