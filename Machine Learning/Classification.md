@@ -99,6 +99,29 @@ $$dist(x_1,x_2)=\sqrt{\sum_{i=1}^{n}(x_{1i}-x_{2i})^2}$$
 ### $k$-Nearest Neighbor (KNN)
 Given a new entry, the <span style = "color:lightblue">k-nearest neighbors</span> algorithm searches for the $k$ nearest training data entries based on a pre-defined distance metric and assigns the new entry the **majority class label in the nearest neighbor set**.
 
+> [!INFO]
+> [[Data Preprocessing#Normalization|Data normalization]] must be performed as the distance metric is affected by the ranges of the attribute values.
+
+The number of neighbors $k$ is a user-defined parameter which affects the accuracy of the classifier.
+- A low value of $k$ (e.g., $k=1$) makes the classifier oversensitive to noise.
+- A high value of $k$ (e.g., $k=N$) makes the classifier include irrelevant classes into the prediction.
+
+**The value of $k$ can be tuned by [[#k -Fold Cross-validation|cross-validation]]**.
+
+> [!INFO]
+> Instead of assigning the majority class label, the algorithm can also take into account the distance between a point and its neighbors.
+> $$
+> w=\frac{1}{dist(x_q,x_k)^2}
+> $$
+> Here, the weighting decreases as the distance increases.
+
+
+### Dimensionality
+As stated in [[Data Preprocessing#Reduction|dimensionality reduction]], when dimensionality increases (i.e., more attributes are added), data becomes increasingly **sparse**. Thus, density and distance between points becomes less meaningful.
+
+The number of dimensions can be reduced. Alternatively, weights can be added to the distance metric to give more importance to certain attributes.
+
+$$dist(x_1,x_2)=\sqrt{\sum_{i=1}^{n}{\beta_i(x_{1i}-x_{2i})^2}}$$
 
 ## Model Performance
 
