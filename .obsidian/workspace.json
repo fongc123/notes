@@ -8,25 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a6072f52c65744a1",
+            "id": "287e2970de9bb92c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Data Visualization/Spatial Data.md",
                 "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "287e2970de9bb92c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Time Series.md",
-                "mode": "preview",
                 "source": false
               }
             }
@@ -159,9 +147,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "a6072f52c65744a1",
+  "active": "287e2970de9bb92c",
   "lastOpenFiles": [
     "Data Visualization/Time Series.md",
+    "img/data-vis-dot-map.png",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Design Tasks.md",
@@ -169,7 +158,6 @@
     "Data Visualization/References.md",
     "Data Visualization/Visualization Basics.md",
     "Data Visualization/Principles.md",
-    "Data Visualization/Color.md",
-    "Data Visualization/Perception.md"
+    "Data Visualization/Color.md"
   ]
 }

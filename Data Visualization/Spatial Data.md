@@ -22,16 +22,31 @@ This map is scalable to diverging colors (e.g., bivariate or multidimensional) o
 ![[data-vis-choropleth.png|600]]
 
 # Symbol
-A <span style = "color:lightblue">symbol map</span> encodes the quality or quantity of spatial regions with marks and symbols. Examples include **dot map**, **bubble map**, **spatial heatmap**, and **isoline map** (*an alternative heatmap*).
+A <span style = "color:lightblue">symbol map</span> encodes the quality or quantity (i.e., density) of spatial regions with marks and symbols. Examples include **dot map** (*dots*), **bubble map** (*bubbles*), **spatial heatmap** (*area*), and **isoline map** (*an alternative heatmap*).
 
-|                           **Data**                            | **Mark** |           **Channels**           |             **Task**             | **Scalability** |
-|:-------------------------------------------------------------:|:--------:|:--------------------------------:|:--------------------------------:|:---------------:|
-| Geography & categorical or quantitative attribute(s) |   Area & symbols | Map (area) & color for attribute | Understand spatial relationships | Multiple colors                |
+|                       **Data**                       |    **Mark**    |             **Channels**              |             **Task**             | **Scalability** |
+|:----------------------------------------------------:|:--------------:|:-------------------------------------:|:--------------------------------:|:---------------:|
+| Geography & categorical or quantitative attribute(s) | Area & symbols | Map (area) & symbols for attribute(s) | Understand quantity & quality of regions | Multiple symbols |
 
-In dense data, visual occlusion may occur, which may affect the representation of the data.
+A dot map is shown below.
+
+![[data-vis-dot-map.png|600]]
+
+In dense datasets, visual occlusion may occur, which may affect the representation of the data.
 
 # Cartogram
 A <span style = "color:lightblue">cartogram</span> is an alternative to [[#Choropleth|choropleth maps]] and distorts geographical regions to directly use area to encode attributes.
+
+|                       **Data**                       |    **Mark**    |             **Channels**              |             **Task**             | **Scalability** |
+|:----------------------------------------------------:|:--------------:|:-------------------------------------:|:--------------------------------:|:---------------:|
+| Approximate geographic geometry & categorical attribute | Area | Position, size, color | Alternative to choropleth or symbol map | Multiple colors |
+
+A cartogram of the electoral college results is shown below.
+
+![[data-vis-cartogram.png|600]]
+
+> [!WARNING]
+> Major distortions should still be recognizable.
 
 # Flow
 In a <span style = "color:lightblue">flow map</span>, lines are used to show movement between spatial regions rather than symbols or color.
