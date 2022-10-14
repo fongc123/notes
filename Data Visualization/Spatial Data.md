@@ -13,9 +13,20 @@ Additionally, the scale of the chart should also be adjusted according to the sc
 # Choropleth
 A <span style = "color:lightblue">choropleth map</span> categorically encodes different regions on a map by color.
 
+|                           **Data**                            | **Mark** |           **Channels**           |             **Task**             | **Scalability** |
+|:-------------------------------------------------------------:|:--------:|:--------------------------------:|:--------------------------------:|:---------------:|
+| Geographic geometry & quantitative attribute |   Area   | Map (area) & color for attribute | Understand spatial relationships | Multiple colors                |
+
+This map is scalable to diverging colors (e.g., bivariate or multidimensional) or smaller map partitions (i.e., regions). A single-variate choropleth map is shown below.
+
+![[data-vis-choropleth.png|600]]
+
 # Symbol
 A <span style = "color:lightblue">symbol map</span> encodes the quality or quantity of spatial regions with marks and symbols. Examples include **dot map**, **bubble map**, **spatial heatmap**, and **isoline map** (*an alternative heatmap*).
 
+|                           **Data**                            | **Mark** |           **Channels**           |             **Task**             | **Scalability** |
+|:-------------------------------------------------------------:|:--------:|:--------------------------------:|:--------------------------------:|:---------------:|
+| Geography & categorical or quantitative attribute(s) |   Area & symbols | Map (area) & color for attribute | Understand spatial relationships | Multiple colors                |
 
 In dense data, visual occlusion may occur, which may affect the representation of the data.
 
