@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/Trajectory Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/Trajectory Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/Trajectory Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Spatial Data.md"
+                "file": "Data Visualization/Trajectory Data.md"
               }
             }
           },
@@ -149,8 +149,8 @@
   },
   "active": "cd9bd6a04c0edba8",
   "lastOpenFiles": [
-    "Data Visualization/Trajectory Data.md",
     "Data Visualization/Spatial Data.md",
+    "Data Visualization/Trajectory Data.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",
     "Data Mining/Data Preprocessing.md",
