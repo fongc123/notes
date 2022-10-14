@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "3632e2891d0c94a5",
+        "id": "a41ae146264634af",
         "type": "tabs",
         "children": [
           {
-            "id": "287e2970de9bb92c",
+            "id": "d7eba9ba5defec0c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Spatial Data.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d32c4d67ecb2bea7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Trajectory Data.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Data Visualization/Trajectory Data.md"
-              }
+              "state": {}
             }
           },
           {
@@ -160,7 +139,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d32c4d67ecb2bea7",
+  "active": "d7eba9ba5defec0c",
   "lastOpenFiles": [
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/Spatial Data.md",
