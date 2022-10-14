@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d32c4d67ecb2bea7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Visualization/Trajectory Data.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/Trajectory Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/Trajectory Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Spatial Data.md"
+                "file": "Data Visualization/Trajectory Data.md"
               }
             }
           },
@@ -147,17 +160,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "287e2970de9bb92c",
+  "active": "d32c4d67ecb2bea7",
   "lastOpenFiles": [
+    "Data Visualization/Spatial Data.md",
+    "Data Visualization/Trajectory Data.md",
+    "Image Processing/Spatial Filtering.md",
+    "Machine Learning/Classification.md",
     "Data Visualization/Time Series.md",
     "img/data-vis-dot-map.png",
-    "Data Visualization/Spatial Data.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Design Tasks.md",
     "Data Visualization/Design Rules.md",
-    "Data Visualization/References.md",
-    "Data Visualization/Visualization Basics.md",
-    "Data Visualization/Principles.md",
-    "Data Visualization/Color.md"
+    "Data Visualization/References.md"
   ]
 }

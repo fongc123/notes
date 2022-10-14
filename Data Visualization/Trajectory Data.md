@@ -1,0 +1,1 @@
+<span style = "color:lightblue">Trajectory data</span> consists of objects in motion and can be collected from various application domains (e.g., tourism, urban planning, )

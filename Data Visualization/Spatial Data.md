@@ -10,6 +10,8 @@
 
 Additionally, the scale of the chart should also be adjusted according to the scope of the data.
 
+Additional non-conventional chart types include **transit maps**, which are used for transportation maps, and **prism maps**, which create a [[Design Rules#3D|justified three-dimensional]] view of a map.
+
 # Choropleth
 A <span style = "color:lightblue">choropleth map</span> categorically encodes different regions on a map by color.
 
@@ -41,7 +43,9 @@ A <span style = "color:lightblue">cartogram</span> is an alternative to [[#Choro
 |:----------------------------------------------------:|:--------------:|:-------------------------------------:|:--------------------------------:|:---------------:|
 | Approximate geographic geometry & categorical attribute | Area | Position, size, color | Alternative to choropleth or symbol map | Multiple colors |
 
-A cartogram of the electoral college results is shown below.
+There are several types of cartograms. In <span style = "color:lightblue">graphical cartograms</span>, shapes and circles are used to depict shape and area. On the other hand, in <span style = "color:lightblue">non-contiguous cartograms</span>, features can have any shape and do not have to stay connected.
+
+Lastly, in <span style = "color:lightblue">contiguous (density-equalizing) cartograms</span>, map feature polygons are resized based on a variable, where each feature is connected. A cartogram of the electoral college results is shown below.
 
 ![[data-vis-cartogram.png|600]]
 
@@ -51,7 +55,13 @@ A cartogram of the electoral college results is shown below.
 # Flow
 In a <span style = "color:lightblue">flow map</span>, lines are used to show movement between spatial regions rather than symbols or color.
 
+|                       **Data**                       |    **Mark**    |             **Channels**              |             **Task**             | **Scalability** |
+|:----------------------------------------------------:|:--------------:|:-------------------------------------:|:--------------------------------:|:---------------:|
+|  Geography & connections | Line | Position, length, color | Show spatial movement | Multiple lines |
+
+Visual cluttering is especially prevalent in this chart type.
+
+![[Pasted image 20221014134451.png|600]]
+
 This example (https://hint.fm/wind/) is a wind map of the United States.
 
-# Others
-Additional chart types include **transit maps**, which are used for transportation maps, and **prism maps**, which create a [[Design Rules#3D|justified three-dimensional]] view of a map.
