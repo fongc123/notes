@@ -1,5 +1,3 @@
-# Introduction
-
 Data visualization is the computer-supported and interactive representation of data to amplify cognition. Data is changed into a visual form to provide insights to users.
 
 > [!INFO]
@@ -21,14 +19,14 @@ Visualization must also be efficient and effective. For example, a bar chart for
 
 A list of visualization and dataset references can be found [[References|here]].
 
-## User-centric Visualization
+# User-centric Visualization
 A <span style = "color:lightblue">user-centric visualization</span> that involves HCI is suitable when there is a need to **augment human capabilities** rather than replace people with computational decision-making methods.
 
 ![[data-vis-user.png|650]]
 
 The creation of a data visualization platform begins with the user's needs.
 
-## Common Charts
+# Common Charts
 
 Some commonly used chart types are described below.
 - <span style = "color:lightblue">deviation</span>: emphasize variations from a fixed reference point (e.g., trade surplus or defecit)
@@ -49,7 +47,7 @@ Some commonly used chart types are described below.
 
 ![[data-vis-ft-vocab.png]]
 
-## Data Types
+# Data Types
 The <span style = "color:lightblue">data type</span> is useful in determining the chart type that best fits the dataset.
 
 |   Type   |                     Description                     |           Example           |

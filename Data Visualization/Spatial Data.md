@@ -1,4 +1,3 @@
-# Spatial Data
 <span style = "color:lightblue">Spatial data</span> is derived from geometry data that conveys shape from the position of its elements. All attributes have individual positions at adjustable levels of granularity (e.g., district, city, country).
 
 <span style = "color:lightblue">Cartography</span> refers to the process of creating a map from geometry data. Due to the spherical property of the Earth, there are several ways to project geographic information on a two-dimensional chart.
@@ -11,22 +10,22 @@
 
 Additionally, the scale of the chart should also be adjusted according to the scope of the data.
 
-## Choropleth
+# Choropleth
 A <span style = "color:lightblue">choropleth map</span> categorically encodes different regions on a map by color.
 
-## Symbol
+# Symbol
 A <span style = "color:lightblue">symbol map</span> encodes the quality or quantity of spatial regions with marks and symbols. Examples include **dot map**, **bubble map**, **spatial heatmap**, and **isoline map** (*an alternative heatmap*).
 
 
 In dense data, visual occlusion may occur, which may affect the representation of the data.
 
-## Cartogram
+# Cartogram
 A <span style = "color:lightblue">cartogram</span> is an alternative to [[#Choropleth|choropleth maps]] and distorts geographical regions to directly use area to encode attributes.
 
-## Flow
+# Flow
 In a <span style = "color:lightblue">flow map</span>, lines are used to show movement between spatial regions rather than symbols or color.
 
 This example (https://hint.fm/wind/) is a wind map of the United States.
 
-## Others
+# Others
 Additional chart types include **transit maps**, which are used for transportation maps, and **prism maps**, which create a [[Design Rules#3D|justified three-dimensional]] view of a map.

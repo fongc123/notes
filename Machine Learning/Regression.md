@@ -1,5 +1,3 @@
-# Regression
-
 A linear regression model (a <span style = "color:lightblue">regressor</span>) is based on a simple linear equation.
 
 $$\hat{y}=mx+b$$

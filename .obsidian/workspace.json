@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "42121b45426caa6e",
+        "id": "3632e2891d0c94a5",
         "type": "tabs",
         "children": [
           {
-            "id": "cd9bd6a04c0edba8",
+            "id": "a6072f52c65744a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,17 +147,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cd9bd6a04c0edba8",
+  "active": "a6072f52c65744a1",
   "lastOpenFiles": [
-    "Data Visualization/Spatial Data.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/ML Basics.md",
-    "Data Mining/Data Preprocessing.md",
+    "Data Visualization/Visual Channels.md",
+    "Data Visualization/Design Tasks.md",
     "Data Visualization/Design Rules.md",
+    "Data Visualization/References.md",
     "Data Visualization/Time Series.md",
-    "Image Processing/Image Restoration.md",
+    "Data Visualization/Visualization Basics.md",
+    "Data Visualization/Spatial Data.md",
+    "Data Visualization/Principles.md",
     "Data Visualization/Color.md",
-    "Image Processing/Spatial Filtering.md",
-    "Data Visualization/References.md"
+    "Data Visualization/Perception.md"
   ]
 }

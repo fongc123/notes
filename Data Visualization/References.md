@@ -1,5 +1,4 @@
-# Visualizations
-There are sources that showcase ex emplary visualizations.
+The following sources showcase exemplary visualizations.
 - [Visual Complexity](http://www.visualcomplexity.com/vc/)
 - [Mike Bostock's Blocks](https://bl.ocks.org/mbostock)
 - [Observable Visualization](https://beta.observablehq.com/collection/@observablehq/visualization)
@@ -56,8 +55,7 @@ There are sources that showcase ex emplary visualizations.
 - [Datawrapper River](https://river.datawrapper.de/)
 - [Plotly Gallery](https://dash-gallery.plotly.host/Portal/)
 
-# Datasets
-Additionally, there are sources that contain datasets.
+Additionally, the following sources contain public datasets.
 - [Kaggle Datasets](https://www.kaggle.com/datasets)
 - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
 - [dataviz battle on Reddit/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/search?q=dataviz%20battle%20for%20the%20month%20of&restrict_sr=1&sort=new)

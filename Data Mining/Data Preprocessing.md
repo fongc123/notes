@@ -1,10 +1,8 @@
-# Data Preprocessing
-
 Real world data is dirty, often containing **incomplete** (*missing fields or inapplicable*), **noisy** (*errors or outliers*), **inconsistent** (*mismatch fields*), and **redundant** (*duplicate fields*) records. The quality of the raw data affects the quality of the mining results. Additionally, the size and complexity of the data affects the cost and performance of data mining tasks.
 
 <span style = "color:lightblue">Data preprocessing</span> is the preparation stage before the data is processed, where (1) dirty data is removed and (2) the size and complexity of the data is reduced. It involves **data cleaning**, **data integration**, **data transformation**, and **data reduction**.
 
-## Data Objects
+# Data Objects
 A <span style = "color:lightblue">dataset</span> is a collection of <span style = "color:lightblue">objects</span>, where each object corresponds to each *item* in the data. Alternative names for **object** include *record*, *tuple*, *point*, *case*, *sample*, etc.
 
 An object is characterized by a set of <span style = "color:lightblue">attributes</span> (e.g., `name`, `eye_color`, `temperature`). Alternative names for **attribute** include *variable*, *field*, *characteristic*, and *feature*.
@@ -29,7 +27,7 @@ In the case where the test set *does not* have a class attribute (e.g., competit
 
 The partitioning of the original data into different datasets helps prevent [[ML Basics#Over-fitting|over-fitting]].
 
-## Statistical Descriptions
+# Statistical Descriptions
 Statistical summaries give an overall picture of the data. Typically, they involve the <span style = "color:lightblue">central tendency</span> (e.g., mean, median, mode, midrange), the <span style = "color:lightblue">dispersion</span>, and some <span style = "color:lightblue">visualization</span> (e.g., box plots, histogram, scatter plots) of the descriptions.
 
 > [!INFO]
@@ -52,7 +50,7 @@ A review of several dispersion statistics is shown below.
 
 The Python library `pandas` contains the `describe()` method, which gives a statistical summary of the data in a data frame.
 
-## Cleaning
+# Cleaning
 <span style = "color:lightblue">Data cleaning</span> attempts to fill in missing values, smooth out noise, and correct inconsistencies in the data.
 
 **Missing values** can be solved by either ignoring them or replacing them with placeholder values (e.g., global constant, attribute mean, or the most probable value). They can also be replaced manually, but this may be infeasible.
@@ -61,7 +59,7 @@ The Python library `pandas` contains the `describe()` method, which gives a stat
 
 Lastly, **inconsistencies** can be solved by referring to the metadata or consulting an external source of information to verify values. For example, a person's height should not be a negative value.
 
-## Integration
+# Integration
 <span style = "color:lightblue">Data integration</span> combines data from multiple data sources into a coherent data store. Problems that should be considered during integration are listed below.
 - entity identification: multiple fields refer to the same entity
 - data value conflicts: for the same entity, values from different sources are conflicting
@@ -69,7 +67,7 @@ Lastly, **inconsistencies** can be solved by referring to the metadata or consul
 
 Statistical evaluations can be performed to determine if it is necessary to keep *all* the attributes.
 
-### Correlation Coefficient
+## Correlation Coefficient
 The <span style = "color:lightblue">correlation coefficient</span> $r$ can be used to determine if **numerical attributes** are correlated with each other.
 
 The expression for the correlation coefficient between attributes $A$ and $B$ is shown below, where $a_i$ and $b_i$ are the respective values, $\bar{A}$ and $\bar{B}$ are the respective means, and $\sigma_A$ and $\sigma_B$ are the respective standard deviations.
@@ -104,7 +102,7 @@ Knowledge about $X$ contains <u>no information</u> about $Y$.
 
 <span style = "color:lightblue">Mutually exclusive</span> events are events that cannot occur at the same time.
 
-### Chi-squared Test
+## Chi-squared Test
 The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
 
 The expression for the $\chi^2$ test is shown below, where $r$ and $c$ represent the number of rows and columns respectively.
@@ -129,7 +127,7 @@ $$df=(r-1)\times(c-1)$$
 
 The <span style = "color:lightblue">null hypothesis</span> is rejected if the calculated value exceeds the look-up value.
 
-#### Example
+### Example
 We would like to determine if attribute $A$ and $B$ are independent of each other or not. The distinct values for $A$ are male ($a_1$) and female ($a_2$), while that of for $B$ are fiction ($b_1$) and non-fiction ($b2$). A two-by-two contingency table containing the <span style = "color:lightblue">observed frequencies</span> of each attribute is shown below.
 
 |                                              |                    male                    |                   female                    | <span style = "color:lightblue">total</span> |
@@ -163,7 +161,7 @@ The $\chi^2$ value of this contingency table is $507.93$ with a degree of freedo
 $$\chi^2=507.93>10.83$$
 Thus, since the calculated value exceeds the table value, the null hypothesis is rejected, and the attributes $A$ and $B$ are considered to be **not independent**.
 
-#### Code
+### Code
 The Python library `scipy` provides the `chi2_contingency()` function for performing Chi-squared analysis and for evaluating independence.
 
 > [!INFO]
@@ -206,16 +204,16 @@ else:
 	print("Null hypothesis not rejected.")
 ```
 
-## Transformation
+# Transformation
 <span style = "color:lightblue">Data transformation</span> modifies the data to improve the results gained from data mining (i.e., improve mining performance.
 - <span style = "color:lightblue">attribute or feature construction</span>: create new attributes that capture important information more effectively than the original ones (e.g., Fourier transform)
 - <span style = "color:lightblue">normalization</span>: scale attribute values to smaller, specified range
 - <span style = "color:lightblue">discretization</span>: divide continuous attribute into intervals to reduce data size (e.g., histogram, cluster analysis, decision-tree analysis)
 
-### Normalization
+## Normalization
 Data normalization ensures uniformity in data. Attributes with different ranges should be compared equally with each other.
 
-#### Min-Max
+### Min-Max
 In <span style = "color:lightblue">min-max normalization</span>, original values a mapped to a new range within a new minimum ($nmin$) and maximum ($nmax$). The expression of a new value $v'$ is shown below.
 
 $$v'=\frac{v-min_A}{max_A-min_A}(nmax_A-nmin_A)+nmin_A$$
@@ -234,7 +232,7 @@ new_data = scaler.fit_transform(old_data)
 > [!INFO]
 > The `fit()` method simply fits the data, while the `transform()` method transforms the data based on the scaler object. The `fit_transform()` method both fits and tranforms the data.
 
-#### Z-Score
+### Z-Score
 In <span style = "color:lightblue">z-score normalization</span>, new values are mapped based on the attribute mean $\bar{A}$ and standard deviation $\sigma_A$ of the original values.
 
 $$v'=\frac{v-\bar{A}}{\sigma_A}\quad \text{or}\quad Z=\frac{x-\mu}{\sigma}$$
@@ -250,20 +248,20 @@ scaler = StandardScaler()
 new_data = scaler.fit_transform(old_data)
 ```
 
-## Reduction
+# Reduction
 
 <span style = "color:lightblue">Data reduction</span> obtains a reduced representation of the dataset, while allowing similar, if not the same, analytical results to be produced.
 
 > [!INFO]
 > To capture a fraction $r$ of a dataset with $d$ dimensions, the range of each output that must be covered is $r^{\frac{1}{d}}$. As dimensionality increases, data becomes increasingly sparse, and the number of required points increases **exponentially** to maintain the same sampling density.
 
-### Principal Component Analysis
+## Principal Component Analysis
 
 <span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction.
 
-The dimension projection with the **largest amount of variation in the data is chosen** (i.e., find projection $w$ such that $var(w^tx)$ is maximized).
+The dimension projection with the **largest amount of variation in the data is chosen** (i.e., find projection $w$ such that $var(w^tx)$ is maximized). The idea is that variables with the largest covariance (i.e., diverse values) most likely are relevant, while those with little covariance have no significant change.
 
-#### Variation
+### Variation
 A review of calculating variation is shown below.
 - one-dimensional: variance
 - two-dimensional: variance and <span style = "color:lightblue">covariance</span>
@@ -299,7 +297,7 @@ In the context of PCA, the eigenvector(s) $\textbf{v}$ are the <span style = "co
 
 Principal components with the smallest eigenvalues are discarded to perform dimensionality reduction.
 
-#### Choosing PCs
+### Choosing PCs
 
 The <span style = "color:lightblue">proportion of variance</span> shows the proportion of principal components kept. Its expression is shown below, where $k$ corresponds to the number of dimensions kept and $d$ corresponds to the number of dimensions before PCA was performed.
 
@@ -312,7 +310,7 @@ The proportion of variance increases logarithmically as the number of eigenvecto
 > [!WARNING]
 > Some machine learning problems, such as classification, and datasets will cause problems when performing dimensionality reduction, as the dimensions are needed in these problems. Additionally, PCA does not consider nonlinear cases (*only unidirectional*).
 
-#### Code
+### Code
 The Python library `scikit-learn` provides the `PCA` object for PCA-related functions. The class is initialized with the desired number of dimensions to reduce the dataset to.
 
 ```python
@@ -345,7 +343,7 @@ With `explained_variance_ratio_.cumsum()`, the proportion of variance kept can b
 
 ![[data-mining-cumsum-ratio-pc.png|600]]
 
-### Attribute Subset Selection
+## Attribute Subset Selection
 
 In <span style = "color:lightblue">attribute or feature subset selection</span>, the <u>minimum</u> possible **subset** of attributes is chosen such that the quality of the data mining task is not compromised.
 
@@ -353,11 +351,11 @@ It is difficult to test *all* possible combinations of attributes, as there are 
 
 <span style = "color:lightblue">Greedy forward selection</span> selects the best $n$ single attributes. On the other hand, <span style = "color:lightblue">greedy backward elimination</span> removes the worst $n$ attributes. The final reduced attribute set is obtained (*see [[ML Basics|greedy algorithms]]*).
 
-### Numerosity Reduction
+## Numerosity Reduction
 
 The data volume is reduced by choosing smaller forms of data representation. Storing each point of the dataset may use unnecessary storage space.
 
-<span style = "color:lightblue">Parametric methods</span> assume the data is fit to a model, where only the **estimated model parameters** are stored instead of the actual data. For example, if a dataset follows a linear regression, only the parameters $a$ and $b$ are needed.
+<span style = "color:lightblue">Parametric methods</span> assume the data is fit to a model, where only the **estimated model parameters** are stored instead of the actual data. For example, if a dataset follows a linear regression, only the [[Regression|regression]] $a$ and $b$ are needed.
 
 $$y=\underbracket{a}_{slope}x+\underbracket{b}_{y-intercept}$$
 <span style = "color:lightblue">Nonparametric methods</span> do not assume that the data is fitted to a model. Instead, they are stored in smaller forms, such as histograms, clustering, sampling, or <span style = "color:lightblue">data cube aggregation</span>.
@@ -365,7 +363,7 @@ $$y=\underbracket{a}_{slope}x+\underbracket{b}_{y-intercept}$$
 > [!INFO]
 > In <span style = "color:lightblue">random sampling</span>, there is an equal probability of selecting any particular item. On the other hand, in <span style = "color:lightblue">stratified sampling</span>, the dataset is partitioned (e.g., by age group), and samples are drawn from each partition. Random sampling is applicable to normally distributed data, while stratified sampling is applicable to skewed data.
 
-### *t*-distributed Stochastic Neighbor Encoding
+## *t*-distributed Stochastic Neighbor Encoding
 <span style = "color:lightblue">t-distributed stochastic neighbor encoding (t-SNE)</span> is a nonlinear dimensionality reduction technique that is well suited for embedding high dimensions to low dimensions for data visualization. It converts similarities between data points to joint probabilities and tries to minimize the <span style = "color:lightblue">Kullback-Leibler divergence</span> between the joint probabilities of the low dimensional embedding and the high dimensional data.
 
 > [!INFO]
@@ -382,7 +380,7 @@ transformed_data = tsne.fit_transform(old_data)
 
 As t-SNE is a randomized algorithm, the `random_state` controls the seed and, in this case, is set to `801` for reproducible plotting.
 
-### Multidimensional Scaling
+## Multidimensional Scaling
 <span style = "color:lightblue">Multidimensional scaling (MDS)</span> creates a low dimensional representation such that the original distances in the high dimensional space are preserved. There are two types of MDS algorithms: metric and non-metric.
 
 The Python library `sklearn` provides the `MDS` object for both metric and non-metric MDS algorithms.

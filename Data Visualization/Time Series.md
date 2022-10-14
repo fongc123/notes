@@ -1,4 +1,3 @@
-# Time Series Data
 A <span style = "color:lightblue">time series</span> is a series of data points indexed, listed, or graphed in chronological order. It is a sequence of discrete time data. 
 - <span style = "color:lightblue">timestamp</span>: quantitative values or categorical points in time
 - <span style = "color:lightblue">granularity</span>: time interval (e.g., day or hour)
@@ -9,7 +8,7 @@ Time series data mainly analyzes the following tasks.
 - <span style = "color:lightblue">correlation</span>: co-occurrence between two variables
 - <span style = "color:lightblue">sequential order</span>: dependency
 
-## Line Graph
+# Line Graph
 A <span style = "color:lightblue">line graph</span> or <span style = "color:lightblue">dot plot</span> directly displays the values of a quantitative variable with respect to time.
 
 |          **Data**           |    **Mark**    |          **Channels**          |       **Task**        | **Scalability** |
@@ -37,7 +36,7 @@ In line graphs, the <span style = "color:lightblue">aspect ratio</span> can dras
 > [!WARNING]
 > As the indexed line graph shows the normalized values instead of the original values, it shows a **change over time** rather than absolute values.
 
-## Area Graph
+# Area Graph
 Similar to a line graph, an <span style = "color:lightblue">area graph</span> or a <span style = "color:lightblue">stacked graph</span> emphasizes horizontal continuity over vertical items. 
 
 |                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
@@ -56,7 +55,7 @@ To improve space efficiency, juxtaposition techniques are used to combine and sh
 
 ![[data-vis-ridgeline.png|600]]
 
-## Bar Graph
+# Bar Graph
 A <span style = "color:lightblue">bar graph</span> can display the values of a quantitative variable over time. For multiple variables, a multi-bar chart in a single view can be used or multiple single-bar charts in multiple views can be used.
 
 |                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
@@ -67,7 +66,7 @@ A <span style = "color:lightblue">bar graph</span> can display the values of a q
 
 Alternatively, to summarize duration, compare events, and identify intersections or dependencies, a <span style = "color:lightblue">Gantt chart</span> can be used. This chart is commonly used in the tracking of the timeline of tasks, where length represents task duration and color represents the status of the task.
 
-## Heatmap
+# Heatmap
 A <span style = "color:lightblue">heatmap</span> can display an estimated value of a quantitative variable over time, where the value counts are represented by their color (opacity).
 
 |                     **Data**                      |    **Mark**     |                   **Channel**                   |        **Task**        | **Scalability** |
@@ -78,7 +77,7 @@ The example below shows the PM2.5 density pattern at five different stations in 
 
 ![[data-vis-heatmap.png|600]]
 
-## Metaphorical Idioms
+# Metaphorical Idioms
 In these unconventional charts, the use of metaphors and symbolism in the chart's design, such as **radial timelines**, **calendars**, or **rivers**, complements the context of the data.
 
 For example, the use of a calendar view as the base design of a chart is applicable to data about daily and monthly car accidents. River or road metaphors also create a sense of flowing time.

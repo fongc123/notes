@@ -1,4 +1,3 @@
-# Design Rules
 The basic design principles and suggestions are listed below and should be followed.
 - <span style = "color:lightblue">proximity</span>: group related items together
 - <span style = "color:lightblue">alignment</span>: adhere to a static alignment (e.g., comparisons)
@@ -12,7 +11,7 @@ The use of <span style = "color:lightblue">chained sequences</span> may be usefu
 
 Additionally, as a general rule, everything that is plotted should have a legend (e.g., labels, titles, axes, panels, and windows).
 
-## 3D
+# 3D
 **Unnecessary use of three-dimensional displays should be avoided.** In most cases, it adds complexity to a simple problem.
 - planar spatial positioning is more effective than depth (*see [[Visual Channels#Experimentation|Steven's power law]]*)
 - image plane is acquired more quickly than image depth
@@ -27,7 +26,7 @@ However, the costs of three-dimensional displays could be outweighed by their be
 
 Constrained navigational steps through carefully designed three-dimensional viewpoints could offer a new perspective to a two-dimensional chart.
 
-## 2D
+# 2D
 Similar to [[#3D|three-dimensional displays]], **the necessary use of two-dimensional displays should be considered.**
 
 > [!QUESTION]
@@ -38,10 +37,10 @@ Benefits outweigh costs when topological structure or context are important for 
 > [!WARNING]
 > Just because the data is geographic does not mean that a map must be used. Maps are unsuitable for comparison tasks.
 
-## Eyes & Memory
+# Eyes & Memory
 **It is easier to rely on external cognition than on internal memory.** Comparing side-by-side views is easier than comparing a visible item with an item from memory.
 
-### Animation
+## Animation
 The use of animation could be used for **choreographed storytelling** or **transitions between states**. Any changes over time can be *literally* shown with time.
 
 However, animations make comparisons difficult. Additionally, even major changes are difficult to notice if the mental buffer is wiped.
@@ -50,18 +49,18 @@ Alternatively, <span style = "color:lightblue">small multiples</span> could be u
 
 ![[data-vis-small-multiples.png|600]]
 
-## Resolution & Immersion
+# Resolution & Immersion
 **Resolution should be prioritized over immersion.** Immersion (e.g., artificial reality and virtual reality) are only useful in the display of physical objects found in the real world.
 
-## Visualization Mantra
+# Visualization Mantra
 <span style = "color:lightblue">Shneiderman's visualization mantra</span> states that **a good viewing process follows three steps: (1) overview first, (2) zoom and filter, and (3) details on demand.** Each step dives into a deeper level of detail in the visualization.
 
 The mantra is useful for presentation and storytelling and is helpful in explaining complex concepts. To aid in the difficulty during scaling, the overview step may be omitted.
 
-## Function & Form
+# Function & Form
 **Functionality should be prioritized over aesthetics,** which can be refined later. That said, aesthetics should not be ignored, as it improves the experience of viewing the visualization.
 
-## Responsiveness
+# Responsiveness
 **User actions should take appropriate response times.** The table below displays three rough categories of <span style = "color:lightblue">visual feedback</span>.
 
 |      **Action**       | **Time (s)** |      **Example**       |

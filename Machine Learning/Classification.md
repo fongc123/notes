@@ -1,5 +1,3 @@
-# Classification
-
 A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Classification algorithms include [[Decision Tree|decision trees]], **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
 
 ## Binary Classification

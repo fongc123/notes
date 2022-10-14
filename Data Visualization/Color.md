@@ -1,13 +1,11 @@
-# Color
-
 All colors are part of the visible light portion of the electromagnetic spectrum (400 nm - 700 nm).
 
 > [!REVIEW]
 > A longer wavelength corresponds to lower energy, while a shorter wavelength corresponds to higher energy.
 
-In the human vision system, cones and rods are responsible for receiving color input. *See [[Acquisition & Representation#The Eye]]* for more details.
+In the human vision system, cones and rods are responsible for receiving color input (*see [[Acquisition & Representation#The Eye|the human eye]]*).
 
-## Color Space
+# Color Space
 
 To communicate colors precisely, <span style = "color:lightblue">color theories</span> and <span style = "color:lightblue">color spaces</span> were created to capture color information. Each color is assigned a set of coordinates (e.g., RGB) with respect to some color space.
 
@@ -21,11 +19,11 @@ When color is displayed on a monitor, the <span style = "color:lightblue">RGB (r
 
 ![[data-vis-rgb-cmyk.png]]
 
-## Color in Visualization
+# Color in Visualization
 
 In data visualization, color is used to **label, quantify, and highlight** graphical elements.
 
-### Color Selection Rules
+## Color Selection Rules
 
 **Qualitative: The maximum number of colors used is normally between 6 and 12, where there must be a wide range of hues.**
 
@@ -42,7 +40,7 @@ Color palettes should be colorful, robust, and perceptually uniform. This [site]
 
 ![[data-vis-selection-diverging.png|300x25]]
 
-### Additional Considerations
+## Additional Considerations
 
 Specific color combinations and their viability are listed below.
 - Red and blue should be avoided.
@@ -56,7 +54,7 @@ Other color considerations include temperature, emotion and semantics (e.g., <sp
 > [!INFO]
 > Transparency can display the density and intensity of the data points.
 
-## Harmony & Aesthetic
+# Harmony & Aesthetic
 
 > [!QUESTION]
 > **Q:** What color combinations are visually pleasing to humans?
@@ -65,7 +63,7 @@ Other color considerations include temperature, emotion and semantics (e.g., <sp
 > 
 > ![[data-vis-selection-harmony.png|400]]
 
-### Color Blindness
+## Color Blindness
 
 Color blindness is present in $6-8\%$ of the population and is typically caused by genetic errors, causing a deficiency in one of the cones.
 - <span style = "color:lightblue">protanopia</span>: loss of red cone

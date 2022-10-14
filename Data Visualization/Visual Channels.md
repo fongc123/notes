@@ -1,5 +1,3 @@
-# Visual Channels
-
 <span style = "color:lightblue">Munzner's nested model of visualization design</span> provides guidelines on the process of creating appropritate visualizations. It consists of four layers:
 1. **Characterize** the task and data in the problem.
 2. **Abstract** the data into operations and data types.
@@ -8,7 +6,7 @@
 
 ![[data-vis-munzner.png|650]]
 
-## Data Abstraction
+# Data Abstraction
 
 In <span style = "color:lightblue">data abstraction</span>, the <u>type</u> of the dataset (e.g., tables, trees, networks) and the <u>attributes</u> (e.g., categorical or ordered) to represent those datasets should be considered.
 
@@ -16,7 +14,7 @@ Ordered attributes are categorized as ordinal or as quantitative (*see [[Visuali
 
 Additionally, the format of the data and any preprocessing steps must also be considered. For example, information must be extracted out of data stored in a JSON format.
 
-## Visual Encoding
+# Visual Encoding
 
 A composition of visual encoding consists of <span style = "color:lightblue">marks</span> (i.e., attribute type of a visual element) and <span style = "color:lightblue">visual channels</span> (i.e., attribute value of a visual element). Visual channels, such as color, position, size, and orientation, control the appearance of marks, such as points and lines.
 
@@ -41,7 +39,7 @@ A composition of visual encoding consists of <span style = "color:lightblue">mar
 > [!WARNING]
 > Some encodings (e.g., width and height or red and green) when combined with each other cannot be decoded separately.
 
-## Experimentation
+# Experimentation
 
 <span style = "color:lightblue">Steven's power law</span> showed the following correlation for many domains.
 

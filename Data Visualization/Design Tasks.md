@@ -1,8 +1,6 @@
-# Design Tasks
-
 Task design pertains to the purpose of the visualization (i.e., overall message). <span style = "color:lightblue">Bertin's three stages for reading a graphic</span> outline how a visualization is comprehended.
 - <span style = "color:lightblue">external</span>: overall context (e.g., graph title, axis labels)
-- <span style = "color:lightblue">internal</span>: visual variables used to represent components, such as **marks** and **visual channels** (*see [[Visual Channels#Visual Encoding]]*)
+- <span style = "color:lightblue">internal</span>: visual variables used to represent components, such as **marks** and **visual channels** (*see [[Visual Channels#Visual Encoding|visual encoding]]*)
 - <span style = "color:lightblue">relationships</span>: connections between components to create meaning and knowledge
 
 These stages are also similar with <span style = "color:lightblue">reading level</span>: **elementary** (*values and variables*), **intermediate** (*comparisons*), **overall** (*meaning*).
@@ -10,7 +8,7 @@ These stages are also similar with <span style = "color:lightblue">reading level
 > [!QUESTION]
 > Why is the user looking at the visualization?
 
-## Task Abstraction
+# Task Abstraction
 
 Each visualization task is domain-dependent, as the data is different. However, the tasks can be abstracted. Similar <span style = "color:lightblue">task abstractions</span> have similar solutions.
 
@@ -18,7 +16,7 @@ $$\text{task}\rightarrow\text{verb (action)}+\text{noun (target)}$$
 
 A task consists of an **action** and a **target** to perform the action on.
 
-### Actions
+## Actions
 
 The <span style = "color:lightblue">analyze</span> category aims to create insights at a high level.
 
@@ -38,7 +36,7 @@ The <span style = "color:lightblue">query</span> category directly finds the val
 - <span style = "color:lightblue">compare</span>: compare a trend with another
 - <span style = "color:lightblue">summarize</span>: give an overview of all points
 
-### Target
+## Target
 
 A <span style = "color:lightblue">target</span> refers to the subject of a task abstraction. **Trends**, **outliers**, and **features** can be found in all data.
 
@@ -47,14 +45,14 @@ In single-attribute data, the distribution or extreme values can be outlined. In
 Specific to network and spatial data are topologies and shapes respectively.
 
 
-## Interaction Design
+# Interaction Design
 
 <span style = "color:lightblue">Interactions</span> can be implemented to handle the increasing complexity of a dataset.
 - <span style = "color:lightblue">manipulate</span>: change view over time
 - <span style = "color:lightblue">facet</span>: facet across multiple views
 - <span style = "color:lightblue">reduce</span>: reduce items or attributes in a single view
 
-### Manipulate
+## Manipulate
 
 A <span style = "color:lightblue">change over time</span> can be implemented by changing the **encoding**, the **parameters**, or the **arrangement** of a visualization. Here, the data and the attributes are identical, but the form has changed.
 
@@ -70,7 +68,7 @@ Lastly, <span style = "color:lightblue">navigation</span> changes the viewpoint 
 
 Interaction within a **single chart view** can be <span style = "color:lightblue">manipulated</span> manually or automatically.
 
-### Facet
+## Facet
 
 A visualization can be <span style = "color:lightblue">faceted</span> into multiple views.
 
@@ -85,7 +83,7 @@ A visualization can be <span style = "color:lightblue">faceted</span> into multi
 > [!WARNING]
 > Superimposed views are useful for space reduction; however, when there are too many layers, juxtaposed views may be better for clarity.
 
-### Reduce
+## Reduce
 
 The items and attributes displayed can be reduced to highlight only the necessary components.
 
@@ -104,7 +102,7 @@ The items and attributes displayed can be reduced to highlight only the necessar
 
 Distortion is used in the above chart.
 
-### Benefits & Limitations
+## Benefits & Limitations
 
 Some benefits of using interactions are listed below.
 - flexible, powerful, and intuitive

@@ -1,5 +1,3 @@
-# Introduction
-
 <span style = "color:lightblue">Data mining</span> is the process of extracting **interesting** (non-trivial, implicit, previously unknown, and potentially useful) patterns or knowledge from an **abundance** of data. Ideally, this extraction and analysis process is done automatically or semi-automatically.
 
 > [!INFO]
@@ -10,7 +8,7 @@ Data mining consists of several disciplines: statistics, database technology, al
 > [!NOTE]
 > In 2003, there were **five exabytes ($10^{18}$ bytes)** of digital data. Now, the same amount of data is created in two days. In 2012, the world data was expanded to **2.72 zettabytes**.
 
-## Data Types & Sources
+# Data Types & Sources
 
 The **major sources of abundant data** are mainly **social** (e.g., news and social networking), **business** (e.g., web, e-commerce, transactions, and stocks), and **science** (e.g., sensors, bioinformatics, and scientific simulations). New and efficient ways to analyze vast quantities of raw data must be developed.
 
@@ -25,7 +23,7 @@ Additionally, there are several **data repositories**.
 - spatial data: data with **geographical attributes** (e.g., spatial coordinates)
 - text & multimedia data: databases that contain text and multimedia data (e.g., images and videos) respectively
 
-## Functionalities
+# Functionalities
 The <span style = "color:lightblue">training set</span> is the dataset that was used to create and the model.
 
 $$
