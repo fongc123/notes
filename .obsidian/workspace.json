@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "a41ae146264634af",
+        "id": "42121b45426caa6e",
         "type": "tabs",
         "children": [
           {
-            "id": "d7eba9ba5defec0c",
+            "id": "cd9bd6a04c0edba8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Data Visualization/Spatial Data.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Data Visualization/Spatial Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Data Visualization/Spatial Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Data Visualization/Spatial Data.md"
+              }
             }
           },
           {
@@ -139,17 +147,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d7eba9ba5defec0c",
+  "active": "cd9bd6a04c0edba8",
   "lastOpenFiles": [
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/Spatial Data.md",
-    "Image Processing/Spatial Filtering.md",
-    "Machine Learning/Classification.md",
-    "Data Visualization/Time Series.md",
-    "img/data-vis-dot-map.png",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Design Tasks.md",
+    "Machine Learning/Decision Tree.md",
+    "Machine Learning/ML Basics.md",
+    "Data Mining/Data Preprocessing.md",
     "Data Visualization/Design Rules.md",
-    "Data Visualization/References.md"
+    "Data Visualization/Time Series.md",
+    "Image Processing/Image Restoration.md",
+    "Data Visualization/Color.md",
+    "Image Processing/Spatial Filtering.md"
   ]
 }
