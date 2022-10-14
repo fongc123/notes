@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "42121b45426caa6e",
+        "id": "be5cb55563664b75",
         "type": "tabs",
         "children": [
           {
-            "id": "cd9bd6a04c0edba8",
+            "id": "b5cadbf538bca0d2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Trajectory Data.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Data Visualization/Trajectory Data.md"
-              }
+              "state": {}
             }
           },
           {
@@ -147,10 +139,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cd9bd6a04c0edba8",
+  "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Data Visualization/Spatial Data.md",
     "Data Visualization/Trajectory Data.md",
+    "Data Visualization/Spatial Data.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",
     "Data Mining/Data Preprocessing.md",
