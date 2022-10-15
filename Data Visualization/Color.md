@@ -40,7 +40,7 @@ Color palettes should be colorful, robust, and perceptually uniform. This [site]
 
 ![[data-vis-selection-diverging.png|300x25]]
 
-## Additional Considerations
+### Additional Considerations
 
 Specific color combinations and their viability are listed below.
 - Red and blue should be avoided.
@@ -54,7 +54,7 @@ Other color considerations include temperature, emotion and semantics (e.g., <sp
 > [!INFO]
 > Transparency can display the density and intensity of the data points.
 
-# Harmony & Aesthetic
+## Harmony & Aesthetic
 
 > [!QUESTION]
 > **Q:** What color combinations are visually pleasing to humans?
@@ -63,7 +63,7 @@ Other color considerations include temperature, emotion and semantics (e.g., <sp
 > 
 > ![[data-vis-selection-harmony.png|400]]
 
-## Color Blindness
+### Color Blindness
 
 Color blindness is present in $6-8\%$ of the population and is typically caused by genetic errors, causing a deficiency in one of the cones.
 - <span style = "color:lightblue">protanopia</span>: loss of red cone
