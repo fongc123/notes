@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Image Restoration.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Image Restoration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Image Restoration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md"
+                "file": "Image Processing/Image Restoration.md"
               }
             }
           },
@@ -147,10 +147,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b5cadbf538bca0d2",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
-    "Machine Learning/ML Basics.md",
     "Machine Learning/Feedforward Neural Networks.md",
+    "Machine Learning/ML Basics.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Data Visualization/Trajectory Data.md",
