@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md"
+                "file": "Machine Learning/Feedforward Neural Networks.md"
               }
             }
           },
@@ -149,15 +149,15 @@
   },
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Data Visualization/Color.md",
+    "Machine Learning/ML Basics.md",
+    "Machine Learning/Feedforward Neural Networks.md",
+    "Machine Learning/Convolutional Neural Networks.md",
+    "Machine Learning/Recurrent Neural Networks.md",
     "Data Visualization/Trajectory Data.md",
+    "Data Visualization/Color.md",
     "Data Visualization/Visualization Basics.md",
     "Data Visualization/References.md",
     "Data Visualization/Spatial Data.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/ML Basics.md",
-    "Data Mining/Data Preprocessing.md",
-    "Data Visualization/Design Rules.md",
-    "Data Visualization/Time Series.md"
+    "Machine Learning/Decision Tree.md"
   ]
 }
