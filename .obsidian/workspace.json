@@ -18,26 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "68538f43434580b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Color.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b7b84955bf01a984",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
         ]
       }
@@ -169,11 +149,11 @@
   },
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Data Visualization/Visualization Basics.md",
     "Data Visualization/Color.md",
+    "Data Visualization/Trajectory Data.md",
+    "Data Visualization/Visualization Basics.md",
     "Data Visualization/References.md",
     "Data Visualization/Spatial Data.md",
-    "Data Visualization/Trajectory Data.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",
     "Data Mining/Data Preprocessing.md",
