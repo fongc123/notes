@@ -1,19 +1,33 @@
-All colors are part of the visible light portion of the electromagnetic spectrum (400 nm - 700 nm).
+All colors are part of the visible light portion of the electromagnetic spectrum (400 nm - 700 nm), where 400 nm corresponds to violet and 700 nm corresponds to red. A light wave with equal energy in all visible bands appears white.
 
 > [!REVIEW]
 > A longer wavelength corresponds to lower energy, while a shorter wavelength corresponds to higher energy.
 
-In the human vision system, cones and rods are responsible for receiving color input (*see [[Acquisition & Representation#The Eye|the human eye]]*).
+In the human vision system, cones and rods are responsible for receiving color input and brightness (*see [[Acquisition & Representation#The Eye|the human eye]]*).
+
+
 
 # Color Space
-
 To communicate colors precisely, <span style = "color:lightblue">color theories</span> and <span style = "color:lightblue">color spaces</span> were created to capture color information. Each color is assigned a set of coordinates (e.g., RGB) with respect to some color space.
 
-The <span style = "color:lightblue">International Commission on Illumination (CIE)</span> created the <span style = "color:lightblue">CIE RGB</span> and <span style = "color:lightblue">CIE XYZ</span> color spaces. In the CIE XYZ color space, $X$ is a mix of three CIE RGB curves, $Y$ is a the luminance or brightness, and $Z$ is quasi-equal to blue of the CIE RGB color space. The <span style = "color:lightblue">CIE XY chromaticity diagram</span> is shown below.
+The <span style = "color:lightblue">International Commission on Illumination (CIE)</span> created the <span style = "color:lightblue">CIE RGB</span> and <span style = "color:lightblue">CIE XYZ</span> color spaces. In the CIE XYZ color space, $X$ is a mix of three CIE RGB curves, $Y$ is the luminance or brightness, and $Z$ is quasi-equal to blue of the CIE RGB color space. The <span style = "color:lightblue">CIE XY chromaticity diagram</span> is shown below.
 
 ![[data-vis-cie-chromaticity.png|500x450]]
 
-This diagram displays all colors visible to the average human eye. Additionally, a mixture of any two colors (e.g., pure red and pure green) can be found (*cannot be done by other diagrams*).
+This diagram displays all colors visible to the average human eye. Additionally, a mixture of any two colors (e.g., pure red and pure green) can be found with this chart (*cannot be done by other diagrams*).
+
+# Color Models
+Commonly, color can be seen as a combination of three primary colors: red, green, and blue. Color also has additional characteristics.
+- <span style = "color:lightblue">brightness</span>: achromatic (*unrelated to color*) notion of intensity
+- <span style = "color:lightblue">hue</span>: the dominant color as perceived by an observer (e.g., redness or greenness)
+- <span style = "color:lightblue">saturation</span>: the relative purity (i.e., how much white light is mixed)
+
+A <span style = "color:lightblue">color model</span> is a specification of a coordinate system to facilitate the specification of colors in the system's standards.
+- <span style = "color:lightblue">RGB model</span>: red, green, blue (*color monitors and video cameras*)
+- <span style = "color:lightblue">CMY and CMYK models</span>: cyan, magenta, yellow, black (*printers*)
+- <span style = "color:lightblue">HSI model</span>: hue, saturation, intensity (*similar to human visual system*)
+
+The RGB model is the most common, where color is a combination of three primary colors
 
 When color is displayed on a monitor, the <span style = "color:lightblue">RGB (red, green, blue) (additive) system</span> is used. On the other hand, when color is printed with a printer, the <span style = "color:lightblue">CMYK (cyan, magenta, yellow, black) (subtractive) system</span> is used.
 

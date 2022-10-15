@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Data Visualization/Color.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Acquisition & Representation.md",
                 "mode": "source",
                 "source": false
               }
@@ -174,6 +174,7 @@
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
     "Image Processing/Color Processing.md",
+    "Data Visualization/Color.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
@@ -181,7 +182,6 @@
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
-    "Image Processing/Image Processing Basics.md",
-    "Data Visualization/Color.md"
+    "Image Processing/Image Processing Basics.md"
   ]
 }
