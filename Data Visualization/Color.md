@@ -17,21 +17,69 @@ The <span style = "color:lightblue">International Commission on Illumination (CI
 This diagram displays all colors visible to the average human eye. Additionally, a mixture of any two colors (e.g., pure red and pure green) can be found with this chart (*cannot be done by other diagrams*).
 
 # Color Models
-Commonly, color can be seen as a combination of three primary colors: red, green, and blue. Color also has additional characteristics.
-- <span style = "color:lightblue">brightness</span>: achromatic (*unrelated to color*) notion of intensity
-- <span style = "color:lightblue">hue</span>: the dominant color as perceived by an observer (e.g., redness or greenness)
-- <span style = "color:lightblue">saturation</span>: the relative purity (i.e., how much white light is mixed)
-
 A <span style = "color:lightblue">color model</span> is a specification of a coordinate system to facilitate the specification of colors in the system's standards.
 - <span style = "color:lightblue">RGB model</span>: red, green, blue (*color monitors and video cameras*)
 - <span style = "color:lightblue">CMY and CMYK models</span>: cyan, magenta, yellow, black (*printers*)
 - <span style = "color:lightblue">HSI model</span>: hue, saturation, intensity (*similar to human visual system*)
 
-The RGB model is the most common, where color is a combination of three primary colors
+> [!INFO]
+> Each color channel is typically represented with 8 bits for 256 different values. With three channels (24 bits), there are several million different colors that can be represented.
+> $$
+> \left(2^8\right)^3=16,777,216 \text{ different colors}
+> $$
 
-When color is displayed on a monitor, the <span style = "color:lightblue">RGB (red, green, blue) (additive) system</span> is used. On the other hand, when color is printed with a printer, the <span style = "color:lightblue">CMYK (cyan, magenta, yellow, black) (subtractive) system</span> is used.
+The <span style = "color:lightblue">RGB model</span> (additive system) is the most common, where color is a combination of three primary colors (red, green, blue).
+
+## CMYK
+The <span style = "color:lightblue">CMYK model</span> are primary colors for **pigment**.
 
 ![[data-vis-rgb-cmyk.png]]
+
+As channel values are obtained from subtraction of the <u>normalized</u> RGB values, this model is complementary to the RGB model.
+
+$$
+\begin{bmatrix}
+	C \\ M \\Y
+\end{bmatrix} = 
+\begin{bmatrix}
+	1 \\ 1 \\ 1
+\end{bmatrix}-
+\begin{bmatrix}
+	R \\ G \\ B
+\end{bmatrix}
+$$
+
+### CMY to CMYK
+The black ($K$) value is obtained by first finding the minimum of all cyan (C), magenta (M), and yellow (Y) values.
+
+$$K=\min(C,M,Y)$$
+
+If $K=1$, all other values **equate to zero**. Otherwise, the following calculation is made.
+
+$$
+\begin{gather}
+	C=\frac{C-K}{1-K} \\\\
+	M=\frac{M-K}{1-K}\\\\
+	Y=\frac{Y-K}{1-K}
+\end{gather}
+$$
+
+## HSI
+Unlike the RGB and CMY models, the <span style = "color:lightblue">HSI model</span> decouples color and intensity.
+- <span style = "color:lightblue">hue</span>: the dominant color as perceived by an observer (e.g., redness or greenness)
+- <span style = "color:lightblue">saturation</span>: the relative purity (i.e., how much white light is mixed)
+- <span style = "color:lightblue">intensity</span>: gray level of the image
+
+> [!WARNING]
+> Brightness is a subjective descriptor of **intensity** and is difficult to measure.
+
+Saturation is inversely proportional to the amount of white light added. Additionally, intensity is the average of the RGB values.
+
+$$I=\frac{1}{3}\left(R+G+B\right)$$
+
+The HSI components of an RGB cube are shown below.
+
+![[image-processing-hsi-components.png|600]]
 
 # Color in Visualization
 

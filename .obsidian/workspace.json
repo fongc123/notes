@@ -25,25 +25,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Acquisition & Representation.md",
+                "file": "Image Processing/Color Processing.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a21ded9c579b9982",
+            "id": "9f30f1584c9d7eba",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Color Processing.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Color.md",
+                "file": "Image Processing/Color Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Color.md",
+                "file": "Image Processing/Color Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -149,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Color.md"
+                "file": "Image Processing/Color Processing.md"
               }
             }
           },
@@ -171,17 +168,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b5cadbf538bca0d2",
+  "active": "e19c6a1b44062860",
   "lastOpenFiles": [
-    "Image Processing/Color Processing.md",
-    "Data Visualization/Color.md",
     "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Spatial Filtering.md",
+    "Data Visualization/Color.md",
+    "img/operator-precedence.png",
+    "Image Processing/Color Processing.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
-    "Image Processing/Image Processing Basics.md"
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md"
   ]
 }

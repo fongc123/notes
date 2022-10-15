@@ -16,6 +16,9 @@
     " contraharmoni",
     "Choropleth",
     "isoline",
-    "objects"
+    "objects",
+    "CMY",
+    "Pseudocolor",
+    "pseudocolor"
   ]
 }
