@@ -15,3 +15,19 @@ Trajectories can also be clustered together.
 > [!INFO]
 > Machine learning techniques can be used to [[Classification|classify]] moving objects based on their trajectories and properties (e.g., <span style = "color:lightblue">the hidden Markov model (HMM)</span> or <span style = "color:lightblue">trajectory-based classification</span>).
 
+# Visualization
+The visualization of trajectory data is often challenging due to visual occlusion.
+- **spatial**: points, lines, and areas
+- **temporal**: animations, color, layout (e.g., clock), three-dimensional views
+
+Other attributes, such as speed and density, can also be encoded by color.
+
+> [!INFO]
+> The length and width of the spatial marks can also represent other properties (e.g., magnitude of a trajectory).
+
+[[Design Tasks#Interaction Design|User interaction]] can also be useful in controlling the focus of the visualization (e.g., overview $\leftrightarrow$ detailed).
+
+To reduce clutter, the following techniques may be useful.
+- <span style = "color:lightblue">force-directed layout</span>: arrange nodes and edges by attracting and repelling forces (*nodes repel and edges attract*)
+- <span style = "color:lightblue">edge bundling</span>: combine [[#Patterns|similar]] trajectories into a bigger trajectory
+
