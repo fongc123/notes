@@ -11,8 +11,12 @@
             "id": "b5cadbf538bca0d2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Data Visualization/Trajectory Data.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Data Visualization/Trajectory Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Data Visualization/Trajectory Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Data Visualization/Trajectory Data.md"
+              }
             }
           },
           {
@@ -141,8 +149,8 @@
   },
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Data Visualization/Trajectory Data.md",
     "Data Visualization/Spatial Data.md",
+    "Data Visualization/Trajectory Data.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",
     "Data Mining/Data Preprocessing.md",
