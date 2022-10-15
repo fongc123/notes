@@ -29,5 +29,4 @@ Other attributes, such as speed and density, can also be encoded by color.
 
 To reduce clutter, the following techniques may be useful.
 - <span style = "color:lightblue">force-directed layout</span>: arrange nodes and edges by attracting and repelling forces (*nodes repel and edges attract*)
-- <span style = "color:lightblue">edge bundling</span>: combine [[#Patterns|similar]] trajectories into a bigger trajectory
-
+- <span style = "color:lightblue">edge bundling</span>: combine [[#Patterns|similar]] trajectories into a larger trajectory
