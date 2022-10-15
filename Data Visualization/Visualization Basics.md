@@ -17,7 +17,7 @@ A violin plot will show deeper distribution of data points in addition to the st
 
 Visualization must also be efficient and effective. For example, a bar chart for a dataset with one million data points would be too cluttered to display anything useful.
 
-A list of visualization and dataset references can be found [[References|here]].
+A list of visualization and dataset references can be found [[References|here]]. Refer to [[Color#Color Selection Rules|this section]] for help in selecting colors.
 
 # User-centric Visualization
 A <span style = "color:lightblue">user-centric visualization</span> that involves HCI is suitable when there is a need to **augment human capabilities** rather than replace people with computational decision-making methods.

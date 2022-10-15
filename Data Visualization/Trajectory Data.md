@@ -20,7 +20,9 @@ The visualization of trajectory data is often challenging due to visual occlusio
 - **spatial**: points, lines, and areas
 - **temporal**: animations, color, layout (e.g., clock), three-dimensional views
 
-Other attributes, such as speed and density, can also be encoded by color.
+Other attributes, such as speed and density, can also be encoded by color. The visualization below is an annotated snapshot result of the velocity of a taxi, where red represents a high speed and white represents a slow speed.
+
+![[data-vis-trajectory.png|600]]
 
 > [!INFO]
 > The length and width of the spatial marks can also represent other properties (e.g., magnitude of a trajectory).
