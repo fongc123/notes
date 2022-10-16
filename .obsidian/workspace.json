@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Compression.md",
-                "mode": "source",
+                "file": "Machine Learning/Classification.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Machine Learning/Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Machine Learning/Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Compression.md"
+                "file": "Machine Learning/Classification.md"
               }
             }
           },
@@ -186,15 +186,15 @@
   },
   "active": "e19c6a1b44062860",
   "lastOpenFiles": [
-    "Image Processing/Frequency Filtering.md",
+    "Machine Learning/Regression.md",
+    "Machine Learning/Classification.md",
+    "Data Mining/Data Preprocessing.md",
+    "Data Mining/Data Mining Basics.md",
+    "Machine Learning/ML Basics.md",
     "Image Processing/Image Compression.md",
+    "Image Processing/Frequency Filtering.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Restoration.md",
-    "Image Processing/Spatial Filtering.md",
-    "Data Visualization/Spatial Data.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Data Visualization/Color.md",
-    "img/operator-precedence.png",
-    "Image Processing/Interpolation & Transformation.md"
+    "Image Processing/Spatial Filtering.md"
   ]
 }
