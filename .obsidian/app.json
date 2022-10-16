@@ -19,6 +19,7 @@
     "objects",
     "CMY",
     "Pseudocolor",
-    "pseudocolor"
+    "pseudocolor",
+    "thresholding"
   ]
 }

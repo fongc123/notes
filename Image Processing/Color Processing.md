@@ -4,6 +4,9 @@ There are two types of color image processing.
 - <span style = "color:lightblue">pseudocolor image</span>: assigning colors to gray values
 - <span style = "color:lightblue">full color image</span>: manipulating colored images
 
+> [!INFO]
+> Noise is less noticeable in colored images. This is because noise gets reduced when there are multiple images. Since there are three images (one for each channel), the result due to averaging is less noisy.
+
 # Pseudocolor Processing
 Humans can distinguish different colors better than different shades of gray, as found in medical images. Additionally, pseudocolor processing can be used when giving color to originally grayscale images.
 
@@ -57,6 +60,49 @@ Similar to [[Intensity Transformations#Histogram Equalization|grayscale histogra
 In the above image, the saturation is also increased in the bottom right sub-image.
 
 ## Color Image Smoothing
-Similar to spatial image smoothing by [[Spatial Filtering#Low-pass Filters|low-pass filters]], [[Image Restoration#Mean Filters|mean filters]],  
+Similar to spatial image smoothing by [[Spatial Filtering#Low-pass Filters|low-pass filters]] and [[Image Restoration|mean (and order-statistic) filters]], color image smoothing can be done by averaging pixel values in a specified filter region.
+- <span style = "color:lightblue">per-color plane method</span>: for RGB and CMY models, smooth each color component and combine each component back
+- <span style = "color:lightblue">intensity-only</span>: for HSI model, smooth only intensity component and leave hue and saturation unmodified
 
-Noise is less noticeable in colored images. This is because noise gets reduced when there are multiple images. Since there are three images (one for each channel), the result due to averaging is less noisy.
+$$
+\bar{\mathcal{c}}(x,y)=\begin{bmatrix}
+	\frac{1}{K}\sum_{s,t\in S_{xy}}{R(s,t)} \\
+	\frac{1}{K}\sum_{s,t\in S_{xy}}{G(s,t)} \\
+	\frac{1}{K}\sum_{s,t\in S_{xy}}{B(s,t)}
+\end{bmatrix}
+$$
+
+> [!INFO]
+> The per-color plane and intensity-only methods are not equivalent. The results obtained from these methods are different.
+
+In the example below, the result of smoothing all RGB components is shown on the left, while that of smoothing only the intensity component is shown in the middle. The difference between the two images is shown on the right.
+
+![[image-processing-color-img-smoothing.png|600]]
+
+## Color Image Sharpening
+Similar to [[Spatial Filtering#High-pass Filters|high-pass filters]], color image sharpening can be achieved with the Laplacian filter. Again, all RGB components or only the intensity component can be sharpened.
+
+$$
+\nabla^2 \left[\bar{\mathcal{c}}(x,y)\right]=
+\begin{bmatrix}
+	\nabla^2{R(x,y)} \\
+	\nabla^2{G(x,y)} \\
+	\nabla^2{B(x,y)}
+\end{bmatrix}
+$$
+
+![[image-processing-color-img-sharpening.png|600]]
+
+## Color Segmentation
+In <span style = "color:lightblue">color segmentation</span>, a threshold function based on **color information** in the hue and saturation components is implemented, where $\mathcal{c}_T$ represents the color to be segmented and $c(x,y)$ is the RGB vector at a pixel.
+
+$$
+g(x,y)=\begin{cases}
+	1 & \text{if }D(\mathcal{c}(x,y), \mathcal{c}_T)\leq T \\
+	0 & \text{if }D(\mathcal{c}(x,y), \mathcal{c}_T)>T
+\end{cases}
+$$
+
+The distance between the pixel's color and the target color is calculated.
+
+![[image-processing-color-segmentation.png|600]]

@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Color Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Color Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Restoration.md"
+                "file": "Image Processing/Color Processing.md"
               }
             }
           },
@@ -184,10 +184,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b384fb6341d674db",
+  "active": "e19c6a1b44062860",
   "lastOpenFiles": [
-    "Image Processing/Color Processing.md",
     "Image Processing/Image Restoration.md",
+    "Image Processing/Color Processing.md",
     "Image Processing/Spatial Filtering.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Image Compression.md",
