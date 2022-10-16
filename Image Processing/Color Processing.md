@@ -5,7 +5,7 @@ There are two types of color image processing.
 - <span style = "color:lightblue">full color image</span>: manipulating colored images
 
 > [!INFO]
-> Noise is less noticeable in colored images. This is because noise gets reduced when there are multiple images. Since there are three images (one for each channel), the result due to averaging is less noisy.
+> [[Image Restoration#Modeling Noise|Noise]] is less noticeable in colored images. This is because noise gets reduced when there are multiple images. Since there are three images (one for each channel), the result due to averaging is less noisy.
 
 # Pseudocolor Processing
 Humans can distinguish different colors better than different shades of gray, as found in medical images. Additionally, pseudocolor processing can be used when giving color to originally grayscale images.
@@ -103,6 +103,6 @@ g(x,y)=\begin{cases}
 \end{cases}
 $$
 
-The distance between the pixel's color and the target color is calculated.
+The distance between the pixel's color and the target color is calculated, and only the pixels within the distance threshold are set to $1$.
 
 ![[image-processing-color-segmentation.png|600]]
