@@ -56,5 +56,7 @@ Similar to [[Intensity Transformations#Histogram Equalization|grayscale histogra
 
 In the above image, the saturation is also increased in the bottom right sub-image.
 
+## Color Image Smoothing
+Similar to spatial image smoothing by [[Spatial Filtering#Low-pass Filters|low-pass filters]], [[Image Restoration#Mean Filters|mean filters]],  
 
 Noise is less noticeable in colored images. This is because noise gets reduced when there are multiple images. Since there are three images (one for each channel), the result due to averaging is less noisy.

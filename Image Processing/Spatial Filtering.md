@@ -1,8 +1,6 @@
-# Spatial Filtering
-
 <span style = "color:lightblue">Spatial filtering</span> modifies an image by replacing each pixel value with the output from a function that relies on the value of the pixel and the values of the neighboring pixels. A <span style = "color:lightblue">spatial filter</span> consists of a neighborhood (*the kernel*) and a predefined operation $T$.
 
-## Linear Spatial Filtering
+# Linear Spatial Filtering
 
 A <span style = "color:lightblue">linear spatial filter</span> performs a sum-of-products operation between an image $f$ and a filter kernel $w$. A filter is linear if the operation $T$ it performs is also linear. The expression for the <span style = "color:lightblue">correlation</span> of a filter $w$ with an image $f$ is shown below. **The filter $w$ is directly compared with the image**.
 
@@ -14,7 +12,7 @@ $$w(x,y)\star f(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
 
 The <span style = "color:lightblue">impulse response</span> of correlation is a rotation of the filter by 180$^{\circ}$. In spatial convolution, since the filter is rotated beforehand, the impulse response is identical to the filter.
 
-### Zero-padding
+## Zero-padding
 
 To perform a sum-of-products operation on pixels close to or at the image margins, additional zeros are padded. For example, in a one-dimensional signal, an image with original length of $M$ would create a correation result of length $M$ but a **full correlation result** of length $M + 2a$.
 
@@ -24,13 +22,13 @@ In a two-dimensional signal, an image with size $(M,N)$ would create a **full co
 
 ![[image-processing-2d-padding.png|300]]
 
-### Properties
+## Properties
 
 The properties for convolution and correlation are shown in the table below.
 
 ![[image-processing-conv-corr-prop.png|600]]
 
-### Separable Filter Kernels
+## Separable Filter Kernels
 
 A two-dimensional <span style = "color:lightblue">separable filter kernel</span> can be written as a product of two one-dimensional kernels.
 
@@ -63,8 +61,7 @@ $$w=w_1w_2^T=w_1\star w_2$$
 
 $$\text{computational advantage}=\frac{mn}{m+n}$$
 
-## Low-pass Filters
-
+# Low-pass Filters
 <span style = "color:lightblue">Low-pass filters</span> can be used for **image smoothing** by reducing irrelevant high-frequency details that are found in noise. The filter **allows low frequencies and restricts high frequencies**, creating a blurred image.
 
 > [!INFO]
@@ -83,7 +80,7 @@ $$
 > [!INFO]
 > The denominator is the <span style = "color:lightblue">normalization factor</span>. It is needed as the associations between pixels should not be disturbed.
 
-### Box Filter
+## Box Filter
 
 A <span style = "color:lightblue">box filter</span> accomplishes image smoothing spatial filtering by averaging (*see [[Image Restoration#Arithmetic|arithmetic mean filters]]*).
 
@@ -95,7 +92,7 @@ The complete equation of the box filter is shown below, where pixel values are a
 
 $$h[m,n]=\sum_{k,l}{g[k,l]f[m+k,n+l]}$$
 
-### Gaussian Filter
+## Gaussian Filter
 
 Named after Carl Friedrich Gauss, the kernel values of the <span style = "color:lightblue">Gaussian filter</span> are sampled from the two-dimensional Gaussian function.
 
@@ -110,14 +107,14 @@ This filter is **separable**, where the weights fall off with distance from the 
 
 Low-pass filtering can be applied to threshold for region extraction (e.g., astronomy) or for shading correction.
 
-## Non-linear Spatial Filtering
+# Non-linear Spatial Filtering
 
 <span style = "color:lightblue">Non-linear spatial filters</span> typically replace the center pixel value with a value determined by an ordering or ranking algorithm of the neighborhood. Some examples of ordering filters include **median filter**, **max filter**, and **minimum filter**.
 
-### Medium Filter
+## Medium Filter
 In a <span style = "color:lightblue">medium filter</span>, the center pixel value is replaced by the median of the sorted values in the pixel window (*see [[Image Restoration#Median|median filters]]*).
 
-## High-pass Filters
+# High-pass Filters
 
 <span style = "color:lightblue">High-pass filters</span> can be used for **image sharpening**, where intensity transitions and fine details are highlighted. The filter **allows high frequencies and restricts low frequencies.**
 
@@ -128,7 +125,7 @@ A high-pass filter is achieved using <span style = "color:lightblue">differentia
 
 First derivatives create thick edges, while second derivatives produce better edges.
 
-### Image Gradient
+## Image Gradient
 
 <span style = "color:lightblue">Image gradients</span> can be achieved with the first derivative.
 
@@ -141,7 +138,7 @@ A first-derivative filter can be used for edge enhancement, as **only the region
 
 ![[image-processing-gradient-ex.png|600]]
 
-### Laplacian Operator
+## Laplacian Operator
 
 The <span style = "color:lightblue">Laplacian operator</span> is the simplest second-order isotropic derivative operator.
 
@@ -155,7 +152,7 @@ $$
 ![[image-processing-laplacian.png|600]]
 
 
-### Sharpening Images
+## Sharpening Images
 
 Images can be sharpened by **adding edges to the images** to enhance details.
 
@@ -164,7 +161,7 @@ The amount of sharpening can be controlled by the sharpening factor $c$. A sharp
 
 ![[image-processing-laplacian-ex.png|600]]
 
-### Unsharp Masking
+## Unsharp Masking
 
 Images can also be sharpened by adding **an unsharp mask** to the original image. The mask is obtained by **subtracting the blurred image from the original image**.
 

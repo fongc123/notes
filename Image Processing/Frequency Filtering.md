@@ -1,11 +1,9 @@
-# Frequency Filtering
-
 Established by Jean-Baptiste Joseph Fourier, the <span style = "color:lightblue">Fourier transformation</span> converts spatial coordinates to frequency components.
 - simplify problems
 - decrease complexity
 - some operations in the frequency domain are easier 
 
-## Fourier Series
+# Fourier Series
 
 Fourier claims that a sufficient summation of sinusoidal signals will create any periodic signal.
 
@@ -22,14 +20,14 @@ $$
 
 <span style = "color:lightblue">Euler's formula</span> converts between the exponential form and the sinusoidal form.
 
-## Fourier Transform
+# Fourier Transform
 
 A <span style = "color:lightblue">Fourier transform</span> is a mathematical transform that decomposes **an arbitrary function with finite duration (non-periodic function)** into weighted integrals of sine and cosine functions.
 
 > [!INFO]
 > A Fourier transform is lossless (i.e., the original spatial function can be recovered from the frequency domain).
 
-### 1D Continuous
+## 1D Continuous
 The expression for a **continuous** one-dimensional Fourier transform is shown below, where the spatial domain is converted into the frequency domain.
 
 $$
@@ -41,7 +39,7 @@ $$
 f(t)=\mathcal{F}^{-1}\{F(u)\}=\int_{-\infty}^{\infty}{F(u)\exp(j2\pi ut)du}
 $$
 
-### 1D Discrete
+## 1D Discrete
 The expressions for the discrete counterparts are shown below.
 
 $$
@@ -53,7 +51,7 @@ $$
 
 Both inputs and outputs are finite.
 
-### 2D Discrete
+## 2D Discrete
 The expression for the two-dimensional discrete counterparts are shown below, where $f(x,y)$ is a digital image of size $M\times N$.
 
 $$
@@ -77,7 +75,7 @@ $$
 \end{align}
 $$
 
-### Spectrum & Phase Angle
+## Spectrum & Phase Angle
 Additional components related to the Fourier transform are listed below.
 
 $$
@@ -97,7 +95,7 @@ In image processing, the <span style = "color:lightblue">Fourier spectrum</span>
 > 
 > ![[image-processing-amp-phase-swap.png|600]]
 
-### Properties
+## Properties
 The properties of the Fourier transform are listed below.
 
 ![[image-processing-ft-properties.png|600]]
@@ -113,7 +111,7 @@ The linearity property is also important; otherwise, the Fourier spectrum would 
 > \end{gather}
 > $$
 
-## Filtering
+# Filtering
 
 As stated in [[#Fourier Transform#Properties|the previous section]], the convolution operation, which is often used in applying a filter, is computationally easier to perform in the frequency domain (i.e., after Fourier transform).
 
@@ -132,7 +130,7 @@ $$H_{hp}(u,v)=1-H_{lp}(u,v)$$
 > [!INFO]
 > Edges and other abrupt changes are associated with high frequency components.
 
-### Ideal
+## Ideal
 
 Depending on the filter type, the <span style = "color:lightblue">ideal filter</span> creates a sharp jump from $0$ to $1$ before or after a cutoff frequency.
 
@@ -160,9 +158,8 @@ The sharp discontinuity results in ripples appearing in the spatial image. [[#Fi
 > [!INFO]
 > Based on the [[#Fourier Transform#Spectrum Phase Angle|power spectrum]], most of the low frequency features and the image power are found within 10 pixels of a Fourier spectrum (86.9% of the image). The rest are high frequency features.
 
-### Gaussian
-
-The <span style = "color:lightblue">Gaussian low-pass filter</span> uses the Gaussian function to approximate the ideal low-pass filter.
+## Gaussian
+The <span style = "color:lightblue">Gaussian filter</span> uses the Gaussian function to approximate the ideal low-pass and high-pass filters.
 
 $$
 \begin{align}
@@ -173,8 +170,7 @@ $$
 
 ![[image-processing-freq-gaussian.png|600]]
 
-### Butterworth
-
+## Butterworth
 Like the Gaussian low-pass filter, the <span style = "color:lightblue">Butterworth low-pass filter</span> approximates the ideal low-pass filter. 
 
 $$
@@ -188,7 +184,7 @@ With greater values of $n$, it can easily approximate the ideal low-pass filter 
 
 ![[image-processing-freq-butterworth.png|600]]
 
-### High-frequency Emphasis
+## High-frequency Emphasis
 Similar to [[Spatial Filtering#Unsharp Masking|Unsharp masking]] in the spatial domain, <span style = "color:lightblue">high-frequency emphasis</span> can be performed in the frequency domain. The filter is applied in the frequency domain.
 
 $$g(x,y)=\mathcal{F}^{-1}\{\left[k_1+k_2H_{HP}(u,v)\right]F(u,v)\}$$
