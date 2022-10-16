@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Color Processing.md",
-                "mode": "preview",
+                "file": "Image Processing/Image Compression.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Color Processing.md",
+                "file": "Image Processing/Image Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Color Processing.md",
+                "file": "Image Processing/Image Compression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Color Processing.md"
+                "file": "Image Processing/Image Compression.md"
               }
             }
           },
@@ -186,11 +186,11 @@
   },
   "active": "e19c6a1b44062860",
   "lastOpenFiles": [
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Color Processing.md",
     "Image Processing/Frequency Filtering.md",
-    "Image Processing/Spatial Filtering.md",
     "Image Processing/Image Compression.md",
+    "Image Processing/Color Processing.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Spatial Filtering.md",
     "Data Visualization/Spatial Data.md",
     "Image Processing/Acquisition & Representation.md",
     "Data Visualization/Color.md",
