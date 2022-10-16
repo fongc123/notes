@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Compression.md"
+                "file": "Data Visualization/Spatial Data.md"
               }
             }
           },
@@ -174,8 +174,8 @@
   },
   "active": "9a466c9d035229ab",
   "lastOpenFiles": [
-    "Image Processing/Color Processing.md",
     "Image Processing/Image Compression.md",
+    "Image Processing/Color Processing.md",
     "Image Processing/Acquisition & Representation.md",
     "Data Visualization/Color.md",
     "img/operator-precedence.png",
