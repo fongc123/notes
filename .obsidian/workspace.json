@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Color.md",
+                "file": "Image Processing/Interpolation & Transformation.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Color.md",
+                "file": "Image Processing/Interpolation & Transformation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Color.md",
+                "file": "Image Processing/Interpolation & Transformation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Color.md"
+                "file": "Image Processing/Interpolation & Transformation.md"
               }
             }
           },
@@ -184,8 +183,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
+    "Data Visualization/Color.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Regression.md",
@@ -194,7 +194,6 @@
     "Image Processing/Image Compression.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Color Processing.md",
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Spatial Filtering.md"
+    "Image Processing/Image Restoration.md"
   ]
 }
