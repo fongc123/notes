@@ -58,7 +58,7 @@ $$
 		0 \vphantom{\frac{0}{0}} & \text{for } z < a
 	\end{dcases}
 	\newline
-	=a+\sqrt{\frac{\pi b}{4}} \newline
+	z=a+\sqrt{\frac{\pi b}{4}} \newline
 	\sigma^2=\frac{b(4-\pi)}{4}
 \end{gather}
 $$
@@ -74,12 +74,12 @@ The probability distribution function of the <span style = "color:lightblue">Erl
 $$
 \begin{gather}
 	p(z)=
-	\begin{cases}
-		\frac{a^bz^{b-1}}{(b-1)!}\exp(-az) & z\geq0 \newline
-		0 & z < 0
-	\end{cases}
+	\begin{dcases}
+		\frac{a^bz^{b-1}}{(b-1)!}\exp(-az) \vphantom{\frac{0}{0}} & \text{for }z\geq0 \newline
+		0 \vphantom{\frac{0}{0}} & \text{for } z < 0
+	\end{dcases}
 	\newline
-	\bar{z}=\frac{b}{a} \newline
+	z=\frac{b}{a} \newline
 	\sigma^2=\frac{b}{a^2}
 \end{gather}
 $$
