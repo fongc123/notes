@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Acquisition & Representation.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Acquisition & Representation.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Acquisition & Representation.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Acquisition & Representation.md"
+                "file": "Machine Learning/Feedforward Neural Networks.md"
               }
             }
           },
@@ -149,15 +149,15 @@
   },
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Image Processing/Image Processing Basics.md",
-    "Machine Learning/Classification.md",
+    "Image Processing/Color Processing.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md",
     "Image Processing/Interpolation & Transformation.md",
-    "Data Visualization/Color.md",
-    "Data Mining/Data Preprocessing.md",
-    "Machine Learning/Regression.md",
-    "Data Mining/Data Mining Basics.md",
-    "Machine Learning/ML Basics.md",
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Compression.md",
-    "Image Processing/Frequency Filtering.md"
+    "Image Processing/Acquisition & Representation.md",
+    "Image Processing/Image Processing Basics.md"
   ]
 }
