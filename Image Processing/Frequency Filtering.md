@@ -137,15 +137,15 @@ Depending on the filter type, the <span style = "color:lightblue">ideal filter</
 $$
 \begin{align}
 	\text{low-pass: }\quad & H(u,v) =
-	\begin{cases}
-		1 & \text{if } D(u,v)\leq D_0 \newline
-		0 & \text{if } D(u,v)> D_0
-	\end{cases} \newline\newline
+	\begin{dcases}
+		1 & \text{if } D(u,v)\leq D_0 \vphantom{\frac{0}{0}} \\
+		0 & \text{if } D(u,v)> D_0 \vphantom{\frac{0}{0}}
+	\end{dcases} \newline\newline
 	\text{high-pass: }\quad & H(u,v) =
-	\begin{cases}
-		0 & \text{if } D(u,v)\leq D_0 \newline
-		1 & \text{if } D(u,v)> D_0
-	\end{cases} \newline\newline
+	\begin{dcases}
+		0 & \text{if } D(u,v)\leq D_0 \vphantom{\frac{0}{0}} \\
+		1 & \text{if } D(u,v)> D_0 \vphantom{\frac{0}{0}}
+	\end{dcases} \newline\newline
 \end{align}
 $$
 $D_0$ is the <span style = "color:lightblue">cutoff frequency</span> and $D(u,v)$ is the distance between a point $(u,v)$ in the frequency domain and the center of the $P\times Q$ frequency rectangle.
