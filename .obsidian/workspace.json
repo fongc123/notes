@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
-                "mode": "source",
+                "file": "Data Visualization/Spatial Data.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Data Visualization/Spatial Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Restoration.md"
+                "file": "Data Visualization/Spatial Data.md"
               }
             }
           },
@@ -150,6 +149,7 @@
   },
   "active": "695d27bfc7434d4a",
   "lastOpenFiles": [
+    "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Intensity Transformations.md",
@@ -158,7 +158,6 @@
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/Spatial Data.md",
     "Image Processing/Spatial Filtering.md",
-    "Machine Learning/Classification.md",
-    "img/data-vis-dot-map.png"
+    "Machine Learning/Classification.md"
   ]
 }
