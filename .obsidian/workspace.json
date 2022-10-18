@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
-                "mode": "preview",
+                "file": "Image Processing/Image Restoration.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\\begin{cases}",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Image Processing/Image Restoration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Image Processing/Image Restoration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md"
+                "file": "Image Processing/Image Restoration.md"
               }
             }
           },
@@ -149,15 +150,15 @@
   },
   "active": "695d27bfc7434d4a",
   "lastOpenFiles": [
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Color Processing.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Data Visualization/Time Series.md",
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/Spatial Data.md",
     "Image Processing/Spatial Filtering.md",
     "Machine Learning/Classification.md",
-    "img/data-vis-dot-map.png",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Design Tasks.md",
-    "Data Visualization/Design Rules.md"
+    "img/data-vis-dot-map.png"
   ]
 }

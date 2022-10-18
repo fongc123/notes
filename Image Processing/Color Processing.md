@@ -36,15 +36,15 @@ In the equations above, $f$ and $g$ represent the colored input and output image
 $$
 \begin{align}
 	\text{cube-based region:}&\quad
-	s_i=\begin{cases}
-		0.5 & \text{if }r_j-a_j>W/2 \\
-		r_i & \text{otherwise}
-	\end{cases} \\\\
+	s_i=\begin{dcases}
+		0.5\vphantom{\frac{0}{0}} & \text{if }r_j-a_j>W/2 \\
+		r_i\vphantom{\frac{0}{0}} & \text{otherwise}
+	\end{dcases} \\\\
 	\text{sphere-based region:}&\quad 
-	s_i=\begin{cases}
-		0.5 & \text{if }\sum_{j=1}^{n}\left(r_j-a_j\right)^2>R_0^2 \\
-		r_i & \text{otherwise}
-	\end{cases}
+	s_i=\begin{dcases}
+		0.5\vphantom{\frac{0}{0}} & \text{if }\sum_{j=1}^{n}\left(r_j-a_j\right)^2>R_0^2\\
+		r_i\vphantom{\frac{0}{0}} & \text{otherwise}
+	\end{dcases}
 \end{align}
 $$
 
@@ -97,10 +97,10 @@ $$
 In <span style = "color:lightblue">color segmentation</span>, a threshold function based on **color information** in the hue and saturation components is implemented, where $\mathcal{c}_T$ represents the color to be segmented and $c(x,y)$ is the RGB vector at a pixel.
 
 $$
-g(x,y)=\begin{cases}
-	1 & \text{if }D(\mathcal{c}(x,y), \mathcal{c}_T)\leq T \\
-	0 & \text{if }D(\mathcal{c}(x,y), \mathcal{c}_T)>T
-\end{cases}
+g(x,y)=\begin{dcases}
+	1 & \text{if }D(\mathcal{c}(x,y), \mathcal{c}_T)\leq T \vphantom{\frac{0}{0}}\\
+	0 & \text{if }D(\mathcal{c}(x,y), \mathcal{c}_T)>T \vphantom{\frac{0}{0}}
+\end{dcases}
 $$
 
 The distance between the pixel's color and the target color is calculated, and only the pixels within the distance threshold are set to $1$.

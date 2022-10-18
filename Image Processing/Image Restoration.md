@@ -53,12 +53,12 @@ The probability distribution function of the <span style = "color:lightblue">Ray
 $$
 \begin{gather}
 	p(z)=
-	\begin{cases}
-		\frac{2}{b}(z-a)\exp\left[-\frac{(z-a)^2}{b}\right] & z\geq a \newline
-		0 & z < a
-	\end{cases}
+	\begin{dcases}
+		\frac{2}{b}(z-a)\exp\left[-\frac{(z-a)^2}{b}\right] & \text{for }z\geq a \vphantom{\frac{0}{0}} \\
+		0 \vphantom{\frac{0}{0}} & \text{for } z < a
+	\end{dcases}
 	\newline
-	\bar{z}=a+\sqrt{\frac{\pi b}{4}} \newline
+	=a+\sqrt{\frac{\pi b}{4}} \newline
 	\sigma^2=\frac{b(4-\pi)}{4}
 \end{gather}
 $$
