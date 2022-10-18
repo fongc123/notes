@@ -56,9 +56,8 @@ $$
 	\begin{dcases}
 		\frac{2}{b}(z-a)\exp\left[-\frac{(z-a)^2}{b}\right] & \text{for }z\geq a \vphantom{\frac{0}{0}} \\
 		0 \vphantom{\frac{0}{0}} & \text{for } z < a
-	\end{dcases}
-	\newline
-	z=a+\sqrt{\frac{\pi b}{4}} \newline
+	\end{dcases} \\
+	\bar{z}=a+\sqrt{\frac{\pi b}{4}} \newline
 	\sigma^2=\frac{b(4-\pi)}{4}
 \end{gather}
 $$
@@ -95,10 +94,10 @@ The probability distribution function of the <span style = "color:lightblue">exp
 $$
 \begin{gather}
 	p(z)=
-	\begin{cases}
-		a\exp(-az) & z\geq0 \newline
-		0 & z < 0
-	\end{cases}
+	\begin{dcases}
+		a\exp(-az) \vphantom{\frac{0}{0}} & \text{for } z\geq0 \newline
+		0 \vphantom{\frac{0}{0}} & \text{for } z < 0
+	\end{dcases}
 	\newline
 	\bar{z}=\frac{1}{a} \newline
 	\sigma^2=\frac{1}{a^2}
@@ -114,10 +113,10 @@ The probability distribution function of the <span style = "color:lightblue">uni
 $$
 \begin{gather}
 	p(z)=
-	\begin{cases}
-		\frac{1}{b-a} & a\leq z\leq b\newline
-		0 & \text{otherwise}
-	\end{cases}
+	\begin{dcases}
+		\frac{1}{b-a} \vphantom{\frac{0}{0}} & \text{for }a\leq z\leq b\newline
+		0 \vphantom{\frac{0}{0}} & \text{otherwise}
+	\end{dcases}
 	\newline
 	\bar{z}=\frac{a+b}{2} \newline
 	\sigma^2=\frac{(b-a)^2}{12}
@@ -132,11 +131,11 @@ The <span style = "color:lightblue">impulse random noise</span> is also referred
 
 $$
 p(z)=
-\begin{cases}
-	P_s & \text{for } z = 2^k - 1\newline
-	P_p & \text{for } z = 0 \newline
-	1-(P_s+P_p) & \text{for } z= V
-\end{cases}
+\begin{dcases}
+	P_s \vphantom{\frac{0}{0}}& \text{for } z = 2^k - 1\newline
+	P_p \vphantom{\frac{0}{0}}& \text{for } z = 0 \newline
+	1-(P_s+P_p) \vphantom{\frac{0}{0}}& \text{for } z= V
+\end{dcases}
 $$
 > [!INFO]
 > Pepper noise is represented by $P_p$, while salt noise is represented by $P_s$.
