@@ -208,16 +208,16 @@ The probability distribution function of the original image $p_r(r)$ and the tar
 $$
 \begin{align}
 	p_r(r) & =
-	\begin{cases}
-		\frac{2r}{(L-1)^2} & \text{for}\space 0\leq r\leq L-1\newline
-		0 & otherwise
-	\end{cases}
+	\begin{dcases}
+		\frac{2r}{(L-1)^2} & \text{for}\space 0\leq r\leq L-1 \\\
+		0 & \text{otherwise}
+	\end{dcases}
 	\newline
 	p_z(z) & =
-	\begin{cases}
-		\frac{3z^2}{(L-1)^3} & \text{for} \space 0 \leq z \leq L-1 \newline
-		0 & otherwise
-	\end{cases}
+	\begin{dcases}
+		\frac{3z^2}{(L-1)^3} & \text{for} \space 0 \leq z \leq L-1 \\\
+		0 & \text{otherwise}
+	\end{dcases}
 \end{align}
 \newline
 $$
