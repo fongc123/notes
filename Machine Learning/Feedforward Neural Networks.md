@@ -59,10 +59,17 @@ $$
 	\end{dcases}
 \end{gather}
 $$
-This activation function is not commonly used 
+This activation function is not commonly used due to its sharp change.
 
 ## Sigmoid
 The <span style = "color:lightblue">sigmoid function</span> is a smoothed and differentiable variant of the [[#Step Function|step function]].
 
 $$\sigma(x)=\frac{1}{1+\exp(-x)}$$
 
+## ReLU
+The <span style = "color:lightblue">rectified linear unit (ReLU)</span> is the most popular activation function for deep neural networks due to its **efficient computation** (*no exponential functions*) and **simple gradient**.
+
+$$f(x)=\max(0,x)$$
+
+
+The gradient is $1$ $
