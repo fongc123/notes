@@ -1,20 +1,23 @@
 <span style = "color:lightblue">Deep learning</span> is a subset of [[ML Basics|machine learning]] that uses <span style = "color:lightblue">artificial neural networks (ANN)</span> to make predictions by mimicking the process (*neuron interactions*) of the human brain. 
 
-Node types: input, output, hidden.
-
 In <span style = "color:lightblue">feedforward neural networks</span>, connections between nodes (i.e., neurons) do not form a cycle (i.e., <span style = "color:lightblue">forward propagation</span> $\rightarrow$ later neurons do not connect back to earlier neurons).
 
 Different nodes look for different **features** in the input data.
 - Nodes can be added to account for more features, creating a <span style = "color:lightblue">layer</span> of neurons (*wider*).
 - Layers can be added, where the previous layer will be the input to the new layer (*deeper*).
 
+Nodes and layers have different types: input, hidden, and output.
+
 Each neural network layer is a feature transformation, where increasingly complex features are learned in deeper layers.
 
 ![[ml-nn.png|400]]
 
-<span style = "color:lightblue">Neural architecture search (NAS)</span> is a technique for automating the design of ANNs.
+> [!INFO]
+> A <span style = "color:lightblue">perceptron</span> is a feedforward neural network with only <u>one</u> layer of adjustable weights. Here, there are no **hidden layers**, as the inputs connect directly the the output.
+> 
+> ![[ml-perceptron.png|450]]
 
-Fully connected networks
+<span style = "color:lightblue">Neural architecture search (NAS)</span> is a technique for automating the design of ANNs.
 
 # Mathematical Representation
 Similar to [[Classification#Binary Classification|what was mentioned in classification]], each neuron is represented by an [[#Activation Functions|activation function]] (e.g., the <span style = "color:lightblue">sigmoid function</span>) of inputs $x$, weights $w$, and biases $b$.
