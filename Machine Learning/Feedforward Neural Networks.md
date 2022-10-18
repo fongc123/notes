@@ -31,10 +31,36 @@ The output of a neuron is the input of the next neuron.
 > Linear regression and logistic regression (classification) are very similar. The only difference is that the final layer of regression won't be a sigmoid function (i.e., direct values will be predicted).
 
 # Perceptron
-A <span style = "color:lightblue">perceptron</span> is a feedforward neural network with only <u>one</u> layer of adjustable weights. Here, there are no **hidden layers**, as the inputs connect directly to the output. It is the simplest neural network.
+A <span style = "color:lightblue">perceptron</span> is a feedforward neural network with only <u>one</u> layer of adjustable weights. Here, there are no **hidden layers**, as the inputs connect directly to the output. It is the simplest type of neural network.
 
 ![[ml-perceptron.png|600]]
 
-With the step function as its 
+With the [[#Step Function|step function]] as its activation function, basic Boolean functions can be represented.
+
+> [!INFO]
+> The ability to represent basic Boolean functions (e.g., `AND`, `OR`, `NOT`) is favored, as *any* Boolean function can be represented with more layers of sufficiently many perceptrons (i.e.,  <span style = "color:lightblue">multi-layer perceptrons</span>).
+
+However, due to its simplicity, only functions that are **linearly separable** can be represented.
+
+![[ml-linear-separable.png|600]]
 
 # Activation Functions
+<span style = "color:lightblue">Activation functions</span> are additionally inserted in between neuron connections.
+
+## Step Function
+
+$$
+\begin{gather}
+	O=\text{step}\left(\sum_{j=1}^{n}w_jI_j-\theta\right),\text{ where} \\
+	\text{step}(x)=\begin{dcases}
+		0 \vphantom{frac{0}{0}} & \text{if }x<0 \\
+		1 \vphantom{frac{0}{0}} & \text{if }x\geq0
+	\end{dcases}
+\end{gather}
+$$
+
+## Sigmoid
+The <span style = "color:lightblue">sigmoid function</span> is a smoothed and differentiable variant of the [[#Step Function|step function]].
+
+$$\sigma(x)=\frac{1}{1+\exp(-x)}$$
+
