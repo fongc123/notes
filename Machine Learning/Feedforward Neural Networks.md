@@ -48,6 +48,7 @@ However, due to its simplicity, only functions that are **linearly separable** c
 <span style = "color:lightblue">Activation functions</span> are additionally inserted in between neuron connections.
 
 ## Step Function
+The <span style = "color:lightblue">step function</span> is an **abrupt** change from $0$ to $1$ when $x=0$.
 
 $$
 \begin{gather}
@@ -58,6 +59,7 @@ $$
 	\end{dcases}
 \end{gather}
 $$
+This activation function is not commonly used 
 
 ## Sigmoid
 The <span style = "color:lightblue">sigmoid function</span> is a smoothed and differentiable variant of the [[#Step Function|step function]].

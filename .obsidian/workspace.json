@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "634b25501b07b5ba",
+        "id": "be5cb55563664b75",
         "type": "tabs",
         "children": [
           {
-            "id": "695d27bfc7434d4a",
+            "id": "b5cadbf538bca0d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Machine Learning/Feedforward Neural Networks.md",
-<<<<<<< HEAD
-                "mode": "preview",
-=======
                 "mode": "source",
->>>>>>> 93d643ce602898169d12e9fc334f09454ac83062
                 "source": false
               }
             }
@@ -52,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\\begin{cases}",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -151,9 +147,8 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "695d27bfc7434d4a",
+  "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-<<<<<<< HEAD
     "Image Processing/Color Processing.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
@@ -164,17 +159,5 @@
     "Image Processing/Image Compression.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Image Processing Basics.md"
-=======
-    "Machine Learning/Regression.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Recurrent Neural Networks.md",
-    "Machine Learning/Classification.md",
-    "Data Visualization/Spatial Data.md",
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Color Processing.md",
-    "Image Processing/Intensity Transformations.md"
->>>>>>> 93d643ce602898169d12e9fc334f09454ac83062
   ]
 }
