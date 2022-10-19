@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md"
+                "file": "Machine Learning/Decision Tree.md"
               }
             }
           },
@@ -149,6 +149,7 @@
   },
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
+    "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
@@ -157,7 +158,6 @@
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Compression.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Image Processing Basics.md"
+    "Image Processing/Acquisition & Representation.md"
   ]
 }
