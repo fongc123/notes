@@ -33,13 +33,13 @@ $$
 ## Gradient Descent
 The <span style = "color:lightblue">gradient descent</span> method is an **iterative** first-order optimization **algorithm** that is used to find the local minimum or maximum or a function. Each iteration of the descent is referred to as an <span style = "color:lightblue">epoch</span>.
 1. Initial parameters start at a randomly initialized point.
-2. Find the gradient of the loss with respect to current parameters.
+2. Find the gradient of the loss with respect to current parameters (i.e., weights).
 3. Step in gradient direction to obtain new parameters (i.e., the `optimizer.step()` method).
 4. Iterate until minimum is reached.
 
-The mathematical expression is shown below.
+The mathematical expression is shown below for point $\mathcal{a}_n$, its neighbor point $\mathcal{a}_{n+1}$, and a specified learning rate $\gamma$.
 
-$$\mathcal{x}__$$
+$$\mathcal{a}_{n+1}=\mathcal{a}_n-\gamma\nabla{F(\mathcal{a}_n)}$$
 
 > [!INFO]
 > Most of the time, it is impossible to solve for the gradient of the loss function analytically.
@@ -48,6 +48,36 @@ When there are multiple features, this method finds the feature(s) that has the 
 
 > [!INFO]
 > **Gradient descent** is widely used by many machine learning and deep learning algorithms.
+
+## Backpropagation
+To obtain the gradients, <span style = "color:lightblue">backpropagation</span>, which is the chain rule from calculus, is performed.
+
+### Stochastic Gradient Descent (SGD)
+To optimize the gradient descent algorithm, <span style = "color:lightblue">stochastic gradient descent (SGD)</span> can be performed. Instead of updating the weights after the <u>entire</u> dataset has been traversed, the weights are updated after $n$ samples.
+
+> [!INFO]
+> This method is **stochastic** as $n$ is selected randomly.
+
+The algorithm will *generally descend*, but it will have more variation.
+
+In <span style = "color:lightblue">mini-batch gradient descent</span>, a fixed batch size $b$ (e.g., $128$) is used after each forward and backward pass.
+
+> [!WARNING]
+> $$\text{epoch}\neq\text{batch}$$
+> An <span style = "color:lightblue">epoch</span> is a complete pass of the *entire* dataset, while a <span style = "color:lightblue">batch</span> is a *partition* of the dataset.
+
+### Learning Rate
+The <span style = "color:lightblue">learning rate</span> (i.e., the $\gamma$ parameter) is the step size at each iteration while moving towards a minimum in a loss function.
+- A small learning rate requires many iterations before reaching the minimum point.
+- A large learning rate swiftly reaches it.
+
+Too large of a learning rate causes drastic updates, which lead to divergent behavior.
+
+> [!INFO]
+> The learning rate is modified by powers of $10$ (e.g., $0.1$, $0.01$, $0.001$, etc.).
+
+#### Adaptive Learning Rate
+The learning rate does not need to be fixed and can be optimized in each iteration. <span style = "color:lightblue">Adaptive learning rate methods</span> include Adam and RMSprop.
 
 ## Code Template
 A code template for creating a linear regression model is shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems as well.
@@ -81,7 +111,7 @@ for it in range(num_epochs):
 
 	# forward pass
 	outputs = model(inputs)
-	loss = criterion(outputs, targets)
+	loss = criterion(outputs, targets) # calculate loss
 
 	# keep losses so that it can be plotted later
 	losses.append(loss.item())
@@ -91,15 +121,4 @@ for it in range(num_epochs):
 	optimizer.step() # gradient descent step
 ```
 
-An <span style = "color:lightblue">epoch</span> (i.e., an iteration) is one complete pass of the training dataset through the algorithm.
-
 Internally, PyTorch accumulates gradients in each epoch. Thus, the parameter gradients must be set to zero before starting the next epoch with `optimizer.zero_grad()`.
-
-The <span style = "color:lightblue">learning rate</span> is the step size at each iteration while moving towards a minimum in a loss function.
-- A small learning rate requires many iterations before reaching the minimum point.
-- A large learning rate swiftly reaches it.
-
-Too large of a learning rate causes drastic updates, which lead to divergent behavior.
-
-> [!INFO]
-> The learning rate is modified by powers of $10$ (e.g., $0.1$, $0.01$, $0.001$, etc.).
