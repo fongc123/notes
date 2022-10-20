@@ -1,6 +1,6 @@
 <span style = "color:lightblue">Deep learning</span> is a subset of [[ML Basics|machine learning]] that uses <span style = "color:lightblue">artificial neural networks (ANN)</span> to make predictions by simulating the process (*neuron interactions*) of the human brain. 
 
-In <span style = "color:lightblue">feedforward neural networks</span>, connections between nodes (i.e., neurons) do not form a cycle (i.e., <span style = "color:lightblue">forward propagation</span> $\rightarrow$ later neurons do not connect back to earlier neurons).
+In <span style = "color:lightblue">feedforward neural networks</span>, connections between nodes (i.e., neurons) do not form a cycle (i.e., <span style = "color:lightblue">forward propagation</span> $\rightarrow$ later neurons do not connect back to earlier neurons); however, most neural network architectures are feedforward.
 
 Different nodes look for different **features** in the input data.
 - Nodes can be added to account for more features, creating a <span style = "color:lightblue">layer</span> of neurons (*wider*).

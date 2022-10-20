@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
-                "mode": "preview",
+                "file": "Machine Learning/Regression.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Machine Learning/Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md",
+                "file": "Machine Learning/Regression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Spatial Filtering.md"
+                "file": "Machine Learning/Regression.md"
               }
             }
           },
@@ -149,15 +149,15 @@
   },
   "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Image Processing/Intensity Transformations.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Image Processing Basics.md",
+    "Machine Learning/Classification.md",
+    "Machine Learning/Regression.md",
     "Machine Learning/Decision Tree.md",
+    "Machine Learning/ML Basics.md",
+    "Machine Learning/Recurrent Neural Networks.md",
+    "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
-    "Image Processing/Color Processing.md",
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Frequency Filtering.md",
     "Image Processing/Spatial Filtering.md",
-    "Image Processing/Interpolation & Transformation.md"
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Acquisition & Representation.md"
   ]
 }
