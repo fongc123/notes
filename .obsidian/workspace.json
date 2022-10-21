@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Regression.md",
+                "file": "Image Processing/Image Compression.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md",
+                "file": "Image Processing/Image Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md",
+                "file": "Image Processing/Image Compression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md"
+                "file": "Image Processing/Image Compression.md"
               }
             }
           },
@@ -160,12 +159,12 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "8bf582dc542f1642",
+  "active": "b5cadbf538bca0d2",
   "lastOpenFiles": [
-    "Image Processing/Image Compression.md",
     "Machine Learning/Regression.md",
-    "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
+    "Image Processing/Image Compression.md",
+    "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",

@@ -6,7 +6,7 @@
 > **Wikipedia**: "Data compression, or source coding, is the process of encoding information <span style = "color:mistyrose">using fewer bits</span> than an unencoded representation would use through the use of specific encoding schemes."
 
 > [!WARNING]
-> **Data** and **information** are different. Data are the means by which information is conveyed.
+> **Data** and **information** are different. Data is the means by which information is conveyed.
 
 The <span style = "color:lightblue">relative data redundancy</span> $R$ measures the amount of redundant data between two representations, where $C$ is the compression ratio, $b$ is the number of bits of the uncompressed image, and $b'$ is the number of bits of the compressed representation.
 
@@ -17,3 +17,8 @@ $$
 \end{gather}
 $$
 
+The goal of compression is to **remove redundancy and reduce irrelevance**. Redundancy can be categorized into **coding redundancy**, **spatial redundancy**, and **irrelevant information**.
+- <span style = "color:lightblue">irrelevance or perceptual redundancy</span>: not all visual information is perceived by the [[Acquisition & Representation#The Eye|eye]]
+- <span style = "color:lightblue">redundancy</span>: unnecessary representation
+
+# Coding Redundancy

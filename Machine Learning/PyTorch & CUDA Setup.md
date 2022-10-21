@@ -16,6 +16,49 @@ PyTorch can be installed on Windows distributions. **It is recommended that the 
 GPU acceleration works by heavy parallelization of computation. There are many cores in a GPU, but each core is not powerful. The code example below demonstrates the difference in computational speeds for increasingly parallel tasks.
 
 ```python
+import torch
+import time
 
+ARR_SIZE = 4
+
+print(torch.cuda.is_available()) # True
+
+# specify the GPU device
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+for i in range(0, 5):
+	# calculate size as power of 10
+	n = 4 * (10 ** i)
+
+	# calculate CPU time
+	cpu_start = time.time()
+	cpu_array = torch.ones(n, n)
+	for _ in range(1000):
+		cpu_array += cpu_array
+	print("CPU Time ({}): {}".format(n, time.time() - cpu_start))
+
+	# calculate GPU time
+	gpu_start = time.time()
+	gpu_array = torch.ones(n, n).to(device) # send to GPU
+	for _ in range(1000):
+		gpu_array += gpu_array
+	print("GPU Time ({}): {}".format(n, time.time() - gpu_start))
 ```
 
+The output of the above code block is shown below.
+
+```text
+CPU Time (4): 0.003499746322631836
+GPU Time (4): 0.00500035285949707
+
+CPU Time (40): 0.0015006065368652344
+GPU Time (40): 0.004498958587646484
+
+CPU Time (400): 0.006999492645263672
+GPU Time (400): 0.005000591278076172
+
+CPU Time (4000): 4.817999839782715
+GPU Time (4000): 0.021498680114746094
+```
+
+Thus, parallel computations are faster on the GPU.
