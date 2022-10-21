@@ -26,11 +26,22 @@ The goal of compression is to **remove redundancy and reduce irrelevance**. Redu
 
 $$I(E)=\log_b{\frac{1}{P(E)}}=-\log_b{P(E)}$$
 
-In the above equation, a random event $E$ with probability $P(E)$ contains $I(E)$ units of information, where $b$ is the unit used to measure information ($m$ for m-ary unit, $2$ for bit).
+A random event $E$ with probability $P(E)$ contains $I(E)$ units of information, where $b$ is the unit used to measure information ($b=2$ for bit).
 - $P(E)=1\rightarrow I(E)=0$: no information is attributed to the event, as it occurs all the time
 - $P(E)=0.5\rightarrow I(E)=1$: information is $1$ bit (i.e., one of two equally likely outcomes)
 
+$$\hat{H}=-\sum_{k=0}^{L-1}{p_r(r_k)\log_2{p_r(r_k)}}$$
 
+The <span style = "color:lightblue">entropy</span> is the average information per intensity source output. A <span style = "color:lightblue">zero-memory source</span> consists of random events (i.e., <span style = "color:lightblue">source symbols</span>) that are [[Data Preprocessing#Probability & Independence|statistically independent]].
+
+> [!INFO]
+> **Shannon's first theorem:** Given that the pixels are statistically independent, it is not possible to code the intensity values of the image source with fewer bits than $\bar{H}$ bits per pixel.
+
+For example, the entropy in [[#Coding#Example|this example]] is calculated.
+
+$$\bar{H}=-\left[0.25\log_20.25+0.47\log_20.47+0.25\log_20.25+0.03\log_20.03\right]\approx1.66\space\text{bits per pixel}$$
+
+Thus, it is not possible to code the intensity values of the image sources with less than $1.66$ bits per pixel.
 
 ## Coding
 In <span style = "color:lightblue">coding redundancy</span>, a simpler code is used to represent the data. A <span style = "color:lightblue">code</span> is a system of symbols used to represent information or a set of events.
