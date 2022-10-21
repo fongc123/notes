@@ -12,3 +12,10 @@ PyTorch can be installed on Windows distributions. **It is recommended that the 
 3. Download the CUDA Toolkit with the **correct version**. Navigate to [this link](https://developer.nvidia.com/cuda-toolkit-archive) for an archive of CUDA versions.
 4. Install the required packages into an environment as given by the PyTorch website: `conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge`
 
+# Speed Demonstration
+GPU acceleration works by heavy parallelization of computation. There are many cores in a GPU, but each core is not powerful. The code example below demonstrates the difference in computational speeds for increasingly parallel tasks.
+
+```python
+
+```
+

@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Regression.md",
-                "mode": "preview",
+                "file": "Machine Learning/PyTorch & CUDA Setup.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Regression.md",
+                "file": "Machine Learning/PyTorch & CUDA Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Regression.md",
+                "file": "Machine Learning/PyTorch & CUDA Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Regression.md"
+                "file": "Machine Learning/PyTorch & CUDA Setup.md"
               }
             }
           },
@@ -162,15 +162,15 @@
   },
   "active": "8bf582dc542f1642",
   "lastOpenFiles": [
+    "Image Processing/Image Compression.md",
+    "Machine Learning/Regression.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
-    "Machine Learning/Regression.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/ML Basics.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Machine Learning/Convolutional Neural Networks.md",
-    "Image Processing/Spatial Filtering.md",
-    "Image Processing/Intensity Transformations.md"
+    "Image Processing/Spatial Filtering.md"
   ]
 }
