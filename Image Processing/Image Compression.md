@@ -26,8 +26,25 @@ In <span style = "color:lightblue">coding redundancy</span>, a simpler code is u
 - **natural $m$-bit fixed-length encoding**: binary code where each piece of information is assigned one of $2^m$ codes from an $m$-bit binary counting sequence
 - **variable-length encoding**: assign bits to more probable intensity values with fewer bits
 
-The expression for the average number of bits used to encode the intensities is shown below, where $m=8$ for a standard $8$-bit binary counting sequence.
+The expression for the average number of bits used to encode the intensities is shown below, where $m=8$ for a standard $8$-bit binary counting sequence and $l$ is the number of bits used to represent an intensity value.
 $$L_{avg}=\sum_{k=0}^{m-1}l_1(r_k)p_r(r_k)$$
 ## Example
-The intensity distribution and the corresponding image are shown below.
+The intensity distribution of an image is shown below.
 
+![[image-processing-compression-coding.png|600]]
+
+The natural $8$-bit encoding can represent up to $256$ intensity values, but the image only has four distinct intensity values.
+
+$$
+\begin{align}
+L_{avg}=&0.25(2)+0.47(1)+0.25(3)+0.03(3) \\
+L_{avg}=&1.81\space\text{bits}
+\end{align}
+$$
+By using only a maximum of $3$ bits, the 
+
+$$
+\begin{gather}
+	
+\end{gather}
+$$
