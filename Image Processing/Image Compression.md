@@ -27,7 +27,7 @@ The goal of compression is to **remove redundancy and reduce irrelevance**. Redu
 $$I(E)=\log_b{\frac{1}{P(E)}}=-\log_b{P(E)}$$
 
 In the above equation, a random event $E$ with probability $P(E)$ contains $I(E)$ units of information.
-- 
+- $b$: 
 
 ## Coding
 In <span style = "color:lightblue">coding redundancy</span>, a simpler code is used to represent the data. A <span style = "color:lightblue">code</span> is a system of symbols used to represent information or a set of events.
