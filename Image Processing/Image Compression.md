@@ -22,3 +22,7 @@ The goal of compression is to **remove redundancy and reduce irrelevance**. Redu
 - <span style = "color:lightblue">redundancy</span>: unnecessary representation
 
 # Coding Redundancy
+In <span style = "color:lightblue">coding redundancy</span>, a simpler code is used to represent the data. A <span style = "color:lightblue">code</span> is a system of symbols used to represent information or a set of events.
+- **natural $m$-bit fixed-length encoding**: binary code where each piece of information is assigned one of $2^m$ codes from an $m$-bit binary counting sequence
+- **variable-length encoding**: assign bits to more probable intensity values with fewer bits
+
