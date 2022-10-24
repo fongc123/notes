@@ -98,3 +98,11 @@ $$
 	C&=128:1
 \end{align}
 $$
+# Model
+The source encoder and decoder.
+
+# Algorithms
+
+## Huffman
+
+## Lossy Predictive
