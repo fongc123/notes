@@ -46,7 +46,7 @@ Thus, it is not possible to code the intensity values of the image sources with 
 ## Coding
 In <span style = "color:lightblue">coding redundancy</span>, a simpler code is used to represent the data. A <span style = "color:lightblue">code</span> is a system of symbols used to represent information or a set of events.
 - **natural $m$-bit fixed-length encoding**: binary code where each piece of information is assigned one of $2^m$ codes from an $m$-bit binary counting sequence
-- **variable-length encoding**: assign bits to more probable intensity values with fewer bits
+- **variable-length encoding**: assign varying number of bits to intensity levels based on their probability (e.g., less bits to more probable intensities)
 
 The expression for the average number of bits used to encode the intensities is shown below, where $m=8$ for a standard $8$-bit binary counting sequence and $l$ is the number of bits used to represent an intensity value.
 $$L_{avg}=\sum_{k=0}^{m-1}l_1(r_k)p_r(r_k)$$
