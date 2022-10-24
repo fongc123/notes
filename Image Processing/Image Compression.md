@@ -32,7 +32,7 @@ A random event $E$ with probability $P(E)$ contains $I(E)$ units of information,
 
 $$\hat{H}=-\sum_{k=0}^{L-1}{p_r(r_k)\log_2{p_r(r_k)}}$$
 
-The <span style = "color:lightblue">entropy</span> is the average information per intensity source output. A <span style = "color:lightblue">zero-memory source</span> consists of random events (i.e., <span style = "color:lightblue">source symbols</span>) that are [[Data Preprocessing#Probability & Independence|statistically independent]].
+The <span style = "color:lightblue">entropy</span> $\hat{H}$ is the average information per intensity source output. A <span style = "color:lightblue">zero-memory source</span> consists of random events (i.e., <span style = "color:lightblue">source symbols</span>) that are [[Data Preprocessing#Probability & Independence|statistically independent]].
 
 > [!INFO]
 > **Shannon's first theorem:** Given that the pixels are statistically independent, it is not possible to code the intensity values of the image source with fewer bits than $\bar{H}$ bits per pixel.
