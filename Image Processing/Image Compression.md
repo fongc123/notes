@@ -99,30 +99,20 @@ $$
 \end{align}
 $$
 # Model
-The source encoder and decoder.
+The image compression model consists of the <span style = "color:lightblue">source encoder</span>, which reduces or eliminates any coding, interpixel, or psychovisual (i.e., perceptual) redundancies, and the <span style = "color:lightblue">decoder</span>, which performs the inverse operations of the encoder.
+- <span style = "color:lightblue">mapper</span>: reversible process that transforms input data to reduce interpixel redundancies (e.g., [[#Spatial|run-length coding]])
+- <span style = "color:lightblue">quantizer</span>: **irreversible** process that reduces the accuracy of the mapper to reduce perceptual redundancies (i.e., account for fewer pixels)
+- <span style = "color:lightblue">symbol coder</span>: reversible process that creates a fixed-length or variable-length code to represent the output of the quantizer
 
-```tikz
-\documentclass{article}
-\usepackage{tikz}
-\usetikzlibrary{shapes, arrows, calc, positioning}
-\begin{document}
-\pagestyle{empty}
-\tikzstyle{block} = [
-	rectangle,
-	draw,
-	text width = 6cm,
-	text centered,
-	minimum height = 3em
-]
-\tikzstyle{line} = [draw, -latex']
-\begin{tikzpicture}[node distance = 1cm, line width = 1pt]
-	\node [block, rounded corners] (a) {Start};
-	\node [block, below = of a] (b) {Hidden};
+> [!INFO]
+> Normally, a [[#Coding|variable-length code]] is used to represent **mapped** and **quantized** outputs.
 
-	\draw[line] (a) -- (b);
-\end{tikzpicture}
-\end{document}
-```
+![[image-processing-compression-model.png|600]]
+
+> [!INFO]
+> Lossless and lossy systems produce different compressed images $\hat{f}$ of the original image $f$.
+> - lossless system: $\hat{f}(x,y)=f(x,y)$
+> - lossy system: $\hat{f}(x,y)\neq f(x,y)$
 
 # Algorithms
 

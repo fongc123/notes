@@ -21,6 +21,9 @@
     "Pseudocolor",
     "pseudocolor",
     "thresholding",
-    "CUDA"
+    "CUDA",
+    "interpixel",
+    "psychovisual",
+    "quantizer"
   ]
 }
