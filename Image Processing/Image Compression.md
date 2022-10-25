@@ -125,7 +125,7 @@ Since natural binary encoding of intensity values creates coding redundancy, <sp
 > [!INFO]
 > Huffman encoding is used in JPEG and MPEG file formats.
 
-## Encoding
+### Encoding
 
 The steps of the **encoding** algorithm are detailed below.
 1. Order the probabilities of each code.
@@ -143,7 +143,7 @@ Lastly, the figure below demonstrates step 4.
 
 Thus, codes that represent intensities with high probabilities are assigned smaller bits (e.g., `1` or `00`) and codes that represent intensities with low probabilities are assigned larger bits (e.g., `01010` or `01011`).
 
-## Decoding
+### Decoding
 A string of Huffman encoded symbols can be decoded simply by examining the individual symbols of the string from left to right. Due to the [[#Encoding|encoding process]], there won't be any duplicates. A decoding example of the [[#Encoding|above]] figures is shown.
 
 $$
@@ -153,9 +153,44 @@ $$
 \end{align}
 $$
 
-Huffman's procedure creates the optimal code for a set of symbols and probabilities. After code creation, coding and error-free decoding are accomplished by a simple table lookup.
+Huffman's procedure creates the optimal code for a set of symbols and probabilities. After code creation, error-free coding and decoding are accomplished by a simple table lookup.
 
 > [!INFO]
 > In practice, a pre-computed Huffman coding table is used (e.g., JPEG and MPEG).
 
 ## Lossless Predictive
+Since image pixels are often correlated (i.e., similar with each other), the prediction of consecutive pixels can lower the bit rate.
+
+<span style = "color:lightblue">Lossless predictive coding</span> reduces the interpixel (i.e., [[#Spatial|spatial and temporal]]) redundancies by **coding only the new information in each pixel**.
+
+$$\hat{f}(n)=\text{round}\left[\sum_{i=1}^{m}{a_if(n-i)}\right]$$
+
+Normally, prediction is represented as a **linear combination** of $m$ previous samples.
+- $\hat{f}(n)$: predicted intensity value
+- $f(n)$: original intensity value at $n$
+- $\text{round}$: denotes rounding (i.e., similarity) operation
+- $m$: number of previous pixels
+- $a_i$: coefficients
+
+![[image-processing-lossless-predictive.png|600]]
+
+The encoder consists of a <span style = "color:lightblue">predictor</span>, where only the error $e(n)$ between the original and the predicted value is encoded using variable-length encoding.
+
+$$e(n)=f(n)-\hat{f}(n)$$
+
+The decoder consists of the same predictor used for encoding, where the image value is obtained by adding the error value to the predicted value.
+
+### Example
+A view of the Earth from an orbiting space shuttle, the prediction error image, and their corresponding intensity histograms are shown below.
+
+![[image-processing-lossless-predictive-ex.png|600]]
+
+The predictions were generated from the equation below.
+
+$$\hat{f}(x,y)=\text{round}\left[\alpha f(x,y-1)\right]$$
+
+By only encoding the prediction error, the entropy is reduced from $7.25$ to $3.99$.
+
+## Lossy Predictive
+In addition to the predictive model in [[#Lossless Predictive|lossless predictive coding]], we add quantization to map values to a limited range.
+
