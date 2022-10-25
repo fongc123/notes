@@ -101,6 +101,29 @@ $$
 # Model
 The source encoder and decoder.
 
+```tikz
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, calc, positioning}
+\begin{document}
+\pagestyle{empty}
+\tikzstyle{block} = [
+	rectangle,
+	draw,
+	text width = 6cm,
+	text centered,
+	minimum height = 3em
+]
+\tikzstyle{line} = [draw, -latex']
+\begin{tikzpicture}[node distance = 1cm, line width = 1pt]
+	\node [block, rounded corners] (a) {Start};
+	\node [block, below = of a] (b) {Hidden};
+
+	\draw[line] (a) -- (b);
+\end{tikzpicture}
+\end{document}
+```
+
 # Algorithms
 
 ## Huffman
