@@ -106,6 +106,11 @@ $$
 The paper can be found [here](https://arxiv.org/abs/1804.11237).
 
 ## Softmax
-The <span style = "color:lightblue">Softmax activation function</span> 
+The <span style = "color:lightblue">Softmax activation function</span> maps inputs between $0$ and $1$, where the sum of $K$ possible outputs is equal to $1$.
 
-It is *technically* an activation function, but it is not meant for hidden layers. Instead, it is used as the output of a model.
+$$\text{Softmax}(z)_i=\dfrac{\exp{(z_i)}}{\sum_{j=1}^{K}{\exp{(z_j)}}}$$
+
+It is *technically* an activation function, but it is not meant for hidden layers. Instead, it is used as the output of a model (e.g., **probabilities** of classes in <span style = "color:lightblue">multi-class classification</span>).
+
+> [!INFO]
+> 
