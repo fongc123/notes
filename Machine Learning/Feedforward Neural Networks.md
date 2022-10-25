@@ -59,12 +59,21 @@ $$
 	\end{dcases}
 \end{gather}
 $$
-This activation function is not commonly used due to its sharp change.
+This activation function is not commonly used as it cannot be differentiated.
 
 ## Sigmoid
 The <span style = "color:lightblue">sigmoid function</span> is a smoothed and differentiable variant of the [[#Step Function|step function]].
 
 $$\sigma(x)=\frac{1}{1+\exp(-x)}$$
+
+It mimics the biological process of the neuron, as output values are mapped between $0$ and $1$. However, its output is centered around $0.5$. This is undesirable, as outputs centered around $0$ are preferred.
+
+## Hyperbolic Tangent
+The <span style = "color:lightblue">hyperbolic tangent (tanh)</span> creates the same shape as the [[#Sigmoid|sigmoid function]], but ranges from $-1$ and $1$.
+
+$$\tanh(a)=\frac{\exp{(2a)}-1}{\exp{(2a)}+1}$$
+
+Both the **hyperbolic tangent** and **sigmoid** activation functions suffer from the <span style = "color:lightblue">vanishing gradient problem</span>, as the gradients of their outputs are small. When multiplied together in each layer, the gradients become even smaller. Thus, layers close to the inputs were trained very slowly, preventing earlier neural networks from having many layers.
 
 ## ReLU
 The <span style = "color:lightblue">rectified linear unit (ReLU)</span> is the most popular activation function for deep neural networks due to its **efficient computation** (*no exponential functions*) and **simple gradient**.
@@ -72,3 +81,5 @@ The <span style = "color:lightblue">rectified linear unit (ReLU)</span> is the m
 - if $x\leq 0$, gradient is $0$
 
 $$f(x)=\max(0,x)$$
+
+Alternatively, the <span style = "color:lightblue">leaky rectified linear unit (LReLU)</span> accounts for the zero gradient found for inputs less than $0$, where those values now have a small slope instead of a flat slope.

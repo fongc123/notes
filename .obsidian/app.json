@@ -24,6 +24,7 @@
     "CUDA",
     "interpixel",
     "psychovisual",
-    "quantizer"
+    "quantizer",
+    "ReLU"
   ]
 }
