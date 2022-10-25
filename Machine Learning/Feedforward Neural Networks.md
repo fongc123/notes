@@ -68,6 +68,9 @@ $$\sigma(x)=\frac{1}{1+\exp(-x)}$$
 
 It mimics the biological process of the neuron, as output values are mapped between $0$ and $1$. However, its output is centered around $0.5$. This is undesirable, as outputs centered around $0$ are preferred.
 
+> [!INFO]
+> The sigmoid activation function is still useful for the output of a binary classification model (i.e., probability between two outcomes). The activation functions of the hidden layers should be changed to some other function (e.g., [[#Softmax]]).
+
 ## Hyperbolic Tangent
 The <span style = "color:lightblue">hyperbolic tangent (tanh)</span> creates the same shape as the [[#Sigmoid|sigmoid function]], but ranges from $-1$ and $1$.
 
@@ -78,8 +81,31 @@ Both the **hyperbolic tangent** and **sigmoid** activation functions suffer from
 ## ReLU
 The <span style = "color:lightblue">rectified linear unit (ReLU)</span> is the most popular activation function for deep neural networks due to its **efficient computation** (*no exponential functions*) and **simple gradient**.
 - if $x>0$, gradient is $1$
-- if $x\leq 0$, gradient is $0$
+- if $x\leq 0$, gradient is $0$ (creates <span style = "color:lightblue">dead neurons</span>)
 
 $$f(x)=\max(0,x)$$
 
-Alternatively, the <span style = "color:lightblue">leaky rectified linear unit (LReLU)</span> accounts for the zero gradient found for inputs less than $0$, where those values now have a small slope instead of a flat slope.
+Alternatively, the <span style = "color:lightblue">leaky rectified linear unit (LReLU)</span> accounts for the zero gradient found for inputs less than $0$, where those values now have a small slope instead of a flat slope. Other alternatives include the <span style = "color:lightblue">exponential linear unit (ELU)</span>.
+
+## Softplus
+The <span style = "color:lightblue">Softplus activation function</span> is similar to the [[#ReLU]] activation function but is differentiable at the origin.
+
+$$\text{Softplus}(x)=\frac{1}{\beta}\log(1+\exp(\beta \cdot x)$$
+
+The combination of logarithmic and exponential functions approximate a line for large values.
+
+## Bionodal Root Unit
+The <span style = "color:lightblue">bionodal root unit</span> improves upon the [[#ReLU]] activation function by taking inspiration from the action potential of a biological neuron.
+
+$$f(z)=\begin{dcases}
+	(r^2z+1)^\frac{1}{r}-\frac{1}{r} \vphantom{\frac{0}{0}} &\text{if}\space z\geq0 \\
+	\exp{(rz)}-\frac{1}{r} \vphantom{\frac{0}{0}} & \text{if}\space z<0
+\end{dcases}
+$$
+
+The paper can be found [here](https://arxiv.org/abs/1804.11237).
+
+## Softmax
+The <span style = "color:lightblue">Softmax activation function</span> 
+
+It is *technically* an activation function, but it is not meant for hidden layers. Instead, it is used as the output of a model.

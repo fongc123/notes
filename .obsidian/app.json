@@ -25,6 +25,10 @@
     "interpixel",
     "psychovisual",
     "quantizer",
-    "ReLU"
+    "ReLU",
+    "Bionodal",
+    "Softplus",
+    "bionodal",
+    "Softmax"
   ]
 }

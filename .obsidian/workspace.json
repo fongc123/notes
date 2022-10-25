@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "dcases",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -150,14 +150,14 @@
   "active": "8bf582dc542f1642",
   "lastOpenFiles": [
     "Machine Learning/Convolutional Neural Networks.md",
+    "Image Processing/Color Processing.md",
+    "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Image Compression.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "img/operator-precedence.png",
     "Machine Learning/Regression.md",
-    "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Decision Tree.md",
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Recurrent Neural Networks.md"
+    "Machine Learning/ML Basics.md"
   ]
 }
