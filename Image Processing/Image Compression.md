@@ -100,9 +100,11 @@ $$
 $$
 # Model
 The image compression model consists of the <span style = "color:lightblue">source encoder</span>, which reduces or eliminates any coding, interpixel, or psychovisual (i.e., perceptual) redundancies, and the <span style = "color:lightblue">decoder</span>, which performs the inverse operations of the encoder.
-- <span style = "color:lightblue">mapper</span>: reversible process that transforms input data to reduce interpixel redundancies (e.g., [[#Spatial|run-length coding]])
+- <span style = "color:lightblue">mapper</span>: reversible process that transforms input image data to reduce interpixel redundancies (e.g., [[#Spatial|run-length coding]])
 - <span style = "color:lightblue">quantizer</span>: **irreversible** process that reduces the accuracy of the mapper to reduce perceptual redundancies (i.e., account for fewer pixels)
 - <span style = "color:lightblue">symbol coder</span>: reversible process that creates a fixed-length or variable-length code to represent the output of the quantizer
+
+The output of the encoder is typically **non-visual**. Thus, the decoder must retrieve the image from the code.
 
 > [!INFO]
 > Normally, a [[#Coding|variable-length code]] is used to represent **mapped** and **quantized** outputs.
@@ -115,7 +117,45 @@ The image compression model consists of the <span style = "color:lightblue">sour
 > - lossy system: $\hat{f}(x,y)\neq f(x,y)$
 
 # Algorithms
+The following compression algorithms pertain to the processes of the [[#Model|symbol coder and decoder]].
 
 ## Huffman
+Since natural binary encoding of intensity values creates coding redundancy, <span style = "color:lightblue">Huffman encoding</span> performs **variable-length coding** to assign the shortest codes to the most probable intensity values.
 
-## Lossy Predictive
+> [!INFO]
+> Huffman encoding is used in JPEG and MPEG file formats.
+
+## Encoding
+
+The steps of the **encoding** algorithm are detailed below.
+1. Order the probabilities of each code.
+2. Combine the two codes with the lowest probabilities into a single symbol.
+3. Repeat **Step 2** until there are two codes left.
+4. Code each reduced source starting with the smallest source and ending with the original source, where the codes in each source reduction step use an additional bit.
+
+The figure below demonstrates steps 1-3.
+
+![[image-processing-huffman-1.png|600]]
+
+Lastly, the figure below demonstrates step 4.
+
+![[image-processing-huffman-2.png|600]]
+
+Thus, codes that represent intensities with high probabilities are assigned smaller bits (e.g., `1` or `00`) and codes that represent intensities with low probabilities are assigned larger bits (e.g., `01010` or `01011`).
+
+## Decoding
+A string of Huffman encoded symbols can be decoded simply by examining the individual symbols of the string from left to right. Due to the [[#Encoding|encoding process]], there won't be any duplicates. A decoding example of the [[#Encoding|above]] figures is shown.
+
+$$
+\begin{align}
+\text{Huffman code:}&\space\underbracket{01010}_{a_3}\underbracket{011}_{a_1}\underbracket{1}_{a_2}\underbracket{1}_{a_2}\underbracket{00}_{a_6} \\\\
+\text{Decoded:}&\space a_3\space a_1\space a_2\space a_2 \space a_6
+\end{align}
+$$
+
+Huffman's procedure creates the optimal code for a set of symbols and probabilities. After code creation, coding and error-free decoding are accomplished by a simple table lookup.
+
+> [!INFO]
+> In practice, a pre-computed Huffman coding table is used (e.g., JPEG and MPEG).
+
+## Lossless Predictive
