@@ -113,4 +113,6 @@ $$\text{Softmax}(z)_i=\dfrac{\exp{(z_i)}}{\sum_{j=1}^{K}{\exp{(z_j)}}}$$
 It is *technically* an activation function, but it is not meant for hidden layers. Instead, it is used as the output of a model (e.g., **probabilities** of classes in <span style = "color:lightblue">multi-class classification</span>).
 
 > [!INFO]
+> In PyTorch, the `nn.CrossEntropyLoss()` class already incorporates the Softmax activation function, regardless of whether the model is intended for binary classification or multi-class classification.
 > 
+> Alternatively, `nn.NLLLoss()` is the standalone cross entropy loss.
