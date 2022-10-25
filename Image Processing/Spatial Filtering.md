@@ -86,6 +86,9 @@ A <span style = "color:lightblue">box filter</span> accomplishes image smoothing
 
 $$R=\frac{1}{9}\sum_{i=1}^{9}{z_i}$$
 
+> [!INFO]
+> The $9$ in the above equation represents the sum of the weights in the kernel (i.e., $\text{nine ones }\rightarrow9$).
+
 ![[image-processing-box-filter.png|600]]
 
 The complete equation of the box filter is shown below, where pixel values are averaged over a larger region.

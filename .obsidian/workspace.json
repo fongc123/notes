@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Image Processing/Spatial Filtering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Compression.md"
+                "file": "Image Processing/Spatial Filtering.md"
               }
             }
           },
@@ -149,15 +149,15 @@
   },
   "active": "8bf582dc542f1642",
   "lastOpenFiles": [
-    "Machine Learning/PyTorch & CUDA Setup.md",
-    "img/operator-precedence.png",
-    "Image Processing/Image Compression.md",
-    "Machine Learning/Regression.md",
-    "Machine Learning/Feedforward Neural Networks.md",
+    "Image Processing/Acquisition & Representation.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Image Processing Basics.md",
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Machine Learning/Classification.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/ML Basics.md",
     "Machine Learning/Recurrent Neural Networks.md",
-    "Machine Learning/Convolutional Neural Networks.md"
+    "Machine Learning/ML Basics.md"
   ]
 }
