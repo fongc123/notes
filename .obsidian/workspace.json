@@ -149,15 +149,15 @@
   },
   "active": "d6e4408833034a38",
   "lastOpenFiles": [
-    "Machine Learning/Convolutional Neural Networks.md",
+    "Data Visualization/Visualization Basics.md",
+    "Data Visualization/Time Series.md",
+    "Data Visualization/Visual Channels.md",
+    "Data Visualization/Spatial Data.md",
+    "Data Visualization/Trajectory Data.md",
     "Data Visualization/Multivariate Data.md",
+    "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Image Processing/Spatial Filtering.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/Decision Tree.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Image Restoration.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Image Processing Basics.md"
+    "Machine Learning/Feedforward Neural Networks.md"
   ]
 }
