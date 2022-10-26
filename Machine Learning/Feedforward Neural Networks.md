@@ -90,7 +90,7 @@ Alternatively, the <span style = "color:lightblue">leaky rectified linear unit (
 ## Softplus
 The <span style = "color:lightblue">Softplus activation function</span> is similar to the [[#ReLU]] activation function but is differentiable at the origin.
 
-$$\text{Softplus}(x)=\frac{1}{\beta}\log(1+\exp(\beta \cdot x)$$
+$$\zeta(x)=\frac{1}{\beta}\log(1+\exp(\beta \cdot x)$$
 
 The combination of logarithmic and exponential functions approximate a line for large values.
 
