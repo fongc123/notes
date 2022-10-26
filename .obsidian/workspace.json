@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Data Visualization/Multivariate Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Data Visualization/Multivariate Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Data Visualization/Multivariate Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md"
+                "file": "Data Visualization/Multivariate Data.md"
               }
             }
           },
@@ -149,8 +149,8 @@
   },
   "active": "8bf582dc542f1642",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Machine Learning/Convolutional Neural Networks.md",
+    "conflict-files-obsidian-git.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Compression.md",
