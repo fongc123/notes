@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "deb83dc072ec5d2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Visualization/Visualization Basics.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Data Visualization/Visualization Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Data Visualization/Visualization Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md"
+                "file": "Data Visualization/Visualization Basics.md"
               }
             }
           },
@@ -144,10 +157,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "8bf582dc542f1642",
+  "active": "deb83dc072ec5d2b",
   "lastOpenFiles": [
     "Data Visualization/Time Series.md",
     "Data Visualization/Multivariate Data.md",
