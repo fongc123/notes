@@ -18,19 +18,6 @@ $$
 ### Cross-entropy Loss
 In **binary** classification, a <span style = "color:lightblue">binary cross-entropy (BCE) loss</span> is used instead.
 
-```tikz
-\begin{document}
-  \begin{tikzpicture}[domain=0:4]
-    \draw[thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
-    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
-    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
-    \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
-    \draw[color=cyan]   plot (\x,{sin(30\x r)})    node[right] {$f(x) = 30\sin x$};
-    \draw[color=green] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
-  \end{tikzpicture}
-\end{document}
-```
-
 ## Bayesian Classification
 Based on the **Bayes rule**, <span style = "color:lightblue">Bayesian classification</span> classifies an object based on the [[Data Preprocessing#Probability Independence|probability]] of observing events (i.e., attribute values) in the dataset.
 
