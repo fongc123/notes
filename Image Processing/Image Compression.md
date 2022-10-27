@@ -174,11 +174,14 @@ Normally, prediction is represented as a **linear combination** of $m$ previous 
 
 ![[image-processing-lossless-predictive.png|600]]
 
-The encoder consists of a <span style = "color:lightblue">predictor</span>, where only the error $e(n)$ between the original and the predicted value is encoded using variable-length encoding.
+The encoder consists of a <span style = "color:lightblue">predictor</span>, where only the error $e(n)$ between the original $f$ and the predicted value $\hat{f}$ is encoded using variable-length encoding.
 
 $$e(n)=f(n)-\hat{f}(n)$$
 
 The decoder consists of the same predictor used for encoding, where the image value is obtained by adding the error value to the predicted value.
+
+> [!INFO]
+> The error is <u>accurately</u> captured in the encoding process and requires a sufficient number of bits (*see [[#Lossy Predictive|lossy predictive]] for approximated errors*).
 
 ### Example
 A view of the Earth from an orbiting space shuttle, the prediction error image, and their corresponding intensity histograms are shown below.
