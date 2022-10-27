@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Image Processing/Image Compression.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Image Processing/Image Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Image Processing/Image Compression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Classification.md"
+                "file": "Image Processing/Image Compression.md"
               }
             }
           },
@@ -146,8 +146,8 @@
   },
   "active": "a5401e14c056a7c8",
   "lastOpenFiles": [
-    "Data Visualization/Multivariate Data.md",
     "Machine Learning/Classification.md",
+    "Data Visualization/Multivariate Data.md",
     "Data Mining/Data Preprocessing.md",
     "Data Visualization/Time Series.md",
     "Data Visualization/Spatial Data.md",

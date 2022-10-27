@@ -153,7 +153,7 @@ $$
 \end{align}
 $$
 
-Huffman's procedure creates the optimal code for a set of symbols and probabilities. After code creation, error-free coding and decoding are accomplished by a simple table lookup.
+Huffman's procedure creates the optimal code for a set of symbols and probabilities. The code is **instantaneously and uniquely decodable**. After code creation, error-free coding and decoding are accomplished by a simple table lookup.
 
 > [!INFO]
 > In practice, a pre-computed Huffman coding table is used (e.g., JPEG and MPEG).
@@ -189,7 +189,7 @@ The predictions were generated from the equation below.
 
 $$\hat{f}(x,y)=\text{round}\left[\alpha f(x,y-1)\right]$$
 
-By only encoding the prediction error, the entropy is reduced from $7.25$ to $3.99$.
+By only encoding the prediction error (i.e., the difference), the entropy is reduced from $7.25$ to $3.99$.
 
 ## Lossy Predictive
 In addition to the predictive model in [[#Lossless Predictive|lossless predictive coding]], we add quantization to map values to a limited range.
