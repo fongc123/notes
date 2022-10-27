@@ -29,6 +29,7 @@
     "Bionodal",
     "Softplus",
     "bionodal",
-    "Softmax"
+    "Softmax",
+    "dendrogram"
   ]
 }
