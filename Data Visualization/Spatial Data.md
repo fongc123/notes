@@ -61,7 +61,7 @@ In a <span style = "color:lightblue">flow map</span>, lines are used to show mov
 
 Visual cluttering is especially prevalent in this chart type.
 
-![[Pasted image 20221014134451.png|600]]
+![[data-vis-flow.png|600]]
 
 This example (https://hint.fm/wind/) is a wind map of the United States.
 
