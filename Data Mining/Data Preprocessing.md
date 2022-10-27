@@ -100,7 +100,7 @@ Knowledge about $X$ contains <u>no information</u> about $Y$.
 > [!INFO]
 > Independence implies no correlation, but no correlation does not always imply independence.
 
-<span style = "color:lightblue">Mutually exclusive</span> events are events that cannot occur at the same time.
+<span style = "color:lightblue">Mutually exclusive</span> events are events that cannot occur at the same time (*see [[Morphological Image Processing#Set Theory|set theory]])*.
 
 ## Chi-squared Test
 The <span style = "color:lightblue">Chi-squared test</span> $\chi^2$ can be used to determine if **categorical attributes** are independent of each other.
