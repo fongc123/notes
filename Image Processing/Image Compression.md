@@ -205,8 +205,9 @@ The reconstructed image is now the sum of the predicted image and the quantized 
 
 $$\dot{f}(n)=\hat{f}(n)+\dot{e}(n)$$
 
-The predictor obtains new values based on the erroneous 
+The predictor obtains new values based on the previous erroneous prediction.
 
+$$\hat{f}(n)=\alpha\dot{f}(n-1)$$
 
 > [!INFO]
 > Note the change in notation from the original image $f$ and the erroneous image $\dot{f}$, as the image cannot be completely reconstructed due to the **quantizer**.
@@ -214,4 +215,36 @@ The predictor obtains new values based on the erroneous
 ![[image-processing-lossy-prediction-model.png|700]]
 
 ### Delta Modulation
-To achieve quantization, <span style = "color:lightblue">delta modulation</span> is a simple and popular technique 
+To achieve quantization, <span style = "color:lightblue">delta modulation</span> is a simple and popular technique that maps its input to two values.
+
+$$\dot{e}(n)=\begin{dcases}
+	+\delta & \text{for}\space e(n)>0 \\
+	-\delta & \text{otherwise}
+\end{dcases}
+$$
+
+The value of $\delta$ controls the range of values the input will be mapped to. **The output can be represented with only one bit**.
+
+A small value of $\delta$ can account for **granular noise** (i.e., small errors) but cannot deal with **slope overload** (i.e., large errors). On the other hand, a large value of $\delta$ will disproportionate granular noise. This is demonstrated below, where $\alpha=1$ (*the predictor*) and $\delta=6.5$.
+
+![[image-processing-delta-mod.png|700]]
+
+# Quality Measures & Standards
+There are two criteria for assessing compression quality: <span style = "color:lightblue">objective fidelty criteria</span> and <span style = "color:lightblue">subjective fidelty criteria</span>.
+
+> [!INFO]
+> **Fidelity** is the degree of exactness with which something is copied or reproduced.
+
+The <span style = "color:lightblue">root mean square (RMS) error</span> and the <span style = "color:lightblue">mean-square signal-to-noise ratio (SNR)</span> are useful in objectively assessing image quality.
+
+$$
+\begin{gather}
+	RMS = \left[\frac{1}{MN}\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}\left[\hat{f}(x,y)-f(x,y)\right]^2\right]^{0.5} \\\\
+	SNR = \dfrac{\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}\hat{f}(x,y)^2}{\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}\left[\hat{f}(x,y)-f(x,y)\right]^2}
+\end{gather}
+$$
+
+The image quality can also be determined **subjectively**.
+
+![[image-processing-quality-subjective.png|600]]
+

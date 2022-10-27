@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "924b9a0ea02db77a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Processing/Morphological Image Processing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "vphantom",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Compression.md"
+                "file": "Image Processing/Morphological Image Processing.md"
               }
             }
           },
@@ -144,17 +157,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "a5401e14c056a7c8",
+  "active": "924b9a0ea02db77a",
   "lastOpenFiles": [
+    "Image Processing/Image Compression.md",
+    "Image Processing/Morphological Image Processing.md",
+    "Image Processing/Color Processing.md",
+    "img/image-processing-delta-mod.png",
     "Machine Learning/Classification.md",
     "Data Visualization/Multivariate Data.md",
     "Data Mining/Data Preprocessing.md",
     "Data Visualization/Time Series.md",
     "Data Visualization/Spatial Data.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Data Visualization/Visualization Basics.md",
-    "conflict-files-obsidian-git.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Image Processing/Color Processing.md"
+    "Machine Learning/Convolutional Neural Networks.md"
   ]
 }
