@@ -195,5 +195,23 @@ $$\hat{f}(x,y)=\text{round}\left[\alpha f(x,y-1)\right]$$
 By only encoding the prediction error (i.e., the difference), the entropy is reduced from $7.25$ to $3.99$.
 
 ## Lossy Predictive
-In addition to the predictive model in [[#Lossless Predictive|lossless predictive coding]], we add quantization to map values to a limited range.
+In addition to the predictive model in [[#Lossless Predictive|lossless predictive coding]], we add quantization to map values to a limited range. There is a trade-off between reconstruction accuracy and compression performance; however, the distortion can be tolerable, as the human eye cannot perceive minor differences (i.e., [[#Spatial|perceptual redundancy]]).
 
+In <span style = "color:lightblue">lossy predictive coding</span>, the error between the predicted and the actual images is quantized to a limited range.
+
+$$\dot{e}(n)=\frac{e(n)}{q}$$
+
+The reconstructed image is now the sum of the predicted image and the quantized error $\dot{e}(n)$.
+
+$$\dot{f}(n)=\hat{f}(n)+\dot{e}(n)$$
+
+The predictor obtains new values based on the erroneous 
+
+
+> [!INFO]
+> Note the change in notation from the original image $f$ and the erroneous image $\dot{f}$, as the image cannot be completely reconstructed due to the **quantizer**.
+
+![[image-processing-lossy-prediction-model.png|700]]
+
+### Delta Modulation
+To achieve quantization, <span style = "color:lightblue">delta modulation</span> is a simple and popular technique 
