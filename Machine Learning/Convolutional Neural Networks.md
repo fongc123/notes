@@ -1,15 +1,17 @@
 <span style = "color:lightblue">Convolutional neural networks</span> are commonly used in image classification and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
 
-Due to the **small convolution kernel**, convolutional neural networks have a local <span style = "color:lightblue">receptive field</span>, as layers are only connected to a <u>local</u> subset of units in the previous layer.
+Convolutional neural networks have specific design features that are suited for images.
+1. **Local receptive field**: layers are only connected to a <u>local</u> subset of units in the previous layer (i.e., not fully connected)
+2. **Shared spatial parameters**: weights of the same color (e.g., red, green, blue) are shared
 
 ![[ml-cnn-receptive-field.png|600]]
 
-More input pixels and, thus, more complex features are learned as the receptive field grows (i.e., propagate into deeper layers).
+Despite a local receptive field, more complex features of the <u>entire</u> image are learned as the receptive field grows (i.e., propagate into deeper layers).
 
 > [!INFO]
 > Conventional multilayer [[Feedforward Neural Networks#Perceptron|perceptrons]] (MLP) are **fully connected**. Thus, there are many weights to learn, and an abundance of data is needed.
 
-Additionally, the same spatial parameters are shared across all spatial locations. This **allows features to be detected regardless of position** and **reduces the number of free parameters to learn**.
-
 ![[ml-cnn-shared-parameters.png|600]]
+
+Sharing parameters **allows features to be detected regardless of position** and **reduces the number of free parameters to learn**.
 
