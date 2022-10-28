@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Mining/Data Mining Basics.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Data Mining Basics.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Data Mining Basics.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Mining/Data Mining Basics.md"
+                "file": "Machine Learning/Feedforward Neural Networks.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
-    "Machine Learning/Classification.md",
     "Machine Learning/Convolutional Neural Networks.md",
+    "Machine Learning/Classification.md",
+    "Data Mining/Data Mining Basics.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Compression.md",
     "Data Mining/Data Preprocessing.md",
     "Image Processing/Color Processing.md",
     "img/image-processing-delta-mod.png",
     "Data Visualization/Multivariate Data.md",
-    "Data Visualization/Time Series.md",
-    "Data Visualization/Spatial Data.md"
+    "Data Visualization/Time Series.md"
   ]
 }
