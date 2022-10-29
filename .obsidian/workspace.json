@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
-                "mode": "preview",
+                "file": "Data Mining/Data Preprocessing.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Data Mining/Data Preprocessing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md"
+                "file": "Data Mining/Data Preprocessing.md"
               }
             }
           },
@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9378b84bac540416",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Machine Learning/Classification.md",
-    "Data Mining/Data Mining Basics.md",
     "Image Processing/Morphological Image Processing.md",
-    "Image Processing/Image Compression.md",
     "Data Mining/Data Preprocessing.md",
-    "Image Processing/Color Processing.md",
-    "img/image-processing-delta-mod.png",
-    "Data Visualization/Multivariate Data.md",
-    "Data Visualization/Time Series.md"
+    "Machine Learning/ML Basics.md",
+    "Machine Learning/Convolutional Neural Networks.md",
+    "Machine Learning/Feedforward Neural Networks.md",
+    "Machine Learning/Classification.md",
+    "Machine Learning/Regression.md",
+    "Machine Learning/Decision Tree.md",
+    "Data Mining/Data Mining Basics.md",
+    "Image Processing/Image Compression.md"
   ]
 }

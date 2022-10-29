@@ -17,3 +17,10 @@ Special anomalies may have been incorporated into an overfitted model, which wil
 
 Over-fitting prevention methods of various approaches are listed below.
 - [[Decision Tree#Over-fitting|decision trees]]
+
+# Choosing Hyperparameters
+
+> [!INFO]
+> Machine learning is experimentation.
+
+Model parameters affect model performance. Testing several parameters (e.g., learning rate, feature maps in [[Convolutional Neural Networks|CNN]]) and different approaches leads to finding the optimal result.
