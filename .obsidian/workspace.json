@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Data Mining/Data Preprocessing.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "9378b84bac540416",
   "lastOpenFiles": [
-    "Image Processing/Morphological Image Processing.md",
+    "Data Mining/Data Mining Basics.md",
     "Data Mining/Data Preprocessing.md",
+    "Image Processing/Morphological Image Processing.md",
     "Machine Learning/ML Basics.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Regression.md",
     "Machine Learning/Decision Tree.md",
-    "Data Mining/Data Mining Basics.md",
     "Image Processing/Image Compression.md"
   ]
 }

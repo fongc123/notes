@@ -18,12 +18,10 @@ Additionally, each attribute has a corresponding <span style = "color:lightblue"
 ## Data Sets
 All machine learning algorithms have a <span style = "color:lightblue">training set</span> and a <span style = "color:lightblue">test set</span> (and occasionally a <span style = "color:lightblue">validation set</span>).
 
-A model is fitted based on the **training set**, where each object of the consists of a <span style = "color:lightblue">class attribute</span> (i.e., the correct answer) and a set of labels (i.e., data). Semantically, the **test set** and the **validation set** verify if the model performs adequately on unseen data. The performance of the model on the validation set can be used to improve the model (e.g., neural network model architectures).
+A model is fitted based on the **training set**, where each object of the consists of a <span style = "color:lightblue">class attribute</span> (i.e., the correct answer) and a set of labels (i.e., data). Semantically, both the **test set** and the **validation set** verify if the model performs adequately on unseen data. The performance of the model on the validation set can be used to improve the model (e.g., neural network model architectures).
 
 > [!WARNING]
 > The test set and the training set must be disjoint.
-
-In the case where the test set *does not* have a class attribute (e.g., competitions), the created model will *truly predict* the test set's class attribute.
 
 The partitioning of the original data into different datasets helps prevent [[ML Basics#Over-fitting|over-fitting]].
 
@@ -72,7 +70,7 @@ The <span style = "color:lightblue">correlation coefficient</span> $r$ can be us
 
 The expression for the correlation coefficient between attributes $A$ and $B$ is shown below, where $a_i$ and $b_i$ are the respective values, $\bar{A}$ and $\bar{B}$ are the respective means, and $\sigma_A$ and $\sigma_B$ are the respective standard deviations.
 
-$$r_{A,B}=\frac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\sigma_B}=\frac{\sum_{i=1}^{N}a_ib_i-N\bar{A}\bar{B}}{N\sigma_A\sigma_B}$$
+$$r_{A,B}=\dfrac{\frac{1}{N}\sum_{i=1}^{N}(a_i-\bar{A})(b_i-\bar{B})}{\sigma_A\sigma_B}=\dfrac{\sum_{i=1}^{N}a_ib_i-N\bar{A}\bar{B}}{N\sigma_A\sigma_B}$$
 
 The Python library `pandas` comes with the `corr()` or `corrwith()` (*for multiple column labels*) methods to calculate the correlation coefficient between columns.
 
