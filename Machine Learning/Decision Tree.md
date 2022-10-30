@@ -27,7 +27,7 @@ The [[#Creation|creation process]] is terminated if any of the statements below 
 2. There are no remaining attributes in the attribute list to help partition the tuples of $D$ further.
 3. The partition $D$ is empty.
 
-In the first condition, the node becomes a leaf and is labeled with the associated class. However, the node in the second and third condition is labeled with the **majority class of the partition** and the **majority class of the parent partition** respectively.
+In the first condition, nodes become leaves and are labeled with the associated class. However, nodes with the second and third condition are labeled with the **majority class of the partition** and the **majority class of the parent partition** respectively.
 
 ## Attribute Selection
 Ideally, an attribute selection criterion that creates partitions that consist only of data entries with only a <u>single</u> class is desired (i.e., **pure** datasets).
