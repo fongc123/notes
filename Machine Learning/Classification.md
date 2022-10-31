@@ -162,7 +162,7 @@ P(x|C_2)P(C_2) & = 0.000878 \times 0.357 = 0.000313
 \end{align}
 $$
 
-Thus, the sample tuple should be assigned $C_1$ (i.e., `yes`) as its probability is greater.
+Thus, the sample tuple should be assigned $C_1$ (i.e., `yes`) as the class probability of $C_1$ is greater.
 
 ## Nearest Neighbor Classification
 A <span style = "color:lightblue">nearest neighbor classifier</span> assigns class labels to an object based on its **similarity** to objects in the training data.
