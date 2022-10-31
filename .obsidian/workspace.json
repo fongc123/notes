@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "mode": "preview",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md"
+                "file": "Machine Learning/Convolutional Neural Networks.md"
               }
             }
           },
@@ -158,15 +158,15 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
-    "Machine Learning/Classification.md",
+    "Machine Learning/Feedforward Neural Networks.md",
+    "Machine Learning/ML Basics.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/Regression.md",
+    "Machine Learning/Classification.md",
+    "Data Mining/Data Mining Basics.md",
+    "Data Mining/Data Preprocessing.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Machine Learning/Recurrent Neural Networks.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Machine Learning/ML Basics.md",
-    "Image Processing/Morphological Image Processing.md",
-    "Data Mining/Data Mining Basics.md"
+    "Machine Learning/Convolutional Neural Networks.md"
   ]
 }
