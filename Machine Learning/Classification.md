@@ -87,6 +87,83 @@ $$P(x|C_i)=\prod_{k=1}^{n}P(x_k|C_i)$$
 > $$
 > The expression for the Laplace correction is shown above, where $c$ is the number of distinct values for attribute $A_k$.
 
+### Example
+A dataset is shown below. A prediction of the following sample tuple is made.
+
+$$(\text{age}=\text{senior},\text{income}=\text{low},\text{student}=\text{yes},\text{credit\_rating}=\text{excellent})$$
+
+| **RID** |   **Age**   | **Income** | **Student** | **Credit Rating** | <span style = "color:lightcoral"><b>Class: Buys computer?</b></span> |
+|:-------:|:-----------:|:----------:|:-----------:|:-----------------:|:--------------------------------------------------------------------:|
+|    1    |    youth    |    high    |     no      |       fair        |                                  no                                  |
+|    2    |    youth    |    high    |     no      |     excellent     |                                  no                                  |
+|    3    | middle_aged |    high    |     no      |       fair        |                                 yes                                  |
+|    4    |   senior    |   medium   |     no      |       fair        |                                 yes                                  |
+|    5    |   senior    |    low     |     yes     |       fair        |                                 yes                                  |
+|    6    |   senior    |    low     |     yes     |     excellent     |                                 no                                  |
+|    7    | middle_aged |    low     |     yes     |     excellent     |                                 yes                                  |
+|    8    |    youth    |   medium   |     no      |       fair        |                                  no                                  |
+|    9    |    youth    |    low     |     yes     |       fair        |                                 yes                                  |
+|   10    |   senior    |   medium   |     yes     |       fair        |                                 yes                                  |
+|   11    |    youth    |   medium   |     yes     |     excellent     |                                 yes                                  |
+|   12    | middle_aged |   medium   |     no      |     excellent     |                                 yes                                  |
+|   13    | middle_aged |    high    |     yes     |       fair        |                                 yes                                  |
+|   14    |   senior    |   medium   |     no      |     excellent     | no                                                                     |
+
+First, the **prior probability** of each class is calculated, where $C_1$ represents `yes` and $C_2$ represents `no`.
+
+$$
+\begin{gather}
+	P(C_1)=\frac{9}{14}=0.643 \\
+	P(C_2)=\frac{5}{14}=0.357
+\end{gather}
+$$
+
+The individual probabilities of each attribute of the sample tuple given the class $C_1$ are calculated.
+
+$$
+\begin{gather}
+P(\text{age}=\text{senior}|C_1)=\frac{3}{9}=0.33 \\
+P(\text{income}=\text{low}|C_1)=\frac{3}{9}=0.33 \\
+P(\text{student}=\text{yes}|C_1)=\frac{6}{9}=0.66 \\
+P(\text{credit\_rating}=\text{excellent}|C_1)=\frac{3}{9}=0.33
+\end{gather}
+$$
+
+Similarly, the individual probabilities of each attribute of the sample tuple given the class $C_2$ are calculated.
+
+$$
+\begin{gather}
+P(\text{age}=\text{senior}|C_2)=\frac{2}{9}=0.22 \\
+P(\text{income}=\text{low}|C_2)=\frac{1}{9}=0.11 \\
+P(\text{student}=\text{yes}|C_2)=\frac{1}{9}=0.11 \\
+P(\text{credit\_rating}=\text{excellent}|C_2)=\frac{3}{9}=0.33
+\end{gather}
+$$
+
+Because of the **conditional independence assumption**, $P(x|C_1)$ and $P(x|C_2)$ can be calculated by multiplying their respective attribute probabilities together.
+
+$$
+\begin{align}
+P(x|C_1) & = P(\text{senior}|C_1)\times P(\text{low}|C_1)\times P(\text{yes}|C_1) \times P(\text{excellent}|C_1) \\
+& =0.33 \times 0.33 \times 0.66 \times 0.33 \\
+& = 0.0237 \\
+P(x|C_2) & = P(\text{senior}|C_2)\times P(\text{low}|C_2)\times P(\text{yes}|C_2) \times P(\text{excellent}|C_2) \\
+& = 0.22 \times 0.11 \times 0.11 \times 0.33 \\
+& = 0.000878
+\end{align}
+$$
+
+Lastly, $P(x|C_1)P(C_1)$ and $P(x|C_2)P(C_2)$ are calculated.
+
+$$
+\begin{align}
+P(x|C_1)P(C_1) & = 0.0237 \times 0.643 = 0.0152 \\
+P(x|C_2)P(C_2) & = 0.000878 \times 0.357 = 0.000313
+\end{align}
+$$
+
+Thus, the sample tuple should be assigned $C_1$ (i.e., `yes`) as its probability is greater.
+
 ## Nearest Neighbor Classification
 A <span style = "color:lightblue">nearest neighbor classifier</span> assigns class labels to an object based on its **similarity** to objects in the training data.
 
