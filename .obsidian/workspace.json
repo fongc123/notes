@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3d9f4bba28fa2c",
+        "id": "d869cfb807d406c2",
         "type": "tabs",
         "children": [
           {
-            "id": "9378b84bac540416",
+            "id": "ed16fb2e38bb0a3d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Regression.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a71411d5ce2da0d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Machine Learning/Classification.md",
                 "mode": "preview",
                 "source": false
               }
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mutually",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Regression.md",
+                "file": "Machine Learning/Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Regression.md",
+                "file": "Machine Learning/Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Regression.md"
+                "file": "Machine Learning/Classification.md"
               }
             }
           },
@@ -156,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9378b84bac540416",
+  "active": "ed16fb2e38bb0a3d",
   "lastOpenFiles": [
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/PyTorch & CUDA Setup.md",
-    "Machine Learning/Recurrent Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Convolutional Neural Networks.md",
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Regression.md",
-    "Image Processing/Morphological Image Processing.md",
-    "Data Mining/Data Mining Basics.md"
+    "conflict-files-obsidian-git.md",
+    "img/ml-cnn-shared-parameters.png",
+    "img/Pasted image 20221014134451.png",
+    "img/image-processing-wiener-filter.png",
+    "img/data-vis-dot-map.png",
+    "img/data-vis-cartogram.png",
+    "img/data-vis-trajectory.png",
+    "Machine Learning/Classification.md"
   ]
 }
