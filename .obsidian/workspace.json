@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Classification.md"
+                "file": "Machine Learning/Decision Tree.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "ed16fb2e38bb0a3d",
   "lastOpenFiles": [
+    "Machine Learning/Classification.md",
+    "Machine Learning/Decision Tree.md",
+    "Data Visualization/Perception.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "conflict-files-obsidian-git.md",
     "img/ml-cnn-shared-parameters.png",
     "img/Pasted image 20221014134451.png",
     "img/image-processing-wiener-filter.png",
-    "img/data-vis-dot-map.png",
-    "img/data-vis-cartogram.png",
-    "img/data-vis-trajectory.png",
-    "Machine Learning/Classification.md"
+    "img/data-vis-dot-map.png"
   ]
 }
