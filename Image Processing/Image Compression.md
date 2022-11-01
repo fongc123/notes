@@ -141,6 +141,9 @@ Lastly, the figure below demonstrates step 4.
 
 ![[image-processing-huffman-2.png|600]]
 
+> [!INFO]
+> The additional bit is added onto the previous source reduction's bit. For example, in source reduction 4, since `0` was assigned to the probability sum of $0.6$, the codes in source reduction 3 begin with `0`.
+
 Thus, codes that represent intensities with high probabilities are assigned smaller bits (e.g., `1` or `00`) and codes that represent intensities with low probabilities are assigned larger bits (e.g., `01010` or `01011`).
 
 ### Decoding
