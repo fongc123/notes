@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Visual Channels.md",
+                "file": "Data Visualization/Design Rules.md",
                 "mode": "preview",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Visual Channels.md",
+                "file": "Data Visualization/Design Rules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Visual Channels.md",
+                "file": "Data Visualization/Design Rules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Visual Channels.md"
+                "file": "Data Visualization/Design Rules.md"
               }
             }
           },
@@ -158,6 +158,8 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Data Visualization/Design Tasks.md",
+    "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
     "Data Visualization/Color.md",
     "Data Visualization/Perception.md",
@@ -165,8 +167,6 @@
     "Machine Learning/Classification.md",
     "Machine Learning/Decision Tree.md",
     "Machine Learning/Convolutional Neural Networks.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Regression.md"
+    "Machine Learning/Feedforward Neural Networks.md"
   ]
 }
