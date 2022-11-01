@@ -16,11 +16,11 @@ $$
 \end{align}
 $$
 
-Visualizations with lie factors close to (away from) a value of $1.0$ indicate an accurate (exaggerated) representation of the data. The lie factor should range between $0.95$ and $1.05$. In the chart below, the line representing 18 miles per gallon in 1978 is 0.6 inches long, while the that of representing 27.5 miles per gallon in 1985 is 5.3 inches long.
+Visualizations with lie factors close to (away from) a value of $1.0$ indicate an accurate (exaggerated) representation of the data. The lie factor should range between $0.95$ and $1.05$.
+
+In the chart below, the line representing 18 miles per gallon in 1978 is 0.6 inches long, while the that of representing 27.5 miles per gallon in 1985 is 5.3 inches long. The lie factor for this graph is $14.8$.
 
 ![[data-vis-lie-factor.png|600]]
-
-The lie factor for this graph is $14.8$. Visualizations with lie factors closer to $1.0$ give a more accurate representation of the data. A lie factor greater than $1.0$ indicates an overstatement. 
 
 **Clear labeling should be used to defeat graphical distortion and ambiguity.** The advertisement below gives the impression that the company is generating significant revenue; however, the zero line is positioned differently for each bar chart.
 
