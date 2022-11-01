@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Data Visualization/Visualization Basics.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Data Visualization/Visualization Basics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Compression.md",
+                "file": "Data Visualization/Visualization Basics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Compression.md"
+                "file": "Data Visualization/Visualization Basics.md"
               }
             }
           },
@@ -146,6 +146,8 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Data Visualization/Perception.md",
+    "Image Processing/Image Compression.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Spatial Filtering.md",
@@ -153,8 +155,6 @@
     "Data Visualization/Time Series.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Principles.md",
-    "Data Visualization/Design Tasks.md",
-    "Data Visualization/Multivariate Data.md",
-    "Machine Learning/Classification.md"
+    "Data Visualization/Design Tasks.md"
   ]
 }
