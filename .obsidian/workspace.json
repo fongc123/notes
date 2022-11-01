@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Data Visualization/Time Series.md",
                 "mode": "preview",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Data Visualization/Design Rules.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Data Visualization/Time Series.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Data Visualization/Time Series.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md"
+                "file": "Data Visualization/Time Series.md"
               }
             }
           },
@@ -158,15 +158,15 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
-    "Data Visualization/Spatial Data.md",
-    "Data Visualization/Time Series.md",
+    "Data Visualization/Principles.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Design Tasks.md",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Principles.md",
-    "Data Visualization/Color.md",
-    "Data Visualization/Perception.md",
+    "Data Visualization/Multivariate Data.md",
+    "Machine Learning/Classification.md",
     "Data Visualization/Trajectory Data.md",
-    "Data Visualization/Multivariate Data.md"
+    "Data Visualization/Spatial Data.md",
+    "Data Visualization/Time Series.md",
+    "Data Visualization/Visual Channels.md",
+    "Data Visualization/Color.md"
   ]
 }
