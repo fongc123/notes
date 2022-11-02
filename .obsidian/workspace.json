@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Image Processing/Morphological Image Processing.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -146,11 +146,11 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Compression.md",
-    "Image Processing/Morphological Image Processing.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/References.md",

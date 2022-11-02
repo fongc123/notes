@@ -64,7 +64,19 @@ In <span style = "color:lightblue">binary morphology</span>, an image is viewed 
 Here, $A$ and $B$ are sets in $Z^2$, where $A$ represents the original foreground object and $B$ represents the <span style = "color:lightblue">structuring element (SE)</span>.
 
 > [!INFO]
-> The shape and size of the structuring element controls how much of the foreground object is [[#Erosion|eroded]] or [[#Dilation|dilated]].
+> The shape and size of the structuring element controls the manner and the extent of the [[#Erosion|erosion]] or the [[#Dilation|dilation]] of the foreground object.
+
+> [!INFO]
+> [[#Erosion]] and [[#Dilation|dilation]] are complementary to each other.
+> 
+> $$
+> \begin{gather}
+> (A\ominus B)^c=A^c \oplus \hat{B} \\\\
+> (A \oplus B)^c=A^c \ominus \hat{B}
+> \end{gather}
+> $$
+
+In real images, opening removes white noise with [[#Erosion|erosion]] and removes black noise with [[#Dilation|dilation]]. Closing fills gaps found in the object of interest (e.g., the image of a fingerprint).
 
 ## Erosion
 The <span style = "color:lightblue">erosion</span> of $A$ by $B$ **shrinks objects** and **removes details smaller than the structuring element** (i.e., eroding the object $A$).
@@ -80,4 +92,49 @@ Intuitively, the structuring element is moved around the image, and a value is o
 ## Dilation
 The <span style = "color:lightblue">dilation</span> of $A$ by $B$ **expands or thickens objects** and **bridges gaps smaller than the structuring element**.
 
-$$A\oplus B=\{z|(\hat{B})_z\cap \}$$
+$$A\oplus B=\{z|(\hat{B})_z\cap A\neq\emptyset\}=\{z|\left[(\hat{B})_z\cap A\right]\subseteq A\}$$
+
+It is the set of all [[#Set Theory|displacements]] $z$ such that $\hat{B}$ overlaps by <u>at least one</u> element of $A$.
+
+> [!WARNING]
+> Note that the reflection of $B$ (i.e., $\hat{B}$) is also performed. Generally, however, the structuring element will be symmetric.
+
+An example is shown below.
+
+![[image-processing-dilation.png|600]]
+
+Intuitively, the structuring element is moved around the image, and a value is outputted only when at least one pixel in the structuring element's region is part of the object.
+
+## Opening
+The <span style = "color:lightblue">opening</span> of $A$ by $B$ is the [[#Erosion|erosion]] of $A$ by $B$ followed by the [[#Dilation|dilation]] of the **result** by $B$.
+
+$$A\circ B=(A\ominus B)\oplus B$$
+
+It **smooths the contours of an object** (i.e., smoothed outer corners), **breaks narrow bridges** (i.e., isthmus), and **eliminate thin protrusions**.
+
+$$A\circ B=\bigcup\{(B)_z|(B)_z\subseteq A\}$$
+It is the union of all translations of $B$ such that $B$ fits entirely in $A$. The resultant image is a sub-image of $A$.
+
+![[image-processing-opening.png|600]]
+
+> [!INFO]
+> It smooths outer corners and eliminates thin protrusions and bridges as the structuring element $B$ cannot fit inside these structures.
+
+## Closing
+The <span style = "color:lightblue">closing</span> of $A$ by $B$ is the [[#Dilation|dilation]] of $A$ by $B$ followed by the [[#Erosion|erosion]] of the result by $B$.
+
+$$A\cdot B=(A\oplus B)\ominus B$$
+
+It **smooths the contours of an object** (i.e., smooths inner corners), fills **narrow breaks and gaps**, **eliminates long and thin gulfs** (i.e., long holes), and **eliminates small holes**.
+
+$$A\cdot B=\left[\bigcup\{(B)_z|(B)_z\cap A=\emptyset\}\right]^c$$
+
+It is the complement of the union of all translations of $B$ that do not overlap with $A$ (i.e., the structuring element $B$ is translated outside $A$). The resultant image is a superset of $A$.
+
+![[image-processing-closing.png|600]]
+
+> [!INFO]
+> Both [[#Opening|opening]] and [[#Closing|closing]] have the convergence property. Repeated operations will have the same effect as one operation.
+> 
+> $$(A\circ B)\circ B=A\circ B$$
+
