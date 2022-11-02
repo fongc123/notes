@@ -57,3 +57,27 @@ The <span style = "color:lightblue">translation</span> of set $A$ about its orig
 $$(A)_z=\{c|c=a+z,\space\text{for}\space a\in A\}$$
 
 Reflection and translation are used in morphological image processing.
+
+# Binary Morphology
+In <span style = "color:lightblue">binary morphology</span>, an image is viewed as a subset of Euclidean space $\mathbb{R}^d$ or the integer grid $\mathbb{Z}^d$ for some dimension $d$, where operations, such as <span style = "color:lightblue">erosion</span> and <span style = "color:lightblue">dilation</span>, can be performed.
+
+Here, $A$ and $B$ are sets in $Z^2$, where $A$ represents the original foreground object and $B$ represents the <span style = "color:lightblue">structuring element (SE)</span>.
+
+> [!INFO]
+> The shape and size of the structuring element controls how much of the foreground object is [[#Erosion|eroded]] or [[#Dilation|dilated]].
+
+## Erosion
+The <span style = "color:lightblue">erosion</span> of $A$ by $B$ **shrinks objects** and **removes details smaller than the structuring element** (i.e., eroding the object $A$).
+
+$$A\ominus B=\{z|(B)_z\subseteq A\}\space\text{or}\space A\ominus B=\{z|(B)_z \cap A^c=\emptyset\}$$
+
+It is the set of all [[#Set Theory|displacements]] $z$ such that $B$, translated by $z$, is contained in $A$. An example is shown below.
+
+![[image-processing-erosion.png|600]]
+
+Intuitively, the structuring element is moved around the image, and a value is outputted only when all pixels in the structuring element's region are also part of the object.
+
+## Dilation
+The <span style = "color:lightblue">dilation</span> of $A$ by $B$ **expands or thickens objects** and **bridges gaps smaller than the structuring element**.
+
+$$A\oplus B=\{z|(\hat{B})_z\cap \}$$

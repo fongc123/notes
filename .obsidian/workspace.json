@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
-                "mode": "preview",
+                "file": "Image Processing/Morphological Image Processing.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Restoration.md"
+                "file": "Image Processing/Morphological Image Processing.md"
               }
             }
           },
@@ -146,10 +146,10 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Compression.md",
-    "Image Processing/Image Restoration.md",
     "Image Processing/Morphological Image Processing.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Trajectory Data.md",
