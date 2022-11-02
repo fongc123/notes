@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Image Processing/Image Restoration.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Image Processing/Image Restoration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Image Processing/Image Restoration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md"
+                "file": "Image Processing/Image Restoration.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Color Processing.md",
+    "Image Processing/Image Compression.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Morphological Image Processing.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/References.md",
     "Data Visualization/Time Series.md",
-    "Data Visualization/Design Rules.md",
-    "Data Visualization/Design Tasks.md",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Principles.md",
-    "Data Visualization/Color.md",
-    "Data Visualization/Perception.md"
+    "Data Visualization/Design Rules.md"
   ]
 }
