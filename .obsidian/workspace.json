@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Visualization Basics.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "mode": "preview",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "zero padding",
+                "query": "bitplane",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Visualization Basics.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Visualization Basics.md",
+                "file": "Image Processing/Intensity Transformations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Visualization Basics.md"
+                "file": "Image Processing/Intensity Transformations.md"
               }
             }
           },
@@ -144,13 +144,13 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9378b84bac540416",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
+    "Data Visualization/Visualization Basics.md",
     "Data Visualization/Perception.md",
     "Data Visualization/Color.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
-    "Data Visualization/Visualization Basics.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Image Processing/Spatial Filtering.md",
     "img/Pasted image 20221103184620.png",
