@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Data Visualization/Design Rules.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Data Visualization/Design Rules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Data Visualization/Design Rules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md"
+                "file": "Data Visualization/Design Rules.md"
               }
             }
           },
@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "9378b84bac540416",
   "lastOpenFiles": [
-    "Data Visualization/Visualization Basics.md",
     "Data Visualization/Perception.md",
+    "Data Visualization/Visualization Basics.md",
+    "Image Processing/Intensity Transformations.md",
     "Data Visualization/Color.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Image Processing/Spatial Filtering.md",
     "img/Pasted image 20221103184620.png",
-    "img/Pasted image 20221103183922.png",
-    "Machine Learning/Recurrent Neural Networks.md"
+    "img/Pasted image 20221103183922.png"
   ]
 }
