@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
-                "mode": "preview",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md"
+                "file": "Machine Learning/Convolutional Neural Networks.md"
               }
             }
           },
