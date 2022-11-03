@@ -8,7 +8,7 @@ An example classification architecture for classifying a $256\times256\times3$ c
 
 ![[ml-cnn-example.png|600]]
 
-Here, two convolutional layers are performed with $64$ feature maps
+Here, there are two convolutional layers (each with $64$ feature maps) with ReLU and two pooling layers (stride 4). Lastly, the resulting matrix is reshaped into a vector of size $16384$ and converted into $1000$ classes with the [[Feedforward Neural Networks#Activation Functions#Softmax|softmax]] function.
 
 # Design
 
