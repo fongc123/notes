@@ -1,5 +1,15 @@
 <span style = "color:lightblue">Convolutional neural networks</span> are commonly used in image classification and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
 
+The components of a convolutional neural network, which normally consist of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]], are shown below.
+
+![[ml-cnn-components.png|600]]
+
+An example classification architecture for classifying a $256\times256\times3$ colored image to one of $1000$ classes is shown below.
+
+![[ml-cnn-example.png|600]]
+
+Here, two convolutional layers are performed with $64$ feature maps
+
 # Design
 
 Convolutional neural networks have specific design features that are suited for images.
@@ -42,4 +52,12 @@ Since convolution is a linear operation, the inclusion of [[Feedforward Neural N
 > Two convolution layers would be no more powerful than a single convolution layer.
 
 # Pooling Layer
-A <span style = "color:lightblue">pooling layer</span> **reduces the r**
+A <span style = "color:lightblue">pooling layer</span> **reduces the representation size** (*less computation*) and **provides spatial invariance**. Once features are detected, only an <u>approximate</u> location is needed.
+
+The input to the next layer is the result of an operation of each sub-region in the previous layer. <span style = "color:lightblue">Max-pooling</span> outputs the **maximum** value in the sub-region to the next layer.
+
+![[ml-cnn-pool-layer.png|600]]
+
+Other pooling methods include <span style = "color:lightblue">average pooling</span> and <span style = "color:lightblue">global pooling</span>. Pooling accounts for spatial variance of features in the image, as the output will not be significantly affected by changes in pixel values.
+
+<span style = "color:lightblue">Stride</span> is the down sampling factor. For example, a stride of $2$ means that the dimensions $W\times H$ will be sampled by a factor of two to $0.5W\times0.5H$. The filter size (e.g., $2\times2$) also determines the sampling factor.
