@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "19df77e20cf363eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Processing/Spatial Filtering.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -48,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "zero padding",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,6 +158,8 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Image Processing/Spatial Filtering.md",
+    "Machine Learning/Convolutional Neural Networks.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
@@ -153,8 +167,6 @@
     "Image Processing/Image Compression.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Trajectory Data.md",
-    "Data Visualization/References.md",
-    "Data Visualization/Time Series.md",
-    "Data Visualization/Design Rules.md"
+    "Data Visualization/References.md"
   ]
 }
