@@ -10,7 +10,7 @@
 
 In <span style = "color:lightblue">data abstraction</span>, the <u>type</u> of the dataset (e.g., tables, trees, networks) and the <u>attributes</u> (e.g., categorical or ordered) to represent those datasets should be considered.
 
-Ordered attributes are categorized as ordinal or as quantitative (*see [[Visualization Basics#Data Types]]*). In ordered attributes, the ordering direction (e.g., sequential, diverging, cyclic) must also be determined. 
+Ordered attributes are categorized as ordinal or as quantitative (*see [[Visualization Basics#Data Types|data types]]*). In ordered attributes, the ordering direction (e.g., sequential, diverging, cyclic) must also be determined. 
 
 Additionally, the format of the data and any preprocessing steps must also be considered. For example, information must be extracted out of data stored in a JSON format.
 

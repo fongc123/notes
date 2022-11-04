@@ -98,7 +98,7 @@ Color palettes should be colorful, robust, and perceptually uniform. This [site]
 
 ![[data-vis-selection-sequential.png|400x300]]
 
-**Diverging: For data with sequential extremes, paired sequential color schemes based on two different hues are preferred.** The colors diverge toward dark colors of different hues from one common light color.
+**Diverging: For data with sequential extremes, paired sequential color schemes based on two different hues are preferred.** The colors diverge toward dark colors of different hues from one common midpoint color.
 
 ![[data-vis-selection-diverging.png|300x25]]
 
