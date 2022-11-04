@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Design Rules.md",
-                "mode": "preview",
+                "file": "Data Visualization/Visual Channels.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Design Rules.md",
+                "file": "Data Visualization/Visual Channels.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Design Rules.md",
+                "file": "Data Visualization/Visual Channels.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Design Rules.md"
+                "file": "Data Visualization/Visual Channels.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Data Visualization/Time Series.md",
+    "Data Visualization/References.md",
+    "Data Visualization/Design Rules.md",
+    "Data Visualization/Design Tasks.md",
     "Data Visualization/Perception.md",
+    "Data Visualization/Spatial Data.md",
     "Data Visualization/Visualization Basics.md",
     "Image Processing/Intensity Transformations.md",
     "Data Visualization/Color.md",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Principles.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Image Processing/Spatial Filtering.md",
-    "img/Pasted image 20221103184620.png",
-    "img/Pasted image 20221103183922.png"
+    "Data Visualization/Visual Channels.md"
   ]
 }
