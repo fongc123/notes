@@ -221,7 +221,7 @@ The information gain of the `credit_rating` attribute is $0.048$ (*see [[#Inform
 
 $$
 \begin{align}
-GainRatio(A)&=\frac{0.048}{0.985}\newline
+GainRatio(A)&=\frac{0.048}{0.985} \\\\
 GainRatio(A)&=0.048
 \end{align}
 $$
