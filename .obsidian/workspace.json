@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Machine Learning/Decision Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md"
+                "file": "Machine Learning/Decision Tree.md"
               }
             }
           },
@@ -146,6 +146,8 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "Machine Learning/Classification.md",
+    "Data Visualization/Multivariate Data.md",
     "Data Visualization/Design Rules.md",
     "Data Visualization/Perception.md",
     "Data Visualization/Visualization Basics.md",
@@ -153,8 +155,6 @@
     "Data Visualization/Color.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Image Processing/Spatial Filtering.md",
-    "img/Pasted image 20221103184620.png"
+    "Machine Learning/Convolutional Neural Networks.md"
   ]
 }
