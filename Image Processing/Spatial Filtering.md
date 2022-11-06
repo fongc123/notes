@@ -12,6 +12,9 @@ $$w(x,y)\star f(x,y)=\sum_{s=-a}^a\sum_{t=-b}^b{w(s,t)f(x-s,y-t)}$$
 
 The <span style = "color:lightblue">impulse response</span> of correlation is a rotation of the filter by 180$^{\circ}$. In spatial convolution, since the filter is rotated beforehand, the impulse response is identical to the filter.
 
+> [!INFO]
+> For colored images, convolution is done for three dimensions: width, height, and color channel.
+
 ## Zero-padding
 
 To perform a sum-of-products operation on pixels close to or at the image margins, additional zeros are padded. For example, in a one-dimensional signal, an image with original length of $M$ would create a correation result of length $M$ but a **full correlation result** of length $M + 2a$.

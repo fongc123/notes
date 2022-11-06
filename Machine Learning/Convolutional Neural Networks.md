@@ -1,6 +1,6 @@
 <span style = "color:lightblue">Convolutional neural networks</span> are commonly used in image classification and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
 
-The components of a convolutional neural network, which normally consist of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]], are shown below.
+A convolutional neural network normally consists of a series of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]] (*feature extraction*) which are then followed by one or a few fully-connected (*dense*) layers (*classification or regression*).
 
 ![[ml-cnn-components.png|600]]
 
@@ -25,7 +25,7 @@ Despite a local receptive field, more complex features of the <u>entire</u> imag
 
 ![[ml-cnn-shared-parameters.png|600]]
 
-Sharing parameters **allows features to be detected regardless of position** and **reduces the number of free parameters to learn**.
+Sharing parameters **allows features to be detected regardless of position** and **reduces the number of free parameters to learn**. Reducing computational cost allows features to be extracted from <u>multiple locations</u> in the image, which would not be possible in a dense network.
 
 The table below shows the efficiency of convolution, where the input size is $320\times280$, the kernel size is $2\times1$, and the output size is $319\times280$.
 
@@ -39,9 +39,14 @@ Multiple <span style = "color:lightblue">feature maps</span> (i.e., kernel or fi
 - <span style = "color:lightblue">pool size</span>: distance between each set of feature maps
 - <span style = "color:lightblue">RF size</span>: size of kernel (i.e., region of input to look at)
 
+The neuron equation from [[Feedforward Neural Networks#Neuron|typical]] neural networks is also used in convolutional neural networks.
+
 ![[ml-cnn-conv-layer.png|600]]
 
 The resultant feature maps are stacked in the depth dimension. For example, an input image with size $256\times256\times3$ may output a size of $256\times256\times64$ for $64$ feature extractors.
+
+> [!INFO]
+> As the output of convolution between a three-dimensional input (e.g., a colored image) and a three-dimensional kernel is still a two-dimensional object (i.e., $H\times W\times 3$), the feature maps are stacked to create the third dimension in the output (i.e., $H\times W\times \text{features}$).
 
 Since convolution (i.e., moving the kernel around the image) shrinks the output, [[Spatial Filtering#Zero-padding|zero-padding]] is done to preserve the original size of the input. Zeros are added at each layer.
 
@@ -61,5 +66,3 @@ The input to the next layer is the result of an operation of each sub-region in 
 Other pooling methods include <span style = "color:lightblue">average pooling</span> and <span style = "color:lightblue">global pooling</span>. Pooling accounts for spatial variance of features in the image, as the output will not be significantly affected by changes in pixel values.
 
 <span style = "color:lightblue">Stride</span> is the down sampling factor. For example, a stride of $2$ means that the dimensions $W\times H$ will be sampled by a factor of two to $0.5W\times0.5H$. The filter size (e.g., $2\times2$) also determines the sampling factor.
-
-## 
