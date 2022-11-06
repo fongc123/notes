@@ -63,6 +63,16 @@ The input to the next layer is the result of an operation of each sub-region in 
 
 ![[ml-cnn-pool-layer.png|600]]
 
-Other pooling methods include <span style = "color:lightblue">average pooling</span> and <span style = "color:lightblue">global pooling</span>. Pooling accounts for spatial variance of features in the image, as the output will not be significantly affected by changes in pixel values.
+> [!INFO]
+> As the kernel size is constant and pooling layers shrink the input, increasingly larger patterns are found, allowing for more complex shapes to be recognized.
+
+Other pooling methods include <span style = "color:lightblue">average pooling</span> and <span style = "color:lightblue">global pooling</span> (*both max and average*). Pooling accounts for spatial variance of features in the image, as the output will not be significantly affected by changes in pixel values.
 
 <span style = "color:lightblue">Stride</span> is the down sampling factor. For example, a stride of $2$ means that the dimensions $W\times H$ will be sampled by a factor of two to $0.5W\times0.5H$. The filter size (e.g., $2\times2$) also determines the sampling factor.
+
+# Hyperparameters
+Like [[ML Basics#Choosing Hyperparameters|other neural networks]], hyperparameters have to be carefully selected. For convolutional neural networks, however, there are standard conventions.
+- Filter size is relative to image (e.g., $3\times3$, $5\times5$, or $7\times7$).
+- A series of convolutional layers followed by pooling layers are repeated.
+- Number of feature maps are increased (e.g., $32\rightarrow64\rightarrow128$)
+

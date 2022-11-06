@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Machine Learning/Convolutional Neural Networks.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Machine Learning/ML Basics.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,16 +168,16 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9378b84bac540416",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
-    "Image Processing/Spatial Filtering.md",
+    "Machine Learning/ML Basics.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Convolutional Neural Networks.md",
+    "Image Processing/Spatial Filtering.md",
     "Image Processing/Intensity Transformations.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Classification.md",
     "Machine Learning/Decision Tree.md",
-    "Machine Learning/ML Basics.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Image Processing/Interpolation & Transformation.md"
   ]
