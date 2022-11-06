@@ -160,7 +160,7 @@ $$\chi^2=507.93>10.83$$
 Thus, since the calculated value exceeds the table value, the null hypothesis is rejected, and the attributes $A$ and $B$ are considered to be **not independent**.
 
 ### Code
-The Python library `scipy` provides the `chi2_contingency()` function for performing Chi-squared analysis and for evaluating independence.
+The Python library `scipy` provides the `chi2_contingency` function for performing Chi-squared analysis and for evaluating independence.
 
 > [!INFO]
 > For continuous-valued attributes, the datasets are partitioned by the attribute mean (i.e., values less than the mean and values greater than or equal to the mean).

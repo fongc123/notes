@@ -164,6 +164,29 @@ $$
 
 Thus, the sample tuple should be assigned $C_1$ (i.e., `yes`) as the class probability of $C_1$ is greater.
 
+### Code
+The `sklearn` library provides the `BernoulliNB` object for naive Bayes classification.
+
+```python
+from sklearn.naive_bayes import BernoulliNB
+
+bnb = BernoulliNB(alpha = 0)
+bnb.fit(X_train, Y_train)
+bnb.predict(X_test)
+```
+
+The `alpha` parameter determines whether [[#Prediction|Laplace correction]] should be used.
+
+> [!INFO]
+> In text data, it is required to vectorize the input text data.
+> ```python
+> from sklearn.feature_extraction.text import CountVectorizer
+> 
+> vect = CountVectorizer(stop_words = "english", binary = True)
+> X_train = vect.fit_transform(X_train)
+> X_test = vect.fit_transform(X_test)
+> ```
+
 ## Nearest Neighbor Classification
 A <span style = "color:lightblue">nearest neighbor classifier</span> assigns class labels to an object based on its **similarity** to objects in the training data.
 

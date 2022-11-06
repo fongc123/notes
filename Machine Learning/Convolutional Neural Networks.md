@@ -61,3 +61,5 @@ The input to the next layer is the result of an operation of each sub-region in 
 Other pooling methods include <span style = "color:lightblue">average pooling</span> and <span style = "color:lightblue">global pooling</span>. Pooling accounts for spatial variance of features in the image, as the output will not be significantly affected by changes in pixel values.
 
 <span style = "color:lightblue">Stride</span> is the down sampling factor. For example, a stride of $2$ means that the dimensions $W\times H$ will be sampled by a factor of two to $0.5W\times0.5H$. The filter size (e.g., $2\times2$) also determines the sampling factor.
+
+## 

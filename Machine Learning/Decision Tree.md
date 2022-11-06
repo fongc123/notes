@@ -268,3 +268,44 @@ The pruning process continues until the pruned tree performs worse than the unpr
 > [!INFO]
 > A pruned decision tree misclassifies more training examples than an unpruned tree.
 
+# Code
+The `sklearn` library provides the `DecisionTreeClassifier` object for fitting a decision tree model.
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+clf = DecisionTreeClassifier(
+	criterion = "entropy",
+	min_samples_split = 4,
+	random_state = 1
+)
+```
+- `criterion`: the attribute selection criterion (e.g., [[#Purity & Entropy|information gain]], [[#Gini Index|Gini index]])
+- `min_samples_split`: the minimum number of samples required for a node to split
+	- if there are fewer samples than `min_samples_split`, the node will not be split
+- `random_state`: for deterministic outcome
+
+> [!INFO]
+> Unlike the decisions made in [[#Attribute Selection|previous sections]], this decision tree can only split a node into **two** children nodes.
+
+If the attribute is not continuous, an encoder discretizes the attribute values into additional columns with values `0` or `1`.
+
+```python
+from sklearn.preprocessing import OneHotEncoder
+
+enc = OneHotEncoder(
+	drop = "if_binary"
+)
+```
+
+The parameter `drop` will consider binary attribute values. Additionally, the `plot_tree` function will plot the trained decision tree.
+
+```python
+from sklearn.tree import plot_tree
+
+plot_tree(clf, feature_names = enc.get_feature_names(), class_names = ["No", "Yes"])
+```
+
+> [!INFO]
+> Feature names can be obtained from the encoder.
+
