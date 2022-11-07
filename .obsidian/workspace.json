@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Data Visualization/Color.md",
                 "mode": "source",
                 "source": false
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Data Visualization/Color.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Data Visualization/Color.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md"
+                "file": "Data Visualization/Color.md"
               }
             }
           },
