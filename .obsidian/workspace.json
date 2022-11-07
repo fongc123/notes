@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Principles.md",
-                "mode": "preview",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Principles.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Principles.md"
+                "file": "Machine Learning/Feedforward Neural Networks.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "9378b84bac540416",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Machine Learning/PyTorch & CUDA Setup.md",
+    "Machine Learning/Feedforward Neural Networks.md",
+    "Machine Learning/Convolutional Neural Networks.md",
     "Data Visualization/Principles.md",
+    "conflict-files-obsidian-git.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Visualization/Visualization Basics.md",
     "Data Visualization/Trajectory Data.md",
-    "Data Visualization/Color.md",
-    "Data Visualization/Visual Channels.md",
-    "Data Visualization/Time Series.md",
-    "Data Visualization/References.md"
+    "Data Visualization/Color.md"
   ]
 }

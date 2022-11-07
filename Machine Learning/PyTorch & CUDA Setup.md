@@ -65,3 +65,18 @@ GPU Time (40000): 4.476001501083374
 ```
 
 Thus, parallel computations are faster on the GPU.
+
+# Modular Programming
+In PyTorch, neural networks, regardless of their complexity, are built by basic building blocks of modules. Some exemplar modules are shown below.
+
+```python
+import torch.nn as nn
+
+# linear module
+model = nn.Linear()
+
+# a module of modules
+model = nn.Sequential(...)
+```
+
+A model can be a singular module or can be comprised of multiple modules.

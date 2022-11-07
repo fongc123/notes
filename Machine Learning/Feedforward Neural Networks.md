@@ -116,3 +116,12 @@ It is *technically* an activation function, but it is not meant for hidden layer
 > In PyTorch, the `nn.CrossEntropyLoss()` class already incorporates the Softmax activation function, regardless of whether the model is intended for binary classification or multi-class classification.
 > 
 > Alternatively, `nn.NLLLoss()` is the standalone cross entropy loss.
+
+# Code
+A sample artificial neural network is constructed with PyTorch's `Sequential` object.
+
+```python
+import torch.nn as nn
+
+
+```

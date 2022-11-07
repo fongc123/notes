@@ -68,7 +68,7 @@ The input to the next layer is the result of an operation of each sub-region in 
 
 Other pooling methods include <span style = "color:lightblue">average pooling</span> and <span style = "color:lightblue">global pooling</span> (*both max and average*). Pooling accounts for spatial variance of features in the image, as the output will not be significantly affected by changes in pixel values.
 
-<span style = "color:lightblue">Stride</span> is the down sampling factor. For example, a stride of $2$ means that the dimensions $W\times H$ will be sampled by a factor of two to $0.5W\times0.5H$. The filter size (e.g., $2\times2$) also determines the sampling factor.
+<span style = "color:lightblue">Stride</span> is the down sampling factor (i.e., the step size between kernel placements when moving the kernel around). For example, a stride of $2$ means that the dimensions $W\times H$ will be sampled by a factor of two to $0.5W\times0.5H$. The filter size (e.g., $2\times2$) determines the size of the sub-region and will also affect the down sampling.
 
 # Hyperparameters
 Like [[ML Basics#Choosing Hyperparameters|other neural networks]], hyperparameters have to be carefully selected. For convolutional neural networks, however, there are standard conventions.
