@@ -77,10 +77,16 @@ Like [[ML Basics#Choosing Hyperparameters|other neural networks]], hyperparamete
 - Number of feature maps are increased (e.g., $32\rightarrow64\rightarrow128$)
 
 # Code
+A sample convolutional neural network is implemented with PyTorch.
 
 ```python
 import torch.nn as nn
 
-nn.Conv2d()
+nn.Conv2d(
+	in_channels = 1,
+	out_channels = 32,
+	kernel_size = 3,
+	stride = 2
+)
 ```
 
