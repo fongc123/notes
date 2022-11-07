@@ -57,10 +57,32 @@ Since convolution is a linear operation, the inclusion of [[Feedforward Neural N
 > Two convolution layers would be no more powerful than a single convolution layer.
 
 ## Convolutional Arithmetic
-Given parameters (e.g., kernel size, input size, stride, padding), the output size after a convolution operation can be calculated and is often needed.
+Given input parameters, the output size after a convolution operation can be calculated and is often needed.
+- <span style = "color:lightblue">kernel size</span>: size of the kernel (e.g., $3\times3$)
+- <span style = "color:lightblue">padding</span>: zero padding of input
+	- `valid`: no padding (*output shrinks*)
+	- `same`: padding to ensure input and output have the same size
+- <span style = "color:lightblue">stride</span>: down sampling factor (*see [[#Pooling Layer|pooling layers]]*)
+- <span style = "color:lightblue">dilation</span>: spacing between kernel points
+
+The formula for calculating the output shape can be found in the [PyTorch documentation](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html), where $H$ represents the height, $W$ represents the width, $C$ represents the color, and $N$ represents the number of samples.
+
+$$
+\begin{gather}
+	H_{out} = \dfrac{H_{in}+2\times\text{padding}[0]-\text{dilation}[0]\times(\text{kernel\_size}[0]-1)-1}{\text{stride}[0]} + 1\\\\
+	W_{out} = \dfrac{W_{in}+2\times\text{padding}[1]-\text{dilation}[1]\times(\text{kernel\_size}[1] -1)-1}{\text{stride}[1]} + 1
+\end{gather}
+$$
 
 > [!INFO]
-> In PyTorch, an error is raised when the input and output sizes don't match. In Keras, the size
+> In PyTorch, an error is raised when the input and output sizes don't match. In Keras, the size is automatically inferred.
+
+> [!WARNING]
+> The PyTorch convention for arranging image dimensions is different, where the color channel is presented first.
+> $$\underbracket{(N, C_{in}, H_{in}, W_{in})}_{\text{input}}\rightarrow\underbracket{(N,C_{out}, H_{out}, W_{out})}_{\text{output}}$$
+> Other Python libraries, such as OpenCV, Tensorflow, Matplotlib, and Pillow, present the color channels last.
+> $$N\times H\times W\times C$$
+> This can be demonstrated by comparing the shape of an element from `dataset.data` with that of from a data loader.
 
 # Pooling Layer
 A <span style = "color:lightblue">pooling layer</span> **reduces the representation size** (*less computation*) and **provides spatial invariance**. Once features are detected, only an <u>approximate</u> location is needed.
