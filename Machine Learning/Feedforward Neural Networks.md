@@ -130,7 +130,7 @@ model = nn.Sequential(
 )
 ```
 
-Alternatively, the above design can be customized and implemented manually with [[Classes|object-oriented programming (OOP)]].
+Alternatively, a custom model of the above `Sequential` object can be customized and implemented manually with [[Classes|object-oriented programming (OOP)]].
 
 ```python
 class ANN(nn.Module):

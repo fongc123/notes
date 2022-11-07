@@ -57,7 +57,7 @@ Since convolution is a linear operation, the inclusion of [[Feedforward Neural N
 > Two convolution layers would be no more powerful than a single convolution layer.
 
 ## Convolutional Arithmetic
-Given input parameters, the output size after a convolution operation can be calculated and is often needed.
+Given input parameters, the output size after a convolution operation can be calculated.
 - <span style = "color:lightblue">kernel size</span>: size of the kernel (e.g., $3\times3$)
 - <span style = "color:lightblue">padding</span>: zero padding of input
 	- `valid`: no padding (*output shrinks*)
