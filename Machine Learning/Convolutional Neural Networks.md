@@ -1,6 +1,6 @@
 <span style = "color:lightblue">Convolutional neural networks</span> are commonly used in image classification and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
 
-A convolutional neural network normally consists of a series of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]] (*feature extraction*) which are then followed by one or a few fully-connected (*dense*) layers (*classification or regression*).
+A convolutional neural network normally consists of (1) a series of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]] (*feature extraction*) and (2) one or a few fully-connected or dense layers (*classification or regression*).
 
 ![[ml-cnn-components.png|600]]
 
@@ -55,6 +55,12 @@ Since convolution is a linear operation, the inclusion of [[Feedforward Neural N
 
 > [!INFO]
 > Two convolution layers would be no more powerful than a single convolution layer.
+
+## Convolutional Arithmetic
+Given parameters (e.g., kernel size, input size, stride, padding), the output size after a convolution operation can be calculated and is often needed.
+
+> [!INFO]
+> In PyTorch, an error is raised when the input and output sizes don't match. In Keras, the size
 
 # Pooling Layer
 A <span style = "color:lightblue">pooling layer</span> **reduces the representation size** (*less computation*) and **provides spatial invariance**. Once features are detected, only an <u>approximate</u> location is needed.

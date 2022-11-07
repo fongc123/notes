@@ -67,16 +67,6 @@ GPU Time (40000): 4.476001501083374
 Thus, parallel computations are faster on the GPU.
 
 # Modular Programming
-In PyTorch, neural networks, regardless of their complexity, are built by basic building blocks of modules. Some exemplar modules are shown below.
+In PyTorch, neural networks, regardless of their complexity, are built by basic building blocks of modules.
 
-```python
-import torch.nn as nn
-
-# linear module
-model = nn.Linear()
-
-# a module of modules
-model = nn.Sequential(...)
-```
-
-A model can be a singular module or can be comprised of multiple modules. With this, a **customized** model (e.g., flatten layer in [[Convolutional Neural Networks|CNNs]] to vectorize matrices) can be built regardless of whether a layer that achieves a certain function exists.
+A model can be a singular module or can be comprised of multiple modules, creating a hierarchical structure. With this, a **customized** model (e.g., flatten layer in [[Convolutional Neural Networks|CNNs]] to vectorize matrices) can be built regardless of whether a layer that achieves a certain function exists.
