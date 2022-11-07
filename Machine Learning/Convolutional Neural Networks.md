@@ -76,3 +76,11 @@ Like [[ML Basics#Choosing Hyperparameters|other neural networks]], hyperparamete
 - A series of convolutional layers followed by pooling layers are repeated.
 - Number of feature maps are increased (e.g., $32\rightarrow64\rightarrow128$)
 
+# Code
+
+```python
+import torch.nn as nn
+
+nn.Conv2d()
+```
+

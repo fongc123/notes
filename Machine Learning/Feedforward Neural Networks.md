@@ -124,6 +124,9 @@ A sample artificial neural network is constructed with PyTorch's `Sequential` ob
 import torch.nn as nn
 
 model = nn.Sequential(
-	
+	nn.Linear(784, 128),  # linear layer with 784 inputs (e.g. MNIST dataset)
+	nn.ReLU(),
+	nn.Linear(128, 10)    # 10 output classes
 )
 ```
+

@@ -79,4 +79,4 @@ model = nn.Linear()
 model = nn.Sequential(...)
 ```
 
-A model can be a singular module or can be comprised of multiple modules.
+A model can be a singular module or can be comprised of multiple modules. With this, a **customized** model (e.g., flatten layer in [[Convolutional Neural Networks|CNNs]] to vectorize matrices) can be built regardless of whether a layer that achieves a certain function exists.
