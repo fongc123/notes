@@ -105,16 +105,67 @@ Like [[ML Basics#Choosing Hyperparameters|other neural networks]], hyperparamete
 - Number of feature maps are increased (e.g., $32\rightarrow64\rightarrow128$)
 
 # Code
-A sample convolutional neural network is implemented with PyTorch.
+Similar to building [[Feedforward Neural Networks#Code|ANNs]], a custom convolutional neural network is implemented with PyTorch.
 
 ```python
 import torch.nn as nn
 
-nn.Conv2d(
-	in_channels = 1,
-	out_channels = 32,
-	kernel_size = 3,
-	stride = 2
+class CNN(nn.Module):
+	def __init__(self, K):
+		super(CNN, self).__init__()
+
+		# define the convolution layers
+		self.conv = nn.Sequential(
+			nn.Conv2d(1, 32, kernel_size = 3, stride = 2), # input: 2, output: 32
+			nn.ReLU(),
+			nn.Conv2d(32, 64, kernel_size = 3, stride = 2),
+			nn.ReLU(),
+			nn.Conv2d(64, 128, kernel_size = 3, stride = 2),
+			nn.ReLU()
+		)
+
+		# define the fully-connected linear layers
+		self.dense = nn.Sequential(
+			nn.Linear(128 * 2 * 2, 1024), # calculate output of convolution
+			nn.ReLU(),
+			nn.Linear(1024, K)
+		)
+
+	def forward(self, X):
+		out = self.conv(X)
+		out = out.view(out.size(0), -1)
+		out = self.dense(out)
+
+		return out
+```
+
+The `Conv2d` module is used for convolution.
+- `in_channels`: number of **input channels** ($1$ and $3$ for grayscale and images respectively)
+- `out_channels`: number of **output channels** produced by convolution
+- `kernel_size`: size of the kernel
+- `stride`: stride
+
+> [!INFO]
+> <span style = "color:lightblue">Dropout regularization</span> can be performed to drop out random nodes in the input based on a probability $p$. This prevents the model on relying on certain inputs too much.
+> ```python
+> nn.Dropout(p = 0.2)
+> ```
+
+It is important to calculate the input and output sizes (*see [[#Convolutional Arithmetic|convolutional arithmetic]]*). Alternatively, a convolutional neural network can be implemented with the `Sequential` module.
+
+```python
+model = nn.Sequential(
+	nn.Conv2d(3, 32, kernel_size = 3, stride = 2),
+	nn.ReLU(),
+	nn.Conv2d(32, 64, kernel_size = 3, stride = 2),
+	nn.ReLU(),
+	nn.Conv2d(64, 128, kernel_size = 3, stride = 2),
+	nn.ReLU(),
+	nn.Flatten(),
+	nn.Dropout(p = 0.2),
+	nn.Linear(128 * 2 * 2, 1024)
+	nn.Linear(1024, K)
 )
 ```
 
+The `Flatten` module substitutes the `view` method.
