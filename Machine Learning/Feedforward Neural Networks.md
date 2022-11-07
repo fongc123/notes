@@ -123,5 +123,7 @@ A sample artificial neural network is constructed with PyTorch's `Sequential` ob
 ```python
 import torch.nn as nn
 
-
+model = nn.Sequential(
+	
+)
 ```
