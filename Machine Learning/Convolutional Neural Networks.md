@@ -69,10 +69,12 @@ The formula for calculating the output shape can be found in the [PyTorch docume
 
 $$
 \begin{gather}
-	H_{out} = \dfrac{H_{in}+2\times\text{padding}[0]-\text{dilation}[0]\times(\text{kernel\_size}[0]-1)-1}{\text{stride}[0]} + 1\\\\
-	W_{out} = \dfrac{W_{in}+2\times\text{padding}[1]-\text{dilation}[1]\times(\text{kernel\_size}[1] -1)-1}{\text{stride}[1]} + 1
+	H_{out} = \left\lfloor\dfrac{H_{in}+2\times\text{padding}[0]-\text{dilation}[0]\times(\text{kernel\_size}[0]-1)-1}{\text{stride}[0]} + 1\right\rfloor\\\\
+	W_{out} = \left\lfloor\dfrac{W_{in}+2\times\text{padding}[1]-\text{dilation}[1]\times(\text{kernel\_size}[1] -1)-1}{\text{stride}[1]} + 1\right\rfloor
 \end{gather}
 $$
+
+The $\lfloor$ and $\rfloor$ symbols denote the floor operation.
 
 > [!INFO]
 > In PyTorch, an error is raised when the input and output sizes don't match. In Keras, the size is automatically inferred.
@@ -83,6 +85,22 @@ $$
 > Other Python libraries, such as OpenCV, Tensorflow, Matplotlib, and Pillow, present the color channels last.
 > $$N\times H\times W\times C$$
 > This can be demonstrated by comparing the shape of an element from `dataset.data` with that of from a data loader.
+
+### Example
+In this [[#Code|example]], there are **three** convolutional layers, where the input size is $28\times28\times3$, the padding is $0$, the dilation is $1$, the kernel size is $3\times3$, and the stride is $2$. First, the shape of the output after the first convolution is calculated.
+
+$$H_{1,out},W_{1,out}=\left\lfloor\dfrac{28+2\times0-1\times(3-1)-1}{2}+1\right\rfloor=13$$
+
+The height and width after the first convolution are equal. Next, the shapes of the second and third convolutions are calculated.
+
+$$
+\begin{gather}
+H_{2,out},W_{2,out}=\left\lfloor\dfrac{13+2\times0-1\times(3-1)-1}{2}+1\right\rfloor=6 \\\\
+H_{3,out},W_{3,out}=\left\lfloor\dfrac{6+2\times0-1\times(3-1)-1}{2}+1\right\rfloor=2
+\end{gather}
+$$
+
+Thus, the output after the three convolutional layers is $2\times2$.
 
 # Pooling Layer
 A <span style = "color:lightblue">pooling layer</span> **reduces the representation size** (*less computation*) and **provides spatial invariance**. Once features are detected, only an <u>approximate</u> location is needed.
@@ -126,7 +144,9 @@ class CNN(nn.Module):
 
 		# define the fully-connected linear layers
 		self.dense = nn.Sequential(
-			nn.Linear(128 * 2 * 2, 512), # calculate output of convolution
+			# calculate output of convolution
+			nn.Linear(128 * 2 * 2, 512), # no. of channels * width * height
+
 			nn.ReLU(),
 			nn.Linear(512, K)
 		)
@@ -162,7 +182,7 @@ model = nn.Sequential(
 	nn.Conv2d(64, 128, kernel_size = 3, stride = 2),
 	nn.ReLU(),
 	nn.Flatten(),
-	nn.Linear(128 * 2 * 2, 512),
+	nn.Linear(128 * 2 * 2, 512), # no. of channels * width * height
 	nn.ReLU(),
 	nn.Linear(512, K)
 )
