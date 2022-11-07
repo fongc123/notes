@@ -126,9 +126,9 @@ class CNN(nn.Module):
 
 		# define the fully-connected linear layers
 		self.dense = nn.Sequential(
-			nn.Linear(128 * 2 * 2, 1024), # calculate output of convolution
+			nn.Linear(128 * 2 * 2, 512), # calculate output of convolution
 			nn.ReLU(),
-			nn.Linear(1024, K)
+			nn.Linear(512, K)
 		)
 
 	def forward(self, X):
@@ -151,7 +151,7 @@ The `Conv2d` module is used for convolution.
 > nn.Dropout(p = 0.2)
 > ```
 
-It is important to calculate the input and output sizes (*see [[#Convolutional Arithmetic|convolutional arithmetic]]*). Alternatively, a convolutional neural network can be implemented with the `Sequential` module.
+It is important to calculate the input and output sizes (*see [[#Convolutional Arithmetic|convolutional arithmetic]]*). Equivalently, a convolutional neural network can be implemented with the `Sequential` module.
 
 ```python
 model = nn.Sequential(
@@ -162,10 +162,18 @@ model = nn.Sequential(
 	nn.Conv2d(64, 128, kernel_size = 3, stride = 2),
 	nn.ReLU(),
 	nn.Flatten(),
-	nn.Dropout(p = 0.2),
-	nn.Linear(128 * 2 * 2, 1024)
-	nn.Linear(1024, K)
+	nn.Linear(128 * 2 * 2, 512),
+	nn.ReLU(),
+	nn.Linear(512, K)
 )
 ```
 
 The `Flatten` module substitutes the `view` method.
+
+Next, training the model is the same as any [[Regression#Code Template|other]] machine learning model.
+
+> [!INFO]
+> The `model.train()` line should be added before training is done, while the `model.eval()` line should be added before evaluation is done.
+> 
+> Some layers, such as `Dropout` and `BatchNorm`, behave differently under different [modes](https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch).
+

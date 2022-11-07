@@ -80,7 +80,7 @@ Too large of a learning rate causes drastic updates, which lead to divergent beh
 The learning rate does not need to be fixed and can be optimized in each iteration. <span style = "color:lightblue">Adaptive learning rate methods</span> include Adam and RMSprop.
 
 ## Code Template
-A code template for creating a linear regression model is shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems as well.
+A code template for creating a linear regression model is shown below. Although there may be a few adjustments, the template is applicable to other machine learning problems (e.g., classification) as well.
 
 ```python
 import torch
