@@ -13,7 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "Machine Learning/Convolutional Neural Networks.md",
+=======
+                "file": "Data Visualization/Principles.md",
+>>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
                 "mode": "preview",
                 "source": false
               }
@@ -109,7 +113,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "Machine Learning/Convolutional Neural Networks.md",
+=======
+                "file": "Data Visualization/Principles.md",
+>>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +134,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "Machine Learning/Convolutional Neural Networks.md",
+=======
+                "file": "Data Visualization/Principles.md",
+>>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -149,7 +161,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "Machine Learning/Convolutional Neural Networks.md"
+=======
+                "file": "Data Visualization/Principles.md"
+>>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
               }
             }
           },
@@ -170,6 +186,7 @@
   },
   "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "Machine Learning/ML Basics.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/Convolutional Neural Networks.md",
@@ -180,5 +197,17 @@
     "Machine Learning/Decision Tree.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Image Processing/Interpolation & Transformation.md"
+=======
+    "Data Visualization/Spatial Data.md",
+    "Data Visualization/Multivariate Data.md",
+    "Data Visualization/Visualization Basics.md",
+    "Data Visualization/Trajectory Data.md",
+    "Data Visualization/Color.md",
+    "Data Visualization/Visual Channels.md",
+    "Data Visualization/Time Series.md",
+    "Data Visualization/References.md",
+    "Data Visualization/Design Rules.md",
+    "Data Visualization/Design Tasks.md"
+>>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
   ]
 }
