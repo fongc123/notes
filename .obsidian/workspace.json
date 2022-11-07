@@ -13,36 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "Machine Learning/Convolutional Neural Networks.md",
-=======
                 "file": "Data Visualization/Principles.md",
->>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
                 "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c5ea0f82cf673e93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Spatial Filtering.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4cf960a5e51fb1f2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/ML Basics.md",
-                "mode": "source",
                 "source": false
               }
             }
@@ -76,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bitplane",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,11 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "Machine Learning/Convolutional Neural Networks.md",
-=======
                 "file": "Data Visualization/Principles.md",
->>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,11 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "Machine Learning/Convolutional Neural Networks.md",
-=======
                 "file": "Data Visualization/Principles.md",
->>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -161,11 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "Machine Learning/Convolutional Neural Networks.md"
-=======
                 "file": "Data Visualization/Principles.md"
->>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
               }
             }
           },
@@ -184,20 +144,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "9378b84bac540416",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "Machine Learning/ML Basics.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Image Processing/Spatial Filtering.md",
-    "Image Processing/Intensity Transformations.md",
-    "Data Mining/Data Preprocessing.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Decision Tree.md",
-    "Machine Learning/Recurrent Neural Networks.md",
-    "Image Processing/Interpolation & Transformation.md"
-=======
+    "conflict-files-obsidian-git.md",
+    "Data Visualization/Principles.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Visualization/Visualization Basics.md",
@@ -205,9 +155,6 @@
     "Data Visualization/Color.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Time Series.md",
-    "Data Visualization/References.md",
-    "Data Visualization/Design Rules.md",
-    "Data Visualization/Design Tasks.md"
->>>>>>> 8e0ab25 (PC vault backup: 2022-11-07 14:33:56)
+    "Data Visualization/References.md"
   ]
 }
