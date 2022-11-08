@@ -257,3 +257,4 @@ $$
 
 ![[image-processing-top-bot-hat.png|600]]
 
+The above example demonstrates the use of the transformations in non-uniform illumination in the image. Objects in the lower right corner of the image get cut off after **only** thresholding (b) but are retained after top-hat transformation (d) **and** thresholding (e).
