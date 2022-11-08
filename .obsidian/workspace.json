@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Custom Datasets & Dataloaders.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Custom Datasets & Dataloaders.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Custom Datasets & Dataloaders.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -182,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Custom Datasets & Dataloaders.md"
+                "file": "Image Processing/Morphological Image Processing.md"
               }
             }
           },
@@ -203,6 +203,7 @@
   },
   "active": "797a8027ec7fa519",
   "lastOpenFiles": [
+    "Machine Learning/Custom Datasets & Dataloaders.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Data Visualization/Color.md",
     "Machine Learning/Convolutional Neural Networks.md",
@@ -211,7 +212,6 @@
     "Machine Learning/Recurrent Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/ML Basics.md",
-    "Machine Learning/Decision Tree.md",
-    "Image Processing/Spatial Filtering.md"
+    "Machine Learning/Decision Tree.md"
   ]
 }
