@@ -80,15 +80,19 @@
             }
           },
           {
-            "id": "796ee21c1f604cdb",
+            "id": "73fff4934f08eff3",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Image Processing/Image Segmentation.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -213,17 +217,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "39b2d775df00e09a",
+  "active": "73fff4934f08eff3",
   "lastOpenFiles": [
-    "Image Processing/Morphological Image Processing.md",
-    "Image Processing/Image Segmentation.md",
-    "Machine Learning/Custom Datasets & Dataloaders.md",
-    "Machine Learning/PyTorch & CUDA Setup.md",
-    "Data Visualization/Color.md",
-    "Machine Learning/Convolutional Neural Networks.md",
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Acquisition & Representation.md",
+    "Image Processing/Image Processing Basics.md",
+    "Image Processing/Frequency Filtering.md",
     "Machine Learning/Regression.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Recurrent Neural Networks.md",
-    "Machine Learning/Feedforward Neural Networks.md"
+    "Image Processing/Image Segmentation.md",
+    "Image Processing/Morphological Image Processing.md"
   ]
 }

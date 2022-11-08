@@ -185,7 +185,7 @@ With greater values of $n$, it can easily approximate the ideal low-pass filter 
 ![[image-processing-freq-butterworth.png|600]]
 
 ## High-frequency Emphasis
-Similar to [[Spatial Filtering#Unsharp Masking|Unsharp masking]] in the spatial domain, <span style = "color:lightblue">high-frequency emphasis</span> can be performed in the frequency domain. The filter is applied in the frequency domain.
+Similar to [[Spatial Filtering#Unsharp Masking|unsharp masking]] in the spatial domain, <span style = "color:lightblue">high-frequency emphasis</span> can be performed in the frequency domain. The filter is applied in the frequency domain.
 
 $$g(x,y)=\mathcal{F}^{-1}\{\left[k_1+k_2H_{HP}(u,v)\right]F(u,v)\}$$
 
