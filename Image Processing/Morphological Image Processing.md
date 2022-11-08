@@ -142,3 +142,45 @@ It is the complement of the union of all translations of $B$ that do not overlap
 With previous methods, notably [[#Erosion|erosion]], [[#Dilation|dilation]], [[#Opening|opening]], and [[#Closing|closing]], there are various transformation algorithms to extract and filter specific shapes.
 
 ### Hit-or-Miss Transform
+The <span style = "color:lightblue">hit-or-miss transform (HMT)</span> is a basic tool for shape detection that detects a specified configuration (i.e., pattern or shape) in a binary image.
+
+$$I\circledast B=\{z|(B)_z\subseteq I\}$$
+
+Three examples are shown below, where different patterns are detected in the original image $I$.
+
+![[image-processing-hmt.png|600]]
+
+### Boundary Extraction
+The <span style = "color:lightblue">boundary</span> of an object $\beta(A)$ is the difference between the object and the [[#Erosion|erosion]] of the object.
+
+$$\beta(A)=A-(A\ominus B)$$
+
+### Hole Filling
+<span style = "color:lightblue">Holes</span> are a background region surrounded by a connected border of foreground pixels. The holes are filled by foreground pixels, creating a full foreground object.
+
+$$X_k=(X_{k-1}\oplus B)\cap I^c\quad\text{for}\space k=1,2,3,\dots$$
+
+$X$ is the set of holes in the object (i.e., background pixels in the foreground), and $X_0$ is the set of all zeros except the starting hole. The above equation is repeated (i.e., region is dilated) until $X_k=X_{k-1}$ (i.e., size of $X$ is unchanged).
+
+> [!INFO]
+> The structuring element $B$ can be four-connectivity or eight-connectivity, where the latter includes diagonal pixels as well.
+> $$
+> \begin{bmatrix}
+> \space & \checkmark & \space \\
+> \checkmark & \cdot & \checkmark \\
+> \space & \checkmark & \space
+> \end{bmatrix}\quad\text{or}\quad
+> \begin{bmatrix}
+> \checkmark & \checkmark & \checkmark \\
+> \checkmark & \cdot & \checkmark \\
+> \checkmark & \checkmark & \checkmark
+> \end{bmatrix}
+> $$
+> The $\cdot$ symbol represents the center pixel.
+
+### Extraction of Connected Components
+The objective of the <span style = "color:lightblue">extraction of connected components</span> is to find connected components of foreground objects in a binary image $I$.
+
+$$X_k=(X_{k-1}\oplus B)\cap I\quad\text{for}\space k=1,2,3,\dots$$
+
+$X$ is the set of pixels belonging to a connected component, and $X_0$ is the 
