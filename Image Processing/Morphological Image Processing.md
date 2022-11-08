@@ -183,4 +183,77 @@ The objective of the <span style = "color:lightblue">extraction of connected com
 
 $$X_k=(X_{k-1}\oplus B)\cap I\quad\text{for}\space k=1,2,3,\dots$$
 
-$X$ is the set of pixels belonging to a connected component, and $X_0$ is the 
+$X$ is the set of pixels belonging to a connected component, and $X_0$ is the set of zeros except the starting point. Again, the above equation is repeated (i.e., region is dilated) until $X_k=X_{k-1}$.
+
+This method is useful in **finding candidates of object recognition**. An exemplar is shown below, where connected components are extracted from an X-ray image of a bone fragments in a chicken filet after thresholding.
+
+![[image-processing-connected-extract.png|600]]
+
+# Grayscale Morphology
+Unlike [[#Binary Morphology|binary morphology]], images are now in grayscale, where $f(x,y)$ is the input image and $b(x,y)$ is the structuring element.
+
+## Erosion & Dilation
+Grayscale erosion and dilation achieve the same outcome as binary [[#Erosion|erosion]] and [[#Dilation|dilation]]. However, there are two types of structuring elements: <span style = "color:lightblue">flat</span> and <span style = "color:lightblue">non-flat</span>.
+
+![[image-processing-flat-se.png|250]]
+
+Typically, flat structuring elements are used due to their constant intensity profile. The <span style = "color:lightblue">grayscale erosion</span> of $f$ by a **flat structuring element** $b$ is defined as the **minimum value** of the image in the region that coincides with $b$.
+
+$$\left[f\ominus b\right](x,y)=\min_{(s,t)\in b}\{f(x+s,y+t)\}$$
+The <span style = "color:lightblue">grayscale dilation</span> of $f$ by a **flat structuring element** $b$ is defined as the **maximum value** of the image in the window spanned by $\hat{b}$, where $\hat{b}$ is the reflection of $b$.
+
+$$
+\begin{gather}
+\left[f\oplus b\right](x,y)=\max_{(s,t)\in \hat{b}}\{f(x-s,y-t)\} \\\\
+\hat{b}(c,d)=b(-c,-d)
+\end{gather}
+$$
+
+On the other hand, the expressions for the grayscale erosion and dilation of $f$ by a **non-flat structuring element** $b$ are shown below.
+
+$$
+\begin{gather}
+\left[f\ominus b_N\right](x,y)=\min_{(s,t)\in b_N}\{f(x+s,y+t)-b_N(s,t)\} \\\\
+\left[f\oplus b_N\right](x,y)=\max_{(s,t)\in \hat{b}_N}\{f(x-s,y-t)+\hat{b}_N(s,t)\}
+\end{gather}
+$$
+
+The values within the structuring element are also considered. An example of grayscale erosion and dilation is shown below.
+
+![[image-processing-grayscale-ero-dil.png|600]]
+
+## Opening & Closing
+Both <span style = "color:lightblue">grayscale opening</span> and <span style = "color:lightblue">grayscale closing</span> have the same expressions as their [[#Opening|binary counterparts]]. They also have a dual relationship with respect to their complement and reflection.
+
+$$
+\begin{gather}
+f\circ b=(f\ominus b)\oplus b \\\\
+f\cdot b = (f\oplus b)\ominus b
+\end{gather}
+$$
+
+![[image-processing-opening-closing-interpretation.png|600]]
+
+Opening **suppresses bright details smaller than the structuring element**, while closing **suppresses dark details**. Both operations are useful in image smoothing and noise removal.
+
+![[image-processing-opening-closing.png|600]]
+
+## Morphological Gradient
+The <span style = "color:lightblue">morphological gradient</span> is defined as the difference between the dilation and the erosion of an image $f$ by a structuring element $b$.
+
+$$g=(f\oplus b)-(f\ominus b)$$
+
+This operation **highlights sharp gray-level transitions**.
+
+## Top-Hat & Bottom-Hat
+The <span style = "color:lightblue">top-hat transformation</span> is the difference between the image and the result of opening, while the <span style = "color:lightblue">bottom-hat transformation</span> is that of between the result of closing and the image.
+
+$$
+\begin{gather}
+T_{hat}(f)=f-(f\circ b) \\\\
+B_{hat}(f)=(f\cdot b)-f
+\end{gather}
+$$
+
+![[image-processing-top-bot-hat.png|600]]
+
