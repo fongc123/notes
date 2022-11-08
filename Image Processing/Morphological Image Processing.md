@@ -138,3 +138,7 @@ It is the complement of the union of all translations of $B$ that do not overlap
 > 
 > $$(A\circ B)\circ B=A\circ B$$
 
+## Algorithms
+With previous methods, notably [[#Erosion|erosion]], [[#Dilation|dilation]], [[#Opening|opening]], and [[#Closing|closing]], there are various transformation algorithms to extract and filter specific shapes.
+
+### Hit-or-Miss Transform
