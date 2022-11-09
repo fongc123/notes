@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md",
+                "file": "Machine Learning/Classification.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md",
+                "file": "Machine Learning/Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md",
+                "file": "Machine Learning/Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/PyTorch & CUDA Setup.md"
+                "file": "Machine Learning/Classification.md"
               }
             }
           },
@@ -144,11 +144,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9378b84bac540416",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
+    "Machine Learning/PyTorch & CUDA Setup.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/PyTorch & CUDA Setup.md",
     "Data Visualization/Principles.md",
     "conflict-files-obsidian-git.md",
     "Data Visualization/Spatial Data.md",
