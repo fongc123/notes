@@ -82,4 +82,7 @@ g_y(x,y)=\dfrac{\partial f(x,y)}{\partial y} = f(x,y+1)-f(x,y)
 $$
 
 Other operators are listed below.
-- <span style = "color:lightblue">Roberts cross operator</span>: $2\times2$ kernel for diagonal edge detection
+- <span style = "color:lightblue">Roberts cross operator</span>: $2\times2$ kernel for <u>diagonal</u> edge detection
+- <span style = "color:lightblue">Prewitt operator</span>: $3\times3$ kernel for directional edge detection
+- <span style = "color:lightblue">Sobel operator</span>: $3\times3$ kernel for edge detection
+
