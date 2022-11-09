@@ -157,7 +157,6 @@ $$
 $$
 ![[image-processing-laplacian.png|600]]
 
-
 ## Sharpening Images
 
 Images can be sharpened by **adding edges to the images** to enhance details.
