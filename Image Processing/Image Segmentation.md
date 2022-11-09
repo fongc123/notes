@@ -20,3 +20,6 @@ The following image characteristics produce sharp local changes.
 - <span style = "color:lightblue">point</span>: foreground pixel (*brighter*) <u>surrounded</u> by background pixels (*darker*)
 
 ## Derivatives
+To obtain the **differences** between pixels, <span style = "color:lightblue">derivatives</span> are used. The <span style = "color:lightblue">forward difference</span> considers the next and current pixels, while the <span style = "color:lightblue">backward difference</span> considers the previous and current pixels. Generally, however, <span style = "color:lightblue">central differences</span>, which consider the next and previous pixels, are used.
+
+| **Derivative** | 
