@@ -118,7 +118,7 @@ It is *technically* an activation function, but it is not meant for hidden layer
 > Alternatively, `nn.NLLLoss()` is the standalone cross entropy loss.
 
 # Code
-A sample artificial neural network is constructed with PyTorch's `Sequential` object.
+A sample **artificial neural network** is constructed with PyTorch's `Sequential` object that is composed of multiple layers (*see [[PyTorch & CUDA Setup#Modular Programming|modules in PyTorch]]*).
 
 ```python
 import torch.nn as nn
@@ -129,4 +129,27 @@ model = nn.Sequential(
 	nn.Linear(128, 10)    # 10 output classes
 )
 ```
+
+Alternatively, a custom model of the above `Sequential` module can be customized and implemented manually with [[Classes|object-oriented programming (OOP)]].
+
+```python
+class ANN(nn.Module):
+	def __init__(self):
+		super(ANN, self).__init__()
+		self.layer1 = Linear(784, 128)
+		self.layer2 = ReLU()
+		self.layer3 = Linear(128, 10)
+	def forward(self, x):
+		x = self.layer1(x)
+		x = self.layer2(x)
+		x = self.layer3(x)
+
+		return x
+
+# initialize the model
+model = ANN()
+```
+- The class inherits the `nn.Module` class (i.e., the class is a PyTorch module).
+- The layers are defined in the constructor method.
+- The `forward` method applies the layers to an input `x`.
 

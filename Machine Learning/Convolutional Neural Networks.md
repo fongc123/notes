@@ -1,6 +1,6 @@
 <span style = "color:lightblue">Convolutional neural networks</span> are commonly used in image classification and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
 
-A convolutional neural network normally consists of a series of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]] (*feature extraction*) which are then followed by one or a few fully-connected (*dense*) layers (*classification or regression*).
+A convolutional neural network normally consists of (1) a series of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]] (*feature extraction*) and (2) one or a few fully-connected or dense layers (*classification or regression*).
 
 ![[ml-cnn-components.png|600]]
 
@@ -56,6 +56,52 @@ Since convolution is a linear operation, the inclusion of [[Feedforward Neural N
 > [!INFO]
 > Two convolution layers would be no more powerful than a single convolution layer.
 
+## Convolutional Arithmetic
+Given input parameters, the output size after a convolution operation can be calculated.
+- <span style = "color:lightblue">kernel size</span>: size of the kernel (e.g., $3\times3$)
+- <span style = "color:lightblue">padding</span>: zero padding of input
+	- `valid`: no padding (*output shrinks*)
+	- `same`: padding to ensure input and output have the same size
+- <span style = "color:lightblue">stride</span>: down sampling factor (*see [[#Pooling Layer|pooling layers]]*)
+- <span style = "color:lightblue">dilation</span>: spacing between kernel points
+
+The formula for calculating the output shape can be found in the [PyTorch documentation](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html), where $H$ represents the height, $W$ represents the width, $C$ represents the color, and $N$ represents the number of samples.
+
+$$
+\begin{gather}
+	H_{out} = \left\lfloor\dfrac{H_{in}+2\times\text{padding}[0]-\text{dilation}[0]\times(\text{kernel\_size}[0]-1)-1}{\text{stride}[0]} + 1\right\rfloor\\\\
+	W_{out} = \left\lfloor\dfrac{W_{in}+2\times\text{padding}[1]-\text{dilation}[1]\times(\text{kernel\_size}[1] -1)-1}{\text{stride}[1]} + 1\right\rfloor
+\end{gather}
+$$
+
+The $\lfloor$ and $\rfloor$ symbols denote the floor operation.
+
+> [!INFO]
+> In PyTorch, an error is raised when the input and output sizes don't match. In Keras, the size is automatically inferred.
+
+> [!WARNING]
+> The PyTorch convention for arranging image dimensions is different, where the color channel is presented first.
+> $$\underbracket{(N, C_{in}, H_{in}, W_{in})}_{\text{input}}\rightarrow\underbracket{(N,C_{out}, H_{out}, W_{out})}_{\text{output}}$$
+> Other Python libraries, such as OpenCV, Tensorflow, Matplotlib, and Pillow, present the color channels last.
+> $$N\times H\times W\times C$$
+> This can be demonstrated by comparing the shape of an element from `dataset.data` with that of from a data loader.
+
+### Example
+In this [[#Code|example]], there are **three** convolutional layers, where the input size is $28\times28\times3$, the padding is $0$, the dilation is $1$, the kernel size is $3\times3$, and the stride is $2$. First, the shape of the output after the first convolution is calculated.
+
+$$H_{1,out},W_{1,out}=\left\lfloor\dfrac{28+2\times0-1\times(3-1)-1}{2}+1\right\rfloor=13$$
+
+The height and width after the first convolution are equal. Next, the shapes of the second and third convolutions are calculated.
+
+$$
+\begin{gather}
+H_{2,out},W_{2,out}=\left\lfloor\dfrac{13+2\times0-1\times(3-1)-1}{2}+1\right\rfloor=6 \\\\
+H_{3,out},W_{3,out}=\left\lfloor\dfrac{6+2\times0-1\times(3-1)-1}{2}+1\right\rfloor=2
+\end{gather}
+$$
+
+Thus, the output after the three convolutional layers is $2\times2$.
+
 # Pooling Layer
 A <span style = "color:lightblue">pooling layer</span> **reduces the representation size** (*less computation*) and **provides spatial invariance**. Once features are detected, only an <u>approximate</u> location is needed.
 
@@ -77,10 +123,77 @@ Like [[ML Basics#Choosing Hyperparameters|other neural networks]], hyperparamete
 - Number of feature maps are increased (e.g., $32\rightarrow64\rightarrow128$)
 
 # Code
+Similar to building [[Feedforward Neural Networks#Code|ANNs]], a custom convolutional neural network is implemented with PyTorch.
 
 ```python
 import torch.nn as nn
 
-nn.Conv2d()
+class CNN(nn.Module):
+	def __init__(self, K):
+		super(CNN, self).__init__()
+
+		# define the convolution layers
+		self.conv = nn.Sequential(
+			nn.Conv2d(1, 32, kernel_size = 3, stride = 2), # input: 2, output: 32
+			nn.ReLU(),
+			nn.Conv2d(32, 64, kernel_size = 3, stride = 2),
+			nn.ReLU(),
+			nn.Conv2d(64, 128, kernel_size = 3, stride = 2),
+			nn.ReLU()
+		)
+
+		# define the fully-connected linear layers
+		self.dense = nn.Sequential(
+			# calculate output of convolution
+			nn.Linear(128 * 2 * 2, 512), # no. of channels * width * height
+
+			nn.ReLU(),
+			nn.Linear(512, K)
+		)
+
+	def forward(self, X):
+		out = self.conv(X)
+		out = out.view(out.size(0), -1)
+		out = self.dense(out)
+
+		return out
 ```
+
+The `Conv2d` module is used for convolution.
+- `in_channels`: number of **input channels** ($1$ and $3$ for grayscale and images respectively)
+- `out_channels`: number of **output channels** produced by convolution
+- `kernel_size`: size of the kernel
+- `stride`: stride
+
+> [!INFO]
+> <span style = "color:lightblue">Dropout regularization</span> can be performed to drop out random nodes in the input based on a probability $p$. This prevents the model on relying on certain inputs too much.
+> ```python
+> nn.Dropout(p = 0.2)
+> ```
+
+It is important to calculate the input and output sizes (*see [[#Convolutional Arithmetic|convolutional arithmetic]]*). Equivalently, a convolutional neural network can be implemented with the `Sequential` module.
+
+```python
+model = nn.Sequential(
+	nn.Conv2d(3, 32, kernel_size = 3, stride = 2),
+	nn.ReLU(),
+	nn.Conv2d(32, 64, kernel_size = 3, stride = 2),
+	nn.ReLU(),
+	nn.Conv2d(64, 128, kernel_size = 3, stride = 2),
+	nn.ReLU(),
+	nn.Flatten(),
+	nn.Linear(128 * 2 * 2, 512), # no. of channels * width * height
+	nn.ReLU(),
+	nn.Linear(512, K)
+)
+```
+
+The `Flatten` module substitutes the `view` method.
+
+Next, training the model is the same as any [[Regression#Code Template|other]] machine learning model.
+
+> [!INFO]
+> The `model.train()` line should be added before training is done, while the `model.eval()` line should be added before evaluation is done.
+> 
+> Some layers, such as `Dropout` and `BatchNorm`, behave differently under different [modes](https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch).
 

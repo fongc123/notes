@@ -18,6 +18,14 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ab1e5dfdda7ccfa8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ]
       }
@@ -144,17 +152,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "9378b84bac540416",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Machine Learning/Classification.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Data Visualization/Principles.md",
-    "conflict-files-obsidian-git.md",
     "Data Visualization/Spatial Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Visualization/Visualization Basics.md",
-    "Data Visualization/Trajectory Data.md",
-    "Data Visualization/Color.md"
+    "Data Visualization/Trajectory Data.md"
   ]
 }
