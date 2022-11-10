@@ -1,4 +1,6 @@
-A classification model (a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Classification algorithms include [[Decision Tree|decision trees]], **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
+A classification model (i.e., a <span style = "color:lightblue">classifier</span>) takes as input <span style = "color:lightblue">non-class attribute values</span> and returns a <span style = "color:lightblue">class value</span>. Classification algorithms include [[Decision Tree|decision trees]], **rule-based**, **Bayesian**, **neural networks**, **support vector machines (SVM)**, and ***k*-nearest neighbors (KNN)**.
+
+Classification is a <span style = "color:lightblue">supervised</span> learning model.
 
 ## Binary Classification
 <span style = "color:lightblue">Binary classification</span> can be expressed as a linear combination of inputs $x$ and weights $w$ with a bias $b$. Inputs with higher weighting correlated to greater importance and affect the output more drastically (*similar to neurons*).
@@ -190,9 +192,7 @@ The `alpha` parameter determines whether [[#Prediction|Laplace correction]] shou
 ## Nearest Neighbor Classification
 A <span style = "color:lightblue">nearest neighbor classifier</span> assigns class labels to an object based on its **similarity** to objects in the training data.
 
-Similarity measures include the **Manhattan distance** ($\mathcal{l}_1$-distance) and **Euclidean distance** ($\mathcal{l}_2$-distance). The expression for the Euclidean distance is shown below for an $n$-dimensional space (i.e., $n$ attributes).
-
-$$dist(x_1,x_2)=\sqrt{\sum_{i=1}^{n}(x_{1i}-x_{2i})^2}$$
+Similarity measures include the [[Clustering#Similarity|Manhattan distance]] and [[Clustering#Similarity|Euclidean distance]].
 
 ### $k$-Nearest Neighbor (KNN)
 Given a new entry, the <span style = "color:lightblue">k-nearest neighbors</span> algorithm searches for the $k$ nearest training data entries based on a pre-defined distance metric and assigns the new entry the **majority class label in the nearest neighbor set**.
