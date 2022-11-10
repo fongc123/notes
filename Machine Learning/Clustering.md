@@ -95,7 +95,7 @@ Contrary to the [[#Single-link|single-link distance]], the <span style = "color:
 
 $$dist_{complete}(C_1,C_2)=\max_{x_1,x_2}\{dist(x_1,x_2)|x_1\in C_1,x_2\in C_2\}$$
 
-It tends to result in tight clusters. As it considers the maximum distance, it is is problematic if the clusters are elongated (i.e., non-circular).
+It tends to result in tight clusters. As it considers the maximum distance, it is problematic if the clusters are elongated (i.e., non-circular).
 
 ### Group Average
 The <span style = "color:lightblue">group average distance</span> is the average distance between any object in $C_1$ and any object in $C_2$, where $N_1$ is the number of elements in $C_1$ and $N_2$ is the number of elements in $C_2$.
