@@ -60,3 +60,31 @@ Due to its simplicity, there are several limitations with this method.
 $$SSE=\sum_{i=1}^{k}\sum_{x\in C_i}||x-c_i||^2$$
 
 # Hierarchical Clustering
+In <span style = "color:lightblue">hierarchical clustering</span>, data objects are grouped into a **tree of clusters** (i.e., clusters $\rightarrow$ sub-clusters $\rightarrow$ sub-sub-clusters). Again, [[#Similarity|similarity measures]] are used, where clusters are **merged** or **split** one at a time.
+
+> [!INFO]
+> A [[Multivariate Data#Layout Density|dendrogram]] or a nested cluster diagram are great visualization charts for this clustering method.
+
+There are two types of hierarchical clustering methods.
+- <span style = "color:lightblue">agglomerative</span> (*bottom-up*): start with <u>points</u> and <u>merge</u>
+- <span style = "color:lightblue">divisive</span> (*top-down*): start with one, all-inclusive <u>cluster</u> and <u>split</u>
+
+The steps for an <u>agglomerative</u> hierarchical clustering algorithm are listed below.
+1. Compute <span style = "color:lightblue">distance matrix</span> of the dataset.
+2. Initialize points as individual clusters.
+3. Merge the two closest clusters.
+4. Update distance matrix (*see [[#Cluster Distances|differences between clusters]]*).
+5. Repeat steps 3 and 4 until one cluster remains.
+
+## Cluster Distances
+As each cluster is a **set of points**, different definitions of distance between clusters will lead to different clustering behavior.
+
+The <span style = "color:lightblue">single-link distance</span> is the minimum distance between any object in a cluster $C_1$ and any object in another cluster $C_2$ (i.e., the closest pair of objects in both clusters).
+
+$$dist_{single}(C_1,C_2)=\min_{x_1,x_2}\{dist(x_1,x_2)|x_1\in C_1,x_2\in C_2\}$$
+
+It is reliant on a distance metric, such as [[#Similarity|Euclidean distance]], and results in long clusters.
+
+
+
+As it is a **single** link between two objects, it is sensitive to noise or slight changes.
