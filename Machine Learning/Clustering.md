@@ -79,12 +79,27 @@ The steps for an <u>agglomerative</u> hierarchical clustering algorithm are list
 ## Cluster Distances
 As each cluster is a **set of points**, different definitions of distance between clusters will lead to different clustering behavior.
 
-The <span style = "color:lightblue">single-link distance</span> is the minimum distance between any object in a cluster $C_1$ and any object in another cluster $C_2$ (i.e., the closest pair of objects in both clusters).
+### Single-link
+The <span style = "color:lightblue">single-link distance</span> is the minimum distance between any object in a cluster $C_1$ and any object in another cluster $C_2$ (i.e., the closest objects in both clusters).
 
 $$dist_{single}(C_1,C_2)=\min_{x_1,x_2}\{dist(x_1,x_2)|x_1\in C_1,x_2\in C_2\}$$
 
 It is reliant on a distance metric, such as [[#Similarity|Euclidean distance]], and results in long clusters.
 
-
+![[ml-hierarchical-clustering-single-link.png|600]]
 
 As it is a **single** link between two objects, it is sensitive to noise or slight changes.
+
+### Complete-link
+Contrary to the [[#Single-link|single-link distance]], the <span style = "color:lightblue">complete-link distance</span> is the maximum distance between any object in a cluster $C_1$ and any object in another cluster $C_2$ (i.e., the most dissimilar pair of objects).
+
+$$dist_{complete}(C_1,C_2)=\max_{x_1,x_2}\{dist(x_1,x_2)|x_1\in C_1,x_2\in C_2\}$$
+
+It tends to result in tight clusters. As it considers the maximum distance, it is is problematic if the clusters are elongated (i.e., non-circular).
+
+### Group Average
+The <span style = "color:lightblue">group average distance</span> is the average distance between any object in $C_1$ and any object in $C_2$, where $N_1$ is the number of elements in $C_1$ and $N_2$ is the number of elements in $C_2$.
+
+$$dist_{avg}(C_1,C_2)=\dfrac{1}{N_1\cdot N_2}\sum_{x_1\in C_1, x_2\in C_2}dist(x_1,x_2)$$
+
+It considers <u>all</u> objects in both clusters.
