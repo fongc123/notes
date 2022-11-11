@@ -19,6 +19,8 @@ The following image characteristics produce sharp local changes.
 - <span style = "color:lightblue">lines</span>: an edge segment where both sides of the line segment have significantly different intensities
 - <span style = "color:lightblue">point</span>: foreground pixel (*brighter*) <u>surrounded</u> by background pixels (*darker*)
 
+Detection normally involves smoothing and [[#Thresholding|thresholding]] as well.
+
 ## Derivatives
 To obtain a **finite difference** between pixels, the <span style = "color:lightblue">Taylor series estimation of a derivative</span> is used. The <span style = "color:lightblue">forward difference</span> considers the next and current pixels, while the <span style = "color:lightblue">backward difference</span> considers the previous and current pixels. Generally, however, <span style = "color:lightblue">central differences</span>, which consider the next and previous pixels, are used.
 
@@ -86,3 +88,11 @@ Other operators are listed below.
 - <span style = "color:lightblue">Prewitt operator</span>: $3\times3$ kernel for directional edge detection
 - <span style = "color:lightblue">Sobel operator</span>: $3\times3$ kernel for edge detection
 
+## Canny Edge Detector
+The <span style = "color:lightblue">Canny edge detector</span> is an advanced edge detection algorithm.
+1. **Low error rate**: all edges are found with no false edges
+2. **Well-localized edge points**: 
+
+# Thresholding
+
+d

@@ -4,52 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3d9f4bba28fa2c",
+        "id": "9fea9371bcd2e68e",
         "type": "tabs",
         "children": [
           {
-            "id": "39b2d775df00e09a",
+            "id": "8b12a45595ae2428",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8e9e0bdd3eb277c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Multivariate Data.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e6814ba1ca991b54",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Mining/Data Preprocessing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "05cff089972565a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "connectivity",
+                "query": "smoothing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md"
+                "file": "Image Processing/Image Segmentation.md"
               }
             }
           },
@@ -181,16 +144,16 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "39b2d775df00e09a",
+  "active": "8b12a45595ae2428",
   "lastOpenFiles": [
+    "Image Processing/Spatial Filtering.md",
     "Image Processing/Image Segmentation.md",
-    "Machine Learning/Clustering.md",
-    "Data Visualization/Multivariate Data.md",
     "Machine Learning/Classification.md",
     "Data Mining/Data Preprocessing.md",
-    "Image Processing/Spatial Filtering.md",
-    "Machine Learning/Feedforward Neural Networks.md",
+    "Data Visualization/Multivariate Data.md",
     "Image Processing/Morphological Image Processing.md",
+    "Machine Learning/Clustering.md",
+    "Machine Learning/Feedforward Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Machine Learning/Recurrent Neural Networks.md"
   ]
