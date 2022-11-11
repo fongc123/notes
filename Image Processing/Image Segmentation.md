@@ -89,9 +89,39 @@ Other operators are listed below.
 - <span style = "color:lightblue">Sobel operator</span>: $3\times3$ kernel for edge detection
 
 ## Canny Edge Detector
-The <span style = "color:lightblue">Canny edge detector</span> is an advanced edge detection algorithm.
+The <span style = "color:lightblue">Canny edge detector</span> is an advanced edge detection algorithm that creates thin edges.
 1. **Low error rate**: all edges are found with no false edges
-2. **Well-localized edge points**: 
+2. **Well-localized edge points**: the edges located must be close to the true edges
+3. **Single edge point response**: only one point is returned for each true edge point
+
+The algorithm consists of the following steps.
+1. Smooth the image with a [[Spatial Filtering#Gaussian Filter|Gaussian filter]].
+2. Compute the gradient magnitude and angle images (*see [[#Edge Detection|edge detection]]*).
+3. Apply [[#Non-maxima Suppression|non-maximum suppression]] to the gradient magnitude image.
+4. Apply [[#Double Thresholding|double thresholding]] and [[#Connectivity Analysis|connectivity analysis]] to detect *and* link edges.
+
+The example below shows a head CT image (a), the thresholded gradient of the smoothed image (b), and the image obtained using the **Canny edge detector** algorithm.
+
+![[image-processing-canny-edge.png|600]]
+
+All edges are thin and visible. Additionally, edges belonging to the spine are also highlighted.
+
+### Non-maximum Suppression
+<span style = "color:lightblue">Non-maximum suppression</span> removes unwanted pixels which may not constitute an edge. Each pixel is set to $0$ (i.e., suppressed) if it is <u>not</u> a local maximum in its neighborhood in the **direction** of the gradient.
+
+For a $3\times3$ region, there are four basic edge directions: horizontal, $-45\degree$, vertical, and $+45\degree$.
+
+![[image-processing-nonmax-supp-1.png|600]]
+
+The basic direction $d_k$ that is closest to the actual gradient angle $\alpha$ is selected. For pixels that have a magnitude that is less than one or both of its neighbors (i.e., before and after in the direction) are set to $0$. This results in a binary image with thin edges.
+
+> [!INFO]
+> Non-maxima suppression is also used in **identifying the most optimal bounding box** in [[ML Basics|machine learning]] applications.
+
+### Double Thresholding
+
+### Connectivity Analysis
+d
 
 # Thresholding
 
