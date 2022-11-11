@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4947fa38b376b958",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Processing/Intensity Transformations.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -146,15 +158,15 @@
   },
   "active": "8b12a45595ae2428",
   "lastOpenFiles": [
-    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Image Compression.md",
     "Image Processing/Image Segmentation.md",
-    "Machine Learning/Classification.md",
-    "Data Mining/Data Preprocessing.md",
-    "Data Visualization/Multivariate Data.md",
-    "Image Processing/Morphological Image Processing.md",
-    "Machine Learning/Clustering.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Machine Learning/PyTorch & CUDA Setup.md",
-    "Machine Learning/Recurrent Neural Networks.md"
+    "Image Processing/Color Processing.md",
+    "Image Processing/Image Restoration.md",
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Acquisition & Representation.md"
   ]
 }

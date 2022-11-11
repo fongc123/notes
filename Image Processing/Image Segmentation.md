@@ -98,7 +98,7 @@ The algorithm consists of the following steps.
 1. Smooth the image with a [[Spatial Filtering#Gaussian Filter|Gaussian filter]].
 2. Compute the gradient magnitude and angle images (*see [[#Edge Detection|edge detection]]*).
 3. Apply [[#Non-maxima Suppression|non-maximum suppression]] to the gradient magnitude image.
-4. Apply [[#Double Thresholding|double thresholding]] and [[#Connectivity Analysis|connectivity analysis]] to detect *and* link edges.
+4. Apply [[#Hysteresis Thresholding|double thresholding]] and connectivity analysis to detect *and* link edges.
 
 The example below shows a head CT image (a), the thresholded gradient of the smoothed image (b), and the image obtained using the **Canny edge detector** algorithm.
 
@@ -113,16 +113,46 @@ For a $3\times3$ region, there are four basic edge directions: horizontal, $-45\
 
 ![[image-processing-nonmax-supp-1.png|600]]
 
-The basic direction $d_k$ that is closest to the actual gradient angle $\alpha$ is selected. For pixels that have a magnitude that is less than one or both of its neighbors (i.e., before and after in the direction) are set to $0$. This results in a binary image with thin edges.
+The basic direction $d_k$ that is closest to the actual gradient angle $\alpha$ is selected. For pixels that have a magnitude that is less than one or both of its neighbors (i.e., before and after in the direction), their magnitudes are set to $0$. This results in a binary image with thin edges.
 
 > [!INFO]
 > Non-maxima suppression is also used in **identifying the most optimal bounding box** in [[ML Basics|machine learning]] applications.
 
-### Double Thresholding
+### Hysteresis Thresholding
+With two thresholds (a low threshold $T_L$ or `minVal` and a high threshold $T_H$ or `maxVal`), <span style = "color:lightblue">hysteresis thresholding</span> or <span style = "color:lightblue">double thresholding</span> reduces false edge points. In addition to gradient thresholding, it performs connectivity analysis (e.g., 4-connectivity or 8-connectivity) to discern whether edges with weak gradients are true edges.
 
-### Connectivity Analysis
-d
+1. Edges with intensity gradient greater than $T_H$ are **sure-edges**, while those with intensity gradient less than $T_L$ are not edges and are **discarded**.
+2. Edges that are greater than $T_L$ but less than $T_H$ are **weak edges**.
+3. All **weak edges** that are connected to at least one **sure-edge** are marked as valid edges and are kept.
+4. All **weak edges** that do not connect with at least one **sure-edge** are discarded.
+
+![[image-processing-hysteresis-thresholding.png|600]]
+
+In the above image, even though edge $C$ is a weak edge, it is considered a valid edge as it is connected to edge $A$, which is a sure-edge. On the other hand, edge $B$ is not connected to any sure-edges and, thus, is discarded.
 
 # Thresholding
+From a [[Intensity Transformations#Histogram Processing|histogram]], an image can be separated into multiple intensity groups. Thus, the success of <span style = "color:lightblue">intensity thresholding</span> is related directly to the width and depth of the valleys separating the histogram modes.
 
-d
+Several factors in properties of histogram valleys are listed below.
+- **Separation between peaks:** the amount of overlap between peaks
+- **Noise content**: the noise of intensity levels in the image (*affects separability as well*)
+- **Sizes of object and background**: small objects are not apparent in the histogram
+- **Uniformity of illumination**: uneven or shifted peaks
+- **Uniformity of reflectance properties**
+
+## Global
+<span style = "color:lightblue">Basic global thresholding</span> segments the image with a threshold $T$ such that the threshold is the midpoint between the means of the two groups of pixels ($m_1$ and $m_2$).
+
+$$T=\dfrac{m_1+m_2}{2}$$
+
+The steps for this algorithm are listed below.
+1. Randomly select an initial estimate for the global threshold $T$ <u>within the intensity range</u>.
+2. Segment the image to produce two groups of pixels.
+3. Compute the means of the groups.
+4. Update the threshold with the above equation for $T$.
+5. Repeat steps 2 to 4 until convergence.
+
+An example is shown below, where the threshold converged at $T=125$.
+
+![[image-processing-global-thresholding.png|600]]
+
