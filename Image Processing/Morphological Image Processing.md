@@ -163,7 +163,7 @@ $$X_k=(X_{k-1}\oplus B)\cap I^c\quad\text{for}\space k=1,2,3,\dots$$
 $X$ is the set of holes in the object (i.e., background pixels in the foreground), and $X_0$ is the set of all zeros except the starting hole. The above equation is repeated (i.e., region is dilated) until $X_k=X_{k-1}$ (i.e., size of $X$ is unchanged).
 
 > [!INFO]
-> The structuring element $B$ can be four-connectivity or eight-connectivity, where the latter includes diagonal pixels as well.
+> The structuring element $B$ can be <span style = "color:lightblue">four-neighbor connectivity</span> or <span style = "color:lightblue">eight-neighbor connectivity</span>, where the latter includes diagonal pixels as well.
 > $$
 > \begin{bmatrix}
 > \space & \checkmark & \space \\

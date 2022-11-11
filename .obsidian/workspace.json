@@ -13,18 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "73fff4934f08eff3",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           },
           {
@@ -63,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dendrogram",
+                "query": "connectivity",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +101,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -130,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Image Processing/Morphological Image Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Image Processing/Morphological Image Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -167,7 +161,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Image Processing/Morphological Image Processing.md"
+              }
             }
           },
           {
@@ -185,14 +181,14 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "73fff4934f08eff3",
+  "active": "39b2d775df00e09a",
   "lastOpenFiles": [
+    "Image Processing/Image Segmentation.md",
     "Machine Learning/Clustering.md",
     "Data Visualization/Multivariate Data.md",
     "Machine Learning/Classification.md",
     "Data Mining/Data Preprocessing.md",
     "Image Processing/Spatial Filtering.md",
-    "Image Processing/Image Segmentation.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Morphological Image Processing.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
