@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "smoothing",
+                "query": "bayes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,

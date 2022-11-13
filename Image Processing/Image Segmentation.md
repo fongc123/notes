@@ -157,7 +157,7 @@ An example is shown below, where the threshold converged at $T=125$.
 ![[image-processing-global-thresholding.png|600]]
 
 ## Otsu's Method
-<span style = "color:lightblue">Otsu's thresholding method</span> finds the optimal thresholding value to separate classes by maximizing the <span style = "color:lightblue">between-class variance</span>.
+<span style = "color:lightblue">Otsu's thresholding method</span> finds the optimal thresholding value to separate classes by maximizing the <span style = "color:lightblue">between-class variance</span> or minimizing the <span style = "color:lightblue">weighted within-class variance</span>.
 
 The steps for Otsu's algorithm are listed below.
 1. Compute the [[Intensity Transformations#Histogram Processing|normalized histogram]] of the input image.
@@ -165,6 +165,50 @@ The steps for Otsu's algorithm are listed below.
 3. Calculate the **between-class variance** $\sigma_B^2(k)$.
 4. Obtain the threshold $k^*$ which is the value of $k$ that maximizes $\sigma^2_B(k)$.
 5. Compute the **global variance** $\sigma_G^2$ and the **separability measure** $\eta^*$.
+
+$$g(x,y)=\begin{dcases}
+1 & \text{if}\space f(x,y)>k^* \\
+0 & \text{if}\space f(x,y)\leq k^*
+\end{dcases}
+$$
+
+### Derivation
+An image segmented is segmented into two classes$\textemdash$$c_1$ and $c_2$$\textemdash$with a threshold $k$, where pixels belonging to $c_1$ and $c_2$ will have intensity values ranging from $[0, k]$ and $[k+1,L-1]$ respectively. The expressions for the probability of a pixel assigned to $c_1$ or $c_2$ are shown below.
+
+$$
+\begin{gather}
+P_1(k)=\sum_{i=0}^{k}{p_i} \\
+P_2(k)=\sum_{i=k+1}^{L-1}{p_i} =1-P_1(k)
+\end{gather}
+$$
+
+With the [[Classification#Bayes Rule|Bayes' rule]], the means of the intensity values of pixels in both classes can be calculated.
+
+$$
+\begin{align}
+m_1(k)=&\sum_{i=0}^{k}iP(i|c_1) \\
+= &\sum_{i=0}^{k}i\dfrac{P(c_1|i)P(i)}{P(c_1)}\leftarrow\text{Bayes' rule} \\
+= &\dfrac{1}{P_1(k)}\sum_{i=0}^{k}ip_i\\
+m_2(k)=&\sum_{i=k+1}^{L-1}iP(i|c_2) \\
+= & \dfrac{1}{P_2(k)}\sum_{i=k+1}^{L-1}ip_i
+\end{align}
+$$
+
+Additionally, the cumulative mean $m(k)$ and the global mean $m_G$ are calculated.
+
+$$
+\begin{gather}
+m(k)=\sum_{i=0}^{k}{ip_i} \\
+m_G=\sum_{i=0}^{L-1}ip_i
+\end{gather}
+$$
+
+Thus, we obtain the following.
+
+$$P_1m_1+P_2m_2=m_G\quad\text{where}\space P_1+P_2=1$$
+
+
+
 
 > [!INFO]
 > If there are multiple values of $k$ that create the greatest between-class variance, all $k$ values are averaged.
@@ -198,11 +242,25 @@ The example below shows an image of yeast cells (a), the result after dual thres
 As shown in (b), other thresholding methods improperly group nearby cells together, while local thresholding is successful in separating objects.
 
 ### Moving Averages
-The output of a thresholding function based on <span style = "color:lightblue">moving averages</span> is dependent on the average of the pixel intensities of $n$ past pixels.
+The output of a thresholding function based on <span style = "color:lightblue">moving averages</span> is dependent on the average of the pixel intensities of past pixels.
 
 $$
+\begin{gather}
 g(x,y)=\begin{dcases}
-1 & \text{if}\space f(x,y)>T_{xy}
-0 & 
-\end{dcases}
+1 & \text{if}\space f(x,y)>T_{xy} \\
+0 & \text{if}\space f(x,y)\leq T_{xy}
+\end{dcases} \\\\
+\text{where}\space T_{xy}=cm_{xy}
+\end{gather}
 $$
+
+The moving average $m_{xy}$ can be calculated with the following expression, where $n$ is the number of points used in computing the average.
+
+$$
+m(k+1)=\dfrac{1}{n}\sum_{i=k+2-n}^{k+1}{z_i}\quad\text{for}\space k\geq n-1
+$$
+
+The example below shows a text image corrupted by spot shading (left), the resultant image after [[#Otsu's Method|Otsu's thresholding]] (middle), and the resultant image after thresholding with moving averages (right).
+
+![[image-processing-moving-averages.png|600]]
+
