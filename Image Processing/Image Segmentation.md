@@ -351,3 +351,31 @@ Segmentation by <span style = "color:lightblue">graph cuts</span> views pixels a
 
 $$G=(V,E)$$
 
+Here, $G$ represents the graph, $V$ represents a set of nodes, $E\subseteq V\times V$ represents a set of undirected edges, and $\textbf{W}$ represents the similarity measure to characterize the edges. The similarity between nodes $i$ and $j$ can be represented as $w(i,j)$.
+
+For example, the $3\times3$ image below shows the segmentation of an image using graph cuts with the following similarity expression.
+
+$$w(i,j)=\frac{1}{|I(n_i)+I(n_j)|+c}$$
+
+![[image-processing-graph-cuts-ex.png|600]]
+
+The <span style = "color:lightblue">minimum cut</span> is the optimum partition of a graph that minimizes the cut value.
+
+$$cut(A,B)=\sum_{u\in A,v\in B}w(u,v)$$
+
+Considering the edge weights (i.e., the cost), it is the **shortest path** (*see Dijkstra's algorithm*) between start and end **seed nodes**.
+
+> [!INFO]
+> Seed nodes are randomly selected start and end points to segment the graph.
+
+However, the minimum cut favors small, meaningless sets of isolated nodes. A <span style = "color:lightblue">normalized cut</span> accounts for the **total edge connections** to all nodes in the graph as well.
+
+$$
+\begin{gather}
+Ncut(A,B)=\frac{cut(A,B)}{assoc(A,V)}+\frac{cut(A,B)}{assoc(B,V)} \\\\
+assoc(A,V)=\sum_{u\in A,z\in V}{w(u,z)} \\\\
+assoc(B,V)=\sum_{v\in B,z\in V}{w(v,z)}
+\end{gather}
+$$
+
+The 
