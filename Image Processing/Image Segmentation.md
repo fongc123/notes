@@ -353,11 +353,19 @@ $$G=(V,E)$$
 
 Here, $G$ represents the graph, $V$ represents a set of nodes, $E\subseteq V\times V$ represents a set of undirected edges, and $\textbf{W}$ represents the similarity measure to characterize the edges. The similarity between nodes $i$ and $j$ can be represented as $w(i,j)$.
 
-For example, the $3\times3$ image below shows the segmentation of an image using graph cuts with the following similarity expression.
+For example, the $3\times3$ image below shows the segmentation of an image using graph cuts with a similarity expression based <u>only</u> on intensity.
 
 $$w(i,j)=\frac{1}{|I(n_i)+I(n_j)|+c}$$
 
 ![[image-processing-graph-cuts-ex.png|600]]
+
+A more practical similarity equation uses <u>both</u> intensity and spatial distances.
+
+$$
+w(i,j)=\begin{dcases}
+\exp()
+\end{dcases}
+$$
 
 The <span style = "color:lightblue">minimum cut</span> is the optimum partition of a graph that minimizes the cut value.
 
@@ -378,4 +386,4 @@ assoc(B,V)=\sum_{v\in B,z\in V}{w(v,z)}
 \end{gather}
 $$
 
-The 
+The $assoc$ terms are the sum of the weights of all edges from the nodes in sub-graph $A$ or $B$ to the nodes of the entire graph.
