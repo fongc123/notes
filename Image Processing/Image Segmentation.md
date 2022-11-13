@@ -359,11 +359,12 @@ $$w(i,j)=\frac{1}{|I(n_i)+I(n_j)|+c}$$
 
 ![[image-processing-graph-cuts-ex.png|600]]
 
-A more practical similarity equation uses <u>both</u> intensity and spatial distances.
+A more practical similarity equation uses <u>both</u> intensity and spatial distances, where $n_i$ and $n_j$ are two adjacent nodes, $\sigma_I^2$ and $\sigma_d^2$ represent the spread of the intensity and distance, and $r$ is a radial constant.
 
 $$
 w(i,j)=\begin{dcases}
-\exp()
+\exp\left(-\dfrac{\left[I(n_i)-I(n_j)\right]^2}{\sigma_I^2}\right)\exp\left(-\dfrac{dist(n_i,n_j)}{\sigma_d^2}\right) & \text{if}\space dist(n_i,n_j)<r \\
+0 & \text{otherwise}
 \end{dcases}
 $$
 
