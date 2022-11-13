@@ -183,6 +183,7 @@ An image segmented is segmented into two classes$\textemdash$$c_1$ and $c_2$$\te
 
 $$
 \begin{gather}
+p_i=\frac{n_i}{MN} \\
 P_1(k)=\sum_{i=0}^{k}{p_i} \\
 P_2(k)=\sum_{i=k+1}^{L-1}{p_i} =1-P_1(k)
 \end{gather}
@@ -299,5 +300,27 @@ The example below shows a text image corrupted by spot shading (left), the resul
 In <span style = "color:lightblue">region segmentation</span>, the image is segmented into sub-regions with various methods.
 
 ## Region Growing
-Segmentation by <span style = "color:lightblue">region growing</span> grows pixels or sub-regions into larger regions based on a pre-defined criterion for growth.
+Segmentation by <span style = "color:lightblue">region growing</span> forms larger regions from pixels or sub-regions based on a pre-defined criterion for growth.
+
+An example is shown below, where:
+- `a`: X-ray image of weld
+- `b`: histogram of `a`
+- `c`: initial seed image
+- `d`: final seed image
+- `e`: absolute value difference between seed value ($255$) and `a`
+- `f`: histogram of `e`
+- `g`: image of `e` thresholded using dual thresholds
+- `h`: image of `e` thresholded with the smallest dual thresholds
+- `i`: segmentation result of region growing
+
+![[image-processing-region-growing.png|600]]
+
+## Region Splitting & Merging
+Segmentation by <span style = "color:lightblue">region splitting and merging</span> splits and merges an image into quadrants based on a predicate $Q$.
+
+![[image-processing-region-split-merge.png|600]]
+
+1. Split any region $R_i$ for which $Q(R_i)$ is **false** into four disjoint quadrants.
+2. When no further splitting is possible, merge any adjacent regions $R_j$ and $R_k$ for which $Q(R_j\cup R_k)$ is **true**.
+3. Stop when no further merging is possible.
 
