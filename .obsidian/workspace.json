@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Clustering.md",
                 "mode": "source",
                 "source": false
               }
@@ -182,15 +182,15 @@
   },
   "active": "8b12a45595ae2428",
   "lastOpenFiles": [
-    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Morphological Image Processing.md",
+    "Machine Learning/Clustering.md",
     "Machine Learning/Classification.md",
     "Image Processing/Image Segmentation.md",
-    "Image Processing/Morphological Image Processing.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Image Compression.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Restoration.md",
-    "Image Processing/Frequency Filtering.md",
-    "Image Processing/Spatial Filtering.md"
+    "Image Processing/Frequency Filtering.md"
   ]
 }

@@ -201,6 +201,14 @@ m_2(k)&=\sum_{i=k+1}^{L-1}iP(i|c_2) \\
 \end{align}
 $$
 
+> [!WARNING]
+> $$P(i|c_1)\neq P(i)\neq P(c_1|i)$$
+> - $P(i|c_1)$ is the probability of the intensity level $i$ <u>in the scope</u> of the class $c_1$
+> - $P(i)$ is the probability of the intensity level $i$ out of <u>all</u> intensity levels
+> - $P(c_1|i)$$ is the probability of the class $c_1$ given an intensity level
+> 
+> In the case of the class $c_1$, since $i$ is restricted within the range of $[0,k]$, $P(c_1|i)$ will always evaluate to $1$.
+
 Additionally, the cumulative mean $m(k)$ and the global mean $m_G$ are calculated.
 
 $$
@@ -299,6 +307,8 @@ The example below shows a text image corrupted by spot shading (left), the resul
 # Region Segmentation
 In <span style = "color:lightblue">region segmentation</span>, the image is segmented into sub-regions with various methods.
 
+[[Clustering#$k$-Means|K-means clustering]] can also be used as a segmentation technique, where the similarities between pixels are assessed.
+
 ## Region Growing
 Segmentation by <span style = "color:lightblue">region growing</span> forms larger regions from pixels or sub-regions based on a pre-defined criterion for growth.
 
@@ -323,4 +333,21 @@ Segmentation by <span style = "color:lightblue">region splitting and merging</sp
 1. Split any region $R_i$ for which $Q(R_i)$ is **false** into four disjoint quadrants.
 2. When no further splitting is possible, merge any adjacent regions $R_j$ and $R_k$ for which $Q(R_j\cup R_k)$ is **true**.
 3. Stop when no further merging is possible.
+
+For example, an image of the Cygnus Loop supernova is segmented with this method, where the expression for the predicate is shown below.
+
+$$Q(R)=\begin{dcases}
+\text{True} & \text{if}\space \sigma_R>a\space\text{and}\space 0<m_R<b \\
+\text{False} & \text{otherwise}
+\end{dcases}
+$$
+
+![[image-processing-region-split-merge-ex.png|600]]
+
+Here, the smallest sub-region is limited to $32\times32$ pixels (b), $16\times16$ pixels (c), and $8\times8$ pixels (d).
+
+## Graph Cuts
+Segmentation by <span style = "color:lightblue">graph cuts</span> views pixels as nodes of a graph and finds an **optimal partition** (i.e., cut) of the graph, where members within a group have high similarities and members across groups have low similarities.
+
+$$G=(V,E)$$
 

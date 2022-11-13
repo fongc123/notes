@@ -36,6 +36,8 @@ $$
 # $k$-Means
 The <span style = "color:lightblue">k-means</span> clustering method partitions a dataset $D$ with $N$ number of points into $k$ clusters, where objects in the same cluster $C_i$ are similar.
 
+$$\arg\min_C(\sum_{i=1}^{k}\sum_{z\in C_i}||\textbf{z}-\textbf{m}_i||^2)$$
+
 The expression for the <span style = "color:lightblue">centroid</span> or <span style = "color:lightblue">center of gravity</span> (i.e., the mean) of each cluster is shown below.
 
 $$C_i=\dfrac{1}{N_i}\sum_{X\in C_i}X$$
