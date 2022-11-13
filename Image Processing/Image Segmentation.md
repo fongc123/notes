@@ -157,3 +157,52 @@ An example is shown below, where the threshold converged at $T=125$.
 ![[image-processing-global-thresholding.png|600]]
 
 ## Otsu's Method
+<span style = "color:lightblue">Otsu's thresholding method</span> finds the optimal thresholding value to separate classes by maximizing the <span style = "color:lightblue">between-class variance</span>.
+
+The steps for Otsu's algorithm are listed below.
+1. Compute the [[Intensity Transformations#Histogram Processing|normalized histogram]] of the input image.
+2. Compute the **cumulative sums** $p_1(k)$, the **cumulative means** $m(k)$, and the global mean $m_G$.
+3. Calculate the **between-class variance** $\sigma_B^2(k)$.
+4. Obtain the threshold $k^*$ which is the value of $k$ that maximizes $\sigma^2_B(k)$.
+5. Compute the **global variance** $\sigma_G^2$ and the **separability measure** $\eta^*$.
+
+> [!INFO]
+> If there are multiple values of $k$ that create the greatest between-class variance, all $k$ values are averaged.
+
+## Variable Thresholding
+In <span style = "color:lightblue">variable thresholding</span>, the threshold value at each pixel changes based on specified properties in the pixel's local neighborhood.
+
+### Local Image Properties
+The output of a thresholding function based on <span style = "color:lightblue">local image properties</span> is dependent on a logical predicate $Q$ of the pixels in the region of a neighborhood $S_{xy}$.
+
+$$
+g(x,y)=\begin{dcases}
+1 & \text{if}\space Q(\text{local parameters})\space\text{is True} \\
+0 & \text{if}\space Q(\text{local parameters})\space\text{is False}
+\end{dcases}
+$$
+
+An example is shown below, where the predicate is based on the local mean and standard deviation.
+
+$$
+Q(\sigma_{xy},m_{xy})=\begin{dcases}
+\text{True} & \text{if}\space f(x,y)>a\sigma_{xy}\space\text{and}\space f(x,y)>bm_{xy}\\
+\text{False} & \text{otherwise}
+\end{dcases}
+$$
+
+The example below shows an image of yeast cells (a), the result after dual thresholding (i.e., two thresholds to create three classes) (b), the local standard deviations in a $3\times3$ neighborhood (c), and the result after local thresholding (d).
+
+![[image-processing-local-variable-thresholding.png|600]]
+
+As shown in (b), other thresholding methods improperly group nearby cells together, while local thresholding is successful in separating objects.
+
+### Moving Averages
+The output of a thresholding function based on <span style = "color:lightblue">moving averages</span> is dependent on the average of the pixel intensities of $n$ past pixels.
+
+$$
+g(x,y)=\begin{dcases}
+1 & \text{if}\space f(x,y)>T_{xy}
+0 & 
+\end{dcases}
+$$
