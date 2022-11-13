@@ -156,3 +156,4 @@ An example is shown below, where the threshold converged at $T=125$.
 
 ![[image-processing-global-thresholding.png|600]]
 
+## Otsu's Method
