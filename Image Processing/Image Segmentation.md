@@ -161,7 +161,7 @@ An example is shown below, where the threshold converged at $T=125$.
 
 The steps for Otsu's algorithm are listed below.
 1. Compute the [[Intensity Transformations#Histogram Processing|normalized histogram]] of the input image.
-2. Compute the **cumulative sums** $p_1(k)$, the **cumulative means** $m(k)$, and the global mean $m_G$.
+2. Compute the **cumulative sums** $p_1(k)$, the **cumulative means** $m(k)$, and the **global mean** $m_G$.
 3. Calculate the **between-class variance** $\sigma_B^2(k)$.
 4. Obtain the threshold $k^*$ which is the value of $k$ that maximizes $\sigma^2_B(k)$.
 5. Compute the **global variance** $\sigma_G^2$ and the **separability measure** $\eta^*$.
@@ -171,6 +171,12 @@ $$g(x,y)=\begin{dcases}
 0 & \text{if}\space f(x,y)\leq k^*
 \end{dcases}
 $$
+
+> [!INFO]
+> If there are multiple values of $k$ that create the greatest between-class variance, all $k$ values are averaged.
+
+> [!WARNING]
+> Otsu's thresholding algorithm will fail when the foreground object is small compared to the background, as the intensity values will be dominated by the background pixels.
 
 ### Derivation
 An image segmented is segmented into two classes$\textemdash$$c_1$ and $c_2$$\textemdash$with a threshold $k$, where pixels belonging to $c_1$ and $c_2$ will have intensity values ranging from $[0, k]$ and $[k+1,L-1]$ respectively. The expressions for the probability of a pixel assigned to $c_1$ or $c_2$ are shown below.
@@ -186,11 +192,11 @@ With the [[Classification#Bayes Rule|Bayes' rule]], the means of the intensity v
 
 $$
 \begin{align}
-m_1(k)=&\sum_{i=0}^{k}iP(i|c_1) \\
-= &\sum_{i=0}^{k}i\dfrac{P(c_1|i)P(i)}{P(c_1)}\leftarrow\text{Bayes' rule} \\
-= &\dfrac{1}{P_1(k)}\sum_{i=0}^{k}ip_i\\
-m_2(k)=&\sum_{i=k+1}^{L-1}iP(i|c_2) \\
-= & \dfrac{1}{P_2(k)}\sum_{i=k+1}^{L-1}ip_i
+m_1(k)&=\sum_{i=0}^{k}iP(i|c_1) \\
+&=\sum_{i=0}^{k}i\dfrac{P(c_1|i)P(i)}{P(c_1)}\leftarrow\text{Bayes' rule} \\
+&=\dfrac{1}{P_1(k)}\sum_{i=0}^{k}ip_i\\
+m_2(k)&=\sum_{i=k+1}^{L-1}iP(i|c_2) \\
+&=\dfrac{1}{P_2(k)}\sum_{i=k+1}^{L-1}ip_i
 \end{align}
 $$
 
@@ -207,11 +213,36 @@ Thus, we obtain the following.
 
 $$P_1m_1+P_2m_2=m_G\quad\text{where}\space P_1+P_2=1$$
 
+The global variance $\sigma_G^2$ can be calculated.
 
+$$\sigma_G^2=\sum_{i=0}^{L-1}(i-m_G)^2p_i$$
 
+Thus, the between-class variance can be calculated.
 
-> [!INFO]
-> If there are multiple values of $k$ that create the greatest between-class variance, all $k$ values are averaged.
+$$
+\begin{align}
+\sigma_B^2 &= P_1(m_1-m_G)^2+P_2(m_2-m_G)^2 \\
+&=P_1P_2(m_1-m_2)^2 \\
+&=\dfrac{(m_GP_1-m)^2}{P_1(1-P_1)}
+\end{align}
+$$
+
+All integer values of $k$ are evaluated such that the maximum value of $\sigma_B^2$ is obtained.
+
+$$k^*=\arg\max_{k}\sigma_B^2(k)\quad\text{for}\space 0\leq k\leq L-1$$
+
+### Multiple Classes
+Otsu's method can be extended to threshold the image into multiple classes.
+
+$$
+\begin{gather}
+\sigma_B^2=\sum_{k=1}^{K}P_k(m_k-m_G)^2\\\text{where}\space P_k=\sum_{i\in c_k}{p_i}\space\text{and}\space m_k=\frac{1}{P_k}\sum_{i\in c_k}ip_i
+\end{gather}
+$$
+
+Here, $K-1$ thresholds will threshold the image into $K$ classes.
+
+$$k^*_1,k^*_2,\ldots,k^*_{K-1}=\arg\max_k\sigma_B^2(k_1,k_2,\ldots,k_{K-1})\quad\text{for}\space 0<k_1<\ldots<k_{K-1}<L-1$$
 
 ## Variable Thresholding
 In <span style = "color:lightblue">variable thresholding</span>, the threshold value at each pixel changes based on specified properties in the pixel's local neighborhood.
@@ -263,4 +294,10 @@ $$
 The example below shows a text image corrupted by spot shading (left), the resultant image after [[#Otsu's Method|Otsu's thresholding]] (middle), and the resultant image after thresholding with moving averages (right).
 
 ![[image-processing-moving-averages.png|600]]
+
+# Region Segmentation
+In <span style = "color:lightblue">region segmentation</span>, the image is segmented into sub-regions with various methods.
+
+## Region Growing
+Segmentation by <span style = "color:lightblue">region growing</span> grows pixels or sub-regions into larger regions based on a pre-defined criterion for growth.
 
