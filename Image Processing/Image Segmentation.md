@@ -97,7 +97,7 @@ The <span style = "color:lightblue">Canny edge detector</span> is an advanced ed
 The algorithm consists of the following steps.
 1. Smooth the image with a [[Spatial Filtering#Gaussian Filter|Gaussian filter]].
 2. Compute the gradient magnitude and angle images (*see [[#Edge Detection|edge detection]]*).
-3. Apply [[#Non-maxima Suppression|non-maximum suppression]] to the gradient magnitude image.
+3. Apply [[#Non-maximum Suppression|non-maximum suppression]] to the gradient magnitude image.
 4. Apply [[#Hysteresis Thresholding|double thresholding]] and connectivity analysis to detect *and* link edges.
 
 The example below shows a head CT image (a), the thresholded gradient of the smoothed image (b), and the image obtained using the **Canny edge detector** algorithm.
@@ -205,7 +205,7 @@ $$
 > $$P(i|c_1)\neq P(i)\neq P(c_1|i)$$
 > - $P(i|c_1)$ is the probability of the intensity level $i$ <u>in the scope</u> of the class $c_1$
 > - $P(i)$ is the probability of the intensity level $i$ out of <u>all</u> intensity levels
-> - $P(c_1|i)$$ is the probability of the class $c_1$ given an intensity level
+> - $P(c_1|i)$ is the probability of the class $c_1$ given an intensity level
 > 
 > In the case of the class $c_1$, since $i$ is restricted within the range of $[0,k]$, $P(c_1|i)$ will always evaluate to $1$.
 
