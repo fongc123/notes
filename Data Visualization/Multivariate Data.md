@@ -9,6 +9,8 @@
 
 The following approaches can be used to generate visualizations of multivariate data: **geometric projection**, **pixel-oriented** (i.e., layout density), **hierarchical display**, and **iconography**.
 
+[[Data Preprocessing#Reduction|Dimensionality reduction]] techniques can be used to reduce the complexity of the data.
+
 # Geometric Projection
 In <span style = "color:lightblue">geometric projection</span>, multidimensional datasets are mapped to a dimensional or arbitrary space.
 
@@ -92,6 +94,7 @@ Several glyph designs are listed below.
 > [!INFO]
 > Texture can also be used as a glyph or symbol to encode data.
 
-An **star glyph** example is shown below, where 
+A **star glyph** example is shown below, where each item is represented by a glyph that contains seven attributes.
 
-![[Pasted image 20221115190842.png|600]]
+![[data-vis-star-glyph.png|600]]
+
