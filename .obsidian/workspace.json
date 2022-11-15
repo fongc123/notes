@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "753a5c97e13128bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Multivariate Data.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2c90b5b7c68723b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Text Data.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "83c8e39e784154c9",
             "type": "leaf",
             "state": {
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,7 +144,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "2c90b5b7c68723b3",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
     "Data Visualization/Text Data.md",
     "Data Visualization/Multivariate Data.md",
