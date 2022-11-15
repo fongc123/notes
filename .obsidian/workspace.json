@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e38c49b077d3b3b7",
+        "id": "71de7027f64ed20c",
         "type": "tabs",
         "children": [
           {
-            "id": "36beb755efbf98d4",
+            "id": "7e7ea4e84de81803",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -136,12 +136,12 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "36beb755efbf98d4",
+  "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
+    "Machine Learning/Clustering.md",
     "Data Visualization/Text Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Mining/Data Preprocessing.md",
-    "Machine Learning/Clustering.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Segmentation.md",
