@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Data Visualization/Text Data.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -167,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "2c90b5b7c68723b3",
   "lastOpenFiles": [
