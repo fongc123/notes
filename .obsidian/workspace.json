@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3d9f4bba28fa2c",
+        "id": "f6467c4a0721c0d6",
         "type": "tabs",
         "children": [
           {
-            "id": "9378b84bac540416",
+            "id": "753a5c97e13128bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
-                "mode": "preview",
+                "file": "Data Visualization/Multivariate Data.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bitplane",
+                "query": "bayes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5a2bb12b3a44b000",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Data Visualization/Multivariate Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Data Visualization/Multivariate Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Segmentation.md"
+                "file": "Data Visualization/Multivariate Data.md"
               }
             }
           },
@@ -142,19 +143,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "9378b84bac540416",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
+    "Machine Learning/Clustering.md",
+    "Image Processing/Morphological Image Processing.md",
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Image Segmentation.md",
+    "img/Pasted image 20221113205912 1.png",
     "Machine Learning/Classification.md",
-    "conflict-files-obsidian-git.md",
-    "Machine Learning/PyTorch & CUDA Setup.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Data Visualization/Principles.md",
-    "Data Visualization/Spatial Data.md",
-    "Data Visualization/Multivariate Data.md",
-    "Data Visualization/Visualization Basics.md",
-    "Data Visualization/Trajectory Data.md"
+    "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Image Compression.md",
+    "Image Processing/Color Processing.md",
+    "Image Processing/Image Restoration.md"
   ]
 }

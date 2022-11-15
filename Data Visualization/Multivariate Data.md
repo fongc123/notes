@@ -66,3 +66,6 @@ Additionally, a <span style = "color:lightblue">cluster heatmap</span> can be im
 
 A <span style = "color:lightblue">table lens</span> uses the familiar concept of a tabular view to represent data items in rows and columns.
 
+# Hierarchical Display
+A <span style = "color:lightblue">hierarchical display</span> divides the data space and presents sub-spaces in a hierarchical fashion. It can effectively visualize hierarchical data, especially when certain attributes have higher importance than others. However, it implicitly views attributes differently.
+
