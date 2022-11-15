@@ -69,3 +69,29 @@ A <span style = "color:lightblue">table lens</span> uses the familiar concept of
 # Hierarchical Display
 A <span style = "color:lightblue">hierarchical display</span> divides the data space and presents sub-spaces in a hierarchical fashion. It can effectively visualize hierarchical data, especially when certain attributes have higher importance than others. However, it implicitly views attributes differently.
 
+A <span style = "color:lightblue">hierarchical axis</span> lays out axes horizontally, allowing multiple attributes to be displayed.
+
+Similar to a [[#Geometric Projection|scatter plot matrix]], <span style = "color:lightblue">dimensional stacking</span> partitions the data space into two-dimensional sub-spaces, where dimensions are embedded within other dimensions. It is suitable for categorical or binned ordinal values.
+
+![[data-vis-dimensional-stacking.png|600]]
+
+In the above example, the dimensions are represented by $g$.
+
+# Iconography
+<span style = "color:lightblue">Iconography</span> maps each multidimensional data item to an icon or a glyph that contains several parameters.
+
+![[data-vis-iconography.png|600]]
+
+Several glyph designs are listed below.
+- <span style = "color:lightblue">Star glyph</span>: items represented by a star glyph, where dimensions are represented as angular axes of the star (*similar to radar plots*)
+- <span style = "color:lightblue">Chernoff faces</span>: attributes mapped to the properties of a face (e.g., face, nose, mouth, eyes)
+- <span style = "color:lightblue">Text glyph</span>: uses textual characters as symbols
+- <span style = "color:lightblue">Metaphor</span>: uses familiar objects (e.g., animals) as symbols
+- <span style = "color:lightblue">Color icon</span>: combines pixel-based spiral axes and icon-based shape encoding, where color properties and orientation are used to map the data
+
+> [!INFO]
+> Texture can also be used as a glyph or symbol to encode data.
+
+An **star glyph** example is shown below, where 
+
+![[Pasted image 20221115190842.png|600]]

@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bayes",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5a2bb12b3a44b000",
@@ -146,7 +145,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "753a5c97e13128bf",
   "lastOpenFiles": [
     "Machine Learning/Clustering.md",
     "Image Processing/Morphological Image Processing.md",
