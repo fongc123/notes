@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "2c90b5b7c68723b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Visualization/Text Data.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "83c8e39e784154c9",
             "type": "leaf",
             "state": {
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Data Visualization/Text Data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md",
+                "file": "Data Visualization/Text Data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Multivariate Data.md"
+                "file": "Data Visualization/Text Data.md"
               }
             }
           },
@@ -157,17 +170,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "753a5c97e13128bf",
+  "active": "2c90b5b7c68723b3",
   "lastOpenFiles": [
-    "Data Mining/Data Preprocessing.md",
+    "Data Visualization/Text Data.md",
     "Data Visualization/Multivariate Data.md",
+    "Data Mining/Data Preprocessing.md",
     "Machine Learning/Clustering.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Segmentation.md",
     "img/Pasted image 20221113205912 1.png",
     "Machine Learning/Classification.md",
-    "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Image Compression.md"
+    "Image Processing/Interpolation & Transformation.md"
   ]
 }
