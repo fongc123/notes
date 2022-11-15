@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f6467c4a0721c0d6",
+        "id": "e38c49b077d3b3b7",
         "type": "tabs",
         "children": [
           {
-            "id": "83c8e39e784154c9",
+            "id": "36beb755efbf98d4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Mining/Data Preprocessing.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
