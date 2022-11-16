@@ -17,7 +17,7 @@ The image below demonstrates how information and relations can be extracted from
 ![[data-vis-text-info-extraction.png|600]]
 
 <span style = "color:lightblue">Text visualizations</span> generally do not represent the text directly. Instead, they represent the output of a language model (e.g., word count, sequences). It is important to match visualization tools with the abstraction and analysis task.
-- <span style = "color:lightblue">node-link</span>: displays text as a **word tree**, where each node represents a term or a phrase
+- <span style = "color:lightblue">node-link</span>: displays text as a **word tree** (i.e., [[Graphs|graph]]), where each node represents a term or a phrase
 - <span style = "color:lightblue">cloud</span> or <span style = "color:lightblue">galaxy</span>: displays the most frequent words in a word cloud
 - <span style = "color:lightblue">line plot</span> or <span style = "color:lightblue">river plot</span>: displays the volume of topics in a text over time (*can also use word clouds*)
 - <span style = "color:lightblue">map</span>: displays text or terms on a map
