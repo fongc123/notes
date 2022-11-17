@@ -151,3 +151,23 @@ Markers are used as reference points to measure <span style = "color:lightblue">
 
 ![[image-processing-external-markers.png|600]]
 
+The above images show **fiducial markers** attached to a patient in CT and MR scans. On the other hand, <span style = "color:lightblue">internal markers</span> use surface-based registration to compare between the original and transformed image.
+
+Common objective functions are shown below.
+
+$$
+\begin{align}
+\text{sum of squared difference:} & \quad SSD=\frac{1}{N}\sum_{\vec{x}\in D}\left[u(\vec{x})-v(T(\vec{x}))\right]^2 \\\\
+\text{sum of absolute difference:} & \quad SAD=\frac{1}{N}\sum_{\vec{x}\in D}{|u(\vec{x})-v(T(\vec{x}))|} \\\\
+\text{correlation coefficient:} & \quad CC=\dfrac{\sum_{\vec{x}\in D}(u-\bar{u})(v-\bar{v})}{\left[\sum_{\vec{x}\in D}(u-\bar{u})^2(v-\bar{v})^2\right]^\frac{1}{2}} \\\\
+\text{mutual information:} & \quad MI(u,v)=h(u) +h(v)-h(u,v) \\\\
+& \quad h(x,y)=-\sum_{x\in X}\sum_{y\in Y}p(x,y)\log p(x,y)\\leftarrow\text{entropy} \\\\
+& \quad h(x)=-\sum_{x\in X}p(x)\log p(x)
+\end{align}
+$$
+
+> [!INFO]
+> The **sum of squared difference** is sensitive to voxels that have large intensity differences. The **sum of absolute difference** can reduce the effect of these outliers.
+
+[[Regression#Gradient Descent|Gradient descent]] is used to optimize the objective function $F$.
+

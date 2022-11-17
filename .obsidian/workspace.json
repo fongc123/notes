@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\\v",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -144,7 +145,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7e7ea4e84de81803",
+  "active": "7c1c819113d00dde",
   "lastOpenFiles": [
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
