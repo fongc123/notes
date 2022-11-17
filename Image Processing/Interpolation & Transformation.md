@@ -69,7 +69,7 @@ $$
 		0 & c_y & 0 \newline
 		0 & 0 & 1
 	\end{bmatrix} \quad\text{\small (by respective factors $c$)} \newline \newline
-	\text{rotation (about the origin):} \quad \textbf{A} & =
+	\text{rotation (about the origin, z-axis):} \quad \textbf{A} & =
 	\begin{bmatrix}
 		\cos{\theta} & -\sin{\theta} & 0 \newline
 		\sin{\theta} & \cos{\theta} & 0 \newline
@@ -99,4 +99,52 @@ In rotation, image interpolation is needed to fill in missing pixel values. Thre
 
 ![[image-processing-resampling-rotation.png|600]]
 
+> [!INFO]
+> The transformation matrix for rotation around the x-axis and the y-axis are shown below.
+> $$
+> \begin{gather}
+> R_x=\begin{bmatrix}
+> 1 & 0 & 0 \\
+> 0 & \cos(\theta) & -\sin(\theta) \\
+> 0 & \sin(\theta) & \cos(\theta)
+> \end{bmatrix} \\\\
+> R_y=\begin{bmatrix}
+> \cos(\theta) & 0 & \sin(\theta) \\
+> 0 & 1 & 0 \\
+> -\sin(\theta) & 0 & \cos(\theta)
+> \end{bmatrix}
+> \end{gather} 
+> $$
+> In general, multiple rotation matrices can be multiplied together to perform rotation with respect to <u>any</u> axis.
+> $$
+> \begin{gather}
+> T(\vec{x})=R\vec{x}\quad\text{where}\space R=R_{\theta_x}R_{\theta_y}R_{\theta_z}
+> \end{gather}
+> $$
+
+For a three-dimensional object, the following general expression that accounts for all transformations is obtained.
+
+$$
+T\left(\begin{matrix}x\\y\\z\\1\end{matrix}\right)=\left(\begin{matrix}
+a_{11} & a_{12} & a_{13} & a_{14} \\
+a_{21} & a_{22} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} \\
+0 & 0 & 0 & 1
+\end{matrix}\right)\left(\begin{matrix}
+x \\ y \\ z \\ 1
+\end{matrix}\right)
+$$
+
 # Image Registration
+<span style = "color:lightblue">Image registration</span> is the process of transforming different sets of data into one coordinate system. It finds the optimal spatial transformation mapping between images.
+
+![[image-processing-image-registration.png|600]]
+
+An **optimal value** of the [[#Objective Functions|objective function]] $F$ and the **optimal transformation** $\hat{T}$ between the <span style = "color:lightblue">reference image</span> and the <span style = "color:lightblue">floating image</span>.
+
+$$
+\underbracket{u(\vec{x})}_{\text{reference}}\Leftrightarrow \underbracket{v(T(\vec{x}))}_{\text{floating}}
+$$
+
+## Objective Functions
+Markers are used as reference points to measure <span style = "color:lightblue">registration errors</span> 
