@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3d9f4bba28fa2c",
+        "id": "71de7027f64ed20c",
         "type": "tabs",
         "children": [
           {
-            "id": "9378b84bac540416",
+            "id": "7e7ea4e84de81803",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Text Data.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "becbc5e87f224a1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Visualization/Graphs.md",
+                "file": "Machine Learning/Clustering.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bitplane",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Text Data.md",
+                "file": "Machine Learning/Clustering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Text Data.md",
+                "file": "Machine Learning/Clustering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Text Data.md"
+                "file": "Machine Learning/Clustering.md"
               }
             }
           },
@@ -156,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9378b84bac540416",
+  "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
-    "Data Visualization/Graphs.md",
+    "Machine Learning/Clustering.md",
     "Data Visualization/Text Data.md",
     "Data Visualization/Multivariate Data.md",
+    "Data Mining/Data Preprocessing.md",
+    "Image Processing/Morphological Image Processing.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Segmentation.md",
+    "img/Pasted image 20221113205912 1.png",
     "Machine Learning/Classification.md",
-    "conflict-files-obsidian-git.md",
-    "Machine Learning/PyTorch & CUDA Setup.md",
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Data Visualization/Principles.md"
+    "Image Processing/Interpolation & Transformation.md"
   ]
 }
