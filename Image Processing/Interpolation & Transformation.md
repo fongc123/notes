@@ -148,3 +148,6 @@ $$
 
 ## Objective Functions
 Markers are used as reference points to measure <span style = "color:lightblue">registration errors</span> in the transformation process. <span style = "color:lightblue">External markers</span> are externally attached to the object and appear in the image.
+
+![[image-processing-external-markers.png|600]]
+
