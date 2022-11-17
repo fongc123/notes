@@ -161,7 +161,7 @@ $$
 \text{sum of absolute difference:} & \quad SAD=\frac{1}{N}\sum_{\vec{x}\in D}{|u(\vec{x})-v(T(\vec{x}))|} \\\\
 \text{correlation coefficient:} & \quad CC=\dfrac{\sum_{\vec{x}\in D}(u-\bar{u})(v-\bar{v})}{\left[\sum_{\vec{x}\in D}(u-\bar{u})^2(v-\bar{v})^2\right]^\frac{1}{2}} \\\\
 \text{mutual information:} & \quad MI(u,v)=h(u) +h(v)-h(u,v) \\\\
-& \quad h(x,y)=-\sum_{x\in X}\sum_{y\in Y}p(x,y)\log p(x,y)\\leftarrow\text{entropy} \\\\
+& \quad h(x,y)=-\sum_{x\in X}\sum_{y\in Y}p(x,y)\log p(x,y)\small\leftarrow\text{entropy} \\\\
 & \quad h(x)=-\sum_{x\in X}p(x)\log p(x)
 \end{align}
 $$
@@ -169,5 +169,7 @@ $$
 > [!INFO]
 > The **sum of squared difference** is sensitive to voxels that have large intensity differences. The **sum of absolute difference** can reduce the effect of these outliers.
 
-[[Regression#Gradient Descent|Gradient descent]] is used to optimize the objective function $F$.
+> [!INFO]
+> Two images are matched when the **mutual information** is maximized.
 
+[[Regression#Gradient Descent|Gradient descent]] is commonly used to optimize the objective function $F$.
