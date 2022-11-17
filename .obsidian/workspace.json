@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Clustering.md",
+                "file": "Image Processing/Interpolation & Transformation.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Clustering.md",
+                "file": "Image Processing/Interpolation & Transformation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Clustering.md",
+                "file": "Image Processing/Interpolation & Transformation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Clustering.md"
+                "file": "Image Processing/Interpolation & Transformation.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Intensity Transformations.md",
     "Machine Learning/Clustering.md",
     "Data Visualization/Text Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Mining/Data Preprocessing.md",
     "Image Processing/Morphological Image Processing.md",
-    "Image Processing/Intensity Transformations.md",
     "Image Processing/Image Segmentation.md",
     "img/Pasted image 20221113205912 1.png",
-    "Machine Learning/Classification.md",
-    "Image Processing/Interpolation & Transformation.md"
+    "Machine Learning/Classification.md"
   ]
 }

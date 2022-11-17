@@ -98,3 +98,5 @@ $$
 In rotation, image interpolation is needed to fill in missing pixel values. Three resampling methods and their effects on a rotated image are shown below.
 
 ![[image-processing-resampling-rotation.png|600]]
+
+# Image Registration
