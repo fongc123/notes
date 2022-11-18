@@ -35,3 +35,11 @@ Common challenges in graph visualization are listed below.
 Graphs are normally represented with these idioms: node-link layouts, enclosure (nested) layouts, division (layered) layouts, matrix layouts, and three-dimensional layouts.
 
 ## Node-Link
+A generic <span style = "color:lightblue">node-link</span> graph consists of a set of nodes and edges, where node positions are calculated and connecting lines are drawn for the edges.
+
+These elements are laid out on a two-dimensional space, where edge lengths are kept uniform and nodes are distributed uniformly.
+
+|                           **Data**                            | **Mark** |           **Channels**           |             **Task**             | **Scalability** |
+|:-------------------------------------------------------------:|:--------:|:--------------------------------:|:--------------------------------:|:---------------:|
+| Generic graph |   Points (nodes) & lines (edges)   | Color, size | Understand relationships | More nodes and edges               |
+
