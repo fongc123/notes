@@ -25,3 +25,13 @@ The graph should be represented clearly and easily.
 > [!INFO]
 > The <span style = "color:lightblue">degree</span> of a node is the number of edges that are connected to the node. Loops (i.e., edges that connect back to the originating node) count as $2$.
 
+Common challenges in graph visualization are listed below.
+- **Data size:** large datasets are difficult both computationally (*NP-complete algorithms*) and visually (*display clutter*)
+- **Complex structure:** graphs cannot effectively display multidimensional data (*use color to encode dimensions*)
+- **Cognitive issues:** the efficiency and efficacy of the visualization should be considered
+- **Spatial layout:** how to properly arrange the nodes and edges?
+
+# Designs
+Graphs are normally represented with these idioms: node-link layouts, enclosure (nested) layouts, division (layered) layouts, matrix layouts, and three-dimensional layouts.
+
+## Node-Link
