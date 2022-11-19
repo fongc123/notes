@@ -34,6 +34,8 @@ Common challenges in graph visualization are listed below.
 # Designs
 Graphs are normally represented with these idioms: **node-link layouts**, **enclosure (nested) layouts**, **division (layered) layouts**, **matrix layouts**, and **three-dimensional layouts**.
 
+Matrix layouts and three-dimensional layouts are additional representations of node-link or tree diagrams.
+
 ## Generic Node-Link
 A <span style = "color:lightblue">generic node-link</span> graph consists of a set of nodes and edges, where node positions are calculated and connecting lines are drawn for the edges. These elements are laid out on a two-dimensional space, where edge lengths are kept uniform and nodes are distributed uniformly.
 
@@ -88,4 +90,29 @@ Alternatively, a <span style = "color:lightblue">Voronoi treemap</span> displays
 A <span style = "color:lightblue">radial treemap</span> displays nodes as circles, where child nodes are nested inside larger parent nodes.
 
 ## Division (Layered) Layout
-A <span style = "color:lightblue">division or layered layout</span> 
+A <span style = "color:lightblue">division or layered layout</span> involves the recursive subdivision of space. Unlike [[#Nested (Enclosure) Layout|nested layouts]], where nodes are nested in each other, child nodes are **attached** to parent nodes.
+
+| **Data** | **Mark** | **Channels** |        **Task**        |   **Scalability**    |
+|:--------:|:--------:|:------------:|:----------------------:|:--------------------:|
+|   Tree   |   Area   | Color, size  | Understand composition | Layering, adjacency, alignment |
+
+A <span style = "color:lightblue">sunburst tree layout</span> displays items and compositions radially.
+
+![[data-vis-sunburst.png|600]]
+
+> [!WARNING]
+> Both [[#Division (Layered) Layout|division layouts]] and [[#Nested (Enclosure) Layout|nested layouts]] suffer from an inefficient use of space.
+
+# Visual Clutter Reduction
+As the data size increases, visual clutter can become a major issue.
+- <span style = "color:lightblue">edge-centric</span>: adjust representation of edges
+	- <span style = "color:lightblue">confluent drawings</span>: group intersection points together
+	- <span style = "color:lightblue">flow map</span>: group edges by a single-source flow as a free-style binary tree structure
+	- <span style = "color:lightblue">edge bundling</span>: group edges together into thicker edges
+- <span style = "color:lightblue">node-centric</span>: content-based clustering (e.g., divide structure into sub-graphs)
+- <span style = "color:lightblue">appearance-centric</span>: sampling or filtering
+
+> [!WARNING]
+> Node-centric visual clutter reduction approaches cause a loss of detail.
+
+Animations can also aid in reducing visual clutter.

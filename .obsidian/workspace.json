@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Data Visualization/Graphs.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -154,8 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
