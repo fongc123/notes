@@ -48,7 +48,7 @@ Node positions can be adjusted based on other layouts.
 
 Alternatively, node-link graphs can be implemented to summarize common connections with an **arc diagram**, **radial graph**, or **chord diagram**.
 
-![[image-processing-chord-diagram.png|600]]
+![[data-vis-chord-diagram.png|600]]
 
 ## Bipartite & Directed Acyclic Graphs
 A <span style = "color:lightblue">bipartite graph</span> displays connections between <u>two</u> sets of nodes.
@@ -59,8 +59,33 @@ A <span style = "color:lightblue">bipartite graph</span> displays connections be
 
 A <span style = "color:lightblue">Sankey diagram</span> is a <span style = "color:lightblue">directed acyclic graph (DAG)</span> that consists of **a sequence of bipartite graphs**. It identifies composition and matches between attributes.
 
-![[image-processing-sankey-diagram.png|600]]
+![[data-vis-sankey-diagram.png|600]]
 
 ## Tree
-An <span style = "color:lightblue">indented tree layout</span> places items along rows, where indentation is used to show parent-child relationships.
+An <span style = "color:lightblue">indented tree layout</span> places items along rows, where indentation is used to show parent-child relationships. Alternatively, a [[Multivariate Data#Layout Density|dendrogram]] (*cluster dendrogram*) can be used to display hierarchical clustering relationships.
 
+A <span style = "color:lightblue">radial tree layout</span> places items radially around an origin, where the radius of an item encodes depth. The example below displays a cluster dendrogram with a radial tree layout.
+
+![[data-vis-radial-tree-cluster-dendrogram.png|600]]
+
+A <span style = "color:lightblue">balloon tree</span> is a node-link diagram in polar coordinates, where each subtree (i.e., cluster) is enclosed in a circular area.
+
+![[data-vis-balloon-tree.png|600]]
+
+## Nested (Enclosure) Layout
+A <span style = "color:lightblue">nested or enclosure layout</span> displays items in a spatial enclosure (i.e., nodes $\rightarrow$ rectangles), where child nodes are placed within their parent node.
+
+| **Data** | **Mark** | **Channels** |        **Task**        |   **Scalability**    |
+|:--------:|:--------:|:------------:|:----------------------:|:--------------------:|
+|   Tree   |   Area   | Color, size  | Understand composition | More areas |
+
+This visualization is also known as a <span style = "color:lightblue">tree map</span>.
+
+![[data-vis-tree-map.png|600]]
+
+Alternatively, a <span style = "color:lightblue">Voronoi treemap</span> displays items as arbitrary polygonal shapes and boundaries. Iterative and weighted Voronoi tessellations are used to achieve cell areas proportional to values.
+
+A <span style = "color:lightblue">radial treemap</span> displays nodes as circles, where child nodes are nested inside larger parent nodes.
+
+## Division (Layered) Layout
+A <span style = "color:lightblue">division or layered layout</span> 
