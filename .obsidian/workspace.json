@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fa3d9f4bba28fa2c",
+        "id": "71de7027f64ed20c",
         "type": "tabs",
         "children": [
           {
-            "id": "becbc5e87f224a1f",
+            "id": "7e7ea4e84de81803",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "f2bfe5054d99b4a1",
+            "id": "bad581c7cadcc333",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Spatial Data.md",
+                "file": "Data Visualization/Multivariate Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bitplane",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -154,19 +154,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "becbc5e87f224a1f",
+  "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
-    "Data Visualization/Spatial Data.md",
-    "Data Visualization/Graphs.md",
     "Data Visualization/Multivariate Data.md",
-    "Data Visualization/Principles.md",
-    "Data Visualization/Trajectory Data.md",
-    "Data Visualization/Text Data.md",
-    "Image Processing/Image Segmentation.md",
-    "Machine Learning/Classification.md",
+    "Data Visualization/Graphs.md",
+    "Image Processing/Interpolation & Transformation.md",
     "conflict-files-obsidian-git.md",
-    "Machine Learning/PyTorch & CUDA Setup.md"
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Intensity Transformations.md",
+    "Machine Learning/Clustering.md",
+    "Data Visualization/Text Data.md",
+    "Data Mining/Data Preprocessing.md",
+    "Image Processing/Morphological Image Processing.md"
   ]
 }

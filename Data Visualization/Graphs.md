@@ -32,12 +32,35 @@ Common challenges in graph visualization are listed below.
 - **Spatial layout:** how to properly arrange the nodes and edges?
 
 # Designs
-Graphs are normally represented with these idioms: node-link layouts, enclosure (nested) layouts, division (layered) layouts, matrix layouts, and three-dimensional layouts.
+Graphs are normally represented with these idioms: **node-link layouts**, **enclosure (nested) layouts**, **division (layered) layouts**, **matrix layouts**, and **three-dimensional layouts**.
 
-## Node-Link
-A generic <span style = "color:lightblue">node-link</span> graph consists of a set of nodes and edges, where node positions are calculated and connecting lines are drawn for the edges. These elements are laid out on a two-dimensional space, where edge lengths are kept uniform and nodes are distributed uniformly.
+## Generic Node-Link
+A <span style = "color:lightblue">generic node-link</span> graph consists of a set of nodes and edges, where node positions are calculated and connecting lines are drawn for the edges. These elements are laid out on a two-dimensional space, where edge lengths are kept uniform and nodes are distributed uniformly.
 
 |                           **Data**                            | **Mark** |           **Channels**           |             **Task**             | **Scalability** |
 |:-------------------------------------------------------------:|:--------:|:--------------------------------:|:--------------------------------:|:---------------:|
 | Generic graph |   Points (nodes) & lines (edges)   | Color, size | Understand relationships | More nodes and edges               |
+
+Node positions can be adjusted based on other layouts.
+- <span style = "color:lightblue">spring layout</span>: edges are elastic springs and adjust node positions accordingly
+	- Optimization algorithms: <span style = "color:lightblue">Newton-Raphson method</span>, <span style = "color:lightblue">simulated annealing method</span>, <span style = "color:lightblue">GEM method</span>, etc.
+- <span style = "color:lightblue">force-directed layout</span>: nodes are charged particles, edges are elastic springs
+
+Alternatively, node-link graphs can be implemented to summarize common connections with an **arc diagram**, **radial graph**, or **chord diagram**.
+
+![[image-processing-chord-diagram.png|600]]
+
+## Bipartite & Directed Acyclic Graphs
+A <span style = "color:lightblue">bipartite graph</span> displays connections between <u>two</u> sets of nodes.
+
+|                           **Data**                            | **Mark** |           **Channels**           |             **Task**             | **Scalability** |
+|:-------------------------------------------------------------:|:--------:|:--------------------------------:|:--------------------------------:|:---------------:|
+| Bipartite graph |   Points (nodes) & lines (edges)   | Color, size | Illustration of two groups | More nodes and edges               |
+
+A <span style = "color:lightblue">Sankey diagram</span> is a <span style = "color:lightblue">directed acyclic graph (DAG)</span> that consists of **a sequence of bipartite graphs**. It identifies composition and matches between attributes.
+
+![[image-processing-sankey-diagram.png|600]]
+
+## Tree
+An <span style = "color:lightblue">indented tree layout</span> places items along rows, where indentation is used to show parent-child relationships.
 
