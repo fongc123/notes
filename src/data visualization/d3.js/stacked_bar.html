@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<a href = "circular_bar.html">See <b>radial plot</b>.</a>
+<div id = "filter"><b>Year:</b></div>
+<div id="stacked_radial"></div>
+
+<script>
+    var margin = {top: 10, right: 30, bottom: 20, left: 50},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+    const innerRadius = 70;
+    const outerRadius = 75;
+    const year = "2015";
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
+    const link = "https://raw.githubusercontent.com/DelusionArun/Testing_CSV/main/race_by_year_month.csv"
+    // const link = "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_stacked.csv";
+
+    // functions to convert from date to month
+    function getYear(date) {
+        return moment(date, "YYYY-MM-DD").format("YYYY");
+    }
+
+    function getMonth(date) {
+        return moment(date, "YYYY-MM-DD").format("MMMM");
+    }
+
+    function draw(link, year = "2015") {
+        d3.csv(link, data => {
+            var subgroups = data.columns.slice(2)
+            var groups = d3.map(data, function(d){return(d.shot_month)}).keys()
+            var x = d3.scaleBand()
+                .domain(groups)
+                .range([0, width])
+                .padding([0.2])
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x).tickSizeOuter(0));
+            var y = d3.scaleLinear().domain([0, 100]).range([ height, 0 ]);
+            svg.append("g").call(d3.axisLeft(y));
+            var color = d3.scaleOrdinal()
+                .domain(subgroups)
+                .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"])
+            var stackedData = d3.stack().keys(subgroups)(data.filter(d => d.shot_year === year))
+            svg.append("g")
+                .selectAll("g")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("fill", function(d) { return color(d.key); })
+                .selectAll("rect")
+                .data(function(d) { return d; })
+                .enter().append("rect")
+                    .attr("x", function(d) { return x(d.data.shot_month); })
+                    .attr("y", function(d) { return y(d[1]); })
+                    .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+                    .attr("width",x.bandwidth()
+                );
+        });
+    };
+
+    var dropDown = d3.select("#filter")
+        .append("select")
+        .attr("name", "year-list")
+
+    var options = dropDown.selectAll("option")
+        .data(d3.range(2015, 2023))
+        .enter()
+        .append("option")
+        .text(d => d)
+        .attr("value", d => d);
+
+        var svg = d3.select("#stacked_radial")
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    draw(link, "2015");
+
+    dropDown.on("change", function() {
+        var selectedOption = d3.select(this).property("value");
+        svg.selectAll("g").remove();
+        draw(link, selectedOption);
+    });
+
+</script>

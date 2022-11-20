@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<a href = "stacked_bar.html">See <b>stacked bar plot</b>.</a>
+<div id = "filter">
+    <b>Year:</b>
+</div>
+<div id="circular_bar"></div>
+
+<script>
+    const margin = {
+        top : 100,
+        right : 0,
+        bottom : 0,
+        left : 0
+    };
+    const width = 700 - margin.left - margin.right;
+    const height = 700 - margin.top - margin.bottom;
+    const innerRadius = 70;
+    const outerRadius = 75;
+    const year = "2015";
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
+    const link = "https://raw.githubusercontent.com/DelusionArun/Testing_CSV/main/governor_shooting_merged.csv";
+
+    // functions to convert from date to month
+    function getYear(date) {
+        return moment(date, "YYYY-MM-DD").format("YYYY");
+    }
+
+    function getMonth(date) {
+        return moment(date, "YYYY-MM-DD").format("MMMM");
+    }
+
+    // function to draw graph
+    function draw (year = "2015") {
+        d3.csv(link, data => {
+            // filter data by year
+            let filtered = data
+                .filter(d => getYear(d.date) === year)
+                .reduce((acc, curr) => {
+                    const month = getMonth(curr.date);
+                    if (acc[month]) {
+                        acc[month] += 1;
+                    } else {
+                        acc[month] = 1;
+                    }
+
+                    return acc;
+                }, {}
+            );
+
+            // convert to list of objects
+            let monthCounts = [];
+            for (let month of months) {
+                monthCounts.push({
+                    "Month" : month,
+                    "Count" : filtered[month].toString() || '0'
+                });
+            }
+
+            // x and y scales
+            var x = d3.scaleBand()
+                .range([0, 2 * Math.PI])
+                .domain(months);
+
+            var y = d3.scaleRadial()
+                .range([innerRadius, outerRadius]);
+
+            // draw bars
+            svg.append("g")
+                .selectAll("path")
+                .data(monthCounts)
+                .enter()
+                .append("path")
+                .attr("fill", "#69b3a2")
+                .attr("d", d3.arc()
+                    .innerRadius(innerRadius)
+                    .outerRadius(d => y(d.Count))
+                    .startAngle(d => x(d.Month))
+                    .endAngle(d => x(d.Month) + x.bandwidth())
+                    .padAngle(0.01)
+                    .padRadius(innerRadius)
+                );
+
+            // months
+            svg.append("g")
+                .selectAll("g")
+                .data(monthCounts)
+                .enter()
+                .append("g")
+                .attr("text-anchor", d => (x(d.Month) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start")
+                .attr("transform", d => `
+                    rotate(${((x(d.Month) + x.bandwidth() / 2) * 180 / Math.PI - 90)})
+                    translate(${y(d.Count) + 10},0)`)
+                .append("text")
+                .text(d => d.Month)
+                .attr("transform", d => (x(d.Month) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)")
+                .style("font-size", "14px")
+                .attr("alignment-baseline", "middle");
+
+            // values
+            svg.append("g")
+                .selectAll("g")
+                .data(monthCounts)
+                .enter()
+                .append("g")
+                .attr("text-anchor", d => (x(d.Month) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start")
+                .attr("transform", d => `
+                    rotate(${((x(d.Month) + x.bandwidth() / 2) * 180 / Math.PI - 90)})
+                    translate(${3 * y(d.Count) / 4},0)`)
+                .append("text")
+                .text(d => d.Count)
+                .attr("transform", d => (x(d.Month) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)")
+                .style("font-size", "14px")
+                .attr("alignment-baseline", "middle");
+        })
+    }
+
+    var dropDown = d3.select("#filter")
+        .append("select")
+        .attr("name", "year-list");
+
+    var options = dropDown.selectAll("option")
+        .data(d3.range(2015, 2023))
+        .enter()
+        .append("option")
+        .text(d => d)
+        .attr("value", d => d);
+
+    // SVG object
+    var svg = d3.select("#circular_bar")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (height / 2 + margin.top) + ")");
+
+    draw("2015");
+
+    dropDown.on("change", () => {
+        var selected = d3.select("select").node().value;
+        svg.selectAll("g").remove();
+        draw(selected);
+    });
+
+</script>
