@@ -17,10 +17,10 @@
         bottom : 0,
         left : 0
     };
-    const width = 700 - margin.left - margin.right;
-    const height = 700 - margin.top - margin.bottom;
-    const innerRadius = 70;
-    const outerRadius = 75;
+    const width = 350 - margin.left - margin.right;
+    const height = 400 - margin.top - margin.bottom;
+    const innerRadius = 10;
+    const outerRadius = 15;
     const year = "2015";
     const months = [
         "January",
@@ -123,11 +123,11 @@
                 .attr("text-anchor", d => (x(d.Month) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start")
                 .attr("transform", d => `
                     rotate(${((x(d.Month) + x.bandwidth() / 2) * 180 / Math.PI - 90)})
-                    translate(${3 * y(d.Count) / 4},0)`)
+                    translate(${2 * y(d.Count) / 3},0)`)
                 .append("text")
                 .text(d => d.Count)
                 .attr("transform", d => (x(d.Month) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)")
-                .style("font-size", "14px")
+                .style("font-size", "10px")
                 .attr("alignment-baseline", "middle");
         })
     }
