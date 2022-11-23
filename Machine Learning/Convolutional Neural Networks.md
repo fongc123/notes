@@ -146,7 +146,6 @@ class CNN(nn.Module):
 		self.dense = nn.Sequential(
 			# calculate output of convolution
 			nn.Linear(128 * 2 * 2, 512), # no. of channels * width * height
-
 			nn.ReLU(),
 			nn.Linear(512, K)
 		)
