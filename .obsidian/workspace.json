@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
-                "mode": "source",
+                "file": "Image Processing/Morphological Image Processing.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md"
+                "file": "Image Processing/Morphological Image Processing.md"
               }
             }
           },
@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
+    "Image Processing/Image Compression.md",
+    "Image Processing/Image Segmentation.md",
+    "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Data Visualization/Graphs.md",
     "Data Visualization/Multivariate Data.md",
     "Image Processing/Interpolation & Transformation.md",
     "conflict-files-obsidian-git.md",
     "Image Processing/Arithmetic Operations.md",
-    "Image Processing/Intensity Transformations.md",
-    "Machine Learning/Clustering.md",
-    "Data Visualization/Text Data.md",
-    "Data Mining/Data Preprocessing.md"
+    "Image Processing/Intensity Transformations.md"
   ]
 }
