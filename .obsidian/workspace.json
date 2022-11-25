@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "mode": "preview",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Morphological Image Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Segmentation.md"
+                "file": "Image Processing/Morphological Image Processing.md"
               }
             }
           },
@@ -158,8 +158,8 @@
   },
   "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
-    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Image Segmentation.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Compression.md",
