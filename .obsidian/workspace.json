@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2e7c8c777569b554",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Image Processing/Intensity Transformations.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -146,15 +158,15 @@
   },
   "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Image Segmentation.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Compression.md",
-    "Image Processing/Image Segmentation.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Data Visualization/Graphs.md",
     "Data Visualization/Multivariate Data.md",
     "Image Processing/Interpolation & Transformation.md",
-    "conflict-files-obsidian-git.md",
-    "Image Processing/Arithmetic Operations.md"
+    "conflict-files-obsidian-git.md"
   ]
 }
