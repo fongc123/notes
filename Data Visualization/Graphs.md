@@ -106,11 +106,11 @@ A <span style = "color:lightblue">sunburst tree layout</span> displays items and
 # Visual Clutter Reduction
 As the data size increases, visual clutter can become a major issue.
 - <span style = "color:lightblue">edge-centric</span>: adjust representation of edges
-	- <span style = "color:lightblue">confluent drawings</span>: group intersection points together
+	- <span style = "color:lightblue">confluent drawings</span>: group intersection points together (i.e., bundle connections together)
 	- <span style = "color:lightblue">flow map</span>: group edges by a single-source flow as a free-style binary tree structure
-	- <span style = "color:lightblue">edge bundling</span>: group edges together into thicker edges
+	- <span style = "color:lightblue">edge bundling</span>: control edge routing through tree paths 
 - <span style = "color:lightblue">node-centric</span>: content-based clustering (e.g., divide structure into sub-graphs)
-- <span style = "color:lightblue">appearance-centric</span>: sampling or filtering
+- <span style = "color:lightblue">appearance-centric</span>: sampling, filtering, size adjustment, opacity adjustment, and clustering
 
 > [!WARNING]
 > Node-centric visual clutter reduction approaches cause a loss of detail.
