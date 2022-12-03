@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Visualization/Trajectory Data.md"
+                "file": "Machine Learning/Convolutional Neural Networks.md"
               }
             }
           },
@@ -158,6 +158,8 @@
   },
   "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
+    "Machine Learning/PyTorch & CUDA Setup.md",
+    "Data Visualization/Trajectory Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Visualization/Text Data.md",
     "Data Visualization/Graphs.md",
@@ -165,8 +167,6 @@
     "Data Visualization/Principles.md",
     "Data Visualization/Color.md",
     "Data Visualization/Perception.md",
-    "Image Processing/Morphological Image Processing.md",
-    "Image Processing/Image Segmentation.md",
-    "Image Processing/Interpolation & Transformation.md"
+    "Image Processing/Morphological Image Processing.md"
   ]
 }
