@@ -4,34 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "71de7027f64ed20c",
+        "id": "7aa3617e72143c22",
         "type": "tabs",
         "children": [
           {
-            "id": "7e7ea4e84de81803",
+            "id": "c516dc37540547fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Machine Learning/Clustering.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "2e7c8c777569b554",
+            "id": "0291fdc7c8f7648c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Machine Learning/Networks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0e369af3dbad2950",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Visualization/Graphs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Machine Learning/Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
+                "file": "Machine Learning/Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md"
+                "file": "Machine Learning/Networks.md"
               }
             }
           },
@@ -156,17 +169,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7e7ea4e84de81803",
+  "active": "0291fdc7c8f7648c",
   "lastOpenFiles": [
+    "Data Visualization/Graphs.md",
+    "Machine Learning/Networks.md",
+    "Machine Learning/Clustering.md",
+    "Image Processing/Intensity Transformations.md",
+    "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/Multivariate Data.md",
     "Data Visualization/Text Data.md",
-    "Data Visualization/Graphs.md",
-    "Data Visualization/Design Rules.md",
-    "Data Visualization/Principles.md",
-    "Data Visualization/Color.md",
-    "Data Visualization/Perception.md",
-    "Image Processing/Morphological Image Processing.md"
+    "Data Visualization/Design Rules.md"
   ]
 }

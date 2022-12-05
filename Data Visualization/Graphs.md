@@ -11,7 +11,7 @@ Trees are **graphs with hierarchical structure**. A tree with $N$ nodes will hav
 > [!INFO]
 > **Why $N-1$ edges?** The tree starts with $1$ node and $0$ edges. A new edge ($+1$) is added for every new node ($+1$).
 
-Typical tasks for a graph representation are listed below.
+Typical tasks for a graph representation are listed below (*see [[Networks|networks]]*).
 - Count the number of nodes and edges.
 - Calculate the **degree** for a node and the graph density.
 - Count a separate group of nodes and find strong clusters.
