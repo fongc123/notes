@@ -118,6 +118,17 @@ A [[Clustering#Hierarchical Clustering|hierarchical cluster]] can be created by 
 The [[#Breadth-first Search|breadth-first search (BFS)]] algorithm is used to calculate the **betweenness of each edge**.
 1. Start at a node.
 2. Count the **number of shortest paths** from the node to all other nodes.
-3. Compute betweenness by working up the tree (i.e., starting from the furthest node).
+3. Compute betweenness by working up the tree (i.e., starting from the furthest node and ending with the root node).
 	1. Each node is given a credit of $1$.
-	2. 
+	2. The **flow through each node** is equal to $1+\sum{\text{child edges}}$, where $1$ is the node's original credit.
+	3. The flow is distributed to the parent node(s) proportional to each parent's value.
+		1. **Example 1:** Since nodes $F$ and $G$ are parent nodes of node $I$ and have values of $2$ and $1$ respectively, node $I$ will give $\frac{2}{3}$ of its flow to node $F$ and $\frac{1}{3}$ of its flow to node $G$.
+		2. **Example 2:** Since nodes $D$ and $E$ are parent nodes of node $H$ and have equal values, node $H$ will equally distribute its flow to both nodes $D$ and $E$.
+4. Repeat steps 1-3 for each node in the network, obtaining an edge betweenness graph after each iteration.
+5. For each edge in the original graph, sum up the flow values for the edge in each iteration and divide by two (*undirected*) to obtain the **edge betweenness**.
+
+For example, the final betweenness value for the edge between $A$ and $B$ is the sum of all edge values of $A$ and $B$ in the graph originating at $A, B, \ldots, K$ divided by two.
+
+$$\text{betweenness}_{AB}=\dfrac{\text{edge}_{AB}^{A}+\text{edge}^B_{AB}+\ldots+\text{edge}^K_{AB}}{2}$$
+
+![[ml-networks-calculating-betweenness.jpg|600]]
