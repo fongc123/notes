@@ -42,6 +42,7 @@
     "ut of a thre",
     "fiducial",
     "Voronoi",
-    "nodes"
+    "nodes",
+    "Girvan-Newman"
   ]
 }

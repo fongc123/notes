@@ -43,7 +43,25 @@ Alternatively, an <span style = "color:lightblue">adjacency list</span> stores c
 
 The adjacency list uses $O(V+E)$ storage, where $V$ is the number of vertices and $E$ is the number of edges.
 
+# Breadth-first Search
+The <span style = "color:lightblue">breadth-first search (BFS)</span> algorithm traverses all nodes in the graph to reveal properties of a network. 
 
+# Girvan-Newman
+The <span style = "color:lightblue">Girvan-Newman algorithm</span> identifies communities (i.e., groups) in an **undirected and unweighted** network by calculating the betweenness of each edge (i.e., <span style = "color:lightblue">edge betweenness</span> $\rightarrow$ the number of shortest paths passing through the edge).
+1. Calculate **betweenness** of each edge.
+2. Remove the edge with the highest betweenness. If two or more edges have the same highest score, all edges are removed.
+3. Repeat until no edges are left.
+
+> [!INFO]
+> The betweenness of each edge is recalculated after every removal step.
+
+An example is shown below.
+
+![[ml-networks-girvan-newman-original.png|600]]
+
+![[ml-networks-girvan-newman-steps.png|600]]
+
+A [[Clustering#Hierarchical Clustering|hierarchical cluster]] can be created by observing the communities that are formed from removing edges.
 
 > [!INFO]
 > The total number of combinations can be calculated with the following formula.
