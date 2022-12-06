@@ -43,6 +43,7 @@
     "fiducial",
     "Voronoi",
     "nodes",
-    "Girvan-Newman"
+    "Girvan-Newman",
+    ".e.,"
   ]
 }

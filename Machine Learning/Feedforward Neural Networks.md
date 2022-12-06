@@ -118,7 +118,34 @@ It is *technically* an activation function, but it is not meant for hidden layer
 > Alternatively, `nn.NLLLoss()` is the standalone cross entropy loss.
 
 # Computational Graph
+A <span style = "color:lightblue">computational graph</span> is a form of directed graph that represents a mathematical equation. In machine learning, it is used to represent the mathematical expressions in a neural network.
 
+![[ml-comp-graph.png|600]]
+
+Used in many machine learning models, such as [[Classification|classification]] and [[Regression|regression]], <span style = "color:lightblue">backpropagation</span> calculates gradients so that the weights and biases of the model can be updated accordingly. Essentially, backpropagation is the chain rule from calculus.
+
+## Example
+In the above computational graph, we want to obtain the input gradients (i.e., $\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$, and $\frac{\partial f}{\partial z}$) with respect to the output $f$. From the graph, we know the following.
+
+$$
+\begin{align}
+q=x+y\quad\frac{\partial q}{\partial x}=1,\frac{\partial q}{\partial y}=1 \\
+f=qz\quad\frac{\partial f}{\partial q}=z,\frac{\partial f}{\partial z}=q
+\end{align}
+$$
+
+We can easily obtain $\frac{\partial f}{\partial z}$, as it is the value of $q$. To obtain the gradients of $x$ and $y$, we use the chain rule.
+
+$$
+\begin{gather}
+\frac{\partial f}{\partial x}=\frac{\partial f}{\partial q}\frac{\partial q}{\partial x}=z=-4 \\
+\frac{\partial f}{\partial y}=\frac{\partial f}{\partial q}\frac{\partial q}{\partial y}=z=-4
+\end{gather}
+$$
+
+
+
+Thus, the gradients are **propagated back** to the inputs.
 
 # Code
 A sample **artificial neural network** is constructed with PyTorch's `Sequential` object that is composed of multiple layers (*see [[PyTorch & CUDA Setup#Modular Programming|modules in PyTorch]]*).

@@ -49,9 +49,6 @@ When there are multiple features, this method finds the feature(s) that has the 
 > [!INFO]
 > **Gradient descent** is widely used by many machine learning and deep learning algorithms.
 
-## Backpropagation
-To obtain the gradients, <span style = "color:lightblue">backpropagation</span>, which is the chain rule from calculus, is performed.
-
 ### Stochastic Gradient Descent (SGD)
 To optimize the gradient descent algorithm, <span style = "color:lightblue">stochastic gradient descent (SGD)</span> can be performed. Instead of updating the weights after the <u>entire</u> dataset has been traversed, the weights are updated after $n$ samples.
 
