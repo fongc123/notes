@@ -117,6 +117,9 @@ It is *technically* an activation function, but it is not meant for hidden layer
 > 
 > Alternatively, `nn.NLLLoss()` is the standalone cross entropy loss.
 
+# Computational Graph
+
+
 # Code
 A sample **artificial neural network** is constructed with PyTorch's `Sequential` object that is composed of multiple layers (*see [[PyTorch & CUDA Setup#Modular Programming|modules in PyTorch]]*).
 

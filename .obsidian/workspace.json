@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Networks.md",
+                "file": "Data Visualization/Text Data.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,14 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Visualization/Graphs.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "term frequency",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Networks.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Networks.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Networks.md"
+                "file": "Machine Learning/Feedforward Neural Networks.md"
               }
             }
           },
@@ -169,17 +169,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0291fdc7c8f7648c",
+  "active": "0e369af3dbad2950",
   "lastOpenFiles": [
+    "Machine Learning/Convolutional Neural Networks.md",
     "Data Visualization/Graphs.md",
+    "Data Visualization/Text Data.md",
     "Machine Learning/Networks.md",
     "Machine Learning/Clustering.md",
     "Image Processing/Intensity Transformations.md",
-    "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Data Visualization/Trajectory Data.md",
     "Data Visualization/Multivariate Data.md",
-    "Data Visualization/Text Data.md",
     "Data Visualization/Design Rules.md"
   ]
 }
