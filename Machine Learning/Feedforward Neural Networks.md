@@ -123,6 +123,39 @@ A <span style = "color:lightblue">computational graph</span> is a form of direct
 ![[ml-comp-graph.png|600]]
 
 Used in many machine learning models, such as [[Classification|classification]] and [[Regression|regression]], <span style = "color:lightblue">backpropagation</span> calculates gradients so that the weights and biases of the model can be updated accordingly. Essentially, backpropagation is the chain rule from calculus.
+- **Addition:** input gradients equal upstream gradient (i.e., <span style = "color:lightblue">gradient distributor</span> or **add gate**)
+- **Multiplication:** input gradients equal the **product** of the <u>other</u> input's local gradient *and* the upstream gradient (i.e., <span style = "color:lightblue">gradient switcher</span> or **mul gate**)
+- **Max:** input gradient with the maximum value equal upstream gradient and (i.e., <span style = "color:lightblue">gradient router</span> or **max gate**) ($0$ for other inputs)
+
+> [!INFO]
+> Gradients add at branches.
+> 
+> ![[ml-comp-grad-branches.png|450]]
+
+A [[#Sigmoid|sigmoid gate]] can be implemented as follows.
+
+![[ml-comp-sigmoid.png|600]]
+
+The derivatives of each gate are calculated.
+
+$$
+\begin{align}
+f(x)=\frac{1}{x}&\rightarrow\frac{df}{dx}=-\frac{1}{x^2} \\\\
+f(x)=e^x&\rightarrow\frac{df}{dx}=e^x\\\\
+f(x)=x+c&\rightarrow\frac{df}{dx}=1\\\\
+f(x)=ax&\rightarrow\frac{df}{dx}=a
+\end{align}
+$$
+
+To calculate the gradient of the $\frac{1}{x}$ gate, the local gradient is multiplied (i.e., $\frac{df}{dx}=-\frac{1}{x^2}$) by the upstream gradient.
+
+$$(-\frac{1}{1.37^2})(1.00)=-0.53$$
+
+To calculate the gradient of the $\exp$ gate, the local gradient (i.e., $\frac{df}{dx}=e^x$) is multiplied by the upstream gradient.
+
+$$(e^{-1})(-0.53)=-0.20$$
+
+![[ml-comp-sigmoid-ans.png|600]]
 
 ## Example
 In the above computational graph, we want to obtain the input gradients (i.e., $\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$, and $\frac{\partial f}{\partial z}$) with respect to the output $f$. From the graph, we know the following.
@@ -134,7 +167,7 @@ f=qz\quad\frac{\partial f}{\partial q}=z,\frac{\partial f}{\partial z}=q
 \end{align}
 $$
 
-We can easily obtain $\frac{\partial f}{\partial z}$, as it is the value of $q$. To obtain the gradients of $x$ and $y$, we use the chain rule.
+We can easily obtain $\frac{\partial f}{\partial z}$, as it is the value of $q$ ($-4\times1$). To obtain the gradients of $x$ and $y$, we use the chain rule.
 
 $$
 \begin{gather}
@@ -143,7 +176,7 @@ $$
 \end{gather}
 $$
 
-
+![[ml-comp-graph-ans.png|600]]
 
 Thus, the gradients are **propagated back** to the inputs.
 
