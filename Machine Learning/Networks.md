@@ -44,7 +44,53 @@ Alternatively, an <span style = "color:lightblue">adjacency list</span> stores c
 The adjacency list uses $O(V+E)$ storage, where $V$ is the number of vertices and $E$ is the number of edges.
 
 # Breadth-first Search
-The <span style = "color:lightblue">breadth-first search (BFS)</span> algorithm traverses all nodes in the graph to reveal properties of a network. 
+The <span style = "color:lightblue">breadth-first search (BFS)</span> algorithm traverses all nodes in the graph to reveal properties of a network. While traversing the graph, it keeps track of which nodes to explore next with a [[Stack & Queue|queue]].
+- `color[u]`: the algorithm's progress on the node $u$ (*usually represented by color*)
+	- `WHITE`: undiscovered
+	- `GRAY`: discovered but not finished processing (*neighbors of $u$ not found yet*)
+	- `BLACK`: finished processing
+- `prev[u]`: the predecessor to node $u$
+- `d[u]`: the **shortest** distance from the source to node $u$
+
+First, each node $u$ is initialized as `WHITE` (i.e., undiscovered), and `pred[u] = NULL` (i.e., no predecessor).
+
+```text
+// visit each node (handles disconnected nodes as well)
+foreach u in V do
+	// start a new tree
+	if color[u] = WHITE then
+		visit(u);
+	end
+end
+
+function visit(s):
+	color[s] = GRAY; pred[s] = NULL; d[s] = 0;
+	Q = 0; Enqueue(Q, s); // enqueue this node to the queue
+	while len(Q) != 0 do
+		u = Dequeue(Q);
+		foreach v in Adj[u] do // iterate through neighbors of node u
+			if color[v] = WHITE then // only continue if neighbor v is unvisited
+				color[v] = GRAY;
+				d[v] = d[u] + 1;
+				pred[v] = u;
+				Enqueue(Q, v);
+			end
+		end
+		color[u] = BLACK; // complete processing after all neighbors discovered
+	end
+```
+
+> [!INFO]
+> The **shortest distance** will always be stored, as the closest neighbors to a node will be discovered first.
+
+An example is shown below.
+
+![[ml-networks-bfs.png|600]]
+
+> [!INFO]
+> In steps (c) and (d), notice that the distance from node $s$ to node $y$ is not $4$, as the queue ensures that node $x$ instead of node $u$ will discover node $y$.
+
+The algorithm outputs the shortest distance from a source node to any other node, which can be viewed as a hierarchical structure.
 
 # Girvan-Newman
 The <span style = "color:lightblue">Girvan-Newman algorithm</span> identifies communities (i.e., groups) in an **undirected and unweighted** network by calculating the betweenness of each edge (i.e., <span style = "color:lightblue">edge betweenness</span> $\rightarrow$ the number of shortest paths passing through the edge).
@@ -68,3 +114,4 @@ A [[Clustering#Hierarchical Clustering|hierarchical cluster]] can be created by 
 > $$_nC_r=\dfrac{n!}{r!(n-r)!}$$
 > For example, the number of combinations from picking $2$ out of $4$ items is $_4C_2$.
 
+## Calculating Betweenness
