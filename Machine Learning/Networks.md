@@ -115,3 +115,9 @@ A [[Clustering#Hierarchical Clustering|hierarchical cluster]] can be created by 
 > For example, the number of combinations from picking $2$ out of $4$ items is $_4C_2$.
 
 ## Calculating Betweenness
+The [[#Breadth-first Search|breadth-first search (BFS)]] algorithm is used to calculate the **betweenness of each edge**.
+1. Start at a node.
+2. Count the **number of shortest paths** from the node to all other nodes.
+3. Compute betweenness by working up the tree (i.e., starting from the furthest node).
+	1. Each node is given a credit of $1$.
+	2. 
