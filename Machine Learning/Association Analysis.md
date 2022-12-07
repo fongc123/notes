@@ -38,4 +38,25 @@ For example, the support count of the item set $\{\text{Milk}, \text{Diaper}, \t
 $$\text{support}(A)=\frac{2}{5}=0.4$$
 
 # Support & Confidence
-Both <span style = "color:lightblue">support</span> and <span style = "color:lightblue">confidence</span> are used to determine the strength of a rule. **Support** is the fraction of tr
+Both <span style = "color:lightblue">support</span> and <span style = "color:lightblue">confidence</span> are used to determine the strength of a rule. Given a rule $A\rightarrow B$, **support** is the fraction of transactions that contain **both** item sets $A$ and $B$ (i.e., **not** $A$ or $B$).
+
+$$\text{support}(A\rightarrow B)=\frac{\text{support\_count}(A\cup B)}{|T|}=P(A\cup B)$$
+
+The <span style = "color:lightblue">support count</span> is the number of transactions that contain the item set $A$. For example, the item set  $\{\text{Milk}, \text{Diaper}, \text{Beer}\}$ occurs in two (i.e., support count) out of a total of five transactions.
+
+$$
+\text{support}(\{\text{Milk}, \text{Diaper}\}\rightarrow\{\text{Beer}\})=\frac{\text{support\_count}(\{\text{Milk},\text{Diaper},\text{Beer}\})}{5}=\frac{2}{5}=0.4
+$$
+
+>[!WARNING]
+>Rules with low support may occur simply by chance and may not be interesting.
+
+The **confidence** of a rule is the fraction of transactions containing $A$ that also contain $B$.
+
+$$\text{confidence}(A\rightarrow B)=\frac{\text{support}(A\cup B)}{\text{support}(A)}=\frac{\text{support\_count}(A\cup B)}{\text{support\_count}(A)}=P(B|A)$$
+
+It is equivalent to the [[Data Preprocessing#Probability & Independence|conditional probability]] of $B$ given $A$. For example, the item subset $\{\text{Milk}, \text{Diaper}, \text{Beer}\}$ appears in two out of a total of three transactions that contain the item set $\{\text{Milk}, \text{Diaper}\}$.
+
+$$\text{confidence}(\{\text{Milk}, \text{Diaper}\}\rightarrow\{\text{Beer}\})=\frac{\text{support\_count}(\{\text{Milk},\text{Diaper},\text{Beer}\})}{\text{support\_count}(\{\text{Milk}, \text{Diaper}\})}=\frac{2}{3}=0.67$$
+
+Confidence measures the reliability of the rule.
