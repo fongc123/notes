@@ -12,3 +12,7 @@
 
 A strong rule that can be extracted is that **there is a strong relationship between the sale of beer and diapers together** (i.e., beer $\rightarrow$ diapers).
 
+Association rule mining aims to achieve two things.
+1. Find all frequent item sets (i.e., item sets that satisfy minimum support).
+2. Generate strong association rules (i.e., find rules among the frequent item sets).
+
