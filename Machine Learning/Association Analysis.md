@@ -54,8 +54,12 @@ Confidence measures the reliability of the rule.
 
 > [!INFO]
 > All association rules between combinations of item sets can be mined by **brute-force**, which may be computationally expensive.
+> ```text
+> for each transaction t in database do:
+> 	for each candidate co
+> ```
 
-## Generation of Rules from Frequent Item Sets
+## Generation of New Rules
 An item set $A$ is <span style = "color:lightblue">frequent</span> if it satisfies the minimum support threshold $\text{min\_sup}$. Additionally, a <span style = "color:lightblue">frequent k-item set</span> is a frequent item set that contains $k$ items.
 1. Generate all **non-empty proper subsets** $A$ of a frequent item set $S$.
 2. For each $A$, the rule $A\rightarrow(S-A)$ is a strong rule if the confidence of rule $A$ exceeds the minimum confidence threshold $\text{min\_conf}$.
@@ -65,4 +69,7 @@ Thus, new rules are generated from subsets of frequent item sets.
 
 > [!INFO]
 > Each subset of a frequent item set $A$ automatically satisfies the minimum support threshold, as they are derived from a frequent item set (i.e., **strong rule!**).
+
+# Apriori Algorithm
+From [[#Generation of New Rules|the previous section]], association rule mining is reduced to finding frequent item sets.
 
