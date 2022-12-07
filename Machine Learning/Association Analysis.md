@@ -26,19 +26,8 @@ Association rule mining aims to achieve two things.
 > [!WARNING]
 > Strong rules are not necessarily interesting (e.g., when item sets have an overwhelming probability of occurring).
 
-Item set is a subset of $I$. $I=\{I_1, I_2, \ldots, I_n\}$.
-
-<span style = "color:lightblue">Support count</span>: number of transactions that contain the item set $A$
-<span style = "color:lightblue">Support</span>: fraction of transactions that contain the item set $A$
-
-$$\text{support}(A)=\frac{\text{support\_count}(A)}{|T|}=P(A)$$
-
-For example, the support count of the item set $\{\text{Milk}, \text{Diaper}, \text{Beer}\}$ occurs in two (i.e., support) out of a total of five transactions.
-
-$$\text{support}(A)=\frac{2}{5}=0.4$$
-
 # Support & Confidence
-Both <span style = "color:lightblue">support</span> and <span style = "color:lightblue">confidence</span> are used to determine the strength of a rule. Given a rule $A\rightarrow B$, **support** is the fraction of transactions that contain **both** item sets $A$ and $B$ (i.e., **not** $A$ or $B$).
+Both <span style = "color:lightblue">support</span> and <span style = "color:lightblue">confidence</span> are used to determine the strength of a rule. Given a rule $A\rightarrow B$, **support** is the fraction of transactions that contain **both** item sets $A$ and $B$ (i.e., **not** $A$ or $B$), where $A$ and $B$ are subsets of the entire set $I=\{I_1, I_2,\ldots,I_n\}$ of all transactional items.
 
 $$\text{support}(A\rightarrow B)=\frac{\text{support\_count}(A\cup B)}{|T|}=P(A\cup B)$$
 
@@ -59,4 +48,10 @@ It is equivalent to the [[Data Preprocessing#Probability & Independence|conditio
 
 $$\text{confidence}(\{\text{Milk}, \text{Diaper}\}\rightarrow\{\text{Beer}\})=\frac{\text{support\_count}(\{\text{Milk},\text{Diaper},\text{Beer}\})}{\text{support\_count}(\{\text{Milk}, \text{Diaper}\})}=\frac{2}{3}=0.67$$
 
-Confidence measures the reliability of the rule.
+Confidence measures the reliability of the rule. 
+
+**A strong rule satisfies a minimum support threshold $\text{min\_sup}$ (or minimum support count threshold) and a minimum confidence threshold $\text{min\_conf}$.**
+
+> [!INFO]
+> All association rules between combinations of item sets can be mined by **brute-force**, which may be computationally expensive.
+
