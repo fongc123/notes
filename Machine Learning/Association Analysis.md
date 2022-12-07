@@ -89,15 +89,30 @@ In general, frequent $(k-1)$-item sets generate new candidate $k$-item sets.
 
 ## Generation of Candidates
 
+
+> [!WARNING]
+> Generation of new candidates only aims to **reduce duplicates** and **remove any $k$-item sets that are guaranteed to be infrequent** (*the superset of an infrequent item set is also infrequent*). The new $k$-item set candidates must still be checked if they themselves are frequent.
+
+
+
 ## Example
 An example of the algorithm is shown below, where the minimum support count is $3$ and a frequent 3-item set is generated.
 - $k=1$: Sum of support counts ($\text{coke}$ and $\text{eggs}$ are infrequent).
 - $k=2$: Self-join frequent item sets for ${4\choose2}$ or $6$ combinations.
 - $k=3$: Self-join frequent item sets.
-	- 
+	- Only the item sets $A=\{\text{Bread},\text{Diaper}\}$ and $B=\{\text{Bread},\text{Milk}\}$ are joined.
+	- The first $k-2$ or $1$ items are identical, ensuring that the subsets of the new item set are frequent.
+	- For $i=1,2$, $a_i$ is lexicographically smaller than $b_i$, avoiding duplicates.
 
 ![[ml-apriori-ex.png|600]]
 
+A brute-force approach would produce $41$ candidates up to size $3$.
+
+$${6\choose1}+{6\choose2}+{6\choose3}=41$$
+
+The <span style = "color:lightblue">Apriori algorithm</span> will only generate $13$ candidates up to size $3$.
+
+$${6\choose1}+{4\choose2}+1=13$$
 
 > [!INFO]
 > The total number of combinations can be calculated with the following formula.
