@@ -56,7 +56,10 @@ Confidence measures the reliability of the rule.
 > All association rules between combinations of item sets can be mined by **brute-force**, which may be computationally expensive.
 > ```text
 > for each transaction t in database do:
-> 	for each candidate co
+> 	for each candidate contained in t do:
+> 		increment the support count;
+> 	end
+> end
 > ```
 
 ## Generation of New Rules
@@ -71,5 +74,32 @@ Thus, new rules are generated from subsets of frequent item sets.
 > Each subset of a frequent item set $A$ automatically satisfies the minimum support threshold, as they are derived from a frequent item set (i.e., **strong rule!**).
 
 # Apriori Algorithm
-From [[#Generation of New Rules|the previous section]], association rule mining is reduced to finding frequent item sets.
+From [[#Generation of New Rules|the previous section]], association rule mining is reduced to finding frequent item sets. To avoid the computationally expensive brute-force method, item set candidates must be pruned.
+1. **Any subset of a frequent item set must be frequent.**
+2. **If there is any item set which is infrequent, its superset should not be tested or generated** (i.e., <span style = "color:lightblue">antimonotone</span> property of the support measure).
 
+The steps of the algorithm are shown below.
+1. Enumerate the candidate **1-item sets** by incrementing their [[#Support & Confidence|support count]].
+2. Remove the candidate 1-item sets that are **infrequent** by a minimum support count threshold.
+3. [[#Generation of Candidates|Generate]] the candidate **2-item sets** based on the remaining **frequent 1-item sets**.
+4. Remove the candidate 2-item sets that are infrequent.
+5. Repeat for $n$-item sets until no other item sets can be generated.
+
+In general, frequent $(k-1)$-item sets generate new candidate $k$-item sets.
+
+## Generation of Candidates
+
+## Example
+An example of the algorithm is shown below, where the minimum support count is $3$ and a frequent 3-item set is generated.
+- $k=1$: Sum of support counts ($\text{coke}$ and $\text{eggs}$ are infrequent).
+- $k=2$: Self-join frequent item sets for ${4\choose2}$ or $6$ combinations.
+- $k=3$: Self-join frequent item sets.
+	- 
+
+![[ml-apriori-ex.png|600]]
+
+
+> [!INFO]
+> The total number of combinations can be calculated with the following formula.
+> $$_nC_r=\dfrac{n!}{r!(n-r)!}$$
+> For example, the number of combinations from picking $2$ out of $4$ items is $_4C_2$.

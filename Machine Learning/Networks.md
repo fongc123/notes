@@ -109,11 +109,6 @@ An example is shown below.
 
 A [[Clustering#Hierarchical Clustering|hierarchical cluster]] can be created by observing the communities that are formed from removing edges.
 
-> [!INFO]
-> The total number of combinations can be calculated with the following formula.
-> $$_nC_r=\dfrac{n!}{r!(n-r)!}$$
-> For example, the number of combinations from picking $2$ out of $4$ items is $_4C_2$.
-
 ## Calculating Betweenness
 The [[#Breadth-first Search|breadth-first search (BFS)]] algorithm is used to calculate the **betweenness of each edge**.
 1. Start at a node.
