@@ -26,7 +26,7 @@ Association rule mining aims to achieve two things.
 > [!WARNING]
 > Strong rules are not necessarily interesting (e.g., when item sets have an overwhelming probability of occurring).
 
-Item set is a subset of $I$. $I={I_1, I_2, \ldots, I_n}$.
+Item set is a subset of $I$. $I=\{I_1, I_2, \ldots, I_n\}$.
 
 <span style = "color:lightblue">Support count</span>: number of transactions that contain the item set $A$
 <span style = "color:lightblue">Support</span>: fraction of transactions that contain the item set $A$
@@ -37,3 +37,5 @@ For example, the support count of the item set $\{\text{Milk}, \text{Diaper}, \t
 
 $$\text{support}(A)=\frac{2}{5}=0.4$$
 
+# Support & Confidence
+Both <span style = "color:lightblue">support</span> and <span style = "color:lightblue">confidence</span> are used to determine the strength of a rule. **Support** is the fraction of tr
