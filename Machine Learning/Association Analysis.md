@@ -88,12 +88,10 @@ The steps of the algorithm are shown below.
 In general, frequent $(k-1)$-item sets generate new candidate $k$-item sets.
 
 ## Generation of Candidates
-
+A smart generation method does not generate candidates that are guaranteed to be infrequent.
 
 > [!WARNING]
 > Generation of new candidates only aims to **reduce duplicates** and **remove any $k$-item sets that are guaranteed to be infrequent** (*the superset of an infrequent item set is also infrequent*). The new $k$-item set candidates must still be checked if they themselves are frequent.
-
-
 
 ## Example
 An example of the algorithm is shown below, where the minimum support count is $3$ and a frequent 3-item set is generated.
