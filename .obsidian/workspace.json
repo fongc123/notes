@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Networks.md",
+                "file": "Machine Learning/Classification.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Association Analysis.md",
+                "file": "Machine Learning/Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Association Analysis.md",
+                "file": "Machine Learning/Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Association Analysis.md"
+                "file": "Machine Learning/Classification.md"
               }
             }
           },
@@ -217,11 +217,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7afd1b1fc4b2214f",
+  "active": "381148f987aa0e22",
   "lastOpenFiles": [
     "Machine Learning/Networks.md",
-    "Machine Learning/Classification.md",
     "Machine Learning/Association Analysis.md",
+    "Machine Learning/Classification.md",
     "Data Mining/Data Preprocessing.md",
     "Machine Learning/Clustering.md",
     "Machine Learning/Feedforward Neural Networks.md",
