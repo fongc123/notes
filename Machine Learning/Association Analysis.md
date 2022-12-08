@@ -88,7 +88,13 @@ The steps of the algorithm are shown below.
 In general, frequent $(k-1)$-item sets generate new candidate $k$-item sets.
 
 ## Generation of Candidates
-A smart generation method does not generate candidates that are guaranteed to be infrequent.
+A smart generation method does not generate candidates that are guaranteed to be infrequent. The Apriori algorithm uses the <span style = "color:lightblue">self-join</span> method to generate new candidates.
+
+A simple method extends every frequent $(k-1)$-item set with other frequent 1-item sets.
+
+![[ml-apriori-candidates.png|600]]
+
+However, this generates **duplicates**. Instead, an item set $X$ is **only** extended by frequent items that are **lexicographically larger** than the items in $X$. For example, $\{\text{Bread},\text{Diapers}\}$ can be extended by $\{\text{Milk}\}$, but $\{\text{Diapers},\text{Milk}\}$ cannot be extended by $\{\text{Bread}\}$ as 
 
 > [!WARNING]
 > Generation of new candidates only aims to **reduce duplicates** and **remove any $k$-item sets that are guaranteed to be infrequent** (*the superset of an infrequent item set is also infrequent*). The new $k$-item set candidates must still be checked if they themselves are frequent.
