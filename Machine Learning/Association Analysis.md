@@ -83,6 +83,8 @@ The steps of the algorithm are shown below.
 2. Remove the candidate 1-item sets that are **infrequent** by a minimum support count threshold.
 3. [[#Generation of Candidates|Generate]] the candidate **2-item sets** based on the remaining **frequent 1-item sets**.
 4. Remove the candidate 2-item sets that are infrequent.
+	1. Minimum support count threshold.
+	2. Item sets that contain infrequent subsets.
 5. Repeat for $n$-item sets until no other item sets can be generated.
 
 In general, frequent $(k-1)$-item sets generate new candidate $k$-item sets.
@@ -123,7 +125,10 @@ $$\text{merge if}\space a_i=b_i\space\text{AND}\space a_{k-1}<b_{k-1}\quad\text{
 
 This reduces the chance of generating an infrequent item set.
 - Any superset generated with the first $k-2$ items will be frequent, as they appear in the frequent $k-1$ item set.
-- The chance of generating an infrequent item set arises only from the one different item (e.g., $\{\text{Diapers},\text{Milk}\}$.
+- The chance of generating an infrequent $k$-item set arises only from the one different item (e.g., $\{\text{Diapers},\text{Milk}\}$), which may generate infrequent $(k-1$)-item sets. **Additional checking is needed here.**
+
+> [!INFO]
+> For the item set $\{\text{Beer},\text{Diapers},\text{Milk}\}$ to be a frequent, it would have been obtained by merging $\{\text{Beer},\text{Diapers}\}$ and $\{\text{Beer},\text{Milk}\}$. They do not exist in the frequent 2-item set.
 
 > [!WARNING]
 > Generation of new candidates only aims to **reduce duplicates** and **remove any $k$-item sets that are guaranteed to be infrequent** (*the superset of an infrequent item set is also infrequent*). The new $k$-item set candidates must still be checked if they themselves are frequent.
