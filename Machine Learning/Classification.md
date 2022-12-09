@@ -245,9 +245,7 @@ The <span style = "color:lightblue">F-measure</span> is the harmonic mean which 
 
 $$\text{F-measure}=\frac{2\times \text{recall}\times\text{precision}}{\text{recall}+\text{precision}}$$
 
-A <span style = "color:lightblue">macro-averaged</span> score simply averages the metric values across all classes, while a <span style = "color:lightblue">micro-averaged</span> score uses the 
-
-For a general accuracy indicator, the <span style = "color:lightblue">accuracy</span> can be calculated as shown below.
+A <span style = "color:lightblue">macro-averaged</span> score simply averages the metric values (e.g., precision, recall, F-measure) across all classes, while a <span style = "color:lightblue">micro-averaged</span> score uses the number of true positives, false positives, and false negatives. For a general accuracy indicator, the <span style = "color:lightblue">accuracy</span> can be calculated as shown below.
 
 $$\text{accuracy}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}}$$
 ### $k$-Fold Cross-validation
