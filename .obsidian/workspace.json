@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Clustering.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Clustering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Classification.md",
+                "file": "Machine Learning/Clustering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Classification.md"
+                "file": "Machine Learning/Clustering.md"
               }
             }
           },
@@ -146,11 +146,11 @@
   },
   "active": "7e7ea4e84de81803",
   "lastOpenFiles": [
+    "Machine Learning/Classification.md",
     "Machine Learning/Clustering.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Association Analysis.md",
     "Machine Learning/Decision Tree.md",
-    "Machine Learning/Classification.md",
     "Machine Learning/PyTorch & CUDA Setup.md",
     "Machine Learning/ML Basics.md",
     "Data Mining/Data Preprocessing.md",
