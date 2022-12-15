@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Feature Extraction.md",
+                "file": "Machine Learning/Regression.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "probability",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Feature Extraction.md",
+                "file": "Machine Learning/Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Feature Extraction.md",
+                "file": "Machine Learning/Regression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Feature Extraction.md"
+                "file": "Machine Learning/Regression.md"
               }
             }
           },
@@ -157,17 +157,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7e27c74406e50d48",
+  "active": "6b79c2ed84e96fb5",
   "lastOpenFiles": [
-    "Image Processing/Interpolation & Transformation.md",
+    "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Feature Extraction.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Image Segmentation.md",
     "Data Mining/Data Preprocessing.md",
     "Data Visualization/Design Tasks.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
     "Data Visualization/Perception.md",
-    "Data Visualization/Visualization Basics.md",
-    "Machine Learning/Classification.md"
+    "Data Visualization/Visualization Basics.md"
   ]
 }

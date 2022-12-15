@@ -50,7 +50,7 @@ When there are multiple features, this method finds the feature(s) that has the 
 > **Gradient descent** is widely used by many machine learning and deep learning algorithms.
 
 ### Stochastic Gradient Descent (SGD)
-To optimize the gradient descent algorithm, <span style = "color:lightblue">stochastic gradient descent (SGD)</span> can be performed. Instead of updating the weights after the <u>entire</u> dataset has been traversed, the weights are updated after $n$ samples.
+The <span style = "color:lightblue">stochastic gradient descent (SGD)</span> optimizes the gradient descent algorithm. Instead of updating the weights after the <u>entire</u> dataset has been traversed, the weights are updated after $n$ samples.
 
 > [!INFO]
 > This method is **stochastic** as $n$ is selected randomly.
