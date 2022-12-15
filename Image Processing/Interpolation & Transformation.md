@@ -172,4 +172,4 @@ $$
 > [!INFO]
 > Two images are matched when the **mutual information** is maximized.
 
-[[Regression#Gradient Descent|Gradient descent]] is commonly used to optimize the objective function $F$.
+[[Regression#Gradient Descent|Gradient descent]] is commonly used to **optimize** the objective function $F$.

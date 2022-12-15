@@ -159,15 +159,15 @@
   },
   "active": "7e27c74406e50d48",
   "lastOpenFiles": [
-    "Image Processing/Image Segmentation.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Feature Extraction.md",
+    "Image Processing/Image Segmentation.md",
     "Data Mining/Data Preprocessing.md",
     "Data Visualization/Design Tasks.md",
     "Data Visualization/Visual Channels.md",
     "Data Visualization/Principles.md",
     "Data Visualization/Perception.md",
     "Data Visualization/Visualization Basics.md",
-    "Machine Learning/Classification.md",
-    "Machine Learning/Networks.md"
+    "Machine Learning/Classification.md"
   ]
 }
