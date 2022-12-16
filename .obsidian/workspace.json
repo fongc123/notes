@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,7 +156,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "37928fe2b11b729a",
   "lastOpenFiles": [
     "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Feature Extraction.md",
