@@ -185,7 +185,9 @@ The algorithm consists of the following steps.
 4. Compute key point descriptors.
 
 ## Local Extrema
-The initial detection of local extrema searches 
+The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images.
+
+
 
 ## Example
 A sample image and the obtained key points are shown below.
