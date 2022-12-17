@@ -184,9 +184,19 @@ The algorithm consists of the following steps.
 3. Compute key point orientations.
 	1. Calculate the **magnitude** and **angle** with the first-order x- and y-derivatives of the Gaussian-filtered image $L$.
 4. Compute [[#Key Point Descriptor|key point descriptors]].
+	1. Calculate orientation gradients in $4\times4$ sub-regions in a $16\times16$ neighborhood.
+	2. Obtain an 8-directional orientation histogram for each sub-region and combine into a descriptor.
+	3. The gradient magnitudes are weighted with a Gaussian weighting function with standard deviation equal to the half size of the region.
+	4. The feature vectors are normalized to unit length.
 
 > [!INFO]
 > Instead of calculating the magnitude and angle at the location of the key point, the dominant orientation in a neighborhood around the key point may be assigned.
+
+An example of the output feature descriptors is shown below.
+
+![[image-processing-sift-feature-descriptors.png|600]]
+
+For each key point, a $128$-dimensional vector is outputted ($4\space\text{rows}\times4\space\text{columns}\times8\space\text{orientations}$). With this, objects can be distinguished and matched.
 
 ## Local Extrema
 The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images $L$ (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **difference between scale spaces** (i.e., <span style = "color:lightblue">difference of Gaussian</span>).
@@ -281,9 +291,6 @@ $$
 The ratio between the square of the trace and the determinant is at a minimum when the two eigenvalues are equal.
 
 $$\frac{[\text{Tr}(\textbf{H})]^2}{\text{Det}(\textbf{H})}=\frac{(\alpha+\beta)^2}{\alpha\beta}=\frac{(r\beta+\beta)^2}{r\beta^2}=\frac{(r+1)^2}{r}$$
-
-## Key Point Descriptor
-
 
 ## Example
 A sample image and the obtained key points are shown below.
