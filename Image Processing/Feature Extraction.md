@@ -183,7 +183,10 @@ The algorithm consists of the following steps.
 	2. Delete unsuitable keypoints (i.e., edges and low-contrast points).
 3. Compute key point orientations.
 	1. Calculate the **magnitude** and **angle** with the first-order x- and y-derivatives of the Gaussian-filtered image $L$.
-4. Compute key point descriptors.
+4. Compute [[#Key Point Descriptor|key point descriptors]].
+
+> [!INFO]
+> Instead of calculating the magnitude and angle at the location of the key point, the dominant orientation in a neighborhood around the key point may be assigned.
 
 ## Local Extrema
 The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images $L$ (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **difference between scale spaces** (i.e., <span style = "color:lightblue">difference of Gaussian</span>).
@@ -279,9 +282,7 @@ The ratio between the square of the trace and the determinant is at a minimum wh
 
 $$\frac{[\text{Tr}(\textbf{H})]^2}{\text{Det}(\textbf{H})}=\frac{(\alpha+\beta)^2}{\alpha\beta}=\frac{(r\beta+\beta)^2}{r\beta^2}=\frac{(r+1)^2}{r}$$
 
-## Orientation
-After the key points are refined, an orientation is assigned to each key point.
-
+## Key Point Descriptor
 
 
 ## Example
