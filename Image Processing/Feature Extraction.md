@@ -1,3 +1,4 @@
+i
 A <span style = "color:lightblue">feature</span> is a distinctive attribute or description of an object that can be **labeled** or **differentiated**. <span style = "color:lightblue">Feature detection</span> aims to find features in an image, while <span style = "color:lightblue">feature description</span> assigns quantitative attributes to the features.
 - <span style = "color:lightblue">Boundary-based features</span>: pertaining to the outlining border
 - <span style = "color:lightblue">Region-based features</span>: pertaining to the properties within a region
@@ -37,7 +38,7 @@ The expression for the $n$th moment of $z$ (i.e., the **discrete random variable
 
 $$
 \begin{gather}
-\mu_n(z)=\sum_{i=0}^{A-1}(z_i-m)^np(z_i) \\
+\mu_n(z)=\sum_{i=0}^{A-1}(z_i-m)^np(z_i) \\\\
 m=\sum_{i=0}^{A-1}z_ip(z_i)
 \end{gather}
 $$
@@ -68,4 +69,53 @@ Eccentricity describes the **centrality** of an object. Due to [[Acquisition & R
 > Objects can be mapped onto an $n$-dimensional space, where $n$ is the number of features, to compare the similarity between objects based on selected features.
 
 <span style = "color:lightblue">Topological features</span> study the properties of an object that are unaffected by deformation given that there is no tearing or joining of the object (i.e., <span style = "color:lightblue">rubber-sheet distortions</span>).
-$$\text{Euler number}=\text{no. of connecte}$$
+
+$$\text{Euler number }(E)=\text{no. of connected components }(C)-\text{no. of holes }(H)$$
+
+![[image-processing-topological-features.png|600]]
+
+## Texture
+<span style = "color:lightblue">Texture-based features</span> measure the variations between pixels in a region, such as smoothness, coarseness, and regularity.
+
+![[image-processing-texture-example.png|600]]
+
+### Statistical
+[[#Statistical Moments|Statistical moments]] can be used to measure the variability in the region. The expression for the <span style = "color:lightblue">relative intensity smoothness</span> $\color{lightblue}R$ is shown below.
+
+$$
+\begin{gather}
+R(z)=1-\frac{1}{1+\sigma^2(z)} \\\\
+\sigma^2(z)=\mu_2(z)
+\end{gather}
+$$
+
+It approaches $0$ for areas with constant intensity and $1$ for large **variance** values.
+
+> [!INFO]
+> The variance $\sigma^2$ is the second statistical moment ($n=2$).
+
+Additionally, the expressions for the <span style = "color:lightblue">uniformity</span> $\color{lightblue}U$ (i.e., the sum of squared probabilities) and the <span style = "color:lightblue">entropy</span> $\color{lightblue}e$ are shown below.
+
+$$
+\begin{gather}
+U(z)=\sum_{i=0}^{L-1}p(z_i)^2 \\\\
+e(z)=-\sum_{i=0}^{L-1}p(z_i)\log_2p(z_i)
+\end{gather}
+$$
+
+> [!INFO]
+> The maximum value of uniformity (i.e., $1$) is obtained when <u>all</u> pixels have the same intensity. Uniformity values close to $1$ are obtained when <u>most</u> pixels have the same intensity.
+
+The three statistical measures of the sub-images above are shown below.
+
+![[image-processing-texture-example-stats.png|600]]
+
+### Co-occurrence Matrix
+In a <span style = "color:lightblue">co-occurrence matrix</span> $\color{lightblue}G$, the element $g_{ij}$ is the number of times that pixel pairs with intensities $z_i$ and $z_j$ occur in an image in a position specified by a position operator $Q$, where $i$ and $j$ range from $0$ to the maximum intensity level $L-1$.
+
+![[image-processing-cooccurrence-matrix-example.png|600]]
+
+In the co-occurrence matrix above, the position operator $Q$ is defined as "one pixel immediately to the right." Since there is only **one** occasion where the pixel to the right of a pixel with an intensity value of $1$ also has an intensity value of $1$, the value $g_{11}$ is equal to $1$.
+
+To **characterize** co-occurrence matrices, the following descriptors can be used.
+- 
