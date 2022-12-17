@@ -187,7 +187,10 @@ The algorithm consists of the following steps.
 ## Local Extrema
 The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images.
 
+### Scale Space
+The scale space $L$ of a grayscale image $f$ is produced by the convolution of the image $f$ with a variable-scale Gaussian kernel $G$.
 
+$$L(x,y,\sigma)=G(x,y,\s$$
 
 ## Example
 A sample image and the obtained key points are shown below.
