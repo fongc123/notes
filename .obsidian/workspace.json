@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Mining/Data Preprocessing.md",
+                "file": "Machine Learning/Classification.md",
                 "mode": "source",
                 "source": false
               }
@@ -194,15 +194,15 @@
   },
   "active": "7e27c74406e50d48",
   "lastOpenFiles": [
-    "Image Processing/Image Segmentation.md",
-    "Image Processing/Feature Extraction.md",
-    "Image Processing/Intensity Transformations.md",
+    "Machine Learning/Classification.md",
     "Data Mining/Data Preprocessing.md",
+    "Image Processing/Feature Extraction.md",
+    "Image Processing/Image Segmentation.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Interpolation & Transformation.md",
     "Machine Learning/Regression.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Image Processing Basics.md",
-    "Image Processing/Morphological Image Processing.md",
-    "Machine Learning/Clustering.md"
+    "Image Processing/Morphological Image Processing.md"
   ]
 }

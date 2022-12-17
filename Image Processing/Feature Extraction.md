@@ -175,17 +175,17 @@ The difference between the original and reconstructed images can improve contras
 The <span style = "color:lightblue">scale-invariant feature transform (SIFT)</span> is an algorithm for extracting invariant features (i.e., <span style = "color:lightblue">key points</span>) from an image. The features are predominantly invariant to **scale** and **rotation** and are robust to **affine distortions**, **changes in viewpoints**, **noise**, and **illumination**.
 
 The algorithm consists of the following steps.
-1. Detect local extrema.
-	1. Construct the [[#Scale Space|scale space]].
-	2. Obtain the initial key points.
+1. Detect [[#Local Extrema|local extrema]].
+	1. Construct the [[#Scale Space|scale space]] with multiple Gaussian-filtered images.
+	2. Obtain the initial key points by finding pixels with matching criteria in difference images.
 2. Localize keypoints.
 	1. Improve the accuracy of the location of the key points.
-	2. Delete unsuitable keypoints (e.g., edges and low-contrast points).
+	2. Delete unsuitable keypoints (i.e., edges and low-contrast points).
 3. Compute key point orientations.
 4. Compute key point descriptors.
 
 ## Local Extrema
-The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **differences between scale spaces**.
+The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **difference between scale spaces** (i.e., <span style = "color:lightblue">difference of Gaussian</span>).
 
 $$D(x,y,\sigma)=L(x,y,k\sigma)-L(x,y,\sigma)$$
 
@@ -195,7 +195,7 @@ $$D(x,y,\sigma)=L(x,y,k\sigma)-L(x,y,\sigma)$$
 > \begin{align}
 > D(x,y,\sigma)&=\left[G(x,y,k\sigma)-G(x,y,\sigma)\right]\star f(x,y) \\
 > &\approx\left[(k-1)\sigma^2\nabla^2G\right]\star f(x,y) \\
-> &=\left[(k-1)\sigma^2\right]
+> &=\left[\sigma^2(k-1)\left(\frac{x^2+y^2-2\sigma^2}{\sigma^4}\exp\left[-\frac{x^2+y^2}{2\sigma^2}\right]\right)\right]\star f(x,y)
 > \end{align}
 > $$
 
@@ -204,9 +204,11 @@ $$D(x,y,\sigma)=L(x,y,k\sigma)-L(x,y,\sigma)$$
 > [!INFO]
 > There will always be $n-1$ difference images $D$ generated from $n$ scale space images $L$.
 
-The pixel of an extrema candidate is selected as an initial key point if its value is **smaller or larger than all of its 26 neighbors**, which originate from the current and adjacent difference images. $9$ neighbors belong to the top image, $8$ neighbors belong to the current image, and $9$ neighbors belong to the bottom image.
+The pixel of an extrema candidate is selected as an initial key point if its value is **smaller or larger than all of its 26 neighbors**, which originate from the current and adjacent difference images. 
 
 ![[image-processing-sift-local-extrema-neighbors.png|600]]
+
+$9$ neighbors belong to the top image, $8$ neighbors belong to the current image, and $9$ neighbors belong to the bottom image.
 
 ### Scale Space
 The scale space $L$ of a grayscale image $f$ is produced by the convolution of the image $f$ with a variable-scale Gaussian kernel $G$.
@@ -218,6 +220,32 @@ $$L(x,y,\sigma)=G(x,y,\sigma)\star f(x,y)$$
 Each consecutive octave **decreases the image size**. In each octave, images are generated with varying Gaussian standard deviations based on the power of $k$. In the above example, there are five images in each octave, as $s=2$.
 
 ![[image-processing-sift-scale-space-2.png|600]]
+
+## Key Point Localization
+A Taylor series expansion of the scale space is used to improve the accuracy of the key point locations.
+
+$$
+\begin{align}
+\textbf{x}&=(x,y,\sigma) \\
+D(x)&=D+\left(\frac{\partial D}{\partial\textbf{x}}\right)^T\textbf{x}+\frac{1}{2}\textbf{x}^T\frac{\partial}{\partial\textbf{x}}\left(\frac{\partial D}{\partial\textbf{x}}\right)\textbf{x} \\
+&=D+(\nabla D)^T\textbf{x}+\frac{1}{2}\textbf{x}^T\textbf{H}\textbf{x} \\\\
+\text{where}&\space\nabla D=\frac{\partial D}{\partial\textbf{x}}=\begin{bmatrix}
+\partial D/\partial x \\
+\partial D/\partial y \\
+\partial D/\partial\sigma
+\end{bmatrix}
+\end{align}
+$$
+
+Gradients are evaluated by calculating the difference of neighboring pixels. The new location $\hat{\textbf{x}}$ is obtained by setting the derivative to zero.
+
+$$\hat{\textbf{x}}=-\textbf{H}^{-1}(\nabla D)$$
+
+To eliminate key points with low contrast and poorly localized flat regions, pixels with a difference below a threshold are removed.
+
+$$|D(\hat{\textbf{x}})|<0.03$$
+
+Edge responses (i.e., simple lines) are characterized by high curvature in one direction and low curvature in a perpendicular direction. They are not helpful in characterizing an object. **Since the eigenvalues of the Hessian matrix $\textbf{H}$ are proportional to the curvature, the ratio between the **
 
 ## Example
 A sample image and the obtained key points are shown below.
