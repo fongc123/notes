@@ -176,7 +176,7 @@ The <span style = "color:lightblue">scale-invariant feature transform (SIFT)</sp
 
 The algorithm consists of the following steps.
 1. Detect local extrema.
-	1. Construct the scale space.
+	1. Construct the [[#Scale Space|scale space]].
 	2. Obtain the initial key points.
 2. Localize keypoints.
 	1. Improve the accuracy of the location of the key points.
@@ -185,12 +185,20 @@ The algorithm consists of the following steps.
 4. Compute key point descriptors.
 
 ## Local Extrema
-The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images.
+The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images (*see [[#Scale Space|scale spaces]]*).
+
+
 
 ### Scale Space
 The scale space $L$ of a grayscale image $f$ is produced by the convolution of the image $f$ with a variable-scale Gaussian kernel $G$.
 
-$$L(x,y,\sigma)=G(x,y,\s$$
+$$L(x,y,\sigma)=G(x,y,\sigma)\star f(x,y)$$
+
+![[image-processing-sift-scale-space.png|600]]
+
+Each consecutive octave **decreases the image size**. In each octave, images are generated with varying Gaussian standard deviations based on the power of $k$. In the above example, there are five images in each octave, as $s=2$.
+
+![[image-processing-sift-scale-space-2.png|600]]
 
 ## Example
 A sample image and the obtained key points are shown below.
