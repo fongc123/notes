@@ -257,7 +257,7 @@ new_data = scaler.fit_transform(old_data)
 
 <span style = "color:lightblue">Principal component analysis (PCA)</span> projects original data onto a **lower-dimensional** space to perform dimensionality reduction.
 
-The dimension projection with the **largest amount of variation in the data is chosen** (i.e., find projection $w$ such that $var(w^tx)$ is maximized). The idea is that variables with the largest covariance (i.e., diverse values) most likely are relevant, while those with little covariance have no significant change.
+The dimension projection with the **largest amount of variation in the data is chosen** (i.e., find projection $w$ such that $var(w^tx)$ is maximized). The idea is that variables with the largest covariance (i.e., diverse values) are most likely relevant, while those with little covariance have no significant change.
 
 ### Variation
 A review of calculating variation is shown below.
@@ -287,7 +287,7 @@ A review of calculating variation is shown below.
 > $$
 > It should be noted that $Cov(X_1, X_d)$ and $Cov(X_d, X_1)$ are identical.
 
-The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ are found.
+The <span style = "color:lightblue">eigenvectors</span> of the covariance matrix $C$ can be found with the following equation.
 
 $$C\textbf{v}=\lambda \textbf{v}$$
 

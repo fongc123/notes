@@ -92,7 +92,7 @@ $$
 It approaches $0$ for areas with constant intensity and $1$ for large **variance** values.
 
 > [!INFO]
-> The variance $\sigma^2$ is the second statistical moment ($n=2$).
+> The variance $\sigma^2$ is the second statistical moment ($n=2$). The third moment ($n=3$) represents skewedness.
 
 Additionally, the expressions for the <span style = "color:lightblue">uniformity</span> $\color{lightblue}U$ (i.e., the sum of squared probabilities) and the <span style = "color:lightblue">entropy</span> $\color{lightblue}e$ are shown below.
 
@@ -141,3 +141,20 @@ The corresponding co-occurrence matrices of size $256\times256$ and their descri
 
 ![[image-processing-cooccurrence-matrix-example-matrices.png|600]]
 
+# Hotelling Transform
+The <span style = "color:lightblue">Hotelling transform</span> or the <span style = "color:lightblue">principal components transform</span> uses [[Data Preprocessing#Principal Component Analysis|principal components]] as feature descriptors.
+
+Given multiple images (e.g., six images) of an object, reconstructed images are obtained by using only a selected number of principal components.
+
+![[image-processing-hotelling-1.png|600]]
+
+Pixels in the same spatial location are arranged into an $n$-dimensional vector.
+
+$$x=\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}$$
+
+A transformation matrix $A$, which represents the matrix of principal components, maps the vector $x$ to $y$.

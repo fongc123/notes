@@ -192,11 +192,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "6b79c2ed84e96fb5",
+  "active": "7e27c74406e50d48",
   "lastOpenFiles": [
     "Data Mining/Data Preprocessing.md",
-    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Feature Extraction.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Machine Learning/Regression.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Image Processing Basics.md",
