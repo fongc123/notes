@@ -185,9 +185,28 @@ The algorithm consists of the following steps.
 4. Compute key point descriptors.
 
 ## Local Extrema
-The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images (*see [[#Scale Space|scale spaces]]*).
+The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **differences between scale spaces**.
 
+$$D(x,y,\sigma)=L(x,y,k\sigma)-L(x,y,\sigma)$$
 
+> [!INFO]
+> The above expression is equivalent to the following.
+> $$
+> \begin{align}
+> D(x,y,\sigma)&=\left[G(x,y,k\sigma)-G(x,y,\sigma)\right]\star f(x,y) \\
+> &\approx\left[(k-1)\sigma^2\nabla^2G\right]\star f(x,y) \\
+> &=\left[(k-1)\sigma^2\right]
+> \end{align}
+> $$
+
+![[image-processing-sift-local-extrema.png|600]]
+
+> [!INFO]
+> There will always be $n-1$ difference images $D$ generated from $n$ scale space images $L$.
+
+The pixel of an extrema candidate is selected as an initial key point if its value is **smaller or larger than all of its 26 neighbors**, which originate from the current and adjacent difference images. $9$ neighbors belong to the top image, $8$ neighbors belong to the current image, and $9$ neighbors belong to the bottom image.
+
+![[image-processing-sift-local-extrema-neighbors.png|600]]
 
 ### Scale Space
 The scale space $L$ of a grayscale image $f$ is produced by the convolution of the image $f$ with a variable-scale Gaussian kernel $G$.
