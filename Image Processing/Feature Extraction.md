@@ -111,11 +111,33 @@ The three statistical measures of the sub-images above are shown below.
 ![[image-processing-texture-example-stats.png|600]]
 
 ### Co-occurrence Matrix
-In a <span style = "color:lightblue">co-occurrence matrix</span> $\color{lightblue}G$, the element $g_{ij}$ is the number of times that pixel pairs with intensities $z_i$ and $z_j$ occur in an image in a position specified by a position operator $Q$, where $i$ and $j$ range from $0$ to the maximum intensity level $L-1$.
+In a <span style = "color:lightblue">co-occurrence matrix</span> $\color{lightblue}\textbf{G}$, the element $g_{ij}$ is the number of times that pixel pairs with intensities $z_i$ and $z_j$ occur in an image in a position specified by a position operator $Q$, where $i$ and $j$ range from $0$ to the maximum intensity level $L-1$.
 
 ![[image-processing-cooccurrence-matrix-example.png|600]]
 
 In the co-occurrence matrix above, the position operator $Q$ is defined as "one pixel immediately to the right." Since there is only **one** occasion where the pixel to the right of a pixel with an intensity value of $1$ also has an intensity value of $1$, the value $g_{11}$ is equal to $1$.
 
-To **characterize** co-occurrence matrices, the following descriptors can be used.
-- 
+To **characterize** a co-occurrence matrix of size $K\times K$, the following descriptors can be used, where $p_{ij}$ is the normalized term of $g_{ij}$.
+- <span style = "color:lightblue">maximum probability</span>: the strongest response in $\textbf{G}$ (i.e., maximum value)
+- <span style = "color:lightblue">correlation</span>: how correlated a pixel is to its neighbor, where $m_r$ is the mean of row $i$ and $m_c$ is the mean of column $j$
+$$\sum_{i=1}^K\sum_{j=1}^K\frac{(i-m_r)(j-m_c)p_{ij}}{\sigma_r\sigma_c}$$
+- <span style = "color:lightblue">contrast</span>: the intensity contrast between a pixel and its neighbor
+$$\sum_{i=1}^K\sum_{j=1}^K(i-j)^2p_{ij}$$
+- <span style = "color:lightblue">uniformity</span>: the uniformity of the pixels (*similar to [[#Statistical|statistical methods]]*)
+$$\sum_{i=1}^K\sum_{j=1}^Kp^2_{ij}$$
+- <span style = "color:lightblue">homogeneity</span>: the spatial closeness to the diagonal of the distribution of elements in $\textbf{G}$
+$$\sum_{i=1}^K\sum_{j=1}^K\frac{p_{ij}}{1+|i-j|}$$
+- <span style = "color:lightblue">entropy</span>: the randomness of the elements in $\textbf{G}$
+$$-\sum_{i=1}^K\sum_{j=1}^Kp_{ij}\log_2p_{ij}$$
+
+A constant image would have a contrast of $0$ and a uniformity of $1$. A maximum homogeneity value is obtained when $\textbf{G}$ is a diagonal matrix (i.e., all zeros except along the diagonal).
+
+#### Example
+Three sample images are shown below.
+
+![[image-processing-cooccurrence-matrix-example-images.png|600]]
+
+The corresponding co-occurrence matrices of size $256\times256$ and their descriptor values are shown below.
+
+![[image-processing-cooccurrence-matrix-example-matrices.png|600]]
+
