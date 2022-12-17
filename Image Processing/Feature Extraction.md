@@ -185,7 +185,7 @@ The algorithm consists of the following steps.
 4. Compute key point descriptors.
 
 ## Local Extrema
-
+The initial detection of local extrema searches 
 
 ## Example
 A sample image and the obtained key points are shown below.
