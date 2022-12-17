@@ -172,5 +172,26 @@ $$x=A^Ty+m_x\rightarrow\hat{x}=A_k^Ty+m_x$$
 The difference between the original and reconstructed images can improve contrast.
 
 # Scale-Invariant Feature Transform (SIFT)
-The <span style = "color:lightblue">scale-invariant feature transform (SIFT)</span> is an algorithm for extracting invariant features (i.e., <span style = "color:lightblue">keypoints</span>) from an image. The features are predominantly invariant to **scale** and **rotation** and are robust to **affine distortions**, **changes in viewpoints**, **noise**, and **illumination**.
+The <span style = "color:lightblue">scale-invariant feature transform (SIFT)</span> is an algorithm for extracting invariant features (i.e., <span style = "color:lightblue">key points</span>) from an image. The features are predominantly invariant to **scale** and **rotation** and are robust to **affine distortions**, **changes in viewpoints**, **noise**, and **illumination**.
 
+The algorithm consists of the following steps.
+1. Detect local extrema.
+	1. Construct the scale space.
+	2. Obtain the initial key points.
+2. Localize keypoints.
+	1. Improve the accuracy of the location of the key points.
+	2. Delete unsuitable keypoints (e.g., edges and low-contrast points).
+3. Compute key point orientations.
+4. Compute key point descriptors.
+
+## Local Extrema
+
+
+## Example
+A sample image and the obtained key points are shown below.
+
+![[image-processing-sift-ex-1.png|600]]
+
+Even after scaling or rotation, the key points can still be used to match the altered image with the original image.
+
+![[image-processing-sift-ex-2.png|600]]
