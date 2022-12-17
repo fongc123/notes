@@ -178,14 +178,15 @@ The algorithm consists of the following steps.
 1. Detect [[#Local Extrema|local extrema]].
 	1. Construct the [[#Scale Space|scale space]] with multiple Gaussian-filtered images.
 	2. Obtain the initial key points by finding pixels with matching criteria in difference images.
-2. Localize keypoints.
+2. [[#Key Point Localization|Localize key points]].
 	1. Improve the accuracy of the location of the key points.
 	2. Delete unsuitable keypoints (i.e., edges and low-contrast points).
 3. Compute key point orientations.
+	1. Calculate the **magnitude** and **angle** with the first-order x- and y-derivatives of the Gaussian-filtered image $L$.
 4. Compute key point descriptors.
 
 ## Local Extrema
-The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **difference between scale spaces** (i.e., <span style = "color:lightblue">difference of Gaussian</span>).
+The initial detection of local extrema searches across all possible **scales** of **Gaussian-filtered** images $L$ (*see [[#Scale Space|scale spaces]]*). Potential candidates are found in the **difference between scale spaces** (i.e., <span style = "color:lightblue">difference of Gaussian</span>).
 
 $$D(x,y,\sigma)=L(x,y,k\sigma)-L(x,y,\sigma)$$
 
@@ -202,7 +203,7 @@ $$D(x,y,\sigma)=L(x,y,k\sigma)-L(x,y,\sigma)$$
 ![[image-processing-sift-local-extrema.png|600]]
 
 > [!INFO]
-> There will always be $n-1$ difference images $D$ generated from $n$ scale space images $L$.
+> There will always be $n-1$ difference images $D$ generated from $n$ Gaussian-filtered images $L$.
 
 The pixel of an extrema candidate is selected as an initial key point if its value is **smaller or larger than all of its 26 neighbors**, which originate from the current and adjacent difference images. 
 
@@ -211,7 +212,7 @@ The pixel of an extrema candidate is selected as an initial key point if its val
 $9$ neighbors belong to the top image, $8$ neighbors belong to the current image, and $9$ neighbors belong to the bottom image.
 
 ### Scale Space
-The scale space $L$ of a grayscale image $f$ is produced by the convolution of the image $f$ with a variable-scale Gaussian kernel $G$.
+A scale space of a grayscale image $f$ is produced by the convolution of the image $f$ with a variable-scale Gaussian kernel $G$.
 
 $$L(x,y,\sigma)=G(x,y,\sigma)\star f(x,y)$$
 
@@ -241,11 +242,47 @@ Gradients are evaluated by calculating the difference of neighboring pixels. The
 
 $$\hat{\textbf{x}}=-\textbf{H}^{-1}(\nabla D)$$
 
-To eliminate key points with low contrast and poorly localized flat regions, pixels with a difference below a threshold are removed.
+To eliminate key points with low contrast and poorly localized flat regions, key points with a difference below a threshold are removed.
 
 $$|D(\hat{\textbf{x}})|<0.03$$
 
-Edge responses (i.e., simple lines) are characterized by high curvature in one direction and low curvature in a perpendicular direction. They are not helpful in characterizing an object. **Since the eigenvalues of the Hessian matrix $\textbf{H}$ are proportional to the curvature, the ratio between the **
+Edge responses (i.e., simple lines) are characterized by high curvature in one direction and low curvature in a perpendicular direction. They are not helpful in characterizing an object. **Since the two eigenvalues of the Hessian matrix $\textbf{H}$ are proportional to the curvature, key points with ratios larger than a threshold are removed.**
+
+$$r>10$$
+
+### Edge Response Derivation
+We know a more accurate localization of the key point from the [[#Key Point Localization|Taylor series expansion]]. We obtain the Hessian matrix $\textbf{H}$.
+
+$$\textbf{H}=\begin{bmatrix}
+\dfrac{\partial^2D}{\partial x^2} & \dfrac{\partial^2 D}{\partial x\partial y} \\
+\dfrac{\partial^2D}{\partial y\partial x} & \dfrac{\partial^2D}{\partial y^2}
+\end{bmatrix}=\begin{bmatrix}
+D_{xx} & D_{xy} \\
+D_{yx} & D_{yy}
+\end{bmatrix}
+$$
+
+The two eigenvalues of the matrix $\textbf{H}$ (*two dimensions*) are represented as $\alpha$ (*larger*) and $\beta$ (*smaller*). The ratio between the two eigenvalues can characterize an edge response.
+
+$$r=\frac{\alpha}{\beta}$$
+
+We can also calculate the trace and the determinant of the matrix.
+
+$$
+\begin{gather}
+\text{Tr}(\textbf{H})=D_{xx}+D_{yy}=\alpha+\beta \\
+\text{Det}(\textbf{H})=D_{xx}D_{yy}-(D_{xy})^2=\alpha\beta
+\end{gather}
+$$
+
+The ratio between the square of the trace and the determinant is at a minimum when the two eigenvalues are equal.
+
+$$\frac{[\text{Tr}(\textbf{H})]^2}{\text{Det}(\textbf{H})}=\frac{(\alpha+\beta)^2}{\alpha\beta}=\frac{(r\beta+\beta)^2}{r\beta^2}=\frac{(r+1)^2}{r}$$
+
+## Orientation
+After the key points are refined, an orientation is assigned to each key point.
+
+
 
 ## Example
 A sample image and the obtained key points are shown below.
