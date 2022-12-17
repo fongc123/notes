@@ -144,7 +144,7 @@ The corresponding co-occurrence matrices of size $256\times256$ and their descri
 # Hotelling Transform
 The <span style = "color:lightblue">Hotelling transform</span> or the <span style = "color:lightblue">principal components transform</span> uses [[Data Preprocessing#Principal Component Analysis|principal components]] as feature descriptors.
 
-Given multiple images (e.g., six images) of an object, reconstructed images are obtained by using only a selected number of principal components.
+Given a set of images (e.g., a set of six images), reconstructed images are obtained by using only a selected number of principal components.
 
 ![[image-processing-hotelling-1.png|600]]
 
@@ -157,4 +157,20 @@ x_2 \\
 x_n
 \end{bmatrix}$$
 
-A transformation matrix $A$, which represents the matrix of principal components, maps the vector $x$ to $y$.
+![[image-processing-hotelling-2.png|600]]
+
+A transformation matrix $A$, which represents the eigenvectors of the covariance matrix $C_x$ arranged in descending value of their eigenvalues, maps the vector $x$ to $y$, where $m_x$ represents the mean of $x$.
+
+$$y=A(x-m_x)$$
+
+![[image-processing-hotelling-3.png|600]]
+
+Instead of using the original matrix $A$, the reconstruction of $x$ uses a new matrix $A_k$ that is constructed from the $k$ eigenvectors that correspond to the $k$ largest eigenvalues.
+
+$$x=A^Ty+m_x\rightarrow\hat{x}=A_k^Ty+m_x$$
+
+The difference between the original and reconstructed images can improve contrast.
+
+# Scale-Invariant Feature Transform (SIFT)
+The <span style = "color:lightblue">scale-invariant feature transform (SIFT)</span> is an algorithm for extracting invariant features (i.e., <span style = "color:lightblue">keypoints</span>) from an image. The features are predominantly invariant to **scale** and **rotation** and are robust to **affine distortions**, **changes in viewpoints**, **noise**, and **illumination**.
+

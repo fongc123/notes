@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Intensity Transformations.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "mode": "source",
                 "source": false
               }
@@ -194,15 +194,15 @@
   },
   "active": "7e27c74406e50d48",
   "lastOpenFiles": [
-    "Data Mining/Data Preprocessing.md",
+    "Image Processing/Image Segmentation.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Feature Extraction.md",
+    "Data Mining/Data Preprocessing.md",
     "Image Processing/Interpolation & Transformation.md",
     "Machine Learning/Regression.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Image Processing Basics.md",
     "Image Processing/Morphological Image Processing.md",
-    "Machine Learning/Clustering.md",
-    "Machine Learning/Classification.md",
-    "Image Processing/Intensity Transformations.md"
+    "Machine Learning/Clustering.md"
   ]
 }
