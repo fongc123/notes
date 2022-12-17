@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "euclidean",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -184,13 +184,13 @@
   "lastOpenFiles": [
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Feature Extraction.md",
+    "Machine Learning/Clustering.md",
+    "Machine Learning/Classification.md",
     "Image Processing/Intensity Transformations.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Interpolation & Transformation.md",
     "Machine Learning/Regression.md",
     "Image Processing/Image Segmentation.md",
-    "Machine Learning/Feedforward Neural Networks.md",
-    "Data Mining/Data Preprocessing.md",
-    "Data Visualization/Design Tasks.md"
+    "Machine Learning/Feedforward Neural Networks.md"
   ]
 }
