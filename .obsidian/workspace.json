@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Restoration.md",
+                "file": "Image Processing/Image Segmentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Restoration.md"
+                "file": "Image Processing/Image Segmentation.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "1c52115b4c85168a",
   "lastOpenFiles": [
+    "Image Processing/Morphological Image Processing.md",
+    "Image Processing/Image Compression.md",
+    "Image Processing/Color Processing.md",
+    "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
     "Image Processing/Spatial Filtering.md",
     "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Arithmetic Operations.md",
     "Image Processing/Intensity Transformations.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Image Processing Basics.md",
-    "Image Processing/Feature Extraction.md",
-    "Image Processing/Image Classification.md",
-    "Machine Learning/Feedforward Neural Networks.md"
+    "Image Processing/Acquisition & Representation.md"
   ]
 }

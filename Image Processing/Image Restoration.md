@@ -261,7 +261,7 @@ This filter is useful for reducing randomly distributed noise (e.g., [[#Gaussian
 The resultant images of applying the midpoint filter to different noise types are shown above.
 
 ## Alpha-trimmed Mean
-The <span style = "color:lightblue">alpha-trimmed mean filter</span> deletes the $n$ lowest and highest intensity values and averages the remaining pixels in the filter region, where $n$ is equal to $d/2$.
+The <span style = "color:lightblue">alpha-trimmed mean filter</span> deletes the $d/2$ lowest and highest intensity values and averages the remaining $mn-d$ pixels in the filter region.
 
 $$\hat{f}(x,y)=\frac{1}{mn-d}\sum_{(r,c)\in S_{xy}}g(r,c)$$
 
@@ -281,7 +281,7 @@ The filter attempts to both **reduces local noise** and **preserves edges or bou
 - $\sigma^2_\eta=0\rightarrow$ return the value of $g(x,y)$ (*no noise!*)
 - $\sigma^2_S=\sigma^2_\eta\rightarrow$ return the [[#Arithmetic|local arithmetic mean]] of the filter region to reduce noise
 - $\sigma^2_S>\sigma^2_\eta\rightarrow$ return a value close to $g(x,y)$ to preserve edges
-- $\sigma^2_S<\sigma^2_\eta\rightarrow$ set the ratio between the intensity variance and noise variance to $1$
+- $\sigma^2_S<\sigma^2_\eta\rightarrow$ set the term for the ratio between the noise variance $\sigma^2_\eta$ and the intensity variance $\sigma^2_S$ to $1$
 
 The figure below shows an image corrupted by additive [[#Gaussian|Gaussian noise]] of zero mean and variance of $1000$ (a), the result of [[#Arithmetic|arithmetic mean filtering]] (b), the result of [[#Geometric|geometric mean filtering]] (c), and the result of adaptive local noise reduction filtering (d). All filters have a size of $7\times 7$.
 
