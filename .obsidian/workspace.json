@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Feature Extraction.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Feature Extraction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Feature Extraction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Segmentation.md"
+                "file": "Image Processing/Feature Extraction.md"
               }
             }
           },
@@ -144,10 +144,10 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b9c6cd2d3c98eb43",
+  "active": "1c52115b4c85168a",
   "lastOpenFiles": [
-    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Image Segmentation.md",
+    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Compression.md",
     "Image Processing/Image Classification.md",
