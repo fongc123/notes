@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -105,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "correlation",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +122,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -142,6 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Image Processing/Image Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,6 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Image Processing/Image Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -179,7 +182,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Image Processing/Image Classification.md"
+              }
             }
           },
           {
@@ -197,17 +202,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "39d5c1cfc6deea83",
+  "active": "d0958b02e0671816",
   "lastOpenFiles": [
+    "Machine Learning/Clustering.md",
+    "Image Processing/Image Classification.md",
     "Data Visualization/Trajectory Data.md",
     "Image Processing/Image Segmentation.md",
-    "Image Processing/Image Classification.md",
     "Machine Learning/Convolutional Neural Networks.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Acquisition & Representation.md",
     "Image Processing/Feature Extraction.md",
-    "Machine Learning/Classification.md",
-    "Data Mining/Data Preprocessing.md"
+    "Machine Learning/Classification.md"
   ]
 }
