@@ -118,6 +118,7 @@ In the co-occurrence matrix above, the position operator $Q$ is defined as "one 
 
 To **characterize** a co-occurrence matrix of size $K\times K$, the following descriptors can be used, where $p_{ij}$ is the normalized term of $g_{ij}$.
 - <span style = "color:lightblue">maximum probability</span>: the strongest response in $\textbf{G}$ (i.e., maximum value)
+$$\max_{i,j}(p_{ij})$$
 - <span style = "color:lightblue">correlation</span>: how correlated a pixel is to its neighbor, where $m_r$ is the mean of row $i$ and $m_c$ is the mean of column $j$
 $$\sum_{i=1}^K\sum_{j=1}^K\frac{(i-m_r)(j-m_c)p_{ij}}{\sigma_r\sigma_c}$$
 - <span style = "color:lightblue">contrast</span>: the intensity contrast between a pixel and its neighbor
