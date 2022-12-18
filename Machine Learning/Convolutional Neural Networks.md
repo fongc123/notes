@@ -1,4 +1,4 @@
-<span style = "color:lightblue">Convolutional neural networks</span> are commonly used in image classification and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
+<span style = "color:lightblue">Convolutional neural networks</span> are commonly used in [[Image Classification|image classification]] and object recognition. This type of neural network automatically *learns* image kernels to achieve tasks (*see [[Spatial Filtering|convolution and filtering]]*).
 
 A convolutional neural network normally consists of (1) a series of [[#Convolutional Layer|convolutional layers]] and [[#Pooling Layer|pooling layers]] (*feature extraction*) and (2) one or a few fully-connected or dense layers (*classification or regression*).
 

@@ -32,54 +32,31 @@
             }
           },
           {
-            "id": "31769f1d8c91720c",
+            "id": "88bb38f021158572",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Machine Learning/Convolutional Neural Networks.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7c8e2cd5a9cde2ca",
+            "id": "d0958b02e0671816",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Morphological Image Processing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cf65b6281d5b61f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Acquisition & Representation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06a0a8f5450fbb08",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Image Segmentation.md",
+                "file": "Image Processing/Image Classification.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -108,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "percep",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -125,8 +102,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -146,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Feature Extraction.md",
+                "file": "Image Processing/Image Classification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Feature Extraction.md",
+                "file": "Image Processing/Image Classification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -186,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Feature Extraction.md"
+                "file": "Image Processing/Image Classification.md"
               }
             }
           },
@@ -205,17 +181,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "7e27c74406e50d48",
+  "active": "d0958b02e0671816",
   "lastOpenFiles": [
+    "Machine Learning/Convolutional Neural Networks.md",
+    "Image Processing/Image Classification.md",
+    "Machine Learning/Recurrent Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
-    "Image Processing/Feature Extraction.md",
     "Image Processing/Image Segmentation.md",
+    "Image Processing/Acquisition & Representation.md",
+    "Image Processing/Feature Extraction.md",
     "Machine Learning/Classification.md",
     "Data Mining/Data Preprocessing.md",
-    "Image Processing/Intensity Transformations.md",
-    "Image Processing/Interpolation & Transformation.md",
-    "Machine Learning/Regression.md",
-    "Image Processing/Acquisition & Representation.md",
-    "Image Processing/Image Processing Basics.md"
+    "Image Processing/Intensity Transformations.md"
   ]
 }
