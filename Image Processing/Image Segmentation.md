@@ -12,6 +12,8 @@ For example, the two images below are segmented by edges (c) and by the standard
 
 ![[image-processing-segmentation.png|600]]
 
+<span style = "color:lightblue">Semantic segmentation</span> classifies pixels under one label, while <span style = "color:lightblue">instance segmentation</span> partitions individual object instances.
+
 # Detection of Sharp Intensity Changes
 The following image characteristics produce sharp local changes.
 - <span style = "color:lightblue">edge pixels</span>: abrupt change of intensity
