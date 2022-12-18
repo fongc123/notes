@@ -1,6 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 from scipy import ndimage
+import numpy as np
 import time
 import copy
 
@@ -17,6 +18,7 @@ while video.isOpened():
     im2 = copy.deepcopy(im1)
     # im2 = im2[90:270, 230:410]
     im2 = ndimage.rotate(im2, 30)[210:410, 270:510]
+    # im2 = cv2.filter2D(ndimage.rotate(im2, 30)[210:410, 270:510], -1, np.ones((5, 5), np.float32)/25)
 
     start = time.time()
 

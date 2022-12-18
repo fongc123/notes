@@ -33,6 +33,12 @@ The output of a neuron is the input of the next neuron.
 # Perceptron
 A <span style = "color:lightblue">perceptron</span> is a feedforward neural network with only <u>one</u> layer of adjustable weights. Here, there are no **hidden layers**, as the inputs connect directly to the output. It is the simplest type of neural network.
 
+$$y=ax+b\rightarrow\textbf{w}^T\textbf{x}+w_{n+1}=\begin{dcases}
+> 0&\text{if}\space\textbf{x}\in c_1 \\
+< 0&\text{if}\space\textbf{x}\in c_2
+\end{dcases}
+$$
+
 ![[ml-perceptron.png|600]]
 
 With the [[#Step Function|step function]] as its activation function, basic Boolean functions can be represented.

@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,8 +122,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -143,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Image Processing/Image Classification.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Image Processing/Image Classification.md",
+                "file": "Machine Learning/Feedforward Neural Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -183,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Image Processing/Image Classification.md"
+                "file": "Machine Learning/Feedforward Neural Networks.md"
               }
             }
           },
@@ -202,13 +201,13 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "d0958b02e0671816",
+  "active": "a1000fd63e7e91fe",
   "lastOpenFiles": [
-    "Machine Learning/Clustering.md",
-    "Image Processing/Image Classification.md",
-    "Data Visualization/Trajectory Data.md",
-    "Image Processing/Image Segmentation.md",
     "Machine Learning/Convolutional Neural Networks.md",
+    "Image Processing/Image Classification.md",
+    "Image Processing/Image Segmentation.md",
+    "Machine Learning/Clustering.md",
+    "Data Visualization/Trajectory Data.md",
     "Machine Learning/Recurrent Neural Networks.md",
     "Machine Learning/Feedforward Neural Networks.md",
     "Image Processing/Acquisition & Representation.md",
