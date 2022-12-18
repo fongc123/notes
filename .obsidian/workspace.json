@@ -148,13 +148,13 @@
   "lastOpenFiles": [
     "Image Processing/Feature Extraction.md",
     "Image Processing/Image Segmentation.md",
-    "Image Processing/Interpolation & Transformation.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Compression.md",
-    "Image Processing/Image Classification.md",
     "Image Processing/Color Processing.md",
-    "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
-    "Image Processing/Spatial Filtering.md"
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Intensity Transformations.md",
+    "Image Processing/Acquisition & Representation.md"
   ]
 }
