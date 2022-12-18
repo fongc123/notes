@@ -1,4 +1,3 @@
-i
 A <span style = "color:lightblue">feature</span> is a distinctive attribute or description of an object that can be **labeled** or **differentiated**. <span style = "color:lightblue">Feature detection</span> aims to find features in an image, while <span style = "color:lightblue">feature description</span> assigns quantitative attributes to the features.
 - <span style = "color:lightblue">Boundary-based features</span>: pertaining to the outlining border
 - <span style = "color:lightblue">Region-based features</span>: pertaining to the properties within a region

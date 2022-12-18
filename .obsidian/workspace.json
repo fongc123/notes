@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "1c52115b4c85168a",
+  "active": "b9c6cd2d3c98eb43",
   "lastOpenFiles": [
+    "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Image Segmentation.md",
     "Image Processing/Morphological Image Processing.md",
     "Image Processing/Image Compression.md",
+    "Image Processing/Image Classification.md",
+    "Image Processing/Feature Extraction.md",
     "Image Processing/Color Processing.md",
     "Image Processing/Image Restoration.md",
     "Image Processing/Frequency Filtering.md",
-    "Image Processing/Spatial Filtering.md",
-    "Image Processing/Interpolation & Transformation.md",
-    "Image Processing/Arithmetic Operations.md",
-    "Image Processing/Intensity Transformations.md",
-    "Image Processing/Acquisition & Representation.md"
+    "Image Processing/Spatial Filtering.md"
   ]
 }

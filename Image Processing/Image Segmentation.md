@@ -181,7 +181,7 @@ $$
 > Otsu's thresholding algorithm will fail when the foreground object is small compared to the background, as the intensity values will be dominated by the background pixels.
 
 ### Derivation
-An image segmented is segmented into two classes$\textemdash$$c_1$ and $c_2$$\textemdash$with a threshold $k$, where pixels belonging to $c_1$ and $c_2$ will have intensity values ranging from $[0, k]$ and $[k+1,L-1]$ respectively. The expressions for the probability of a pixel assigned to $c_1$ or $c_2$ are shown below.
+An image is segmented into two classes$\textemdash$$c_1$ and $c_2$$\textemdash$with a threshold $k$, where pixels belonging to $c_1$ and $c_2$ will have intensity values ranging from $[0, k]$ and $[k+1,L-1]$ respectively. The expressions for the probability of a pixel assigned to $c_1$ or $c_2$ are shown below.
 
 $$
 \begin{gather}
