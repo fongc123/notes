@@ -4,79 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d0bee0e51f027fde",
+        "id": "71173457b7f9379e",
         "type": "tabs",
         "children": [
           {
-            "id": "7e27c74406e50d48",
+            "id": "1c52115b4c85168a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Image Processing/Feature Extraction.md",
-                "mode": "source",
+                "file": "Image Processing/Image Restoration.md",
+                "mode": "preview",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "a1000fd63e7e91fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "88bb38f021158572",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Machine Learning/Convolutional Neural Networks.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0958b02e0671816",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Image Classification.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f9ba2b647acaee4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Image Processing/Image Segmentation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "39d5c1cfc6deea83",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Image Restoration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md",
+                "file": "Image Processing/Image Restoration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -182,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Feedforward Neural Networks.md"
+                "file": "Image Processing/Image Restoration.md"
               }
             }
           },
@@ -201,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "a1000fd63e7e91fe",
+  "active": "1c52115b4c85168a",
   "lastOpenFiles": [
-    "Machine Learning/Convolutional Neural Networks.md",
-    "Image Processing/Image Classification.md",
-    "Image Processing/Image Segmentation.md",
-    "Machine Learning/Clustering.md",
-    "Data Visualization/Trajectory Data.md",
-    "Machine Learning/Recurrent Neural Networks.md",
-    "Machine Learning/Feedforward Neural Networks.md",
+    "Image Processing/Frequency Filtering.md",
+    "Image Processing/Spatial Filtering.md",
+    "Image Processing/Interpolation & Transformation.md",
+    "Image Processing/Arithmetic Operations.md",
+    "Image Processing/Intensity Transformations.md",
     "Image Processing/Acquisition & Representation.md",
+    "Image Processing/Image Processing Basics.md",
     "Image Processing/Feature Extraction.md",
-    "Machine Learning/Classification.md"
+    "Image Processing/Image Classification.md",
+    "Machine Learning/Feedforward Neural Networks.md"
   ]
 }

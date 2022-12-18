@@ -44,8 +44,8 @@ The expressions for the discrete counterparts are shown below.
 
 $$
 \begin{gather}
-	F(u)=\sum_{x=0}^{M-1}{f(x)\exp(-\frac{2\pi ux}{M})},\text{ where } u=0,1,\dots,M-1 \newline\newline
-	f(x)=\frac{1}{M}\sum_{u=0}^{M-1}{F(u)\exp(\frac{j2\pi ux}{M})}, \text{ where }x=0,1,\dots,M-1
+	F(u)=\sum_{x=0}^{M-1}{f(x)\exp\left(-\frac{2\pi ux}{M}\right)},\text{ where } u=0,1,\dots,M-1 \newline\newline
+	f(x)=\frac{1}{M}\sum_{u=0}^{M-1}{F(u)\exp\left(\frac{j2\pi ux}{M}\right)}, \text{ where }x=0,1,\dots,M-1
 \end{gather}
 $$
 
